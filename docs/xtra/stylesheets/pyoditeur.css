@@ -1,0 +1,217 @@
+/* Extra CSS for mkdocs-enumerate-headings-plugin */ 
+.enumerate-headings-plugin {
+  filter: opacity(35%);
+}
+
+/* :root {
+--main-bg-color: blue;
+} */
+
+.wrapper_h {
+  border: solid 1px;
+  border-radius: 6px;
+  border-color: rgba(87,147,240);
+}
+
+.wrapper {
+border: solid 1px;
+border-radius: 6px;
+border-color: rgba(87,147,240);
+display: flex;
+flex-wrap: wrap;
+flex: 1 1 auto;
+}
+
+.wrapper > * {
+flex: 1 1 300px;
+}
+
+.interior_wrapper {
+border-right: 1px solid rgba(87,147,240);
+width:50%;
+}
+
+.line{
+border-bottom : 1px solid rgba(87,147,240);
+}
+
+.ace_editor {
+font-size:1em;
+margin: 4px 4px;
+height: 200px;
+background: rgba(34,35,48,0);
+}
+
+.term_editor {
+--color:rgba(87,147,240);
+--background: rgba(50,51,64,0);
+--size : 1.4;
+height: 205px;
+}
+
+.term_editor_h {
+--color:rgba(87,147,240);
+--background: rgba(50,51,64,0);
+--size : 1.4;
+height: 150px;
+}
+
+/* First apply terminal CSS */
+.terminal {
+width: 50%;
+}
+
+/* Then change width to 100% */
+.terminal_f {
+--color:rgba(87,147,240);
+--background: rgba(50,51,64,0);
+--size : 1.4;
+border: solid 1px;
+border-radius: 6px;
+border-color: rgba(87,147,240);
+height: 205px; 
+width: 100%;
+}
+
+/* Test to decide which REPL is best */
+.terminal_f_h {
+--color:rgba(87,147,240);
+--background: rgba(50,51,64,0);
+--size : 1.4;
+height: 150px; 
+width: 100%;
+}
+
+
+textarea {
+width: 100%;
+resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.hide {
+display:none;
+}
+
+.blinking {
+width: 8px;
+height: 20.84375px;
+background-color: rgba(87,147,240);
+animation-name: blinking;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+display: inline-block;
+}
+
+/* overloading ace gutters to hide them behind navbar */
+.ace_gutter {  
+z-index: 1; /* might be a bit drastic */
+}
+
+.ace_gutter > .ace_layer {
+color: rgba(87,147,240);
+background-color: rgba(46,48,63,0);
+border-right: solid 1px rgba(87,147,240); 
+}
+
+/* modification of ace-tomorrow-night-bright theme */
+.ace-tomorrow-night-bright .ace_gutter {
+background-color: rgba(46,48,63,0);
+color: #DEDEDE;
+}
+
+.ace-crimson-editor .ace_gutter {
+background-color: rgba(46,48,63,0);
+color: #DEDEDE;
+}
+
+
+/* .emoji {
+  font-family: "Apple SD Gothic Neo Light", "Times New Roman", Times, serif;
+  text-shadow: 2px 2px rgba(87,147,240);
+  font-size : 1.1em;
+  width : 2.2em;
+  height : 2.2em;
+  border: 1px solid rgba(87,147,240,1);
+  text-align: center;
+  border-radius: 10px;
+	background: linear-gradient(#ffffff, rgba(87,147,240,1) 40%);
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+  color:white;
+  }
+
+.emoji:hover {
+  text-shadow: 0px 0px rgba(87,147,240,0);
+  position:relative; 
+  left: 2px; 
+  top: 2px;
+  cursor: pointer;
+  }
+
+.emoji.play::before{
+  content: "▶︎";
+}
+
+.emoji.dl::before{
+  content: "⬇";
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+.emoji.upl::before{
+  content: "⬆";
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+.emoji.unit::before{
+  content: "🆃";
+  font-weight: 900;
+} */
+
+@font-face {
+  font-family: "color-emoji";
+  src: local("Apple Color Emoji"), 
+       local("Segoe UI Emoji"), 
+       local("Segoe UI Symbol"), 
+       local("Noto Color Emoji");
+}
+
+.emoji {
+  font-family: serif, color-emoji;
+  filter: sepia(1) brightness(50%) hue-rotate(178deg) saturate(286%) brightness(186%);
+  text-shadow: 2px 2px rgba(87,147,240);
+  font-size : 2em;
+}
+
+.emoji_dark {
+  font-family: serif, color-emoji;
+  filter: sepia(1) brightness(50%) hue-rotate(183deg) saturate(276%) brightness(236%);
+  text-shadow: 2px 2px rgba(87,147,240);
+  font-size : 2em;
+}
+
+.emoji:hover, .emoji_dark:hover {
+  text-shadow: 0px 0px rgba(87,147,240,0);
+  position:relative; 
+  left: 2px; 
+  top: 2px;
+  cursor: pointer;
+  font-size : 2em;
+}
+
+.compteur {
+float: right;
+color: rgba(87,147,240);
+font-size : 1.2em
+}
+
+.compteur::before {
+content: "Evaluations restantes : ";
+color: rgba(87,147,240);
+font-size : 0.8em
+}

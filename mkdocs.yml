@@ -1,0 +1,115 @@
+site_name: "Terminale NSI - Lycée François Mauriac - Bordeaux"
+
+#nav:
+#  - 'accueil' : 'index.md'
+
+
+theme:
+  name: material
+  site_url: ""
+  custom_dir: my_theme_customizations/
+  font: false
+  language: fr
+  icon:
+    logo: material/code-greater-than
+    repo : fontawesome/brands/github
+  favicon: xtra/fav1NSI.png
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - def_list
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+plugins:
+  - search
+  - git-revision-date
+  - macros
+  - awesome-pages
+ 
+ # - mkdocs-jupyter
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:gilles.lassus@ac-bordeaux.fr
+      name: Écrire à l'auteur
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/glassus/premiere_nsi
+      name: Dépôt git
+
+    - icon: fontawesome/solid/university
+      link: https://lyceemauriac.fr
+      name: Lycée François Mauriac - Bordeaux
+
+extra_javascript:
+  - xtra/javascripts/interpreter.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - xtra/stylesheets/pyoditeur.css
+
+
+copyright:  CC BY-SA / G.Lassus
+
+repo_url: https://github.com/glassus/premiere_nsi
+
+repo_name: glassus/premiere_nsi
