@@ -1,4 +1,3 @@
-# Bonnes pratiques de programmation
 
 ![](data/pep8.webp)
 

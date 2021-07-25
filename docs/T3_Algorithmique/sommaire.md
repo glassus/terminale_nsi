@@ -1,4 +1,3 @@
-1. [Listes Piles Files](./1.1_Listes_Piles_Files/cours.html)
-2. [Dictionnaires](./1.2_Dictionnaires/cours.html)
-3. [Arbres](./1.3_Arbres/cours.html)
-4. [Graphes](./1.4_Graphes/cours.html)
+1. [Diviser pour régner](../3.1_Diviser_pour_régner/cours/)
+2. [Programmation dynamique](../3.2_Programmation_dynamique/cours/)
+3. [Recherche textuelle](../3.3_Recherche_textuelle/cours/)
