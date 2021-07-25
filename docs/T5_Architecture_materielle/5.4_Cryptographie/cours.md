@@ -23,10 +23,9 @@ masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
 
 > Dans un chiffrement symétrique, c'est **la même clé** qui va servir au chiffrement et au déchiffrement.
 
+![image](data/sym.png){: .center}
 
-<p align="center">
-<img src="data/sym.png"  width="600"/> 
-</p>
+
 
 
 #### Qu'appelle-t-on une clé ?
@@ -80,9 +79,7 @@ Inventé par Whitfield Diffie et Martin Hellman en 1976, le chiffrement asymétr
 
 Le principe de base est l'existence d'une **clé publique**, appelée à être distribuée largement, et d'une **clé privée**, qui ne quitte jamais son propriétaire. 
 
-<p align="center">
-<img src="data/asym.png"  width="600"/> 
-</p>
+![image](data/asym.png){: .center}
 
 
 ### 2.2 Le rôle interchangeable des clés publiques et privées
@@ -101,30 +98,24 @@ A et B ont donc des rôles interchangeables (chacun peut être un cadenas, chacu
 Nous allons donc maintenant adopter une nouvelle convention infographique :
 
 - Considérons ce message :
-<p align="center">
-<img src="data/a1.png"  width="80"/> 
-</p>
+
+![image](data/a1.png){: .center}
+
 
 - Si ce message est chiffré avec la clé publique d'Alice, le message sera :
-<p align="center">
-<img src="data/a2.png"  width="80"/> 
-</p>
+![image](data/a2.png){: .center}
 
 - Si on déchiffre ce message avec la clé privée d'Alice, il deviendra
-<p align="center">
-<img src="data/a3.png"  width="80"/> 
-</p>
+![image](data/a3.png){: .center}
 et donc
-<p align="center">
-<img src="data/a1.png"  width="80"/> 
-</p>
+![image](data/a1.png){: .center}
 
 puisque l'application de la clé privée sur la clé publique, ou bien de la clé publique sur la clé privée, permet de retrouver le message en clair.
 
 De manière graphique, la connaissance des deux moitiés du disque qui s'assemblent permet de les faire disparaitre, qu'importe qu'on ait commencé par chiffrer avec la clé publique ou avec la clé privée.
-<p align="center">
-<img src="data/gif_auth.webp"  width="80"/> 
-</p>
+
+![image](data/gif_auth.webp){: .center}
+
 
 ### 2.3 Communication authentifiée.
 
