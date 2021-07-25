@@ -314,9 +314,6 @@ Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...
 - https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/
 
 
----
-
-![](../../../ccbysa.png) G.Lassus, Lycée François Mauriac --  Bordeaux  
 
 
 

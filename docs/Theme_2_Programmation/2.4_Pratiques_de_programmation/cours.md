@@ -461,5 +461,3 @@ Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas 
 - http://sametmax.com/le-pep8-en-resume/
 
 ---
-
-![](../../../ccbysa.png) G.Lassus, Lycée François Mauriac --  Bordeaux  
