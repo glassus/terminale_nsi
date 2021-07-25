@@ -1,12 +1,12 @@
 site_name: "Terminale NSI - Lycée François Mauriac - Bordeaux"
-
+site_url: "https://glassus.github.io/terminale_nsi/"
 #nav:
 #  - 'accueil' : 'index.md'
 
 
 theme:
   name: material
-  site_url: ""
+  
   custom_dir: my_theme_customizations/
   font: false
   language: fr
