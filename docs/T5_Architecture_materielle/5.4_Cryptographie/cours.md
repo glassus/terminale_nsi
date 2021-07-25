@@ -125,9 +125,7 @@ Le protocole que nous allons décrire ci-dessous permet :
 - d'empêcher qu'un message intercepté soit déchiffré (ce qui était déjà le cas dans le 2.1)
 - mais aussi de s'assurer que chaque personne est bien celle qu'elle prétend être : on résout le **problème d'authentification**.
 
-<p align="center">
-<img src="data/total_auth.png"  width="600"/> 
-</p>
+![image](data/total_auth.png){: .center}
 
 **En résumé :**
 - Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
@@ -137,72 +135,73 @@ Le protocole que nous allons décrire ci-dessous permet :
 
 Lorsqu'en 1976 Diffie et Hellman présentent le concept de chiffrement asymétrique (souvent appelé _cryptographie à clés publiques_), ils en proposent uniquement un modèle théorique, n'ayant pas trouvé une réelle implémentation de leur protocole.
 
-Trois chercheurs du MIT (Boston), Ron **R**ivest, Adi **S**hamir et Len **A**dleman se penchent alors sur ce protocole, convaincus qu'il est en effet impossible d'en trouver une implémentation pratique. En 1977, au cours de leurs recherches, ils démontrent en fait l'inverse de ce qu'ils cherchaient : ils créent le premier protocole concret de chiffrement asymétrique : le chiffrement **RSA**.
+Trois chercheurs du MIT (Boston), Ron Rivest, Adi Shamir et Len Adleman se penchent alors sur ce protocole, convaincus qu'il est en effet impossible d'en trouver une implémentation pratique. En 1977, au cours de leurs recherches, ils démontrent en fait l'inverse de ce qu'ils cherchaient : ils créent le premier protocole concret de chiffrement asymétrique : le chiffrement **RSA**.
 
-<p align="center">
-<img src="data/pic_RSA.jpeg"  width="400"/> 
-</p>
+![image](data/pic_RSA.jpeg){: .center}
 
-Le chiffrement RSA est basé sur *l'arithmétique modulaire*. Faire des calculs *modulo* un entier *n*, c'est ne garder que le reste de la division euclidienne par *n*.
 
-Le fait que 15 soit égal à 1 modulo 7 (car 15=2*7+1) s'écrira 15 ≡ 1 [7].
+Le chiffrement RSA est basé sur *l'arithmétique modulaire*. Faire des calculs *modulo* un entier $n$, c'est ne garder que le reste de la division euclidienne par $n$.
 
-De même, 10 ≡  3 [7], 25 ≡ 4 [7], 32 ≡ 2 [10], etc.
+Le fait que 15 soit égal à 1 modulo 7 (car $15=2 \times 7+1$) s'écrira $15 \equiv 1 [7]$.
+
+De même, $10 \equiv  3 [7]$, $25 \equiv 4 [7]$, $32 \equiv 2 [10]$, etc.
 
 
 ##### Étape 1
-Alice choisit 2 grands nombres premiers *p* et *q*. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons *p = 3* et *q = 11*.
+Alice choisit 2 grands nombres premiers $p$ et $q$. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons $p = 3$ et $q = 11$.
 
 ##### Étape 2
-Alice multiplie ces deux nombres *p* et *q* et obtient ainsi un nombre *n*.
->Il est très facile pour Alice de calculer *n* en connaissant *p* et *q*, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver *p* et *q* en connaissant *n* prend un temps exponentiel avec la taille de *n*.  
+Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
+>Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
 
 ##### Étape 3
-Alice choisit un nombre *e* qui doit être premier avec *(p-1)(q-1)*.  On note *φ(n)* le nombre *(p-1)(q-1)*.
+Alice choisit un nombre $e$ qui doit être premier avec $(p-1)(q-1)$.  On note $\phi(n)$ le nombre $(p-1)(q-1)$.
 
-Dans notre exemple, *(p-1)(q-1) = 20*, Alice choisit donc *e = 3*. (mais elle aurait pu aussi choisir 7, 9, 13...).
+Dans notre exemple, $(p-1)(q-1) = 20$, Alice choisit donc $e = 3$. (mais elle aurait pu aussi choisir 7, 9, 13...).
 
-Le couple **(e, n)** sera **la clé publique** d'Alice. Elle la diffuse à qui veut lui écrire.
+Le couple $(e, n)$ sera **la clé publique** d'Alice. Elle la diffuse à qui veut lui écrire.
 
-Dans notre exemple, la clé publique d'Alice est *(3, 33)*.
+Dans notre exemple, la clé publique d'Alice est $(3, 33)$.
 
 ##### Étape 4
-Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui vérifie l'égalité *e.d ≡ 1 [φ(n)]*.
+Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui vérifie l'égalité $e d \equiv 1 [\phi(n)]$.
 
-Dans notre exemple, comme *7 x 3  ≡ 1 [20]*, ce nombre *d* est égal à 7.
+Dans notre exemple, comme $7 x 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
 
-En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur *d*, appelée *inverse de e*.
+En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse de e*.
 
-Le couple **(d, n)** sera **la clé privée** d'Alice. Elle ne la diffuse à personne.
+Le couple $(d, n)$ sera **la clé privée** d'Alice. Elle ne la diffuse à personne.
 
-Dans notre exemple, la clé privée d'Alice est *(7, 33)*.
+Dans notre exemple, la clé privée d'Alice est $(7, 33)$.
 
 ##### Étape 5
 Supposons que Bob veuille écrire à Alice pour lui envoyer le nombre 4. 
-Il possède la clé publique d'Alice, qui est *(3, 33)*.
+Il possède la clé publique d'Alice, qui est $(3, 33)$.
 
-Il calcule donc 4**3 modulo 33, qui vaut 31. C'est cette valeur 31 qu'il transmet à Alice.
+Il calcule donc $4^3$ modulo 33, qui vaut 31. C'est cette valeur 31 qu'il transmet à Alice.
 
-> Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation x**3 ≡ 31 [33] de manière efficace.
+$$4^3 \equiv 31 [33]$$
+
+> Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation $x^3 \equiv 31 [33]$ de manière efficace.
 
 ##### Étape 6
 Alice reçoit la valeur 31.  
 Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calculer le reste modulo 33 :
 
-31**7 = 27512614111
+$31^7 = 27512614111$
 
-27512614111 ≡ 4 [33]
+$27512614111 \equiv 4 [33]$
 
 Elle récupère la valeur 4, qui est bien le message original de Bob.
 
 > **Comment ça marche ?**
-Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat), on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA)) assez facilement que M**ed ≡ M [n].
+Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat), on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA)) assez facilement que M**ed \equiv M [n].
 
-Il faut remarquer que M **ed = M **de. On voit que les rôles de la clé publique et de la clé privée sont symétriques : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
+Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publique et de la clé privée sont symétriques : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
 
 **Animation interactive**
-voir https://animations.interstices.info/interstices-rsa/rsa.html
+voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html)
 
 
 
@@ -236,20 +235,16 @@ Le chiffrement asymétrique est donc réservé à l'échange de clés (au début
 Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ensemble de la communication.
 
 
+![image](data/https.png){: .center}
 
-
-<p align="center">
-<img src="data/https.png" , width=80%/> 
-</p>
 
 
  ### 3.2 (HP) Fonctionnement du TLS : explication du *handshake*
 
  Observons en détail le fonctionnement du protocole ```TLS```, dont le rôle est de générer de manière sécurisée une clé dont disposeront à la fois le client et le serveur, leur permettant ainsi d'appliquer un chiffrement symétrique à leurs échanges.
 
-<p align="center">
-<img src="data/tls.png" , width=100%/> 
-</p>
+![image](data/tls.png){: .center}
+
 
 - **étape 1** : le «client Hello». Le client envoie sa version de TLS utilisée. 
 
