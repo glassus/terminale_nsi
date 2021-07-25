@@ -1,0 +1,2207 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../xtra/favTNSI.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Cours - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-conventions-syntaxiques" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Terminale NSI - Lycée François Mauriac - Bordeaux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glassus/terminale_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/terminale_nsi
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Divers/%C3%A0_venir.html" class="md-tabs__link">
+        Divers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/sommaire.html" class="md-tabs__link">
+        T1 Structures de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sommaire.html" class="md-tabs__link md-tabs__link--active">
+        T2 Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T3_Algorithmique/sommaire.html" class="md-tabs__link">
+        T3 Algorithmique
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/sommaire.html" class="md-tabs__link">
+        T4 Bases de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/sommaire.html" class="md-tabs__link">
+        T5 Architecture matérielle
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    Terminale NSI - Lycée François Mauriac - Bordeaux
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glassus/terminale_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/terminale_nsi
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Divers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Divers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Divers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Divers/%C3%A0_venir.html" class="md-nav__link">
+        À venir
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        T1 Structures de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T1 Structures de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          T1 Structures de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        1.1 Listes Piles Files
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.1 Listes Piles Files" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1.1 Listes Piles Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.1_Listes_Piles_Files/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        1.2 Dictionnaires
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.2 Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          1.2 Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.2_Dictionnaires/02_exercice.html" class="md-nav__link">
+        Création d'une rainbow table
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.2_Dictionnaires/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        1.3 Arbres
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.3 Arbres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          1.3 Arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.3_Arbres/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        1.4 Graphes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.4 Graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          1.4 Graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.4_Graphes/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        T2 Programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T2 Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          T2 Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        2.1 Programmation Orientée Objet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.1 Programmation Orientée Objet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          2.1 Programmation Orientée Objet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/4_Test_papier.html" class="md-nav__link">
+        Test sur la Programmation Orientée Objet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/4_Test_papier_correction.html" class="md-nav__link">
+        Test sur la Programmation Orientée Objet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        2.2 Récursivité
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.2 Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          2.2 Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2_R%C3%A9cursivit%C3%A9/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        2.3 Calculabilité Décidabilité
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.3 Calculabilité Décidabilité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          2.3 Calculabilité Décidabilité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3_Calculabilit%C3%A9_D%C3%A9cidabilit%C3%A9/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        2.4 Pratiques de programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.4 Pratiques de programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          2.4 Pratiques de programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="cours.html" class="md-nav__link md-nav__link--active">
+        Cours
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conventions-syntaxiques" class="md-nav__link">
+    1. Conventions syntaxiques
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Conventions syntaxiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-espaces" class="md-nav__link">
+    Les espaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-conventions-de-nommage" class="md-nav__link">
+    Les conventions de nommage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-commentaires-et-docstrings" class="md-nav__link">
+    2. Commentaires et docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Commentaires et docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-commenter-son-code-ou-pas" class="md-nav__link">
+    2.1 Commenter son code ? (ou pas)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-le-cas-particulier-des-docstrings" class="md-nav__link">
+    2.2 Le cas particulier des docstrings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-programmation-defensive-des-assert-pour-securiser-le-code" class="md-nav__link">
+    3. La programmation défensive : des assert pour sécuriser le code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-tests" class="md-nav__link">
+    4. Les tests
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Les tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pourquoi-des-tests" class="md-nav__link">
+    4.1 Pourquoi des tests ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-revoila-les-assert" class="md-nav__link">
+    4.2 Revoilà les assert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-le-module-doctest" class="md-nav__link">
+    4.3 Le module doctest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-a-propos-des-tests" class="md-nav__link">
+    4.3 À propos des tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    Bibliographie
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        T3 Algorithmique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T3 Algorithmique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          T3 Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_2" checked>
+      
+      <label class="md-nav__link" for="__nav_5_2">
+        3.1 Diviser pour régner
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.1 Diviser pour régner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          3.1 Diviser pour régner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_r%C3%A9gner/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3" checked>
+      
+      <label class="md-nav__link" for="__nav_5_3">
+        3.2 Programmation dynamique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.2 Programmation dynamique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          3.2 Programmation dynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" data-md-state="indeterminate" type="checkbox" id="__nav_5_4" checked>
+      
+      <label class="md-nav__link" for="__nav_5_4">
+        3.3 Recherche textuelle
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.3 Recherche textuelle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3.3 Recherche textuelle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        T4 Bases de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T4 Bases de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          T4 Bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" data-md-state="indeterminate" type="checkbox" id="__nav_6_2" checked>
+      
+      <label class="md-nav__link" for="__nav_6_2">
+        4.1 Modèle relationnel
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="4.1 Modèle relationnel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          4.1 Modèle relationnel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.1_Mod%C3%A8le_relationnel/02_exercices.html" class="md-nav__link">
+        Exercices sur le modèle relationnel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.1_Mod%C3%A8le_relationnel/cours.html" class="md-nav__link">
+        Le modèle relationnel
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" data-md-state="indeterminate" type="checkbox" id="__nav_6_3" checked>
+      
+      <label class="md-nav__link" for="__nav_6_3">
+        4.2 Langage SQL
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="4.2 Langage SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          4.2 Langage SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/02_exercices.html" class="md-nav__link">
+        Exercices sur le langage SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/03_python_et_SQL.html" class="md-nav__link">
+        Python et SQL / mini-projets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/cours.html" class="md-nav__link">
+        Langage SQL
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        T5 Architecture matérielle
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T5 Architecture matérielle" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          T5 Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" data-md-state="indeterminate" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        5.0 Autour de GNU Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.0 Autour de GNU Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          5.0 Autour de GNU Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.0_Autour_de_GNU_Linux/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3">
+        5.1 Systèmes sur puce
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.1 Systèmes sur puce" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          5.1 Systèmes sur puce
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.1_Syst%C3%A8mes_sur_puce/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" data-md-state="indeterminate" type="checkbox" id="__nav_7_4" checked>
+      
+      <label class="md-nav__link" for="__nav_7_4">
+        5.2 Gestion des processus
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.2 Gestion des processus" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          5.2 Gestion des processus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.2_Gestion_des_processus/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" data-md-state="indeterminate" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        5.3 Protocoles de routage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.3 Protocoles de routage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          5.3 Protocoles de routage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.3_Protocoles_de_routage/02_Exercices.html" class="md-nav__link">
+        02 Exercices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.3_Protocoles_de_routage/cours.html" class="md-nav__link">
+        Protocoles de routage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" data-md-state="indeterminate" type="checkbox" id="__nav_7_6" checked>
+      
+      <label class="md-nav__link" for="__nav_7_6">
+        5.4 Cryptographie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.4 Cryptographie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          5.4 Cryptographie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.4_Cryptographie/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+                  <a href="https://github.com/glassus/terminale_nsi/edit/master/docs/T2_Programmation/2.4_Pratiques_de_programmation/cours.md" title="Editer cette page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Cours</h1>
+                
+                <p><img alt="" src="data/pep8.webp" /></p>
+<p><em>extrait du site https://realpython.com/python-pep8/</em></p>
+<h2 id="1-conventions-syntaxiques">1. Conventions syntaxiques<a class="headerlink" href="#1-conventions-syntaxiques" title="Permanent link">⚓︎</a></h2>
+<p>La programmation est un art délicat : un simple caractère en trop peut provoquer une erreur pour le code tout entier (penser à un innocent caractère d'espace en début de ligne dans un code Python).</p>
+<p align="center">
+<img src="data/extraspace.jpg" width=30%/> 
+</p>
+
+<p>Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'aspect purement «esthétique» de celui-ci : il est nécessaire de respecter autant que possible des conventions typographiques, qui vont standardiser le code et le rendre ainsi plus lisible.</p>
+<p>Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. </p>
+<p>Vous trouverez un excellent résumé de la PEP8 sur le site http://sametmax.com/le-pep8-en-resume/.</p>
+<p>En voici quelques extraits :</p>
+<h3 id="les-espaces">Les espaces<a class="headerlink" href="#les-espaces" title="Permanent link">⚓︎</a></h3>
+<p align="center">
+<img src="data/standards.jpg" width=30%/> 
+</p>
+
+<p>▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématiques  (<code>=, ==, &gt;, +, *, ...</code> )</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN </span>
+<span class="n">a</span><span class="o">=</span><span class="mi">3</span>
+
+<span class="c1"># BIEN </span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>▶ Pour les opérateurs mathématiques, on essaie de reconstituer les groupes de priorité (lorsqu'il y en a) :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span>
+
+<span class="c1"># BIEN</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+</td></tr></table>
+<p>mais </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
+
+<span class="c1"># BIEN</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
+</code></pre></div>
+</td></tr></table>
+<p>▶ On ne met pas d'espace à intérieur des parenthèses, des crochets ou des accolades :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">5</span> <span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;bonjour&#39;</span> <span class="p">)</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>▶ Pour les virgules, et les deux points : 
+pas d'espace avant mais une espace après.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="les-conventions-de-nommage">Les conventions de nommage<a class="headerlink" href="#les-conventions-de-nommage" title="Permanent link">⚓︎</a></h3>
+<p>▶ Les variables à une lettre (comme <code>i</code>, <code>j</code>, <code>k</code> ) sont réservées aux indices (notamment dans les boucles).</p>
+<p>▶ Les autres variables doivent avoir des noms explicites, éventuellement écrits en <code>snake_case</code> si plusieurs mots doivent être reliés.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">cep</span> <span class="o">+=</span> <span class="n">vm</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">if</span> <span class="n">date</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">compte_epargne</span> <span class="o">+=</span> <span class="n">versement_mensuel</span>
+</code></pre></div>
+</td></tr></table>
+<p>Rappel des différents types de casse :
+- <code>snake_case</code> : les mots sont séparés par des underscores. Conseillé en Python.
+- <code>camelCase</code> : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
+- <code>PascalCase</code> : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
+- <code>kebab-case</code> : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.</p>
+<p>▶ Cas particulier des classes en Programmation Orientée Objet : leur nom doit commencer par une majuscule.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">class</span> <span class="nc">voiture</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">marque</span><span class="p">,</span> <span class="n">modele</span><span class="p">):</span>
+       <span class="c1">#pass</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">class</span> <span class="nc">Voiture</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">marque</span><span class="p">,</span> <span class="n">modele</span><span class="p">):</span>
+       <span class="c1">#pass</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="2-commentaires-et-docstrings">2. Commentaires et docstrings<a class="headerlink" href="#2-commentaires-et-docstrings" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-commenter-son-code-ou-pas">2.1 Commenter son code ? (ou pas)<a class="headerlink" href="#21-commenter-son-code-ou-pas" title="Permanent link">⚓︎</a></h3>
+<p align="center">
+<img src="data/comment.jpg" width=30%/> 
+</p>
+
+<p>La nécessité de commenter son code est assez controversée.<br />
+Il est d'usage de dire qu'un code doit être assez <strong>explicite</strong> pour que le lecteur puisse le comprendre sans avoir à lire un commentaire. </p>
+<p>De fait, les commentaires sont parfois (souvent) superflus :</p>
+<p align="center">
+<img src="data/cat.png" width=30%/> 
+</p>
+
+<p>Et s'ils sont réellement nécessaires, il faut se poser la question : est-ce que ce code n'aurait pas pu être plus simple ? (attention, la réponse n'est pas toujours oui)</p>
+<p align="center">
+<img src="data/smart.jpeg" width=30%/> 
+</p>
+
+<p><strong>Exemple :</strong></p>
+<p>Considérons la fonction suivante.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># c est le capital de départ, t le taux annuel et n le nombre d&#39;années</span>
+    <span class="k">return</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="n">n</span>  <span class="c1">#renvoie le capital après n années</span>
+</code></pre></div>
+</td></tr></table>
+Elle est bien commentée. Mais si on croise la fonction <code>f()</code> ailleurs dans le code, se souviendra-t-on de son rôle ?</p>
+<p>Il aurait mieux valu écrire :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">capital</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taux</span><span class="p">)</span><span class="o">**</span><span class="n">nombre_annees</span>
+</code></pre></div>
+</td></tr></table>
+Ce code est plus long, mais assez explicite pour se passer de commentaires.</p>
+<h3 id="22-le-cas-particulier-des-docstrings">2.2 Le cas particulier des <code>docstrings</code><a class="headerlink" href="#22-le-cas-particulier-des-docstrings" title="Permanent link">⚓︎</a></h3>
+<h4 id="221-que-sont-les-docstrings">2.2.1 Que sont les <code>docstrings</code>?<a class="headerlink" href="#221-que-sont-les-docstrings" title="Permanent link">⚓︎</a></h4>
+<p>Les <code>docstrings</code> sont des commentaires <em>normalisés</em> pour les fonctions, qui peuvent être consultés en console.</p>
+<p><strong>Exemples :</strong></p>
+<p>Nous connaissons la fonction <code>len()</code> qui permet par exemple de connaître la longueur d'une liste passée en paramètre.</p>
+<p>Si nous tapons en console la commande <code>print(len.__doc__)</code>, nous aurons la description de cette fonction. </p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="o">.</span><span class="vm">__doc__</span>
+<span class="s1">&#39;Return the number of items in a container.&#39;</span>
+</code></pre></div>
+</td></tr></table>
+Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  par la commande <code>help(f)</code> :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">len</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span>
+    <span class="n">Return</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">container</span><span class="o">.</span>
+</code></pre></div>
+</td></tr></table>
+<p>De même pour la fonction <code>range</code> :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">range</span> <span class="nb">object</span>
+<span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">range</span> <span class="nb">object</span>
+
+<span class="n">Return</span> <span class="n">an</span> <span class="nb">object</span> <span class="n">that</span> <span class="n">produces</span> <span class="n">a</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">integers</span> <span class="kn">from</span> <span class="nn">start</span> <span class="p">(</span><span class="n">inclusive</span><span class="p">)</span>
+<span class="n">to</span> <span class="n">stop</span> <span class="p">(</span><span class="n">exclusive</span><span class="p">)</span> <span class="n">by</span> <span class="n">step</span><span class="o">.</span>  <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="n">produces</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mf">1.</span>
+<span class="n">start</span> <span class="n">defaults</span> <span class="n">to</span> <span class="mi">0</span><span class="p">,</span> <span class="ow">and</span> <span class="n">stop</span> <span class="ow">is</span> <span class="n">omitted</span><span class="err">!</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="n">produces</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.</span>
+<span class="n">These</span> <span class="n">are</span> <span class="n">exactly</span> <span class="n">the</span> <span class="n">valid</span> <span class="n">indices</span> <span class="k">for</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="mi">4</span> <span class="n">elements</span><span class="o">.</span>
+<span class="n">When</span> <span class="n">step</span> <span class="ow">is</span> <span class="n">given</span><span class="p">,</span> <span class="n">it</span> <span class="n">specifies</span> <span class="n">the</span> <span class="n">increment</span> <span class="p">(</span><span class="ow">or</span> <span class="n">decrement</span><span class="p">)</span><span class="o">.</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Le résultat de la commande <code>help(range)</code> est trop long pour être repris ici, mais on y retrouve bien la docstring de la fonction <code>range</code>.</p>
+<h4 id="222-creer-ses-propres-docstrings">2.2.2 Créer ses propres docstrings<a class="headerlink" href="#222-creer-ses-propres-docstrings" title="Permanent link">⚓︎</a></h4>
+<p>Il suffit pour cela de commencer la fonction à documenter par une ou plusieurs phrases entre triples quotes :</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Renvoie le capital après n années.</span>
+<span class="sd">    capital : valeur initiale</span>
+<span class="sd">    taux : taux d&#39;intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
+<span class="sd">    nombre_annees : nombre d&#39;années de placement du capital</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">capital</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taux</span><span class="p">)</span><span class="o">**</span><span class="n">nombre_annees</span>
+</code></pre></div>
+</td></tr></table>
+Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre fonction :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">capital_apres_n_annees</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">capital_apres_n_annees</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span>
+    <span class="n">Renvoie</span> <span class="n">le</span> <span class="n">capital</span> <span class="n">après</span> <span class="n">n</span> <span class="n">années</span><span class="o">.</span>
+    <span class="n">capital</span> <span class="p">:</span> <span class="n">valeur</span> <span class="n">initiale</span>
+    <span class="n">taux</span> <span class="p">:</span> <span class="n">taux</span> <span class="n">d</span><span class="s1">&#39;intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
+    <span class="n">nombre_annees</span> <span class="p">:</span> <span class="n">nombre</span> <span class="n">d</span><span class="s1">&#39;années de placement du capital</span>
+</code></pre></div>
+</td></tr></table>
+<p>Comme on le voit, tout cela est très «verbeux». Cela peut nous paraître largement superflu puisque nos codes dépassent rarement quelques dizaines de lignes et sont lus par rarement plus de 2 personnes. Mais dans la vraie vie des développeurs, il est primordial qu'un code soit clair et documenté.</p>
+<h2 id="3-la-programmation-defensive-des-assert-pour-securiser-le-code">3. La programmation défensive : des <code>assert</code> pour sécuriser le code<a class="headerlink" href="#3-la-programmation-defensive-des-assert-pour-securiser-le-code" title="Permanent link">⚓︎</a></h2>
+<p>La programmation défensive est l'art de prévoir le pire et d'essayer de le détecter avant qu'il ne soit trop tard.<br />
+De manière bien plus concrète, il est d'usage d'essayer de répérer si des données (souvent des paramètres d'une fonction) sont susceptibles de créer des problèmes, ou sont hors spécification.</p>
+<p><strong>Un exemple :</strong></p>
+<p>La fonction :</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine_carree</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;un nombre positif ou nul est requis&#39;</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mf">0.5</span>
+</code></pre></div>
+</td></tr></table>
+donnera, lors de l'appel à <code>racine_carree(-2)</code>, le message suivant :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">racine_carree</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">&quot;/home/gilles/Bureau/exemples_assert.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">racine_carree</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;un nombre positif ou nul est requis&#39;</span>
+<span class="ne">AssertionError</span><span class="p">:</span> <span class="n">un</span> <span class="n">nombre</span> <span class="n">positif</span> <span class="n">ou</span> <span class="n">nul</span> <span class="n">est</span> <span class="n">requis</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>Un autre exemple :</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne_trimestrielle</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    calcule la moyenne des nombres de la liste liste_notes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">liste_notes</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">,</span> <span class="s1">&#39;liste vide&#39;</span>
+    <span class="k">assert</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;au moins une note dépasse 20&#39;</span>
+    <span class="k">assert</span> <span class="nb">min</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;au moins une note est en dessous de 0&#39;</span>
+
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>À ce stade, les <code>assert</code> sont donc pour nous juste un moyen rapide de remplacer un test <code>if ... then ... else</code> pour détecter des erreurs potentielles.<br />
+Ils sont en réalité plus utiles que cela : lors de la conception d'un programme, des <code>assert</code> sont posés pour vérifier l'intégrité du code, mais peuvent être désactivés à tout moment pour en faire un code optimisé (par la commande <code>-O</code> à l'exécution). Tout ceci dépasse largement le cadre de notre cours.</p>
+<p>Il est à noter aussi que les erreurs peuvent être gérées par le mécanisme <code>try ... except</code>, qui permet de «lever des exceptions». Pour les curieux, plus de renseignements <a href="http://perso.univ-lemans.fr/~berger/CoursPython/co/try_except.html">ici</a>.</p>
+<h2 id="4-les-tests">4. Les tests<a class="headerlink" href="#4-les-tests" title="Permanent link">⚓︎</a></h2>
+<h3 id="41-pourquoi-des-tests">4.1 Pourquoi des tests ?<a class="headerlink" href="#41-pourquoi-des-tests" title="Permanent link">⚓︎</a></h3>
+<p align="center">
+<img src="data/tester.jpg" width=30%/> 
+</p>
+
+<p>Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. </p>
+<p>Par exemple, si on vient de construire la fonction <code>valeur_absolue(n)</code>, il est fort probable qu'on aille taper ceci dans la console :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="mi">7</span>
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li>On peut regrouper tous ces tests au sein d'une même fonction <code>test_valeur_absolue()</code>.</li>
+<li>On peut écrire cette fonction <code>test_valeur_absolue()</code> avant même de commencer à écrire la fonction <code>valeur_absolue(n)</code>.</li>
+</ul>
+<blockquote>
+<p>Remarque : 
+la méthode de développement logiciel TDD (Test Driven Developement) est basée en partie sur ce principe  : 
+1. On commence par écrire le test de la fonction.
+2. Le test échoue (forcément, la fonction n'est pas encore codée !)
+3. On écrit le code de la fonction pour que le test soit validé.
+4. On améliore (si possible) ce code tout en vérifiant que le test continue à être valide.</p>
+</blockquote>
+<p align="center">
+<img src="data/TDD.png" width=30%/> 
+</p>
+
+<p>Revenons à nos tests sur la fonction <code>valeur_absolue(n)</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>En console, il suffit maintenant d'appeler la fonction <code>test_valeur_absolue()</code> :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_valeur_absolue</span><span class="p">()</span>
+<span class="n">ok</span>
+<span class="n">ok</span>
+<span class="n">ok</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="42-revoila-les-assert">4.2 Revoilà les <code>assert</code><a class="headerlink" href="#42-revoila-les-assert" title="Permanent link">⚓︎</a></h3>
+<p>Utiliser des <code>assert</code> permet d'écrire très simplement les tests précédents.</p>
+<p>Reprenons notre fonction <code>valeur_absolue()</code>. Sa fonction test  <code>test_valeur_absolue()</code> peut s'écrire :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_valeur_absolue</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>Exercice :</strong><br />
+Écrire une fonction <code>maxi(liste)</code> qui renvoie le plus grand élément de la liste <code>liste</code> passée en paramètre (de préférence sans utiliser la fonction <code>max()</code> ...).<br />
+Vous écrirez <strong>d'abord</strong> une fonction <code>test_maxi()</code> avant d'écrire la fonction <code>maxi(liste)</code> </p>
+<h3 id="43-le-module-doctest">4.3 Le module <code>doctest</code><a class="headerlink" href="#43-le-module-doctest" title="Permanent link">⚓︎</a></h3>
+<p>Le module <code>doctest</code>  permet d'écrire les tests <strong>à l'intérieur</strong> de la docstring d'une fonction. </p>
+<p>Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">compte_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie le nombre de voyelles du mot donné en paramètre.</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;python&quot;)</span>
+<span class="sd">    2</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;HTTP&quot;)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;eau&quot;)</span>
+<span class="sd">    3</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">voyelles</span> <span class="o">=</span> <span class="s2">&quot;aeiou&quot;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>
+</td></tr></table>
+<p>Observez bien la docstring : elle contient explicitement ce qu'on veut que renvoie le terminal lorsqu'on appellera la fonction.
+On écrit donc les trois chevrons <code>&gt;&gt;&gt;</code> suivi de l'appel à la fonction, et à la ligne en dessous ce que nous espérons que la fonction nous renvoie.
+On peut écrire autant de tests que l'on veut.</p>
+<p>Ensuite, en console :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+Dans notre cas, le retour sera celui-ci :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+<span class="o">**********************************************************************</span>
+<span class="n">File</span> <span class="s2">&quot;voyelles.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
+<span class="n">Failed</span> <span class="n">example</span><span class="p">:</span>
+    <span class="n">compte_voyelles</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+<span class="n">Expected</span><span class="p">:</span>
+    <span class="mi">2</span>
+<span class="n">Got</span><span class="p">:</span>
+    <span class="mi">1</span>
+<span class="o">**********************************************************************</span>
+<span class="mi">1</span> <span class="n">items</span> <span class="n">had</span> <span class="n">failures</span><span class="p">:</span>
+   <span class="mi">1</span> <span class="n">of</span>   <span class="mi">3</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
+<span class="o">***</span><span class="n">Test</span> <span class="n">Failed</span><span class="o">***</span> <span class="mi">1</span> <span class="n">failures</span><span class="o">.</span>
+<span class="n">TestResults</span><span class="p">(</span><span class="n">failed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">attempted</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>On voit que le test <code>compte_voyelles("python")</code> a renvoyé la valeur 1 alors qu'on attendait 2. En regardant notre fonction, on s'aperçoit donc qu'on avait oublié le <code>y</code> dans la liste des voyelles. </p>
+<p>En corrigeant ceci, le test devient :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">doctest</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+<span class="n">TestResults</span><span class="p">(</span><span class="n">failed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">attempted</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+Ce qui est beaucoup plus satisfaisant.</p>
+<h3 id="43-a-propos-des-tests">4.3 À propos des tests<a class="headerlink" href="#43-a-propos-des-tests" title="Permanent link">⚓︎</a></h3>
+<p>Le comportement face aux tests en programmation doit être le même qu'en mathématiques : <em>un test qui ne marche pas est plus riche d'enseignements qu'un test qui marche</em>.</p>
+<p>En mathématiques, seule la notion de contre-exemple est fertile : si quelqu'un vous affirme que <em>«tous les nombres impairs sont premiers»</em>, il vous suffit d'exhiber le nombre 9 pour lui prouver qu'il a tort et achever la discussion.</p>
+<p>Par contre, il aurait pu essayer de vous convaincre avec les nombres 3, 5 et 13, qui sont bien impairs et premiers.</p>
+<p>De la même manière, voir qu'une fonction passe les tests que vous avez écrits ne vous assurera pas que cette fonction aura <em>toujours</em> le bon comportement souhaité. Elle l'aura pour les valeurs de test, mais pas forcément pour les autres.</p>
+<p>En revanche, si une fonction ne passe pas un des tests, vous avez la certitude qu'il y a un problème à régler quelque part.</p>
+<p>Tout ceci en admettant, bien sûr, que vos tests <em>eux-mêmes</em> ne comportent pas d'erreurs...</p>
+<p align="center">
+<img src="data/bug.jpg" width=30%/> 
+</p>
+
+<hr />
+<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>https://www.reddit.com/r/ProgrammerHumor/</li>
+<li>https://fr.wikipedia.org/wiki/Test_driven_development</li>
+<li>https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html</li>
+<li>http://sametmax.com/le-pep8-en-resume/</li>
+</ul>
+<hr />
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Dernière mise à jour: 2021-07-25
+    
+  </small>
+</div>
+                  
+                
+              
+    <script src="../../js/ide.js"></script> 
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../2.3_Calculabilit%C3%A9_D%C3%A9cidabilit%C3%A9/cours.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Cours" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Cours
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../T3_Algorithmique/sommaire.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Sommaire" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Sommaire
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            CC BY-SA / G.Lassus
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:gilles.lassus@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/glassus/premiere_nsi" target="_blank" rel="noopener" title="Dépôt git" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://lyceemauriac.fr" target="_blank" rel="noopener" title="Lycée François Mauriac - Bordeaux" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>

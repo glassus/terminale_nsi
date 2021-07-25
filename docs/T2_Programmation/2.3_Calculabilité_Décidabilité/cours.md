@@ -7,6 +7,9 @@
 <img src="data/BO.png" width='80%' />
 </p>
 
+![image](data/BO.png){: .center}
+
+
 
 # Décidabilité, calculabilité
 

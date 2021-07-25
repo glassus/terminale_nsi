@@ -1,0 +1,1930 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../xtra/favTNSI.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Cours - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#decidabilite-calculabilite" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Terminale NSI - Lycée François Mauriac - Bordeaux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glassus/terminale_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/terminale_nsi
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Divers/%C3%A0_venir.html" class="md-tabs__link">
+        Divers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/sommaire.html" class="md-tabs__link">
+        T1 Structures de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sommaire.html" class="md-tabs__link md-tabs__link--active">
+        T2 Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T3_Algorithmique/sommaire.html" class="md-tabs__link">
+        T3 Algorithmique
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/sommaire.html" class="md-tabs__link">
+        T4 Bases de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/sommaire.html" class="md-tabs__link">
+        T5 Architecture matérielle
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    Terminale NSI - Lycée François Mauriac - Bordeaux
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glassus/terminale_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/terminale_nsi
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Divers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Divers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Divers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Divers/%C3%A0_venir.html" class="md-nav__link">
+        À venir
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        T1 Structures de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T1 Structures de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          T1 Structures de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        1.1 Listes Piles Files
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.1 Listes Piles Files" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1.1 Listes Piles Files
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.1_Listes_Piles_Files/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        1.2 Dictionnaires
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.2 Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          1.2 Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.2_Dictionnaires/02_exercice.html" class="md-nav__link">
+        Création d'une rainbow table
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.2_Dictionnaires/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        1.3 Arbres
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.3 Arbres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          1.3 Arbres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.3_Arbres/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        1.4 Graphes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="1.4 Graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          1.4 Graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T1_Structures_de_donn%C3%A9es/1.4_Graphes/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        T2 Programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T2 Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          T2 Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        2.1 Programmation Orientée Objet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.1 Programmation Orientée Objet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          2.1 Programmation Orientée Objet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/4_Test_papier.html" class="md-nav__link">
+        Test sur la Programmation Orientée Objet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/4_Test_papier_correction.html" class="md-nav__link">
+        Test sur la Programmation Orientée Objet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_Programmation_Orient%C3%A9e_Objet/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        2.2 Récursivité
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.2 Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          2.2 Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2_R%C3%A9cursivit%C3%A9/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        2.3 Calculabilité Décidabilité
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.3 Calculabilité Décidabilité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          2.3 Calculabilité Décidabilité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="cours.html" class="md-nav__link md-nav__link--active">
+        Cours
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-un-programme-comme-parametre-dun-programme" class="md-nav__link">
+    1. Un programme comme paramètre d'un programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mon-programme-va-t-il-sarreter" class="md-nav__link">
+    2. Mon programme va-t-il s'arrêter ?
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Mon programme va-t-il s'arrêter ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-un-exemple" class="md-nav__link">
+    2.1 Un exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-une-machine-pour-predire-larret-ou-non-dun-programme" class="md-nav__link">
+    2.2 Une machine pour prédire l'arrêt ou non d'un programme.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-amusons-nous-avec-ce-programme-halt" class="md-nav__link">
+    2.3 Amusons-nous avec ce programme halt.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-un-leger-probleme" class="md-nav__link">
+    2.4 Un léger problème ...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-conclusion" class="md-nav__link">
+    2.5 Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-calculabilite" class="md-nav__link">
+    2. Calculabilité
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Calculabilité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-notion-de-calculabilite" class="md-nav__link">
+    2.1 Notion de calculabilité
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-langages-turing-complets" class="md-nav__link">
+    2.2 Langages Turing-complets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-hp-calculable-oui-mais-facilement-1-million-de-a-gagner-ci-dessous" class="md-nav__link">
+    2.3 (HP) Calculable, oui, mais facilement ? -&gt; 1 million de $ à gagner ci-dessous.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    Bibliographie
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_5" checked>
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        2.4 Pratiques de programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.4 Pratiques de programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          2.4 Pratiques de programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.4_Pratiques_de_programmation/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        T3 Algorithmique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T3 Algorithmique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          T3 Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" data-md-state="indeterminate" type="checkbox" id="__nav_5_2" checked>
+      
+      <label class="md-nav__link" for="__nav_5_2">
+        3.1 Diviser pour régner
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.1 Diviser pour régner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          3.1 Diviser pour régner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_r%C3%A9gner/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" data-md-state="indeterminate" type="checkbox" id="__nav_5_3" checked>
+      
+      <label class="md-nav__link" for="__nav_5_3">
+        3.2 Programmation dynamique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.2 Programmation dynamique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          3.2 Programmation dynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" data-md-state="indeterminate" type="checkbox" id="__nav_5_4" checked>
+      
+      <label class="md-nav__link" for="__nav_5_4">
+        3.3 Recherche textuelle
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3.3 Recherche textuelle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          3.3 Recherche textuelle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        T4 Bases de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T4 Bases de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          T4 Bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" data-md-state="indeterminate" type="checkbox" id="__nav_6_2" checked>
+      
+      <label class="md-nav__link" for="__nav_6_2">
+        4.1 Modèle relationnel
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="4.1 Modèle relationnel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          4.1 Modèle relationnel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.1_Mod%C3%A8le_relationnel/02_exercices.html" class="md-nav__link">
+        Exercices sur le modèle relationnel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.1_Mod%C3%A8le_relationnel/cours.html" class="md-nav__link">
+        Le modèle relationnel
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" data-md-state="indeterminate" type="checkbox" id="__nav_6_3" checked>
+      
+      <label class="md-nav__link" for="__nav_6_3">
+        4.2 Langage SQL
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="4.2 Langage SQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          4.2 Langage SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/02_exercices.html" class="md-nav__link">
+        Exercices sur le langage SQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/03_python_et_SQL.html" class="md-nav__link">
+        Python et SQL / mini-projets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T4_Bases_de_donn%C3%A9es/4.2_Langage_SQL/cours.html" class="md-nav__link">
+        Langage SQL
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        T5 Architecture matérielle
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T5 Architecture matérielle" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          T5 Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" data-md-state="indeterminate" type="checkbox" id="__nav_7_2" checked>
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        5.0 Autour de GNU Linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.0 Autour de GNU Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          5.0 Autour de GNU Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.0_Autour_de_GNU_Linux/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" data-md-state="indeterminate" type="checkbox" id="__nav_7_3" checked>
+      
+      <label class="md-nav__link" for="__nav_7_3">
+        5.1 Systèmes sur puce
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.1 Systèmes sur puce" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          5.1 Systèmes sur puce
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.1_Syst%C3%A8mes_sur_puce/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" data-md-state="indeterminate" type="checkbox" id="__nav_7_4" checked>
+      
+      <label class="md-nav__link" for="__nav_7_4">
+        5.2 Gestion des processus
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.2 Gestion des processus" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          5.2 Gestion des processus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.2_Gestion_des_processus/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" data-md-state="indeterminate" type="checkbox" id="__nav_7_5" checked>
+      
+      <label class="md-nav__link" for="__nav_7_5">
+        5.3 Protocoles de routage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.3 Protocoles de routage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          5.3 Protocoles de routage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.3_Protocoles_de_routage/02_Exercices.html" class="md-nav__link">
+        02 Exercices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.3_Protocoles_de_routage/cours.html" class="md-nav__link">
+        Protocoles de routage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" data-md-state="indeterminate" type="checkbox" id="__nav_7_6" checked>
+      
+      <label class="md-nav__link" for="__nav_7_6">
+        5.4 Cryptographie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="5.4 Cryptographie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          5.4 Cryptographie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../T5_Architecture_mat%C3%A9rielle/5.4_Cryptographie/cours.html" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+                  <a href="https://github.com/glassus/terminale_nsi/edit/master/docs/T2_Programmation/2.3_Calculabilité_Décidabilité/cours.md" title="Editer cette page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <!---
+
+<p align="center">
+<img src="data/banniere.png" width='100%' />
+--->
+<p align="center">
+<img src="data/BO.png" width='80%' />
+</p>
+
+<h1 id="decidabilite-calculabilite">Décidabilité, calculabilité<a class="headerlink" href="#decidabilite-calculabilite" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-un-programme-comme-parametre-dun-programme">1. Un programme comme paramètre d'un programme<a class="headerlink" href="#1-un-programme-comme-parametre-dun-programme" title="Permanent link">⚓︎</a></h2>
+<p>Les codes que nous manipulons ressemblent souvent à cela :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Le programme s'appelle <code>accueil</code>, et pour fonctionner il a besoin d'un paramètre, qui sera ici un nombre entier <code>n</code>.</p>
+<p>Voici comment nous pouvons représenter notre machine <code>accueil</code>, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)</p>
+<p align="center">
+<img src="data/m1.png" , width=30%/> 
+</p>
+
+<p>Maintenant, enregistrons le code suivant dans un fichier <code>test.py</code> :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+
+<span class="n">accueil</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Pour exécuter ce code, nous devons taper dans un terminal l'instruction suivante :
+<code>python3 test.py</code>, ce qui donnera </p>
+<p align="center">
+<img src="data/term.png" , width=40%/> 
+</p>
+
+<p>Le programme utilisé est alors <code>python3</code>, qui prend comme paramètre le programme <code>test.py</code>. Ce paramètre <code>test.py</code> est un ensemble de caractères qui contient les instructions que le programme <code>python3</code> va interpréter. </p>
+<p>L'illustration correspondante sera donc :</p>
+<p align="center">
+<img src="data/m2.png" , width=30%/> 
+</p>
+
+<p>Mais nous pouvons aller encore plus loin : l'instruction <code>python3 test.py</code> est tapée dans mon Terminal Linux, qui lui-même est un programme appelé <code>Terminal</code>.</p>
+<p>Et donc :</p>
+<p align="center">
+<img src="data/m3.png" , width=30%/> 
+</p>
+
+<p>Conclusion :</p>
+<p><strong>Il n'y a donc aucun obstacle à considérer un programme comme une simple donnée, pouvant être reçue en paramètre par un autre programme.</strong> (voire par lui-même !)</p>
+<blockquote>
+<p>À titre anecdotique, on pourra exécuter avec intérêt cette instruction Python :
+<code>a='a=%r;print(a%%a)';print(a%a)</code> 
+Ce type de code (magique !) existe dans tous les langages et s'appelle un <a href="https://fr.wikipedia.org/wiki/Quine_(informatique)">quine</a>.</p>
+</blockquote>
+<h2 id="2-mon-programme-va-t-il-sarreter">2. Mon programme va-t-il s'arrêter ?<a class="headerlink" href="#2-mon-programme-va-t-il-sarreter" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-un-exemple">2.1 Un exemple<a class="headerlink" href="#21-un-exemple" title="Permanent link">⚓︎</a></h3>
+<p>Considérons le programme suivant :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>En l'observant attentivement, je peux prévoir que <code>countdown(10)</code> affichera les nombres de 10 à 1 avant d'écrire "fini". Puis le programme s'arrêtera.</p>
+<p>Mais que va provoquer <code>countdown(10.8)</code> ?</p>
+<p>Comme la variable <code>n</code> ne sera jamais égale à 0, le programme va rentrer dans une boucle infinie, il ne s'arrêtera jamais. Mauvaise nouvelle. 
+J'ai pu prévoir ceci en regardant attentivement le code de mon programme. J'ai «remarqué» qu'une variable <code>n</code> non entière provoquerait une boucle infinie.</p>
+<p><strong>Question :</strong>
+Est-ce qu'un programme d'<em>analyse de programmes</em> aurait pu faire cela à ma place ?</p>
+<h3 id="22-une-machine-pour-predire-larret-ou-non-dun-programme">2.2 Une machine pour prédire l'arrêt ou non d'un programme.<a class="headerlink" href="#22-une-machine-pour-predire-larret-ou-non-dun-programme" title="Permanent link">⚓︎</a></h3>
+<p>Après tout, un programme est une suite d'instructions (le code-source), et peut donc être, comme on l'a vu, le paramètre d'entrée d'un autre programme qui l'analyserait. 
+Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :
+- un paramètre <code>prog</code> (le code-source du programme)
+- un paramètre  <code>x</code>, qui serait le paramètre d'entrée de <code>prog</code>.</p>
+<p>L'instruction <code>halt(prog, x)</code> renverrait <code>True</code> si <code>prog(x)</code> s'arrête, et <code>False</code> si <code>prog(x)</code> ne s'arrête pas.</p>
+<p align="center">
+<img src="data/halt1.png" , width=30%/> 
+</p>
+
+<p><strong>Exemple</strong> : 
+- <code>halt(countdown, 10)</code> renverrait <code>True</code>.
+- <code>halt(countdown, 10.8)</code> renverrait <code>False</code>. </p>
+<p align="center">
+<img src="data/halt2.png" , width=60%/> 
+</p>
+
+<p><strong>Tentative d'écriture de <code>halt</code> en Python :</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s2">&quot;prog(x) s&#39;arrête&quot;</span> <span class="p">:</span>   <span class="c1"># ce code n&#39;est pas encore abouti ...</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+</td></tr></table>
+<p>Nous en resterons là pour l'instant dans l'écriture de ce programme. Nous allons nous en servir pour construire d'autres programmes.</p>
+<h3 id="23-amusons-nous-avec-ce-programme-halt">2.3 Amusons-nous avec ce programme <code>halt</code>.<a class="headerlink" href="#23-amusons-nous-avec-ce-programme-halt" title="Permanent link">⚓︎</a></h3>
+<p>Considérons le programme :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sym</span><span class="p">(</span><span class="n">prog</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">prog</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+</code></pre></div>
+</td></tr></table>
+<p>On peut remarquer que le programme <code>halt</code> est appelé avec comme paramètres <code>prog, prog</code>, ce qui signifie que <code>prog</code> se prend lui-même en paramètre. On rappelle que ce n'est pas choquant, un code-source étant une donnée comme une autre.</p>
+<p align="center">
+<img src="data/halt3.png" , width=40%/> 
+</p>
+
+<p>Ce programme <code>sym</code> reçoit donc en paramètre un programme <code>prog</code>, et :
+- va rentrer dans une boucle infinie si <code>prog(prog)</code> s'arrête.
+- va renvoyer 1 si  <code>prog(prog)</code> ne s'arrête pas.</p>
+<h3 id="24-un-leger-probleme">2.4 Un léger problème ...<a class="headerlink" href="#24-un-leger-probleme" title="Permanent link">⚓︎</a></h3>
+<p>Puisqu'un programme peut prendre en paramètre son propre code-source, que donnerait l'appel à <code>sym(sym)</code> ?</p>
+<p>Deux cas peuvent se présenter, suivant si <code>halt(sym, sym)</code> renvoie <code>True</code> ou <code>False</code>.</p>
+<p align="center">
+<img src="data/halt4.png" , width=80%/> 
+</p>
+
+<ul>
+<li>
+<p><strong>cas n°1</strong> : <code>halt(sym, sym)</code> renvoie <code>True</code>, ce qui signifie que <code>sym(sym)</code>  devrait s'arrêter. Mais dans ce cas-là, l'exécution de <code>sym(sym)</code> rentre dans une boucle infinie. C'est une contradiction.</p>
+</li>
+<li>
+<p><strong>cas n°2</strong> : <code>halt(sym, sym)</code> renvoie <code>False</code>, ce qui signifie que <code>sym(sym)</code>  rentre dans une boucle infinie. Mais dans ce cas-là, l'exécution de <code>sym(sym)</code> se termine correctement et renvoie la valeur 1. C'est une contradiction.</p>
+</li>
+</ul>
+<h3 id="25-conclusion">2.5 Conclusion<a class="headerlink" href="#25-conclusion" title="Permanent link">⚓︎</a></h3>
+<p>Nous venons de prouver que notre programme <code>halt</code>, censé prédire si un programme <code>prog</code> peut s'arrêter sur une entrée <code>x</code>, <strong>NE PEUT PAS EXISTER</strong>.</p>
+<p>Ce résultat théorique, d'une importance cruciale, s'appelle <strong>le théorème de l'arrêt</strong>.</p>
+<p align="center">
+<img src="data/turing16.jpg" , width=40%/> 
+</p>
+
+<p>Ce résultat a été démontré par <a href="https://fr.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> en 1936, dans un article intitulé <em>«On computable numbers, with an application to the Entscheidungsproblem»</em>.</p>
+<p align="center">
+<img src="data/turing.png" , width=100%/> 
+</p>
+
+<p>Pour sa démonstration, il présente un modèle théorique de machine capable d'exécuter des instructions basiques sur un ruban infini, les <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machines de Turing</a>.</p>
+<p>À la même époque, le mathématicien <a href="https://fr.wikipedia.org/wiki/Alonzo_Church">Alonzo Church</a> démontre lui aussi ce théorème de l'arrêt, mais par un moyen totalement différent, en inventant le <a href="https://fr.wikipedia.org/wiki/Lambda-calcul">lambda-calcul</a>.</p>
+<p>Tous deux mettent ainsi un terme au rêve du mathématicien allemand <a href="https://fr.wikipedia.org/wiki/David_Hilbert">David Hilbert</a>, qui avait en 1928 posé la question de l'existence d'un algorithme capable de répondre «oui» ou «non» à n'importe quel énoncé mathématique posé sous forme décisionnelle («un triangle rectangle peut-il être isocèle ?», «existe-t-il un nombre premier pair ?»)</p>
+<p>Cette question, appelée «problème de la décision», ou <em>Entscheidungsproblem</em> en allemand, est définitivement tranchée par le problème de l'arrêt : un tel théorème ne peut pas exister, puisque par exemple, aucun algorithme ne peut répondre «oui» ou «non» à la question «ce programme va-t-il s'arrêter ?».</p>
+<p>Le théorème de l'arrêt sera étendu plus tard par <a href="https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Rice">le théorème de Rice</a>.</p>
+<p>Ce résultat démontre que toutes les questions sémantiques (non évidentes) au sujet d'un programme sont indécidables :
+- «ce programme va-t-il s'arrêter ?» (le théorème de l'arrêt)
+- «ce programme va renvoyer la valeur 12 ?» 
+- «ce programme va-t-il un jour renvoyer un message d'erreur ?» 
+- ...</p>
+<p><a href="https://en.wikipedia.org/wiki/Henry_Gordon_Rice">Rice</a> démontre que toutes ces questions peuvent être ramenées (on dit <em>réduites</em>) au théorème de l'arrêt, qui est indécidable.</p>
+<h2 id="2-calculabilite">2. Calculabilité<a class="headerlink" href="#2-calculabilite" title="Permanent link">⚓︎</a></h2>
+<p>Le problème de l'arrêt est dit <strong>indécidable</strong> car la fonction qui le résout (notre brave programme <code>halt</code>) n'est pas <strong>calculable</strong>. </p>
+<h3 id="21-notion-de-calculabilite">2.1 Notion de calculabilité<a class="headerlink" href="#21-notion-de-calculabilite" title="Permanent link">⚓︎</a></h3>
+<p>Qu'y a-t-il derrière cette notion de calculabilité ?
+Cette notion, qui jette un pont entre les mathématiques (la vision de Church, pour schématiser) et l'informatique (la vision de Turing) n'est pas simple à définir !</p>
+<p>Le <em>calcul</em> mathématique peut se réduire à une succession d'opérations élémentaires (songez à la multiplication entière comme une série d'additions). Les nombres calculables sont les nombres qui sont générables en un nombre fini d'opérations élémentaires. 
+De la même manière, une fonction mathématique sera dite calculable s'il existe une suite finie d'opérations élémentaires permettant de passer d'un nombre x à son image f(x).</p>
+<p>On retrouve cette notion d'opérations élémentaires dans les <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing">machines de Turing</a>. 
+Cette machine (théorique) permet de simuler tout ce qu'un programme informatique (une suite d'instructions) est capable d'exécuter. Un algorithme peut se réduire à une suite d'opérations élementaires, comme une fonction mathématique peut se réduire à une suite de calculs.
+Dès lors, on pourra considérer un algorithme comme une fonction.</p>
+<p>Turing a démontré que l'ensemble des fonctions calculables, au sens de Church, était équivalent à l'ensemble des fonctions programmables sur sa machine.
+Certaines fonctions peuvent être calculables, <em>ou ne pas l'être</em> : c'est notamment le cas de notre fonction du problème de l'arrêt. </p>
+<h3 id="22-langages-turing-complets">2.2 Langages Turing-complets<a class="headerlink" href="#22-langages-turing-complets" title="Permanent link">⚓︎</a></h3>
+<p>Ce résultat ne dépend pas du langage utilisé : le fait que nous ayons utilisé Python au paragraphe précédent n'a pas d'influence sur notre démonstration. Nous savons depuis les machines de Turing que tous nos langages de programmation sont <strong>Turing-complets</strong> : ils sont tous capables de faire la même chose (avec plus ou moins de facilité !). 
+Scratch, C, Python, Java, Basic, Haskell, Brainfuck... tous ces langages sont théoriquement équivalents : <strong>la calculabilité ne dépend pas du langage utilisé</strong>.</p>
+<h3 id="23-hp-calculable-oui-mais-facilement-1-million-de-a-gagner-ci-dessous">2.3 (HP) Calculable, oui, mais facilement ? -&gt; 1 million de $ à gagner ci-dessous.<a class="headerlink" href="#23-hp-calculable-oui-mais-facilement-1-million-de-a-gagner-ci-dessous" title="Permanent link">⚓︎</a></h3>
+<p>L'étude de la calculabilité d'une fonction (à prendre au sens le plus large, c'est-à-dire un algorithme) ne se limite pas à un choix binaire : «calculable» vs «non calculable».<br />
+Parmi les fonctions calculables, certaines peuvent l'être rapidement, et d'autre beaucoup moins.</p>
+<p>On retrouve alors la notion bien connue de <strong>complexité</strong> algorithmique, qui permet de classifier les algorithmes suivant leur dépendance à la taille de leurs données d'entrée (voir le <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/02_Complexite.ipynb">cours</a> de Première).</p>
+<p>On peut regrouper les problèmes suivant la complexité de l'algorithme qui permet de les résoudre.</p>
+<h4 id="231-la-classe-p">2.3.1 la classe P<a class="headerlink" href="#231-la-classe-p" title="Permanent link">⚓︎</a></h4>
+<p>◮ On dira que sont de <strong>«classe P»</strong> tous les problèmes dont l'algorithme de recherche de solution est de <strong>complexité polynomiale</strong>.</p>
+<p>Que retrouve-t-on dans la classe P ? Tous les problèmes dont la solution est un algorithme de complexité linéraire, quadratique, logarithmique... Tout mais surtout pas un algorithme de complexité exponentielle.</p>
+<p>Pour le résumer très grossièrement, un problème de classe P est un problème que l'on sait résoudre en temps raisonnable (même grand). 
+- le problème du tri d'une liste est dans P.
+- le problème de la factorisation d'un grand nombre (sur lequel repose la sécurité du RSA) n'est <em>a priori</em> <strong>pas</strong> dans P.
+- le problème de la primalité («ce nombre est-il premier ?») a longtemps été considéré comme n'étant pas dans P... jusqu'en 2002, où a été découvert le <a href="https://fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_AKS">test de primalité AKS</a>, de complexité polynomiale (d'ordre 6). Ce test est donc maintenant dans P.</p>
+<h4 id="232-la-classe-np">2.3.2 la classe NP<a class="headerlink" href="#232-la-classe-np" title="Permanent link">⚓︎</a></h4>
+<p>◮ On dira que sont de <strong>«classe NP»</strong> tous les problèmes dont l'algorithme de recherche de solution est <strong>Non-déterministe Polynomial</strong>.</p>
+<blockquote>
+<p>Warning : NP ne signifie <strong>pas</strong> Non-Polynomial !!!</p>
+</blockquote>
+<p>Que veut dire la formulation «non-déterministe polynomial» ? Cela fait référence à ce que serait capable de faire une machine de Turing (donc, n'importe quel ordinateur) travaillant de manière <strong>non-déterministe</strong>, donc capable d'explorer simultanément plusieurs solutions possibles. On peut imaginer un arbre dont le parcours se ferait simultanément dans toutes les branches, et non en largeur ou profondeur comme nous l'avons vu.</p>
+<p>Sur une machine non-déterministe, si la solution à un problème se trouve en temps polynomial, alors ce problème appartient à la classe NP. </p>
+<p>Très bien, mais les machines non-déterministes... cela n'existe pas réellement. Comment caractériser concrètement cette classe de problème ?</p>
+<p>Si la solution peut être trouvée de manière polynomiale par une machine non-déterministe, une machine déterministe <em>qui aurait de la chance</em> en partant directement vers la bonne solution la trouverait elle aussi de manière polynomiale. On simplifie souvent cela en disant «la vérification de la solution est polynomiale». Cela nous donnne cette définition plus accessible de la classe NP :</p>
+<p>◮ On dira que sont de <strong>«classe NP»</strong> tous les problèmes dont l'algorithme de <strong>vérification</strong> de solution est <strong>polynomial</strong>.</p>
+<p>Pour le résumer très grossièrement, un problème de classe NP est un problème dont on sait vérifier facilement si une solution proposée marche ou pas :</p>
+<ul>
+<li>la résolution d'un sudoku est dans NP : si quelqu'un vous montre un sudoku rempli, vous pouvez très rapidement lui dire si sa solution est valable ou pas.</li>
+<li>la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui.)</li>
+<li>le problème du <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/06_Algorithmes_gloutons.ipynb">sac à dos</a> (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.</li>
+<li>le problème du voyageur de commerce (ou TSP : Traveller Sales Problem), en version décisionnelle, est dans NP. Si on vous propose un trajet, vous pouvez facilement vérifier que sa longueur est (par exemple) inférieure à 150 km.</li>
+</ul>
+<p>Malheureusement, aucun de ces problèmes cités n'a (à ce jour) d'algorithme de <strong>résolution</strong> meilleur qu'exponentiel...</p>
+<h4 id="223-p-np-ou-pas">2.2.3 P = NP, ou pas ?<a class="headerlink" href="#223-p-np-ou-pas" title="Permanent link">⚓︎</a></h4>
+<p>Tous les problèmes de P ont une solution qui peut être <strong>trouvée</strong> de manière polynomiale. Donc évidemment, la vérification de cette solution est aussi polynomiale. Donc tous les problèmes de P sont dans NP. On dit que P est inclus dans NP, que l'on écrit <strong>P ⊂ NP</strong>.</p>
+<p>Voici une capture d'écran de l'excellente vidéo <a href="https://www.youtube.com/watch?v=AgtOCNCejQ8">Nos algorithmes pourraient-ils être BEAUCOUP plus rapides ? (P=NP ?)</a> de l'excellent David Louapre :</p>
+<p align="center">
+<img src="data/louapre.png" , width=80%/> 
+</p>
+
+<p>On y retrouve (en vert) la classe P, qui contient les algorithmes de tri.
+En blanc, la classe NP, qui contient les problèmes de factorisation, du sudoku, du sac-à-dos...</p>
+<p>Si quelqu'un trouve un jour un algorithme de polynomial de factorisation, alors le problème de factorisation viendra se ranger dans P. (accessoirement, le RSA sera sans doute détruit par cette découverte, sauf si l'ordre de complexité est très grand)</p>
+<p>Mais certains de ces problèmes dans NP ont une propriété remarquable : la résolution polynomiale d'un seul d'entre eux ferait ramener la <strong>totalité</strong> des problèmes NP dans P. On dit que ces problèmes sont NP-complets (marqués en rouge ci-dessus)
+Concrètement, si vous trouvez une solution polynomiale de résolution du sudoku, vous entrainez avec lui dans P tous les autres problèmes NP, et vous aurez ainsi prouvé que P = NP.
+Accessoirement, vous gagnerez aussi le prix d'<a href="https://fr.wikipedia.org/wiki/Probl%C3%A8mes_du_prix_du_mill%C3%A9naire">un million de dollars</a> promis par la fondation Clay à qui tranchera cette question...
+(prix que vous partagerez bien évidemment avec votre professeur de NSI)</p>
+<p>Actuellement, à part le grand <a href="https://fr.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>, la plupart des chercheurs qui travaillent à ce problème sont plutôt pessimistes, et pensent que P ≠ NP. 
+Cela signifie qu'ils pensent que certains problèmes ne pourront jamais avoir une solution polynomiale. </p>
+<p>Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...</p>
+<hr />
+<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
+<li>Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.</li>
+<li>https://interstices.info/pnp-elementaire-ma-chere-watson/</li>
+<li>https://interstices.info/alan-turing-du-calculable-a-lindecidable/</li>
+<li>https://www.labri.fr/perso/betrema/MC/MC8.html</li>
+<li>https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Dernière mise à jour: 2021-07-25
+    
+  </small>
+</div>
+                  
+                
+              
+    <script src="../../js/ide.js"></script> 
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../2.2_R%C3%A9cursivit%C3%A9/cours.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Cours" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Cours
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../2.4_Pratiques_de_programmation/cours.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Cours" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Cours
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            CC BY-SA / G.Lassus
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:gilles.lassus@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/glassus/premiere_nsi" target="_blank" rel="noopener" title="Dépôt git" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://lyceemauriac.fr" target="_blank" rel="noopener" title="Lycée François Mauriac - Bordeaux" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>
