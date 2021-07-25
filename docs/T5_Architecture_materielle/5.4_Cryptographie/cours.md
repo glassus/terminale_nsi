@@ -218,7 +218,7 @@ Deux évènements pourraient faire s'écrouler la sécurité du RSA :
 
 ## 3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.
 
- ### 3.1 Principe général
+### 3.1 Principe général
 Aujourd'hui, plus de 90 % du trafic sur internet est chiffré : les données ne transitent plus en clair (protocole ```http```) mais de manière chiffrée (protocole ```https```), ce qui empêche la lecture de paquets éventuellements interceptés.
 
 
@@ -239,7 +239,7 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
 
 
 
- ### 3.2 (HP) Fonctionnement du TLS : explication du *handshake*
+### 3.2 (HP) Fonctionnement du TLS : explication du *handshake*
 
  Observons en détail le fonctionnement du protocole ```TLS```, dont le rôle est de générer de manière sécurisée une clé dont disposeront à la fois le client et le serveur, leur permettant ainsi d'appliquer un chiffrement symétrique à leurs échanges.
 
