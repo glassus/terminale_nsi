@@ -167,7 +167,7 @@ Dans notre exemple, la clé publique d'Alice est $(3, 33)$.
 ##### Étape 4
 Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui vérifie l'égalité $e d \equiv 1 [\phi(n)]$.
 
-Dans notre exemple, comme $7 x 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
+Dans notre exemple, comme $7 \times 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
 
 En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse de e*.
 
