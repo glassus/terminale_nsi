@@ -1,5 +1,5 @@
 
-## Cahier de textes 207
+## Cahier de textes Terminale NSI
 
 !!! note "Séance du 01/09/2021"
     Début du thème 0 : Bases de Python
@@ -12,15 +12,6 @@
     - blabla
 
 
-## Cahier de textes 208
-
-!!! note "Séance du 03/09/2021"
-    Début du thème 0 : Bases de Python
-        - document : [début](data/info.pdf)
-
-    ??? note "Séances passées"
-        - blabla
-        - blabla
 
 
 ## Programme Officiel 
