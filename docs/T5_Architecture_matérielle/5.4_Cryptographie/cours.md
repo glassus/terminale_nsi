@@ -289,5 +289,3 @@ Le transmission par protocole ```http``` de données chiffrées au préalable av
 
 
 ---
-
-![](../../../ccbysa.png) G.Lassus, Lycée François Mauriac --  Bordeaux  

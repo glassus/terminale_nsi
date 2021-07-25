@@ -247,5 +247,3 @@ Remarquez que la clé primaire de cette relation est le couple dossard-numéroEt
 
 
 ---
-
-![](../../../ccbysa.png) G.Lassus, Lycée François Mauriac --  Bordeaux  

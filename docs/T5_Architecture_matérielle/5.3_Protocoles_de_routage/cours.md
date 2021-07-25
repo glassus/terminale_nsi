@@ -226,5 +226,3 @@ _[Correction](data/corr_tab.png) du tableau de l'algorithme de Dijkstra_
 
 
 ---
-
-![](../../../ccbysa.png) G.Lassus, Lycée François Mauriac --  Bordeaux  
