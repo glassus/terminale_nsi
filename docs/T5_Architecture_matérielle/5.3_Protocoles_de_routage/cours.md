@@ -1,10 +1,11 @@
 
 # Protocoles de routage
-<p align="center">
-<img src="data/banniere.png" width='100%' />
 
-<img src="data/BO.png" width='80%' />
-</p>
+![image](data/banniere.png){: .center}
+
+![image](data/BO.png){: .center}
+
+
 ## 0. Résumé des épisodes précédents
 
 - [cours](https://github.com/glassus/nsi/blob/master/Premiere/Theme04_Architecture_materielle/03_Architecture_reseau.md) de 1ère sur l'architecture d'un réseau

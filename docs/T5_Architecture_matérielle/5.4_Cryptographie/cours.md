@@ -1,15 +1,10 @@
 
-
-<p align="center">
-<img src="data/BO.png" width='80%' />
-</p>
-
+![image](data/BO.png){: .center}
 
 # Cryptographie
 
-<p align="center">
-<img src="data/meme.jpg" width='50%' />
-</p>
+![image](data/meme.jpg){: .center}
+
 
 ## 1. Chiffrement symétrique
 
