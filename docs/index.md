@@ -1,5 +1,5 @@
 
-## Cahier de textes Terminale NSI
+## Cahier de textes
 
 !!! note "Séance du 01/09/2021"
     Début de la Programmation Orientée Objet
@@ -15,5 +15,5 @@
 
 ## Eduscol NSI 
 
-Retrouvez le site institutionnel sur la NSI (programmes, banque d'épreuves, ...) sur [le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g)
+Retrouvez les informations institutionnelles sur la NSI (programmes, banque d'épreuves, ...) sur [le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g)
  
