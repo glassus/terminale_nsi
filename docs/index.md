@@ -15,5 +15,5 @@
 
 ## Eduscol NSI 
 
-Retrouvez les informations institutionnelles sur la NSI (programmes, banque d'épreuves, ...) sur [le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g)
+Retrouvez les informations institutionnelles sur la NSI (programmes, banque d'épreuves, ...) sur [le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g).
  
