@@ -1,9 +1,10 @@
 
-![image](data/BO.png){: .center}
 
 # Cryptographie
 
-![image](data/meme.jpg){: .center}
+![image](data/BO.png){: .center}
+
+![image](data/meme.jpg){: .center width="50%"}
 
 
 ## 1. Chiffrement symétrique

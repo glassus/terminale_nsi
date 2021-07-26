@@ -11,8 +11,9 @@ Structures de données linéaires
 
 Les structures que nous allons voir peuvent s'envisager sous deux aspects :
 
-le côté utilisateur, qui utilisera une interface pour manipuler les données.
-le côté concepteur, qui aura choisi une implémentation pour construire la structure de données.
+- le côté utilisateur, qui utilisera une interface pour manipuler les données.
+- le côté concepteur, qui aura choisi une implémentation pour construire la structure de données.
+
 Par exemple, le volant et les pédales constituent (une partie de) l'interface d'une voiture. L'implémentation va désigner tous les mécanismes techniques qui sont mis en œuvre pour que le mouvement de rotation du volant aboutisse à un changement de direction des roues.
 
 ![](data/voiture.png){: .center}
