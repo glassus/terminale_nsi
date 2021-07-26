@@ -1,4 +1,6 @@
-## SNT
-Retrouvez ici les supports de cours de SNT (lycée François Mauriac - Bordeaux, année 2020-2021).  
+## Cours de Terminale NSI 
+gilles.lassus [at] ac-bordeaux.fr
 
-Cliquez ci-dessus sur le dossier du thème correspondant.
+Lycée François Mauriac / Bordeaux  
+
+L'ensemble des documents disponibles est publié sous licence CC-BY-SA.
