@@ -1,17 +1,7 @@
-<!---
-
-<p align="center">
-<img src="data/banniere.png" width='100%' />
---->
-<p align="center">
-<img src="data/BO.png" width='80%' />
-</p>
-
-![image](data/BO.png){: .center}
-
 
 
 # Décidabilité, calculabilité
+![image](data/BO.png){: .center}
 
 ## 1. Un programme comme paramètre d'un programme
 
@@ -26,9 +16,8 @@ Le programme s'appelle ```accueil```, et pour fonctionner il a besoin d'un param
 
 Voici comment nous pouvons représenter notre machine ```accueil```, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)
 
-<p align="center">
-<img src="data/m1.png" , width=30%/> 
-</p>
+![image](data/m1.png){: .center width="30%"}
+
 
 Maintenant, enregistrons le code suivant dans un fichier ```test.py``` :
 ```python
@@ -41,25 +30,20 @@ accueil(5)
 
 Pour exécuter ce code, nous devons taper dans un terminal l'instruction suivante :
 ```python3 test.py```, ce qui donnera 
-<p align="center">
-<img src="data/term.png" , width=40%/> 
-</p>
+![image](data/term.png){: .center}
+
 
 Le programme utilisé est alors ```python3```, qui prend comme paramètre le programme ```test.py```. Ce paramètre ```test.py``` est un ensemble de caractères qui contient les instructions que le programme ```python3``` va interpréter. 
 
 L'illustration correspondante sera donc :
 
-<p align="center">
-<img src="data/m2.png" , width=30%/> 
-</p>
+![image](data/m2.png){: .center width="30%"}
  
 
 Mais nous pouvons aller encore plus loin : l'instruction ```python3 test.py``` est tapée dans mon Terminal Linux, qui lui-même est un programme appelé ```Terminal```.
 
 Et donc :
-<p align="center">
-<img src="data/m3.png" , width=30%/> 
-</p>
+![image](data/m3.png){: .center width="30%"}
 
 
 Conclusion :
@@ -106,9 +90,7 @@ Un tel programme (appelons-le ```halt```) prendrait en entrées :
  L'instruction ```halt(prog, x)``` renverrait ```True``` si ```prog(x)``` s'arrête, et ```False``` si ```prog(x)``` ne s'arrête pas.
  
 
-<p align="center">
-<img src="data/halt1.png" , width=30%/> 
-</p>
+![image](data/halt1.png){: .center width="30%"}
 
 
 
@@ -116,9 +98,7 @@ Un tel programme (appelons-le ```halt```) prendrait en entrées :
 - ```halt(countdown, 10)``` renverrait ```True```.
 - ```halt(countdown, 10.8)``` renverrait ```False```. 
 
-<p align="center">
-<img src="data/halt2.png" , width=60%/> 
-</p>
+![image](data/halt2.png){: .center width="60%"}
 
 
 **Tentative d'écriture de ```halt``` en Python :**
@@ -148,9 +128,7 @@ def sym(prog):
 
 On peut remarquer que le programme ```halt``` est appelé avec comme paramètres ```prog, prog```, ce qui signifie que ```prog``` se prend lui-même en paramètre. On rappelle que ce n'est pas choquant, un code-source étant une donnée comme une autre.
 
-<p align="center">
-<img src="data/halt3.png" , width=40%/> 
-</p>
+![image](data/halt3.png){: .center width="40%"}
 
 Ce programme ```sym``` reçoit donc en paramètre un programme ```prog```, et :
 - va rentrer dans une boucle infinie si ```prog(prog)``` s'arrête.
@@ -162,9 +140,7 @@ Puisqu'un programme peut prendre en paramètre son propre code-source, que donne
 
 Deux cas peuvent se présenter, suivant si ```halt(sym, sym)``` renvoie ```True``` ou ```False```.
 
-<p align="center">
-<img src="data/halt4.png" , width=80%/> 
-</p>
+![image](data/halt4.png){: .center width="80%"}
 
 * **cas n°1** : ```halt(sym, sym)``` renvoie ```True```, ce qui signifie que ```sym(sym)```  devrait s'arrêter. Mais dans ce cas-là, l'exécution de ```sym(sym)``` rentre dans une boucle infinie. C'est une contradiction.
 
@@ -178,16 +154,12 @@ Nous venons de prouver que notre programme ```halt```, censé prédire si un pro
 
 Ce résultat théorique, d'une importance cruciale, s'appelle **le théorème de l'arrêt**.
 
-<p align="center">
-<img src="data/turing16.jpg" , width=40%/> 
-</p>
+![image](data/turing16.jpg){: .center width="40%"}
 
 
 Ce résultat a été démontré par [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing) en 1936, dans un article intitulé *«On computable numbers, with an application to the Entscheidungsproblem»*.
 
-<p align="center">
-<img src="data/turing.png" , width=100%/> 
-</p>
+![image](data/turing.png){: .center }
 
 
 Pour sa démonstration, il présente un modèle théorique de machine capable d'exécuter des instructions basiques sur un ruban infini, les [machines de Turing](https://fr.wikipedia.org/wiki/Machine_de_Turing).
@@ -285,9 +257,7 @@ Tous les problèmes de P ont une solution qui peut être **trouvée** de manièr
 
 Voici une capture d'écran de l'excellente vidéo [Nos algorithmes pourraient-ils être BEAUCOUP plus rapides ? (P=NP ?)](https://www.youtube.com/watch?v=AgtOCNCejQ8) de l'excellent David Louapre :
 
-<p align="center">
-<img src="data/louapre.png" , width=80%/> 
-</p>
+![image](data/louapre.png){: .center width="80%"}
 
 On y retrouve (en vert) la classe P, qui contient les algorithmes de tri.
 En blanc, la classe NP, qui contient les problèmes de factorisation, du sudoku, du sac-à-dos...

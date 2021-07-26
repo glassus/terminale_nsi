@@ -1,5 +1,11 @@
 
-# Structures de données linéaires : listes, piles, files
+# Listes, piles, files
+Structures de données linéaires
+
+![image](data/BO1.png){: .center}
+![image](data/BO2.png){: .center}
+
+
 
 ## 0. Préambule : interface ≠ implémentation
 
