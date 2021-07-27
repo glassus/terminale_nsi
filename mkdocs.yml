@@ -77,7 +77,8 @@ markdown_extensions:
 
 plugins:
   - search
-  - git-revision-date
+  - git-revision-date-localized:
+      type: datetime
   - macros
   - awesome-pages
  
