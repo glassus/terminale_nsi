@@ -1,7 +1,7 @@
 
 ## Cahier de textes
 
-!!! note "Séance du 03/09/2021"
+!!! note "Séance du 04/09/2021"
     Début de la Programmation Orientée Objet
 
 *Séances précédentes*
