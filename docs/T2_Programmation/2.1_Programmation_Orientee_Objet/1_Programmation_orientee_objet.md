@@ -213,21 +213,25 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
 ```
 
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
 
-#### 2.2.3 Exercice
-Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
-
-
-```python
-
-```
-
-[lien vers correction](https://gist.github.com/glassus/4edb3ac7234a11686c166a6ba2d09588)
+    === "Correction"
+        ```python linenums='1'
+        class Point :
+            def __init__(self,x,y):
+                self.x = x
+                self.y = y
+        
+        A = Point(3,8)
+        print(A.x, A.y)
+        ```
 
 #### 2.2.4 Créer une méthode pour notre objet
 
 
-```python
+```python linenums="1"
 class Voiture :
     def __init__(self, annee, coul, vmax) :
         self.annee = annee
@@ -236,21 +240,17 @@ class Voiture :
         self.age = 2020 - self.annee
     
     def petite_annonce(self) :
-        print("À vendre voiture", self.couleur, "de", self.annee, ", vitesse maximale", self.vitesse_max, "km/h.")
+        print("À vendre voiture", self.couleur, "de", self.annee,\
+             ", vitesse maximale", self.vitesse_max, "km/h.")
 ```
 
+Remarque : le symbole ```\``` est utilisé ici pour couper une ligne trop longue.
 
 ```python
-batmobile = Voiture(2036, "noire", 325)
+>>> batmobile = Voiture(2036, "noire", 325)
+>>> batmobile.petite_annonce()
+À vendre voiture noire de 2036 , vitesse maximale 325 km/h.
 ```
-
-
-```python
-batmobile.petite_annonce()
-```
-
-    À vendre voiture noire de 2036 , vitesse maximale 325 km/h.
-
 
 Nous aurions pu (ou dû) en profiter pour écrire une docstring pour notre méthode ```petite_annonce()``` :
 
@@ -265,24 +265,16 @@ class Voiture :
     
     def petite_annonce(self) :
         """ Rédige automatiquement une petite annonce concernant le véhicule"""
-        print("À vendre voiture", self.couleur, "de", self.annee, ", vitesse maximale", self.vitesse_max, "km/h.")
+        print("À vendre voiture", self.couleur, "de", self.annee,\
+             ", vitesse maximale", self.vitesse_max, "km/h.")
 ```
 
 
 ```python
-batmobile = Voiture(2036, "noire", 325)
-```
-
-
-```python
-batmobile.petite_annonce.__doc__
-```
-
-
-
-
+>>> batmobile = Voiture(2036, "noire", 325)
+>>> batmobile.petite_annonce.__doc__
     ' Rédige automatiquement une petite annonce concernant le véhicule'
-
+```
 
 
 Que donne la commande ```dir``` pour notre objet ?
@@ -331,16 +323,49 @@ dir(batmobile)
 
 On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avons créés pour notre objet.
 
-#### 2.2.5 Exercice
-1. Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
-2. Construire une fonction ```test_rectangle(A,B,C)``` qui prend en paramètres 3 objets ```Point``` et qui renvoie un booléen indiquant si le triangle ABC est rectangle ou non.
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        1. Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
+        2. Construire une fonction ```test_rectangle(A,B,C)``` qui prend en paramètres 3 objets ```Point``` et qui renvoie un booléen indiquant si le triangle ABC est rectangle ou non.
 
-```python
+    === "Correction"
+        ```python linenums='1'
+        #------------- Question 1
+        class Point :
+            def __init__(self,x,y):
+                self.x = x
+                self.y = y
+            
+            def distance(self) :
+                return (self.x**2+self.y**2)**0.5
+            
+        A = Point(3,5)
+        print(A.distance())
 
-```
+        #------------- Question 2
 
-[lien vers correction](https://gist.github.com/glassus/853df2cee46e9a40542616e92c42e38d)
+        class Point :
+            def __init__(self,x,y):
+                self.x = x
+                self.y = y
+            
+            def distance(self) :
+                return (self.x**2+self.y**2)**0.5
+            
+        def dist(A,B) :
+            return ((A.x-B.x)**2+(A.y-B.y)**2)**0.5
+
+        def test_rectangle(A,B,C) :
+        # Attention !! tests sur les flottants !!!
+            dAB = dist(A,B)
+            dAC = dist(A,C)
+            dBC = dist(B,C)
+            if (dAB**2 == dAC**2 +dBC**2) or (dAC**2 == dAB**2 +dBC**2) or (dBC**2 == dAB**2 +dAC**2) :
+                print("ABC est rectangle")
+            else :
+                print("ABC n'est pas rectangle")
+        ```
 
 #### 2.3 Hors-Programme : la méthode ```__str__()``` 
 La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors d'un appel à ```print()```.
@@ -348,7 +373,7 @@ La méthode ```__str__()``` (les doubles underscores traduisent le fait que la m
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
 
 
-```python
+```python linenums='1'
 class Fraction :
     def __init__(self, den, num) :
         self.denominateur = den
@@ -357,21 +382,15 @@ class Fraction :
 
 
 ```python
-a = Fraction(3,4)
+>>> a = Fraction(3,4)
+>>> print(a)
+ <__main__.Fraction object at 0x7f470445c828>
 ```
-
-
-```python
-print(a)
-```
-
-    <__main__.Fraction object at 0x7f470445c828>
-
 
 C'est un peu décevant. Rajoutons donc une méthode ```__str__()``` .
 
 
-```python
+```python linenums='1'
 class Fraction :
     def __init__(self, den, num) :
         self.denominateur = den
@@ -383,33 +402,17 @@ class Fraction :
 
 
 ```python
-a = Fraction(3,4)
+>>> a = Fraction(3,4)
+>>> print(a)
+  3/4
 ```
-
-
-```python
-print(a)
-```
-
-    3/4
-
-
 Ce qui est nettement plus agréable !
 
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+??? Abstract "Sources et bibliographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 
 
 
----
-
-![](data/ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
-
-
-
-```python
-
-```
