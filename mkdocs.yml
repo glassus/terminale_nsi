@@ -79,7 +79,9 @@ plugins:
   - search
   - git-revision-date
   - macros
-  - awesome-pages
+  - awesome-pages:
+      collapse_single_pages: true
+ 
  
  # - mkdocs-jupyter
 
