@@ -2,7 +2,7 @@
 ## Cahier de textes
 
 !!! note "Séance du 05/09/2021"
-    Début de la Programmation Orientée Objet
+    Début de la Programmation Orientée Objet -> à faire
 
 *Séances précédentes*
 
