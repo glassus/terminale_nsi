@@ -87,15 +87,13 @@ Comment savoir ce que font les méthodes ? Si elles ont été correctement codé
 ```
 
 
-
-(les plus subtils auront remarqué que les méthodes de l'objet ```m```  possèdent _elles-même_ une méthode ```__doc__```...)
-
 ## 2. Créer ~~son propre objet~~ sa propre classe
 ### 2.1 Vocabulaire : classe,  objet, instance de classe
 Jusqu'ici nous avons employé uniquement le mot «objet». Il convient maintenant d'être plus précis.  
-On désignera par **classe** la structure de données définissant une catégorie générique d'objets. Dans le monde animal, _chat_ est une classe (nommée en réalité _félidé_ ).  
-Chaque élement de la classe _chat_ va se distinguer par des caractéristiques : un âge, une couleur de pelage, un surnom... (on appelera ces caractéristiques des **attributs**) et des fonctionnalités, comme la **méthode** ```attrape_souris()```.  
-Lorsqu'on désigne un chat en particulier, on désigne alors un **objet** (bien réel) qui est une **instance** de la **classe** (abstraite) _chat_. 
+
+- On désignera par **classe** la structure de données définissant une catégorie générique d'objets. Dans le monde animal, _chat_ est une classe (nommée en réalité _félidé_ ). 
+- Chaque élement de la classe _chat_ va se distinguer par des caractéristiques : un âge, une couleur de pelage, un surnom... (on appelera ces caractéristiques des **attributs**) et des fonctionnalités, comme la **méthode** ```attrape_souris()```.  
+- Lorsqu'on désigne un chat en particulier, on désigne alors un **objet** (bien réel) qui est une **instance** de la **classe** (abstraite) _chat_. 
 
 Par exemple, 
 l'**objet** <a href="https://fr.wikipedia.org/wiki/Larry_(chat)">Larry</a> est une **instance** de la **classe** _chat_ . 
@@ -130,30 +128,24 @@ Pour créer une instance de cette classe, on écrit :
 
 
 ```python
-titine = Voiture()
+>>> titine = Voiture()
 ```
 
 ```titine``` est un objet, instance de la classe ```Voiture```.
 
 
 ```python
-type(titine)
+>>> type(titine)
+__main__.Voiture
 ```
-
-
-
-
-    __main__.Voiture
-
-
 
 On peut alors donner des attributs à cette instance :
 
 
 ```python
-titine.annee = 2018
-titine.couleur = "verte"
-titine.vitesse_max = 162
+>>> titine.annee = 2018
+>>> titine.couleur = "verte"
+>>> titine.vitesse_max = 162
 ```
 
 Mais arrêtons-là cette mauvaise méthode. Si on désire créer une classe «voiture», c'est pour créer un concept générique de voiture et d'en spécifier des caractéristiques communes  : l'année, la couleur, la vitesse maximale... 
@@ -165,13 +157,13 @@ L'idée est donc qu'à la création (on dira plutôt à la **construction**) de 
 La **méthode constructeur**, toujours appelée ```__init__()```, est une méthode (une «def») qui sera automatiquement appelée à la création de l'objet. Elle va donc le doter de tous les attributs de sa classe.
 
 
-```python
+```python linenums="1"
 class Voiture :
     def __init__(self, annee, coul, vmax) :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2020 - self.annee
+        self.age = 2021 - self.annee
 ```
 
 - le mot-clé ```self```, omniprésent en POO (d'autres langages utilisent ```this```), fait référence à l'objet lui-même, qui est en train d'être construit.
@@ -182,55 +174,43 @@ Construisons donc notre première voiture !
 
 
 ```python
-mon_bolide = Voiture(2012, "rouge", 190)
+>>> mon_bolide = Voiture(2012, "rouge", 190)
 ```
 
 
 ```python
-type(mon_bolide)
+>>> type(mon_bolide)
+__main__.Voiture
 ```
 
-
-
-
-    __main__.Voiture
 
 
 
 ```mon_bolide``` possède 4 attributs : 
+
 - ```annee```, ```couleur``` et ```vitesse_max``` ont été donnés par l'utilisateur lors de la création.
-- ```age``` s'est créé «tout seul» par l'instruction ```self.age = 2020 - self.annee```.
+- ```age``` s'est créé «tout seul» par l'instruction ```self.age = 2021 - self.annee```.
 
 
 ```python
-print(mon_bolide.annee)
-print(mon_bolide.couleur)
-print(mon_bolide.vitesse_max)
-print(mon_bolide.age)
+>>> print(mon_bolide.annee)
+2012
+>>> print(mon_bolide.couleur)
+'rouge'
+>>> print(mon_bolide.vitesse_max)
+190
+>>> print(mon_bolide.age)
+8
 ```
-
-    2012
-    rouge
-    190
-    8
-
 
 Bien sûr, on peut créer une autre voiture en suivant le même principe :
 
 
 ```python
-batmobile = Voiture(2036, "noire", 325)
+>>> batmobile = Voiture(2036, "noire", 325)
+>>> batmobile.couleur
+'noire'
 ```
-
-
-```python
-batmobile.couleur
-```
-
-
-
-
-    'noire'
 
 
 
