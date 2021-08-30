@@ -1,4 +1,4 @@
-# Cours 
+# Programmation orientée objet 
 ![image](data/BO.png){: .center}
 
 _abrégée par POO en français, OOP en anglais (ne pas confondre)_
