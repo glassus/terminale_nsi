@@ -202,7 +202,7 @@ __main__.Voiture
 >>> print(mon_bolide.vitesse_max)
 190
 >>> print(mon_bolide.age)
-8
+9
 ```
 
 Bien sûr, on peut créer une autre voiture en suivant le même principe :
@@ -239,7 +239,7 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2020 - self.annee
+        self.age = 2021 - self.annee
     
     def petite_annonce(self) :
         print("À vendre voiture", self.couleur, "de", self.annee,\
@@ -263,7 +263,7 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2020 - self.annee
+        self.age = 2021 - self.annee
     
     def petite_annonce(self) :
         """ Rédige automatiquement une petite annonce concernant le véhicule"""
