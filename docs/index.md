@@ -6,7 +6,7 @@
 *Séances précédentes*
 
 ??? note "Archives"
-    - vide
+    - ...
 
 
 
