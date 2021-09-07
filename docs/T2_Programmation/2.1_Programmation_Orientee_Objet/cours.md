@@ -335,45 +335,24 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        1. Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
-        2. Construire une fonction ```test_rectangle(A,B,C)``` qui prend en paramètres 3 objets ```Point``` et qui renvoie un booléen indiquant si le triangle ABC est rectangle ou non.
+        Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
+
+        ??? info "Exemple d'utilisation de la classe"
+            ```python
+            >>> A = Point(3,5)
+            >>> A.distance()
+            5.830951894845301
+            ```
 
     === "Correction"
         ```python linenums='1'
-        #------------- Question 1
-        class Point :
+        class Point:
             def __init__(self,x,y):
                 self.x = x
                 self.y = y
             
             def distance(self) :
                 return (self.x**2+self.y**2)**0.5
-            
-        A = Point(3,5)
-        A.distance())
-
-        #------------- Question 2
-
-        class Point :
-            def __init__(self,x,y):
-                self.x = x
-                self.y = y
-            
-            def distance(self) :
-                return (self.x**2+self.y**2)**0.5
-            
-        def dist(A,B) :
-            return ((A.x-B.x)**2+(A.y-B.y)**2)**0.5
-
-        def test_rectangle(A,B,C) :
-        # Attention !! tests sur les flottants !!!
-            dAB = dist(A,B)
-            dAC = dist(A,C)
-            dBC = dist(B,C)
-            if (dAB**2 == dAC**2 +dBC**2) or (dAC**2 == dAB**2 +dBC**2) or (dBC**2 == dAB**2 +dAC**2) :
-                "ABC est rectangle")
-            else :
-                "ABC n'est pas rectangle")
         ```
 
 #### 2.3 Hors-Programme : la méthode ```__str__()``` 
