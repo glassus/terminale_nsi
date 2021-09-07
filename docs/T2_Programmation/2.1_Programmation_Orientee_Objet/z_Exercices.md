@@ -33,9 +33,9 @@
             
 !!! example "Exercice 2"
     === "Énoncé"
-        Écrire une classe ```TriangleRect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypothenuse```.
+        Écrire une classe ```TriangleRect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
 
-        La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypothenuse``` se calculera automatiquement.
+        La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypotenuse``` se calculera automatiquement.
 
         ??? info "Exemple d'utilisation de la classe"
 
