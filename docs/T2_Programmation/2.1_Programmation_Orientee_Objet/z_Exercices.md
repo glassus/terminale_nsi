@@ -7,14 +7,14 @@
         2. Instancier trois élèves de cette classe.
         3. Écrire une fonction ```compare(eleve1, eleve2)``` qui renvoie le nom de l'élève ayant la meilleure note.
 
-        **Exemple de fonctionnement :**
-        ```python
-        >>> riri = Eleve("Henri", "TG2", 12)
-        >>> fifi = Eleve("Philippe", "TG6", 15)
-        >>> loulou = Eleve("Louis", "TG1", 8)
-        >>> compare(riri, fifi)
-        'Philippe'
-        ```
+        ??? info "Exemple d'utilisation de la classe"
+            ```python
+            >>> riri = Eleve("Henri", "TG2", 12)
+            >>> fifi = Eleve("Philippe", "TG6", 15)
+            >>> loulou = Eleve("Louis", "TG1", 8)
+            >>> compare(riri, fifi)
+            'Philippe'
+            ```
 
     === "Correction"
         ```python linenums='1'
@@ -37,17 +37,17 @@
 
         La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypothenuse``` se calculera automatiquement.
 
-        **Exemple de fonctionnement :**
+        ??? info "Exemple d'utilisation de la classe"
 
-        ```python
-        >>> mon_triangle = TriangleRect(3,4)
-        >>> mon_triangle.cote1
-        3
-        >>> mon_triangle.cote2
-        4
-        >>> mon_triangle.hypotenuse
-        5.0
-        ```
+            ```python
+            >>> mon_triangle = TriangleRect(3,4)
+            >>> mon_triangle.cote1
+            3
+            >>> mon_triangle.cote2
+            4
+            >>> mon_triangle.hypotenuse
+            5.0
+            ```
 
 
 
@@ -67,22 +67,22 @@
         2. Doter la classe d'une méthode ```affiche()``` qui fera affichera le temps ```t```.
         3. Doter la classe d'une méthode ```avance(s)``` qui fera avancer le temps ```t``` de ```s``` secondes.
 
-        **Exemple de fonctionnement :**
+        ??? info "Exemple d'utilisation de la classe"
 
-        ```python
-        >>> t = Chrono(17,25,38)
-        >>> t.heures
-        17
-        >>> t.minutes
-        25
-        >>> t.secondes
-        38
-        >>> t.affiche()
-        'Il est 17 heures, 25 minutes et 38 secondes'
-        >>> t.avance(27)
-        >>> t.affiche()
-        'Il est 17 heures, 26 minutes et 5 secondes'
-        ```
+            ```python
+            >>> t = Chrono(17,25,38)
+            >>> t.heures
+            17
+            >>> t.minutes
+            25
+            >>> t.secondes
+            38
+            >>> t.affiche()
+            'Il est 17 heures, 25 minutes et 38 secondes'
+            >>> t.avance(27)
+            >>> t.affiche()
+            'Il est 17 heures, 26 minutes et 5 secondes'
+            ```
     === "Correction"
         ```python linenums='1'
         class Chrono:

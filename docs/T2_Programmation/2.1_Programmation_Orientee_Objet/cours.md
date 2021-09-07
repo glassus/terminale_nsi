@@ -195,13 +195,13 @@ __main__.Voiture
 
 
 ```python
->>> print(mon_bolide.annee)
+>>> mon_bolide.annee
 2012
->>> print(mon_bolide.couleur)
+>>> mon_bolide.couleur
 'rouge'
->>> print(mon_bolide.vitesse_max)
+>>> mon_bolide.vitesse_max
 190
->>> print(mon_bolide.age)
+>>> mon_bolide.age
 9
 ```
 
@@ -218,6 +218,16 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
+        
+
+        ??? info "Exemple d'utilisation de la classe"
+            ```python
+            >>> A = Point(3,5)
+            >>> A.x
+            3
+            >>> A.y
+            5
+            ```
 
     === "Correction"
         ```python linenums='1'
@@ -225,10 +235,7 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
             def __init__(self,x,y):
                 self.x = x
                 self.y = y
-        
-        A = Point(3,8)
-        print(A.x, A.y)
-        ```
+          ```
 
 #### 2.2.4 Créer une méthode pour notre objet
 
@@ -242,7 +249,7 @@ class Voiture :
         self.age = 2021 - self.annee
     
     def petite_annonce(self) :
-        print("À vendre voiture", self.couleur, "de", self.annee,\
+        "À vendre voiture", self.couleur, "de", self.annee,\
              ", vitesse maximale", self.vitesse_max, "km/h.")
 ```
 
@@ -343,7 +350,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
                 return (self.x**2+self.y**2)**0.5
             
         A = Point(3,5)
-        print(A.distance())
+        A.distance())
 
         #------------- Question 2
 
@@ -364,13 +371,13 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
             dAC = dist(A,C)
             dBC = dist(B,C)
             if (dAB**2 == dAC**2 +dBC**2) or (dAC**2 == dAB**2 +dBC**2) or (dBC**2 == dAB**2 +dAC**2) :
-                print("ABC est rectangle")
+                "ABC est rectangle")
             else :
-                print("ABC n'est pas rectangle")
+                "ABC n'est pas rectangle")
         ```
 
 #### 2.3 Hors-Programme : la méthode ```__str__()``` 
-La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors d'un appel à ```print()```.
+La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors d'un appel à ```)```.
 
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
 
@@ -385,7 +392,7 @@ class Fraction :
 
 ```python
 >>> a = Fraction(3,4)
->>> print(a)
+>>> a)
  <__main__.Fraction object at 0x7f470445c828>
 ```
 
@@ -405,7 +412,7 @@ class Fraction :
 
 ```python
 >>> a = Fraction(3,4)
->>> print(a)
+>>> a)
   3/4
 ```
 Ce qui est nettement plus agréable !
