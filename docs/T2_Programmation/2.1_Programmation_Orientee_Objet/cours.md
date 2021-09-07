@@ -154,7 +154,7 @@ Mais arrêtons-là cette mauvaise méthode. Si on désire créer une classe «vo
 
 L'idée est donc qu'à la création (on dira plutôt à la **construction**) de chaque objet voiture, on va lui spécifier directement ses attributs :
 
-#### 2.2.2 (bonne) manière : la méthode constructeur ★★★
+#### 2.2.2 (bonne) manière : la méthode constructeur :heart:
 
 La **méthode constructeur**, toujours appelée ```__init__()```, est une méthode (une «def») qui sera automatiquement appelée à la création de l'objet. Elle va donc le doter de tous les attributs de sa classe.
 
