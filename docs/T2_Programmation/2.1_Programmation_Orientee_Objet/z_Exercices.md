@@ -112,3 +112,54 @@
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
             ```
+
+!!! example "Exercice 4"
+    === "Énoncé"
+        Écrire une classe ```Player``` qui :
+
+        - ne prendra aucun argument lors de son instanciation.
+        - affectera à chaque objet créé un attribut ```energie``` valant 3 par défaut. 
+        - affectera à chaque objet créé un attribut ```alive``` valant ```True``` par défaut.
+        - fournira à chaque objet une méthode ```blessure()``` qui diminue l'attribut ```energie``` de 1.
+        - fournira à chaque objet une méthode ```bonus()``` qui augmente l'attribut ```energie``` de 1.
+        - si l'attribut ```energie``` passe à 0, l'attribut ```alive``` doit passer à ```False``` et ne doit plus pouvoir évoluer.
+
+        ??? info "Exemple d'utilisation de la classe"
+
+            ```python
+            >>> Mario = Player()
+            >>> Mario.energie
+            3
+            >>> Mario.bonus()
+            >>> Mario.energie
+            4
+            >>> Mario.blessure()
+            >>> Mario.blessure()
+            >>> Mario.blessure()
+            >>> Mario.alive
+            True
+            >>> Mario.blessure()
+            >>> Mario.alive
+            False
+            >>> Mario.bonus()
+            >>> Mario.alive
+            False
+            >>> Mario.energie
+            0
+            ```
+    === "Correction"
+        ```python linenums='1'
+        class Player:
+            def __init__(self):
+                self.energie = 3
+                self.alive = True
+            
+            def blessure(self):
+                self.energie -= 1
+                if self.energie <= 0:
+                    self.alive = False
+                
+            def bonus(self):
+                if self.energie > 0:
+                    self.energie += 1
+        ```
