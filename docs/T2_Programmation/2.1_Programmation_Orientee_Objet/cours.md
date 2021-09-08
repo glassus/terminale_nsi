@@ -371,7 +371,7 @@ class Fraction :
 
 ```python
 >>> a = Fraction(3,4)
->>> a)
+>>> print(a)
  <__main__.Fraction object at 0x7f470445c828>
 ```
 
@@ -391,7 +391,7 @@ class Fraction :
 
 ```python
 >>> a = Fraction(3,4)
->>> a)
+>>> print(a)
   3/4
 ```
 Ce qui est nettement plus agréable !
