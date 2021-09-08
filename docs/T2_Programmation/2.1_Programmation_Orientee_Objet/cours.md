@@ -356,7 +356,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
         ```
 
 #### 2.3 Hors-Programme : la méthode ```__str__()``` 
-La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors d'un appel à ```)```.
+La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```.
 
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
 
