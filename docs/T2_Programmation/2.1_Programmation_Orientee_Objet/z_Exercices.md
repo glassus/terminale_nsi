@@ -121,7 +121,7 @@
         - affectera à chaque objet créé un attribut ```energie``` valant 3 par défaut. 
         - affectera à chaque objet créé un attribut ```alive``` valant ```True``` par défaut.
         - fournira à chaque objet une méthode ```blessure()``` qui diminue l'attribut ```energie``` de 1.
-        - fournira à chaque objet une méthode ```bonus()``` qui augmente l'attribut ```energie``` de 1.
+        - fournira à chaque objet une méthode ```soin()``` qui augmente l'attribut ```energie``` de 1.
         - si l'attribut ```energie``` passe à 0, l'attribut ```alive``` doit passer à ```False``` et ne doit plus pouvoir évoluer.
 
         ??? info "Exemple d'utilisation de la classe"
@@ -130,7 +130,7 @@
             >>> mario = Player()
             >>> mario.energie
             3
-            >>> mario.bonus()
+            >>> mario.soin()
             >>> mario.energie
             4
             >>> mario.blessure()
@@ -141,7 +141,7 @@
             >>> mario.blessure()
             >>> mario.alive
             False
-            >>> mario.bonus()
+            >>> mario.soin()
             >>> mario.alive
             False
             >>> mario.energie
@@ -159,7 +159,7 @@
                 if self.energie <= 0:
                     self.alive = False
                 
-            def bonus(self):
+            def soin(self):
                 if self.energie > 0:
                     self.energie += 1
         ```
