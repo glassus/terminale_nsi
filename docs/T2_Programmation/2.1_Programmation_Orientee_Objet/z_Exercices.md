@@ -127,24 +127,24 @@
         ??? info "Exemple d'utilisation de la classe"
 
             ```python
-            >>> Mario = Player()
-            >>> Mario.energie
+            >>> mario = Player()
+            >>> mario.energie
             3
-            >>> Mario.bonus()
-            >>> Mario.energie
+            >>> mario.bonus()
+            >>> mario.energie
             4
-            >>> Mario.blessure()
-            >>> Mario.blessure()
-            >>> Mario.blessure()
-            >>> Mario.alive
+            >>> mario.blessure()
+            >>> mario.blessure()
+            >>> mario.blessure()
+            >>> mario.alive
             True
-            >>> Mario.blessure()
-            >>> Mario.alive
+            >>> mario.blessure()
+            >>> mario.alive
             False
-            >>> Mario.bonus()
-            >>> Mario.alive
+            >>> mario.bonus()
+            >>> mario.alive
             False
-            >>> Mario.energie
+            >>> mario.energie
             0
             ```
     === "Correction"
