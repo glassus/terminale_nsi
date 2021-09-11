@@ -6,9 +6,8 @@
 
 ## 1. Conventions syntaxiques
 La programmation est un art délicat : un simple caractère en trop peut provoquer une erreur pour le code tout entier (penser à un innocent caractère d'espace en début de ligne dans un code Python).
-<p align="center">
-<img src="data/extraspace.jpg" width=30%/> 
-</p>
+
+![image](data/extraspace.jpg){: .center width=40%}
 
 Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'aspect purement «esthétique» de celui-ci : il est nécessaire de respecter autant que possible des conventions typographiques, qui vont standardiser le code et le rendre ainsi plus lisible.
 
@@ -20,9 +19,8 @@ En voici quelques extraits :
 
 ### Les espaces
 
-<p align="center">
-<img src="data/standards.jpg" width=30%/> 
-</p>
+![image](data/standards.jpg){: .center width=40%}
+
 
 ▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématiques  (```=, ==, >, +, *, ...``` )
 
@@ -129,23 +127,23 @@ class Voiture:
 ## 2. Commentaires et docstrings
 
 ### 2.1 Commenter son code ? (ou pas)
-<p align="center">
-<img src="data/comment.jpg" width=30%/> 
-</p>
+
+![image](data/comment.jpg){: .center width=40%}
+
 
 La nécessité de commenter son code est assez controversée.  
 Il est d'usage de dire qu'un code doit être assez **explicite** pour que le lecteur puisse le comprendre sans avoir à lire un commentaire. 
 
 De fait, les commentaires sont parfois (souvent) superflus :
 <p align="center">
-<img src="data/cat.png" width=30%/> 
+<img src="data/cat.png" width=40%/> 
 </p>
 
 Et s'ils sont réellement nécessaires, il faut se poser la question : est-ce que ce code n'aurait pas pu être plus simple ? (attention, la réponse n'est pas toujours oui)
 
-<p align="center">
-<img src="data/smart.jpeg" width=30%/> 
-</p>
+
+![image](data/smart.jpeg){: .center width=40%}
+
 
 **Exemple :**
 
@@ -288,9 +286,8 @@ Il est à noter aussi que les erreurs peuvent être gérées par le mécanisme `
 ### 4.1 Pourquoi des tests ?
 
 
-<p align="center">
-<img src="data/tester.jpg" width=30%/> 
-</p>
+![image](data/tester.jpg){: .center width=40%}
+
 
 
 Tester une fonction est la première chose que l'on fait (normalement...) lorsqu'on vient de finir de l'écrire. 
@@ -317,9 +314,9 @@ Par exemple, si on vient de construire la fonction ```valeur_absolue(n)```, il e
  > 4. On améliore (si possible) ce code tout en vérifiant que le test continue à être valide.
 
 
-<p align="center">
-<img src="data/TDD.png" width=30%/> 
-</p>
+![image](data/TDD.png){: .center width=40%}
+
+
 
 
 Revenons à nos tests sur la fonction ```valeur_absolue(n)```
@@ -449,9 +446,9 @@ En revanche, si une fonction ne passe pas un des tests, vous avez la certitude q
 
 Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas d'erreurs...
 
-<p align="center">
-<img src="data/bug.jpg" width=30%/> 
-</p>
+![image](data/bug.jpg){: .center width=40%}
+
+
 
 ---
 ## Bibliographie
