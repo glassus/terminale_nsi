@@ -94,9 +94,7 @@
             def affiche(self):
                 return "Il est {} heures, {} minutes \
         et {} secondes".format(self.heures, self.minutes, self.secondes)
-        ```
-        ??? info "fin de l'exercice"
-            ```python linenums='1'
+
             def avance(self, s):
                 self.secondes += s
                 # il faut ajouter les minutes supplémentaires si les secondes
@@ -111,7 +109,8 @@
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
-            ```
+        ```
+  
 
 !!! example "Exercice 4"
     === "Énoncé"
