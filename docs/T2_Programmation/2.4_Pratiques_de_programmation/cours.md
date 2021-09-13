@@ -135,9 +135,9 @@ La nécessité de commenter son code est assez controversée.
 Il est d'usage de dire qu'un code doit être assez **explicite** pour que le lecteur puisse le comprendre sans avoir à lire un commentaire. 
 
 De fait, les commentaires sont parfois (souvent) superflus :
-<p align="center">
-<img src="data/cat.png" width=40%/> 
-</p>
+
+![image](data/cat.png){: .center width=40%}
+
 
 Et s'ils sont réellement nécessaires, il faut se poser la question : est-ce que ce code n'aurait pas pu être plus simple ? (attention, la réponse n'est pas toujours oui)
 
