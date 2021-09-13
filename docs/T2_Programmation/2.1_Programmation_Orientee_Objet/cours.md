@@ -359,7 +359,10 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
                 return (self.x**2+self.y**2)**0.5
         ```
 
-#### 2.3 Hors-Programme : la méthode ```__str__()``` 
+### 3. Compléments
+
+
+#### 3.1 Hors-Programme : la méthode ```__str__()``` 
 La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```.
 
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
@@ -400,7 +403,86 @@ class Fraction :
 ```
 Ce qui est nettement plus agréable !
 
+#### 3.2 L'encapsulation poussée à bout : les ```getters``` et les ```setters```
 
+Imaginons la classe suivante :
+
+```python linenums='1'
+class Joueur :
+    def __init__(self, nom, club, age):
+        self.nom = nom
+        self.club = club
+        self.age = age
+```
+
+Instancions le joueur Nans Ducuing
+```python
+>>> nducuing = Joueur("Nans DUCUING", "UBB", 27)
+```
+
+##### 3.2.1 Les ```setters``` 
+
+Supposons maintenant que ce joueur change de club, pour aller de l'UBB à Perpignan.
+
+Il serait naturel de faire ceci :
+```python
+>>> nducuing.club = "Perpignan"
+```
+
+Cela marche bien, mais... C'est contraire à l'esprit de la Programmation Orientée Objet. Ce paradigme milite pour une encapsulation des objets, qui interdisent le plus possible l'accès direct à leurs attributs. 
+
+Comment faire alors ? En proposant une méthode dont l'unique travail est d'aller effectuer une modification sur l'attribut :
+
+```python linenums='1'
+class Joueur :
+    def __init__(self, nom, club, age):
+        self.nom = nom
+        self.club = club
+        self.age = age
+    
+    def mutation(self, nouveau_club):
+        self.club = nouveau_club
+```
+
+Le changement de club se fera maintenant par l'appel :
+```python
+>>> nducuing.mutation("Perpignan")
+```
+
+Ce type de méthode s'appelle un ```setter```. 
+
+##### 3.2.2 Les ```getters``` 
+
+Nous avons vu qu'aller modifier directement un attribut était défendu... mais peut-on simplement aller le *consulter* ?
+
+Là encore, le concept d'encapsulation -poussé à l'extrême- peut nous l'interdire. 
+
+Mais si 
+```nducuing.club``` est interdit, comment savoir dans quel club joue notre joueur préféré ?
+
+Une fois de plus, en construisant une méthode qui va nous renvoyer l'état actuel de son attribut ```club``` :
+
+```python
+class Joueur :
+    def __init__(self, nom, club, age):
+        self.nom = nom
+        self.club = club
+        self.age = age
+    
+    def mutation(self, nouveau_club):
+        self.club = nouveau_club
+        
+    def get_club(self):
+        return self.club
+```
+
+L'accès à l'attribut ```club``` de notre instance se fera donc maintenant par :
+
+```python
+>>> nducuing.get_club()
+```
+
+Ce type de méthode s'appelle un ```getter```. 
 
 ---
 ??? Abstract "Sources et bibliographie"
