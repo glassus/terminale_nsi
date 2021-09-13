@@ -420,6 +420,11 @@ Instancions le joueur Nans Ducuing
 >>> nducuing = Joueur("Nans DUCUING", "UBB", 27)
 ```
 
+![image](data/ducuing.png){: .center width=15%}
+<p style="text-align: center;">
+<i>notre cobaye</i>
+</p>
+
 ##### 3.2.1 Les ```setters``` 
 
 Supposons maintenant que ce joueur change de club, pour aller de l'UBB à Perpignan.
