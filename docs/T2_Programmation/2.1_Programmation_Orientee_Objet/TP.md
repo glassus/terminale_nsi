@@ -45,8 +45,54 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 
 ??? info "Correction"
     ```python linenums='1'
-    
-    ```
+    import pygame, sys
+    import time
+    from pygame.locals import *
+
+    largeur = 64
+    hauteur = 480
+    taille = 20
+    dx = 7
+    dy = 4
+
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre.fill([0,0,0])
+
+    x = largeur // 2
+    y = hauteur // 2
+
+    couleur = (45,170,250)
+
+
+    while True :
+        fenetre.fill([0,0,0])
+        pygame.draw.circle(fenetre,couleur,(x,y),taille)
+
+        x += dx
+        y += dy
+        
+        # rebond en haut ou en bas
+        if y < taille // 2 or y > hauteur - taille // 2:
+            dy = -dy
+
+        # rebond à gauche ou à droite
+        if x < taille // 2 or x > largeur - taille // 2:
+            dx = -dx
+
+        
+
+        pygame.display.update()
+
+        # routine pour pouvoir fermer «proprement» la fenêtre Pygame
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
+
+
+        time.sleep(0.03)
+        ```
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
