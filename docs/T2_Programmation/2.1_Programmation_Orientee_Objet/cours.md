@@ -405,6 +405,22 @@ class Fraction :
 Ce qui est nettement plus agréable !
 
 
+!!! example "Exercice 3"
+    === "Énoncé"
+        Modifier la méthode ```__str__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
+    === "Correction"
+        ```python linenums='1'
+        class Fraction :
+            def __init__(self, num, den) :
+                self.numerateur = num
+                self.denominateur = den
+            
+            def __str__(self):
+                if self.denominateur == 1:
+                    return str(self.numerateur)
+                return str(self.numerateur)+"/"+str(self.denominateur)
+        ```
+
 #### 3.2 L'encapsulation poussée à bout : les ```getters``` et les ```setters```
 
 Imaginons la classe suivante :

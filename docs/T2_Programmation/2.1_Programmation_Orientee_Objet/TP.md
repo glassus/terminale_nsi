@@ -4,7 +4,7 @@
 
 ## 1. Prise en main de Pygame
 
-```python
+```python linenums='1'
 import pygame, sys
 import time
 from pygame.locals import *
@@ -43,13 +43,36 @@ while True :
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
+??? info "Correction"
+    ```python linenums='1'
+    
+    ```
+
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
+
+??? info "Correction"
+    ```python linenums='1'
+    
+    ```
 
 ### 1.3 Gestion de la collision entre les deux balles
 1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
 2. Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.
+
+    ??? info "Correction"
+        ```python linenums='1'
+        
+        ```
+
 3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
+
+    ??? info "Correction"
+        ```python linenums='1'
+        
+        ```
+
+
 
 ### 1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.
 ... vraiment ? Peut-on continuer comme précédemment ?
