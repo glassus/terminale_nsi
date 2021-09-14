@@ -92,7 +92,7 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 
 
         time.sleep(0.03)
-        ```
+    ```
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
