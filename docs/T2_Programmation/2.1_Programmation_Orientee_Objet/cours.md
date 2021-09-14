@@ -370,9 +370,10 @@ Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a ét
 
 ```python linenums='1'
 class Fraction :
-    def __init__(self, den, num) :
-        self.denominateur = den
+    def __init__(self, num, den) :
         self.numerateur = num
+        self.denominateur = den
+        
 ```
 
 
@@ -387,12 +388,12 @@ C'est un peu décevant. Rajoutons donc une méthode ```__str__()``` .
 
 ```python linenums='1'
 class Fraction :
-    def __init__(self, den, num) :
-        self.denominateur = den
+    def __init__(self, num, den) :
         self.numerateur = num
+        self.denominateur = den
     
     def __str__(self):
-        return str(self.denominateur)+"/"+str(self.numerateur)
+        return str(self.numerateur)+"/"+str(self.denominateur)
 ```
 
 
