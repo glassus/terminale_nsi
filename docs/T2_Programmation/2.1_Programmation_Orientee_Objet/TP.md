@@ -73,11 +73,11 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
         y += dy
         
         # rebond en haut ou en bas
-        if y < taille // 2 or y > hauteur - taille // 2:
+        if y < taille or y > hauteur - taille:
             dy = -dy
 
         # rebond à gauche ou à droite
-        if x < taille // 2 or x > largeur - taille // 2:
+        if x < taille or x > largeur - taille:
             dx = -dx
 
         
@@ -139,19 +139,19 @@ Attention au nommage des variables...
     
     
         # rebond en haut ou en bas
-        if yA < taille // 2 or yA > hauteur - taille // 2:
+        if yA < taille or yA > hauteur - taille:
             dyA = -dyA
 
         # rebond à gauche ou à droite
-        if xA < taille // 2 or xA > largeur - taille // 2:
+        if xA < taille or xA > largeur - taille:
             dxA = -dxA
 
         # rebond en haut ou en bas
-        if yB < taille // 2 or yB > hauteur - taille // 2:
+        if yB < taille or yB > hauteur - taille:
             dyB = -dyB
 
         # rebond à gauche ou à droite
-        if xB < taille // 2 or xB > largeur - taille // 2:
+        if xB < taille or xB > largeur - taille:
             dxB = -dxB   
 
         pygame.display.update()
@@ -217,22 +217,22 @@ Attention au nommage des variables...
 
 
             # rebond en haut ou en bas
-            if yA < taille // 2 or yA > hauteur - taille // 2:
+            if yA < taille or yA > hauteur - taille:
                 dyA = -dyA
 
             # rebond à gauche ou à droite
-            if xA < taille // 2 or xA > largeur - taille // 2:
+            if xA < taille or xA > largeur - taille:
                 dxA = -dxA
 
             # rebond en haut ou en bas
-            if yB < taille // 2 or yB > hauteur - taille // 2:
+            if yB < taille or yB > hauteur - taille:
                 dyB = -dyB
 
             # rebond à gauche ou à droite
-            if xB < taille // 2 or xB > largeur - taille // 2:
+            if xB < taille or xB > largeur - taille:
                 dxB = -dxB
                 
-            if distanceAB(xA, yA, xB, yB) < taille:
+            if distanceAB(xA, yA, xB, yB) < 2*taille:
                 print("collision")
 
             pygame.display.update()
@@ -252,7 +252,81 @@ Attention au nommage des variables...
 
     ??? info "Correction"
         ```python linenums='1'
-        
+        import pygame, sys
+        import time
+        from pygame.locals import *
+
+        largeur = 200
+        hauteur = 200
+        taille = 20
+        dxA = 7
+        dyA = 4
+        dxB = -5
+        dyB = 3
+
+
+
+        pygame.display.init()
+        fenetre = pygame.display.set_mode((largeur, hauteur))
+        fenetre.fill([0,0,0])
+
+        xA = largeur // 3
+        yA = hauteur // 3
+        xB = largeur // 2
+        yB = hauteur // 2
+
+
+        couleurA = (45,170,250)
+        couleurB = (155,17,250)
+
+        def distanceAB(xA, yA, xB, yB):
+            return ((xA-xB)**2 + (yA-yB)**2)**0.5
+
+
+
+        while True :
+            fenetre.fill([0,0,0])
+            pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
+            pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
+
+            xA += dxA
+            yA += dyA
+
+            xB += dxB
+            yB += dyB
+
+
+            # rebond en haut ou en bas
+            if yA < taille or yA > hauteur - taille:
+                dyA = -dyA
+
+            # rebond à gauche ou à droite
+            if xA < taille or xA > largeur - taille:
+                dxA = -dxA
+
+            # rebond en haut ou en bas
+            if yB < taille or yB > hauteur - taille:
+                dyB = -dyB
+
+            # rebond à gauche ou à droite
+            if xB < taille or xB > largeur - taille:
+                dxB = -dxB
+
+            if distanceAB(xA, yA, xB, yB) < 2*taille:
+                dxA, dxB = dxB, dxA
+                dyA, dyB = dyB, dyA
+
+            pygame.display.update()
+
+            # routine pour pouvoir fermer «proprement» la fenêtre Pygame
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.display.quit()
+                    sys.exit()
+
+
+            time.sleep(0.03)
+
         ```
 
 
@@ -265,5 +339,60 @@ Attention au nommage des variables...
 ### 2.1 la classe Balle
 L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...  
 Créez cette classe et instanciez une balle.
+
+??? info "Correction"
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
+    from random import randint
+    # randint(0,10) -> nb aléatoire entre 0 et 10
+
+    largeur = 400
+    hauteur = 400
+    taille = 20
+
+
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre.fill([0,0,0])
+
+
+    class Balle:
+        def __init__(self):
+            self.x = randint(0, largeur)
+            self.y = randint(0, hauteur)        
+            self.dx = randint(2,5)
+            self.dy = randint(2,5)
+            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
+            self.taille = taille
+            
+        def dessine(self):
+            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
+            
+        def bouge(self):
+            self.x += self.dx
+            self.y += self.dy
+            
+    ma_balle = Balle()     
+            
+    while True :
+        fenetre.fill([0,0,0])
+        
+        ma_balle.dessine()
+        ma_balle.bouge()
+        
+        pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
+
+
+        time.sleep(0.05)
+
+    ```
+
+
 
 Puis plusieurs balles ! (qui se collisionnent...)

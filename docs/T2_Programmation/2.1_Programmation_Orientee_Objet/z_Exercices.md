@@ -162,3 +162,49 @@
                 if self.energie > 0:
                     self.energie += 1
         ```
+
+!!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2ef0-54279)"
+    !!! example "Exercice"
+        === "Énoncé"
+            Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
+
+            - un attribut ```titulaire``` stockant le nom du propriétaire.
+            - un attribut ```solde``` contenant le solde disponible sur le compte.  
+            
+            Cette classe contiendra deux méthodes ```retrait()``` et ```depot()``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+        
+            !!! info "Exemple d'utilisation de la classe"
+                ```python
+                >>> compteGL = CompteBancaire("G.Lassus", 1000)
+                >>> compteGL.retrait(50)
+                Vous avez retiré 50 euros
+                Solde actuel du compte : 950 euros
+                >>> compteGL.retrait(40000)
+                Retrait impossible
+                >>> compteGL.depot(10000000)
+                Vous avez déposé 10000000 euros
+                Solde actuel du compte : 10000950 euros
+                ```
+<!--
+        === "Correction"
+            ```python linenums='1'
+            class CompteBancaire:
+                def __init__(self, titulaire, solde):
+                    self.titulaire = titulaire
+                    self.solde = solde
+                    
+                def retrait(self, somme):
+                    if somme > self.solde:
+                        print("Retrait impossible")
+                    else :
+                        self.solde -= somme
+                        print("Vous avez retiré {} euros".format(somme))
+                        print("Solde actuel du compte : {} euros".format(self.solde))
+
+                def depot(self, somme):
+                    self.solde += somme
+                    print("Vous avez déposé {} euros".format(somme))
+                    print("Solde actuel du compte : {} euros".format(self.solde))
+            ```
+
+-->
