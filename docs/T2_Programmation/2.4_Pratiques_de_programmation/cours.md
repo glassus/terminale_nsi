@@ -87,6 +87,8 @@ if color == (0, 255, 0):
     print('vert')
 ```
 
+On peut vérifier si son code vérifie les standards de la PEP8 sur ce site [http://pep8online.com/](http://pep8online.com/)
+
 ### Les conventions de nommage
 
 ▶ Les variables à une lettre (comme ```i```, ```j```, ```k``` ) sont réservées aux indices (notamment dans les boucles).
