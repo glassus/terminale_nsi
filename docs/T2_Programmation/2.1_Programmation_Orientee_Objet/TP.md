@@ -470,3 +470,9 @@ while True :
 
 -->
 
+
+!!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
+    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
+    Je pourrai ainsi le consulter au fur et à mesure de votre progression.
+
+
