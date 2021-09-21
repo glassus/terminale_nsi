@@ -185,7 +185,7 @@
                 Vous avez déposé 10000000 euros
                 Solde actuel du compte : 10000950 euros
                 ```
-<!--
+                
         === "Correction"
             ```python linenums='1'
             class CompteBancaire:
@@ -207,4 +207,3 @@
                     print("Solde actuel du compte : {} euros".format(self.solde))
             ```
 
--->
