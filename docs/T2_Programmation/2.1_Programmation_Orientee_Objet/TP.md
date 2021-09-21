@@ -397,78 +397,83 @@ Créez cette classe et instanciez une balle.
 
 Puis plusieurs balles ! (qui se collisionnent...)
 
-<!--
-import pygame, sys
-import time
-from pygame.locals import *
-from random import randint
-# randint(0,10) -> nb aléatoire entre 0 et 10
-
-largeur = 400
-hauteur = 400
-taille_max = 20
-nb_balles = 50
-
-pygame.display.init()
-fenetre = pygame.display.set_mode((largeur, hauteur))
-fenetre.fill([0,0,0])
+??? info "Correction"
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
+    from random import randint
 
 
-class Balle:
-    def __init__(self):
-        self.x = randint(0, largeur)
-        self.y = randint(0, hauteur)        
-        self.dx = randint(2,5)
-        self.dy = randint(2,5)
-        self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-        self.taille = 10
+    largeur = 800
+    hauteur = 600
+    taille = 20
+    nb_balles = 100
 
-    def dessine(self):
-        pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
-
-    def distance(self, autre_balle):
-        return ((self.x - autre_balle.x)**2 +(self.y - autre_balle.y)**2)**0.5 
-
-    def bouge(self):
-        # mouvement
-        self.x += self.dx
-        self.y += self.dy
-        
-        # rebond parois
-        if self.y < self.taille or self.y > hauteur - self.taille:
-            self.dy = -self.dy
-        if self.x < self.taille or self.x > largeur - self.taille:
-            self.dx = -self.dx
-    
-        for autre_balle in liste_balles:
-            if self.distance(autre_balle) < self.taille + autre_balle.taille :
-                self.dx, autre_balle.dx = autre_balle.dx, self.dx
-                self.dy, autre_balle.dy = autre_balle.dy, self.dy
-
-ma_balle = Balle()     
-liste_balles = []
-for _ in range(nb_balles):
-    b = Balle()
-    liste_balles.append(b)
-
-
-while True :
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
     fenetre.fill([0,0,0])
-    
-    for balle in liste_balles:
-        balle.dessine()
-        balle.bouge()
-
-    pygame.display.update()
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.display.quit()
-            sys.exit()
 
 
-    time.sleep(0.05)
+    class Balle:
+        def __init__(self):
+            self.x = randint(0, largeur)
+            self.y = randint(0, hauteur)        
+            self.dx = randint(2,5)
+            self.dy = randint(2,5)
+            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
+            self.taille = taille
 
--->
+        def dessine(self):
+            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
+
+        def bouge(self):
+            self.x += self.dx
+            self.y += self.dy
+            
+            # 1. rebond sur les parois
+            if self.y < self.taille or self.y > hauteur - self.taille:
+                self.dy = -self.dy
+            if self.x < self.taille or self.x > largeur - self.taille:
+                self.dx = -self.dx
+
+            
+            # 4. gérer la collision de toutes les balles
+            # je teste la collision de self avec chacune des autres balles
+            for balle in mon_sac_a_balles:
+                # collision entre self et balle
+                if ((self.x-balle.x)**2 + (self.y-balle.y)**2)**0.5 < self.taille + balle.taille:
+                    self.dx, balle.dx = balle.dx, self.dx
+                    self.dy, balle.dy = balle.dy, self.dy
+                
+            
+            
+    # 2. Créer 10 balles  (par ex)     
+
+    mon_sac_a_balles = []
+    for k in range(nb_balles):
+        new_ball = Balle()
+        mon_sac_a_balles.append(new_ball)
+
+
+
+    while True :
+        fenetre.fill([0,0,0])
+        
+        #3. Animer toutes les balles
+        for balle in mon_sac_a_balles:
+            balle.dessine()
+            balle.bouge()
+
+
+        pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
+            
+        time.sleep(0.05)
+    ```
 
 
 !!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
