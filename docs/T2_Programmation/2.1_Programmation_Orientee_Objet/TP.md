@@ -475,4 +475,7 @@ while True :
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
+    Ce que je ne veux pas voir :
+    ![](data/paste.jpg){: .center width=40%} 
+
 
