@@ -13,7 +13,7 @@ Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'asp
 
 Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. 
 
-Vous trouverez un excellent résumé de la PEP8 sur le site http://sametmax.com/le-pep8-en-resume/.
+Vous trouverez un excellent résumé de la PEP8 sur le site [http://sametmax.com/le-pep8-en-resume/](http://sametmax.com/le-pep8-en-resume/).
 
 En voici quelques extraits :
 
@@ -107,6 +107,7 @@ if date == 1:
 
 
 Rappel des différents types de casse :
+
 - ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
 - ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
 - ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
