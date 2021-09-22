@@ -22,7 +22,7 @@ En voici quelques extraits :
 ![image](data/standards.jpg){: .center width=40%}
 
 
-▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématiques  (```=, ==, >, +, *, ...``` )
+▶ Il faut mettre une espace (oui, en typographie, on dit «une» espace et non pas «un» espace) avant et après chaque opérateur de comparaison, d'affectation, ou mathématique  (```=, ==, >, +, *, ...``` )
 
 ```python
 # PAS BIEN 
