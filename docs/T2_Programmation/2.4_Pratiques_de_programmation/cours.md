@@ -1,6 +1,6 @@
- # Bonnes pratiques 
+# Bonnes pratiques 
  
-![](data/pep8.webp)
+![](data/pep8.webp){: .center width=70%}
 
 *extrait du site https://realpython.com/python-pep8/*
 
