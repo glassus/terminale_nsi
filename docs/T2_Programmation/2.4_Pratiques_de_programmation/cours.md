@@ -87,7 +87,7 @@ if color == (0, 255, 0):
     print('vert')
 ```
 
-On peut vérifier si son code vérifie les standards de la PEP8 sur ce site [http://pep8online.com/](http://pep8online.com/)
+On peut contrôler si son code vérifie les standards de la PEP8 sur ce site [http://pep8online.com/](http://pep8online.com/)
 
 ### Les conventions de nommage
 
@@ -311,6 +311,7 @@ Par exemple, si on vient de construire la fonction ```valeur_absolue(n)```, il e
 
 > Remarque : 
 > la méthode de développement logiciel TDD (Test Driven Developement) est basée en partie sur ce principe  : 
+
 > 1. On commence par écrire le test de la fonction.
 > 2. Le test échoue (forcément, la fonction n'est pas encore codée !)
  > 3. On écrit le code de la fonction pour que le test soit validé.
