@@ -74,32 +74,26 @@ Par exemple :
 
 ## 2. La récursivité, ça marche !
 
-Disons-le clairement : au-delà de la blague pour initiés (dont vous faites partie maintenant) la récursivité ne DOIT PAS être associée à une auto-référence vertigineuse : c'est en algorithmique une méthode (parfois) très efficace, à condition de respecter une règle cruciale : **l'existence d'un CAS DE BASE**.  
+Disons-le clairement : au-delà de la blague pour initiés (dont vous faites partie maintenant) la récursivité ne DOIT PAS être associée à une auto-référence vertigineuse : c'est en algorithmique une méthode (parfois) très efficace, à condition de respecter une règle cruciale :  :star: :star: :star: **l'existence d'un CAS DE BASE** :star: :star: :star: .  
 
-Ce «cas de base» sera aussi appelé «condition d'arrêt», puisque la très grande majorité des algorithmes récursifs peuvent être perçus comme des escaliers qu'on dévale à toute vitesse, en déséquilibre jusqu'au sol qui assure notre arrêt.
-
-
-![](data/realpython.png){: .center width=50%}
+Ce «cas de base» sera aussi appelé «condition d'arrêt», puisque la très grande majorité des algorithmes récursifs peuvent être perçus comme des escaliers qu'on descend marche par marche, jusqu'au sol qui assure notre arrêt.
 
 
+### 2.1 La récursivité en BD :
 
-Lorsque nous allons programmer une fonction récursive, nous allons donc commencer par la fin, c'est-à-dire par le moment où elle renvoie effectivement un résultat. C'est le cas de base.
 
-Imaginez que vous devez cacher une clé dans une maison : 
-- vous commencez par la cacher sous le lavabo de la salle de bain. 
-- puis vous laissez un mot sur la table de la cuisine : «allez voir sur la première marche de l'escalier».
-- puis vous laissez un mot sur la première marche de l'escalier : «allez voir sur le canapé du salon».
-- etc, jusqu'à l'indice final «allez voir sous le lavabo de la salle de bain».
 
-La personne qui va subir cette chasse au trésor va rentrer dans un processus où chaque indice va en appeler un autre, mais elle sait très bien que ces indices emboîtés vont s'arrêter un jour.
+[![image](data/bd.png){: .center width=60%}](data/bd.png){:target="_blank"}
 
-Lorsque vous allez programmer un algorithme récursif, vous allez donc commencer par coder le cas de base, la situation finale.
 
-Pour arriver progressivement vers la situation finale , chaque appel récursif se fera en décrémentant un paramètre : cela assurera l'arrêt du programme.
+Observez bien la descente puis la remontée de notre vendeur de livre. 
+Le cas de base est ici l'étage 0. Il empêche une descente infinie.
 
-Observons ceci dans l'exemple suivant :
+Nous coderons bientôt la fonction donnant le prix du livre en fonction de l'étage.
 
-### 2.1 Enfin un bon exemple
+Pour l'instant, découvrons enfin le codage d'une fonction récursive :
+
+### 2.2 Enfin un bon exemple
 
 !!! note "Exemple fondateur n°1 :heart:"
     ```python
@@ -119,7 +113,7 @@ Observer :
 - la décrémentation du paramètre d'appel
 
 
-** Appels de la fonction ```mystere```** 
+**Appels de la fonction ```mystere```** 
 
 ```python
 >>> mystere(0)
@@ -150,54 +144,54 @@ On voit que l'existence du cas de base pour $n=0$ est primordiale pour éviter l
 
 Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs inférieurs ou égaux à $n$.
 
-#### 1.3.1 Visualisation
 
-Visualisez l'exécution de cette fonction sur [PythonTutor](http://pythontutor.com/visualize.html#code=def%20mystere%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20else%20%3A%20%0A%20%20%20%20%20%20%20%20return%20n%20%2B%20mystere%28n-1%29%0A%0Aprint%28mystere%285%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+??? info "Remarque historique"
+    ```mystere(100)``` est égal à 5050. 
+    Une anecdote raconte que [Carl Friedrich Gauss](https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss) trouva cette valeur de 5050 en quelques secondes, devant son instituteur ébahi.  
+    Il venait pour cela d'inventer la formule : 
+    $1+2+3+\dots+n=\frac{n(n+1)}{2}$
 
-#### 1.3.2 Remarque historique
-
-
-```python
-mystere(100)
-```
+    Ici, $1+2+3+\dots+100=\frac{100\times 101)}{2}=50 \times 101=5050$
 
 
+{{ initexo(0) }}
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
+    === "Correction"
+        
 
 
-    5050
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère la fonction ```factorielle(n)``` (notée $n!$ en mathématiques), qui calcule le produit d'un entier $n$ par les entiers positifs qui lui sont inférieurs:
+        $$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
+        Exemple : $5!=5\times4\times3\times2\times1=120$
 
+        1. Programmer de manière impérative (manière *classique*) la fonction factorielle.
+        2. Programmer de façon récursive la fonction factorielle.
+    === "Correction"
+        
 
-
-Une anecdote raconte que [Carl Friedrich Gauss](https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss) trouva cette valeur de 5050 en quelques secondes, devant son instituteur ébahi.  
-Il venait pour cela d'inventer la formule : 
-$1+2+3+\dots+n=\frac{n(n+1)}{2}$
-
-Ici, $1+2+3+\dots+100=\frac{100\times 101)}{2}=50 \times 101=5050$
-
-#### 1.3.3 Exercice 
-On considère la fonction ```factorielle(n)``` (notée $n!$ en mathématiques), qui calcule le produit d'un entier $n$ par les entiers positifs qui lui sont inférieurs:
-$$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
-Exemple : $5!=5\times4\times3\times2\times1=120$
-
-
-1. Programmer de manière impérative (manière *classique*) la fonction factorielle.
-2. Programmer de façon récursive la fonction factorielle.
-
-
-```python
-
-```
+<!--
 
 Lien vers une [correction](https://gist.github.com/glassus/de73e52a753f58e2e29e2ebad5a09871)
 
-### 1.4 Notion de pile
+-->
+
+## 3. Le mécanisme interne de la récursivité
+
+
+### 3.1 Notion de pile
 Lors d'un appel à une fonction récursive, le processeur utilise une structure de **pile** pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (qui sera traitée plus tard dans le programme de Terminale), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).
 
 La pile d'appels de notre fonction ```mystere(5)``` peut donc être schématisée comme ceci :
 
-![](data/pile_exec.webp)
 
-### 1.5 Limitation de la taille de la pile
+![](data/pile_exec.webp){: .center width=30%}
+
+### 3.2 Limitation de la taille de la pile
 Nous venons de voir que notre appel à ```mystere(5)``` générait une pile de hauteur 6 (on parlera plutôt de *profondeur* 6). Cette profondeur est-elle limitée ?
 
 
@@ -238,9 +232,9 @@ De manière générale, les programmes récursifs sont souvent susceptibles de g
 
 Nous reparlerons aussi de récursivité lorsque nous l'inscrirons dans un paradigme plus global de programmation, qui est **« diviser pour régner »** (en anglais *divide and conquer*).
 
-## 2. Exemples de récursivité double
+## 4. Exemples de récursivité double
 
-### 2.1 La suite de Fibonnaci
+### 4.1 La suite de Fibonnaci
 Considérons la suite numérique ainsi définie :
 - $F_0 = 0$
 - $F_1 = 1$
@@ -248,17 +242,17 @@ Considérons la suite numérique ainsi définie :
 
 On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ ...
 
-#### 2.1.1 Exercice
-Implémenter de façon récursive la suite de Fibonnaci.
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Implémenter de façon récursive la suite de Fibonnaci.
+    === "Correction"
+        Lien vers une [correction](https://gist.github.com/glassus/6c7c14813fabab8c238c721386147260)
 
 
-```python
 
-```
+**Observation de la pile d'exécution**
 
-Lien vers une [correction](https://gist.github.com/glassus/6c7c14813fabab8c238c721386147260)
-
-#### 2.1.2 Observation de la pile d'exécution
 Appelons ```F(n)``` la fonction calculant de manière récursive le n-ième terme de la suite. Observons en détail la pile d'exécution lors du calcul de ```F(4)```.
 ![](data/pile_fibo.webp)
 
@@ -268,7 +262,7 @@ On s'aperçoit notamment que :
 - les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe théoriquement pas en informatique). On pourrait s'imaginer que la relation $F_4=F_3+F_2$ allait déclencher deux «fils» récursifs calculant respectivement $F_3$ et $F_2$. Il n'en est rien, on va jusqu'au bout du calcul de $F_3$ avant de s'intéresser à $F_2$.
 - conséquence de la remarque précédente : le calcul de $F_2$ s'effectue 2 fois. Une amélioration future (appelée **mémoïsation**, voir le cours de programmation dynamique) sera de conserver cette valeur de $F_2$ afin d'améliorer les calculs.
 
-#### 2.1.3 Comparaison des performances
+### 4.2 Comparaison des performances
 
 **Exercice :** écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
 
@@ -330,15 +324,5 @@ speed(0)
 trace(5,100)
 ```
 
-![](data/arbre.gif)
+![](data/arbre.gif){: .center width=50%}
 
----
-
-![](data/ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
-
-
-
-```python
-
-```
-(extrait du site https://realpython.com/)
