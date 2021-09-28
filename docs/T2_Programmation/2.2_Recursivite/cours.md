@@ -69,7 +69,8 @@ Par exemple :
 
 - GNU (dans GNU/Linux) signifie GNU is Not Unix. On ne sait jamais vraiment ce que signifie GNU...  
 - PHP (le langage serveur) sigifie PHP: Hypertext Preprocessor
-- Visa (les cartes bancaires) signifie Visa International Service Association.
+- VISA (les cartes bancaires) signifie VISA International Service Association.
+
 
 
 ## 2. La récursivité, ça marche !
