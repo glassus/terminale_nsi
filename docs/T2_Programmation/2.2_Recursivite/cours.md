@@ -49,9 +49,9 @@ un très mauvais exemple
 Évidemment, comme prévu, ce programme ne s'arrête pas. Nous sommes obligés de l'arrêter manuellement. Nous sommes (volontairement) tombés dans un piège qui sera systématiquement présent lors d'une programmation récursive : [le piège de la boucle infinie](data/meme2.gif){target=_blank}.  
 
 
-### 1.3 La mauvaise réputation
+### 1.3 [La mauvaise réputation](https://youtu.be/26Nuj6dhte8){target=_blank}
 
-Dans la culture informatique, la récursivité est trop souvent abordée sous le thème de la blague de la boucle infinie.
+Dans la culture informatique, la récursivité est (trop) souvent abordée par le biais de l'auto-référence, le puits sans fin de la boucle infinie.
 
 On trouve d'ailleurs fréquemment cette définition de la récursivité :
 
@@ -326,7 +326,7 @@ La programmation récursive apparait donc comme quasiment 1000 fois plus lente q
 
 Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est _aussi_ avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)
 ## 5. Annexe : dessins récursifs grâce au module ```turtle``` 
-Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants.
+Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants, et aboutir à des structures [fractales](https://fr.wikipedia.org/wiki/Fractale).
 
 ```python linenums='1'
 from turtle import *
