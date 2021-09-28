@@ -83,7 +83,7 @@ Ce «cas de base» sera aussi appelé «condition d'arrêt», puisque la très g
 
 
 
-[![image](data/bd.png){: .center width=60%}](data/bd.png){:target="_blank"}
+[![image](data/bd.png){: .center width=70%}](data/bd.png){:target="_blank"}
 
 
 Observez bien la descente puis la remontée de notre vendeur de livre. 
@@ -96,7 +96,7 @@ Pour l'instant, découvrons enfin le codage d'une fonction récursive :
 ### 2.2 Enfin un bon exemple
 
 !!! note "Exemple fondateur n°1 :heart:"
-    ```python
+    ```python linenums='1'
     def mystere(n):
         if n == 0 :
             return 0
@@ -106,14 +106,14 @@ Pour l'instant, découvrons enfin le codage d'une fonction récursive :
 
 
 
-Observer :
+Trois choses sont essentielles et doivent se retrouver dans tout programme récursif :
 
-- le cas de base (si ```n``` vaut 0 on renvoie *vraiment* une valeur, en l'occurence 0)
-- l'appel récursif
-- la décrémentation du paramètre d'appel
+- ```lignes 2 et 3``` :  le cas de base (si ```n``` vaut 0 on renvoie *vraiment* une valeur, en l'occurence 0)
+- ```ligne 5``` : l'appel récursif
+- ```ligne 5``` : la décrémentation du paramètre d'appel
 
 
-**Appels de la fonction ```mystere```** 
+**Utilisation de la fonction ```mystere```** 
 
 ```python
 >>> mystere(0)
@@ -139,7 +139,7 @@ Que se passe-t-il lorsqu'on appelle ```mystere(4)``` ?
 
 On voit que l'existence du cas de base pour $n=0$ est primordiale pour éviter la récursion infinie.
 
-![](data/diag.png){: .center width=50%}
+![](data/diag.png){: .center width=40%}
 
 
 Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs inférieurs ou égaux à $n$.
@@ -169,8 +169,10 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
         $$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
         Exemple : $5!=5\times4\times3\times2\times1=120$
 
-        1. Programmer de manière impérative (manière *classique*) la fonction factorielle.
-        2. Programmer de façon récursive la fonction factorielle.
+        Par convention, $1!=1$
+
+        1. Programmer de manière impérative (manière *classique*) la fonction factorielle. On l'appelera ```fact_imp()```. 
+        2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec()```.
     === "Correction"
         
 
@@ -184,7 +186,7 @@ Lien vers une [correction](https://gist.github.com/glassus/de73e52a753f58e2e29e2
 
 
 ### 3.1 Notion de pile
-Lors d'un appel à une fonction récursive, le processeur utilise une structure de **pile** pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (qui sera traitée plus tard dans le programme de Terminale), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).
+Lors d'un appel à une fonction récursive, le processeur utilise une structure de **pile** pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (voir [ici](../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).
 
 La pile d'appels de notre fonction ```mystere(5)``` peut donc être schématisée comme ceci :
 
@@ -254,24 +256,30 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 **Observation de la pile d'exécution**
 
 Appelons ```F(n)``` la fonction calculant de manière récursive le n-ième terme de la suite. Observons en détail la pile d'exécution lors du calcul de ```F(4)```.
-![](data/pile_fibo.webp)
 
-On peut aussi observer l'exécution sur [PythonTutor](http://pythontutor.com/visualize.html#code=def%20fibo%28n%29%3A%0A%20%20%20%20%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%20%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20return%20fibo%28n-1%29%20%2B%20fibo%28n-2%29%0A%0Aprint%28fibo%284%29%29%0A&cumulative=false&curInstr=38&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+![](data/pile_fibo.webp){: .center}
+
+
+!!! aide "Analyse grâce à PythonTutor"
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fibo%28n%29%3A%0A%20%20%20%20%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%20%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20return%20fibo%28n-1%29%20%2B%20fibo%28n-2%29%0A%0Aprint%28fibo%284%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 On s'aperçoit notamment que :
+
 - les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe théoriquement pas en informatique). On pourrait s'imaginer que la relation $F_4=F_3+F_2$ allait déclencher deux «fils» récursifs calculant respectivement $F_3$ et $F_2$. Il n'en est rien, on va jusqu'au bout du calcul de $F_3$ avant de s'intéresser à $F_2$.
 - conséquence de la remarque précédente : le calcul de $F_2$ s'effectue 2 fois. Une amélioration future (appelée **mémoïsation**, voir le cours de programmation dynamique) sera de conserver cette valeur de $F_2$ afin d'améliorer les calculs.
 
 ### 4.2 Comparaison des performances
 
-**Exercice :** écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
+    === "Correction"
+        Lien vers une [correction](https://gist.github.com/glassus/9ac28d8bcb12ac917bf17ea81afce288)
 
 
-```python
 
-```
 
-Lien vers une [correction](https://gist.github.com/glassus/9ac28d8bcb12ac917bf17ea81afce288)
 
 Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)$ avec les deux fonctions ```fibo_imperatif()``` et ```fibo_recursif()```.
 
