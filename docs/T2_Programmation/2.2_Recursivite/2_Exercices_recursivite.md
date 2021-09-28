@@ -1,11 +1,13 @@
 #Exercices
 
 {{ initexo(0) }}
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
-    === "Correction"
-        
+
+!!! capytale "À faire sur Capytale : [activité 8de6-74512](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/8de6-74512)"
+    !!! example "{{ exercice() }}"
+        === "Énoncé"
+            Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
+        === "Correction"
+            
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
