@@ -238,9 +238,10 @@ Nous reparlerons aussi de récursivité lorsque nous l'inscrirons dans un paradi
 
 ### 4.1 La suite de Fibonnaci
 Considérons la suite numérique ainsi définie :
+
 - $F_0 = 0$
 - $F_1 = 1$
-- $ \forall n \in \mathbb{N}, F_{n+2} = F_{n+1}+F_n$
+- $\forall n \in \mathbb{N}, F_{n+2} = F_{n+1}+F_n$
 
 On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ ...
 
