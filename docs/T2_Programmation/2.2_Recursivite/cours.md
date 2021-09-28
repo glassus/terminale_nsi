@@ -91,7 +91,7 @@ Le cas de base est ici l'étage 0. Il empêche une descente infinie.
 
 Nous coderons bientôt la fonction donnant le prix du livre en fonction de l'étage.
 
-Pour l'instant, découvrons enfin le codage d'une fonction récursive :
+Pour l'instant, découvrons enfin à quoi ressemble une fonction récursive «bien écrite» :
 
 ### 2.2 Enfin un bon exemple
 
@@ -160,7 +160,13 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     === "Énoncé"
         Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
     === "Correction"
-        
+        ```python linenums='1'
+        def prix(etage):
+            if etage == 0:
+                return 3
+            else:
+                return 2 * prix(etage - 1)
+        ```
 
 
 !!! example "{{ exercice() }}"
@@ -173,8 +179,22 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
         1. Programmer de manière impérative (manière *classique*) la fonction factorielle. On l'appelera ```fact_imp()```. 
         2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec()```.
+
+        Quelle paradigme de programmation vous a semblé le plus naturel ?
     === "Correction"
-        
+        ```python linenums='1'
+        def fact_imp(n):
+            p = 1
+            for k in range(1, n + 1):
+                p = p * k
+            return p
+
+        def fact_rec(n):
+            if n == 1:
+                return 1
+            else:
+                return n * fact_rec(n - 1)
+        ```
 
 <!--
 
@@ -304,8 +324,8 @@ La programmation récursive apparait donc comme quasiment 1000 fois plus lente q
 
 ![image](data/prod.jpg){: .center width=40%}
 
-
-## 5. Dessins récursifs grâce au module ```turtle``` 
+Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est _aussi_ avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)
+## 5. Annexe : dessins récursifs grâce au module ```turtle``` 
 Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants.
 
 ```python linenums='1'
