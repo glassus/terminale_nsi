@@ -301,10 +301,13 @@ Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)
 
 La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.
 
-### 2.1 Dessins récursifs grâce au module Turtle
+![image](data/prod.jpg){: .center width=40%}
 
 
-```python
+## 5. Dessins récursifs grâce au module ```turtle``` 
+Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants.
+
+```python linenums='1'
 from turtle import *
 
 ang = 40
