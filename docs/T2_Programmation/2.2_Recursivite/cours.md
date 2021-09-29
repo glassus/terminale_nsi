@@ -271,8 +271,17 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
     === "Énoncé"
         Implémenter de façon récursive la suite de Fibonnaci.
     === "Correction"
-        Lien vers une [correction](https://gist.github.com/glassus/6c7c14813fabab8c238c721386147260)
-
+<!--
+        ```python linenums='1'
+        def fibo(n):
+            if n == 0 :
+                return 0   
+            elif n == 1 :
+                return 1
+            else :
+                return fibo(n-1) + fibo(n-2)
+        ```
+-->
 
 
 **Observation de la pile d'exécution**
@@ -297,10 +306,18 @@ On s'aperçoit notamment que :
     === "Énoncé"
         Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
     === "Correction"
-        Lien vers une [correction](https://gist.github.com/glassus/9ac28d8bcb12ac917bf17ea81afce288)
-
-
-
+<!--
+        ```python linenums='1'
+        def fibo_imperatif(n):
+            a = 0
+            b = 1
+            for k in range(n-1):
+                t = b
+                b = a + b
+                a = t
+            return b
+        ```
+-->
 
 
 Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)$ avec les deux fonctions ```fibo_imperatif()``` et ```fibo_recursif()```.
