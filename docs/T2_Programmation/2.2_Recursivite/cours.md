@@ -323,6 +323,10 @@ Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)
 
 La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.
 
+:warning: **Attention :** cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même _complexité_. Nous étudierons la complexité au moment des algorithmes de tri. 
+
+
+
 ![image](data/prod.jpg){: .center width=40%}
 
 Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est _aussi_ avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)
