@@ -7,9 +7,21 @@
         === "Énoncé"
             Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
         === "Correction"
-            
+            {{ correction(True,
+            "
+            ```python linenums='1'
+            def puissance(x, n):
+                if n == 0:
+                    return 1
+                else:
+                    return x * puissance(x, n-1)
+            ```
+            "
+            ) }}
 
-!!! example "{{ exercice() }}"
+
+
+!!! example "{{ exercice() }} :heart: "
     === "Énoncé"
         On rappelle que le PGCD (plus grand diviseur commun de deux nombres) vérifie la propriété suivante : si la division euclidienne de $a$ par $b$ s'écrit $a = b \times q + r$, alors $pgcd(a,b)=pgcd(b,r)$. 
 
@@ -19,6 +31,18 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        def pgcd(a, b):
+            if b == 0:
+                return a
+            else:
+                return pgcd(b, a%b)
+        ```
+        "
+        ) }}
+
 
 
 !!! example "{{ exercice() }}"
