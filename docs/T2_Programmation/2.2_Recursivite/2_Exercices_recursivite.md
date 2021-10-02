@@ -55,7 +55,17 @@
 
 
     === "Correction"
-        
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        def pgcd(a, b):
+            if b == 0:
+                return a
+            else:
+                return pgcd(b, a%b)
+        ```
+        "
+        ) }}        
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
