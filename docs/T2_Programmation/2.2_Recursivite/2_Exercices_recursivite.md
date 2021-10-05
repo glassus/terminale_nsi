@@ -189,7 +189,7 @@
         Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assiette ne peut être déposée que sur une assiette de diamètre inférieur.
         ![](data/hanoi0.png){: .center width=60%}
 
-        Une version jouable en ligne peut être trouvée [ici](http://www.dynamicdrive.com/dynamicindex12/towerhanoi.htm).
+        Une version jouable en ligne peut être trouvée [ici](https://www.mathsisfun.com/games/towerofhanoi.html).
 
         1. S'entraîner et essayer d'établir une stratégie de victoire.
         2. Observer les images ci-dessous :
