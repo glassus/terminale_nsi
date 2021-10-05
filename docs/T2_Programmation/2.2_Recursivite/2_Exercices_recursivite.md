@@ -252,5 +252,33 @@
         hanoi(5,"Tower1","Tower2","Tower3")
         ```
         "
-     
+
+```python linenums='1'
+from turtle import *
+
+def floc(n, l):
+    if n == 0:
+        forward(l)
+    else:
+        floc(n-1,l/3)
+        left(60)
+        floc(n-1,l/3)
+        right(120)
+        floc(n-1,l/3)
+        left(60)
+        floc(n-1,l/3)
+        
+
+speed(0)
+
+def triangle(n,l):
+    for _ in range(3):
+        floc(n,l)
+        right(120)
+        
+triangle(5,400)
+
+```
+
+
   -->      
