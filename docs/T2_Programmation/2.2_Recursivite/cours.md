@@ -271,7 +271,6 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
     === "Énoncé"
         Implémenter de façon récursive la suite de Fibonnaci.
     === "Correction"
-<!--
         ```python linenums='1'
         def fibo(n):
             if n == 0 :
@@ -281,7 +280,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
             else :
                 return fibo(n-1) + fibo(n-2)
         ```
--->
+
 
 
 **Observation de la pile d'exécution**
@@ -303,13 +302,18 @@ On s'aperçoit notamment que :
 
 Observation sur [Capytale](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2692-90916) avec ```rcviz```  
 
+On peut y construire par exemple l'arbre d'appel de ```fibo(6)``` :
+
+![image](data/arbre.png){: .center width=100%}
+
+On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois... 
+
 ### 4.2 Comparaison des performances
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
     === "Correction"
-<!--
         ```python linenums='1'
         def fibo_imperatif(n):
             a = 0
@@ -320,7 +324,7 @@ Observation sur [Capytale](https://capytale2.ac-paris.fr/web/c-auth/list?returnt
                 a = t
             return b
         ```
--->
+
 
 
 Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)$ avec les deux fonctions ```fibo_imperatif()``` et ```fibo_recursif()```.

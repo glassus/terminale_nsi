@@ -220,8 +220,8 @@
         ![](data/ex3b.png){: .center width=60%}
         **Indications**
 
-            - l'instruction de tracé n'a lieu que quand ```n``` vaut 0.
-            - l'étape ```n``` fait 4 appels sucessifs à l'étape ```n-1```.
+        - l'instruction de tracé n'a lieu que quand ```n``` vaut 0.
+        - l'étape ```n``` fait 4 appels sucessifs à l'étape ```n-1```.
 
         2) Créer une fonction ```triangle(n,l)``` qui trace le flocon complet.
 
