@@ -51,19 +51,36 @@
 
         *Prenons un nombre $n$ : si $n$ est pair, on le divise par 2, sinon on le multiplie par 3 puis on ajoute 1. On recommence cette opération tant que possible. Au bout d'un certain temps, on finira toujours par tomber sur le nombre 1.*
 
-        Proposer un programme récursif ```syracuse(n)``` écrivant tous les termes de la suite de Syracuse, s'arrêtant (on l'espère) à la valeur 1.
-
+        1. Proposer un programme récursif ```syracuse(n)``` écrivant tous les termes de la suite de Syracuse, s'arrêtant (on l'espère) à la valeur 1.
+        2. On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     === "Correction"
         {{ correction(True,
         "
+        1.
         ```python linenums='1'
-        def pgcd(a, b):
-            if b == 0:
-                return a
+        def syracuse(n):
+            print(n)
+            if n == 1:
+                return None
+            if n % 2 == 0:
+                syracuse(n // 2)
             else:
-                return pgcd(b, a%b)
+                syracuse(3*n + 1)
         ```
+        2.
+        ```python linenums='1'
+        def syracuse(n, t=0):
+            print(n)
+            t += 1
+            if n == 1:
+                print('temps de vol :', t)
+                return None
+            if n % 2 == 0:
+                syracuse(n // 2, t)
+            else:
+                syracuse(3*n + 1, t)
+        ``` 
         "
         ) }}        
 
@@ -76,7 +93,33 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        from turtle import *
+        def carre(c):
+            for k in range(4):
+                forward(c)
+                right(90)
+
+        def base(c):
+            carre(c)
+            forward(c/2)
+            right(45)
+
+        def trace(c, n):
+            if n == 0 :
+                return None
+            else :
+                base(c)
+                c = c/(2**0.5)
+                return trace(c, n-1)
+            
+        trace(200, 5)
+        ```
+        "
+        ) }}
+
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -86,13 +129,58 @@
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
 
     === "Correction"
-        
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        def puissance(x,n):
+            if n == 0 :
+                return 1
+            else :
+                if n % 2 == 0:
+                    return puissance(x*x,n//2)
+                else :
+                    return x*puissance(x*x,(n-1)//2)
+        ```
+        "
+        ) }}       
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire un algorithme récursif ```recherche(lst,m)``` qui recherche la présence de la valeur ```m``` dans une liste triée ```lst```. Cette fonction doit renvoyer un booléen.
+        Écrire un algorithme récursif ```recherche(lst,m)``` qui recherche la présence de la valeur ```m``` dans une liste **triée** (par ordre croissant) ```lst```. 
+        
+        Cette fonction doit renvoyer un booléen.
+
+        _Aide :_
+        
+        Les techniques de *slicing* (hors-programme) permettent de couper une liste en deux : 
+        ```python
+        >>> lst = [10, 12, 15, 17, 18, 20, 22]
+        >>> lst[:3]
+        [10, 12, 15]
+        >>> lst[3:]
+        [17, 18, 20, 22]
+        ``` 
 
     === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        def recherche(lst,m):
+            print(lst) # pour voir la taille de la liste diminuer
+            if len(lst) == 1 :  #cas de base
+                if lst[0] == m :
+                    return True
+                else :
+                    return False
+            else :              #cas récursif
+                mid = len(lst)//2
+                if lst[mid] > m :
+                    return recherche(lst[:mid],m)
+                else :
+                    return recherche(lst[mid:],m)
+        ```
+        "
+        ) }}       
         
 
 !!! example "{{ exercice() }}"
@@ -138,8 +226,31 @@
         2) Créer une fonction ```triangle(n,l)``` qui trace le flocon complet.
 
     === "Correction"
-        
+
 
 ??? info "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
+
+ <!--   
+   
+        "
+        ```python linenums='1'
+        def hanoi(n,A,B,C):
+            """ n : nombre d'assiettes dans la pile
+            # A : la pile de départ("A", "B" ou "C")
+            # B : la pile intermédaire("A", "B" ou "C")
+            # C : la pile d'arrivée ("A", "B" ou "C") """
+
+            if n == 1 :
+                print(A + " vers " + C)
+            else :
+                hanoi(n-1,A,C,B) #de A vers B en passant par C
+                print(A + " vers " + C)
+                hanoi(n-1,B,A,C)
+
+        hanoi(5,"Tower1","Tower2","Tower3")
+        ```
+        "
+     
+  -->      
