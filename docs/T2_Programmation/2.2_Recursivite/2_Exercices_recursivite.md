@@ -93,7 +93,7 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         from turtle import *
@@ -129,7 +129,7 @@
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def puissance(x,n):
@@ -162,7 +162,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def recherche(lst,m):
