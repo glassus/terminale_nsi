@@ -217,7 +217,7 @@
                 hanoi(n-1, inter, depart, arrivee)
 
         hanoi(5, "A", "B", "C")
-```
+        ```
 "
 
 !!! example "{{ exercice() }}"
