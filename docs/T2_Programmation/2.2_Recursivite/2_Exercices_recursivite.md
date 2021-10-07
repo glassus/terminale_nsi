@@ -202,7 +202,23 @@
         Écrire une fonction récursive ```hanoi(n, A, B, C)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.
 
     === "Correction"
-        
+        ```python linenums='1'
+        def hanoi(n, depart, inter, arrivee):
+            """ n : nombre d'assiettes dans la pile
+            # depart : la pile de départ("A", "B" ou "C")
+            # inter : la pile intermédaire("A", "B" ou "C")
+            # arrivee : la pile d'arrivée ("A", "B" ou "C") """
+
+            if n == 1 :
+                print(depart + " vers " + C)
+            else :
+                hanoi(n-1, depart, arrivee, inter) 
+                print(depart + " vers " + arrivee)
+                hanoi(n-1, inter, depart, arrivee)
+
+        hanoi(5, "A", "B", "C")
+```
+"
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -236,20 +252,20 @@
    
         "
         ```python linenums='1'
-        def hanoi(n,A,B,C):
+        def hanoi(n, depart, inter, arrivee):
             """ n : nombre d'assiettes dans la pile
-            # A : la pile de départ("A", "B" ou "C")
-            # B : la pile intermédaire("A", "B" ou "C")
-            # C : la pile d'arrivée ("A", "B" ou "C") """
+            # depart : la pile de départ("A", "B" ou "C")
+            # inter : la pile intermédaire("A", "B" ou "C")
+            # arrivee : la pile d'arrivée ("A", "B" ou "C") """
 
             if n == 1 :
-                print(A + " vers " + C)
+                print(depart + " vers " + C)
             else :
-                hanoi(n-1,A,C,B) #de A vers B en passant par C
-                print(A + " vers " + C)
-                hanoi(n-1,B,A,C)
+                hanoi(n-1, depart, arrivee, inter) 
+                print(depart + " vers " + arrivee)
+                hanoi(n-1, inter, depart, arrivee)
 
-        hanoi(5,"Tower1","Tower2","Tower3")
+        hanoi(5, "A", "B", "C")
         ```
         "
 
