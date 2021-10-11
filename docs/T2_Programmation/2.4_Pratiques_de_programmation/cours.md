@@ -13,8 +13,6 @@ Mais même lorsqu'un code s'exécute sans erreur, il ne faut pas négliger l'asp
 
 Ainsi pour chaque langage, il existe une «bible» de bonnes pratiques de présentation du code, qui visent à l'uniformiser. Pour Python, cette référence s'appelle la Python Enhancement Proposal 8, plus connue sous le nom de PEP8. 
 
-Vous trouverez un excellent résumé de la PEP8 sur le site [http://sametmax.com/le-pep8-en-resume/](http://sametmax.com/le-pep8-en-resume/).
-
 En voici quelques extraits :
 
 ### Les espaces
@@ -456,9 +454,7 @@ Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas 
 
 ---
 ## Bibliographie
-- https://www.reddit.com/r/ProgrammerHumor/
-- https://fr.wikipedia.org/wiki/Test_driven_development
-- https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html
-- http://sametmax.com/le-pep8-en-resume/
-
+- [https://www.reddit.com/r/ProgrammerHumor/](https://www.reddit.com/r/ProgrammerHumor/)
+- [https://fr.wikipedia.org/wiki/Test_driven_development](https://fr.wikipedia.org/wiki/Test_driven_development)
+- [https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html](https://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp_doctest.html)
 ---

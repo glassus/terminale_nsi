@@ -1,30 +1,21 @@
-
-# Listes, piles, files
-Structures de données linéaires
-
-![image](data/BO1.png){: .center}
-![image](data/BO2.png){: .center}
-
-
+# Structures de données linéaires :  listes, piles, files
 
 ## 0. Préambule : interface ≠ implémentation
 
 Les structures que nous allons voir peuvent s'envisager sous deux aspects :
+- le côté utilisateur, qui utilisera une **interface** pour manipuler les données.
+- le côté concepteur, qui aura choisi une **implémentation** pour construire la structure de données.
 
-- le côté utilisateur, qui utilisera une interface pour manipuler les données.
-- le côté concepteur, qui aura choisi une implémentation pour construire la structure de données.
+Par exemple, le volant et les pédales constituent (une partie de) l'interface d'une voiture. L'implémentation va désigner tous les mécanismes techniques qui sont mis en œuvre pour que le mouvement de rotation du volant aboutisse à un changement de direction des roues. 
 
-Par exemple, le volant et les pédales constituent (une partie de) l'interface d'une voiture. L'implémentation va désigner tous les mécanismes techniques qui sont mis en œuvre pour que le mouvement de rotation du volant aboutisse à un changement de direction des roues.
+![](data/voiture.png)
 
-![](data/voiture.png){: .center}
-
-Nous avons déjà abordé ces deux aspects lors de la découverte de la Programmation Orientée Objet. Le principe d'encapsulation fait que l'utilisateur n'a qu'à connaître l'existence des méthodes disponibles, et non pas le contenu technique de celle-ci. Cela permet notamment de modifier le contenu technique (l'implémentation) sans que les habitudes de l'utilisateur (l'interface) ne soient changées.
+Nous avons déjà abordé ces deux aspects lors de la découverte de la Programmation Orientée Objet. Le principe d'**encapsulation** fait que l'utilisateur n'a qu'à connaître l'existence des méthodes disponibles, et non pas le contenu technique de celle-ci. Cela permet notamment de modifier le contenu technique (l'implémentation) sans que les habitudes de l'utilisateur (l'interface) ne soient changées.
 
 ## 1. Structures de données linéaires 
 
 ### 1.1 À chaque donnée sa structure
 En informatique comme dans la vie courante, il est conseillé d'adapter sa manière de stocker et de traiter des données en fonction de la nature de celles-ci :
-
 - Le serveur d'un café, chargé de transporter les boissons du comptoir aux tables des clients, n'utilisera pas un sac en plastique pour faire le transport : il préfèrera un plateau. 
 - Le chercheur de champignons, lui, n'utilisera pas un plateau pour stocker ses trouvailles : il préfèrera un panier.
 - Pour stocker des chaussettes, on préfèrera les entasser dans un tiroir (après les avoir appairées), plutôt que de les suspendre à des cintres. 
@@ -58,28 +49,25 @@ Une structure de **pile** (penser à une pile d'assiette) est associée à la m�
 les éléments sont empilés les uns au-dessus des autres, et on ne peut toujours dépiler que l'élément du haut de la pile. Le dernier élément à être arrivé est donc le premier à être sorti.
 
 
-![](data/gifpile.webp){: .center}
+![](data/gifpile.webp)
 
 
 
 **Exemples de données stockées sous forme de pile :** 
-
 - lors de l'exécution d'une fonction récursive, le processeur empile successivement les appels à traiter : seule l'instruction du haut de la pile peut être traitée.
 
-![Fibonacci](data/pile_fibo.webp){: .center}
+![Fibonacci](data/pile_fibo.webp)
 
-- dans un navigateur internet, la liste des pages parcourues est stockée sous forme de pile : la fonction «Back» permet de «dépiler» peu à peu les pages précédemment parcourues : 
-![](data/history.png){: .center}
+- dans un navigateur internet, la liste des pages parcourues est stockée sous forme de pile : la fonction «Back» permet de «dépiler» peu à peu les pages précédemment parcourues : ![](data/history.png)
 - lors d'un Devoir Surveillé, la dernière copie remise sur le bureau du professeur est (souvent) la première corrigée.
 
 
 #### 1.2.2 Les files (*queue*)
 Une structure de **file** (penser à une file d'attente) est associée à la méthode **FIFO** (First In, First Out) :
 les éléments sont enfilés les uns à la suite des autres, et on ne peut toujours défiler que l'élément du haut de la file. Le premier élément à être arrivé est donc le premier à en sortir. Sinon ça râle dans la file d'attente.
-![un bien joli gif](data/giffile.webp){: .center}
+![un bien joli gif](data/giffile.webp) 
 
 **Exemples de données stockées sous forme de file :** 
-
 - les documents envoyés à l'imprimante sont traitées dans une file d'impression.
 - la «queue» à la cantine est (normalement) traitée sous forme de file.
 
@@ -90,9 +78,10 @@ On passe donc du LIFO au FIFO.
 
 Certains dispositifs permettent de le faire naturellement :  
 Ci-dessous, une file... de piles (électriques). Le chargement par le haut du distributeur fait que celle qui sera sortie (en bas) sera celle qui aurait été rentrée en premier (par le haut). Ce FIFO est donc provoqué naturellement par la gravité (et un peu d'astuce).
-![](data/fifoimg.png){: .center}
+![](data/fifoimg.png)
 Cette problématique est universelle : voir par exemple [ce site](https://www.mecalux.fr/blog/methode-lifo-fifo-peps).
 
+Arrêtons-nous maintenant en détail sur les interfaces et implémentations possibles des listes, des piles et des files.
 
 
 
@@ -105,10 +94,9 @@ Une liste est un ensemble ordonné d'objets. Généralement, ces données seront
 
 Lorsque l'implémentation de la liste fait apparaître une chaîne de valeurs, chacune pointant vers la suivante, on dit que la liste est une liste **chaînée**.
 
-![](data/listechainee.png){: .center}
+![](data/listechainee.png)
 
 **Implémentation choisie :**
-
 - Une liste est caractérisée par un ensemble de cellules.
 - Le lien (on dira souvent le «pointeur») vers la variable est un lien vers la première cellule, qui renverra elle-même sur la deuxième, etc.
 - Chaque cellule contient donc une valeur et un lien vers la cellule suivante.
@@ -121,43 +109,63 @@ Une conséquence de cette implémentation sous forme de liste chaînée est la n
 
 ### 2.3 Exemple d'implémentation minimale d'une liste chaînée
 
-!!! note "Exemple fondateur : **liste chainée** :heart:"
-    ```python linenums='1'
-    class Cellule :
-        def __init__(self, contenu, suivante):
-            self.contenu = contenu
-            self.suivante = suivante
-    ```
+
+```python
+class Cellule :
+    
+    def __init__(self, contenu, suivante):
+        self.contenu = contenu
+        self.suivante = suivante
+```
 
 Cette implémentation rudimentaire permet bien la création d'une liste :
 
 
 ```python
->>> lst = Cellule(3, Cellule(5, Cellule(1,None)))
+lst = Cellule(3, Cellule(5, Cellule(1,None)))
 ```
 
-La liste créée est donc :  ![](data/ex1.png) 
+La liste créée est donc :  
+![](data/ex1.png) 
 
 Mais plus précisément, on a :
 ![](data/ex2.png)
 
-{{initexo(0)}}
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        Retrouvez comment accéder aux éléments 3, 5 et 1.
-    === "Correction"
-        {{ correction(True,
-        "
-        ```python
-        >>> lst.contenu
-        3
-        >>> lst.suivante.contenu
-        5
-        >>> lst.suivante.suivante.contenu
-        1
-        ``` 
-        "
-        ) }}
+**Exercice :** retrouvez comment accéder aux éléments 3, 5 et 1.
+
+
+```python
+lst.contenu
+```
+
+
+
+
+    3
+
+
+
+
+```python
+lst.suivante.contenu
+```
+
+
+
+
+    5
+
+
+
+
+```python
+lst.suivante.suivante.contenu
+```
+
+
+
+
+    1
 
 
 
@@ -169,19 +177,17 @@ Nous connaissons déjà les listes de Python :
 
 
 ```python
->>> maliste = [3, 1, -1, 42]
+maliste = [3,1,-1,42]
 ```
 
 Et nous connaissons aussi (un peu) l'interface de ce type ```list```, notamment avec les méthodes ```append()``` ou ```reverse()```.  
 Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python de ce type ```list``` fait que le celui-ci se rapproche plus d'un **tableau dynamique**. 
 
 **Dans un tableau dynamique :**
-
 - le temps d'accès à n'importe quel élément est rapide. Ce temps d'accès est constant quelque soit l'élément : on dit que l'accès est en $O(1)$.
 - l'insertion d'un élément au début ou au milieu de la liste est lente : cela oblige à décaler tous les éléments à droite de celui-ci. Le temps pris par l'insertion est proportionnel au nombre d'éléments à déplacer : on dit que l'insertion est en $O(n)$.
 
 **Dans une liste chaînée :**
-
 - le temps d'accès à n'importe quel élément peut être lent (proportionnel à la position de l'élément dans la liste). Le temps d'accès est en $O(n)$.
 - l'insertion d'un élément à l'intérieur de la liste est rapide : il y a simplement à modifier la valeur du lien de la cellule à gauche de l'endroit d'insertion. L'action d'insérer est donc en $O(1)$. Toutefois, avant d'arriver à l'endroit d'insertion, il faut avoir parcouru toutes les cellules précédentes ! Le temps total d'insertion est donc lui aussi linéaire, en $O(n)$.
 
@@ -190,56 +196,36 @@ Nous nous servirons parfois du type ```list``` de Python dans la suite de ce cou
 ### 2.5 Un exemple d'interface pour les listes
 
 Imaginons que nous possédons une interface offrant les fonctionnalités suivantes :
-
 - ```Liste()``` : crée une liste vide.
 - ```est_vide()``` : indique si la liste est vide.
 - ```ajoute_tete()``` : insère un élément en tête de liste.
 - ```renvoie_tete()``` : renvoie la valeur de l'élément en tête de liste ET le supprime de la liste.
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée.
-        ```python
-        1. lst = Liste()      
-        2. lst.ajoute_tete(3)
-        3. lst.ajoute_tete(5) 
-        4. lst.ajoute_tete(1) 
-        5. lst.renvoie_tete() 
-        6. lst.est_vide()     
-        7. lst.ajoute_tete(2) 
-        8. lst.renvoie_tete() 
-        9. lst.renvoie_tete() 
-        10. lst.renvoie_tete()
-        11. lst.est_vide()    
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
-        ```python
-        1. lst = Liste()      # lst = None
-        2. lst.ajoute_tete(3) # lst = 3
-        3. lst.ajoute_tete(5) # lst = 5 3 
-        4. lst.ajoute_tete(1) # lst = 1 5 3
-        5. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 1
-        6. lst.est_vide()     # valeur renvoyée : False
-        7. lst.ajoute_tete(2) # lst = 2 5 3
-        8. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 2
-        9. lst.renvoie_tete() # lst = 3 valeur renvoyée : 5
-        10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
-        11. lst.est_vide()    #  valeur renvoyée : True
-        ```
-        "
-        ) }}
+**Exercice :**  
+On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée.
 
+
+```python
+1. lst = Liste()      # lst = None
+2. lst.ajoute_tete(3) # lst = 3
+3. lst.ajoute_tete(5) # lst = 5 3 
+4. lst.ajoute_tete(1) # lst = 1 5 3
+5. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 1
+6. lst.est_vide()     # valeur renvoyée : False
+7. lst.ajoute_tete(2) # lst = 2 5 3
+8. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 2
+9. lst.renvoie_tete() # lst = 3 valeur renvoyée : 5
+10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
+11. lst.est_vide()    #  valeur renvoyée : True
+```
 
 ## 3. Les piles
 
-![](data/gifpile.webp){: .center}
+![](data/gifpile.webp)
 
 Comme expliqué précédemment, une pile travaille en mode LIFO (Last In First Out).
 Pour être utilisée, l'interface d'une pile doit permettre a minima :
-
 - la création d'une pile vide
 - l'ajout d'un élément dans la pile (qui sera forcément au dessus). On dira qu'on **empile**.
 - le retrait d'un élément de la pile (qui sera forcément celui du dessus) et le renvoi de sa valeur. On dira qu'on **dépile**.
@@ -248,44 +234,25 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 
 ### 3.1 Utilisation d'une interface de pile
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile ```p``` et la valeur éventuellement renvoyée.
+**Exercice :**  
+On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile ```p``` et la valeur éventuellement renvoyée.
 
-        Bien comprendre que la classe ```Pile()``` et ses méthodes n'existent pas vraiment. Nous *jouons* avec son interface.
+Bien comprendre que la classe ```Pile()``` et ses méthodes n'existent pas vraiment. Nous *jouons* avec son interface.
 
-        ```python
-        1. p = Pile() 
-        2. p.empile(3)   
-        3. p.empile(5)  
-        4. p.est_vide()  
-        4. p.empile(1)  
-        5. p.depile()  
-        6. p.depile() 
-        7. p.empile(9)  
-        8. p.depile()  
-        9. p.depile() 
-        10. p.est_vide() 
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
-        ```python
-        1. p = Pile()  # p=None
-        2. p.empile(3)   # p= 3
-        3. p.empile(5)  # p= 3 5 par convention
-        4. p.est_vide()  #  False
-        4. p.empile(1)  # p= 3 5 1
-        5. p.depile()  # p= 3 5    valeur renvoyée : 1
-        6. p.depile()  # p= 3      valeur renvoyée : 5
-        7. p.empile(9)  # p= 3 9
-        8. p.depile()  # p= 3       valeur renvoyée :9
-        9. p.depile()  # p= None      valeur renvoyée : 3
-        10. p.est_vide() # True
-        ```
-        "
-        ) }}
 
+```python
+1. p = Pile()  # p=None
+2. p.empile(3)   # p= 3
+3. p.empile(5)  # p= 3 5 par convention
+4. p.est_vide()  #  False
+4. p.empile(1)  # p= 3 5 1
+5. p.depile()  # p= 3 5    valeur renvoyée : 1
+6. p.depile()  # p= 3      valeur renvoyée : 5
+7. p.empile(9)  # p= 3 9
+8. p.depile()  # p= 3       valeur renvoyée :9
+9. p.depile()  # p= None      valeur renvoyée : 3
+10. p.est_vide() # True
+```
 
 ### 3.2 Implémentation(s) d'une pile
 
@@ -297,59 +264,59 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
 - ```__str__()``` : permet d'afficher la pile sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
 
 #### 3.2.1 À l'aide du type ```list``` de Python 
+**Exercice :** créer la classe ci-dessus. Le type ```list``` de Python est parfaitement adapté. Des renseignement intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        Créer la classe ```Pile```   ci-dessus. 
-        
-        Le type ```list``` de Python est parfaitement adapté. Des renseignement intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
-    === "Correction :heart:"
-        {{ correction(True,
-        "
-        ```python linenums='1'
-        class Pile:
-            def __init__(self):
-                self.data = []
-            
-            def est_vide(self):
-                return len(self.data) == 0 
-            
-        
-            def empile(self,x):
-                self.data.append(x)
+```python
+class Pile:
+    def __init__(self):
+        self.data = []
+      
+    def est_vide(self):
+        return len(self.data) == 0 
+    
+  
+    def empile(self,x):
+        self.data.append(x)
 
-            def depile(self):
-                if self.est_vide() == True :
-                    raise IndexError('Vous avez essayé de dépiler une pile vide !')
-                else :
-                    return self.data.pop() 
+    def depile(self):
+        if self.est_vide() == True :
+            raise IndexError("Vous avez essayé de dépiler une pile vide !")
+        else :
+            return self.data.pop() 
 
-            def __str__(self):       # Hors-Programme : pour afficher 
-                s = '|'              # convenablement la pile avec print(p)
-                for k in self.data :
-                    s = s + str(k) + '|'
-                return s
+    def __str__(self):       # Hors-Programme : pour afficher 
+        s = "|"              # convenablement la pile avec print(p)
+        for k in self.data :
+            s = s + str(k) + "|"
+        return s
 
-            def __repr__(self):       # Hors-Programme : pour afficher 
-                s = '|'              # convenablement la pile avec p
-                for k in self.data :
-                    s = s + str(k) + '|'
-                return s  
-        ```
-        Test de l'implémentation :
-        ```python
-        >>> p = Pile()
-        >>> p.empile(5)
-        >>> p.empile(3)
-        >>> p.empile(7)
-        >>> p
-        |5|3|7|
-        ```
-        
-        "
-        ) }}
+    def __repr__(self):       # Hors-Programme : pour afficher 
+        s = "|"              # convenablement la pile avec p
+        for k in self.data :
+            s = s + str(k) + "|"
+        return s  
+    
 
+```
+
+
+```python
+p = Pile()
+p.empile(5)
+p.empile(3)
+p.empile(7)
+```
+
+
+```python
+p
+```
+
+
+
+
+    |5|3|7|
 
 
 
@@ -359,104 +326,69 @@ Au **2.3** nous avons créé la classe  ```Cellule``` :
 
 
 
-```python linenums='1'
+```python
 class Cellule :
+    
     def __init__(self, contenu, suivante):
         self.contenu = contenu
         self.suivante = suivante
 ```
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
-
-    === "Correction :heart:"
-        {{ correction(True,
-        "
-        ```python linenums='1'
-        class Pile:
-            def __init__(self):
-                self.data = None
-            
-            def est_vide(self):
-                return self.data == None
-            
-            def empile(self, x):
-                self.data = Cellule(x,self.data)
-            
-            def depile(self):
-                v = self.data.contenu #on récupère la valeur à renvoyer
-                self.data = self.data.suivante  # on supprime la 1ère cellule  
-                return v
-            
-            def __str__(self):
-                s = '|'
-                c = self.data
-                while c != None :
-                    s += str(c.contenu) + '|'
-                    c = c.suivante
-                return s
-
-        ```
-        Test de l'implémentation :
-        ```python
-        >>> p = Pile()
-        >>> p.empile(5)
-        >>> p.empile(3)
-        >>> p.empile(7)
-        >>> print(p)
-        |7|3|5|
-        `` 
-        "
-        ) }}
+**Exercice :** à l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
 
+```python
+class Pile:
+    def __init__(self):
+        self.data = None
+    
+    def est_vide(self):
+        return self.data == None
+    
+    def empile(self, x):
+        self.data = Cellule(x,self.data)
+    
+    def depile(self):
+        v = self.data.contenu #on récupère la valeur à renvoyer
+        self.data = self.data.suivante  # on supprime la 1ère cellule  
+        return v
+    
+    def __str__(self):
+        s = "|"
+        c = self.data
+        while c != None :
+            s += str(c.contenu)+"|"
+            c = c.suivante
+        return s
+
+```
+
+
+```python
+p = Pile()
+p.empile(5)
+p.empile(3)
+p.empile(7)
+```
+
+
+```python
+print(p)
+```
+
+    |7|3|5|
 
 
 **À retenir :** 
 pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, l'implémentation qui est derrière. 
-![](data/xkcd.png){: .center}
+![](data/xkcd.png)
 
 ### 3.3 Application des piles
-
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        À l'aide de deux variables ```adresses``` et ```adresse_courante```, et de la classe ```Pile``` créée plus haut, simulez une gestion de l'historique de navigation internet.  
-        Seules deux fonctions ```go_to(nouvelle_adresse)``` et ```back()``` sont à créer.
-
-        ```python linenums='1'
-        adresses = Pile()
-        adresse_courante = ""
-
-        def go_to(nouvelle_adresse) :
-            # à vous
-
-        def back():
-            # à vous
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
-        ```python linenums='1'
-        adresses = Pile()
-        adresse_courante = ''
-
-        def go_to(nouvelle_adresse) :
-            global adresse_courante
-            adresses.empile(nouvelle_adresse)
-            adresse_courante = nouvelle_adresse
-
-        def back():
-            global adresse_courante
-            adresses.depile()
-            adresse_courante = adresses.depile()
-        ```      
-        "
-        ) }}
+À l'aide de deux variables ```adresses``` et ```adresse_courante```, et de la classe ```Pile``` créée plus haut, simulez une gestion de l'historique de navigation internet.  
+Seules deux fonctions ```go_to(nouvelle_adresse)``` et ```back()``` sont à créer.
 
 
-
-```python linenums='1'
+```python
 adresses = Pile()
 adresse_courante = ""
 
@@ -693,3 +625,11 @@ f.defile()
 
 
 ---
+
+![](data/ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
+
+
+
+```python
+
+```
