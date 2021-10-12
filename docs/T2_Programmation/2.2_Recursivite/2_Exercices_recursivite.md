@@ -129,7 +129,7 @@
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def puissance(x,n):
@@ -162,7 +162,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def recherche(lst,m):
@@ -242,6 +242,32 @@
         2) Créer une fonction ```triangle(n,l)``` qui trace le flocon complet.
 
     === "Correction"
+        ```python linenums='1'
+        from turtle import *
+
+        def floc(n, l):
+            if n == 0:
+                forward(l)
+            else:
+                floc(n-1,l/3)
+                left(60)
+                floc(n-1,l/3)
+                right(120)
+                floc(n-1,l/3)
+                left(60)
+                floc(n-1,l/3)
+                
+
+        speed(0)
+
+        def triangle(n,l):
+            for _ in range(3):
+                floc(n,l)
+                right(120)
+                
+        triangle(5,400)
+
+        ```
 
 
 ??? info "Bibliographie"
