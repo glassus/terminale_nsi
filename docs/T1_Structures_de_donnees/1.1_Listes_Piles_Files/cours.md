@@ -37,7 +37,7 @@ En informatique comme dans la vie courante, il est conseillé d'adapter sa mani�
 
 De même en informatique, pour chaque type de données, pour chaque utilisation prévue, une structure particulière de données se revèlera (peut-être) plus adaptée qu'une autre.
 
-### 1.1.1 Données linéaires
+#### 1.1.1 Données linéaires
 Intéressons nous par exemple aux **données linéaires**. Ce sont des données qui ne comportent pas de *hiérarchie* : toutes les données sont de la même nature et ont le même rôle. 
 Par exemple, un relevé mensuel de températures, la liste des élèves d'une classe, un historique d'opérations bancaires... 
 
@@ -47,7 +47,7 @@ Lorsque les données de cette liste sont en fait des couples (comme dans le cas 
 
 Les listes et les dictionnaires sont donc des exemples de structures de **données linéaires**.
 
-### 1.1.2 Données non-linéaires
+#### 1.1.2 Données non-linéaires
 Même si ce n'est pas l'objet de ce cours, donnons des exemples de structures adaptées aux données non-linéaires :
 
 Si une liste de courses est subdivisée en "rayon frais / bricolage / papeterie" et que le rayon frais est lui-même séparé en "laitages / viandes / fruits & légumes", alors une structure d'**arbre** sera plus adaptée pour la représenter. Les structures arborescentes seront vues plus tard en Terminale.
