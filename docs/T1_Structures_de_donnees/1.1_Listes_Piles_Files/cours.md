@@ -1,22 +1,28 @@
 
 # Listes, piles, files
-Structures de données linéaires
+exemples de structures de données linéaires.
+
+![image](data/data.jpeg){: .center width=40%}
+
 
 ![image](data/BO1.png){: .center}
 ![image](data/BO2.png){: .center}
 
 
 
-## 0. Préambule : interface ≠ implémentation
+## 0. Préambule : interface ≠ implémentation :star: :star: :star:
 
 Les structures que nous allons voir peuvent s'envisager sous deux aspects :
 
 - le côté utilisateur, qui utilisera une interface pour manipuler les données.
 - le côté concepteur, qui aura choisi une implémentation pour construire la structure de données.
 
-Par exemple, le volant et les pédales constituent (une partie de) l'interface d'une voiture. L'implémentation va désigner tous les mécanismes techniques qui sont mis en œuvre pour que le mouvement de rotation du volant aboutisse à un changement de direction des roues.
+!!! note "Un exemple d'interface et d'implémentation"
+    - Le volant et les pédales d'une voiture constituent une partie de son **interface**.
+    - L'**implémentation** va désigner tous les mécanismes techniques qui sont mis en œuvre pour que (par exemple) le mouvement de rotation du volant aboutisse à un changement de direction des roues.
+    - La standardisation des interfaces fait qu'un utilisateur peut passer sans problème d'une voiture à une autre, même si l'implémentation est complètement différente.
 
-![](data/voiture.png){: .center}
+    ![](data/voiture.png){: .center width=50%}
 
 Nous avons déjà abordé ces deux aspects lors de la découverte de la Programmation Orientée Objet. Le principe d'encapsulation fait que l'utilisateur n'a qu'à connaître l'existence des méthodes disponibles, et non pas le contenu technique de celle-ci. Cela permet notamment de modifier le contenu technique (l'implémentation) sans que les habitudes de l'utilisateur (l'interface) ne soient changées.
 
@@ -31,6 +37,7 @@ En informatique comme dans la vie courante, il est conseillé d'adapter sa mani�
 
 De même en informatique, pour chaque type de données, pour chaque utilisation prévue, une structure particulière de données se revèlera (peut-être) plus adaptée qu'une autre.
 
+### 1.1.1 Données linéaires
 Intéressons nous par exemple aux **données linéaires**. Ce sont des données qui ne comportent pas de *hiérarchie* : toutes les données sont de la même nature et ont le même rôle. 
 Par exemple, un relevé mensuel de températures, la liste des élèves d'une classe, un historique d'opérations bancaires... 
 
@@ -40,20 +47,28 @@ Lorsque les données de cette liste sont en fait des couples (comme dans le cas 
 
 Les listes et les dictionnaires sont donc des exemples de structures de **données linéaires**.
 
-
+### 1.1.2 Données non-linéaires
 Même si ce n'est pas l'objet de ce cours, donnons des exemples de structures adaptées aux données non-linéaires :
 
 Si une liste de courses est subdivisée en "rayon frais / bricolage / papeterie" et que le rayon frais est lui-même séparé en "laitages / viandes / fruits & légumes", alors une structure d'**arbre** sera plus adaptée pour la représenter. Les structures arborescentes seront vues plus tard en Terminale.
 
 Enfin, si nos données à étudier sont les relations sur les réseaux sociaux des élèves d'une classe, alors la structure de **graphe** s'imposera d'elle-même. Cette structure sera elle-aussi étudiée plus tard cette année. 
 
-### 1.2 Comment seront traitées ces données linéaires ? Listes, piles et files
+### 1.2 Comment seront traitées ces données linéaires ? Introduction des listes, des piles et des files
 
-La nature des données ne fait pas tout. Il faut aussi s'intéresser à la manière dont on voudra les traiter : à quelle position les faire entrer dans notre structure ? À quel moment devront-elles en éventuellement en sortir ?
+La nature des données ne fait pas tout. Il faut aussi s'intéresser à la manière dont on voudra les traiter :
 
-Lorsque cette problématique d'entrée/sortie n'intervient pas, la structure «classique» de liste est adaptée. Mais lorsque celle-ci est importante, il convient de différencier la structure de **pile** de celle de **file**.
+- À quelle position les faire entrer dans notre structure ?
+- À quel moment devront-elles en éventuellement en sortir ?
+- Veut-on pouvoir accéder rapidement à n'importe quel élément de la structure, ou simplement au premier ? ou au dernier ?
+
+Lorsque ces problématiques d'entrée/sortie n'interviennent pas, la structure «classique» de liste est adaptée. Mais lorsque celle-ci est importante, il convient de différencier la structure de **pile** de celle de **file**.
 
 #### 1.2.1 Les piles (*stack*)
+
+![image](data/assiettes2.png){: .center width=30%}
+
+
 Une structure de **pile** (penser à une pile d'assiette) est associée à la méthode **LIFO** (Last In, First Out) :
 les éléments sont empilés les uns au-dessus des autres, et on ne peut toujours dépiler que l'élément du haut de la pile. Le dernier élément à être arrivé est donc le premier à être sorti.
 
@@ -74,6 +89,10 @@ les éléments sont empilés les uns au-dessus des autres, et on ne peut toujour
 
 
 #### 1.2.2 Les files (*queue*)
+
+![image](data/queue.png){: .center width=40%}
+
+
 Une structure de **file** (penser à une file d'attente) est associée à la méthode **FIFO** (First In, First Out) :
 les éléments sont enfilés les uns à la suite des autres, et on ne peut toujours défiler que l'élément du haut de la file. Le premier élément à être arrivé est donc le premier à en sortir. Sinon ça râle dans la file d'attente.
 ![un bien joli gif](data/giffile.webp){: .center}
@@ -95,6 +114,7 @@ Cette problématique est universelle : voir par exemple [ce site](https://www.me
 
 
 
+Après avoir présenté rapidement ces trois types de données linéaires, nous allons maintenant les étudier plus en détail, et proposer pour chacune d'elles une interface et plusieurs implémentations.
 
 ## 2. Les listes
 
@@ -102,6 +122,9 @@ Cette problématique est universelle : voir par exemple [ce site](https://www.me
 Une liste est un ensemble ordonné d'objets. Généralement, ces données seront de même type, mais ce n'est pas structurellement obligatoire.
 
 ### 2.2 Les listes chaînées
+
+![image](data/linked.png){: .center width=40%}
+
 
 Lorsque l'implémentation de la liste fait apparaître une chaîne de valeurs, chacune pointant vers la suivante, on dit que la liste est une liste **chaînée**.
 
@@ -139,7 +162,8 @@ Cette implémentation rudimentaire permet bien la création d'une liste :
 La liste créée est donc :  ![](data/ex1.png) 
 
 Mais plus précisément, on a :
-![](data/ex2.png)
+
+![](data/ex2.png){: .center}
 
 {{initexo(0)}}
 !!! example "{{ exercice() }}"
@@ -434,6 +458,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         def back():
             # à vous
         ```
+
     === "Correction"
         {{ correction(True,
         "
@@ -456,41 +481,18 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 
 
 
-```python linenums='1'
-adresses = Pile()
-adresse_courante = ""
-
-def go_to(nouvelle_adresse) :
-    global adresse_courante
-    adresses.empile(nouvelle_adresse)
-    adresse_courante = nouvelle_adresse
-
-def back():
-    global adresse_courante
-    adresses.depile()
-    adresse_courante = adresses.depile()
-```
 
 **Exemple d'utilisation :**
 
 
 ```python
-go_to("google.fr")
-go_to("lemonde.fr")
-go_to("blabla.fr")
+>>> go_to("google.fr")
+>>> go_to("lemonde.fr")
+>>> go_to("blabla.fr")
+>>> back()
+>>> adresse_courante
+lemonde.fr
 ```
-
-
-```python
-back()
-adresse_courante
-```
-
-
-
-
-    'lemonde.fr'
-
 
 
 ## 4. Les files
@@ -527,57 +529,58 @@ On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape
 
 ### 4.2 Implémentation d'une file
 L'objectif est de créer une classe ```File```, disposant des méthodes suivantes :
+
 - ```File()``` : crée une file vide.
 - ```est_vide()``` : indique si la file est vide.
 - ```enfile()``` : insère un élément en bas de la file.
 - ```defile()``` : renvoie la valeur de l'élément en haut de la file ET le supprime de la file.
 - ```__str__()``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
 
-**Exercice :** créer la classe ci-dessus. Là encore, le type «list» de Python est peut être utilisé, voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists). Néanmoins quelques remarques seront à apporter.
+
+!!! example "Exercice"
+    === "Énoncé"
+        Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé, voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists). Néanmoins quelques remarques seront à apporter.
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        class File:
+            def __init__(self):
+                self.data = []
+            
+            def est_vide(self):
+                return len(self.data) == 0 
+            
+        
+            def enfile(self,x):
+                self.data.append(x)
+
+            def defile(self):
+                if self.est_vide() == True :
+                    raise IndexError('Vous avez essayé de défiler une file vide !')
+                else :
+                    return self.data.pop(0) 
+
+            def __str__(self):       # Hors-Programme : pour afficher 
+                s = '|'              # convenablement la file avec print(p)
+                for k in self.data :
+                    s = s + str(k) + '|'
+                return s
+        ```
+
+        ```python
+        >>> f = File()
+        >>> f.enfile(5)
+        >>> f.enfile(8)
+        >>> print(f)
+        |5|8|
+        >>> f.defile()
+        5
+        ```
 
 
-```python
-class File:
-    def __init__(self):
-        self.data = []
-      
-    def est_vide(self):
-        return len(self.data) == 0 
-    
-  
-    def enfile(self,x):
-        self.data.append(x)
-
-    def defile(self):
-        if self.est_vide() == True :
-            raise IndexError("Vous avez essayé de défiler une file vide !")
-        else :
-            return self.data.pop(0) 
-
-    def __str__(self):       # Hors-Programme : pour afficher 
-        s = "|"              # convenablement la file avec print(p)
-        for k in self.data :
-            s = s + str(k) + "|"
-        return s
-```
-
-
-```python
-f = File()
-f.enfile(5)
-f.enfile(8)
-print(f)
-f.defile()
-```
-
-    |5|8|
-
-
-
-
-
-    5
-
+        "
+        ) }}
 
 
 **Remarque :**  
@@ -589,14 +592,15 @@ En cause : notre méthode ```defile()``` agit en temps linéaire  ($O(n)$) et no
 
 Comment créer une file avec 2 piles ?  
 L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. 
+
 - quand on veut enfiler, on empile sur la pile d'entrée.
 - quand on veut défiler, on dépile sur la pile de sortie.
 - si celle-ci est vide, on dépile entièrement la pile d'entrée dans la pile de sortie.
 
-![](data/2piles1file.webp)
+![](data/2piles1file.webp){: .center .width=30%}
 
 
-```python
+```python linenums='1'
 # il est impératif de comprendre qu'on peut choisir l'implémentation
 # de la classe Pile qu'on préfère parmi les deux traitées plus haut.
 # Comme elles ont la MÊME INTERFACE et qu'on ne va se servir que
@@ -639,10 +643,6 @@ class Cellule :
         self.suivante = suivante
     
 
-```
-
-
-```python
 class File:
     def __init__(self):
         self.entree = Pile()
@@ -669,17 +669,12 @@ class File:
 
 
 ```python
-f = File()
-f.enfile(5)
-f.enfile(8)
-
-f.defile()
+>>> f = File()
+>>> f.enfile(5)
+>>> f.enfile(8)
+>>> f.defile()
+5
 ```
-
-
-
-
-    5
 
 
 
