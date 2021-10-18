@@ -1,6 +1,6 @@
 
 # Listes, piles, files
-exemples de structures de données linéaires.
+*Exemples de structures de données linéaires.*
 
 ![image](data/data.jpeg){: .center width=40%}
 
