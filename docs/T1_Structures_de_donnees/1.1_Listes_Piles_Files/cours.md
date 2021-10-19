@@ -108,9 +108,9 @@ Ils doivent donc transformer la pile en file : lors de la mise en rayon de nouve
 On passe donc du LIFO au FIFO.  
 
 Certains dispositifs permettent de le faire naturellement :  
-Ci-dessous, une file... de piles (électriques). Le chargement par le haut du distributeur fait que celle qui sera sortie (en bas) sera celle qui aurait été rentrée en premier (par le haut). Ce FIFO est donc provoqué naturellement par la gravité (et un peu d'astuce).
+Ci-dessous, une file... de piles (électriques). Le chargement par le haut du distributeur fait que celle qui sera sortie (en bas) sera celle qui aura été rentrée en premier (par le haut). Ce FIFO est donc provoqué naturellement par la gravité (et un peu d'astuce).
 ![](data/fifoimg.png){: .center}
-Cette problématique est universelle : voir par exemple [ce site](https://www.mecalux.fr/blog/methode-lifo-fifo-peps).
+On notera que cette problématique est universelle : voir par exemple [ce site](https://www.mecalux.fr/blog/methode-lifo-fifo-peps){:target="_blank"}.
 
 
 
@@ -121,7 +121,7 @@ Après avoir présenté rapidement ces trois types de données linéaires, nous 
 ### 2.1 Définition générale
 Une liste est un ensemble ordonné d'objets. Généralement, ces données seront de même type, mais ce n'est pas structurellement obligatoire.
 
-### 2.2 Les listes chaînées
+### 2.2 Les listes chaînées *(linked lists)*
 
 ![image](data/linked.png){: .center width=40%}
 
@@ -133,7 +133,7 @@ Lorsque l'implémentation de la liste fait apparaître une chaîne de valeurs, c
 **Implémentation choisie :**
 
 - Une liste est caractérisée par un ensemble de cellules.
-- Le lien (on dira souvent le «pointeur») vers la variable est un lien vers la première cellule, qui renverra elle-même sur la deuxième, etc.
+- Le lien (on dira souvent le «pointeur») de la variable est un lien vers la première cellule, qui renverra elle-même sur la deuxième, etc.
 - Chaque cellule contient donc une valeur et un lien vers la cellule suivante.
 - Une liste peut être vide (la liste vide est notée ```x``` ou bien ```None``` sur les schémas)
 
@@ -144,7 +144,7 @@ Une conséquence de cette implémentation sous forme de liste chaînée est la n
 
 ### 2.3 Exemple d'implémentation minimale d'une liste chaînée
 
-!!! note "Exemple fondateur : **liste chainée** :heart:"
+??? note "Exemple fondateur : implémentation d'une **liste chainée** en POO :heart:"
     ```python linenums='1'
     class Cellule :
         def __init__(self, contenu, suivante):
@@ -422,6 +422,7 @@ class Cellule :
                 return s
 
         ```
+        
         Test de l'implémentation :
         ```python
         >>> p = Pile()
@@ -430,7 +431,7 @@ class Cellule :
         >>> p.empile(7)
         >>> print(p)
         |7|3|5|
-        `` 
+        ```
         "
         ) }}
 
