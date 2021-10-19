@@ -327,7 +327,7 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
     === "Énoncé"
         Créer la classe ```Pile```   ci-dessus. 
         
-        Le type ```list``` de Python est parfaitement adapté. Des renseignement intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
+        Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
     === "Correction :heart:"
         {{ correction(True,
         "

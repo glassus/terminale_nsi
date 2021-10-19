@@ -81,6 +81,7 @@ plugins:
   - macros
   - awesome-pages:
       collapse_single_pages: true
+  - page-to-pdf
  
  
  # - mkdocs-jupyter
