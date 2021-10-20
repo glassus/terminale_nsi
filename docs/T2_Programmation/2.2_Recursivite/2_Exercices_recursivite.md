@@ -274,53 +274,9 @@
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
 
- <!--   
-   
-        "
-        ```python linenums='1'
-        def hanoi(n, depart, inter, arrivee):
-            """ n : nombre d'assiettes dans la pile
-            # depart : la pile de départ("A", "B" ou "C")
-            # inter : la pile intermédaire("A", "B" ou "C")
-            # arrivee : la pile d'arrivée ("A", "B" ou "C") """
-
-            if n == 1 :
-                print(depart + " vers " + C)
-            else :
-                hanoi(n-1, depart, arrivee, inter) 
-                print(depart + " vers " + arrivee)
-                hanoi(n-1, inter, depart, arrivee)
-
-        hanoi(5, "A", "B", "C")
-        ```
-        "
-
-```python linenums='1'
-from turtle import *
-
-def floc(n, l):
-    if n == 0:
-        forward(l)
-    else:
-        floc(n-1,l/3)
-        left(60)
-        floc(n-1,l/3)
-        right(120)
-        floc(n-1,l/3)
-        left(60)
-        floc(n-1,l/3)
-        
-
-speed(0)
-
-def triangle(n,l):
-    for _ in range(3):
-        floc(n,l)
-        right(120)
-        
-triangle(5,400)
-
-```
 
 
-  -->      
+- [lien](data/DS02.pdf) vers le DS
+- [lien](data/DS02_correction.pdf) vers sa correction
+
+
