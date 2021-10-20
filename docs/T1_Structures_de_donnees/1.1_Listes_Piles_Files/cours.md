@@ -446,54 +446,45 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        À l'aide de deux variables ```adresses``` et ```adresse_courante```, et de la classe ```Pile``` créée plus haut, simulez une gestion de l'historique de navigation internet.  
-        Seules deux fonctions ```go_to(nouvelle_adresse)``` et ```back()``` sont à créer.
-
-        ```python linenums='1'
-        adresses = Pile()
-        adresse_courante = ""
-
-        def go_to(nouvelle_adresse) :
-            # à vous
-
-        def back():
-            # à vous
+        Simulez une gestion de l'historique de navigation internet, en créant une classe ```Nav``` qui utilisera une pile.
+        Attention, il ne faut pas réinventer la classe ```Pile```, mais s'en servir !
+        
+        Exemple d'utilisation :
+        ```python 
+        >>> n = Nav()
+        >>> n.visite('lemonde.fr')
+        page actuelle : lemonde.fr
+        >>> n.visite('google.fr')
+        page actuelle : google.fr
+        >>> n.visite('lyceemauriac.fr')
+        page actuelle : lyceemauriac.fr
+        >>> n.back()
+        page quittée : lyceemauriac.fr
+        >>> n.back()
+        page quittée : google.fr
         ```
 
     === "Correction"
         {{ correction(True,
         "
         ```python linenums='1'
-        adresses = Pile()
-        adresse_courante = ''
-
-        def go_to(nouvelle_adresse) :
-            global adresse_courante
-            adresses.empile(nouvelle_adresse)
-            adresse_courante = nouvelle_adresse
-
-        def back():
-            global adresse_courante
-            adresses.depile()
-            adresse_courante = adresses.depile()
+        class Nav:
+            def __init__(self):
+                self.pile = Pile()
+            
+            def visite(self, page):
+                self.pile.empile(page)
+                print('page actuelle :', page)
+            
+            def back(self):
+                page_quittee = self.pile.depile()
+                print('page quittée :', page_quittee)
         ```      
         "
         ) }}
 
 
 
-
-**Exemple d'utilisation :**
-
-
-```python
->>> go_to("google.fr")
->>> go_to("lemonde.fr")
->>> go_to("blabla.fr")
->>> back()
->>> adresse_courante
-lemonde.fr
-```
 
 
 ## 4. Les files
