@@ -144,7 +144,7 @@ Une conséquence de cette implémentation sous forme de liste chaînée est la n
 
 ### 2.3 Exemple d'implémentation minimale d'une liste chaînée
 
-??? note "Exemple fondateur : implémentation d'une **liste chainée** en POO :heart:"
+!!! note "Exemple fondateur : implémentation d'une **liste chainée** en POO :heart:"
     ```python linenums='1'
     class Cellule :
         def __init__(self, contenu, suivante):
