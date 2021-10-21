@@ -77,7 +77,7 @@ les éléments sont empilés les uns au-dessus des autres, et on ne peut toujour
 
 
 
-**Exemples de données stockées sous forme de pile :** 
+**Exemples de données stockées sous forme de pile ** 
 
 - lors de l'exécution d'une fonction récursive, le processeur empile successivement les appels à traiter : seule l'instruction du haut de la pile peut être traitée.
 
