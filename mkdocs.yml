@@ -80,7 +80,7 @@ plugins:
   - git-revision-date
   - macros
   - awesome-pages:
-      collapse_single_pages: true
+      collapse_single_pages: false
   #- page-to-pdf
  
  
