@@ -32,21 +32,21 @@ def puissance(x, n):
 
 ## 4. Puissance récursive (optimisée)
 ```python linenums='1'
-def puissance(x,n):
-if n == 0:
-    return 1
-else:
-    if n % 2 == 0:
-        return puissance(x*x, n//2)
-    else :
-        return x*puissance(x*x, (n-1)//2)
+def puissance(x, n):
+    if n == 0:
+        return 1
+    else:
+        if n % 2 == 0:
+            return puissance(x*x, n//2)
+        else :
+            return x*puissance(x*x, (n-1)//2)
 ```
 
 ## 5. Recherche dichotomique récursive (avec slicing)
 *Note : le slicing de liste n'est pas au programme de NSI.*
 
 ```python linenums='1'
-def recherche(lst,m):
+def recherche(lst, m):
     if len(lst) == 1: 
         if lst[0] == m:
             return True
