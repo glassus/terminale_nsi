@@ -158,7 +158,7 @@
 
 
 
-### Exercice 6.2
+### Exercice 6.2 🗹
 *à noter une erreur dans la version officielle, sur la méthode ```enfile()```* 
 !!! example "Exercice 6.2"
     === "Énoncé" 
