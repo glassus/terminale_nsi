@@ -77,7 +77,7 @@ les éléments sont empilés les uns au-dessus des autres, et on ne peut toujour
 
 
 
-**Exemples de données stockées sous forme de pile ** 
+**Exemples de données stockées sous forme de pile** 
 
 - lors de l'exécution d'une fonction récursive, le processeur empile successivement les appels à traiter : seule l'instruction du haut de la pile peut être traitée.
 
@@ -489,10 +489,11 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 
 ## 4. Les files
 
-![](data/giffile.webp)
+![](data/giffile.webp){: .center}
 
 Comme expliqué précédemment, une file travaille en mode FIFO (First In First Out).
-Pour être utilisée, une file doit permettre a minima :
+Pour être utilisée, une interface de file doit proposer a minima :
+
 - la création d'une file vide
 - l'ajout d'un élément dans la file (qui sera forcément **au dessous**). On dira qu'on **enfile**.
 - le retrait d'un élément de la file (qui sera forcément celui du **dessus**) et le renvoi de sa valeur. On dira qu'on **défile**.
@@ -503,17 +504,18 @@ Pour être utilisée, une file doit permettre a minima :
 
 **Exercice :**  
 On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
+Par convention, on enfilera **à droite** et on défilera **à gauche**.
 
 
 ```python
 1. f = File()
 2. f.enfile(3) # f = 3
-3. f.enfile(5) # f  = 5 3
+3. f.enfile(5) # f  = 3 5
 4. f.est_vide() # False
-4. f.enfile(1) # f  = 1 5 3
-5. f.defile() # val renvoyée : 3 , f =  1 5
+4. f.enfile(1) # f  = 3 5 1
+5. f.defile() # val renvoyée : 3 , f =  5 1
 6. f.defile() # val renvoyée : 5 , f =  1 
-7. f.enfile(9) # f = 9 1
+7. f.enfile(9) # f =  1 9
 8. f.defile() # val renvoyée : 1 , f =  9 
 9. f.defile()# val renvoyée : 9 , f =  
 10. f.est_vide() # True
@@ -531,7 +533,9 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 
 !!! example "Exercice"
     === "Énoncé"
-        Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé, voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists). Néanmoins quelques remarques seront à apporter.
+        Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
+        
+        Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```. 
     === "Correction"
         {{ correction(True,
         "
