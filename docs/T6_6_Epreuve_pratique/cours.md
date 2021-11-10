@@ -529,7 +529,7 @@
 
 
 
-### Exercice 10.2 □
+### Exercice 10.2 🗹
 !!! example "Exercice 10.2"
     === "Énoncé" 
         Cet exercice utilise des piles qui seront représentées en Python par des listes (type `list`).
@@ -615,7 +615,7 @@
         On remarquera qu’on récupère la représentation binaire d’un entier `n` en partant de la gauche en appliquant successivement les instructions :
 
         `b = n%2`
-        
+
         `n = n//2`
 
         répétées autant que nécessaire.
@@ -630,9 +630,9 @@
 
 
 ### Exercice 11.2
+
 !!! example "Exercice 11.2"
     === "Énoncé" 
-
 
     === "Correction" 
         {{ correction(True,
@@ -643,10 +643,17 @@
 
 
 
-### Exercice 12.1
+### Exercice 12.1 □
+*Ce sujet est le même que le 10.1...*  ¯\\\_(ツ)\_/¯
 !!! example "Exercice 12.1"
     === "Énoncé" 
+        Écrire une fonction `maxi` qui prend en paramètre une liste `tab` de nombres entiers et renvoie un couple donnant le plus grand élément de cette liste, ainsi que l’indice de la première apparition de ce maximum dans la liste.
 
+        Exemple :
+        ```python
+        >>> maxi([1,5,6,9,1,2,3,7,9,8])
+        (9,3)
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -671,10 +678,24 @@
 
 
 
-### Exercice 13.1
+### Exercice 13.1 □
 !!! example "Exercice 13.1"
     === "Énoncé" 
+        Écrire une fonction `tri_selection` qui prend en paramètre une liste `tab` de nombres
+        entiers et qui renvoie le tableau trié par ordre croissant.
 
+        On utilisera l’algorithme suivant :
+
+        - on recherche le plus petit élément du tableau, et on l'échange avec l'élément d'indice 0 ;
+        - on recherche le second plus petit élément du tableau, et on l'échange avec l'élément
+        d'indice 1 ;
+        - on continue de cette façon jusqu'à ce que le tableau soit entièrement trié.
+
+        Exemple :
+        ```python
+        >>> tri_selection([1,52,6,-9,12])
+        [-9, 1, 6, 12, 52]
+        ``` 
 
     === "Correction" 
         {{ correction(True,
@@ -699,10 +720,19 @@
 
 
 
-### Exercice 14.1
+### Exercice 14.1 □
 !!! example "Exercice 14.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre et `tab` un
+        tableau de nombres, et qui renvoie le tableau des indices de `elt` dans `tab` si `elt` est dans `tab` et le tableau vide `[]` sinon.
 
+        Exemples :
+        ```python
+        >>> recherche(3, [3, 2, 1, 3, 2, 1])
+        [0, 3]
+        >>> recherche(4, [1, 2, 3])
+        []
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -727,10 +757,25 @@
 
 
 
-### Exercice 15.1
+### Exercice 15.1 □
 !!! example "Exercice 15.1"
     === "Énoncé" 
+        Écrire une fonction `RechercheMinMax` qui prend en paramètre un tableau de nombres
+        non triés `tab`, et qui renvoie la plus petite et la plus grande valeur du tableau sous la
+        forme d’un dictionnaire à deux clés ‘min’ et ‘max’. Les tableaux seront représentés sous
+        forme de liste Python.
 
+        Exemples :
+        ```python
+        >>> tableau = [0, 1, 4, 2, -2, 9, 3, 1, 7, 1]
+        >>> resultat = rechercheMinMax(tableau)
+        >>> resultat
+        {'min': -2, 'max': 9}
+        >>> tableau = []
+        >>> resultat = rechercheMinMax(tableau)
+        >>> resultat
+        {'min': None, 'max': None}
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -755,10 +800,20 @@
 
 
 
-### Exercice 16.1
+### Exercice 16.1 □
 !!! example "Exercice 16.1"
     === "Énoncé" 
+        Écrire une fonction `moyenne` qui prend en paramètre un tableau non vide de nombres
+        flottants et qui renvoie la moyenne des valeurs du tableau. Les tableaux seront
+        représentés sous forme de liste Python.
 
+        Exemples :
+        ```python
+        >>> moyenne([1.0])
+        1.0
+        >>> moyenne([1.0, 2.0, 4.0])
+        2.3333333333333335
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -783,10 +838,22 @@
 
 
 
-### Exercice 17.1
+### Exercice 17.1 □
 !!! example "Exercice 17.1"
     === "Énoncé" 
+        Écrire une fonction `RechercheMin` qui prend en paramètre un tableau de nombres non
+        trié `tab`, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les
+        tableaux seront représentés sous forme de liste Python.
 
+        Exemples :
+        ```python
+        >>> indice_du_min([5])
+        0
+        >>> indice_du_min([2, 4, 1])
+        2
+        >>> indice_du_min([5, 3, 2, 2, 4])
+        2
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -811,10 +878,24 @@
 
 
 
-### Exercice 18.1
+### Exercice 18.1 □
 !!! example "Exercice 18.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre entier et `tab`
+        un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de `elt`
+        dans `tab` si `elt` est dans `tab` et `-1` sinon.
 
+        Exemples :
+        ```python
+        >>> recherche(1, [2, 3, 4])
+        -1
+        >>> recherche(1, [10, 12, 1, 56])
+        2
+        >>> recherche(50, [1, 50, 1])
+        1
+        >>> recherche(15, [8, 9, 10, 15])
+        3
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -839,10 +920,22 @@
 
 
 
-### Exercice 19.1
+### Exercice 19.1 □
 !!! example "Exercice 19.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètres un tableau `tab` de nombres
+        entiers triés par ordre croissant et un nombre entier `n`, et qui effectue une recherche
+        dichotomique du nombre entier `n` dans le tableau non vide `tab`.
+        Cette fonction doit renvoyer un indice correspondant au nombre cherché s’il est dans le
+        tableau, `-1` sinon.
 
+        Exemples :
+        ```python
+        >>> recherche([2, 3, 4, 5, 6], 5)
+        3
+        >>> recherche([2, 3, 4, 6, 7], 5)
+        -1
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -867,10 +960,26 @@
 
 
 
-### Exercice 20.1
+### Exercice 20.1 □
 !!! example "Exercice 20.1"
     === "Énoncé" 
+        On a relevé les valeurs moyennes annuelles des températures à Paris pour la période
+        allant de 2013 à 2019. Les résultats ont été récupérés sous la forme de deux listes : l’une
+        pour les températures, l’autre pour les années :
+        ```python
+        t_moy = [14.9, 13.3, 13.1, 12.5, 13.0, 13.6, 13.7]
+        annees = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
+        ```
 
+        Écrire la fonction `mini` qui prend en paramètres le tableau `releve` des relevés et le
+        tableau `date` des dates et qui renvoie la plus petite valeur relevée au cours de la
+        période et l’année correspondante.
+
+        Exemple :
+        ```python
+        >>> mini(t_moy, annees)
+        12.5, 2016
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -895,10 +1004,22 @@
 
 
 
-### Exercice 21.1
+### Exercice 21.1 □
 !!! example "Exercice 21.1"
     === "Énoncé" 
+        Écrire une fonction python appelée `nb_repetitions` qui prend en paramètres un
+        élément `elt` et une liste `tab` et renvoie le nombre de fois où l’élément apparaît dans la
+        liste.
 
+        Exemples :
+        ```python
+        >>> nb_repetitions(5,[2,5,3,5,6,9,5])
+        3
+        >>> nb_repetitions('A',[ 'B', 'A', 'B', 'A', 'R'])
+        2
+        >>> nb_repetitions(12,[1, '! ',7,21,36,44])
+        0
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -923,10 +1044,24 @@
 
 
 
-### Exercice 22.1
+### Exercice 22.1 □
 !!! example "Exercice 22.1"
     === "Énoncé" 
+        Écrire en langage Python une fonction `recherche` prenant comme paramètres une
+        variable `a` de type numérique (`float` ou `int`) et un tableau `t` (type `list`) et qui
+        renvoie le nombre d'occurrences de `a` dans `t`.
 
+        Exemples :
+        ```python
+        >>> recherche(5,[])
+        0
+        >>> recherche(5,[-2, 3, 4, 8])
+        0
+        >>> recherche(5,[-2, 3, 1, 5, 3, 7, 4])
+        1
+        >>> recherche(5,[-2, 5, 3, 5, 4, 5])
+        3
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -951,10 +1086,32 @@
 
 
 
-### Exercice 23.1
+### Exercice 23.1 □
 !!! example "Exercice 23.1"
     === "Énoncé" 
+        L’occurrence d’un caractère dans un phrase est le nombre de fois où ce caractère est
+        présent.
 
+        Exemples :
+        
+        - l’occurrence du caractère ‘o’ dans ‘bonjour’ est 2 ;
+        - l’occurrence du caractère ‘b’ dans ‘Bébé’ est 1 ;
+        - l’occurrence du caractère ‘B’ dans ‘Bébé’ est 1 ;
+        - l’occurrence du caractère ‘ ‘ dans ‘Hello world !’ est 2.
+
+        On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
+        occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
+        les valeurs l’occurrence de ces caractères.
+
+
+        Par exemple : avec la phrase 'Hello world !' le dictionnaire est le suivant :
+
+        `{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}`
+
+
+        Écrire une fonction `occurence_lettres` prenant comme paramètre une variable
+        `phrase` de type `str`. Cette fonction doit renvoyer un dictionnaire de type constitué des
+        occurrences des caractères présents dans la phrase.
 
     === "Correction" 
         {{ correction(True,
@@ -979,10 +1136,25 @@
 
 
 
-### Exercice 24.1
+### Exercice 24.1 □
+*identique au 18.1*
 !!! example "Exercice 24.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre entier et `tab`
+        un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de `elt`
+        dans `tab` si `elt` est dans `tab` et `-1` sinon.
 
+        Exemples :
+        ```python
+        >>> recherche(1, [2, 3, 4])
+        -1
+        >>> recherche(1, [10, 12, 1, 56])
+        2
+        >>> recherche(50, [1, 50, 1])
+        1
+        >>> recherche(15, [8, 9, 10, 15])
+        3
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -1007,10 +1179,24 @@
 
 
 
-### Exercice 25.1
+### Exercice 25.1 □
 !!! example "Exercice 25.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètre un tableau de nombres entiers
+        `tab`, et qui renvoie la liste (éventuellement vide) des couples d'entiers consécutifs
+        successifs qu'il peut y avoir dans `tab`.
 
+        Exemples :
+        ```python
+        >>> recherche([1, 4, 3, 5])
+        []
+        >>> recherche([1, 4, 5, 3])
+        [(4, 5)]
+        >>> recherche([7, 1, 2, 5, 3, 4])
+        [(1, 2), (3, 4)]
+        >>> recherche([5, 1, 2, 3, 8, -5, -4, 7])
+        [(1, 2), (2, 3), (-5, -4)]
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -1035,10 +1221,26 @@
 
 
 
-### Exercice 26.1
+### Exercice 26.1 □
 !!! example "Exercice 26.1"
     === "Énoncé" 
+        Écrire une fonction `occurrence_max` prenant en paramètres une chaîne de caractères
+        `chaine` et qui renvoie le caractère le plus fréquent de la chaîne. La chaine ne contient
+        que des lettres en minuscules sans accent.
+        On pourra s’aider du tableau
 
+        `alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o,','p','q','r','s','t','u','v','w','x','y','z']`
+
+        et du tableau `occurrence` de 26 éléments où l’on mettra dans `occurrence[i]` le
+        nombre d’apparitions de `alphabet[i]` dans la chaine. Puis on calculera l’indice `k` d’un
+        maximum du tableau `occurrence` et on affichera `alphabet[k]`.
+
+        Exemple :
+        ```python
+        >>> ch='je suis en terminale et je passe le bac et je souhaite poursuivre des etudes pour devenir expert en informatique’
+        >>> occurrence_max(ch)
+        ‘e’
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -1063,10 +1265,17 @@
 
 
 
-### Exercice 27.1
+### Exercice 27.1 □
 !!! example "Exercice 27.1"
     === "Énoncé" 
+        Écrire une fonction `moyenne` prenant en paramètres une liste d’entiers et qui renvoie la
+        moyenne des valeurs de cette liste.
 
+        Exemple :
+        ```python
+        >>> moyenne([10,20,30,40,60,110])
+        45.0
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -1091,10 +1300,36 @@
 
 
 
-### Exercice 28.1
+### Exercice 28.1 □
 !!! example "Exercice 28.1"
     === "Énoncé" 
+        Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
+        dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
+        chaque clef, la liste des caractères des fils gauche et droit du nœud.
 
+        Par exemple, l’arbre
+
+        ![image](data/img28_1.png){: .center width=40%}
+        
+        est stocké dans
+
+        ```python
+        a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], \
+        'C':['',''], 'E':['',''], 'G':['','I'], 'I':['','H'], \
+        'H':['','']}
+        ```
+
+        Écrire une fonction récursive `taille` prenant en paramètres un arbre binaire `arbre`
+        sous la forme d’un dictionnaire et un caractère `lettre` qui est la valeur du sommet de
+        l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de nœud.
+        On pourra distinguer les 4 cas où les deux « fils » du nœud sont `''`, le fils gauche
+        seulement est `''`, le fils droit seulement est `''`, aucun des deux fils n’est `''`.
+
+        Exemple :
+        ```python
+        >>> taille(a, ’F’)
+        9
+        ``` 
 
     === "Correction" 
         {{ correction(True,
