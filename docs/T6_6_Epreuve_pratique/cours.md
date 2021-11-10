@@ -24,7 +24,14 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(tab, n):
+            indice_solution = len(tab)
+            for i in range(len(tab)):
+                if tab[i] == n:
+                    indice_solution = i
+            return indice_solution
+        ```
         "
         ) }}
 
@@ -38,7 +45,7 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+
         "
         ) }}
 
@@ -63,7 +70,20 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        L'énoncé n'est pas très clair quand il dit «d'afficher 'erreur'» (ce qui suppose un `print` et non un `return`). Nous choississons donc dans ce cas de renvoyer ```None```.
+
+        ```python linenums='1'
+        def moyenne(tab):
+            if tab == []:
+                print('erreur')
+                return None
+            else:
+                somme = 0
+                for elt in tab:
+                    somme += elt
+                return somme / len(tab)
+
+        ```
         "
         ) }}
 
@@ -77,7 +97,7 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+
         "
         ) }}
 
@@ -91,15 +111,24 @@
         Les seules opérations autorisées sont l’addition et la soustraction. 
 
     === "Correction" 
-        {{ correction(False,
+        {{ correction(True,
         "
+        Énoncé peu clair, on ne sait pas si ```n1``` et ```n2``` sont entiers naturels ou relatifs. Nous décidons qu'ils sont naturels.
         ```python linenums='1'
         def multiplication(n1, n2):
-            acc = 0
+            resultat = 0
             for _ in range(n2):
-                acc += n1
-            return acc
+                resultat += n1
+            return resultat
+        ```
 
+        On peut proposer une solution récursive :
+        ```python linenums='1'
+        def multiplication_rec(n1, n2):
+            if n2 == 0:
+                return 0
+            else:
+                return n1 + multiplication_rec(n1, n2-1)
         ```
 
         "
@@ -144,7 +173,20 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def moyenne(tab):
+            '''
+            moyenne(list) -> float
+            Entrée : un tableau non vide d'entiers
+            Sortie : nombre de type float
+            Correspondant à la moyenne des valeurs présentes dans le
+            tableau
+            '''
+            somme = 0
+            for elt in tab:
+                somme += elt
+            return somme / len(tab)
+        ```
         "
         ) }}
 
@@ -194,7 +236,16 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def convertir(T):
+            puissance = 0
+            total = 0
+            for i in range(len(T)-1, -1, -1):
+                total += T[i]*(2**puissance)
+                puissance += 1
+            return total
+
+        ```
         "
         ) }}
 
@@ -240,7 +291,16 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def rendu(somme_a_rendre):
+            pieces = [5, 2, 1]
+            retour = [0, 0, 0]
+            reste_a_rendre = somme_a_rendre
+            for i in range(3):
+                retour[i] = reste_a_rendre // pieces[i]
+                reste_a_rendre = reste_a_rendre % pieces[i]
+            return retour
+        ```
         "
         ) }}
 
@@ -397,8 +457,9 @@
         ```
 
     === "Correction" 
-        {{ correction(False,
+        {{ correction(True,
         "
+        On utilise un dictionnaire pour stocker au fur et à mesure les valeurs.
         ```python linenums='1'
         def fibonnaci(n):
             d = {}
@@ -447,7 +508,14 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(caractere, mot):
+            somme = 0
+            for lettre in mot:
+                if lettre == caractere:
+                    somme += 1
+            return somme
+        ```
         "
         ) }}
 
@@ -484,12 +552,22 @@
         Par exemple, l’expression `moyenne([(15,2),(9,1),(12,3)])` devra renvoyer le
         résultat du calcul suivant :
 
-        $\dfrac{2 \times 15 + 1 \times 9 + 3 \times 12 }{2+1+3}=11,83$
+        $\dfrac{2 \times 15 + 1 \times 9 + 3 \times 12 }{2+1+3}=12,5$
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def moyenne(tab):
+            somme_notes = 0
+            somme_coeffs = 0
+            for devoir in tab:
+                note = devoir[0]
+                coeff = devoir[1]
+                somme_notes += note * coeff
+                somme_coeffs += coeff
+            return somme_notes / somme_coeffs
+        ```
         "
         ) }}
 
