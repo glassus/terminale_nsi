@@ -6,10 +6,20 @@
 
 <!-- □  🗹 -->
 
-### Exercice 01.1
+### Exercice 01.1 □
 !!! example "Exercice 01.1"
     === "Énoncé" 
+        Programmer la fonction `recherche`, prenant en paramètre un tableau non vide `tab` (type `list`) d'entiers et un entier `n`, et qui renvoie l'indice de la **dernière** occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie la longueur du tableau.
 
+        Exemples
+        ```python
+        >>> recherche([5, 3],1)
+        2
+        >>> recherche([2,4],2)
+        0
+        >>> recherche([2,3,5,2,4],2)
+        3
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -418,11 +428,22 @@
 
 
 
-### Exercice 08.1
+### Exercice 08.1 □
 !!! example "Exercice 08.1"
     === "Énoncé" 
+        Écrire une fonction `recherche` qui prend en paramètres `caractere`, un caractère, et
+        `mot`, une chaîne de caractères, et qui renvoie le nombre d’occurrences de `caractere`
+        dans `mot`, c’est-à-dire le nombre de fois où `caractere` apparaît dans `mot`.
 
-
+        Exemples :
+        ```python
+        >>> recherche('e', "sciences")
+        2
+        >>> recherche('i',"mississippi")
+        4
+        >>> recherche('a',"mississippi")
+        0
+        ```
     === "Correction" 
         {{ correction(True,
         "
@@ -446,10 +467,24 @@
 
 
 
-### Exercice 09.1
+### Exercice 09.1 □
 !!! example "Exercice 09.1"
     === "Énoncé" 
+        Soit le couple (`note`,`coefficient`):
 
+        - `note` est un nombre de type flottant (`float`) compris entre 0 et 20 ;
+        - `coefficient` est un nombre entier positif.
+        
+        Les résultats aux évaluations d'un élève sont regroupés dans une liste composée de
+        couples (`note`,`coefficient`).
+
+        Écrire une fonction moyenne qui renvoie la moyenne pondérée de cette liste donnée en
+        paramètre.
+
+        Par exemple, l’expression `moyenne([(15,2),(9,1),(12,3)])` devra renvoyer le
+        résultat du calcul suivant :
+
+        $\dfrac{2 \times 15 + 1 \times 9 + 3 \times 12 }{2+1+3}=11,83$
 
     === "Correction" 
         {{ correction(True,
@@ -474,10 +509,16 @@
 
 
 
-### Exercice 10.1
+### Exercice 10.1 □
 !!! example "Exercice 10.1"
     === "Énoncé" 
+        Écrire une fonction `maxi` qui prend en paramètre une liste `tab` de nombres entiers et renvoie un couple donnant le plus grand élément de cette liste, ainsi que l’indice de la première apparition de ce maximum dans la liste.
 
+        Exemple :
+        ```python
+        >>> maxi([1,5,6,9,1,2,3,7,9,8])
+        (9,3)
+        ```
 
     === "Correction" 
         {{ correction(True,
@@ -526,16 +567,58 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def positif(T):
+            T2 = list(T)
+            T3 = []
+            while T2 != []:
+                x = T2.pop()
+                if x >= 0:
+                    T3.append(x)
+            T2 = [] # <- NB : cette ligne est inutile
+            while T3 != []:
+                x = T3.pop()
+                T2.append(x)
+            print('T = ',T)
+            return T2
+        ```        
         "
         ) }}
 
 
 
-### Exercice 11.1
+### Exercice 11.1 □
 !!! example "Exercice 11.1"
     === "Énoncé" 
+        Écrire une fonction `conv_bin` qui prend en paramètre un entier positif `n` et renvoie un
+        couple (`b,bit)` où :
 
+        - `b` est une liste d'entiers correspondant à la représentation binaire de `n`;
+        - `bit` correspond aux nombre de bits qui constituent `b`.
+
+        Exemple :
+        ```python
+        >>> conv_bin(9)
+        ([1,0,1,1],4)
+        ```
+
+        Aide :
+
+        - l'opérateur `//` donne le quotient de la division euclidienne : `5//2` donne `2` ;
+        - l'opérateur `%` donne le reste de la division euclidienne :` 5%2` donne `1` ;
+        - `append` est une méthode qui ajoute un élément à une liste existante :
+        Soit `T=[5,2,4]`, alors `T.append(10)` ajoute `10` à la liste `T`. Ainsi, `T` devient
+        `[5,2,4,10]`.
+        - `reverse` est une méthode qui renverse les éléments d'une liste.
+        Soit `T=[5,2,4,10]`. Après `T.reverse()`, la liste devient `[10,4,2,5]`.
+
+        On remarquera qu’on récupère la représentation binaire d’un entier `n` en partant de la gauche en appliquant successivement les instructions :
+
+        `b = n%2`
+        
+        `n = n//2`
+
+        répétées autant que nécessaire.
 
     === "Correction" 
         {{ correction(True,

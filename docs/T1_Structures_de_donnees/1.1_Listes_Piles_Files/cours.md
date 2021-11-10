@@ -502,24 +502,43 @@ Pour être utilisée, une interface de file doit proposer a minima :
 
 ### 4.1 Utilisation d'une interface de file
 
-**Exercice :**  
-On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
-Par convention, on enfilera **à droite** et on défilera **à gauche**.
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
+        Par convention, on enfilera **à droite** et on défilera **à gauche**.
+        ```python
+        1. f = File()
+        2. f.enfile(3) 
+        3. f.enfile(5)
+        4. f.est_vide()
+        5. f.enfile(1) 
+        6. f.defile() 
+        7. f.defile()
+        8. f.enfile(9) 
+        9. f.defile() 
+        10. f.defile()
+        11. f.est_vide() 
+        ```
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python
+        1. f est vide
+        2. f = 3
+        3. f  = 3 5
+        4. val renvoyée : False
+        5. f  = 3 5 1
+        6. val renvoyée : 3 , f =  5 1
+        7. val renvoyée : 5 , f =  1 
+        8. f =  1 9
+        9. val renvoyée : 1 , f =  9 
+        10. val renvoyée : 9 , f =  
+        11. val renvoyée : True
+        ```
+        "
+        ) }}
 
 
-```python
-1. f = File()
-2. f.enfile(3) # f = 3
-3. f.enfile(5) # f  = 3 5
-4. f.est_vide() # False
-4. f.enfile(1) # f  = 3 5 1
-5. f.defile() # val renvoyée : 3 , f =  5 1
-6. f.defile() # val renvoyée : 5 , f =  1 
-7. f.enfile(9) # f =  1 9
-8. f.defile() # val renvoyée : 1 , f =  9 
-9. f.defile()# val renvoyée : 9 , f =  
-10. f.est_vide() # True
-```
 
 ### 4.2 Implémentation d'une file
 L'objectif est de créer une classe ```File```, disposant des méthodes suivantes :
