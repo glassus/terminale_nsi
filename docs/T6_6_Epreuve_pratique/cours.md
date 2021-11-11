@@ -113,22 +113,17 @@
     === "Correction" 
         {{ correction(True,
         "
-        Énoncé peu clair, on ne sait pas si ```n1``` et ```n2``` sont entiers naturels ou relatifs. Nous décidons qu'ils sont naturels.
+        Énoncé peu clair, on ne sait pas si ```n1``` et ```n2``` sont entiers naturels ou relatifs. Nous décidons qu'ils sont relatifs et donc qu'ils peuvent être négatifs, auquel cas on utilise le fait que $5 \\times (-6)= - (5 \\times 6)$.
         ```python linenums='1'
         def multiplication(n1, n2):
+            if n1 < 0:
+                return -multiplication(-n1, n2)
+            if n2 < 0:
+                return -multiplication(n1, -n2)
             resultat = 0
             for _ in range(n2):
                 resultat += n1
             return resultat
-        ```
-
-        On peut proposer une solution récursive :
-        ```python linenums='1'
-        def multiplication_rec(n1, n2):
-            if n2 == 0:
-                return 0
-            else:
-                return n1 + multiplication_rec(n1, n2-1)
         ```
 
         "
@@ -1426,7 +1421,14 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def moyenne(tab):
+            somme = 0
+            for val in tab:
+                somme += val
+            return somme / len(tab)
+
+        ```
         "
         ) }}
 
@@ -1550,15 +1552,44 @@
 
 
 
-### Exercice 30.1
+### Exercice 30.1 □
 !!! example "Exercice 30.1"
     === "Énoncé" 
+        Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers
+        `n1` et `n2`, et qui renvoie le produit de ces deux nombres.
+        Les seules opérations autorisées sont l’addition et la soustraction. 
+
+        Exemples :
+        ```python
+        >>> multiplication(3,5)
+        15
+        >>> multiplication(-4,-8)
+        32
+        >>> multiplication(-2,6)
+        -12
+        >>> multiplication(-2,0)
+        0
+        ```
 
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def multiplication(n1, n2):
+            if n1 < 0:
+                return -multiplication(-n1, n2)
+            if n2 < 0:
+                return -multiplication(n1, -n2)
+            resultat = 0
+            for _ in range(n2):
+                resultat += n1
+            return resultat
+        ```
+
+
+
+
         "
         ) }}
 
