@@ -677,7 +677,7 @@
         Exemple :
         ```python
         >>> conv_bin(9)
-        ([1,0,1,1],4)
+        ([1,0,0,1],4)
         ```
 
         Aide :
@@ -701,7 +701,18 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def conv_bin(n):
+            b = []
+            bits = 0
+            while n != 0:
+                b.append(n % 2)
+                bits += 1
+                n = n // 2
+            b.reverse()
+            return (b, bits)
+
+        ```
         "
         ) }}
 
@@ -778,7 +789,16 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def tri_selection(tab):
+            for i in range(len(tab)-1):
+                indice_min = i
+                for j in range(i+1, len(tab)):
+                    if tab[j] < tab[indice_min]:
+                        indice_min = j
+                tab[i], tab[indice_min] = tab[indice_min], tab[i]
+            return tab
+        ```
         "
         ) }}
 
@@ -815,7 +835,15 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(elt, tab):
+            tab_indices = []
+            for i in range(len(tab)):
+                if tab[i] == elt:
+                    tab_indices.append(i)
+            return tab_indices        
+        ```
+
         "
         ) }}
 
@@ -838,7 +866,7 @@
 ### Exercice 15.1 □
 !!! example "Exercice 15.1"
     === "Énoncé" 
-        Écrire une fonction `RechercheMinMax` qui prend en paramètre un tableau de nombres
+        Écrire une fonction `rechercheMinMax` qui prend en paramètre un tableau de nombres
         non triés `tab`, et qui renvoie la plus petite et la plus grande valeur du tableau sous la
         forme d’un dictionnaire à deux clés ‘min’ et ‘max’. Les tableaux seront représentés sous
         forme de liste Python.
@@ -858,7 +886,19 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def rechercheMinMax(tab):
+            d = {}
+            d['min'] = None
+            d['max'] = None
+            for val in tab:
+                if val < d['min']:
+                    d['min'] = val
+                if val > d['max']:
+                    d['max'] = val
+            return d
+
+        ```
         "
         ) }}
 
@@ -896,7 +936,14 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def moyenne(tab):
+            somme = 0
+            for val in tab:
+                somme += val
+            return somme / len(tab)
+
+        ```
         "
         ) }}
 
@@ -919,7 +966,7 @@
 ### Exercice 17.1 □
 !!! example "Exercice 17.1"
     === "Énoncé" 
-        Écrire une fonction `RechercheMin` qui prend en paramètre un tableau de nombres non
+        Écrire une fonction `indice_du_min` qui prend en paramètre un tableau de nombres non
         trié `tab`, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les
         tableaux seront représentés sous forme de liste Python.
 
@@ -936,7 +983,15 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def indice_du_min(tab):
+            indice_min = 0
+            for i in range(len(tab)):
+                if tab[i] < tab[indice_min]:
+                    indice_min = i
+            return indice_min
+
+        ```
         "
         ) }}
 
@@ -978,7 +1033,20 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(tab, n):
+            ind_debut = 0
+            ind_fin = len(tab) - 1
+            while ind_debut <= ind_fin:
+                ind_milieu = (ind_debut + ind_fin) // 2
+                if tab[ind_milieu] == n:
+                    return ind_milieu
+                elif tab[ind_milieu] < n:
+                    ind_debut = ind_milieu + 1
+                else:
+                    ind_fin = ind_milieu - 1
+            return -1
+        ```
         "
         ) }}
 
