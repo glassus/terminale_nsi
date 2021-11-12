@@ -346,17 +346,88 @@
 
 
 
-### Exercice 04.2
+### Exercice 04.2 □
 !!! example "Exercice 04.2"
     === "Énoncé" 
+        Le but de l'exercice est de compléter une fonction qui détermine si une valeur est présente
+        dans un tableau de valeurs triées dans l'ordre croissant.
 
+        L'algorithme traite le cas du tableau vide.
+
+        L'algorithme est écrit pour que la recherche dichotomique ne se fasse que dans le cas où
+        la valeur est comprise entre les valeurs extrêmes du tableau.
+
+        On distingue les trois cas qui renvoient `False` en renvoyant `False,1` , `False,2` et
+        `False,3`.
+
+        Compléter l'algorithme de dichotomie donné ci-après.
+
+        ```python linenums='1'
+        def dichotomie(tab, x):
+            """
+            tab : tableau trié dans l’ordre croissant
+            x : nombre entier
+            La fonction renvoie True si tab contient x et False sinon
+            """
+            # cas du tableau vide
+            if ...:
+                return False,1
+            # cas où x n'est pas compris entre les valeurs extrêmes
+            if (x < tab[0]) or ...:
+                return False,2
+            debut = 0
+            fin = len(tab) - 1
+            while debut <= fin:
+                m = ...
+                if x == tab[m]:
+                    return ...
+                if x > tab[m]:
+                    debut = m + 1
+                else:
+                    fin = ...
+            return ...
+        ```
+
+        Exemples :
+
+        ```python
+        >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],28)
+        True
+        >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],27)
+        (False, 3)
+        >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],1)
+        (False, 2)
+        >>> dichotomie([],28)
+        (False, 1)
+        ```
 
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        def dichotomie(tab, x):
+            """
+            tab : tableau trié dans l’ordre croissant
+            x : nombre entier
+            La fonction renvoie True si tab contient x et False sinon
+            """
+            # cas du tableau vide
+            if tab = []:
+                return False,1
+            # cas où x n'est pas compris entre les valeurs extrêmes
+            if (x < tab[0]) or (x > tab[-1]):
+                return False,2
+            debut = 0
+            fin = len(tab) - 1
+            while debut <= fin:
+                m = (debut + fin) // 2
+                if x == tab[m]:
+                    return True
+                if x > tab[m]:
+                    debut = m + 1
+                else:
+                    fin = m - 1
+            return False
+
+        ```
 
 
 
@@ -367,6 +438,7 @@
         les éléments sont 0 ou 1. Par exemple, le tableau `[1, 0, 1, 0, 0, 1, 1]` représente
         l'écriture binaire de l'entier dont l'écriture décimale est
         `2**6 + 2**4 + 2**1 + 2**0 = 83`.
+
         À l'aide d'un parcours séquentiel, écrire la fonction convertir répondant aux
         spécifications suivantes :
 
@@ -405,15 +477,80 @@
 
 
 
-### Exercice 05.2
+### Exercice 05.2 □
 !!! example "Exercice 05.2"
     === "Énoncé" 
+        La fonction `tri_insertion` suivante prend en argument une liste `L` et trie cette liste en
+        utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la
+        spécification demandée.
 
+        ```python linenums='1'
+        def tri_insertion(L):
+            n = len(L)
+
+            # cas du tableau vide
+            if ...:
+                return L
+            for j in range(1,n):
+                e = L[j]
+                i = j
+
+            # A l'étape j, le sous-tableau L[0,j-1] est trié
+            # et on insère L[j] dans ce sous-tableau en déterminant
+            # le plus petit i tel que 0 <= i <= j et L[i-1] > L[j].
+
+                while i > 0 and L[i-1] > ...:
+                    i = ...
+
+            # si i != j, on décale le sous tableau L[i,j-1] d’un cran
+            # vers la droite et on place L[j] en position i
+
+                if i != j:
+                    for k in range(j,i,...):
+                        L[k] = L[...]
+                    L[i] = ...
+            return L
+        ```
+
+        Exemples :
+        ```python
+        >>> tri_insertion([2,5,-1,7,0,28])
+        [-1, 0, 2, 5, 7, 28]
+        >>> tri_insertion([10,9,8,7,6,5,4,3,2,1,0])
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1' 
+        def tri_insertion(L):
+            n = len(L)
+
+            # cas du tableau vide
+            if L == []:
+                return L
+
+            for j in range(1,n):
+                e = L[j]
+                i = j
+
+            # A l'étape j, le sous-tableau L[0,j-1] est trié
+            # et on insère L[j] dans ce sous-tableau en déterminant
+            # le plus petit i tel que 0 <= i <= j et L[i-1] > L[j].
+
+                while i > 0 and L[i-1] > e:
+                    i = i - 1
+
+                # si i != j, on décale le sous tableau L[i,j-1] d’un cran
+            # vers la droite et on place L[j] en position i
+
+                if i != j:
+                    for k in range(j,i,-1):
+                        L[k] = L[k-1]
+                    L[i] = e
+            return L
+        ```
         "
         ) }}
 
@@ -629,15 +766,65 @@
 
 
 
-### Exercice 07.2
+### Exercice 07.2 □
 !!! example "Exercice 07.2"
     === "Énoncé" 
+        Les variables `liste_eleves` et `liste_notes` ayant été préalablement définies et étant
+        de même longueur, la fonction `meilleures_notes` renvoie la note maximale qui a été
+        attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms de ces élèves.
 
+        Compléter le code Python de la fonction `meilleures_notes` ci-dessous.
 
+        ```python linenums='1'
+        liste_eleves = ['a','b','c','d','e','f','g','h','i','j']
+        liste_notes = [1, 40, 80, 60, 58, 80, 75, 80, 60, 24]
+
+        def meilleures_notes():
+            note_maxi = 0
+            nb_eleves_note_maxi = ...
+            liste_maxi = ...
+
+            for compteur in range(...):
+                if liste_notes[compteur] == ...:
+                    nb_eleves_note_maxi = nb_eleves_note_maxi + 1
+                    liste_maxi.append(liste_eleves[...])
+                if liste_notes[compteur] > note_maxi:
+                    note_maxi = liste_notes[compteur]
+                    nb_eleves_note_maxi = ...
+                    liste_maxi = [...]
+
+            return (note_maxi,nb_eleves_note_maxi,liste_maxi)
+        ```
+
+        Une fois complété, le code ci-dessus donne
+
+        ```python
+        >>> meilleures_notes()
+        (80, 3, ['c', 'f', 'h'])
+        ```
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        liste_eleves = ['a','b','c','d','e','f','g','h','i','j']
+        liste_notes = [1, 40, 80, 60, 58, 80, 75, 80, 60, 24]
+
+        def meilleures_notes():
+            note_maxi = 0
+            nb_eleves_note_maxi = 0
+            liste_maxi = []
+
+            for compteur in range(len(liste_eleves)):
+                if liste_notes[compteur] == note_maxi:
+                    nb_eleves_note_maxi = nb_eleves_note_maxi + 1
+                    liste_maxi.append(liste_eleves[compteur])
+                if liste_notes[compteur] > note_maxi:
+                    note_maxi = liste_notes[compteur]
+                    nb_eleves_note_maxi = 1
+                    liste_maxi = [liste_eleves[compteur]]
+
+            return (note_maxi,nb_eleves_note_maxi,liste_maxi)
+        ```
         "
         ) }}
 
@@ -675,15 +862,56 @@
 
 
 
-### Exercice 08.2
+### Exercice 08.2 □
 !!! example "Exercice 08.2"
     === "Énoncé" 
+        On s’intéresse à un algorithme récursif qui permet de rendre la monnaie à partir d’une
+        liste donnée de valeurs de pièces et de billets - le système monétaire est donné sous
+        forme d’une liste `pieces=[100, 50, 20, 10, 5, 2, 1]` - (on supposera qu’il n’y a
+        pas de limitation quant à leur nombre), on cherche à donner la liste de pièces à rendre
+        pour une somme donnée en argument.
+        Compléter le code Python ci-dessous de la fonction `rendu_glouton` qui implémente cet
+        algorithme et renvoie la liste des pièces à rendre.
 
+        ```python linenums='1'
+        pieces = [100,50,20,10,5,2,1]
+
+        def rendu_glouton(arendre, solution=[], i=0):
+            if arendre == 0:
+                return ...
+            p = pieces[i]
+            if p <= ... :
+                solution.append(...)
+                return rendu_glouton(arendre - p, solution,i)
+            else :
+                return rendu_glouton(arendre, solution, ...)
+        ```
+        On devra obtenir :
+
+        ```python
+        >>>rendu_glouton(68,[],0)
+        [50, 10, 5, 2, 1]
+        >>>rendu_glouton(291,[],0)
+        [100, 100, 50, 20, 20, 1]
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        pieces = [100,50,20,10,5,2,1]
+
+        def rendu_glouton(arendre, solution=[], i=0):
+            if arendre == 0:
+                return solution
+            p = pieces[i]
+            if p <= arendre :
+                solution.append(p)
+                return rendu_glouton(arendre - p, solution,i)
+            else :
+                return rendu_glouton(arendre, solution, i+1)
+
+        ```
         "
         ) }}
 
@@ -727,15 +955,61 @@
 
 
 
-### Exercice 09.2
+### Exercice 09.2 □
 !!! example "Exercice 09.2"
     === "Énoncé" 
+        On cherche à déterminer les valeurs du triangle de Pascal. Dans ce tableau de forme
+        triangulaire, chaque ligne commence et se termine par le nombre 1. Par ailleurs, la valeur
+        qui occupe une case située à l’intérieur du tableau s’obtient en ajoutant les valeurs des
+        deux cases situées juste au-dessus, comme l’indique la figure suivante :
+
+        ![image](data/img9_2t.png){: .center width=60%}
+
+        Compléter la fonction `pascal` ci-après. Elle doit renvoyer une liste correspondant au
+        triangle de Pascal de la ligne `1` à la ligne `n` où `n` est un nombre entier supérieur ou égal à
+        `2` (le tableau sera contenu dans la variable `C`). La variable `Ck` doit, quant à elle, contenir,
+        à l’étape numéro `k`, la `k`-ième ligne du tableau.
+
+        ```python linenums='1'
+        def pascal(n):
+            C= [[1]]
+            for k in range(1,...):
+                Ck = [...]
+                for i in range(1,k):
+                    Ck.append(C[...][i-1]+C[...][...] )
+                Ck.append(...)
+                C.append(Ck)
+            return C
+        ```
+
+        Pour `n = 4`, voici ce qu'on devra obtenir :
+        ```python
+        >>> pascal(4)
+        [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+        ``` 
+        Pour `n = 5`, voici ce qu'on devra obtenir :
+        ```python
+        >>> pascal(5)
+        [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+        ```
+
+
 
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def pascal(n):
+            C = [[1]]
+            for k in range(1,n+1):
+                Ck = [1]
+                for i in range(1,k):
+                    Ck.append(C[k-1][i-1]+C[k-1][i] )
+                Ck.append(1)
+                C.append(Ck)
+            return C
+        ```
         "
         ) }}
 
@@ -872,15 +1146,58 @@
 
 
 
-### Exercice 11.2
+### Exercice 11.2 □
 
 !!! example "Exercice 11.2"
     === "Énoncé" 
+        La fonction `tri_bulles` prend en paramètre une liste `T` d’entiers non triés et renvoie la liste triée par ordre croissant.
+        Compléter le code Python ci-dessous qui implémente la fonction `tri_bulles`.
+
+        ```python linenums='1'
+        def tri_bulles(T):
+            n = len(T)
+            for i in range(...,...,-1):
+                for j in range(i):
+                    if T[j] > T[...]:
+                        ... = T[j]
+                        T[j] = T[...]
+                        T[j+1] = temp
+            return T
+        ```
+        Écrire une autre version de l’algorithme avec
+
+        ```python
+        for i in range(n-1):
+        ```
+        en lieu et place de la troisième ligne du code précédent.
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def tri_bulles(T):
+            n = len(T)
+            for i in range(n-1,0,-1):
+                for j in range(i):
+                    if T[j] > T[j+1]:
+                        temp = T[j]
+                        T[j] = T[j+1]
+                        T[j+1] = temp
+            return T
+
+        #version 2
+
+        def tri_bulles(T):
+            n = len(T)
+            for i in range(n-1):
+                for j in range(n-1,i,-1):
+                    if T[j] < T[j-1]:
+                        temp = T[j]
+                        T[j] = T[j-1]
+                        T[j-1] = temp
+            return T
+
+        ```
         "
         ) }}
 
