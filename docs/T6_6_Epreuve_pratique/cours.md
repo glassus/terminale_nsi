@@ -37,17 +37,73 @@
 
 
 
-### Exercice 01.2
+### Exercice 01.2 □
 !!! example "Exercice 01.2"
     === "Énoncé" 
+        On souhaite programmer une fonction donnant la distance la plus courte entre un point
+        de départ et une liste de points. Les points sont tous à coordonnées entières.
+        Les points sont donnés sous la forme d'un tuple de deux entiers.
+        La liste des points à traiter est donc un tableau de tuples.
 
+        On rappelle que la distance entre deux points du plan de coordonnées $(x;y)$ et $(x';y')$
+        est donnée par la formule :
+
+        $$d=\sqrt{(x-x')^2+(y-y')^2}$$
+
+        On importe pour cela la fonction racine carrée (`sqrt`) du module `math` de Python.
+
+        On dispose d'une fonction `distance` et d'une fonction `plus_courte_distance` :
+
+        ```python
+        from math import sqrt     # import de la fonction racine carrée
+
+        def distance(point1, point2):
+            """ Calcule et renvoie la distance entre deux points. """
+            return sqrt((...)**2 + (...)**2)
+
+        assert distance((1, 0), (5, 3)) == 5.0, "erreur de calcul"
+
+        def plus_courte_distance(tab, depart):
+            """ Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart."""
+            point = tab[0]
+            min_dist = ...
+            for i in range (1, ...):
+                if distance(tab[i], depart)...:
+                    point = ...
+                    min_dist = ...
+            return point
+
+        assert plus_courte_distance([(7, 9), (2, 5), (5, 2)], (0, 0)) == (2, 5), "erreur"
+        ```
+        Recopier sous Python (sans les commentaires) ces deux fonctions puis compléter leur
+        code et ajouter une ou des déclarations (`assert`) à la fonction `distance` permettant
+        de vérifier la ou les préconditions.
 
     === "Correction" 
-        {{ correction(True,
-        "
+        ```python linenums='1'
+        from math import sqrt
 
-        "
-        ) }}
+        def distance(point1, point2):
+            """ Calcule et renvoie la distance entre deux points. """
+            return sqrt((point1[0] - point2[0])**2 + ((point1[1] - point2[1]))**2)
+
+        assert distance((1, 0), (5, 3)) == 5.0, "erreur de calcul"
+
+
+        def plus_courte_distance(tab, depart):
+            """ Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart."""
+            point = tab[0]
+            min_dist = distance(point, depart)
+            for i in range (1, len(tab)):
+                if distance(tab[i], depart) < min_dist:
+                    point = tab[i]
+                    min_dist = distance(tab[i], depart)
+            return point
+
+        assert plus_courte_distance([(7, 9), (2, 5), (5, 2)], (0, 0)) == (2, 5), "erreur"
+
+
+        ```
 
 
 
@@ -89,15 +145,75 @@
 
 
 
-### Exercice 02.2
+### Exercice 02.2 □
 !!! example "Exercice 02.2"
     === "Énoncé" 
+        On considère un tableau d'entiers `tab` (type `list` dont les éléments sont des `0` ou des `1`). On se propose de trier ce tableau selon l'algorithme suivant : à chaque étape du tri,le tableau est constitué de trois zones consécutives, la première ne contenant que des `0`,
+        la seconde n'étant pas triée et la dernière ne contenant que des `1`.
 
+        <table>
+        <tr>
+        <td>Zone de 0</td><td>Zone non triée</td><td>Zone de 1</td>
+        </tr>
+        </table>
+
+        Tant que la zone non triée n'est pas réduite à un seul élément, on regarde son premier
+        élément :
+
+        - si cet élément vaut 0, on considère qu'il appartient désormais à la zone ne contenant
+        que des 0 ;
+        - si cet élément vaut 1, il est échangé avec le dernier élément de la zone non triée et on
+        considère alors qu’il appartient à la zone ne contenant que des 1.
+
+        Dans tous les cas, la longueur de la zone non triée diminue de 1.
+
+        Recopier sous Python en la complétant la fonction `tri` suivante :
+
+        ```python linenums='1'
+        def tri(tab):
+            #i est le premier indice de la zone non triee, j le dernier indice.
+            #Au debut, la zone non triee est le tableau entier.
+            i = ...
+            j = ...
+            while i != j :
+                if tab[i]== 0:
+                    i = ...
+                else :
+                    valeur = tab[j]
+                    tab[j] = ...
+                    ...
+                    j = ...
+            ...
+        ```
+
+        Exemple :
+        ```python
+        >>> tri([0,1,0,1,0,1,0,1,0])
+        [0, 0, 0, 0, 0, 1, 1, 1, 1]       
+        ```
+
+        
 
     === "Correction" 
         {{ correction(True,
         "
+        ```python linenums='1'
+        def tri(tab):
+            #i est le premier indice de la zone non triee, j le dernier indice.
+            #Au debut, la zone non triee est le tableau entier.
+            i = 0
+            j = len(tab) - 1
+            while i != j :
+                if tab[i]== 0:
+                    i = i + 1
+                else :
+                    valeur = tab[j]
+                    tab[j] = tab[i]
+                    tab[i] = valeur
+                    j = j - 1
+            return tab
 
+        ```
         "
         ) }}
 
@@ -131,17 +247,60 @@
 
 
 
-### Exercice 03.2 
+### Exercice 03.2 □
 !!! example "Exercice 03.2"
     === "Énoncé" 
+        Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
+        ne recopiera pas les commentaires.
 
+        ```python linenums='1'
+        def dichotomie(tab, x):
+            """
+            tab : tableau d’entiers trié dans l’ordre croissant
+            x : nombre entier
+            La fonction renvoie True si tab contient x et False sinon
+            """
+            debut = 0
+            fin = len(tab) - 1
+            while debut <= fin:
+                m = ...
+                if x == tab[m]:
+                    return ...
+                if x > tab[m]:
+                    debut = m + 1
+                else:
+                    fin = ...
+            return ...
+        ```
+
+        Exemples :
+        ```python
+        >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],28)
+        True
+        >>> dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33],27)
+        False
+        ```
 
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        def dichotomie(tab, x):
+            """
+            tab : tableau d’entiers trié dans l’ordre croissant
+            x : nombre entier
+            La fonction renvoie True si tab contient x et False sinon
+            """
+            debut = 0
+            fin = len(tab) - 1
+            while debut <= fin:
+                m = (debut + fin) // 2
+                if x == tab[m]:
+                    return True
+                if x > tab[m]:
+                    debut = m + 1
+                else:
+                    fin = m - 1
+            return False
+        ```
 
 
 
