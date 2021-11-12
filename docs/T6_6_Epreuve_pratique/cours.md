@@ -1,6 +1,6 @@
 # Épreuve pratique 💻
 
-- Rappel des conditions de passation sur [cette page](../T6_Annales/epreuve_pratique/)
+- Rappel des conditions de passation sur [cette page](../../T6_Annales/epreuve_pratique/)
 
 - [Pdf](https://github.com/glassus/nsi/raw/master/sujets_epreuves_pratique_2021.pdf) de l'intégralité des exercices
 
