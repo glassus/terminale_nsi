@@ -1224,15 +1224,56 @@
 
 
 
-### Exercice 12.2
+### Exercice 12.2 □
 !!! example "Exercice 12.2"
     === "Énoncé" 
+        La fonction `recherche` prend en paramètres deux chaines de caractères `gene` et
+        `seq_adn` et renvoie `True` si on retrouve `gene` dans `seq_adn` et `False` sinon.
+        Compléter le code Python ci-dessous pour qu’il implémente la fonction `recherche`.
 
+        ```python linenums='1'
+        def recherche(gene, seq_adn):
+            n = len(seq_adn)
+            g = len(gene)
+            i = ...
+            trouve = False
+            while i < ... and trouve == ... :
+                j = 0
+                while j < g and gene[j] == seq_adn[i+j]:
+                    ...
+                if j == g:
+                    trouve = True
+                ...
+            return trouve
+        ```
+
+        Exemples :
+        ```python
+        >>> recherche("AATC", "GTACAAATCTTGCC")
+        True
+        >>> recherche("AGTC", "GTACAAATCTTGCC")
+        False
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(gene, seq_adn):
+            n = len(seq_adn)
+            g = len(gene)
+            i = 0
+            trouve = False
+            while i < n-g and trouve == False :
+                j = 0
+                while j < g and gene[j] == seq_adn[i+j]:
+                    j += 1
+                if j == g:
+                    trouve = True
+                i += 1
+            return trouve
+
+        ```
         "
         ) }}
 
@@ -1275,15 +1316,71 @@
 
 
 
-### Exercice 13.2
+### Exercice 13.2 □
 !!! example "Exercice 13.2"
     === "Énoncé" 
+        Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.
+        Un élève de NSI décide de le coder en langage Python de la manière suivante :
+        
+        - le programme génère un nombre entier aléatoire compris entre 1 et 99 ;
+        - si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en
+        est averti. Il peut alors en tester un autre ;
+        - si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en
+        est averti. Il peut alors en tester un autre ;
+        - si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ;
+        - si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd.
 
+        La fonction `randint` est utilisée. Si a et b sont des entiers, `randint(a,b)` renvoie un
+        nombre entier compris entre `a` et `b`.
+        Compléter le code ci-dessous et le tester :
+
+        ```python linenums='1'
+        from random import randint
+
+        def plus_ou_moins():
+            nb_mystere = randint(1,...)
+            nb_test = int(input("Proposez un nombre entre 1 et 99 : "))
+            compteur = ...
+
+            while nb_mystere != ... and compteur < ... :
+                compteur = compteur + ...
+                if nb_mystere ... nb_test:
+                    nb_test = int(input("Trop petit ! Testez encore : "))
+                else:
+                    nb_test = int(input("Trop grand ! Testez encore : "))
+
+            if nb_mystere == nb_test:
+                print ("Bravo ! Le nombre était ",...)
+                print("Nombre d'essais: ",...)
+            else:
+                print ("Perdu ! Le nombre était ",...)
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        from random import randint
+
+        def plus_ou_moins():
+            nb_mystere = randint(1,100)
+            nb_test = int(input('Proposez un nombre entre 1 et 99 : '))
+            compteur = 0
+
+            while nb_mystere != nb_test and compteur < 10 :
+                compteur = compteur + 1
+                if nb_mystere > nb_test:
+                    nb_test = int(input('Trop petit ! Testez encore : '))
+                else:
+                    nb_test = int(input('Trop grand ! Testez encore : '))
+
+            if nb_mystere == nb_test:
+                print ('Bravo ! Le nombre était ', nb_mystere)
+                print('Nombre d essais: ', compteur)
+            else:
+                print ('Perdu ! Le nombre était ', nb_mystere)
+
+        ```
         "
         ) }}
 
@@ -1320,15 +1417,84 @@
 
 
 
-### Exercice 14.2
+### Exercice 14.2 □
 !!! example "Exercice 14.2"
     === "Énoncé" 
+        Un professeur de NSI décide de gérer les résultats de sa classe sous la forme d’un
+        dictionnaire :
 
+        - les clefs sont les noms des élèves ;
+        - les valeurs sont des dictionnaires dont les clefs sont les types d’épreuves et les
+        valeurs sont les notes obtenues associées à leurs coefficients.
+
+        Avec :
+
+        ```python
+        resultats = {'Dupont':{ 'DS1' : [15.5, 4],
+                                'DM1' : [14.5, 1],
+                                'DS2' : [13, 4],
+                                'PROJET1' : [16, 3],
+                                'DS3' : [14, 4]},
+                    'Durand':{  'DS1' : [6 , 4],
+                                'DM1' : [14.5, 1],
+                                'DS2' : [8, 4],
+                                'PROJET1' : [9, 3],
+                                'IE1' : [7, 2],
+                                'DS3' : [8, 4],
+                                'DS4' :[15, 4]}}
+        ```
+
+        L’élève dont le nom est Durand a ainsi obtenu au DS2 la note de 8 avec un coefficient 4.
+        Le professeur crée une fonction `moyenne` qui prend en paramètre le nom d’un de ces
+        élèves et lui renvoie sa moyenne arrondie au dixième.
+
+        Compléter le code du professeur ci-dessous :
+
+        ```python linenums='1'
+        def moyenne(nom):
+            if nom in ...:
+                notes = resultats[nom]
+                total_points = ...
+                total_coefficients = ...
+                for ... in notes.values():
+                    note , coefficient = valeurs
+                    total_points = total_points + ... * coefficient
+                    total_coefficients = ... + coefficient
+                return round( ... / total_coefficients , 1 )
+            else:
+                return -1
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        resultats = {'Dupont':{ 'DS1' : [15.5, 4],
+                                'DM1' : [14.5, 1],
+                                'DS2' : [13, 4],
+                                'PROJET1' : [16, 3],
+                                'DS3' : [14, 4]},
+                    'Durand':{  'DS1' : [6 , 4],
+                                'DM1' : [14.5, 1],
+                                'DS2' : [8, 4],
+                                'PROJET1' : [9, 3],
+                                'IE1' : [7, 2],
+                                'DS3' : [8, 4],
+                                'DS4' :[15, 4]}}
+
+        def moyenne(nom):
+            if nom in resultats:
+                notes = resultats[nom]
+                total_points = 0
+                total_coefficients = 0
+                for valeurs in notes.values():
+                    note , coefficient = valeurs
+                    total_points = total_points + note * coefficient
+                    total_coefficients = total_coefficients + coefficient
+                return round( total_points / total_coefficients , 1 )
+            else:
+                return -1
+        ```
         "
         ) }}
 
