@@ -1,6 +1,6 @@
 
 
-## Thème en cours d'étude : [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours)  
+## Thème en cours d'étude : [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)  
 
 ??? note "*Anciens thèmes traités*"
     - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
