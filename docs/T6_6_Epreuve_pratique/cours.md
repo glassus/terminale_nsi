@@ -1541,17 +1541,107 @@
 
 
 
-### Exercice 15.2
+### Exercice 15.2 □
 !!! example "Exercice 15.2"
     === "Énoncé" 
+        On dispose d’un programme permettant de créer un objet de type `PaquetDeCarte`,
+        selon les éléments indiqués dans le code ci-dessous.
+        Compléter ce code aux endroits indiqués par `#A compléter`, puis ajouter des
+        assertions dans l’initialiseur de `Carte`, ainsi que dans la méthode `getCarteAt()`.
 
+        ```python linenums='1'
+        class Carte:
+            """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
+            def __init__(self, c, v):
+                self.Couleur = c
+                self.Valeur = v
 
+            """Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi"""
+            def getNom(self):
+                if (self.Valeur > 1 and self.Valeur < 11):
+                    return str(self.Valeur)
+                elif self.Valeur == 11:
+                    return "Valet"
+                elif self.Valeur == 12:
+                    return "Dame"
+                elif self.Valeur == 13:
+                    return "Roi"
+                else:
+                    return "As"
+
+            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
+            def getCouleur(self):
+                return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur - 1]
+
+        class PaquetDeCarte:
+            def __init__(self):
+                self.contenu = []
+
+            """Remplit le paquet de cartes"""
+            def remplir(self):
+                #A compléter
+
+            """Renvoie la Carte qui se trouve à la position donnée"""
+            def getCarteAt(self, pos):
+                #A compléter
+        ```
+        Exemple :
+
+        ```python
+        >>> unPaquet = PaquetDeCarte()
+        >>> unPaquet.remplir()
+        >>> uneCarte = unPaquet.getCarteAt(20)
+        >>> print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
+        ```
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+
+        Attention, le code proposé ne respecte pas les standards de notation :
+
+        - il ne faut pas de majuscules sur les noms des attributs
+        - la docstring se place à l'intérieur de la fonction et non au dessus.
+
+        ```python linenums='1'
+        class Carte:
+            """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
+            def __init__(self, c, v):
+                assert c in range(1,5)
+                assert v in range(1,14)
+                self.Couleur = c
+                self.Valeur = v
+
+            """Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi"""
+            def getNom(self):
+                if (self.Valeur > 1 and self.Valeur < 11):
+                    return str( self.Valeur)
+                elif self.Valeur == 11:
+                    return "Valet"
+                elif self.Valeur == 12:
+                    return "Dame"
+                elif self.Valeur == 13:
+                    return "Roi"
+                else:
+                    return "As"
+
+            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
+            def getCouleur(self):
+                return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur]
+
+        class PaquetDeCarte:
+            def __init__(self):
+                self.contenu = []
+
+            """Remplit le paquet de cartes"""
+            def remplir(self):
+                for nb_coul in range(1,5):
+                    for val in range(1,14):
+                        self.contenu.append(Carte(nb_coul, val))
+
+            """Renvoie la Carte qui se trouve à la position donnée"""
+            def getCarteAt(self, pos):
+                assert pos in range(56)
+                return self.contenu[pos]
+
+        ```
 
 
 
@@ -1586,15 +1676,41 @@
 
 
 
-### Exercice 16.2
+### Exercice 16.2 □
 !!! example "Exercice 16.2"
     === "Énoncé" 
+        On considère la fonction `dec_to_bin` ci-dessous qui prend en paramètre un entier positif `a` en écriture décimale et qui renvoie son écriture binaire sous la forme d'une chaine de caractères.
 
+        ```python linenums='1'
+        def dec_to_bin(a):
+            bin_a = ...
+            a = a//2
+            while a ... :
+                bin_a = ... + bin_a
+                a = ...
+            return bin_a
+        ```
+        Compléter la fonction `dec_to_bin`.
 
+        Exemples :
+        ```python
+        >>> dec_to_bin(83)
+        '1010011'
+        >>> dec_to_bin(127)
+        '1111111'
+        ``` 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def dec_to_bin(a):
+            bin_a = ''
+            a = a // 2
+            while a != 0 :
+                bin_a = str(a%2) + bin_a
+                a = a // 2
+            return bin_a
+        ```
         "
         ) }}
 
@@ -1634,15 +1750,51 @@
 
 
 
-### Exercice 17.2
+### Exercice 17.2 □
 !!! example "Exercice 17.2"
     === "Énoncé" 
+        On considère la fonction `separe` ci-dessous qui prend en argument un tableau `tab` dont
+        les éléments sont des `0` et des `1` et qui sépare les `0` des `1` en plaçant les `0` en début de
+        tableau et les `1` à la suite.
 
+        ```python linenums='1'
+        def separe(tab):
+            i = 0
+            j = ...
+            while i < j :
+                if tab[i] == 0 :
+                    i = ...
+                else :
+                    tab[i], tab[j] = ...
+                    j = ...
+            return tab
+        ```
 
+        Compléter la fonction `separe` ci-dessus.
+
+        Exemples :
+
+        ```python
+        >>> separe([1, 0, 1, 0, 1, 0, 1, 0])
+        [0, 0, 0, 0, 1, 1, 1, 1]
+        >>> separe([1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0])
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        ```
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def separe(tab):
+            i = 0
+            j = len(tab) - 1
+            while i < j :
+                if tab[i] == 0 :
+                    i = i + 1
+                else :
+                    tab[i], tab[j] = tab[j], tab[i]
+                    j = j - 1
+            return tab
+        ```
         "
         ) }}
 
@@ -1689,15 +1841,54 @@
 
 
 
-### Exercice 18.2
+### Exercice 18.2 □
 !!! example "Exercice 18.2"
     === "Énoncé" 
+        On considère la fonction `insere` ci-dessous qui prend en argument un entier `a` et un
+        tableau `tab` d'entiers triés par ordre croissant. Cette fonction insère la valeur `a` dans le
+        tableau et renvoie le nouveau tableau. Les tableaux seront représentés sous la forme de
+        listes python.
 
+        _Sujet légèrement modifié_
 
+        ```python linenums='1'
+        def insere(a, tab):
+            l = list(tab) #l contient les mêmes éléments que tab
+            l.append(a)
+            i = ...
+            while a < ... and i >= ...:
+                l[i+1] = ...
+                l[i] = a
+                i = ...
+            return l
+        ```
+
+        Compléter la fonction ```insere``` ci-dessus.
+
+        Exemples :
+        ```python
+        >>> insere(3,[1,2,4,5])
+        [1, 2, 3, 4, 5]
+        >>> insere(10,[1,2,7,12,14,25])
+        [1, 2, 7, 10, 12, 14, 25]
+        >>> insere(1,[2,3,4])
+        [1, 2, 3, 4]
+        ```
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def insere(a, tab):
+            l = list(tab) #l contient les mêmes éléments que tab
+            l.append(a)
+            i = len(l) - 2
+            while a < l[i] and i >= 0:
+                l[i+1] = l[i]
+                l[i] = a
+                i = i - 1
+            return l
+
+        ```
         "
         ) }}
 
@@ -1723,21 +1914,90 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(tab, n):
+            ind_debut = 0
+            ind_fin = len(tab) - 1
+            while ind_debut <= ind_fin:
+                ind_milieu = (ind_debut + ind_fin) // 2
+                if tab[ind_milieu] == n:
+                    return ind_milieu
+                elif tab[ind_milieu] < n:
+                    ind_debut = ind_milieu + 1
+                else:
+                    ind_fin = ind_milieu - 1
+            return -1
+
+
+        ```
         "
         ) }}
 
 
 
-### Exercice 19.2
+### Exercice 19.2 □
 !!! example "Exercice 19.2"
     === "Énoncé" 
+        Le codage de César transforme un message en changeant chaque lettre en la décalant
+        dans l’alphabet.
+        Par exemple, avec un décalage de 3, le A se transforme en D, le B en E, ..., le X en A,
+        le Y en B et le Z en C. Les autres caractères (‘!’,’ ?’…) ne sont pas codés.
 
+        La fonction `position_alphabet` ci-dessous prend en paramètre un caractère `lettre`
+        et renvoie la position de `lettre` dans la chaîne de caractères `ALPHABET` s’il s’y trouve
+        et `-1` sinon.
+        La fonction `cesar` prend en paramètre une chaîne de caractères `message` et un nombre
+        entier `decalage` et renvoie le nouveau message codé avec le codage de César utilisant
+        le décalage `decalage`.
+
+        ```python linenums='1'
+        ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        def position_alphabet(lettre):
+            return ALPHABET.find(lettre)
+
+        def cesar(message, decalage):
+            resultat = ''
+            for ... in message:
+                if lettre in ALPHABET:
+                    indice = ( ... ) % 26
+                    resultat = resultat + ALPHABET[indice]
+                else:
+                    resultat = ...
+            return resultat
+        ```
+
+        Compléter la fonction ```cesar```.
+
+        Exemples :
+
+        ```python
+        >>> cesar('BONJOUR A TOUS. VIVE LA MATIERE NSI !',4)
+        'FSRNSYV E XSYW. ZMZI PE QEXMIVI RWM !'
+        >>> cesar('GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !',-5)
+        'BONJOUR A TOUS. VIVE LA MATIERE NSI !'
+        ``` 
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        def position_alphabet(lettre):
+            return ALPHABET.find(lettre)
+
+        def cesar(message, decalage):
+            resultat = ''
+            for lettre in message:
+                if lettre in ALPHABET:
+                    indice = (position_alphabet(lettre) + decalage) % 26
+                    resultat = resultat + ALPHABET[indice]
+                else:
+                    resultat = resultat + lettre
+            return resultat
+
+        ```
         "
         ) }}
 
@@ -1767,21 +2027,101 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        t_moy = [14.9, 13.3, 13.1, 12.5, 13.0, 13.6, 13.7]
+        annees = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
+
+        def mini(releve, date):
+            temp_mini = releve[0]
+            date_mini = date[0]
+            for i in range(len(releve)):
+                if releve[i] < temp_mini:
+                    temp_mini = releve[i]
+                    date_mini = date[i]
+            return temp_mini, date_mini
+        ```
         "
         ) }}
 
 
 
-### Exercice 20.2
+### Exercice 20.2 □
 !!! example "Exercice 20.2"
     === "Énoncé" 
+        Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à
+        gauche : *bob*, *radar*, et *non* sont des mots palindromes.
 
+        De même certains nombres sont eux aussi des palindromes : 33, 121, 345543.
+
+        L’objectif de cet exercice est d’obtenir un programme Python permettant de tester si un
+        nombre est un nombre palindrome.
+
+        Pour remplir cette tâche, on vous demande de compléter le code des trois fonctions ci-
+        dessous sachant que la fonction `est_nbre_palindrome` s’appuiera sur la fonction
+        `est_palindrome` qui elle-même s’appuiera sur la fonction `inverse_chaine`.
+
+        La fonction `inverse_chaine` inverse l'ordre des caractères d'une chaîne de caractères
+        `chaine` et renvoie la chaîne inversée.
+
+        La fonction `est_palindrome` teste si une chaine de caractères `chaine` est un
+        palindrome. Elle renvoie `True` si c’est le cas et `False` sinon. Cette fonction s’appuie sur
+        la fonction précédente.
+
+        La fonction `est_nbre_palindrome` teste si un nombre `nbre` est un palindrome. Elle
+        renvoie `True` si c’est le cas et `False` sinon. Cette fonction s’appuie sur la fonction
+        précédente.
+
+        Compléter le code des trois fonctions ci-dessous.
+
+        ```python
+        def inverse_chaine(chaine):
+            result = ...
+            for caractere in chaine:
+                result = ...
+            return result
+
+        def est_palindrome(chaine):
+            inverse = inverse_chaine(chaine)
+            return ...
+            
+        def est_nbre_palindrome(nbre):
+            chaine = ...
+            return est_palindrome(chaine)
+        ```
+        Exemples :
+
+        ```python
+        >>> inverse_chaine('bac')
+        'cab'
+        >>> est_palindrome('NSI')
+        False
+        >>> est_palindrome('ISN-NSI')
+        True
+        >>> est_nbre_palindrome(214312)
+        False
+        >>> est_nbre_palindrome(213312)
+        True
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def inverse_chaine(chaine):
+            result = ''
+            for caractere in chaine:
+                result = caractere + result
+            return result
+
+        def est_palindrome(chaine):
+            inverse = inverse_chaine(chaine)
+            return chaine == inverse
+
+        def est_nbre_palindrome(nbre):
+            chaine = str(nbre)
+            return est_palindrome(chaine)
+
+        ```
         "
         ) }}
 
