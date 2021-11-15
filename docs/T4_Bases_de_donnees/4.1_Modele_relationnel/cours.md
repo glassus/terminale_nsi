@@ -8,7 +8,7 @@
 Lorsqu'une grande quantité de données doit être gérée, il faut savoir distinguer deux choses :
 
 - la structure qui va sous-tendre l'ensemble de ces données, notamment les liens entre elles, les hiérarchies éventuelles,...
-- le type de logiciel qui va m'aider à gérer ces données.
+- le type de logiciel qui va aider à gérer ces données.
 
 Par exemple, si je souhaite stocker toutes les températures relevées dans mon jardin tous les matins à 07h00, je sais que mes données seront des couples ```(date, temperature)``` . Éventuellement ces dates seront regroupées par mois, ou par saison... mais la structure des données sera quand même simple et linéaire.  
 Pour gérer ces données, je peux : les écrire à la main dans mon agenda, créer un feuille de tableur avec Excel ou LibreOffice, utiliser une liste dans un IDE Python,...
@@ -40,7 +40,7 @@ Les principes de bases du modèle relationnel sont :
 
 !!! abstract "Principes de base"
     - Les données sont regroupées dans différentes **tables** (qu'on appellera plutôt **relations** et qui donnent son nom au modèle). Chaque relation contient des éléments directement en lien avec le sujet général de la table.
-    - Autant que possible, des données ne doivent se trouver dans des tables différentes : on évite la **redondance** des données.
+    - Autant que possible, des données identiques ne doivent pas se trouver dans des tables différentes : on évite la **redondance** des données.
     - Les données ne doivent pas contenir elles-mêmes d'autres données : on parle d'**atomicité** des données.
 
 
@@ -57,7 +57,7 @@ Prenons l'exemple d'une bibliothèque dont la base de données possède une rela
     - **relation** , ou **table** : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.
     - **enregistrement**, ou **tuple**, ou **n-uplet**, ou **t-uplet**, ou **vecteur** : cela correspond à une ligne du tableau, et donc un ensemble de valeurs liées entre elles : l'auteur «Eric VUILLARD» a bien écrit le livre «L'Ordre du jour». 
     Il est **interdit** que des enregistrements soient totalement identiques. 
-    Le nombre d'enregistrement d'une relation s'appelle son **cardinal**.
+    Le nombre d'enregistrements d'une relation s'appelle son **cardinal**.
     - **attribut** : c'est l'équivalent d'une colonne. Il y a dans notre relation un attribut «code», un attribut «Titre», etc.
     - **domaine** : le domaine désigne «le type» (au sens type ```Int```, ```Float```, ```String```). L'attribut «Éditeur» est une chaîne de caractères, par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. 
     - **schéma** : le schéma d'une relation est le regroupement de tous les attributs et de leur domaine respectif. Ici notre schéma serait ```((Code, Entier), (Titre, Chaîne de caractères), (Auteur, Chaîne de caractères), (Éditeur, Chaîne de caractères), (ISBN, Entier))``` 
@@ -112,6 +112,7 @@ L'attribut «id_emprunteur» est une clé primaire de la relation «Emprunteurs�
 **Notion de clé étrangère** 
 
 Y-a-t-il une clé primaire dans la relation «Emprunts» ? 
+
 «id_emprunteur» est bien une clé primaire (d'«Emprunteurs») mais ne peut pas être une clé primaire d'«Emprunts», car une personne peut prendre plusieurs livres à la fois : on dit que c'est une **clé étrangère**. 
 
 !!! note "Clé étrangère :heart:"
@@ -170,7 +171,7 @@ Il n'y a pas de code 511, donc ma relation «Emprunts_v2» ne respecte pas la co
 ## 7. Représentation usuelles des bases de données en modèle relationnel
 
 Considérons la base de données Tour de France 2020, contenant les relations suivantes :
-(d'après une idée de Didier Boulle, http://webtic.free.fr/sql/mldr.htm)
+(d'après une idée de [Didier Boulle](http://webtic.free.fr/sql/mldr.htm))
 
 **relation Équipes**
 

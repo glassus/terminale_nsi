@@ -28,7 +28,7 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
     === "Énoncé"
         1. Combien la relation ```Voitures``` comporte-t-elle d'attributs ?
         2. Que vaut son cardinal ?
-        3. Quel est le domaine de l'attribut ```ig_agnece```  dans la relation ```Voitures``` ?
+        3. Quel est le domaine de l'attribut ```ig_agence```  dans la relation ```Voitures``` ?
         4. Quel est le schéma relationnel de la relation ```Agences ``` ?
         5. Quelle est la clé primaire de la relation ```Agences ``` ?
         6. Quelle est la clé primaire de la relation ```Voitures ``` ?
@@ -37,7 +37,12 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
     === "Correction"
         {{ correction(True,
         "
-        
+        1. 6
+        2. 6
+        3. Entier (```Int``` )
+        5. ```id_agence``` 
+        6. ```id_voiture``` 
+        7. ```id_agence``` 
         "
         ) }}
 
@@ -122,7 +127,7 @@ Reprenons la base Tour de France 2020 vue en cours :
     === "Énoncé"
         1. Quel temps a réalisé Guillaume MARTIN sur l'étape Sisteron / Orcières-Merlette ?
         2. À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?
-        
+
     === "Correction"
         {{ correction(True,
         "
