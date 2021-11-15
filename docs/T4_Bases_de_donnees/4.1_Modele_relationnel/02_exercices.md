@@ -6,6 +6,7 @@
 Deux relations modélisent la flotte de voitures d'un réseau de location de voitures.
 
 **Agences**
+
 | id_agence | ville     | département |
 |-----------|-----------|-------------|
 | 1         | Paris     | 75          |
@@ -15,6 +16,7 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
 
 
 **Voitures**
+
 | id_voiture | marque  | modèle | kilométrage | couleur | id_agence |
 |------------|---------|--------|-------------|---------|-----------|
 | 1          | Renault | Clio   | 12000       | Rouge   | 2         |
@@ -22,13 +24,24 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
 | 3          | Toyota  | Yaris  | 33000       | Noir    | 3         |
 
 
-1. Combien la relation ```Voitures``` comporte-t-elle d'attributs ?
-2. Que vaut son cardinal ?
-3. Quel est le domaine de l'attribut ```ig_agnece```  dans la relation ```Voitures``` ?
-4. Quel est le schéma relationnel de la relation ```Agences ``` ?
-5. Quelle est la clé primaire de la relation ```Agences ``` ?
-6. Quelle est la clé primaire de la relation ```Voitures ``` ?
-7. Quelle est la clé étrangère de la relation ```Voitures ``` ?
+!!! example "Questions"
+    === "Énoncé"
+        1. Combien la relation ```Voitures``` comporte-t-elle d'attributs ?
+        2. Que vaut son cardinal ?
+        3. Quel est le domaine de l'attribut ```ig_agnece```  dans la relation ```Voitures``` ?
+        4. Quel est le schéma relationnel de la relation ```Agences ``` ?
+        5. Quelle est la clé primaire de la relation ```Agences ``` ?
+        6. Quelle est la clé primaire de la relation ```Voitures ``` ?
+        7. Quelle est la clé étrangère de la relation ```Voitures ``` ?
+
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
 
 ## Exercice 2
 
@@ -36,6 +49,7 @@ Reprenons la base Tour de France 2020 vue en cours :
 
 
 **relation Équipes**
+
 | codeEquipe | nomEquipe                      |
 |------|-----------------------------|
 | ALM  |  AG2R La Mondiale           |
@@ -54,6 +68,7 @@ Reprenons la base Tour de France 2020 vue en cours :
 
 
 **relation Coureurs**
+
 | dossard | nomCoureur  | prénomCoureur | codeEquipe |
 |---------------|-------------|---------------|------------|
 | 141           | LÓPEZ       | Miguel Ángel  | AST        |
@@ -74,6 +89,7 @@ Reprenons la base Tour de France 2020 vue en cours :
 
 
 **relation Étapes**
+
 | numéroEtape | villeDépart | villeArrivée      | km  |
 |-------------|-------------|-------------------|-----|
 | 1           | Nice        | Nice              | 156 |
@@ -89,6 +105,7 @@ Reprenons la base Tour de France 2020 vue en cours :
 
 
 **relation Temps**
+
 | dossard | numéroEtape | tempsRéalisé |
 |:-------------:|:-----------:|:------------:|
 | 41            | 2           | 04:55:27     |
@@ -101,6 +118,17 @@ Reprenons la base Tour de France 2020 vue en cours :
 
 ![](data/schema_tdf.png)
 
-**Questions**
-1. Quel temps a réalisé Guillaume MARTIN sur l'étape Sisteron / Orcières-Merlette ?
-2. À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?
+!!! example "Questions"
+    === "Énoncé"
+        1. Quel temps a réalisé Guillaume MARTIN sur l'étape Sisteron / Orcières-Merlette ?
+        2. À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?
+        
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
+
