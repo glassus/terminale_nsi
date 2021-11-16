@@ -1234,7 +1234,7 @@
 
 
 
-### Exercice 12.2 □
+### Exercice 12.2 🗹
 !!! example "Exercice 12.2"
     === "Énoncé" 
         La fonction `recherche` prend en paramètres deux chaines de caractères `gene` et
