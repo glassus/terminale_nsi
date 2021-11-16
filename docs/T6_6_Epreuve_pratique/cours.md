@@ -830,7 +830,7 @@
 
 
 
-### Exercice 08.1 □
+### Exercice 08.1 🗹
 !!! example "Exercice 08.1"
     === "Énoncé" 
         Écrire une fonction `recherche` qui prend en paramètres `caractere`, un caractère, et
@@ -1015,7 +1015,7 @@
 
 
 
-### Exercice 10.1 □
+### Exercice 10.1 🗹
 !!! example "Exercice 10.1"
     === "Énoncé" 
         Écrire une fonction `maxi` qui prend en paramètre une liste `tab` de nombres entiers et renvoie un couple donnant le plus grand élément de cette liste, ainsi que l’indice de la première apparition de ce maximum dans la liste.
@@ -1029,7 +1029,17 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def maxi(tab):
+            val_max = tab[0]
+            pos_max = 0
+            for i in range(len(tab)):
+                if tab[i] > val_max:
+                    val_max = tab[i]
+                    pos_max = i
+            return (val_max, pos_max)
+
+        ```
         "
         ) }}
 
