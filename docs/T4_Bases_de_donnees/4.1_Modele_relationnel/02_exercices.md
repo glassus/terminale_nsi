@@ -38,8 +38,9 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
         {{ correction(True,
         "
         1. 6
-        2. 6
+        2. 3
         3. Entier (```Int``` )
+        4. ((<ins>id_agence</ins>, Int), (ville, String), (département, Int))
         5. ```id_agence``` 
         6. ```id_voiture``` 
         7. ```id_agence``` 
