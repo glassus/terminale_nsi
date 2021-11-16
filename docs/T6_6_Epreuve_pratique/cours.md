@@ -2238,15 +2238,66 @@
 
 
 
-### Exercice 22.2
+### Exercice 22.2 □
 !!! example "Exercice 22.2"
     === "Énoncé" 
+        La fonction `rendu_monnaie_centimes` prend en paramètres deux nombres entiers
+        positifs `s_due` et` s_versee` et elle permet de procéder au rendu de monnaie de la
+        différence `s_versee – s_due` pour des achats effectués avec le système de pièces de
+        la zone Euro. On utilise pour cela un algorithme qui commence par rendre le maximum de
+        pièces de plus grandes valeurs et ainsi de suite. La fonction renvoie la liste des pièces qui
+        composent le rendu.
 
+        Toutes les sommes sont exprimées en centimes d’euros. Les valeurs possibles pour les
+        pièces sont donc `[1, 2, 5, 10, 20, 50, 100, 200]`.
 
+        Ainsi, l’instruction `rendu_monnaie_centimes(452, 500)`
+        renverra
+        `[20, 20, 5, 2, 1]`.
+
+        En effet, la somme à rendre est de `48` centimes soit `20 + 20 + 5 + 2 + 1`.
+        Le code de la fonction est donné ci-dessous :
+
+        ```python linenums='1'
+        def rendu_monnaie_centimes(s_due, s_versee):
+            pieces = [1, 2, 5, 10, 20, 50, 100, 200]
+            rendu = ...
+            a_rendre = ...
+            i = len(pieces) - 1
+            while a_rendre > ... :
+                if pieces[i] <= a_rendre :
+                    rendu.append(...)
+                    a_rendre = ...
+                else :
+                    i = ...
+            return rendu
+        ```
+
+        Compléter ce code pour qu'il donne :
+        ```python
+        >>> rendu_monnaie_centimes(700,700)
+        []
+        >>> rendu_monnaie_centimes(112,500)
+        [200, 100, 50, 20, 10, 5, 2, 1]
+        ```
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def rendu_monnaie_centimes(s_due, s_versee):
+            pieces = [1, 2, 5, 10, 20, 50, 100, 200]
+            rendu = []
+            a_rendre = s_versee - s_due
+            i = len(pieces) - 1
+            while a_rendre > 0 :
+                if pieces[i] <= a_rendre :
+                    rendu.append(pieces[i])
+                    a_rendre = a_rendre - pieces[i]
+                else :
+                    i = i - 1
+            return rendu
+
+        ```        
         "
         ) }}
 
@@ -2288,15 +2339,81 @@
 
 
 
-### Exercice 23.2
+### Exercice 23.2 □
 !!! example "Exercice 23.2"
     === "Énoncé" 
+        La fonction `fusion` prend deux listes `L1`, `L2` d’entiers triées par ordre croissant et les
+        fusionne en une liste triée `L12` qu’elle renvoie.
 
+        Le code Python de la fonction est
+
+        ```python linenums='1'
+        def fusion(L1,L2):
+            n1 = len(L1)
+            n2 = len(L2)
+            L12 = [0]*(n1+n2)
+            i1 = 0
+            i2 = 0
+            i = 0
+            while i1 < n1 and ... :
+                if L1[i1] < L2[i2]:
+                    L12[i] = ...
+                    i1 = ...
+                else:
+                    L12[i] = L2[i2]
+                    i2 = ...
+                i += 1
+            while i1 < n1:
+                L12[i] = ...
+                i1 = i1 + 1
+                i = ...
+            while i2 < n2:
+                L12[i] = ...
+                i2 = i2 + 1
+                i = ...
+            return L12
+        
+        ```
+
+        Compléter le code.
+
+        Exemple :
+
+        ```python
+        >>> fusion([1,6,10],[0,7,8,9])
+        [0, 1, 6, 7, 8, 9, 10]
+        ``` 
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def fusion(L1,L2):
+            n1 = len(L1)
+            n2 = len(L2)
+            L12 = [0]*(n1+n2)
+            i1 = 0
+            i2 = 0
+            i = 0
+            while i1 < n1 and i2 < n2 :
+                if L1[i1] < L2[i2]:
+                    L12[i] = L1[i1]
+                    i1 = i1 + 1
+                else:
+                    L12[i] = L2[i2]
+                    i2 = i2 + 1
+                i += 1
+            while i1 < n1:
+                L12[i] = L1[i1]
+                i1 = i1 + 1
+                i = i + 1
+            while i2 < n2:
+                L12[i] = L2[i2]
+                i2 = i2 + 1
+                i = i + 1
+            return L12
+
+        ```
         "
         ) }}
 
@@ -2331,17 +2448,90 @@
 
 
 
-### Exercice 24.2
+### Exercice 24.2 □
 !!! example "Exercice 24.2"
     === "Énoncé" 
+        On définit une classe gérant une adresse IPv4.
+        On rappelle qu’une adresse IPv4 est une adresse de longueur 4 octets, notée en décimale
+        à point, en séparant chacun des octets par un point. On considère un réseau privé avec
+        une plage d’adresses IP de `192.168.0.0` à `192.168.0.255`.
 
+        On considère que les adresses IP saisies sont valides.
 
+        Les adresses IP `192.168.0.0` et `192.168.0.255` sont des adresses réservées.
+
+        Le code ci-dessous implémente la classe `AdresseIP`.
+
+        ```python linenums='1'
+        class AdresseIP:
+            def __init__(self, adresse):
+                self.adresse = ...
+
+            def liste_octet(self):
+                """renvoie une liste de nombres entiers,
+                la liste des octets de l'adresse IP"""
+                return [int(i) for i in self.adresse.split(".")]
+
+            def est_reservee(self):
+                """renvoie True si l'adresse IP est une adresse
+                réservée, False sinon"""
+                return ... or ...
+
+            def adresse_suivante(self):
+                """renvoie un objet de AdresseIP avec l'adresse
+                IP qui suit l’adresse self
+                si elle existe et False sinon"""
+                if ... < 254:
+                    octet_nouveau = ... + ...
+                    return AdresseIP('192.168.0.' + ...)
+                else:
+                    return False
+        ```
+        Compléter le code ci-dessus et instancier trois objets : `adresse1`, `adresse2`,
+        `adresse3` avec respectivement les arguments suivants :
+
+        `'192.168.0.1'`, `'192.168.0.2'`, `'192.168.0.0'`
+
+        Vérifier que : 
+        ```python
+        >>> adresse1.est_reservee()
+        False
+        >>> adresse3.est_reservee()
+        True
+        >>> adresse2.adresse_suivante().adresse
+        '192.168.0.3'
+        ```
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        class AdresseIP:
+            def __init__(self, adresse):
+                self.adresse = adresse
+
+            def liste_octet(self):
+                """renvoie une liste de nombres entiers,
+                la liste des octets de l'adresse IP"""
+                return [int(i) for i in self.adresse.split(".")]
+
+            def est_reservee(self):
+                """renvoie True si l'adresse IP est une adresse
+                réservée, False sinon"""
+                return self.liste_octet()[3] == 0 or self.liste_octet()[3] == 255
+
+            def adresse_suivante(self):
+                """renvoie un objet de AdresseIP avec l'adresse
+                IP qui suit l’adresse self
+                si elle existe et False sinon"""
+                if self.liste_octet()[3] < 254:
+                    octet_nouveau = self.liste_octet()[3] + 1
+                    return AdresseIP('192.168.0.' + str(octet_nouveau))
+                else:
+                    return False
+
+        adresse1 = AdresseIP('192.168.0.1')
+        adresse2 = AdresseIP('192.168.0.2')
+        adresse3 = AdresseIP('192.168.0.0')
+
+        ```
 
 
 
@@ -2373,15 +2563,89 @@
 
 
 
-### Exercice 25.2
+### Exercice 25.2 □
 !!! example "Exercice 25.2"
     === "Énoncé" 
+        Soit une image binaire représentée dans un tableau à 2 dimensions. Les éléments
+        `M[i][j]`, appelés pixels, sont égaux soit à `0` soit à `1`.
 
+        Une composante d’une image est un sous-ensemble de l’image constitué uniquement de
+        `1` et de `0` qui sont côte à côte, soit horizontalement soit verticalement.
 
+        Par exemple, les composantes de
+        ![image](data/252a.png){: .center width=30%}
+        sont
+        ![image](data/252b.png){: .center width=30%}
+
+        On souhaite, à partir d’un pixel égal à `1` dans une image `M`, donner la valeur `val` à tous
+        les pixels de la composante à laquelle appartient ce pixel.
+
+        La fonction `propager` prend pour paramètre une image `M`, deux entiers `i` et `j` et une
+        valeur entière `val`. Elle met à la valeur `val` tous les pixels de la composante du pixel
+        `M[i][j]` s’il vaut `1` et ne fait rien s’il vaut `0`.
+        
+        Par exemple, `propager(M,2,1,3)` donne
+        ![image](data/252c.png){: .center width=30%}
+        
+        Compléter le code récursif de la fonction `propager` donné ci-dessous :
+
+        ```python linenums='1'
+        def propager(M, i, j, val):
+            if M[i][j]== ...:
+                return None
+
+            M[i][j] = val
+
+            # l'élément en haut fait partie de la composante
+            if ((i-1) >= 0 and M[i-1][j] == ...):
+                propager(M, i-1, j, val)
+
+            # l'élément en bas fait partie de la composante
+            if ((...) < len(M) and M[i+1][j] == 1):
+                propager(M, ..., j, val)
+
+            # l'élément à gauche fait partie de la composante
+            if ((...) >= 0 and M[i][j-1] == 1):
+                propager(M, i, ..., val)
+
+            # l'élément à droite fait partie de la composante
+            if ((...) < len(M) and M[i][j+1] == 1):
+                propager(M, i, ..., val)
+        ```
+        Exemple :
+        ```python
+        >>> M = [[0,0,1,0],[0,1,0,1],[1,1,1,0],[0,1,1,0]]
+        >>> propager(M,2,1,3)
+        >>> M
+        [[0, 0, 1, 0], [0, 3, 0, 1], [3, 3, 3, 0], [0, 3, 3, 0]]
+        ```
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def propager(M, i, j, val):
+            if M[i][j]== 0 :
+                return None
+
+            M[i][j] = val
+
+            # l'élément en haut fait partie de la composante
+            if ((i-1) >= 0 and M[i-1][j] == 1):
+                propager(M, i-1, j, val)
+
+            # l'élément en bas fait partie de la composante
+            if ((i+1) < len(M) and M[i+1][j] == 1):
+                propager(M, i+1, j, val)
+
+            # l'élément à gauche fait partie de la composante
+            if ((j-1) >= 0 and M[i][j-1] == 1):
+                propager(M, i, j-1, val)
+
+            # l'élément à droite fait partie de la composante
+            if ((j+1) < len(M) and M[i][j+1] == 1):
+                propager(M, i, j+1, val)
+
+        ```
         "
         ) }}
 
