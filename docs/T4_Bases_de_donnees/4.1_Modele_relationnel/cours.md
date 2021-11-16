@@ -31,14 +31,13 @@ L'étude des Bases de Données tente d'apporter des réponses à toutes ces ques
 
 Le programme de Terminale NSI prévoit uniquement l'étude du **modèle relationnel**.
 
-Théorisé en 1970 par le Britannique Edgard J. Codd, le modèle relationnel est à ce jour le modèle de base de données le plus utilisé, même si l'ère actuelle du Big Data tend à mettre en avant d'autres modèles non relationnels (nous en reparlerons).
 
 ![codd](data/codd.jpg){: .center}
+Théorisé en 1970 par le Britannique Edgard J. Codd, 
+le modèle relationnel est à ce jour le modèle de base de données le plus utilisé, même si l'ère actuelle du Big Data tend à mettre en avant d'autres modèles non relationnels (nous en reparlerons).
 
 
-Les principes de bases du modèle relationnel sont :
-
-!!! abstract "Principes de base"
+!!! abstract "Les principes de base du modèle relationnel"
     - Les données sont regroupées dans différentes **tables** (qu'on appellera plutôt **relations** et qui donnent son nom au modèle). Chaque relation contient des éléments directement en lien avec le sujet général de la table.
     - Autant que possible, des données identiques ne doivent pas se trouver dans des tables différentes : on évite la **redondance** des données.
     - Les données ne doivent pas contenir elles-mêmes d'autres données : on parle d'**atomicité** des données.
@@ -56,7 +55,7 @@ Prenons l'exemple d'une bibliothèque dont la base de données possède une rela
 !!! aide "Vocabulaire"
     - **relation** , ou **table** : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.
     - **enregistrement**, ou **tuple**, ou **n-uplet**, ou **t-uplet**, ou **vecteur** : cela correspond à une ligne du tableau, et donc un ensemble de valeurs liées entre elles : l'auteur «Eric VUILLARD» a bien écrit le livre «L'Ordre du jour». 
-    Il est **interdit** que des enregistrements soient totalement identiques. 
+    Il est **interdit** que deux enregistrements soient totalement identiques. 
     Le nombre d'enregistrements d'une relation s'appelle son **cardinal**.
     - **attribut** : c'est l'équivalent d'une colonne. Il y a dans notre relation un attribut «code», un attribut «Titre», etc.
     - **domaine** : le domaine désigne «le type» (au sens type ```Int```, ```Float```, ```String```). L'attribut «Éditeur» est une chaîne de caractères, par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. 
@@ -68,6 +67,9 @@ Prenons l'exemple d'une bibliothèque dont la base de données possède une rela
 
 !!! note "Clé primaire :heart:"
     Une clé primaire est un attribut (ou une réunion d'attributs) **dont la connaissance suffit à identifier avec certitude un unique enregistrement**.
+
+Par exemple, la clé primaire de la relation des personnes nées en France pourrait être leur [numéro de Sécurité Sociale](https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France){:target="_blank"}.
+
 
  Observons, dans notre relation précédente, ce qui peut être une clé primaire et ce qui ne peut pas l'être.
 
