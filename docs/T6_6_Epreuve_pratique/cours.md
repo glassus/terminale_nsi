@@ -2681,17 +2681,67 @@
 
 
 
-### Exercice 26.2
+### Exercice 26.2 □
 !!! example "Exercice 26.2"
     === "Énoncé" 
+        On considère une image en 256 niveaux de gris que l’on représente par une grille de
+        nombres, c’est-à-dire une liste composée de sous-listes toutes de longueurs identiques.
+        La largeur de l’image est donc la longueur d’une sous-liste et la hauteur de l’image est le
+        nombre de sous-listes.
+
+        Chaque sous-liste représente une ligne de l’image et chaque élément des sous-listes est
+        un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixel.
+
+        Compléter le programme ci-dessous :
+
+        ```python linenums='1'
+        def nbLig(image):
+            '''renvoie le nombre de lignes de l'image'''
+            return ...
+
+        def nbCol(image):
+            '''renvoie la largeur de l'image'''
+            return ...
+
+        def negatif(image):
+            '''renvoie le négatif de l'image sous la forme d'une liste de listes'''
+            L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] # on créé une image de 0 aux mêmes dimensions que le paramètre image
+            for i in range(len(image)):
+                for j in range(...):
+                    L[i][j] = ...
+            return L
+
+        def binaire(image, seuil):
+            '''renvoie une image binarisée de l'image sous la forme
+            d'une liste de listes contenant des 0 si la valeur
+            du pixel est strictement inférieure au seuil
+            et 1 sinon'''
+            L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] # on crée une image de 0 aux mêmes dimensions que le paramètre image
+            for i in range(len(image)):
+                for j in range(...):
+                    if image[i][j] < ... :
+                        L[i][j] = ...
+                    else:
+                        L[i][j] = ...
+            return L    
+        ```
+
+        Exemple :
+        ```python
+        >>> img=[[20, 34, 254, 145, 6], [23, 124, 287, 225, 69], [197, 174, 207, 25, 87], [255, 0, 24, 197, 189]]
+        >>> nbLig(img)
+        4
+        >>> nbCol(img)
+        5
+        >>> negatif(img)
+        [[235, 221, 1, 110, 249], [232, 131, -32, 30, 186], [58, 81, 48, 230, 168], [0, 255, 231, 58, 66]]
+        >>> binaire(negatif(img),120)
+        [[1, 1, 0, 0, 1], [1, 1, 0, 0, 1], [0, 0, 0, 1, 1], [0, 1, 1, 0, 0]]
+        ```
 
 
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+
 
 
 
@@ -2723,17 +2773,163 @@
 
 
 
-### Exercice 27.2
+### Exercice 27.2 □
 !!! example "Exercice 27.2"
     === "Énoncé" 
+        ![image](data/272a.png){: .center width=30%}
+        On travaille sur des dessins en noir et blanc obtenu à partir de pixels noirs et blancs :
+        La figure « cœur » ci-dessus va servir d’exemple.
+        On la représente par une grille de nombres, c’est-à-dire par une liste composée de sous-listes de même longueurs.
+        Chaque sous-liste représentera donc une ligne du dessin.
+
+        Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Les pixels noirs
+        (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par
+        deux espaces.
+
+        La fonction `zoomListe` prend en argument une liste `liste_depart` et un entier `k`. Elle
+        renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
+
+        La fonction `zoomDessin` prend en argument la grille `dessin` et renvoie une grille où
+        toutes les lignes de `dessin` sont zoomées `k` fois et répétées `k` fois.
+
+        Soit le code ci-dessous :
+
+        ```python linenums='1'
+        coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], \
+                [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], \
+                [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], \
+                [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
+                [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
+                [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], \
+                [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], \
+                [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+        def affiche(dessin):
+            ''' affichage d'une grille : les 1 sont représentés par 
+                des " *" , les 0 par deux espaces "  " '''
+            for ligne in dessin:
+                for col in ligne:
+                    if col == 1:
+                        print(" *", end="")
+                    else:
+                        print("  ", end="")
+                print()
+
+
+        def zoomListe(liste_depart,k):
+            '''renvoie une liste contenant k fois chaque 
+            élément de liste_depart'''
+            liste_zoom = ...
+            for elt in ... :
+                for i in range(k):
+                    ...
+            return liste_zoom
+
+        def zoomDessin(grille,k):
+            '''renvoie une grille où les lignes sont zoomées k fois 
+            ET répétées k fois'''
+            grille_zoom=[]
+            for elt in grille:
+                liste_zoom = ...
+                for i in range(k):
+                    ... .append(...)
+            return grille_zoom
+        ```
+
+        Résultats à obtenir :
+
+        ```python
+        >>> affiche(coeur)
+        ```
+        ![image](data/272b.png){: .left}
+        
+        ```python
+        >>> affiche(zoomDessin(coeur,3))
+        ```
+                                                                             
+                                                                              
+                                                                              
+                        * * * * * *                   * * * * * *                  
+                        * * * * * *                   * * * * * *                  
+                        * * * * * *                   * * * * * *                  
+                  * * *             * * *       * * *             * * *            
+                  * * *             * * *       * * *             * * *            
+                  * * *             * * *       * * *             * * *            
+            * * *                         * * *                         * * *      
+            * * *                         * * *                         * * *      
+            * * *                         * * *                         * * *      
+            * * *                                                       * * *      
+            * * *                                                       * * *      
+            * * *                                                       * * *      
+            * * *                                                       * * *      
+            * * *                                                       * * *      
+            * * *                                                       * * *      
+                  * * *                                           * * *            
+                  * * *                                           * * *            
+                  * * *                                           * * *            
+                        * * *                               * * *                  
+                        * * *                               * * *                  
+                        * * *                               * * *                  
+                              * * *                   * * *                        
+                              * * *                   * * *                        
+                              * * *                   * * *                        
+                                    * * *       * * *                              
+                                    * * *       * * *                              
+                                    * * *       * * *                              
+                                          * * *                                    
+                                          * * *                                    
+                                          * * *                                    
+                                                                              
+                                             
 
 
     === "Correction" 
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], \
+                [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], \
+                [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], \
+                [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
+                [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
+                [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], \
+                [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], \
+                [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], \
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+        def affiche(dessin):
+            for ligne in dessin:
+                for col in ligne:
+                    if col == 1:
+                        print(' *',end='')
+                    else:
+                        print('  ',end='')
+                print()
+
+
+        def zoomListe(liste_depart, k):
+            liste_zoom = []
+            for elt in liste_depart:
+                for i in range(k):
+                    liste_zoom.append(elt)
+            return liste_zoom
+
+        def zoomDessin(grille, k):
+            grille_zoom = []
+            for elt in grille:
+                liste_zoom = zoomListe(elt, k)
+                for i in range(k):
+                    grille_zoom.append(liste_zoom)
+            return grille_zoom
+
+
+        ```
+
 
 
 
