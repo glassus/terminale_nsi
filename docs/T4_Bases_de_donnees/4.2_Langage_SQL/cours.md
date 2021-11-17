@@ -1,5 +1,8 @@
 # Langage SQL
 
+![image](data/meme1.png){: .center width=40%}
+
+
 ## 0. Du modèle relationnel au SGBD
 Les considérations sur le modèle relationnel du [cours précédent](../4.1_Modele_relationnel/cours.md) traitaient plutôt de la structure mathématique des données. 
 
@@ -12,12 +15,16 @@ Par l'intermédiaire de **requêtes**, l'utilisateur va consulter ou modifier la
 
 Le langage utilisé pour communiquer avec le SGBD est le langage **SQL**, pour Structured  Query Langage (pour *langage de requêtes structurées*).
 
-Les SGBD les plus utilisés utilisent le modèle relationnel. Parmi eux, citons Oracle, MySQL, Microsoft SQL Server, PostgreSQL, Microsoft Access, SQLite, MariaDB...
+Les SGBD les plus utilisés sont basés sur le modèle relationnel. Parmi eux, citons Oracle, MySQL, Microsoft SQL Server, PostgreSQL, Microsoft Access, SQLite, MariaDB...
 
 Mais de plus en plus de SGBD **non-relationnels** sont utilisés, spécialement adaptés à des données plus diverses et moins structurées. On les retrouve sous l'appelation **NoSQL**  (pour *Not only SQL*). Citons parmi eux MongoDB, Cassandra (Facebook), BigTable (Google)...
 
+![image](data/stats.png){: .center}
+
+
 La quasi-totalité de ces SGBD fonctionnent avec un modèle client-serveur. 
-Mais le logiciel SQLite peut lui s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel.
+
+Nous allons travailler principalement avec le logiciel SQLite peut lui s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel.
 Sa simplicité d'utilisation en fera notre choix pour illustrer cette présentation du langage SQL. 
 
 
@@ -30,200 +37,241 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
 ### 1.0 Différents moyens d'interroger la base de données
 **Pré-requis :** téléchargez la base de données [livres.db](data/livres.db).
 
-#### 1.0.1 En ligne : sqlonline
-- Rendez vous sur https://sqliteonline.com/
-- Par File / OpenDB, ouvrez le fichier  ```livres.db``` précédemment téléchargé.
-- Écrivez votre requête plus cliquez sur Run.
-![](data/sqlonline.png)
+??? abstract "1. En ligne avec ```sqliteonline.com``` "
+    - Rendez vous sur https://sqliteonline.com/
+    - Par File / OpenDB, ouvrez le fichier  ```livres.db``` précédemment téléchargé.
+    - Écrivez votre requête plus cliquez sur Run.
+    ![](data/sqlonline.png)
 
-#### 1.0.2 Avec un logiciel externe : DB Browser for SQLite
-- Installez ```DB Browser for SQLite```, téléchargeable à l'adresse https://sqlitebrowser.org/
-- Ouvrez le fichier ```livres.db```
 
-![](data/dbbrowser.png)
+??? abstract "2. Au sein d'un notebook Jupyter"
+    - Si nécessaire, installez via le terminal les paquets suivants :
+    ```
+    sudo pip3 install jupyter-sql
+    sudo pip3 install ipython-sql
+    sudo apt install python3-sql
+    ``` 
+    - Dans un notebook Jupyter, votre première cellule doit être 
+    ```
+    %load_ext sql
+    %sql sqlite:///livres.db
+    ``` 
+    en ayant bien pris soin de mettre le fichier ```livres.db``` dans le même répertoire que votre fichier Jupyter.
 
-#### 1.0.3 Au sein d'un notebook Jupyter
-- Si nécessaire, installez via le terminal les paquets suivants :
-```
-sudo pip3 install jupyter-sql
-sudo pip3 install ipython-sql
-sudo apt install python3-sql
-``` 
-- Dans un notebook Jupyter, votre première cellule doit être 
-```
-%load_ext sql
-%sql sqlite:///livres.db
-``` 
-en ayant bien pris soin de mettre le fichier ```livres.db``` dans le même répertoire que votre fichier Jupyter.
+    Ensuite, chaque requête devra être précédée de la ligne ```%% sql```.
+    ![](data/jupyter.png)
 
-Ensuite, chaque requête devra être précédée de la ligne ```%% sql```.
- ![](data/jupyter.png)
+
+!!! abstract "3. Avec un logiciel externe : DB Browser for SQLite :star: :star: :star:"
+    - Installez ```DB Browser for SQLite```, téléchargeable à l'adresse [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
+    - Ouvrez le fichier ```livres.db```
+    ![](data/dbbrowser.png)
+
+
 
 --------
 
-> Dans toute la suite, les manipulations sont à faire en interrogeant la base de données ```livres.db```, avec l'une des méthodes indiquées ci-dessus.
- Cette base de données contient les tables suivantes :
- ![](data/schemaDB.png)
+Dans toute la suite, les manipulations sont à faire en interrogeant la base de données ```livres.db```, avec l'une des méthodes indiquées ci-dessus.
+Cette base de données contient les tables suivantes :
+![](data/schemaDB.png){: .center}
 
- ### 1.1. Sélection de données
+
+### 1.1. Sélection de données
  
 
 #### 1.1.1 Exemple 1 : requête basique 🠖 SELECT, FROM, WHERE
-- **Commande :** 
-```sql
-SELECT titre FROM livre WHERE annee >= 1990;
-``` 
-- **Traduction :** 
 
-On veut les titres de la table «livre» qui sont parus après (ou en ) 1990;
-- **Résultat :**   
+!!! note "SELECT, FROM, WHERE :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre FROM livre WHERE annee >= 1990;
+    ``` 
+    - **Traduction :** 
 
-![](data/ex1.png)
+    On veut les titres de la table «livre» qui sont parus après (ou en ) 1990;
+
+    - **Résultat :**   
+
+    ![](data/ex1.png)
 
 #### 1.1.2 Exemple 2 : requête basique avec booléens 🠖 AND
-- **Commande :** 
-```sql
-SELECT titre FROM livre WHERE   annee >= 1970 AND
-                                annee <= 1980 AND
-                                editeur = 'Dargaud';
-``` 
-- **Traduction :** 
 
-On veut les titres de la table «livre» qui sont parus entre 1970 et 1980 chez l'éditeur Dargaud;
-- **Résultat :**   
+!!! note "AND :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre FROM livre WHERE   annee >= 1970 AND
+                                    annee <= 1980 AND
+                                    editeur = 'Dargaud';
+    ``` 
+    - **Traduction :** 
 
-![](data/ex2.png)
+    On veut les titres de la table «livre» qui sont parus entre 1970 et 1980 chez l'éditeur Dargaud;
+
+    - **Résultat :**   
+
+    ![](data/ex2.png)
 
 
 #### 1.1.3 Exemple 3 : requête approchée 🠖 LIKE
-- **Commande :** 
-```sql
-SELECT titre FROM livre WHERE titre LIKE '%Astérix%';
-``` 
-- **Traduction :** 
 
-On veut les titres de la table «livre» dont le titre contient la chaîne de caractères "Astérix". Le symbole ```%``` est un joker qui peut symboliser n'importe quelle chaîne de caractères. 
-- **Résultat :**   
+!!! note "LIKE :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre FROM livre WHERE titre LIKE '%Astérix%';
+    ``` 
+    - **Traduction :** 
 
-![](data/ex3.png)
+    On veut les titres de la table «livre» dont le titre contient la chaîne de caractères "Astérix". Le symbole ```%``` est un joker qui peut symboliser n'importe quelle chaîne de caractères. 
+
+    - **Résultat :**   
+
+    ![](data/ex3.png)
 
 #### 1.1.4 Exemple 4 : renvoi de plusieurs colonnes
-- **Commande :** 
-```sql
-SELECT titre, isbn FROM livre WHERE annee >= 1990;
-``` 
-- **Traduction :** 
 
-On veut les titres et les ISBN de la table «livre» qui sont parus après 1990.
-- **Résultat :**   
+!!! note "Plusieurs colonnes :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre, isbn FROM livre WHERE annee >= 1990;
+    ``` 
+    - **Traduction :** 
 
-![](data/ex4.png)
+    On veut les titres et les ISBN de la table «livre» qui sont parus après 1990.
+
+    - **Résultat :**   
+
+    ![](data/ex4.png)
 
 #### 1.1.5 Exemple 5 : renvoi de toutes les colonnes 
-- **Commande :** 
-```sql
-SELECT * FROM livre WHERE annee >= 1990;
-``` 
-- **Traduction :** 
 
-On veut toutes les colonnes disponibles de la table «livre» pour les livres qui sont parus après 1990.
-L'astérisque ```*``` est un joker (*wildcard* en anglais).
-- **Résultat :**   
+!!! note "Toutes les colonnes : * :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT * FROM livre WHERE annee >= 1990;
+    ``` 
+    - **Traduction :** 
 
-![](data/ex5.png)
+    On veut toutes les colonnes disponibles de la table «livre» pour les livres qui sont parus après 1990.
+    L'astérisque ```*``` est un joker (*wildcard* en anglais).
+
+    - **Résultat :**   
+
+    ![](data/ex5.png)
 
 #### 1.1.6 Exemple 6 : renommer les colonnes 🠖 AS
-- **Commande :** 
-```sql
-SELECT titre AS titre_du_livre FROM livre WHERE annee >= 1990;
-``` 
-- **Traduction :** 
 
-Lors de l'affichage du résulats et dans la suite de la requête (important), la colonne "titre" est renommée "titre_du_livre".
-- **Résultat :**   
+!!! note "Renommer les colonnes : AS :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre AS titre_du_livre FROM livre WHERE annee >= 1990;
+    ``` 
+    - **Traduction :** 
 
-![](data/ex6.png)
+    Lors de l'affichage du résulats et dans la suite de la requête (important), la colonne "titre" est renommée "titre_du_livre".
 
- ### 1.2. Des opérations sur les données : sélection avec agrégation
+    - **Résultat :**   
+
+    ![](data/ex6.png)
+
+
+### 1.2. Opérations sur les données : sélection avec agrégation
 
 #### 1.2.1 Exemple 7 : nombre de résultats 🠖 COUNT
-- **Commande :** 
-```sql
-SELECT COUNT(*) AS total FROM livre
-                             WHERE titre LIKE "%Astérix%";
-``` 
-- **Traduction :** 
 
-On veut compter le nombre d'enregistrements de la tables livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «total».
-- **Résultat :**   
+!!! note "Compter : COUNT :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT COUNT(*) AS total FROM livre
+                                WHERE titre LIKE "%Astérix%";
+    ``` 
+    - **Traduction :** 
 
-![](data/ex7.png)
+    On veut compter le nombre d'enregistrements de la tables livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «total».
+
+    - **Résultat :**   
+
+    ![](data/ex7.png)
 
 #### 1.2.2 Exemple 8 : somme de valeurs numériques 🠖 SUM
-- **Commande :** 
-```sql
-SELECT SUM(annee) AS somme FROM livre
-                             WHERE titre LIKE "%Astérix%";
-``` 
-- **Traduction :** 
 
-On veut additionner les années des livres de la tables livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «somme».
-*Attention : dans notre cas précis, ce calcul n'a aucun sens...*
-- **Résultat :**   
+!!! note "Additionner : SUM :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT SUM(annee) AS somme FROM livre
+                                WHERE titre LIKE "%Astérix%";
+    ``` 
+    - **Traduction :** 
 
-![](data/ex8.png)
+    On veut additionner les années des livres de la tables livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «somme».
+    *Attention : dans notre cas précis, ce calcul n'a aucun sens...*
+
+    - **Résultat :**   
+
+    ![](data/ex8.png)
 
 #### 1.2.3 Exemple 9 : moyenne de valeurs numériques 🠖 AVG
-- **Commande :** 
-```sql
-SELECT AVG(annee) AS moyenne FROM livre
-                             WHERE titre LIKE "%Astérix%";
-``` 
-- **Traduction :** 
 
-On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».
-- **Résultat :**   
+!!! note "Faire une moyenne : AVG :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT AVG(annee) AS moyenne FROM livre
+                                WHERE titre LIKE "%Astérix%";
+    ``` 
+    - **Traduction :** 
 
-![](data/ex9.png)
+    On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».
 
- #### 1.2.4 Exemple 10 : minimum ou maximum de valeurs numériques 🠖 MIN, MAX
-- **Commande :** 
-```sql
-SELECT MIN(annee) AS minimum FROM livre
-                             WHERE titre LIKE "%Astérix%";
-``` 
-- **Traduction :** 
+    - **Résultat :**   
 
-On veut trouver la pus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec **MAX** pour la recherche du maximum.
-- **Résultat :**   
+    ![](data/ex9.png)
 
-![](data/ex10.png)
 
-#### 1.2.5 Exemple 11 : tri de valeurs 🠖 ORDER BY, ASC, DESC
-- **Commande :** 
-```sql
-SELECT titre, annee FROM livre
-                WHERE titre LIKE "%Astérix%"
-                ORDER BY annee DESC;
-``` 
-- **Traduction :** 
+#### 1.2.4 Exemple 10 : minimum ou maximum de valeurs numériques 🠖 MIN, MAX
 
-On veut afficher tous les albums d'Astérix, et leur année de parution, classés par année décroissante.
-- **Résultat :**   
+!!! note "Trouver les extremums : MIN, MAX :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT MIN(annee) AS minimum FROM livre
+                                WHERE titre LIKE "%Astérix%";
+    ``` 
+    - **Traduction :** 
 
-![](data/ex11.png)
+    On veut trouver la pus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec **MAX** pour la recherche du maximum.
+
+    - **Résultat :**   
+
+    ![](data/ex10.png)
+
+#### 1.2.5 Exemple 11 : classer des valeurs 🠖 ORDER BY, ASC, DESC
+
+!!! note "Classement : ORDER BY, ASC, DESC :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre, annee FROM livre
+                    WHERE titre LIKE "%Astérix%"
+                    ORDER BY annee DESC;
+    ``` 
+    - **Traduction :** 
+
+    On veut afficher tous les albums d'Astérix, et leur année de parution, classés par année décroissante.
+    - **Résultat :**   
+
+    ![](data/ex11.png)
 
 #### 1.2.5 Exemple 12 : suppression des doublons 🠖 DISTINCT
-- **Commande :** 
-```sql
-SELECT DISTINCT editeur FROM livre;
-``` 
-- **Traduction :** 
 
-On veut la liste de tous les éditeurs. Sans le mot-clé ```DISTINCT```, beaucoup de doublons apparaîtraient.
-- **Résultat :**   
+!!! note "Suppression des doublons : DISTINCT :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT DISTINCT editeur FROM livre;
+    ``` 
+    - **Traduction :** 
 
-![](data/ex12.png)
+    On veut la liste de tous les éditeurs. Sans le mot-clé ```DISTINCT```, beaucoup de doublons apparaîtraient.
+
+    - **Résultat :**   
+
+    ![](data/ex12.png)
 
 ## 1.3 Des recherches croisées sur les tables : les jointures
 
@@ -240,7 +288,7 @@ Le contenu est peu lisible. Souvenons-nous du diagramme de la base de données.
 
  Pour que la table «emprunt» soit lisible, il faudrait (dans un premier temps) que l'on affiche à la place de l'ISBN le titre de l'ouvrage. Or ce titre est disponible dans la table «livres».  On va donc procéder à une **jointure** de ces deux tables.
 
- #### 1.3.1 Exemple 13 : jointure de deux tables 🠖 JOIN
+#### 1.3.1 Exemple 13 : jointure de deux tables 🠖 JOIN
 - **Commande :** 
 ```sql
 SELECT livre.titre, emprunt.code_barre, emprunt.retour FROM emprunt
@@ -260,7 +308,7 @@ Il est donc très important de spécifier ce sur quoi les deux tables vont se re
 
 ![](data/ex13.png)
 
- #### 1.3.2 Exemple 14 : jointure de trois tables 🠖 JOIN
+#### 1.3.2 Exemple 14 : jointure de trois tables 🠖 JOIN
 
 Le résultat précédemment a permis d'améliorer la visibilité de la table «emprunt», mais il reste la colonne «code_barre» qui est peu lisible. Nous pouvons la remplacer par le titre du livre, en faisant une nouvelle jointure, en invitant maintenant les deux tables «livre» et «usager».
 
