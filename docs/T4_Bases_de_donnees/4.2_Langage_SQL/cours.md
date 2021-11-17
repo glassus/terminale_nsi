@@ -24,7 +24,7 @@ Mais de plus en plus de SGBD **non-relationnels** sont utilisés, spécialement 
 
 La quasi-totalité de ces SGBD fonctionnent avec un modèle client-serveur. 
 
-Nous allons travailler principalement avec le logiciel SQLite peut lui s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel.
+Nous allons travailler principalement avec le langage SQLite peut lui s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel utilisant SQLite (dans notre cas, DB Browser for SQLite).  
 Sa simplicité d'utilisation en fera notre choix pour illustrer cette présentation du langage SQL. 
 
 
@@ -38,9 +38,9 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
 **Pré-requis :** téléchargez la base de données [livres.db](data/livres.db).
 
 ??? abstract "1. En ligne avec ```sqliteonline.com``` "
-    - Rendez vous sur https://sqliteonline.com/
+    - Rendez vous sur [https://sqliteonline.com/](https://sqliteonline.com/)
     - Par File / OpenDB, ouvrez le fichier  ```livres.db``` précédemment téléchargé.
-    - Écrivez votre requête plus cliquez sur Run.
+    - Écrivez votre requête plus cliquez sur Run.  
     ![](data/sqlonline.png)
 
 
@@ -64,7 +64,7 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
 
 !!! abstract "3. Avec un logiciel externe : DB Browser for SQLite :star: :star: :star:"
     - Installez ```DB Browser for SQLite```, téléchargeable à l'adresse [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
-    - Ouvrez le fichier ```livres.db```
+    - Ouvrez le fichier ```livres.db```.  
     ![](data/dbbrowser.png)
 
 
