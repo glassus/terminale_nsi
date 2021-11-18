@@ -2583,7 +2583,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
         ```
 
-
+🗹
 
 ### Exercice 25.1 □
 !!! example "Exercice 25.1"
