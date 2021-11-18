@@ -218,7 +218,8 @@ WHERE s.date_peremption < NOW();
 ## Exercice 4
 _site réalisé par J. Le Coupanec (Académie de Rennes)_
 
-Sur la page [http://nsi.colbert.bzh/sql/](http://nsi.colbert.bzh/sql/), suivez le parcours des deux TPs :
+Sur la page [http://colbert.bzh/sql/](http://colbert.bzh/sql/), suivez le parcours des deux TPs :
+
 - TP1 : Gestion d'un réseau d'agences de location de voitures.
 La base de données [locations.db](data/locations.db) contient les tables ```Agences```,```Locations```, ```Vehicules```.
 ![](data/diag_locations.png)
