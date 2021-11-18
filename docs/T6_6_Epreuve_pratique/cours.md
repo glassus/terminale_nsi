@@ -1,8 +1,12 @@
 # Épreuve pratique 💻
 
-- Rappel des conditions de passation sur [cette page](../../T6_Annales/epreuve_pratique/)
+Vous trouverez ci-dessous l'intégralité des sujets de l'épreuve pratique, disponibles publiquement sur la Banque Nationale des Sujets (novembre 2021). 
 
-- [Pdf](https://github.com/glassus/nsi/raw/master/sujets_epreuves_pratique_2021.pdf) de l'intégralité des exercices
+Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci) sera publiée en janvier 2022 sur le site [Eduscol](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi).
+
+- Rappel des conditions de passation sur [cette page](../../T6_Annales/epreuve_pratique/).
+
+- [Pdf](https://github.com/glassus/nsi/raw/master/sujets_epreuves_pratique_2021.pdf) de l'intégralité des exercices.
 
 <!-- □  🗹 -->
 
@@ -2357,7 +2361,16 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def occurence_lettres(phrase):
+            occ = {}
+            for caractere in phrase:
+                if caractere in occ:
+                    occ[caractere] += 1
+                else:
+                    occ[caractere] = 1
+            return occ
+        ```
         "
         ) }}
 
@@ -2466,7 +2479,20 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(tab, n):
+            ind_debut = 0
+            ind_fin = len(tab) - 1
+            while ind_debut <= ind_fin:
+                ind_milieu = (ind_debut + ind_fin) // 2
+                if tab[ind_milieu] == n:
+                    return ind_milieu
+                elif tab[ind_milieu] < n:
+                    ind_debut = ind_milieu + 1
+                else:
+                    ind_fin = ind_milieu - 1
+            return -1
+        ```
         "
         ) }}
 
@@ -2776,7 +2802,7 @@
 
         Exemple :
         ```python
-        >>> img=[[20, 34, 254, 145, 6], [23, 124, 287, 225, 69], [197, 174, 207, 25, 87], [255, 0, 24, 197, 189]]
+        >>> img = [[20, 34, 254, 145, 6], [23, 124, 287, 225, 69], [197, 174, 207, 25, 87], [255, 0, 24, 197, 189]]
         >>> nbLig(img)
         4
         >>> nbCol(img)
@@ -2789,7 +2815,37 @@
 
 
     === "Correction" 
+        ```python linenums='1'
+        def nbLig(image):
+            '''renvoie le nombre de lignes de l'image'''
+            return len(image)
 
+        def nbCol(image):
+            '''renvoie la largeur de l'image'''
+            return len(image[0])
+
+        def negatif(image):
+            '''renvoie le négatif de l'image sous la forme d'une liste de listes'''
+            L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] # on créé une image de 0 aux mêmes dimensions que le paramètre image
+            for i in range(len(image)):
+                for j in range(nbCol(image)):
+                    L[i][j] = 255-image[i][j]
+            return L
+
+        def binaire(image, seuil):
+            '''renvoie une image binarisée de l'image sous la forme
+            d'une liste de listes contenant des 0 si la valeur
+            du pixel est strictement inférieure au seuil
+            et 1 sinon'''
+            L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))] # on crée une image de 0 aux mêmes dimensions que le paramètre image
+            for i in range(len(image)):
+                for j in range(nbCol(image)):
+                    if image[i][j] < seuil :
+                        L[i][j] = 0
+                    else:
+                        L[i][j] = 1
+            return L    
+        ```
 
 
 
@@ -3015,7 +3071,30 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], 'C':['',''], 'E':['',''], 'G':['','I'], 'I':['','H'], 'H':['','']}
+
+        def taille(arbre, lettre):
+            fils_gauche = arbre[lettre][0]
+            fils_droit = arbre[lettre][1]
+            
+            if fils_gauche != '' and fils_droit != '':
+                return 1 + taille(arbre, fils_gauche) + taille(arbre, fils_droit)
+            
+            if fils_gauche != '' and fils_droit == '':
+                return 1 + taille(arbre, fils_gauche)
+
+            if fils_gauche == '' and fils_droit != '':
+                return 1 + taille(arbre, fils_droit)
+
+            else:
+                return 1
+   
+    
+
+
+
+        ```
         "
         ) }}
 
@@ -3119,7 +3198,7 @@
 
 
 
-### Exercice 29.2
+### Exercice 29.2 □
 !!! example "Exercice 29.2"
     === "Énoncé" 
         On affecte à chaque lettre de l'alphabet un code selon le tableau ci-dessous :
@@ -3249,15 +3328,75 @@
 
 
 
-### Exercice 30.2
+### Exercice 30.2 □
 !!! example "Exercice 30.2"
     === "Énoncé" 
+        Soit `T` un tableau non vide d'entiers triés dans l'ordre croissant et `n` un entier.
+        La fonction `chercher`, donnée à la page suivante, doit renvoyer un indice où la valeur `n`
+        apparaît éventuellement dans `T`, et `None` sinon. 
 
+        Les paramètres de la fonction sont :
+
+        - `T`, le tableau dans lequel s'effectue la recherche ;
+        - `n`, l'entier à chercher dans le tableau ;
+        - `i`, l'indice de début de la partie du tableau où s'effectue la recherche ;
+        - `j`, l'indice de fin de la partie du tableau où s'effectue la recherche.
+
+        La fonction `chercher` est une fonction récursive basée sur le principe « diviser pour
+        régner ».
+
+
+        Le code de la fonction commence par vérifier si `0 <= i` et `j < len(T)`.  
+        Si cette
+        condition n’est pas vérifiée, elle affiche `"Erreur"` puis renvoie `None`.
+
+        Recopier et compléter le code de la fonction `chercher` proposée ci-dessous :
+
+        ```python linenums='1'
+        def chercher(T, n, i, j):
+            if i < 0 or ??? :
+                print("Erreur")
+                return None
+            if i > j :
+                return None
+            m = (i + j) // ???
+            if T[m] < ??? :
+                return chercher(T, n, ??? , ???)
+            elif ??? :
+                return chercher(T, n, ??? , ??? )
+            else :
+                return ???
+        ```
+
+        L'exécution du code doit donner :
+        ```python
+        >>> chercher([1,5,6,6,9,12],7,0,10)
+        Erreur
+        >>> chercher([1,5,6,6,9,12],7,0,5)
+        >>> chercher([1,5,6,6,9,12],9,0,5)
+        4
+        >>> chercher([1,5,6,6,9,12],6,0,5)
+        2
+        ```
 
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def chercher(T, n, i, j):
+            if i < 0 or j >= len(T) :
+                print('Erreur')
+                return None
+            if i > j :
+                return None
+            m = (i + j) // 2
+            if T[m] < n :
+                return chercher(T, n, m + 1, j)
+            elif T[m] > n :
+                return chercher(T, n, i, m - 1 )
+            else :
+                return m
+        ```
         "
         ) }}
 
