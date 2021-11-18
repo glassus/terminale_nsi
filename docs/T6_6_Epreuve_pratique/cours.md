@@ -731,7 +731,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
         On s’intéresse à la suite d’entiers définie par
         `U1 = 1`, `U2 = 1` et, pour tout entier naturel `n`, par `Un+2 = Un+1 + Un`.
 
-        Elle s’appelle la suite de Fibonnaci.
+        Elle s’appelle la suite de Fibonacci.
 
         Écrire la fonction `fibonacci` qui prend un entier `n > 0` et qui renvoie l’élément d’indice
         `n` de cette suite.
