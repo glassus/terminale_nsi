@@ -121,7 +121,8 @@ Cette base de données contient les tables suivantes :
     ``` 
     - **Traduction :** 
 
-    On veut les titres de la table «livre» dont le titre contient la chaîne de caractères "Astérix". Le symbole ```%``` est un joker qui peut symboliser n'importe quelle chaîne de caractères. 
+    On veut les titres de la table «livre» dont le titre contient la chaîne de caractères "Astérix".  
+    Le symbole ```%``` est un joker qui peut symboliser n'importe quelle chaîne de caractères. 
 
     - **Résultat :**   
 
@@ -151,7 +152,7 @@ Cette base de données contient les tables suivantes :
     ``` 
     - **Traduction :** 
 
-    On veut toutes les colonnes disponibles de la table «livre» pour les livres qui sont parus après 1990.
+    On veut toutes les colonnes disponibles de la table «livre» pour les livres qui sont parus après 1990.  
     L'astérisque ```*``` est un joker (*wildcard* en anglais).
 
     - **Résultat :**   
@@ -175,6 +176,9 @@ Cette base de données contient les tables suivantes :
 
 
 ### 1.2. Opérations sur les données : sélection avec agrégation
+
+Les requêtes effectuées jusqu'ici ont juste sélectionné des données grâce à différents filtres : aucune action à partir de ces données n'a été effectuée.  
+Nous allons maintenant effectuer des opérations à partir des données sélectionnées. On appelle ces opérations des **opérations d'agrégation**.
 
 #### 1.2.1 Exemple 7 : nombre de résultats 🠖 COUNT
 
@@ -254,6 +258,7 @@ Cette base de données contient les tables suivantes :
     - **Traduction :** 
 
     On veut afficher tous les albums d'Astérix, et leur année de parution, classés par année décroissante.
+    
     - **Résultat :**   
 
     ![](data/ex11.png)
