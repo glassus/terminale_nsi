@@ -2581,7 +2581,15 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def recherche(tab):
+            solution = []
+            for i in range(len(tab)-1):
+                if tab[i] + 1 == tab[i+1]:
+                    solution.append((tab[i], tab[i+1]))
+            return solution
+
+        ```
         "
         ) }}
 
@@ -2683,15 +2691,15 @@
         que des lettres en minuscules sans accent.
         On pourra s’aider du tableau
 
-        `alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o,','p','q','r','s','t','u','v','w','x','y','z']`
+        `alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o,','p','q','r','s','t','u','v','w','x','y','z']`
 
         et du tableau `occurrence` de 26 éléments où l’on mettra dans `occurrence[i]` le
-        nombre d’apparitions de `alphabet[i]` dans la chaine. Puis on calculera l’indice `k` d’un
-        maximum du tableau `occurrence` et on affichera `alphabet[k]`.
+        nombre d’apparitions de `alphabet[i]` dans la chaine.  
+        Puis on calculera l’indice `k` d’un maximum du tableau `occurrence` et on affichera `alphabet[k]`.
 
         Exemple :
         ```python
-        >>> ch='je suis en terminale et je passe le bac et je souhaite poursuivre des etudes pour devenir expert en informatique’
+        >>> ch = 'je suis en terminale et je passe le bac et je souhaite poursuivre des etudes pour devenir expert en informatique'
         >>> occurrence_max(ch)
         ‘e’
         ```
@@ -2699,7 +2707,23 @@
     === "Correction" 
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o,','p','q','r','s','t','u','v','w','x','y','z']
+
+        def occurrence_max(chaine):
+            occurence = [0] *  26
+            for i in range(26):
+                compteur = 0
+                for caractere in chaine:
+                    if caractere == alphabet[i]:
+                        compteur += 1
+                occurence[i] = compteur
+            ind_max = 0
+            for i in range(26):
+                if occurence[i] > occurence[ind_max]:
+                    ind_max = i
+            return alphabet[ind_max]
+        ```
         "
         ) }}
 
