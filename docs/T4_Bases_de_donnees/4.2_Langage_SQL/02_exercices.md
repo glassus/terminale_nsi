@@ -32,83 +32,72 @@ On veut créer une base de données ```baseHopital.db```  qui contiendra les tro
 
 On suppose que les dates sont données sous la forme ```jj-mm-aaaa```.
 
-1. Donner les commandes SQLite permettant de créer ces tables.
+**Q1.** Donner les commandes SQLite permettant de créer ces tables.
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-
-CREATE TABLE Patients(
+??? note "Correction"
+    ```SQL
+    CREATE TABLE Patients(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nom TEXT,
     prenom TEXT,
     genre TEXT,
     annee_naissance INTEGER
-);
+    );
 
-CREATE TABLE Ordonnances(
+    CREATE TABLE Ordonnances(
     code INTEGER PRIMARY KEY,
     id_patient INTEGER,
     matricule_medecin INTEGER,
     date_ord TEXT,
     medicaments INTEGER
-);
+    );
 
-CREATE TABLE Medecins(
+    CREATE TABLE Medecins(
     matricule INTEGER  PRIMARY KEY,
     nom_prenom TEXT,
     specialite TEXT,
     telephone TEXT
-);
+    );
+
+    ```
 
 
-</p>
-</details>
 
-2. Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente. Donner la commande SQLite correspondante.
+**Q2.** Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente. Donner la commande SQLite correspondante.
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-INSERT INTO Patients VALUES (NULL, "Wizeunit", "Anne", "F", 2000);
-
+??? note "Correction"
+    ```SQL
+    INSERT INTO Patients VALUES (NULL, "Wizeunit", "Anne", "F", 2000);
+    ```
 Commentaire : NULL sert ici à ne rien mettre là où le SGBD gère tout seul la clé primaire en autoincrement. (hors-programme)
-</p>
-</details>
-
-3. Le patient numéro 100 a changé de genre et est maintenant une femme. Donner la commande SQLite modifiant en conséquence ses données.
-
-<details><summary> <em>correction :</em>  </summary>
-<p>
-UPDATE Patients SET genre = 'F' WHERE id = 100 ;
-
-</p>
-</details>
 
 
-4. Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.
+**Q3.** Le patient numéro 100 a changé de genre et est maintenant une femme. Donner la commande SQLite modifiant en conséquence ses données.
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-DELETE FROM Medecins WHERE specialite = "épidémiologie";
-
-</p>
-</details>
+??? note "Correction"
+    ```SQL
+    UPDATE Patients SET genre = 'F' WHERE id = 100 ;
+    ```
 
 
+**Q4.** Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.
 
-5. Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
+
+??? note "Correction"
+    ```SQL
+    DELETE FROM Medecins WHERE specialite = "épidémiologie";
+    ```
+
+**Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
  
- <details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT p.nom, p.prenom FROM Patients AS p 
-<br>
-JOIN Ordonnances AS o ON p.id = o.id_patient
-<br>
-JOIN Medecins AS m ON o.matricule_medecin = m.matricule
-<br>
-WHERE m.specialite = "psychiatrie" AND o.date_ord LIKE "%04-2020%"
+??? note "Correction"
+    ```SQL
+    SELECT p.nom, p.prenom FROM Patients AS p
+    JOIN Ordonnances AS o ON p.id = o.id_patient
+    JOIN Medecins AS m ON o.matricule_medecin = m.matricule
+    WHERE m.specialite = "psychiatrie" AND o.date_ord LIKE "%04-2020%"
 
-</p>
-</details>
+    ```
 
 ## Exercice 2
 
@@ -133,86 +122,70 @@ On considère ci-dessous le schéma de la base de données du stock d'un superma
 
 ![](data/exo3_schema.png)
 
-1. Quelle requête SQL donne le prix d'achat du produit dont le ```nom_court``` est «Liq_Vaiss_1L» ?
+**Q1**. Quelle requête SQL donne le prix d'achat du produit dont le ```nom_court``` est «Liq_Vaiss_1L» ?
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' ;
-</p>
-</details>
-
-
-2. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?
-
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
-</p>
-</details>
+??? note "Correction"
+    ```SQL
+    SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' ;
+    ```
 
 
-3. Quelle requête donne les produits étant en rupture de stock ?
+**Q2**. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT Produits.nom FROM Produits
-<br>
-JOIN Stocks ON Produits.id = Stocks.produit
-<br>
-WHERE Stocks.quantite = 0;
 
-</p>
-</details>
+??? note "Correction"
+    ```SQL
+    SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
+    ```
 
 
 
+**Q3**. Quelle requête donne les produits étant en rupture de stock ?
 
-4. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
-
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT nom FROM Produits WHERE nom LIKE "%ampoule%";
-</p>
-</details>
-
-
+??? note "Correction"
+    ```SQL
+    SELECT Produits.nom FROM Produits
+    JOIN Stocks ON Produits.id = Stocks.produit
+    WHERE Stocks.quantite = 0;
+    ```
 
 
-5. Quelle requête permet d'avoir le prix moyen de ces ampoules ?
+**Q4**. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT AVG(prix_vente) FROM Produits WHERE nom LIKE "%ampoule%";
-</p>
-</details>
-
+??? note "Correction"
+    ```SQL
+    SELECT nom FROM Produits WHERE nom LIKE "%ampoule%";
+    ```
 
 
-6. Quelle requête permet d'identifier le produit le plus cher du magasin ?
+**Q5**. Quelle requête permet d'avoir le prix moyen de ces ampoules ?
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT nom_court FROM Produits ORDER BY prix_vente DESC LIMIT 1;
-<br>
-ou
-<br>
-SELECT nom FROM Produits WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
-</p>
-</details>
+??? note "Correction"
+    ```SQL
+    SELECT AVG(prix_vente) FROM Produits WHERE nom LIKE "%ampoule%";
+    ```
 
+**Q6**. Quelle requête permet d'identifier le produit le plus cher du magasin ?
 
+??? note "Correction"
+    ```SQL
+    SELECT nom_court FROM Produits ORDER BY prix_vente DESC LIMIT 1;
+    ```
+    ou
 
-7. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? _(on pourra utiliser la fonction SQL ```NOW()``` qui renvoie la date actuelle )_
+    ```SQL
+    SELECT nom FROM Produits WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
+    ```  
 
-<details><summary> <em>correction :</em>  </summary>
-<p>
-SELECT p.nom FROM Produits AS p
-<br>
-JOIN Stocks AS s ON s.produits = p.id
-<br>
-WHERE s.date_peremption < NOW();
-</p>
-</details>
+**Q7**. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? _(on pourra utiliser la fonction SQL ```NOW()``` qui renvoie la date actuelle )_
+
+??? note "Correction"
+    ```SQL
+    SELECT p.nom FROM Produits AS p
+    JOIN Stocks AS s ON s.produits = p.id
+    WHERE s.date_peremption < NOW();
+    ```
+
 
 
 ## Exercice 4

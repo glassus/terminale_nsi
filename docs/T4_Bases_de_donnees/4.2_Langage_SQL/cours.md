@@ -79,9 +79,9 @@ Cette base de données contient les tables suivantes :
 ### 1.1. Sélection de données
  
 
-#### 1.1.1 Exemple 1 : requête basique 🠖 SELECT, FROM, WHERE
+#### 1.1.1 Exemple 1 
 
-!!! note "SELECT, FROM, WHERE :heart:"
+!!! note "Requête basique : SELECT, FROM, WHERE :heart:"
     - **Commande :** 
     ```sql
     SELECT titre FROM livre WHERE annee >= 1990;
@@ -94,9 +94,9 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex1.png)
 
-#### 1.1.2 Exemple 2 : requête basique avec booléens 🠖 AND
+#### 1.1.2 Exemple 2 
 
-!!! note "AND :heart:"
+!!! note "Requête avec booléen : AND :heart:"
     - **Commande :** 
     ```sql
     SELECT titre FROM livre WHERE   annee >= 1970 AND
@@ -112,9 +112,9 @@ Cette base de données contient les tables suivantes :
     ![](data/ex2.png)
 
 
-#### 1.1.3 Exemple 3 : requête approchée 🠖 LIKE
+#### 1.1.3 Exemple 3 
 
-!!! note "LIKE :heart:"
+!!! note "Requête approchée : LIKE :heart:"
     - **Commande :** 
     ```sql
     SELECT titre FROM livre WHERE titre LIKE '%Astérix%';
@@ -128,7 +128,7 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex3.png)
 
-#### 1.1.4 Exemple 4 : renvoi de plusieurs colonnes
+#### 1.1.4 Exemple 4 
 
 !!! note "Plusieurs colonnes :heart:"
     - **Commande :** 
@@ -143,7 +143,7 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex4.png)
 
-#### 1.1.5 Exemple 5 : renvoi de toutes les colonnes 
+#### 1.1.5 Exemple 5 
 
 !!! note "Toutes les colonnes : * :heart:"
     - **Commande :** 
@@ -159,7 +159,7 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex5.png)
 
-#### 1.1.6 Exemple 6 : renommer les colonnes 🠖 AS
+#### 1.1.6 Exemple 6 
 
 !!! note "Renommer les colonnes : AS :heart:"
     - **Commande :** 
@@ -180,7 +180,7 @@ Cette base de données contient les tables suivantes :
 Les requêtes effectuées jusqu'ici ont juste sélectionné des données grâce à différents filtres : aucune action à partir de ces données n'a été effectuée.  
 Nous allons maintenant effectuer des opérations à partir des données sélectionnées. On appelle ces opérations des **opérations d'agrégation**.
 
-#### 1.2.1 Exemple 7 : nombre de résultats 🠖 COUNT
+#### 1.2.1 Exemple 7 
 
 !!! note "Compter : COUNT :heart:"
     - **Commande :** 
@@ -196,7 +196,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
     ![](data/ex7.png)
 
-#### 1.2.2 Exemple 8 : somme de valeurs numériques 🠖 SUM
+#### 1.2.2 Exemple 8 
 
 !!! note "Additionner : SUM :heart:"
     - **Commande :** 
@@ -213,7 +213,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
     ![](data/ex8.png)
 
-#### 1.2.3 Exemple 9 : moyenne de valeurs numériques 🠖 AVG
+#### 1.2.3 Exemple 9 
 
 !!! note "Faire une moyenne : AVG :heart:"
     - **Commande :** 
@@ -230,7 +230,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
     ![](data/ex9.png)
 
 
-#### 1.2.4 Exemple 10 : minimum ou maximum de valeurs numériques 🠖 MIN, MAX
+#### 1.2.4 Exemple 10 
 
 !!! note "Trouver les extremums : MIN, MAX :heart:"
     - **Commande :** 
@@ -246,9 +246,9 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
     ![](data/ex10.png)
 
-#### 1.2.5 Exemple 11 : classer des valeurs 🠖 ORDER BY, ASC, DESC
+#### 1.2.5 Exemple 11 
 
-!!! note "Classement : ORDER BY, ASC, DESC :heart:"
+!!! note "Classer des valeurs : ORDER BY, ASC, DESC :heart:"
     - **Commande :** 
     ```sql
     SELECT titre, annee FROM livre
@@ -263,7 +263,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
     ![](data/ex11.png)
 
-#### 1.2.5 Exemple 12 : suppression des doublons 🠖 DISTINCT
+#### 1.2.5 Exemple 12 
 
 !!! note "Suppression des doublons : DISTINCT :heart:"
     - **Commande :** 
@@ -287,20 +287,23 @@ SELECT * FROM emprunt;
 ``` 
 ![](data/noex1.png)
 
-Le contenu est peu lisible. Souvenons-nous du diagramme de la base de données.
+Le contenu est peu lisible : qui a emprunté quel livre ?  
+Souvenons-nous du diagramme de la base de données.
 
- ![](data/schemaDB.png)
+ ![](data/schemaDB.png){: .center width=100%}
 
  Pour que la table «emprunt» soit lisible, il faudrait (dans un premier temps) que l'on affiche à la place de l'ISBN le titre de l'ouvrage. Or ce titre est disponible dans la table «livres».  On va donc procéder à une **jointure** de ces deux tables.
 
-#### 1.3.1 Exemple 13 : jointure de deux tables 🠖 JOIN
-- **Commande :** 
-```sql
-SELECT livre.titre, emprunt.code_barre, emprunt.retour FROM emprunt
-         JOIN livre ON emprunt.isbn = livre.isbn;
-``` 
-- **Traduction :** 
-Comme plusieurs tables sont appelées, nous préfixons chaque colonne avec le nom de la table. Nous demandons ici l'affichage de la table «emprunt», mais où on aura remplacé l'ISBN (peu lisible) par le titre du livre.
+#### 1.3.1 Exemple 13 
+
+!!! note "Jointure de 2 tables : JOIN :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT livre.titre, emprunt.code_barre, emprunt.retour FROM emprunt
+            JOIN livre ON emprunt.isbn = livre.isbn;
+    ``` 
+    - **Traduction :** 
+    Comme plusieurs tables sont appelées, nous préfixons chaque colonne avec le nom de la table. Nous demandons ici l'affichage de la table «emprunt», mais où on aura remplacé l'ISBN (peu lisible) par le titre du livre.
 
 L'expression 
 ```sql
@@ -313,23 +316,25 @@ Il est donc très important de spécifier ce sur quoi les deux tables vont se re
 
 ![](data/ex13.png)
 
-#### 1.3.2 Exemple 14 : jointure de trois tables 🠖 JOIN
+#### 1.3.2 Exemple 14 
+
 
 Le résultat précédemment a permis d'améliorer la visibilité de la table «emprunt», mais il reste la colonne «code_barre» qui est peu lisible. Nous pouvons la remplacer par le titre du livre, en faisant une nouvelle jointure, en invitant maintenant les deux tables «livre» et «usager».
 
-- **Commande :** 
-```sql
-SELECT u.nom, u.prenom, l.titre, e.retour FROM emprunt AS e
-         JOIN livre AS l ON e.isbn = l.isbn
-         JOIN usager AS u ON e.code_barre = u.code_barre;
-``` 
-- **Traduction :** 
-Il faut bien comprendre que la table principale qui nous intéresse ici est «emprunts», mais qu'on modifie les valeurs affichées en allant chercher des correspondances dans deux autres tables. 
-Notez ici que des alias sont donnés aux tables (par **AS**) afin de faciliter l'écriture. 
+!!! note "Jointure de 3 tables : JOIN :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT u.nom, u.prenom, l.titre, e.retour FROM emprunt AS e
+            JOIN livre AS l ON e.isbn = l.isbn
+            JOIN usager AS u ON e.code_barre = u.code_barre;
+    ``` 
+    - **Traduction :** 
+    Il faut bien comprendre que la table principale qui nous intéresse ici est «emprunts», mais qu'on modifie les valeurs affichées en allant chercher des correspondances dans deux autres tables. 
+    Notez ici que des alias sont donnés aux tables (par **AS**) afin de faciliter l'écriture. 
 
-- **Résultat :**  
+    - **Résultat :**  
 
-![](data/ex14.png)
+    ![](data/ex14.png)
 
 ### 1.4 Exercice d'application : The SQL Murder Mystery 
 Cet exercice en ligne est proposé le Knight Lab de l'université américaine Northwerstern University.
@@ -357,39 +362,43 @@ L'objectif est de créer la table suivante :
 | 2 | Bob  | 12 | 15 | 10 |
 | 3 | Charles | 9 | 11 | 18 |
 
-#### 2.1 Exemple 15 : Création d'une table 🠖 CREATE TABLE
+#### 2.1 Exemple 15 
 
-- **Commande :** 
-```sql
-CREATE TABLE Table_notes (
-        Id INTEGER PRIMARY KEY,
-        Nom TEXT,
-        Maths INTEGER,
-        Anglais INTEGER,
-        NSI INTEGER
-        );
-``` 
-- **Remarques :** 
+*La création d'une table n'est pas explicitement au programme de NSI.*
 
-C'est l'utilisateur qui spécifie, éventuellement, quel attribut sera une clé primaire.
+!!! note "Création d'une table : CREATE TABLE :heart:"
+    - **Commande :** 
+    ```sql
+    CREATE TABLE Table_notes (
+            Id INTEGER PRIMARY KEY,
+            Nom TEXT,
+            Maths INTEGER,
+            Anglais INTEGER,
+            NSI INTEGER
+            );
+    ``` 
+    - **Remarques :** 
 
-- **Résultat :**  
-Dans DB Browser, il faut avoir au préalable créé une nouvelle base de données.
+    C'est l'utilisateur qui spécifie, éventuellement, quel attribut sera une clé primaire.
+
+    - **Résultat :**  
+    Dans DB Browser, il faut avoir au préalable créé une nouvelle base de données.
 
 ![](data/ex15.png)
 
-#### 2.2 Exemple 16 : Insertion de valeurs 🠖 INSERT INTO, VALUES
+#### 2.2 Exemple 16 
 
-- **Commande :** 
-```sql
-INSERT INTO Table_notes VALUES  (1, 'Alice', 16, 11, 17),
-		                (2, 'Bob', 12, 15, 10),
-                        (3, 'Charles', 9, 11, 18);
-``` 
+!!! note "Insertion de valeurs : INSERT INTO, VALUES :heart:"
+    - **Commande :** 
+    ```sql
+    INSERT INTO Table_notes VALUES  (1, 'Alice', 16, 11, 17),
+                            (2, 'Bob', 12, 15, 10),
+                            (3, 'Charles', 9, 11, 18);
+    ``` 
 
-- **Résultat :**  
+    - **Résultat :**  
 
-![](data/ex16.png)
+    ![](data/ex16.png)
 
 #### 2.3 Exemple 17 : Intérêt de la clé primaire
 Essayons d'insérer un 4ème enregistrement ayant le même ```id``` qu'un autre élève. 
@@ -427,34 +436,37 @@ et le résultat serait :
 L'attribut ```id``` est donc géré automatiquement par le SGBD.
 
 
-#### 2.4 Exemple 18 : Modification d'une valeur 🠖 UPDATE, SET
+#### 2.4 Exemple 18 
 
-Pour modifier la note de Maths d'Alice :
+!!! note "Modification d'une valeur UPDATE, SET :heart:"
+    Pour modifier la note de Maths d'Alice :
 
-- **Commande :** 
-```sql
-UPDATE Table_notes SET Maths = 18 WHERE Nom = 'Alice';
-``` 
+    - **Commande :** 
+    ```sql
+    UPDATE Table_notes SET Maths = 18 WHERE Nom = 'Alice';
+    ``` 
 
-#### 2.5 Exemple 19 : Suppression d'un enregistrement 🠖 DELETE
+#### 2.5 Exemple 19 
 
-Pour supprimer totalement la ligne concernant Charles :
+!!! note "Suppression d'un enregistrement : DELETE :heart:"
+    Pour supprimer totalement la ligne concernant Charles :
 
-- **Commande :** 
-```sql
-DELETE FROM Table_notes WHERE Nom = 'Charles';
-``` 
+    - **Commande :** 
+    ```sql
+    DELETE FROM Table_notes WHERE Nom = 'Charles';
+    ``` 
 
 Si une autre table contient par exemple l'attribut ```id```  comme clé étrangère, et si l'```id```  de Charles fait partie de cette table, le SGBD refusera de supprimer cette ligne, afin de ne pas violer la contrainte de référence.
 
 
-#### 2.6 Exemple 20 : Suppression totale d'une table 🠖 DROP TABLE
+#### 2.6 Exemple 20 
 
-Pour supprimer totalement et défitivement la table :
+!!! note "Suppression totale d'une table : DROP TABLE :heart:"
+    Pour supprimer totalement et défitivement la table :
 
-- **Commande :** 
-```sql
-DROP TABLE Table_notes;
-``` 
+    - **Commande :** 
+    ```sql
+    DROP TABLE Table_notes;
+    ``` 
 
 Là encore, si une autre table est reliée à ```Table_notes``` par une clé étrangère, la suppression sera bloquée par le SGBD.
