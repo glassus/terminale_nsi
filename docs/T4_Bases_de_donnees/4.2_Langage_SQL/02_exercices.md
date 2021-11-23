@@ -126,7 +126,7 @@ On considère ci-dessous le schéma de la base de données du stock d'un superma
 
 ??? note "Correction"
     ```SQL
-    SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' ;
+    SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' 
     ```
 
 
