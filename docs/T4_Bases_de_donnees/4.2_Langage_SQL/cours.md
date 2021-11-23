@@ -263,6 +263,8 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
     ![](data/ex11.png)
 
+    - **Comportement par défaut :** Si le paramètre ASC ou DESC est omis, le classement se fait par ordre **croissant** (donc ASC est le paramètre par défaut).
+
 #### 1.2.5 Exemple 12 
 
 !!! note "Suppression des doublons : DISTINCT :heart:"
