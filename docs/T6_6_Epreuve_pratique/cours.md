@@ -1058,7 +1058,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
         l’expression `x = T.pop()` enlève le sommet de la pile `T` et le place dans la variable `x` et,
         enfin, que l’expression `T.append(v)` place la valeur `v` au sommet de la pile `T`.
 
-        Compléter le code Python de la fonction positif ci-dessous qui prend une pile `T` de
+        Compléter le code Python de la fonction `positif` ci-dessous qui prend une pile `T` de
         nombres entiers en paramètre et qui renvoie la pile des entiers positifs dans le même
         ordre, sans modifier la variable `T`.
 
@@ -2027,7 +2027,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
 
 
-### Exercice 20.1 □
+### Exercice 20.1 🗹
 !!! example "Exercice 20.1"
     === "Énoncé" 
         On a relevé les valeurs moyennes annuelles des températures à Paris pour la période
@@ -2045,7 +2045,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
         Exemple :
         ```python
         >>> mini(t_moy, annees)
-        12.5, 2016
+        (12.5, 2016)
         ```
 
     === "Correction" 
@@ -2069,7 +2069,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
 
 
-### Exercice 20.2 □
+### Exercice 20.2 🗹
 !!! example "Exercice 20.2"
     === "Énoncé" 
         Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à
