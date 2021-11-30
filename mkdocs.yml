@@ -62,7 +62,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.keys
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
