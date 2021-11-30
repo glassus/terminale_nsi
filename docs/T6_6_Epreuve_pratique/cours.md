@@ -1740,7 +1740,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
 
 
-### Exercice 17.1 □
+### Exercice 17.1 🗹
 !!! example "Exercice 17.1"
     === "Énoncé" 
         Écrire une fonction `indice_du_min` qui prend en paramètre un tableau de nombres non
@@ -1774,7 +1774,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
 
 
-### Exercice 17.2 □
+### Exercice 17.2 🗹
 !!! example "Exercice 17.2"
     === "Énoncé" 
         On considère la fonction `separe` ci-dessous qui prend en argument un tableau `tab` dont
