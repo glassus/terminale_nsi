@@ -1,20 +1,17 @@
-# Dictionnaires
+# Structure de dictionnaire 
 
-![image](data/BO.png){: .center}
-
+![](data/banniere.png)
 
 ## 0. Notion de tableau associatif
 Un **tableau associatif** est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des **valeurs** à des **clés**.  
 
 Il est habituellement muni des opérations suivantes :
-
 - ajout d'une nouvelle valeur associée à une nouvelle clé (on parlera de nouveau couple clé-valeur)
 - modification d'une valeur associée à une clé existante
 - suppression d'un couple clé-valeur
 - récupération de la valeur associée à une clé donnée.
 
 Un répertoire téléphonique est un exemple de tableau associatif :
-
 - les clés sont les noms
 - les valeurs sont les numéros de téléphone
 
@@ -307,7 +304,6 @@ On peut remarquer que ce tableau laisse beaucoup de cases vides (pour plus de re
 
 
 Si je souhaite ensuite accéder à l'élément ```d["kiwis"]``` :
-
 - le hash de la chaîne ```"kiwis"``` est calculé. Par exemple, ```4512d2202```.
 - l'indice de la position (éventuelle) de la clé ```"kiwis"``` dans mon dictionnaire est calculé à partir de ce hash ```4512d2202```. Dans notre exemple, cela pourrait donner l'indice 3.
 - Python accède **directement** à cet indice du tableau :
