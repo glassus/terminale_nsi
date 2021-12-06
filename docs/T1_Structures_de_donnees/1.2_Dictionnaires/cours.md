@@ -2,7 +2,7 @@
 
 ![image](data/BO.png){: .center}
 
-Préambule : retour sur [le cours de Première](../../../../premiere_nsi/docs/T2_Representation_des_donnees/2.3_Dictionnaires/cours/).
+Préambule : retour sur [le cours de Première](../../../../premiere_nsi/T2_Representation_des_donnees/2.3_Dictionnaires/cours/).
 
 
 ## 0. Notion de tableau associatif
