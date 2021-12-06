@@ -2,6 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
+Préambule : retour sur [le cours de Première](../../../../premiere_nsi/docs/T2_Representation_des_donnees/2.3_Dictionnaires/cours/).
+
 
 ## 0. Notion de tableau associatif
 Un **tableau associatif** est un type abstrait de données (au même titre que les listes, piles, files, vues précédemment). Ce type abstrait de données a la particularité de ne pas être totalement linéaire (ou «plat») puisqu'il associe des **valeurs** à des **clés**.  
@@ -26,6 +28,10 @@ La manipulation des dictionnaires a été vue en classe de Première. Les notion
 
 Rappelons pour l'instant qu'un dictionnaire est de la forme :
 
+!!! note "Rappel de la syntaxe des dictionnaires"
+    ```python
+    
+    ```
 
 ```python
 contacts = {"Antoine":"0648653125", "Kylian":"0712369503", "Paul":"0613784596"}
