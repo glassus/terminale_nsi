@@ -24,6 +24,16 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
 
 ## 1. Dictionnaire et temps d'accès aux données 
 
+!!! aide "TP : protocole de test pour comparer les temps d'accès aux données."
+    **Indication :** on utilisera la fonction ```time.time()``` (après avoir importé le module ```time```) qui donne le nombre de secondes (à $10^{-7}$ près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée [Heure Unix](https://fr.wikipedia.org/wiki/Heure_Unix) ou [Temps Posix](https://fr.wikipedia.org/wiki/Heure_Unix)).
+    ```python
+    >>> import time
+    >>> time.time()
+    1639001177.0923798
+    ```
+
+<!--
+
 
 ### 1.1 Préparation des mesures
 
@@ -301,7 +311,7 @@ mondico[[2,5]] = "loulou"
     <ipython-input-1-585560b5c422> in <module>
           8 
           9 # une liste peut-elle être une clé ?
-    ---> 10 mondico[[2,5]] = "loulou"
+    - 10 mondico[[2,5]] = "loulou"
     
 
     TypeError: unhashable type: 'list'
@@ -667,3 +677,6 @@ mot = "vacances"
 ```python
 
 ```
+
+
+-->
