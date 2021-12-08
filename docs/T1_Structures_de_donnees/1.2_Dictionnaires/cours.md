@@ -20,38 +20,10 @@ Un répertoire téléphonique est un exemple de tableau associatif :
 - les clés sont les noms
 - les valeurs sont les numéros de téléphone
 
-En Python, il existe nativement une structure de tableau associatif : le **dictionnaire**.
+En Python, le **dictionnaire** est une structure native de tableau associatif.
 
 ## 1. Dictionnaire et temps d'accès aux données 
 
-La manipulation des dictionnaires a été vue en classe de Première. Les notions abordées sont rappelées à la fin de ce cours.  
-
-Rappelons pour l'instant qu'un dictionnaire est de la forme :
-
-!!! note "Rappel de la syntaxe des dictionnaires"
-    ```python
-    
-    ```
-
-```python
-contacts = {"Antoine":"0648653125", "Kylian":"0712369503", "Paul":"0613784596"}
-```
-
-et qu'on accède aux valeurs par la syntaxe :
-
-
-```python
-contacts["Kylian"] 
-```
-
-
-
-
-    '0712369503'
-
-
-
-Intéressons-nous à la problématique du temps d'accès aux données, par une petite expérience permise par le module ```timeit``` de Python.
 
 ### 1.1 Préparation des mesures
 
@@ -72,35 +44,15 @@ def fabrique_dict(nb):
 
 
 ```python
-lst = fabrique_liste(10)
-dct = fabrique_dict(10)
+>>> lst = fabrique_liste(10)
+>>> dct = fabrique_dict(10)
+>>> lst
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> dct
+{0: 42, 1: 42, 4: 42, 9: 42, 16: 42, 25: 42, 36: 42, 49: 42, 64: 42, 81: 42}
 ```
 
-
-```python
-lst
-```
-
-
-
-
-    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-
-
-
-```python
-dct
-```
-
-
-
-
-    {0: 42, 1: 42, 4: 42, 9: 42, 16: 42, 25: 42, 36: 42, 49: 42, 64: 42, 81: 42}
-
-
-
-Le contenu de ces listes ou dictionnaires n'a pas grand intérêt. Dans nos mesures, on y cherchera une valeur qui n'y figure pas : la chaîne de caractères ```"a"```. On dit qu'on se place dans *le pire des cas*.
+Le contenu de ces listes ou dictionnaires n'a pas grand intérêt. Dans nos mesures, on y cherchera une valeur qui n'y figure pas : la chaîne de caractères ```"a"```. On dit qu'on se place dans **le pire des cas**.
 
 ### 1.2 Mesures des temps de recherche
 
