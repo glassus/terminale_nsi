@@ -32,7 +32,7 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
     1639001177.0923798
     ```
 
-<!--
+
 
 
 ### 1.1 Préparation des mesures
@@ -179,9 +179,14 @@ On retrouve avec 10000 valeurs le même temps de recherche qu'avec 10 valeurs.
 
 On remarque donc que le temps moyen est remarquablement **constant**. Il ne dépend pas du nombre d'éléments du dictionnaire dans lequel on cherche. On dit qu'il est en $O(1)$.
 
->Il y a donc une différence fondamentale à connaître entre les temps de recherche d'un éléments à l'intérieur :
-- d'une **liste** : temps **proportionnel** à la taille de la liste.
-- d'un **dictionnaire** : temps **constant**, indépendant de la taille de la liste.
+!!! note "Temps de recherche :heart:"
+    Il y a donc une différence fondamentale à connaître entre les temps de recherche d'un éléments à l'intérieur :
+
+    - d'une **liste** : temps **proportionnel** à la taille de la liste.
+    - d'un **dictionnaire** : temps **constant**, indépendant de la taille de la liste.
+
+
+Attention : en ce qui concerne **les temps d'accès** à un élément, la structure de tableau dynamique des listes de Python fait que ce temps d'accès est aussi en temps constant (comme pour les dictionnaires). On voit alors que les listes Python ne sont pas des *listes chaînées*, où le temps d'accès à un élément est directement proportionnel à la position de cet élément dans la liste.
 
 ### 1.3 Fonctions de hachage  *(hors-programme)*
 Tout ce qui suit est hors-programme de Terminale, mais permet de comprendre comment Python arrive à faire de la recherche en temps constant quelle que soit la taille du dictionnaire.
@@ -201,7 +206,7 @@ Pour comprendre cela nous allons faire un petit détour par les **fonctions de h
 Lorsque vous téléchargez un fichier important et que vous souhaitez vérifier qu'il n'a pas été corrompu lors du téléchargement (ou avant), vous avez parfois la possibilité de vérifier l'intégrité de votre fichier téléchargé, en calculant une «empreinte» de votre fichier et en la comparant avec celle que vous êtes censée obtenir :
 
 Voilà par exemple ce qui apparaît sur la page de téléchargement d'une iso d'ubuntu 18.04 :
-![](data/iso.png)
+![](data/iso.png){: .center}
 
 La clé MD5 proposée pour chaque fichier est le résultat ce que **doit** donner le fichier (ici une iso d'environ 1,9 Go) lorsqu'il est «haché» par la fonction MD5. Dans notre cas, si nous téléchargeons 
 ```ubuntu-18.04.3-desktop-amd64.iso```, nous devons calculer l'empreinte du fichier téléchargé et vérifier que nous obtenons bien ```72491db7ef6f3cd4b085b9fe1f232345``` :
@@ -209,29 +214,29 @@ La clé MD5 proposée pour chaque fichier est le résultat ce que **doit** donne
 
 Essayons :
 
-![](data/check_iso.png)
+![](data/check_iso.png){: .center}
 
 La clé calculée sur l'ordinateur correspond bien à celle indiquée sur le site de téléchargement : le fichier est intègre.
 
 
 **Que fait la fonction de hachage MD5 ?**
 
-![](data/md5iso.png)
+![](data/md5iso.png){: .center}
 
 
 Quelle que soit la taille du fichier donné en entrée, la fonction MD5 va le réduire à un mot de 128 bits.
 Ce mot binaire de 128 bits est représenté par une chaîne de 32 caractères (en hexadécimal, de 0 à f). Il y a donc $2^{128}$ (de l'ordre de $10^{39}$) empreintes MD5 différentes, ce qui rend quasiment impossible le fait d'avoir un mauvais fichier qui donnerait (par un très très mauvais hasard) la bonne empreinte.
 
-Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée [ici](http://www.bibmath.net/crypto/index.php?action=affiche&quoi=moderne/md5).
+Le mécanisme effectif de calcul de la fonction MD5 est très complexe : une explication en est donnée [ici](http://www.bibmath.net/crypto/index.php?action=affiche&quoi=moderne/md5){:target="_blank".
 
 
 Il est évidemment **impossible** de revenir en arrière et de recréer le fichier original à partir de l'empreinte MD5. Dans le cas contraire, cela voudrait dire qu'on est capable de compresser *sans perte* un fichier de 1,9 Go en une chaîne de 128 bits. Cette impossibilité de trouver une fonction réciproque à la fonction de hachage est très importante en cryptographie.
 
 En effet, les simples chaînes de caractères peuvent aussi être transformées par une fonction de hachage :
-![](data/terminal.png)
+![](data/terminal.png){: .center}
 
 
-![](data/md5.png)
+![](data/md5.png){: .center}
 
 Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !
 
@@ -245,7 +250,7 @@ De cette façon, si les communications entre le client et le serveur sont interc
 
 **Non-réversibilité de la fonction de hachage, vraiment ?** 
 
-Prenons l'empreinte MD5 ```bdc87b9c894da5168059e00ebffb9077``` et allons fureter du côté de (par exemple) https://md5hashing.net/hash/md5 
+Prenons l'empreinte MD5 ```bdc87b9c894da5168059e00ebffb9077``` et allons fureter du côté de (par exemple) [https://md5.gromweb.com/](https://md5.gromweb.com/){:target="_blank"}
 
 Notre empreinte ne résiste pas bien longtemps...  
 Re-essayons alors avec l'empreinte  ```e74fb2f94c052bbf16cea4a795145e35```.
@@ -253,7 +258,7 @@ Re-essayons alors avec l'empreinte  ```e74fb2f94c052bbf16cea4a795145e35```.
 
 Les empreintes des mots de passe les plus fréquents sont stockées dans des tables (qu'on appelle *rainbow tables* ou *tables arc-en-ciel*) qui rendent possibles le déchiffrage de ces empreintes.
 
-Pour contrer cela, les cryptographes rajoutent des caractères avant hachage (le *sel*), et choisissent surtout des bonnes fonctions de hachage. MD5 et SHA-1 ne sont plus utilisées, on préfère maintenant SHA-256 (voir [ici](https://fr.wikipedia.org/wiki/Secure_Hash_Algorithm)).
+Pour contrer cela, les cryptographes rajoutent des caractères avant hachage (le *sel*), et choisissent surtout des bonnes fonctions de hachage. MD5 et SHA-1 ne sont plus utilisées, on préfère maintenant SHA-256 (voir [ici](https://fr.wikipedia.org/wiki/Secure_Hash_Algorithm){:target="_blank"}).
 
 ### 1.4 Retour aux dictionnaires
 En quoi les fonctions de hachage ont-elles un rôle à jouer dans l'implémentation d'un dictionnaire ?  
@@ -269,9 +274,9 @@ d = {"pommes":3, "poires":0, "bananes":5}
 
 serait donc par exemple implémenté dans un tableau comme celui-ci :
 
-![](data/hashdico.png)
+![](data/hashdico.png){: .center}
 
-On peut remarquer que ce tableau laisse beaucoup de cases vides (pour plus de renseignements, voir [https://www.jessicayung.com/how-python-implements-dictionaries/](https://www.jessicayung.com/how-python-implements-dictionaries/) )
+On peut remarquer que ce tableau laisse beaucoup de cases vides (pour plus de renseignements, voir [https://www.jessicayung.com/how-python-implements-dictionaries/](https://www.jessicayung.com/how-python-implements-dictionaries/){:target="_blank"} )
 
 
 Si je souhaite ensuite accéder à l'élément ```d["kiwis"]``` :
@@ -349,334 +354,3 @@ print(id(a))
 
 
 Un variable contenant un entier est donc un objet **immuable** car si on modifie la valeur de l'entier, la référence de la variable changera aussi. Comme un dictionnaire a besoin d'avoir des clés dont les références soient définitives, seuls les objets **immuables** peuvent donc servir de clés dans les dictionnaires.
-
-## 2. (pour rappel) Manipulation des dictionnaires
-*tout ce qui suit provient directement du cours de Première*
-
-
-```python
-dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
-```
-
-
-```python
-dressing["pulls"]
-```
-
-
-
-
-    4
-
-
-
-
-```python
-vocabulaire = {"navigateur":"browser", "précédent":"back", "suivant":"forward"}
-```
-
-
-```python
-vocabulaire["suivant"]
-```
-
-
-
-
-    'forward'
-
-
-
-
-```python
-AlanTuring = {"naissance":(23,6,1912),"décès":(12,6,1954),"lieu naissance":"Londres", "lieu décès":"Wilmslow"}
-```
-
-
-```python
-AlanTuring["décès"]
-```
-
-
-
-
-    (12, 6, 1954)
-
-
-
-# Définition d'un dictionnaire
-Un dictionnaire est une donnée composite qui **n'est pas ordonnée**.  
-Il fonctionne par un système de `clé:valeur`.  
-Les clés, comme les valeurs, peuvent être de types différents.
-Un dictionnaire est délimité par des accolades.  
-Rappel :
-- crochets [ ] -> listes
-- parenthèses ( ) -> tuples
-- accolades { } -> dictionnaires
-
-
-
-```python
-vocabulaire
-```
-
-
-
-
-    {'navigateur': 'browser', 'précédent': 'back', 'suivant': 'forward'}
-
-
-
-
-```python
-type(vocabulaire)
-```
-
-
-
-
-    dict
-
-
-
-Il est possible d'obtenir la liste des clés et des valeurs avec la méthode `keys()` et la méthode `values`.
-
-
-```python
-dressing.keys()
-```
-
-
-
-
-    dict_keys(['pantalons', 'pulls', 'tee-shirts'])
-
-
-
-
-```python
-vocabulaire.values()
-```
-
-
-
-
-    dict_values(['browser', 'back', 'forward'])
-
-
-
-## Création d'un dictionnaire vide
-On crée un dictionnaire vide par l'instruction :
-
-
-```python
-monDico = dict()
-```
-
-
-```python
-type(monDico)
-```
-
-
-
-
-    dict
-
-
-
-ou plus simplement de cette manière :
-
-
-```python
-unAutreDico = {}
-```
-
-
-```python
-type(unAutreDico)
-```
-
-
-
-
-    dict
-
-
-
-## Ajout / Modification d'un élément dans un dictionnaire
-Pas besoin d'une méthode `append()`, il suffit de rajouter une paire `clé : valeur`
-
-
-```python
-dressing["chaussettes"] = 12
-```
-
-
-```python
-dressing
-```
-
-
-
-
-    {'pantalons': 3, 'pulls': 4, 'tee-shirts': 8, 'chaussettes': 12}
-
-
-
-On peut évidemment modifier un dictionnaire existant (ce n'est pas un tuple !)
-
-
-```python
-dressing["chaussettes"] = 11
-```
-
-
-```python
-dressing
-```
-
-
-
-
-    {'pantalons': 3, 'pulls': 4, 'tee-shirts': 8, 'chaussettes': 11}
-
-
-
-## Suppression d'une valeur
-On utilise l'instruction `del` (déjà rencontrée pour les listes)
-
-
-```python
-del dressing["chaussettes"]
-```
-
-
-```python
-dressing
-```
-
-
-
-
-    {'pantalons': 3, 'pulls': 4, 'tee-shirts': 8}
-
-
-
-## Exercice :
-Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
-
-
-```python
-def achat(habit):
-    dressing[habit] = dressing[habit] + 1
-
-```
-
-Utilisation :
-
-
-```python
-print(dressing)
-achat("pantalons")
-print(dressing)
-```
-
-    {'pantalons': 3, 'pulls': 4, 'tee-shirts': 8}
-    {'pantalons': 4, 'pulls': 4, 'tee-shirts': 8}
-
-
-##  Test d'appartenance à un dictionnaire
-Le mot `in` permet de tester l'appartenance d'une clé à un dictionnaire. Un booléen est renvoyé.
-
-
-```python
-"cravates" in dressing
-```
-
-
-
-
-    False
-
-
-
-
-```python
-"pulls" in dressing
-```
-
-
-
-
-    True
-
-
-
-## Utilisation de `in` pour d'autres types construits (listes, tuples, chaines de caractères...)
-
-
-```python
-voyelles = ("a", "e", "i", "o", "u", "y")
-```
-
-
-```python
-"y" in voyelles
-```
-
-
-
-
-    True
-
-
-
-
-```python
-"z" in voyelles
-```
-
-
-
-
-    False
-
-
-
-
-```python
-mot = "vacances"
-"k" in mot
-```
-
-
-
-
-    False
-
-
-
-
-
----
-## Bibliographie
-
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
-- Site d'Olivier Lécluse : [https://www.lecluse.fr/nsi/NSI_T/donnees/dico/](https://www.lecluse.fr/nsi/NSI_T/donnees/dico/)  
-*Merci pour tout Olivier.*
-
-
----
-
-![](data/ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
-
-
-
-```python
-
-```
-
-
--->
