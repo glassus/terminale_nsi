@@ -4,7 +4,7 @@
 
 
 ## 0. Du modèle relationnel au SGBD
-Les considérations sur le modèle relationnel du [cours précédent](../4.1_Modele_relationnel/cours.md) traitaient plutôt de la structure mathématique des données. 
+Les considérations sur le modèle relationnel du [cours précédent](../../4.1_Modele_relationnel/cours/) traitaient plutôt de la structure mathématique des données. 
 
 Il s'agissait de déterminer la meilleure structure pour représenter les données et les relations qui les lient. 
 
