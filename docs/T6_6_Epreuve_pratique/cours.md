@@ -725,7 +725,7 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
 
 
 
-### Exercice 07.1 □
+### Exercice 07.1 🗹
 !!! example "Exercice 07.1"
     === "Énoncé" 
         On s’intéresse à la suite d’entiers définie par
