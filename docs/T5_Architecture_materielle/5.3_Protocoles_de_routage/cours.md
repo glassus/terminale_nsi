@@ -94,6 +94,10 @@ OSPF : *Open Shortest Path First*
 
 Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.
 
+![image](data/matrix.jpeg){: .center width=30%}
+
+
+
 !!! abstract "principe fondamental du protocole OSPF :heart:"
     Le chemin le plus rapide n'est pas forcément le plus court.
 
