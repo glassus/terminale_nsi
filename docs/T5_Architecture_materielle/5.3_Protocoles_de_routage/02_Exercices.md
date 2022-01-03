@@ -64,16 +64,13 @@ def test_meme_sous_reseau():
 
 On considère un réseau composé de plusieurs routeurs reliés de la façon suivante :
 
+![image](data/ex1.png){: .center width=40%}
 
-<p align="center">
-<img src="data/ex1.png" width=40%/> 
-</p>
+
 
 Le protocole RIP permet de construire les tables de routage des différents routeurs, en indiquant pour chaque routeur la distance, en nombre de sauts, qui le sépare d’un autre routeur. Pour le réseau ci-dessus, on dispose des tables de routage suivantes :
 
-<p align="center">
-<img src="data/ex2.png" width=80%/> 
-</p>
+![image](data/ex2.png){: .center width=80%}
 
 **Question 1**
 
@@ -83,7 +80,7 @@ sauts. Déterminer le trajet parcouru.
 
 **Question 2**
 
- Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en suivant le
+Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en suivant le
 protocole RIP.
 
 
@@ -92,9 +89,7 @@ protocole RIP.
 On représente ci-dessous un réseau dans lequel R1, R2, R3, R4, R5 et R6 sont des
 routeurs. Le réseau local L1 est relié au routeur R1 et le réseau local L2 au routeur R6.
 
-<p align="center">
-<img src="data/bac1.png" width=70%/> 
-</p>
+![image](data/bac1.png){: .center width=70%}
 
 
 Dans cet exercice, les adresses IP sont composées de 4 octets, soit 32 bits. Elles sont notées X1.X2.X3.X4, où X1, X2, X3 et X4 sont les valeurs des 4 octets, convertis en notation décimale.
@@ -104,9 +99,7 @@ Toutes les adresses des hôtes connectés à un réseau local ont la même parti
 On donne également des extraits de la table de routage des routeurs R1 à R5 dans le
 tableau suivant :
 
-<p align="center">
-<img src="data/bac2.png" width=70%/> 
-</p>
+![image](data/bac2.png){: .center width=70%}
 
 1. Un paquet part du réseau local L1 à destination du réseau local L2.
 
@@ -125,16 +118,12 @@ Par ailleurs, pour tenir compte du débit des liaisons, on décide d’utiliser 
 protocole OSPF (distance liée au coût minimal des liaisons) pour effectuer le
 routage. Le coût des liaisons entre les routeurs est donné par le tableau suivant :
 
-<p align="center">
-<img src="data/bac3.png" width=90%/> 
-</p>
+![image](data/bac3.png){: .center width=90%}
 
 a. Le coût _C_ d’une liaison est donné ici par la formule
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=\large C = \frac{10^9}{BP}">
-</p>
+$$C = \frac{10^9}{BP}$$
 
-où *BP* est la bande passante de la connexion en bps (bits par seconde).
+où $BP$ est la bande passante de la connexion en bps (bits par seconde).
 Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.
 
 
@@ -154,7 +143,7 @@ La figure 1 ci-dessus représente le schéma d’un réseau d’entreprise. Il y
 
  Le tableau 1 suivant indique les adresses IPv4 des machines constituants le réseau de l’entreprise.
 
- | <img src="data/ex3_2.png" width=90%/>  | 
+ | ![](data/ex3_2.png)  | 
 |:--:| 
 | *Tableau 1 : adresses IPv4 des machines* |
 
@@ -184,7 +173,7 @@ b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Do
 
 c. La bande passante d’une liaison Ether (quantité d’information qui peut être transmise en bits/s) est de 10\^7 bits/s et celle d’une liaison FastEther est de 10\^8 bits/s. Le coût d’une liaison est défini par 10^8 / d , où d est sa bande passante en bits/s.
 
- | <img src="data/ex3_3.png" width=90%/>  | 
+ | ![](data/ex3_3.png)  | 
 |:--:| 
 | *Tableau 2 : type des liaisons entre les routeurs* |
 
@@ -193,6 +182,4 @@ Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût 
 3. Dans l’annexe A figurent les tables de routages des routeurs R1, R2, R5 et R6 au
 démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lignes laissées vides des tables de routage des routeurs R5 et R6 pour que les échanges entre les ordinateurs des réseaux L1 et L2 se fassent en empruntant le chemin le plus court en nombre de sauts.
 
-<p align="center">
-<img src="data/ex3_4.png" width=90%/> 
-</p>
+![](data/ex3_4.png)

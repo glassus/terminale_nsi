@@ -62,21 +62,23 @@ _voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.co
 Le Routing Information Protocol est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.
 Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.
 
-Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il est connecté :
+Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il est connecté, suivant les règles ci-dessous :
 
-- s'il découvre une route vers un nouveau réseau inconnu, il l'ajoute à sa table en augmentant de 1 la distance annoncée par le routeur qui lui a transmis sa table.
+!!! abstract "les règles du protocole RIP :heart:"
+    - s'il découvre une route vers un nouveau réseau inconnu, il l'ajoute à sa table en augmentant de 1 la distance annoncée par le routeur qui lui a transmis sa table.
 
-- s'il découvre une route vers un réseau connu mais plus courte (en rajoutant 1) que celle qu'il possède dans sa table,  il actualise sa table.
+    - s'il découvre une route vers un réseau connu mais plus courte (en rajoutant 1) que celle qu'il possède dans sa table,  il actualise sa table.
 
-- s'il découvre une route vers un réseau connu mais plus longue que celle qu'il possède dans sa table, il ignore cette route.
+    - s'il découvre une route vers un réseau connu mais plus longue que celle qu'il possède dans sa table, il ignore cette route.
 
-- s'il reçoit une route vers un réseau connu en provenance d'un routeur déjà existant dans sa table, s'il met à jour sa table car la topologie du réseau a été modifiée.
+    - s'il reçoit une route vers un réseau connu en provenance d'un routeur déjà existant dans sa table, s'il met à jour sa table car la topologie du réseau a été modifiée.
 
-- si le réseau n'évolue pas (panne ou ajout de nouveau matériel), les tables de routage _convergent_ vers une valeur stable. Elles n'évoluent plus.
+    - si le réseau n'évolue pas (panne ou ajout de nouveau matériel), les tables de routage _convergent_ vers une valeur stable. Elles n'évoluent plus.
 
-- si un routeur ne reçoit pas pendant 3 minutes d'information de la part d'un routeur qui lui avait auparavant communiqué sa table de routage, ce routeur est considéré comme en panne, et toutes les routes passant par lui sont affectées de la distance infinie : 16.
+    - si un routeur ne reçoit pas pendant 3 minutes d'information de la part d'un routeur qui lui avait auparavant communiqué sa table de routage, ce routeur est considéré comme en panne, et toutes les routes passant par lui sont affectées de la distance infinie : 16.
 
-**Remarques et incovénients:** 
+**Remarques et inconvénients:** 
+
 - Le protocole RIP n'admet qu'une distance maximale égale à 15 (ceci explique que 16 soit considéré comme la distance infinie), ce qui le limite aux réseaux de petite taille.
 
 - Chaque routeur n'a jamais connaissance de la topologie du réseau tout entier : il ne le connaît que par ce que les autres routeurs lui ont raconté. On dit que ce protocole de routage est du _routing by rumor_.
@@ -89,17 +91,21 @@ Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il 
 
 OSPF : *Open Shortest Path First*
 
+
 Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.
 
-En voiture, le chemin le plus rapide n'est pas forcément le plus court.
+!!! abstract "principe fondamental du protocole OSPF :heart:"
+    Le chemin le plus rapide n'est pas forcément le plus court.
 
+![image](data/maps.png){: .center width=40%}
 
-<p align="center">
-<img src="data/maps.png" , width=60%/> 
-</p>
-
-_En gris, le chemin RIP. En bleu, l'OSPF._
-
+<div>
+<center>
+<i>
+En gris, le chemin RIP. En bleu, l'OSPF.
+</i>
+</center>
+</div>
 
 
 
@@ -113,7 +119,6 @@ Dans une première phase d'initialisation, chaque routeur va acquérir (par succ
 #### 3.1 Les différents types de liaison et leur coût
 On peut, approximativement, classer les types de liaison suivant ce tableau de débits **théoriques** :
 
-<p align="center">
 
 | Technologie | BP descendante | BP montante |
 |-|-|-|
@@ -128,17 +133,16 @@ On peut, approximativement, classer les types de liaison suivant ce tableau de d
 | FFTH (fibre) | 10 Gbit/s | 10 Gbit/s |
 | 5G | 20 Gbit/s | 10 Gbit/s |
 
-</p>
+
 
 L'idée du protocole OSPF est de pondérer chaque trajet entre routeurs (comptant simplement pour «1» dans le protocole RIP) par une valeur de **coût** inversement proportionnelle au débit de transfert.
 
-Par exemple, si le débit _d_ est exprimé en bits/s, on peut calculer le coût de chaque liaison par la formule :
+Par exemple, si le débit $d$ est exprimé en bits/s, on peut calculer le coût de chaque liaison par la formule :
 
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=\large \text{coût} = \frac{10^8}{d}">
-</p>
+$$ \text{coût} = \frac{10^8}{d} $$
 
-Cette formule de calcul peut être différente suivant les exercices, et sera systématiquement redonnée. Néanmoins la valeur _d_ sera toujours au dénominateur, pour assurer la proportionnalité inverse du débit.
+
+Cette formule de calcul peut être différente suivant les exercices, et sera systématiquement redonnée. Néanmoins la valeur $d$ sera toujours au dénominateur, pour assurer la proportionnalité inverse du débit.
 
 
 Avec cette convention, un route entre deux routeurs reliés en Fast Ethernet (100 Mbits/s) aura a un poids de 1, une liaison satellite de 20 Mbits/s aura un poids de 5, etc.
@@ -147,23 +151,24 @@ Avec cette convention, un route entre deux routeurs reliés en Fast Ethernet (10
 
 Reprenons le réseau suivant :
 
-<p align="center">
-<img src="data/tables.png" , width=80%/> 
-</p>
+![image](data/tables.png){: .center  width=60%}
+
 
 et simplifions-le en ne gardant que les liens entre routeurs, en indiquant leur débit :
 
-<p align="center">
-<img src="data/ospf1.png" , width=80%/> 
-</p>
 
-Notre réseau est devenu un **graphe**. Nous allons pondérer ses arêtes avec la fonction coût introduite précédemment. L'unité étant le Mbit/s, l'arête entre R1 et R3 aura un poids de 100/20=5.
+![image](data/ospf1.png){: .center width=60%}
+
+
+Notre réseau est devenu un **graphe**. 
+
+Nous allons pondérer ses arêtes avec la fonction coût introduite précédemment. L'unité étant le Mbit/s, l'arête entre R1 et R3 aura un poids de $\frac{100}{20}=5$.
 
 Le graphe pondéré est donc :
 
-<p align="center">
-<img src="data/ospf2.png" , width=80%/> 
-</p>
+
+![image](data/ospf2.png){: .center width=60%}
+
 
 Le chemin le plus rapide pour aller de l'ordinateur au serveur est donc R1-R2-R4, et non plus R1-R3 comme l'aurait indiqué le protocole RIP.
 
@@ -175,30 +180,29 @@ La réponse est **oui**, depuis la découverte en 1959 par Edsger Dijkstra de l'
 Pour le comprendre, vous pouvez regarder la vidéo d'un célèbre YouTuber :
 
 <p align="center">
-<a href="https://www.youtube.com/watch?v=rI-Rc7eF4iw">
-<img src="data/yt.png" , width=80%/> 
-</a>
+<iframe width="790" height="372" src="https://www.youtube.com/embed/rI-Rc7eF4iw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. Et c'est donc grâce à lui que chaque routeur calcule la route la plus rapide pour acheminer les données qu'il reçoit.
 
-**Exemple** d'application de l'algorithme de Dijkstra :
+!!! abstract "Exercice d'application de l'algorithme de Dijkstra (HP)"
+    === "Énoncé"
+        Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
+        ![image](data/graph.png){: .center width=60%}
+    === "Correction"
+        
 
-<p align="center">
-<img src="data/graph.png" , width=60%/> 
-</p>
 
-Donner le plus court chemin pour aller de E à F.
+
+
+
 
 ### 3.4 Exercice
 _(extrait du sujet 0)_
 
 On considère le réseau suivant :
 
-
-<p align="center">
-<img src="data/ex3.png" width=50%/> 
-</p>
+![image](data/ex3.png){: .center width=40%}
 
 
 
@@ -223,10 +227,10 @@ _[Correction](data/corr_tab.png) du tableau de l'algorithme de Dijkstra_
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-- Site d'Olivier Lécluse https://www.lecluse.fr/nsi/NSI_T/archi/routage/
+!!! aide "Bibliographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
+    - Site d'Olivier Lécluse [https://www.lecluse.fr/nsi/NSI_T/archi/routage/](https://www.lecluse.fr/nsi/NSI_T/archi/routage/)
 
 
 ---
