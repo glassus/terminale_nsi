@@ -1549,6 +1549,8 @@ Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci
         "
         ```python linenums='1'
         def rechercheMinMax(tab):
+            if tab == []:
+                return {'min': None, 'max': None}
             d = {}
             d['min'] = None
             d['max'] = None
