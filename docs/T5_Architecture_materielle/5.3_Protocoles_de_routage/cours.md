@@ -212,9 +212,9 @@ On considère le réseau suivant :
 
 On rappelle que le coût d’une liaison est donné par la formule suivante :
 
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=\large \text{coût} = \frac{10^8}{d}">
-</p>
+
+$$ \text{coût} = \frac{10^8}{d} $$
+
 
 **Question 1**
 
@@ -226,7 +226,10 @@ On rappelle que le coût d’une liaison est donné par la formule suivante :
 
 Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
 
-_[Correction](data/corr_tab.png) du tableau de l'algorithme de Dijkstra_
+??? aide "Correction Dijkstra"
+    ![image](data/.png){: .center}
+    
+    [Correction](data/corr_tab.png) du tableau de l'algorithme de Dijkstra
 
 
 
