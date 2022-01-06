@@ -227,9 +227,8 @@ $$ \text{coût} = \frac{10^8}{d} $$
 Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
 
 ??? aide "Correction Dijkstra"
-    ![image](data/.png){: .center}
+    ![image](data/corr_tab.png){: .center}
     
-    [Correction](data/corr_tab.png) du tableau de l'algorithme de Dijkstra
 
 
 
