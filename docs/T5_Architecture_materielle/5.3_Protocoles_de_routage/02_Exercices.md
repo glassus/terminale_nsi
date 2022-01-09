@@ -61,6 +61,7 @@ def test_meme_sous_reseau():
 
 
 ### Exercice 2
+_2020, sujet 0_
 
 On considère un réseau composé de plusieurs routeurs reliés de la façon suivante :
 
@@ -85,6 +86,7 @@ protocole RIP.
 
 
 ### Exercice 3
+_2021, sujet Métropole 1_
 
 On représente ci-dessous un réseau dans lequel R1, R2, R3, R4, R5 et R6 sont des
 routeurs. Le réseau local L1 est relié au routeur R1 et le réseau local L2 au routeur R6.
@@ -134,6 +136,7 @@ c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modi
 
 
 ### Exercice 4
+_2021, sujet Métropole 2_
 
 | ![](data/ex3_1.png) | 
 |:--:| 
