@@ -133,7 +133,7 @@ b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivan
 
 c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.
 
-!!! tip "Correction"
+??? tip "Correction"
     1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2.  
     1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2.  
     2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6.  
@@ -197,7 +197,7 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
 
 ![](data/ex3_4.png)
 
-!!! tip "Correction"
+??? tip "Correction"
     1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16.   
     1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
     Pour le réseau L2 (175.6.0.0/16), l'adresse min est 175.6.0.1/16 et l'adresse max est 175.6.255.254/16  
