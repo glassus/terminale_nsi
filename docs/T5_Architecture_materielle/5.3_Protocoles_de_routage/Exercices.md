@@ -60,6 +60,58 @@ def test_meme_sous_reseau():
 ```
 
 
+??? tip "Correction"
+    Exercice difficile, il n'est pas à savoir faire mais c'est bien de le comprendre !
+    ```python
+    def convert_ip_to_list(ip):
+        """
+        entrée : ip (string) 
+        sortie : liste d'entiers
+        """
+        return [int(k) for k in ip.split(".")]
+
+    def test_convert_ip_to_list():
+        assert convert_ip_to_list('192.168.0.1') == [192, 168, 0, 1]
+
+
+    def nb_to_binary_word(masque):
+        """
+        entrée : masque (int)
+        sortie : string
+        """
+        return '1'*masque + '0'*(32-masque)
+
+    def test_nb_convert_to_binary_word():
+        assert nb_to_binary_word(24) == '11111111111111111111111100000000'
+
+
+    def binary_word_to_list(word):
+        """
+        entrée : word (string de 32 caractères)
+        sortie : liste de 4 entiers
+        """
+        decoupe = [word[8*i:8*(i+1)] for i in range(4)]
+        return [int(k,2) for k in decoupe]
+
+    def test_binary_word_to_list():
+        assert binary_word_to_list('11111111111111111111111100000000') == [255, 255, 255, 0]
+
+    def meme_sous_reseau(ip_a, ip_b, masque):
+        lstA = convert_ip_to_list(ip_a)
+        lstB = convert_ip_to_list(ip_b)
+        mask = binary_word_to_list(nb_to_binary_word(masque))
+        resA = [lstA[i] & mask[i] for i in range(4)]
+        resB = [lstB[i] & mask[i] for i in range(4)]
+        return resA == resB
+
+    def test_meme_sous_reseau():
+        assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 24) == False
+        assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 20) == True
+        assert meme_sous_reseau("192.168.0.1", "192.168.0.3", 30) == True
+
+    ```
+
+
 ## Exercice 2
 _2020, sujet 0_
 
