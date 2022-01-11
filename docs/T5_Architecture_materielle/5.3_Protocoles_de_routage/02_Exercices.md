@@ -219,7 +219,6 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
     |192.168.1.0/24|10.1.3.1|Interface 1|
     |172.16.0.0/16|10.1.7.2|Interface 4|  
     
-    (ou bien 10.1.7.3 ou autre chose)
 
      Dans la table R6, il manque les lignes
 
