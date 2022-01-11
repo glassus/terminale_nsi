@@ -137,6 +137,32 @@ Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en su
 protocole RIP.
 
 
+??? tip "Correction"
+    **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
+    **Q1.2.** 
+    Table de routage de G :  
+
+    | Destination | Routeur suivant | Distance |
+    |:--:|:--:|:--:|
+    |A|F|3|    
+    |B|E|3|
+    |C|E|2|
+    |D|E|2|
+    |E|E|1|
+    |F|F|1|
+
+    **Q2**  
+    Nouvelle table de routage de A :  
+
+    | Destination | Routeur suivant | Distance |
+    |:--:|:--:|:--:|
+    |B|B|1|
+    |D|D|1|
+    |E|D|2|
+    |G|D|3|
+    |F|D|4|
+
+
 ## Exercice 3
 _2021, sujet Métropole 1_
 
@@ -283,4 +309,21 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
 ## Exercice 5
 _2021, sujet Amérique du Nord_
 
-![image](data/capAN.png){: .center}
+Un constructeur automobile possède six sites de production qui échangent des documents entre eux. Les sites de production sont reliés entre eux par six routeurs A, B, C, D, E et F.  
+On donne ci-dessous les tables de routage des routeurs A à F obtenues avec le protocole RIP.
+
+![image](data/tabAN.png){: .center}
+
+1. Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.
+2. On veut représenter schématiquement le réseau de routeur à partir des tables de routage. 
+Recopier sur la copie le schéma ci-dessous : 
+
+![image](data/graphAN.png){: .center}
+
+En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
+
+??? tip "Correction"
+    1. A-B-E-F  
+    2.
+    ![image](data/graphAN_corr.png){: .center}
+    
