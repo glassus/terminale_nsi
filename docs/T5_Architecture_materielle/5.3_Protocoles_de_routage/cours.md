@@ -190,15 +190,22 @@ Pour le comprendre, vous pouvez regarder la vidéo d'un célèbre YouTuber :
 Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. Et c'est donc grâce à lui que chaque routeur calcule la route la plus rapide pour acheminer les données qu'il reçoit.
 
 !!! abstract "Exercice d'application de l'algorithme de Dijkstra (HP)"
-    === "Énoncé"
-        Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
-        ![image](data/graph.png){: .center width=60%}
-    === "Correction"
-        
+    
+    Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
+    ![image](data/graph.png){: .center width=60%}
 
+    ??? tip "correction"
+        |E|A|B|C|D|F|Choix|
+        |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+        |**0**|--|--|--|--|--|E(0)|
+        |.|30vE|--|40vE|**10vE**|--|D(10)|       
+        |.|**20vD**|--|40vE|.|80vD|A(20)|
+        |.|.|60vA|**30vA**|.|80vD|C(30)|
+        |.|.|**50vC**|.|.|80vD|B(50)|
+        |.|.|.|.|.|**70vB**|F(70)|
 
-
-
+        Le meilleur trajet est donc E-D-A-C-B-F.  
+        _Attention ce trajet correspond à la colonne choix (dans l'ordre) mais c'est un hasard._
 
 
 ### 3.4 Exercice
@@ -226,8 +233,19 @@ $$ \text{coût} = \frac{10^8}{d} $$
 
 Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
 
-??? aide "Correction Dijkstra"
-    ![image](data/corr_tab.png){: .center}
+??? tip "Correction"
+    **Q1**  
+    1. $\text{coût} = \dfrac{10^8}{10 \times 10^9}= \dfrac{10^8}{10^{10}}= 10^{-2}=0,01$  
+    2. $5=\dfrac{10^8}{d}$ donc $d=\dfrac{10^8}{5}=20 \times 10^6$ = 20 Mb/s
+    
+
+    **Q2**
+    Le graphe pondéré par les coûts est :
+    ![image](data/ex3_corr.png){: .center}
+
+    On peut y deviner le chemin de coût minimal entre A et G, qui est A-D-E-G (coût 1,011).  
+    Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
+    ![image](data/corr_tab.png){: .center} 
     
 
 
