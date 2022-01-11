@@ -1,4 +1,4 @@
-### Exercice 1
+## Exercice 1
 
 Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
 
@@ -60,7 +60,7 @@ def test_meme_sous_reseau():
 ```
 
 
-### Exercice 2
+## Exercice 2
 _2020, sujet 0_
 
 On considère un réseau composé de plusieurs routeurs reliés de la façon suivante :
@@ -85,7 +85,7 @@ Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en su
 protocole RIP.
 
 
-### Exercice 3
+## Exercice 3
 _2021, sujet Métropole 1_
 
 On représente ci-dessous un réseau dans lequel R1, R2, R3, R4, R5 et R6 sont des
@@ -145,7 +145,7 @@ c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modi
     
 
 
-### Exercice 4
+## Exercice 4
 _2021, sujet Métropole 2_
 
 | ![](data/ex3_1.png) | 
@@ -227,4 +227,8 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
     |10.1.7.0/24|10.1.7.1|Interface 2|
     |192.168.1.0/24|10.1.7.1|Interface 2|
     
-    
+
+## Exercice 5
+_2021, sujet Amérique du Nord_
+
+![image](data/capAN.png){: .center}
