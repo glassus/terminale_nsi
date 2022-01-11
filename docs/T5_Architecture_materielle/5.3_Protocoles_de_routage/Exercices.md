@@ -224,7 +224,7 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
 
     | IP destination | Passerelle | Interface|
     |:--:|:--:|:--:|
-    |10.1.7.0/24|10.1.7.1|Interface 2|
+    |10.1.7.0/24|10.1.7.2|Interface 2|
     |192.168.1.0/24|10.1.7.1|Interface 2|
     
 
