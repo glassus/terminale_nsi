@@ -336,3 +336,5 @@ En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
     2.
     ![image](data/graphAN_corr.png){: .center}
     
+
+[Lien vers la correction du DS sur les dictionnaires (Capytale)](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f6f-290099)
