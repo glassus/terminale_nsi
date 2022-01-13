@@ -234,7 +234,16 @@ La figure 1 ci-dessus représente le schéma d’un réseau d’entreprise. Il y
 
  Le tableau 1 suivant indique les adresses IPv4 des machines constituants le réseau de l’entreprise.
 
- | ![](data/ex3_2.png)  | 
+!!! note ":warning: À lire impérativement :warning:"
+    J'ai eu la confirmation que cet exercice proposait à tort une adresse de passerelle y compris lorsque le routeur accédait directement au réseau.  
+    Les tableaux ci-dessous ont donc été **modifiés** par rapport à ce qui a été fait en classe.  
+    Les adresses de passerelles n'apparaissent maintenant que quand elles sont réellement nécessaires. 
+
+    Je rappelle la définition d'une adresse de passerelle :  
+    :heart: C'est une adresse vers laquelle un ordinateur (ou un routeur) va envoyer un paquet **dont il ne sait pas quoi faire** parce que son adresse de destination ne fait pas partie de son sous-réseau. On dit qu'on «confie» le paquet à un autre routeur afin que celui-ci l'achemine vers la bonne destination. :heart:
+
+
+ | ![](data/ex3_2corr.png)  | 
 |:--:| 
 | *Tableau 1 : adresses IPv4 des machines* |
 
@@ -273,7 +282,7 @@ Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût 
 3/ Dans l’annexe A figurent les tables de routages des routeurs R1, R2, R5 et R6 au
 démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lignes laissées vides des tables de routage des routeurs R5 et R6 pour que les échanges entre les ordinateurs des réseaux L1 et L2 se fassent en empruntant le chemin le plus court en nombre de sauts.
 
-![](data/ex3_4.png)
+![](data/ex3_4_corrige.png)
 
 ??? tip "Correction"
     1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16.   
@@ -298,11 +307,11 @@ démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lig
     |172.16.0.0/16|10.1.7.2|Interface 4|  
     
 
-     Dans la table R6, il manque les lignes
+     Dans la table R6, on peut compléter comme ceci (il faudrait des lignes supplémentaires pour y inscrire tous les réseaux)
 
     | IP destination | Passerelle | Interface|
     |:--:|:--:|:--:|
-    |10.1.7.0/24|10.1.7.2|Interface 2|
+    |10.1.7.0/24| |Interface 2|
     |192.168.1.0/24|10.1.7.1|Interface 2|
     
 
