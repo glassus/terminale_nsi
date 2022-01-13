@@ -354,3 +354,6 @@ print(id(a))
 
 
 Un variable contenant un entier est donc un objet **immuable** car si on modifie la valeur de l'entier, la référence de la variable changera aussi. Comme un dictionnaire a besoin d'avoir des clés dont les références soient définitives, seuls les objets **immuables** peuvent donc servir de clés dans les dictionnaires.
+
+
+[Lien vers la correction du DS sur les dictionnaires (Capytale)](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f6f-290099)

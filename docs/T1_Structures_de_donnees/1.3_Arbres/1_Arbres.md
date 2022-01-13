@@ -1,24 +1,20 @@
 # Arbres
 
-![image](data/banniere.png){: .center width=70%}
+<img src="data/banniere.png" width='70%' />
 
-![image](data/BO1.png){: .center}
-
-![image](data/BO2.png){: .center}
-
-
+<img src="data/prog.png" width='70%' />
+<img src="data/prog2.png" width='70%' />
 
 ## 1. Terminologie
 
 ### 1.1 Vocabulaire
 Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes (qui seront vus plus tard dans l'année), un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.
 
-![](data/term.png){: .center}
+![](data/term.png) 
 
 
 - Chaque **nœud** a exactement un seul **nœud père**, à l'exception du nœud **racine** qui est le seul nœud à ne pas avoir de père. (oui, **la** racine d'une arbre est **en haut**)
-![image](data/real_tree.png){: .center width=30%}
-
+<img src="data/real_tree.png" width='30%' />
 - Chaque nœud peut avoir un nombre quelconque de **fils**, dont il est le père.
 - Les nœuds qui n'ont pas de fils sont appelés les **feuilles** (ou nœuds externes).
 - Les nœuds qui ne sont pas des feuilles sont des **nœuds internes**.
@@ -35,27 +31,22 @@ dans l'arbre ci-dessus,
 ### 1.2 Exemples d'arbres
 
 #### 1.2.1 La famille royale britannique
-
-![image](data/windsor.png){: .center width=60%}
+<img src="data/windsor.png" width='60%' />
 
 Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir [ici](https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg ) ), qui laissait apparaître les parents de chaque enfant ?
 
 #### 1.2.2 Le DOM d'une page web
 DOM : Document Object Model
-
-![image](data/dom.svg){: .center width=40%}
-
+<img src="data/dom.svg" width='40%' />
 
 #### 1.2.3 L'arborescence d'un disque dur
 Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
-![image](data/arbo-unix.gif){: .center width=40%}
-
+<img src="data/arbo-unix.gif" width='40%' />
 
 #### 1.2.4 Exercice
 Quelque part à l'intérieur des dossiers contenus dans l'archive [dossiers.zip](data/dossiers.zip) se trouve un fichier ```tresor.txt```. Quel secret renferme-t-il ?
 
 Attention, cette recherche est à faire uniquement en ligne de commande :
-
 - ```ls``` : pour lister les dossiers et fichiers d'un répertoire
 - ```cd Dossier``` : pour se rendre dans le repértoire ```Dossier```
 - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
@@ -67,8 +58,7 @@ Attention, cette recherche est à faire uniquement en ligne de commande :
 
 #### 1.3.1 Outils numériques de description
 
-![](data/carac.png){: .center width=40%}
-
+![](data/carac.png)
 
 
 
@@ -83,10 +73,8 @@ Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profon
 
 
 - la **hauteur** d'un arbre est la profondeur de son nœud le plus profond. 
-
 Ici, la hauteur de l'arbre est 4.
 Nous prendrons comme **convention** que :
-
 - si un arbre est réduit à **un seul nœud-racine**, sa hauteur sera **1**.
 - si un arbre est **vide**, sa hauteur est **0**.
 
@@ -101,13 +89,13 @@ L'arbre généalogique de la famille royale britannique n'est pas un arbre binai
 
 L'arbre ci-dessous est lui un arbre binaire.
 
-![](data/carac3.png){: .center}
+![](data/carac3.png)
 
 #### 1.4.1 Sous-arbres  d'un arbre binaire
 
 Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le **sous-arbre gauche** et le **sous-arbre droit**.
 
-![](data/sousarbres.png){: .center}
+![](data/sousarbres.png)
 
 
 - Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. 
@@ -120,7 +108,7 @@ Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est poss
 
 On rencontre très souvent des arbres binaires dits **complets** parce qu'aucun des fils gauche ou droit n'est manquant.
 
-![](data/complet.png){: .center}
+![](data/complet.png)
 
 
 **Taille d'un arbre complet de hauteur $h$ :**
@@ -145,7 +133,7 @@ Il existe plusieurs manières de parcourir un arbre.
 
 Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
 
-![](data/BFS.png){: .center}
+![](data/BFS.png)
 
 L'ordre des lettres parcourues est donc T-Y-O-P-H-N.
 
@@ -155,11 +143,10 @@ Les trois parcours que nous allons voir maintenant sont des parcours en **profon
 Le parcours **préfixe** est un parcours **en profondeur d'abord**. 
 
 **Méthode du parcours préfixe :** (parfois aussi appelé *préordre*)
-
 - Chaque nœud est visité avant que ses fils le soient.
 - On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.
 
-![](data/prefixe.png){: .center}
+![](data/prefixe.png)
 
 L'ordre des lettres parcourues est donc T-Y-P-O-H-N.
 
@@ -170,7 +157,7 @@ Le parcours **infixe** est aussi un parcours en profondeur d'abord.
 - Chaque nœud est visité **après son fils gauche mais avant son fils droit**.
 - On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.
 
-![](data/infixe.png){: .center}
+![](data/infixe.png)
 
 L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
 
@@ -178,16 +165,14 @@ L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
 Le parcours **postfixe** est aussi un parcours en profondeur d'abord.
 
 **Méthode du parcours postfixe :** (parfois aussi appelé *post ordre*)
-
 - Chaque nœud est visité **après ses fils le soient**.
 - On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
 
-![](data/postfixe.png){: .center}
+![](data/postfixe.png)
 
 L'ordre des lettres parcourues est donc P-Y-H-N-O-T.
 
 ### 2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?
-
 - *pré* veut dire *avant*
 - *in* veut dire *au milieu*
 - *post* veut dire *après*
@@ -203,10 +188,9 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 ### 2.6 Exercice 1
 
-![](data/exo_parcours.png){: .center}
+![](data/exo_parcours.png)
 
 Donner le rendu de chaque parcours :
-
 1. Parcours en largeur 
 2. Parcours préfixe
 3. Parcours infixe
@@ -217,7 +201,7 @@ Donner le rendu de chaque parcours :
 
 ### 2.7 Exercice 2
 
-![](data/exo_2.png){: .center}
+![](data/exo_2.png)
 
 Donner le rendu de chaque parcours :
 1. Parcours en largeur 
@@ -278,7 +262,7 @@ a.get_left().set_left(Arbre(6))
 a.get_right().get_right().set_left(Arbre(9))
 ```
 
-[correction](data/exo_imp.png){: .center}
+[correction](data/exo_imp.png)
 
 **🟊 Implémentation 🟊**
 
@@ -362,7 +346,7 @@ a.get_right().get_left().get_data()
 Considérons qu'un arbre peut se représenter par le tuple ```(valeur, sous-arbre gauche, sous-arbre droit)```.
 
 L'arbre ci-dessous :
-![](data/imp_tuple.png){: .center}
+![](data/imp_tuple.png)
 peut alors être représenté par le tuple :
 
 
@@ -398,7 +382,7 @@ a[2]
 
 **Exercice :** écrire le tuple représentant l'arbre ci-dessous.
 
-![](data/carac3.png){: .center}
+![](data/carac3.png)
 
 [correction](https://gist.github.com/glassus/4056ad7c0a0409126ccce517c6afeb4f)
 
@@ -419,12 +403,12 @@ Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée 
 
 **Exemple :**
 
-![](data/eytzinger.png){: .center}
+![](data/eytzinger.png)
 
 
 Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :
 
-![](data/eytzinger2.png){: .center}
+![](data/eytzinger2.png)
 
 **Exercice :** Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
 
@@ -433,7 +417,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 a = [3,4,Δ,7,5,Δ,Δ]
 ```
 
-[correction](data/corrtuple.png){: .center}
+[correction](data/corrtuple.png)
 
 **Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.
 
@@ -485,7 +469,7 @@ def prefixe(arbre):
 ```
 
 Exemple avec l'arbre 
-![](data/exo_2.png){: .center}
+![](data/exo_2.png)
 
 
 ```python
@@ -660,7 +644,6 @@ recherche(a, 45)
 ### 4.6 Parcours en largeur
 Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.  
 Il est nécessaire d'utiliser une **file**  :
-
 - On place l'arbre dans la file.
 - Tant que la file n'est pas vide, on procède comme suit :
     - On défile, donc on récupère l'arbre situé en haut de la file.  
@@ -668,7 +651,7 @@ Il est nécessaire d'utiliser une **file**  :
         - On garde son étiquette.
         - On enfile son sous-arbre gauche, puis son sous-arbre droit.
 
-![](data/parcoursBFS.png){: .center}
+![](data/parcoursBFS.png)
 
 On importera l'objet ```Queue()``` du module ```queue``` de Python, qui permet de  :
 - créer une file vide avec ```file = Queue()```
@@ -719,11 +702,10 @@ BFS(a)
 
 ## 5. Arbres binaires de recherche (ABR)
 Un **arbre binaire de recherche** est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :
-
 - l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
 - l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
 
-![](data/exABR.png){: .center}
+![](data/exABR.png)
 
 À noter que l'arbre 3 (qui est bien un ABR) est appelé **arbre filiforme**. 
 
@@ -850,7 +832,7 @@ contient_valeur(b,8)
 
 
 ### 5.3  Coût de la recherche dans un ABR équilibré
-![](data/rechercheABR.png){: .center}
+![](data/rechercheABR.png)
 
 Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
@@ -874,7 +856,6 @@ Cette **complexité logarithmique** est un atout essentiel de la structure d'arb
 L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arbre. Dans la version récursive de l'algorithme d'insertion, que nous allons implémenter, il n'est pourtant pas nécessaire de descendre manuellement dans l'arbre jusqu'au bon endroit : il suffit de distinguer dans lequel des deux sous-arbres gauche et droit doit se trouver la future clé, et d'appeler récursivement la fonction d'insertion dans le sous-arbre en question.
 
 **Algorithme :**
-
 - Si l'arbre est vide, on renvoie un nouvel objet Arbre contenant la clé.
 - Sinon, on compare la clé à la valeur du nœud sur lequel on est positionné :
     - Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injecté, par un appel récursif.
@@ -897,7 +878,7 @@ def insertion(arbre, valeur):
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 
-![](data/insertionABR.png){: .center}
+![](data/insertionABR.png)
 
 
 ```python
@@ -946,5 +927,7 @@ La valeur 4 a donc bien été insérée au bon endroit.
 
 
 
+---
 
+![](../../../ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
 
