@@ -11,7 +11,7 @@
 ## 1. Terminologie
 
 ### 1.1 Vocabulaire
-Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes (qui seront vus plus tard dans l'année), un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.
+Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes, un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.
 
 ![](data/term.png){: .center}
 
@@ -26,6 +26,7 @@ Un arbre est une structure hiérarchique de données, composée de nœuds. Si on
 
 **Exemples :**
 dans l'arbre ci-dessus,
+
 - C est la racine, E, Z A et G sont les feuilles.
 - K est le père de A et G.
 - F est le père de Z.
@@ -67,35 +68,37 @@ Attention, cette recherche est à faire uniquement en ligne de commande :
 
 #### 1.3.1 Outils numériques de description
 
-![](data/carac.png){: .center width=40%}
+![](data/carac.png){: .center width=30%}
+
+!!! note "Définitions :heart:"
+
+    - la **taille** d'un arbre est son nombre total de nœuds. Ici, elle vaut 8.
+
+
+    - l'**arité** d'un nœud est son nombre de fils. Ici, l'arité de B vaut 2, celle de F vaut 1, celle de Z vaut 0.
+
+
+    - la **profondeur** d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine. 
+    Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profondeur de Z est 4 (Z-F-B-C), la profondeur de C est 1.
+
+
+    - la **hauteur** d'un arbre est la profondeur de son nœud le plus profond. 
+    Ici, la hauteur de l'arbre est 4.  
+        Nous prendrons comme **convention** que :  
+        - si un arbre est réduit à **un seul nœud-racine**, sa hauteur sera **1**.
+        - si un arbre est **vide**, sa hauteur est **0**.
+
+*Cette convention est celle adoptée dans le sujet 0 publié le 15/12/2020. Attention, dans certains ouvrages, l'arbre vide a pour hauteur -1, et donc l'arbre réduit à un seul nœud a pour hauteur 0, donc notre arbre aurait avec cette convention une hauteur 3.*
 
 
 
+#### 1.4 Arbres binaires
 
-- la **taille** d'un arbre est son nombre total de nœuds. Ici, elle vaut 8.
-
-
-- l'**arité** d'un nœud est son nombre de fils. Ici, l'arité de B vaut 2, celle de F vaut 1, celle de Z vaut 0.
+![image](data/binary.jpg){: .center width=50%}
 
 
-- la **profondeur** d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine. 
-Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profondeur de Z est 4 (Z-F-B-C), la profondeur de C est 1.
-
-
-- la **hauteur** d'un arbre est la profondeur de son nœud le plus profond. 
-
-Ici, la hauteur de l'arbre est 4.
-Nous prendrons comme **convention** que :
-
-- si un arbre est réduit à **un seul nœud-racine**, sa hauteur sera **1**.
-- si un arbre est **vide**, sa hauteur est **0**.
-
-*Cette convention est celle adoptée dans le sujet 0 publié le 15/12/2020. Attention, dans certains ouvrages, l'arbre vide a pour hauteur -1, et donc l'arbre réduit à un seul nœud a pour hauteur 0, donc notre arbre a une hauteur 3.*
-
-### 1.4 Encore du vocabulaire
-
-#### 1.4.2 Arbres binaires
-Un arbre binaire est un arbre dont chaque nœud possède **au plus** deux fils.
+!!! note "Définition :heart:"
+    Un arbre binaire est un arbre dont chaque nœud possède **au plus** deux fils.
 
 L'arbre généalogique de la famille royale britannique n'est pas un arbre binaire. 
 
@@ -103,7 +106,7 @@ L'arbre ci-dessous est lui un arbre binaire.
 
 ![](data/carac3.png){: .center}
 
-#### 1.4.1 Sous-arbres  d'un arbre binaire
+#### 1.4.1 Sous-arbres d'un arbre binaire
 
 Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le **sous-arbre gauche** et le **sous-arbre droit**.
 
@@ -124,7 +127,7 @@ On rencontre très souvent des arbres binaires dits **complets** parce qu'aucun 
 
 
 **Taille d'un arbre complet de hauteur $h$ :**
-$$1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1$$
+$1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1$
 
 *preuve* : ceci est la somme $S$ des $h$ premiers termes d'une suite géométrique de raison 2 et de premier terme 1, d'où $S= \frac{1-2^{h}}{1-2} = 2^{h} -1$.
 
@@ -143,6 +146,7 @@ Il existe plusieurs manières de parcourir un arbre.
 ### 2.1 Parcours en largeur d'abord (BFS)
 *BFS : Breadth First Search*
 
+!!! note "Méthode du parcours en largeur (BFS) :heart:" 
 Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
 
 ![](data/BFS.png){: .center}
@@ -154,10 +158,11 @@ Les trois parcours que nous allons voir maintenant sont des parcours en **profon
 ### 2.2 Parcours préfixe
 Le parcours **préfixe** est un parcours **en profondeur d'abord**. 
 
-**Méthode du parcours préfixe :** (parfois aussi appelé *préordre*)
+!!! note "Méthode du parcours préfixe :heart:"
+    (parfois aussi appelé *préordre*)
 
-- Chaque nœud est visité avant que ses fils le soient.
-- On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.
+    - Chaque nœud est visité **avant** que ses fils le soient.
+    - On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.
 
 ![](data/prefixe.png){: .center}
 
@@ -166,9 +171,11 @@ L'ordre des lettres parcourues est donc T-Y-P-O-H-N.
 ### 2.3 Parcours infixe
 Le parcours **infixe** est aussi un parcours en profondeur d'abord.
 
-**Méthode du parcours infixe :** (parfois aussi appelé *en ordre*)
-- Chaque nœud est visité **après son fils gauche mais avant son fils droit**.
-- On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.
+!!! note "Méthode du parcours infixe :heart:" 
+    (parfois aussi appelé *en ordre*)
+
+    - Chaque nœud est visité **après son fils gauche mais avant son fils droit**.
+    - On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.
 
 ![](data/infixe.png){: .center}
 
@@ -177,10 +184,11 @@ L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
 ### 2.4 Parcours postfixe
 Le parcours **postfixe** est aussi un parcours en profondeur d'abord.
 
-**Méthode du parcours postfixe :** (parfois aussi appelé *post ordre*)
+!!! note "Méthode du parcours postfixe :heart:"
+    (parfois aussi appelé *post ordre*)
 
-- Chaque nœud est visité **après ses fils le soient**.
-- On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
+    - Chaque nœud est visité **après** ses fils le soient.
+    - On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
 
 ![](data/postfixe.png){: .center}
 
@@ -207,25 +215,37 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 Donner le rendu de chaque parcours :
 
-1. Parcours en largeur 
-2. Parcours préfixe
-3. Parcours infixe
-4. Parcours postfixe
-
-[Correction](https://gist.github.com/glassus/031901b09dbb9d780247beb5db69eda2)
-
+A. Parcours en largeur 
+??? tip "correction"
+    largeur : 1 2 3 4 5 6 7 8 9
+B. Parcours préfixe
+??? tip "correction"
+    préfixe : 1 2 4 5 7 8 3 6 9
+C. Parcours infixe
+??? tip "correction"
+    infixe : 4 2 7 5 8 1 3 9 6
+D. Parcours postfixe
+??? tip "correction"
+    infixe : 4 2 7 5 8 1 3 9 6
 
 ### 2.7 Exercice 2
 
 ![](data/exo_2.png){: .center}
 
-Donner le rendu de chaque parcours :
-1. Parcours en largeur 
-2. Parcours préfixe
-3. Parcours infixe
-4. Parcours postfixe
+Donner le rendu de chaque parcours :  
 
-[Correction](https://gist.github.com/glassus/05aeb20012b01bbaa170aa78c6959a0e)
+A. Parcours en largeur 
+??? tip "correction"
+    largeur : 9 8 7 6 2 5 1 4 3
+B. Parcours préfixe
+??? tip "correction"
+    préfixe : 9 8 6 2 1 7 5 4 3
+C. Parcours infixe
+??? tip "correction"
+    infixe : 6 8 1 2 9 7 4 5 3
+D. Parcours postfixe
+??? tip "correction"
+    postfixe : 6 1 2 8 4 3 5 7 9
 
 
 ## 3. Implémentations d'un arbre binaire
@@ -234,55 +254,38 @@ Le but est d'obtenir l'interface ci-dessous.
 
 Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœud et ses deux fils gauche et droit.
 
-
-```python
-a = Arbre(4) # pour créer l'arbre dont le nœud a pour valeur 4,
-             # et dont les sous-arbres gauche et droit sont None
-```
-
-
-```python
-a.set_left(Arbre(3)) # pour donner la valeur 3 au nœud du sous-arbre gauche de a
-```
-
-
-```python
-a.set_right(Arbre(1)) # pour donner la valeur 1 au nœud du sous-arbre droit de a
-```
+!!! abstract "interface souhaitée"
+    ```python
+    a = Arbre(4) # pour créer l'arbre dont le nœud a pour valeur 4,
+                # et dont les sous-arbres gauche et droit sont None
+    a.set_left(Arbre(3)) # pour donner la valeur 3 au nœud du sous-arbre gauche de a
+    a.set_right(Arbre(1)) # pour donner la valeur 1 au nœud du sous-arbre droit de a
+    a.get_right() # pour accéder au sous-arbre droit de a
+    a.get_left() # pour accéder au sous-arbre gauche de a
+    a.get_data() # pour accéder à la valeur du nœud de l'arbre a
+    ```
 
 
-```python
-a.get_right() # pour accéder au sous-arbre droit de a
-```
+!!! example "Exercice"
+    === "Énoncé"
+        Dessinez l'arbre créé par les instructions suivantes :
+        ```python
+        >>> a = Arbre(4)
+        >>> a.set_left(Arbre(3))
+        >>> a.set_right(Arbre(1))
+        >>> a.get_right().set_left(Arbre(2))
+        >>> a.get_right().set_right(Arbre(7))
+        >>> a.get_left().set_left(Arbre(6))
+        >>> a.get_right().get_right().set_left(Arbre(9))
+        ```
+    === "Correction"
+        ![correction](data/exo_imp.png){: .center}
 
 
-```python
-a.get_left() # pour accéder au sous-arbre gauche de a
-```
 
+**:star: Implémentation :star:**
 
-```python
-a.get_data() # pour accéder à la valeur du nœud de l'arbre a
-```
-
-**Exercice :** Dessinez l'arbre créé par les instructions suivantes :
-
-
-```python
-a = Arbre(4)
-a.set_left(Arbre(3))
-a.set_right(Arbre(1))
-a.get_right().set_left(Arbre(2))
-a.get_right().set_right(Arbre(7))
-a.get_left().set_left(Arbre(6))
-a.get_right().get_right().set_left(Arbre(9))
-```
-
-[correction](data/exo_imp.png){: .center}
-
-**🟊 Implémentation 🟊**
-
-⯈ **Principe** : nous allons créer une classe ```Arbre```, qui contiendra 3 attributs : 
+⯈ **Principe** : nous allons créer une classe ```Arbre```, qui contiendra 3 attributs :  
 - ```data``` : la valeur du nœud (de type ```Int```)
 - ```left``` : le sous-arbre gauche (de type ```Arbre```)
 - ```right``` : le sous-arbre droit (de type ```Arbre```).
@@ -297,7 +300,7 @@ Dans certains langage (Java, C#...) , l'encapsulation est vivement encouragée :
 
 
 
-```python
+```python linenums='1'
 class Arbre:
     def __init__(self, data):
         self.data = data
@@ -324,38 +327,26 @@ L'implémentation précédente permet d'utiliser les instructions de l'exercice 
 
 
 ```python
-a = Arbre(4)
-a.set_left(Arbre(3))
-a.set_right(Arbre(1))
-a.get_right().set_left(Arbre(2))
-a.get_right().set_right(Arbre(7))
-a.get_left().set_left(Arbre(6))
-a.get_right().get_right().set_left(Arbre(9))
+>>> a = Arbre(4)
+>>> a.set_left(Arbre(3))
+>>> a.set_right(Arbre(1))
+>>> a.get_right().set_left(Arbre(2))
+>>> a.get_right().set_right(Arbre(7))
+>>> a.get_left().set_left(Arbre(6))
+>>> a.get_right().get_right().set_left(Arbre(9))
 ```
 
 
 ```python
-a
+>>> a
+   <__main__.Arbre at 0x7f0100361f40>
 ```
-
-
-
-
-    <__main__.Arbre at 0x7f0100361f40>
-
-
 
 
 ```python
-a.get_right().get_left().get_data()
+>>> a.get_right().get_left().get_data()
+   2
 ```
-
-
-
-
-    2
-
-
 
 ### 3.2 Implémentation à partir de tuples imbriqués
 
