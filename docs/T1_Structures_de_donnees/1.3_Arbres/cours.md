@@ -213,20 +213,23 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 ![](data/exo_parcours.png){: .center}
 
-Donner le rendu de chaque parcours :
 
-A. Parcours en largeur 
-??? tip "correction"
-    largeur : 1 2 3 4 5 6 7 8 9
-B. Parcours préfixe
-??? tip "correction"
-    préfixe : 1 2 4 5 7 8 3 6 9
-C. Parcours infixe
-??? tip "correction"
-    infixe : 4 2 7 5 8 1 3 9 6
-D. Parcours postfixe
-??? tip "correction"
-    infixe : 4 2 7 5 8 1 3 9 6
+!!! example "Exercice"
+    === "Énoncé"
+        Donner le rendu de chaque parcours :
+
+        1. Parcours en largeur 
+        2. Parcours préfixe
+        3. Parcours infixe
+        4. Parcours postfixe
+    === "Corr. largeur"
+        largeur : 1 2 3 4 5 6 7 8 9
+    === "Corr. préfixe"
+        préfixe : 1 2 4 5 7 8 3 6 9
+    === "Corr. infixe"
+        infixe : 4 2 7 5 8 1 3 9 6
+    === "Corr. postfixe"
+        postfixe : 4 7 8 5 2 9 6 3 1
 
 ### 2.7 Exercice 2
 
