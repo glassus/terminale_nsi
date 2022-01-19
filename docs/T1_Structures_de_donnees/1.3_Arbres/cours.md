@@ -147,7 +147,7 @@ Il existe plusieurs manières de parcourir un arbre.
 *BFS : Breadth First Search*
 
 !!! note "Méthode du parcours en largeur (BFS) :heart:" 
-Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
+    Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
 
 ![](data/BFS.png){: .center}
 
@@ -263,13 +263,11 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
 
 !!! abstract "interface souhaitée"
     ```python
-    a = Arbre(4) # pour créer l'arbre dont le nœud a pour valeur 4,
+    >>> a = Arbre(4) # pour créer l'arbre dont le nœud a pour valeur 4,
                 # et dont les sous-arbres gauche et droit sont None
-    a.set_left(Arbre(3)) # pour donner la valeur 3 au nœud du sous-arbre gauche de a
-    a.set_right(Arbre(1)) # pour donner la valeur 1 au nœud du sous-arbre droit de a
-    a.get_right() # pour accéder au sous-arbre droit de a
-    a.get_left() # pour accéder au sous-arbre gauche de a
-    a.get_data() # pour accéder à la valeur du nœud de l'arbre a
+    >>> a.left = Arbre(3) # pour donner la valeur 3 au nœud du sous-arbre gauche de a
+    >>> a.right = Arbre(1) # pour donner la valeur 1 au nœud du sous-arbre droit de a
+    >>> a.right.data # pour accéder à la valeur du fils droit de a
     ```
 
 
@@ -278,12 +276,12 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
         Dessinez l'arbre créé par les instructions suivantes :
         ```python
         >>> a = Arbre(4)
-        >>> a.set_left(Arbre(3))
-        >>> a.set_right(Arbre(1))
-        >>> a.get_right().set_left(Arbre(2))
-        >>> a.get_right().set_right(Arbre(7))
-        >>> a.get_left().set_left(Arbre(6))
-        >>> a.get_right().get_right().set_left(Arbre(9))
+        >>> a.left = Arbre(3)
+        >>> a.right = Arbre(1)
+        >>> a.right.left = Arbre(2)
+        >>> a.right.right = Arbre(7)
+        >>> a.left.left = Arbre(6)
+        >>> a.right.right.left = Arbre(9)
         ```
     === "Correction"
         ![correction](data/exo_imp.png){: .center}
@@ -292,43 +290,45 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
 
 **:star: Implémentation :star:**
 
-⯈ **Principe** : nous allons créer une classe ```Arbre```, qui contiendra 3 attributs :  
+⯈ **Principe** : nous allons créer une classe ```Arbre```, qui contiendra 3 attributs : 
+
 - ```data``` : la valeur du nœud (de type ```Int```)
 - ```left``` : le sous-arbre gauche (de type ```Arbre```)
 - ```right``` : le sous-arbre droit (de type ```Arbre```).
 
 Par défaut, les attributs ```left ``` et ```right``` seront à ```None```, qui représentera l'arbre vide (ce qui n'est pas très rigoureux, car ```None``` n'est pas de type ```Arbre```...).
 
-⯈ **Parti-pris** : afin de respecter le paradigme de la Programmation Orientée Objet, nous allons (pour une fois) jouer totalement le jeu de l'**encapsulation** en nous refusant d'accéder directement aux attributs.
+⯈ **Encapsulation ou pas ???** : 
 
-Nous allons donc construire des méthodes permettant d'accéder à ces attributs (avec des **getters**, ou **accesseurs** en français) ou de les modifier (avec des **setters**, ou **mutateurs** en français) .
+Afin de respecter le paradigme de la Programmation Orientée Objet, nous devrions jouer totalement le jeu de l'**encapsulation** en nous refusant d'accéder directement aux attributs.
 
-Dans certains langage (Java, C#...) , l'encapsulation est vivement encouragée : il est possible de limiter concrètement la visibilité des attributs (par les mots-clés ```private``` ou ```protected```).
+Pour cela  il faut construire des méthodes permettant d'accéder à ces attributs (avec des **getters**, ou **accesseurs** en français) ou de les modifier (avec des **setters**, ou **mutateurs** en français) .
 
+#### 3.1.1 Implémentation avec encapsulation
 
+!!! note "Classe `Arbre` avec encapsulation :heart:"
+    ```python linenums='1'
+    class Arbre:
+        def __init__(self, data):
+            self.data = data
+            self.left = None
+            self.right = None
 
-```python linenums='1'
-class Arbre:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
+        def set_left(self, sousarbre): # mutateur
+            self.left = sousarbre
 
-    def set_left(self, sousarbre):
-        self.left = sousarbre
+        def set_right(self, sousarbre): # mutateur
+            self.right = sousarbre  
 
-    def set_right(self, sousarbre):
-        self.right = sousarbre  
+        def get_left(self): # accesseur
+            return self.left
 
-    def get_left(self):
-        return self.left
+        def get_right(self): # accesseur
+            return self.right
 
-    def get_right(self):
-        return self.right
-
-    def get_data(self):
-        return self.data
-```
+        def get_data(self): # accesseur
+            return self.data
+    ```
 
 L'implémentation précédente permet d'utiliser les instructions de l'exercice précédent et de vérifier que l'arbre a bien été créé.
 
@@ -355,6 +355,47 @@ L'implémentation précédente permet d'utiliser les instructions de l'exercice 
    2
 ```
 
+
+#### 3.1.1 Implémentation sans encapsulation
+
+!!! note "Classe `Arbre` sans encapsulation :heart:"
+    ```python linenums='1'
+    class Arbre:
+        def __init__(self, data):
+            self.data = data
+            self.left = None
+            self.right = None
+    ```
+
+C'est déjà fini !
+
+
+```python
+>>> a = Arbre(4)
+>>> a.left = Arbre(3)
+>>> a.right = Arbre(1)
+>>> a.right.left = Arbre(2)
+>>> a.right.right = Arbre(7)
+>>> a.left.left = Arbre(6)
+>>> a.right.right.left = Arbre(9)
+```
+
+
+```python
+>>> a
+   <__main__.Arbre at 0x7f0100361f40>
+```
+
+
+```python
+>>> a.right.left.data
+   2
+```
+
+
+On voit que l'implémentation avec accès direct aux attributs est beaucoup plus simple et rapide. Néanmoins, elle peut être considérée comme incorrecte dans certains langages qui obligent à passer par des accesseurs ou mutateurs pour lire ou modifier les attributs.
+
+
 ### 3.2 Implémentation à partir de tuples imbriqués
 
 Considérons qu'un arbre peut se représenter par le tuple ```(valeur, sous-arbre gauche, sous-arbre droit)```.
@@ -365,45 +406,30 @@ peut alors être représenté par le tuple :
 
 
 ```python
-a = (2, (8, (6,(),()), (9,(),())), (1, (7, (),()), ()))
+>>> a = (2, (8, (6,(),()), (9,(),())), (1, (7, (),()), ()))
 ```
 
 Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
 
 
 ```python
-a[1]
+>>> a[1]
+(8, (6, (), ()), (9, (), ()))
+>>> a[2]
+(1, (7, (), ()), ())
 ```
 
+!!! example "Exercice"
+    ![](data/carac3.png){: .center}
+    === "Énoncé"
+        Écrire le tuple représentant l'arbre ci-dessous.       
+        
+    === "Correction"
+        ```python
+        a = (T,(Y,(P,(),()),()),(O,(H,(),()),(N,(),())))
+        ```
 
 
-
-    (8, (6, (), ()), (9, (), ()))
-
-
-
-
-```python
-a[2]
-```
-
-
-
-
-    (1, (7, (), ()), ())
-
-
-
-**Exercice :** écrire le tuple représentant l'arbre ci-dessous.
-
-![](data/carac3.png){: .center}
-
-[correction](https://gist.github.com/glassus/4056ad7c0a0409126ccce517c6afeb4f)
-
-
-```python
-
-```
 
 ### 3.3 Implémentation à partir d'une «simple» liste
 De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
@@ -424,196 +450,168 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 
 ![](data/eytzinger2.png){: .center}
 
-**Exercice :** Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
 
 
-```python
-a = [3,4,Δ,7,5,Δ,Δ]
-```
+!!! example "Exercice"
+    === "Énoncé"
+        Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
+        ```python
+        a = [3, 4, Δ, 7, 5, Δ, Δ]
+        ```       
+        
+    === "Correction"
+        ![correction](data/corrtuple.png){: .center}
 
-[correction](data/corrtuple.png){: .center}
 
 **Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.
 
 ## 4. Utilisation de l'implémentation : parcours, taille...
 
-Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet.
+Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version sans encapsulation (la plus simple).
 Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure **récursive** d'un arbre.
 
 
 **Rappel de l'implémentation :**
 
-
-```python
+```python linenums='1'
 class Arbre:
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
 
-    def set_left(self, sousarbre):
-        self.left = sousarbre
-
-    def set_right(self, sousarbre):
-        self.right = sousarbre  
-
-    def get_left(self):
-        return self.left
-
-    def get_right(self):
-        return self.right
-
-    def get_data(self):
-        return self.data
 ```
 
 ### 4.1 Parcours préfixe, infixe, postfixe
 
 #### 4.1.1 Parcours préfixe
 
+!!! note "Parcours préfixe :heart:"
+    ```python linenums='1'
+    def prefixe(arbre):
+        if arbre is None :
+            return None
+        print(arbre.data, end = '-')
+        prefixe(arbre.left)
+        prefixe(arbre.right)
 
-```python
-def prefixe(arbre):
-    if arbre is None :
-        return 0
-    print(arbre.data, end = '-')
-    prefixe(arbre.left)
-    prefixe(arbre.right)
-
-```
+    ```
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center}
 
 
-```python
+```python linenums='1'
 a = Arbre(9)
-a.set_left(Arbre(8))
-a.set_right(Arbre(7))
-a.get_left().set_left(Arbre(6))
-a.get_left().set_right(Arbre(2))
-a.get_right().set_right(Arbre(5))
-a.get_left().get_right().set_left(Arbre(1))
-a.get_right().get_right().set_left(Arbre(4))
-a.get_right().get_right().set_right(Arbre(3))
+a.left = Arbre(8)
+a.right = Arbre(7)
+a.left.left = Arbre(6)
+a.left.right = Arbre(2)
+a.right.right = Arbre(5)
+a.left.right.left = Arbre(1)
+a.right.right.left = Arbre(4)
+a.right.right.right = Arbre(3)
 ```
 
 
 ```python
-prefixe(a)
+>>> prefixe(a)
+9-8-6-2-1-7-5-4-3-
 ```
-
-    9-8-6-2-1-7-5-4-3-
 
 #### 4.1.2 Parcours infixe
 
+!!! note "Parcours infixe :heart:"
+    ```python
+    def infixe(arbre):
+        if arbre is None :
+            return None
+        infixe(arbre.left)
+        print(arbre.data, end = '-')
+        infixe(arbre.right)
+    ```
+
 
 ```python
-def infixe(arbre):
-    if arbre is None :
-        return 0
-    infixe(arbre.left)
-    print(arbre.data, end = '-')
-    infixe(arbre.right)
+>>> infixe(a)
+6-8-1-2-9-7-4-5-3-
 ```
-
-
-```python
-infixe(a)
-```
-
-    6-8-1-2-9-7-4-5-3-
 
 #### 4.1.3 Parcours postfixe
 
+!!! note "Parcours postfixe :heart:"
+    ```python
+    def postfixe(arbre):
+        if arbre is None :
+            return None
+        postfixe(arbre.left)
+        postfixe(arbre.right)
+        print(arbre.data, end = '-')
+    ```
+
 
 ```python
-def postfixe(arbre):
-    if arbre is None :
-        return 0
-    postfixe(arbre.left)
-    postfixe(arbre.right)
-    print(arbre.data, end = '-')
+>>> postfixe(a)
+6-1-2-8-4-3-5-7-9-
 ```
 
-
-```python
-postfixe(a)
-```
-
-    6-1-2-8-4-3-5-7-9-
 
 ### 4.2 Calcul de la taille d'un arbre
-Rappel :la taille d'un arbre est le nombre de ses nœuds.
+Rappel : la taille d'un arbre est le nombre de ses nœuds.
+
+!!! note "Taille d'un arbre :heart:"
+    ```python
+    def taille(arbre):
+        if arbre is None:
+            return 0
+        else:
+            return 1 + taille(arbre.left) + taille(arbre.right)
+    ```
 
 
 ```python
-def taille(arbre):
-    if arbre is None:
-        return 0
-    else:
-        return 1 + taille(arbre.get_left()) + taille(arbre.get_right())
+>>> taille(a)
+9
 ```
-
-
-```python
-taille(a)
-```
-
-
-
-
-    9
-
-
 
 ### 4.3 Calcul de la hauteur d'un arbre
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
+!!! note "Hauteur d'un arbre :heart:"
+    ```python
+    def hauteur(arbre):
+        if arbre is None:
+            return 0
+        else :
+            return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
+    ```
+
 
 ```python
-def hauteur(arbre):
-    if arbre is None:
-        return 0
-    else :
-        return 1 + max(hauteur(arbre.get_left()),hauteur(arbre.get_right()))
+>>> hauteur(a)
+4
 ```
-
-
-```python
-hauteur(a)
-```
-
-
-
-
-    4
-
 
 
 ### 4.4 Calcul du nombre de feuilles d'un arbre
 Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
 
+!!! note "Nombre de feuilles d'un arbre :heart:"
+    ```python
+    def nbfeuilles(arbre):
+        if arbre is None:
+            return 0
+        if (arbre.left is None) and (arbre.right is None):
+            return 1
+        else :
+            return nbfeuilles(arbre.left) +  nbfeuilles(arbre.right)
+    ```
+
 
 ```python
-def nbfeuilles(arbre):
-    if arbre is None:
-        return 0
-    if (arbre.get_left() is None) and (arbre.get_right() is None):
-        return 1
-    else :
-        return nbfeuilles(arbre.get_left()) +  nbfeuilles(arbre.get_right())
+>>> nbfeuilles(a)
+4
 ```
-
-
-```python
-nbfeuilles(a)
-```
-
-
-
-
-    4
 
 
 
