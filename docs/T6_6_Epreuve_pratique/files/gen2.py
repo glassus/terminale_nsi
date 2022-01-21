@@ -1,7 +1,7 @@
 import os
 import sys
 
-NB_DOSS = 30
+NB_DOSS = 40
 
 lst = ['{:02d}'.format(k) for k in range(1, NB_DOSS+1)]
 
@@ -27,8 +27,8 @@ def fichiers_1_2():
         fichier(n2)
 
 
-#create_doss()
-#fichiers_1_2()
+create_doss()
+fichiers_1_2()
 
 
 
