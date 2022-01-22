@@ -4,7 +4,7 @@ Vous trouverez ci-dessous l'intégralité des sujets de l'épreuve pratique, dis
 
 Une nouvelle version (qui sera *a priori* en grande partie semblable à celle-ci) sera publiée en janvier 2022 sur le site [Eduscol](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi).
 
-:alert: update : les sujets sont disponibles, une première version centralisée se trouve [ici](./BNS_2022/)
+:star: **update :** les sujets sont disponibles, une première version centralisée se trouve [ici](../BNS_2022/)
 
 - Rappel des conditions de passation sur [cette page](../../T6_Annales/epreuve_pratique/).
 
