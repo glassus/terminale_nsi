@@ -14,7 +14,7 @@ On définit ainsi la suite $(U_n)$ par :
 
 **On admet que, quel que soit l'entier ```k``` choisi au départ, la suite finit toujours sur la valeur 1.**
 
-Écrire une fonction ```calcul``` prenant en paramètres un entier ```n``` strictement positif et qui renvoie la liste des valeurs de la suite, en partant de ```n``` et jusqu'à atteindre 1.
+Écrire une fonction ```calcul``` prenant en paramètres un entier ```k``` strictement positif et qui renvoie la liste des valeurs de la suite, en partant de ```k``` et jusqu'à atteindre 1.
 
 Exemple :
 ```python
