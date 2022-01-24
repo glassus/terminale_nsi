@@ -555,6 +555,9 @@ a.right.right.right = Arbre(3)
 6-1-2-8-4-3-5-7-9-
 ```
 
+!!! tip "Pause vidéo" 
+    - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
+    - À l'aide de la vidéo, codez le parcours infixe en itératif 
 
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
@@ -615,43 +618,27 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 
 
 
-### 4.5 Rechercher une valeur dans un arbre
+### 4.5 Recherche d'une valeur dans un arbre
 On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
 
-
-```python
-def recherche(arbre, valeur):
-    if arbre is None:
-        return False
-    if arbre.get_data() ==  valeur:
-        return True
-    else :
-        return recherche(arbre.get_left(), valeur) or recherche(arbre.get_right(), valeur)
-```
-
-
-```python
-recherche(a, 2)
-```
-
-
-
-
-    True
-
-
+!!! note "Recherche d'une valeur dans un arbre :heart:"
+    ```python
+    def recherche(arbre, valeur):
+        if arbre is None:
+            return False
+        if arbre.data ==  valeur:
+            return True
+        else :
+            return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
+    ```
 
 
 ```python
-recherche(a, 45)
+>>> recherche(a, 2)
+True
+>>> recherche(a, 45)
+False
 ```
-
-
-
-
-    False
-
-
 
 ### 4.6 Parcours en largeur
 Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.  
@@ -667,6 +654,7 @@ Il est nécessaire d'utiliser une **file**  :
 ![](data/parcoursBFS.png){: .center}
 
 On importera l'objet ```Queue()``` du module ```queue``` de Python, qui permet de  :
+
 - créer une file vide avec ```file = Queue()```
 - défiler un élément par ```file.get()```
 - enfiler l'élément ```a``` par ```file.put(a)```
@@ -677,47 +665,44 @@ On importera l'objet ```Queue()``` du module ```queue``` de Python, qui permet d
 # arbre-test
 # ne pas oublier de remonter plus haut dans le document pour relancer la classe Arbre
 a = Arbre(8)
-a.set_left(Arbre(4))
-a.set_right(Arbre(5))
-a.get_left().set_left(Arbre(2))
-a.get_left().set_right(Arbre(1))
-a.get_right().set_right(Arbre(3))
+a.left = Arbre(4)
+a.right = Arbre(5)
+a.left.left = Arbre(2)
+a.left.right = Arbre(1)
+a.right.right = Arbre(3)
 ```
+
+!!! note "Parcours en largeur (BFS) :heart:"
+    ```python
+    from queue import Queue
+
+    def BFS(arbre):        
+        file = Queue()
+        file.put(arbre)
+        sol = []
+        while file.empty() is False :
+            a = file.get()
+            if a is not None :
+                sol.append(a.data)
+                file.put(a.left)
+                file.put(a.right)
+        return sol
+    ```
 
 
 ```python
-from queue import Queue
-
-def BFS(arbre):        
-    file = Queue()
-    file.put(arbre)
-    sol = []
-    while file.empty() is False :
-        a = file.get()
-        if a is not None :
-            sol.append(a.get_data())
-            file.put(a.get_left())
-            file.put(a.get_right())
-    return sol
+>>> BFS(a)
+[8, 4, 5, 2, 1, 3]
 ```
-
-
-```python
-BFS(a)
-```
-
-
-
-
-    [8, 4, 5, 2, 1, 3]
-
 
 
 ## 5. Arbres binaires de recherche (ABR)
-Un **arbre binaire de recherche** est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :
 
-- l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
-- l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
+!!! abstract "Définition d'un ABR :heart:"
+    Un **arbre binaire de recherche** est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :
+
+    - l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
+    - l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
 
 ![](data/exABR.png){: .center}
 
@@ -733,19 +718,23 @@ Employer une méthode récursive imposerait de garder en mémoire dans l'explora
 
 Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.
 
+!!! note "Être ou ne pas être un ABR :heart:"
+    ```python
+    def infixe(arbre, s = []):
+        if arbre is None :
+            return None
+        infixe(arbre.left, s)
+        s.append(arbre.data)
+        infixe(arbre.right, s)
+        return s
 
-```python
-def est_ABR(arbre, p):
-    '''renvoie un booléen indiquant si arbre est un ABR'''
-    # p est la liste qui contiendra le parcours. la fonction est à appeler par est_ABR(a, [])
-    if arbre is None :
-        return 0
-    est_ABR(arbre.left, p)
-    p.append(arbre.data)
-    est_ABR(arbre.right, p)
-    return p == sorted(p) # on regarde si le parcours est égal au parcours trié (merci TomFox)
 
-```
+    def est_ABR(arbre):
+        '''renvoie un booléen indiquant si arbre est un ABR'''
+        parcours = infixe(arbre)
+        return parcours == sorted(parcours) # on regarde si le parcours est égal au parcours trié 
+
+    ```
 
 
 ```python
@@ -753,47 +742,32 @@ def est_ABR(arbre, p):
 
 #arbre n°4
 a = Arbre(5)
-a.set_left(Arbre(2))
-a.set_right(Arbre(7))
-a.get_left().set_left(Arbre(0))
-a.get_left().set_right(Arbre(3))
-a.get_right().set_left(Arbre(6))
-a.get_right().set_right(Arbre(8))
+a.left = Arbre(2)
+a.right = Arbre(7)
+a.left.left = Arbre(0)
+a.left.right = Arbre(3)
+a.right.left = Arbre(6)
+a.right.right = Arbre(8)
 
 #arbre n°5
 b = Arbre(3)
-b.set_left(Arbre(2))
-b.set_right(Arbre(5))
-b.get_left().set_left(Arbre(1))
-b.get_left().set_right(Arbre(9))
-b.get_right().set_left(Arbre(4))
-b.get_right().set_right(Arbre(6))
+b.left = Arbre(2)
+b.right = Arbre(5)
+b.left.left = Arbre(1)
+b.left.right = Arbre(9)
+b.right.left = Arbre(4)
+b.right.right = Arbre(6)
 
 
 ```
 
 
 ```python
-est_ABR(a, [])
+>>> est_ABR(a)
+True
+>>> est_ABR(b)
+False
 ```
-
-
-
-
-    True
-
-
-
-
-```python
-est_ABR(b, [])
-```
-
-
-
-
-    False
-
 
 
 ### 5.2 Rechercher une clé dans un ABR
@@ -802,19 +776,19 @@ Un arbre binaire de taille $n$ contient $n$ clés (pas forcément différentes).
 
 Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.
 
+!!! note "Recherche d'une clé dans un ABR :heart:"
+    ```python
+    def contient_valeur(arbre, valeur):
+        if arbre is None :
+            return False
+        if arbre.data == valeur :
+            return True
+        if valeur < arbre.data :
+            return contient_valeur(arbre.left, valeur)
+        else:
+            return contient_valeur(arbre.right, valeur)
 
-```python
-def contient_valeur(arbre, valeur):
-    if arbre is None :
-        return False
-    if arbre.get_data() == valeur :
-        return True
-    if valeur < arbre.get_data() :
-        return contient_valeur(arbre.get_left(), valeur)
-    else:
-        return contient_valeur(arbre.get_right(), valeur)
-
-```
+    ```
 
 **Exemple** 
 
@@ -823,26 +797,11 @@ L'arbre ```a``` contient la valeur 8, mais l'arbre ```b``` ne la contient pas :
 
 
 ```python
-contient_valeur(a,8)
+>>> contient_valeur(a,8)
+True
+>>> contient_valeur(b,8)
+False
 ```
-
-
-
-
-    True
-
-
-
-
-```python
-contient_valeur(b,8)
-```
-
-
-
-
-    False
-
 
 
 ### 5.3  Coût de la recherche dans un ABR équilibré
@@ -883,11 +842,11 @@ def insertion(arbre, valeur):
     if arbre is None :
         return Arbre(valeur)
     else :
-        v = arbre.get_data()
+        v = arbre.data
         if valeur <= v :
-            arbre.set_left(insertion(arbre.get_left(), valeur))
+            arbre.left = insertion(arbre.left, valeur)
         else:
-            arbre.set_right(insertion(arbre.get_right(), valeur))
+            arbre.right = insertion(arbre.right, valeur)
         return arbre
 ```
 
@@ -898,12 +857,12 @@ def insertion(arbre, valeur):
 
 ```python
 a = Arbre(5)
-a.set_left(Arbre(2))
-a.set_right(Arbre(7))
-a.get_left().set_left(Arbre(0))
-a.get_left().set_right(Arbre(3))
-a.get_right().set_left(Arbre(6))
-a.get_right().set_right(Arbre(8))
+a.left = Arbre(2)
+a.right = Arbre(7)
+a.left.left = Arbre(0)
+a.left.right = Arbre(3)
+a.right.left = Arbre(6)
+a.right.right = Arbre(8)
 ```
 
 
