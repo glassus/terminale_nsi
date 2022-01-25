@@ -5,7 +5,7 @@ Le crible d’Ératosthène permet de déterminer les nombres premiers plus peti
 nombre N fixé. 
 
 On considère pour cela un tableau `tab` de N booléens, initialement tous égaux à `True`, sauf
-`tab[Criblecrible0]` et `tab[1]` qui valent `False`, 0 et 1 n’étant pas des nombres premiers.  
+`tab[0]` et `tab[1]` qui valent `False`, 0 et 1 n’étant pas des nombres premiers.  
 
 On parcourt alors ce tableau de gauche à droite.  
 
