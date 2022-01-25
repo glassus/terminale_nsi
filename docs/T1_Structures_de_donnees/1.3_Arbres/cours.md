@@ -836,19 +836,19 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
     - Si la clé est supérieure, on fait la même chose avec l'arbre de droite.
     - on renvoie le nouvel arbre ainsi créé.
 
-
-```python
-def insertion(arbre, valeur):
-    if arbre is None :
-        return Arbre(valeur)
-    else :
-        v = arbre.data
-        if valeur <= v :
-            arbre.left = insertion(arbre.left, valeur)
-        else:
-            arbre.right = insertion(arbre.right, valeur)
-        return arbre
-```
+!!! note "Insertion dans un ABR :heart:"
+    ```python
+    def insertion(arbre, valeur):
+        if arbre is None :
+            return Arbre(valeur)
+        else :
+            v = arbre.data
+            if valeur <= v :
+                arbre.left = insertion(arbre.left, valeur)
+            else:
+                arbre.right = insertion(arbre.right, valeur)
+            return arbre
+    ```
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 
@@ -867,29 +867,14 @@ a.right.right = Arbre(8)
 
 
 ```python
-infixe(a)
+>>> infixe(a)
+0-2-3-5-6-7-8-
+>>> insertion(a,4)
+<__main__.Arbre at 0x7f46f0507e80>
+>>> infixe(a)
+0-2-3-4-5-6-7-8-
 ```
 
-    0-2-3-5-6-7-8-
-
-
-```python
-insertion(a,4)
-```
-
-
-
-
-    <__main__.Arbre at 0x7f46f0507e80>
-
-
-
-
-```python
-infixe(a)
-```
-
-    0-2-3-4-5-6-7-8-
 
 La valeur 4 a donc bien été insérée au bon endroit.
 
