@@ -191,6 +191,8 @@ len(obj, /)
 
 ```
 
+![image](data/help.jpeg){: .center}
+
 
 De même pour la fonction ```range``` :
 ```python
