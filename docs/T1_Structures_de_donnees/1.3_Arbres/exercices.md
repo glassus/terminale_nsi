@@ -58,6 +58,32 @@ noeuds de son fils gauche, et inférieure à celles des noeuds de son fils droit
 fonction renvoie `True` si `element` est dans l’arbre et `False` sinon. L’arbre sera représenté par un tableau
 comme dans la question précédente.
 
+
+??? tip "corrigé"
+    **Q1** La taille est 9, la hauteur est 4.  
+    **Q2** 1. G est associé à 1010.   
+    **Q2** 2. 13 s'écrit 1101 en binaire, c'est donc le nœud I.    
+    **Q2** 3. Les nœuds les plus en bas sont notés sur $h$ bits.  
+    **Q2** 4. L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
+    L'arbre de hauteur $h$ de taille maximale est l'arbre complet, qui est de taille $2^h-1$. Si $n$ est la taille d'un arbre quelconque de taille $h$, on a donc bien $$ h \leqslant n \leqslant 2^h-1 $$.
+
+    **Q3** 1. Tableau : ```[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]``` .  
+    **Q3** 2. Le père du nœud d'indice ```i``` a pour indice ```i//2```.   
+
+    **Q4** :
+    ```python
+    def recherche(arbre, element):
+        i = 1
+        while i < len(arbre):
+            if arbre[i] == element:
+                return True
+            if element < arbre[i]:
+                i = 2*i # on se place sur le fils gauche
+            else:
+                i = 2*i +  1 # on se place sur le fils droit
+        return False
+    ```
+
 ## Exercice 2
 *2021, Métropole sujet 1*
 
