@@ -1,8 +1,9 @@
 
-
-### Infos orientation :
-- [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-- [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+!!! abstract ":star: Actualités :star:"
+    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
+    - **Infos orientation :**
+        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
+        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
 ## Thème en cours d'étude : [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)  
