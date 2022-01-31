@@ -22,6 +22,7 @@ theme:
     - navigation.top
     - toc.integrate
     - header.autohide
+    - content.code.annotate 
 
   palette:
     # Light mode

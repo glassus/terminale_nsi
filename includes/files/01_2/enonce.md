@@ -12,7 +12,7 @@ Compléter le code Python ci-dessous de la fonction `rendu_glouton` qui impléme
 algorithme et renvoie la liste des pièces à rendre.
 
 ```python linenums='1'
-pieces = [100,50,20,10,5,2,1]
+pieces = [100,50,20,10,5,2,1] # (1)
 
 def rendu_glouton(arendre, solution=[], i=0):
     if arendre == 0:
@@ -24,11 +24,18 @@ def rendu_glouton(arendre, solution=[], i=0):
     else :
         return rendu_glouton(arendre, solution, ...)
 ```
+
+1. Erreur dans l'énoncé officiel : ```Pieces```
+
+
 On devra obtenir :
 
 ```python
->>>rendu_glouton(68,[],0)
+>>> rendu_glouton(68, [], 0) # (1)
 [50, 10, 5, 2, 1]
->>>rendu_glouton(291,[],0)
+>>> rendu_glouton(291, [], 0) # (2)
 [100, 100, 50, 20, 20, 1]
 ```
+
+1. Erreur dans l'énoncé officiel : ```rendu_glouton_r```
+2. Erreur dans l'énoncé officiel : ```rendu_glouton_r```

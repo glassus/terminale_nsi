@@ -24,7 +24,7 @@ Compléter le code récursif de la fonction `propager` donné ci-dessous :
 ```python linenums='1'
 def propager(M, i, j, val):
     if M[i][j]== ...:
-        return None
+        return None # (1)
 
     M[i][j] = val
 
@@ -44,6 +44,9 @@ def propager(M, i, j, val):
     if ((...) < len(M) and M[i][j+1] == 1):
         propager(M, i, ..., val)
 ```
+
+1. Dans l'énoncé original, il n'y a rien après le ```return```. 
+
 Exemple :
 ```python
 >>> M = [[0,0,1,0],[0,1,0,1],[1,1,1,0],[0,1,1,0]]
