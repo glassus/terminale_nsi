@@ -136,10 +136,14 @@ valeur `True` si cet entier est une étiquette de l’arbre, `False` sinon.
 
 
 ??? tip "corrigé"
-    **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 22.  
+    **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 32.  
     **1.b.** Le sous-arbre gauche du nœud 23 est 19-21.  
     **1.c.** La hauteur de l'arbre est 4. Sa taille est 9.  
-    **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.
+    **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.  
+
+    **2.a.** Parcours infixe : 12-13-15-16-18-19-21-23-32  
+    **2.b.** Parcours suffixe : 12-13-16-15-21-19-32-23-18
+
 
 ## Exercice 3
 *2021, Métropole Candidats Libres 2*
