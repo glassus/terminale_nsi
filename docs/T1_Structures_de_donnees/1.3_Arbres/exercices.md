@@ -263,7 +263,7 @@ binaire de recherche contenant les mêmes clés et dont la hauteur est plus peti
 que celle de l’arbre initial.
 
 **3.** Les classes Noeud et Arbre ci-dessous permettent de mettre en œuvre en Python
-la structure d’arbre binaire de recherche. La méthode insere permet d’insérer
+la structure d’arbre binaire de recherche. La méthode `insere` permet d’insérer
 récursivement une nouvelle clé.
 
 ```python linenums='1'
@@ -344,3 +344,12 @@ est $2^h - 1$.
 « bien construit » de hauteur $ℎ$ ?
 
 **6.b** Écrire la méthode ```bien_construit``` demandée.
+
+
+??? tip "corrigé"
+    **1.a.** La taille de l'arbre est 7.  
+    **1.b.** La hauteur de l'arbre est 4.  
+
+    **2.** À venir
+
+    **3.** 

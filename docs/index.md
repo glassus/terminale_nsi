@@ -6,9 +6,10 @@
         - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
-## Thème en cours d'étude : [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)  
+## Thème en cours d'étude : [Diviser pour régner](/3_Algorithmique/3.1_Diviser_pour_regner/cours/)  
 
 !!! note "*Anciens thèmes traités*"
+    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
     - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
