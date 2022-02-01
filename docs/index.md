@@ -6,7 +6,7 @@
         - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
-## Thème en cours d'étude : [Diviser pour régner](/3_Algorithmique/3.1_Diviser_pour_regner/cours/)  
+## Thème en cours d'étude : [Diviser pour régner](3_Algorithmique/3.1_Diviser_pour_regner/cours/)  
 
 !!! note "*Anciens thèmes traités*"
     - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
