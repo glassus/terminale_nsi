@@ -135,6 +135,12 @@ de cet arbre.
 valeur `True` si cet entier est une étiquette de l’arbre, `False` sinon.
 
 
+??? tip "corrigé"
+    **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 22.  
+    **1.b.** Le sous-arbre gauche du nœud 23 est 19-21.  
+    **1.c.** La hauteur de l'arbre est 4. Sa taille est 9.  
+    **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.
+
 ## Exercice 3
 *2021, Métropole Candidats Libres 2*
 
