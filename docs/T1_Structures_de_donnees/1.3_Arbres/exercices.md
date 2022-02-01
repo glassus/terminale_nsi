@@ -186,7 +186,35 @@ valeur `True` si cet entier est une étiquette de l’arbre, `False` sinon.
             for v in vals:
                 self.insere(v)
 
+        def recherche(self, v):
+            arbre = self
+            while not arbre is None:
+                if arbre.v == v:
+                    return True
+                if v < arbre.v:
+                    arbre = arbre.ag
+                else:
+                    arbre = arbre.ad
+            return False
 
+
+        # version récursive (non demandée)
+
+        def recherche_rec(self, v):
+            if self is None:
+                return False
+            if self.v == v:
+                return True
+            if v < self.v:
+                if self.ag is not None:
+                    return self.ag.recherche_rec(v)
+                else:
+                    return False
+            else:
+                if self.ad is not None:
+                    return self.ad.recherche_rec(v)
+                else:
+                    return False
 
 
     racine = Noeud(18)
