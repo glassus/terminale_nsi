@@ -135,3 +135,76 @@ True
 >>> dicho_rec_2(tab, 17)
 False
 ```
+
+## 2. Diviser pour régner
+
+Les algorithmes de dichotomie présentés ci-dessous ont tous en commun de diviser par deux la taille des données de travail à chaque étape. Cette méthode de résolution d'un problème est connue sous le nom de *diviser pour régner*, ou *divide and conquer* en anglais.  
+
+Une définition pourrait être :
+
+!!! abstract "Définition :heart:"
+    Un problème peut se résoudre en employant le paradigme *diviser pour régner* lorsque :  
+    - il est possible de décomposer ce problème en sous-problèmes **indépendants**.  
+    - la taille de ces sous-problèmes est **fraction** du problème initial
+
+
+**Remarques :**
+
+- Les sous-problèmes peuvent nécessiter d'être ensuite recombinés entre eux (voir plus loin le tri fusion).
+- Considérons de l'écriture récursive de la fonction ```factorielle``` ci-dessous :
+```python
+def factorielle(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorielle(n-1)
+``` 
+On ne peut pas parler ici de *diviser pour régner* car la taille des données à traiter est passée de *n* à *n-1*. C'est bien une diminution (qui fait que l'algorithme fonctionne) mais il n'y a pas de **division** de la taille des données.  
+C'est cette division (par 2 dans le cas de la dichotomie) qui donne son efficacité à ce paradigme.
+
+- Le paradigme *diviser pour régner* va naturellement amener à rédiger des programmes récursifs.
+
+
+## 3. L'exponentiation rapide
+On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc coder, de deux manières différentes, la puissance d'un nombre.
+
+### 3.1 Algorithme classique
+
+!!! note "Exponentiation classique :heart:"
+    ```python linenums='1'
+    def puissance(a, n):
+        if n == 0:
+            return 1
+        else:
+            return a * puissance(a, n-1)
+    ```
+
+### 3.2 Algorithme utilisant *diviser pour régner*
+
+Nous allons nous appuyer sur la remarque mathématique suivante :  
+Pour tout nombre $a$, 
+
+- si $n$ est pair, $a^n = (a^2)^{\frac{n}{2}}$
+
+- si $n$ est impair, $a^n = a \times a^{n-1} = a \times (a^2)^{\frac{n-1}{2}}$
+
+Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
+
+
+!!! note "Exponentiation rapide :heart:"
+    ```python linenums='1'
+    def puissance_mod(a, n):
+        if n == 0:
+            return 1
+        if n % 2 == 0:
+            return puissance_mod(a*a, n//2)
+        else:
+            return a * puissance_mod(a*a, (n-1)//2)
+    ```
+
+
+### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
+
+![image](data/puiss.png){: .center}
+
+
