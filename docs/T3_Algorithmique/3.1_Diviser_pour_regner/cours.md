@@ -39,15 +39,15 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
 
-    Exemple d'utilisation :
+Exemple d'utilisation :
 
-    ```python
-    >>> tab = [1, 5, 7, 9, 12, 13]
-    >>> recherche_dichotomique(tab, 12)
-    True
-    >>> recherche_dichotomique(tab, 17)
-    False
-    ```
+```python
+>>> tab = [1, 5, 7, 9, 12, 13]
+>>> recherche_dichotomique(tab, 12)
+True
+>>> recherche_dichotomique(tab, 17)
+False
+```
 
 À chaque tour de la boucle ```while```, la taille de la liste est divisée par 2. Ceci confère à cet algorithme une **complexité logarithmique** (bien meilleure qu'une complexité linéaire).
 
@@ -72,9 +72,9 @@ On comprend que  :
 - ```lst[k:]``` va renvoyer la sous-liste composée du ```k```-ième élément (**inclus**) jusqu'au dernier.
 - plus généralement, ```lst[k:p]``` va renvoyer la sous-liste composée du ```k```-ième élément (**inclus**) jusqu'au ```p```-ième (**non inclus**).
 
-#### 1.2.2 Dichotomie récursive
+#### 1.2.2 Dichotomie récursive avec slicing
 
-!!! note "Dichotomie version récursive :heart:"
+!!! note "Dichotomie version récursive avec slicing :heart:"
     ```python linenums='1'
     def dichotomie_rec(tab, val):
         if len(tab) == 0:
@@ -90,3 +90,48 @@ On comprend que  :
 
     1. On prend la partie droite de liste, juste après l'indice central.
     2. On prend la partie gauche de liste, juste avant l'indice central.
+
+
+Exemple d'utilisation :
+
+```python
+>>> tab = [1, 5, 7, 9, 12, 13]
+>>> dichotomie_rec(tab, 12)
+True
+>>> dichotomie_rec(tab, 17)
+False
+```
+
+
+#### 1.2.3 Dichotomie récursive sans slicing
+
+Il est possible de programmer de manière récursive la recherche dichotomique sans toucher à la liste, et donc en jouant uniquement sur les indices :
+
+!!! note "Dichotomie version récursive sans slicing :heart:"
+    ```python linenums='1'
+    def dicho_rec_2(tab, val, i=0, j=None): # (1)
+        if j is None:                       # (2)
+            j = len(tab)-1
+        if i > j :
+            return False
+        m = (i + j) // 2
+        if tab[m] < val :
+            return dicho_rec_2(tab, val, m + 1, j)
+        elif tab[m] > val :
+            return dicho_rec_2(tab, val, i, m - 1 )
+        else :
+            return True
+    ```
+
+    1. Pour pouvoir appeler simplement la fonction sans avoir à préciser les indices, on leur donne des paramètres par défaut.
+    2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter.
+
+Exemple d'utilisation :
+
+```python
+>>> tab = [1, 5, 7, 9, 12, 13]
+>>> dicho_rec_2(tab, 12)
+True
+>>> dicho_rec_2(tab, 17)
+False
+```
