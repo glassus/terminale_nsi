@@ -83,7 +83,10 @@ On comprend que  :
         if tab[i_centre] == val:
             return True
         if tab[i_centre] < val:
-            return dichotomie_rec(tab[i_centre + 1:], val)
+            return dichotomie_rec(tab[i_centre + 1:], val) # (1)
         else:
-            return dichotomie_rec(tab[:i_centre - 1], val)
+            return dichotomie_rec(tab[:i_centre], val)  # (2)
     ```
+
+    1. On prend la partie droite de liste, juste après l'indice central.
+    2. On prend la partie gauche de liste, juste avant l'indice central.
