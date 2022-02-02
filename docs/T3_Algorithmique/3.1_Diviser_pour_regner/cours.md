@@ -207,4 +207,25 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
 ![image](data/puiss.png){: .center}
 
+!!! example "Exercice"
+    === "Énoncé"
+        Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
 
+        **Aide pour Matplotlib :** le code ci-dessous
+
+        ```python linenums='1'
+        import matplotlib.pyplot as plt
+
+        def carre(x):
+            return x*x
+
+        x = list(range(10))
+        y = [carre(k) for k in x]
+        plt.plot(x, y)
+        plt.show()
+        ```
+
+        donne le graphique suivant :
+
+        ![image](data/carre.png){: .center}
+        
