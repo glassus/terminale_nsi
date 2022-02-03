@@ -145,7 +145,7 @@ Une définition pourrait être :
 !!! abstract "Définition :heart:"
     Un problème peut se résoudre en employant le paradigme *diviser pour régner* lorsque :  
     - il est possible de décomposer ce problème en sous-problèmes **indépendants**.  
-    - la taille de ces sous-problèmes est **fraction** du problème initial
+    - la taille de ces sous-problèmes est une **fraction** du problème initial
 
 
 **Remarques :**
