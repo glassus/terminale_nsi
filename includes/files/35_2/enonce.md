@@ -6,8 +6,8 @@ L'algorithme traite le cas du tableau vide.
 L'algorithme est écrit pour que la recherche dichotomique ne se fasse que dans le cas où
 la valeur est comprise entre les valeurs extrêmes du tableau.
 
-On distingue les trois cas qui renvoient `False` en renvoyant `False,1` , `False,2` et
-`False,3`.
+On distingue les trois cas qui renvoient `False` en renvoyant `False, 1` , `False, 2` et
+`False, 3`.
 
 Compléter l'algorithme de dichotomie donné ci-après.
 
@@ -23,7 +23,7 @@ def dichotomie(tab, x):
         return False,1
     # cas où x n'est pas compris entre les valeurs extrêmes
     if (x < tab[0]) or ...:
-        return False,2
+        return False, 2
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:

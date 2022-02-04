@@ -18,6 +18,6 @@ Par exemple : avec la phrase 'Hello world !' le dictionnaire est le suivant :
 `{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}`
 
 
-Écrire une fonction `occurence_lettres` prenant comme paramètre une variable
+Écrire une fonction `occurrence_lettres` prenant comme paramètre une variable
 `phrase` de type `str`. Cette fonction doit renvoyer un dictionnaire de type constitué des
 occurrences des caractères présents dans la phrase.

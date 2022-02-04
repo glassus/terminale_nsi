@@ -1,5 +1,5 @@
 ```python linenums='1'
-def occurence_lettres(phrase):
+def occurrence_lettres(phrase):
     occ = {}
     for caractere in phrase:
         if caractere in occ:

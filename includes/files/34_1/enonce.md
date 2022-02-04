@@ -3,7 +3,7 @@
 que des lettres en minuscules sans accent.
 On pourra s’aider du tableau
 
-`alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o,','p','q','r','s','t','u','v','w','x','y','z']`
+`alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']`
 
 et du tableau `occurrence` de 26 éléments où l’on mettra dans `occurrence[i]` le
 nombre d’apparitions de `alphabet[i]` dans la chaine.  
