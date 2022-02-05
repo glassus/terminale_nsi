@@ -8,4 +8,5 @@ def tri_bulles(T):
                 T[j] = T[j+1]
                 T[j+1] = temp
     return T
+```
 
