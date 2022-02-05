@@ -43,8 +43,14 @@ def vainqueur(election):
             vainqueur = candidat
     liste_finale = [nom for nom in election if election[nom] == ...]
     return ...
+```
 
+Exemples d’utilisation :
 
-
-
+```python
+>>> election = depouille(urne)
+>>> election
+{'Extra Vomit': 4, 'Oreilles sales': 3, 'Lady Baba': 3}
+>>> vainqueur(election)
+['Extra Vomit']
 ```
