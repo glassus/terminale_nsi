@@ -14,7 +14,7 @@ séparé du dernier mot par un seul caractère espace `' '`.
 *Exemples :*
 
 Après avoir remarqué le lien entre le nombre de mots et le nombres de caractères espace
-dans une phrase, programmer une fonction nombre_de_mots qui prend en paramètre une
+dans une phrase, programmer une fonction `nombre_de_mots` qui prend en paramètre une
 phrase et renvoie le nombre de mots présents dans cette phrase.
 
 ```python

@@ -9,9 +9,9 @@ fermantes.
 être, à tout moment, supérieur ou égal au nombre de parenthèses déjà fermées.
 
 
-Ainsi, "((()())(()))" est un parenthésage correct. 
+Ainsi, `((()())(()))` est un parenthésage correct. 
 
-Les parenthésages "())(()" et "(())(()" sont, eux, incorrects.
+Les parenthésages `())(()` et `(())(()` sont, eux, incorrects.
 
 
 On dispose du code de la classe `Pile` suivant :
@@ -45,7 +45,8 @@ de la pile.
 
 La chaîne est alors bien parenthésée si, à la fin du parcours, la pile est vide. 
 
-Elle est, par contre, mal parenthésée :
+Elle est, par contre, mal parenthésée : 
+
 - si dans le parcours, on trouve une parenthèse fermante, alors que la pile est vide ;
 - ou si, à la fin du parcours, la pile n’est pas vide.
 
