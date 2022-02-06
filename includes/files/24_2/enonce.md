@@ -53,7 +53,7 @@ Elle est, par contre, mal parenthésée :
 
 
 ```python linenums='1'
-def parenthesage (ch):
+def parenthesage(ch):
     """Renvoie True si la chaîne ch est bien parenthésée et False sinon"""
     p = Pile()
     for c in ch:
