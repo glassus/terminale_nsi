@@ -41,11 +41,12 @@ def propager(M, i, j, val):
         propager(M, i, ..., val)
 
     # l'élément à droite fait partie de la composante
-    if ((...) < len(M) and M[i][j+1] == 1):
+    if ((...) < len(M) and M[i][j+1] == 1): # (2)
         propager(M, i, ..., val)
 ```
 
 1. Dans l'énoncé original, il n'y a rien après le ```return```. 
+2. :warning: Il faudrait écrire ```len(M[0])``` plutôt que  ```len(M)```. (équivalent ici car l'image est carrée...)
 
 Exemple :
 ```python
