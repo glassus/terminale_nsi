@@ -80,9 +80,9 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date
-  - macros
   - awesome-pages:
       collapse_single_pages: false
+  - macros
   #- page-to-pdf
  
  

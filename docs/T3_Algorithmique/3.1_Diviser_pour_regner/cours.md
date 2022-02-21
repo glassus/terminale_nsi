@@ -231,3 +231,11 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
         ![image](data/carre.png){: .center}
         
+## 4. Le tri-fusion
+En anglais le *merge sort*.
+
+![image](data/merge_yoda.jpg){: .center width=60%}
+
+### 4.1 Preambule : l'interclassement
+
+
