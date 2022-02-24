@@ -1,7 +1,5 @@
 ```python linenums='1'
-urne = ['Oreilles sales', 'Oreilles sales', 'Oreilles sales',
-      'Extra Vomit', 'Lady Baba', 'Extra Vomit', 'Lady Baba',
-      'Extra Vomit', 'Lady Baba', 'Extra Vomit']
+urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
 
 def depouille(urne):
     resultat = {}
