@@ -4,7 +4,7 @@ stockés dans un tableau.
 Exemple :
 
 ```python
-urne = ['A', 'A', 'A','B', 'C', 'B', 'C','B', 'C', 'B']
+urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
 ```
 
 La fonction `depouille` doit permettre de compter le nombre de votes exprimés pour chaque
@@ -47,7 +47,9 @@ Exemples d’utilisation :
 ```python
 >>> election = depouille(urne)
 >>> election
-{'B': 4, 'A': 3, 'A': 3}
+{'A': 3, 'B': 4, 'C': 3} # (1)
 >>> vainqueur(election)
 ['B']
 ```
+
+1. Attention, ceci est le bon résultat, le pdf officiel est erroné.
