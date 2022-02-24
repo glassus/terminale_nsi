@@ -35,13 +35,11 @@ class PaquetDeCarte:
 
     """Remplit le paquet de cartes"""
     def remplir(self):
-        for nb_coul in range(1,5):
-            for val in range(1,14):
-                self.contenu.append(Carte(nb_coul, val))
+        self.contenu = [Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range(1, 14)]
 
     """Renvoie la Carte qui se trouve à la position donnée"""
     def getCarteAt(self, pos):
-        assert pos in range(56)
-        return self.contenu[pos]
+        if 0 <= pos < len(self.contenu) :
+            return self.contenu[pos]
 
 ```

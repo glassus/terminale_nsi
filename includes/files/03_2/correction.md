@@ -21,13 +21,11 @@ e = Noeud(Noeud(Noeud(None, 3, None), '*', Noeud(Noeud(None, 8, None),
 Noeud(None, 1, None)))
 
 def expression_infixe(e):
-    s = ""
+    s = ''
     if e.gauche is not None:
-        s = s + expression_infixe(e.gauche)
+        s = '(' + s + expression_infixe(e.gauche)
     s = s + str(e.valeur)
     if e.droit is not None:
-        s = s + expression_infixe(e.droit)
-    if e.est_une_feuille():
-        return s
-    return '('+ s +')'
+        s = s + expression_infixe(e.droit) + ')'
+    return s
 ```

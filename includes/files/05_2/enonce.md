@@ -48,5 +48,5 @@ Exemple :
 >>> unPaquet.remplir()
 >>> uneCarte = unPaquet.getCarteAt(20)
 >>> print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
-  6 de coeur
+  8 de coeur
 ```

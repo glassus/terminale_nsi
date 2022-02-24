@@ -56,6 +56,7 @@ def expression_infixe(e):
     s = s + ...
     if ... is not None:
         s = s + ... + ...
-    if ... :
-        return s
+    return s # (1)
 ```
+
+1. Attention, l'énoncé original fait précéder ce ```return``` d'un ```if ...``` qui a été supprimé ici. Il faudrait écrire ```if True:```, ce qui est inutile...   
