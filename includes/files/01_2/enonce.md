@@ -31,11 +31,8 @@ def rendu_glouton(arendre, solution=[], i=0):
 On devra obtenir :
 
 ```python
->>> rendu_glouton(68, [], 0) # (1)
+>>> rendu_glouton(68, [], 0) 
 [50, 10, 5, 2, 1]
->>> rendu_glouton(291, [], 0) # (2)
+>>> rendu_glouton(291, [], 0) 
 [100, 100, 50, 20, 20, 1]
 ```
-
-1. Erreur dans l'énoncé officiel : ```rendu_glouton_r```
-2. Erreur dans l'énoncé officiel : ```rendu_glouton_r```

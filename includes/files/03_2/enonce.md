@@ -52,11 +52,10 @@ class Noeud:
 def expression_infixe(e):
     s = ...
     if e.gauche is not None:
-        s = s + expression_infixe(...)
+        s = '(' + s + expression_infixe(...)
     s = s + ...
     if ... is not None:
-        s = s + ...
-    if ...:
+        s = s + ... + ...
+    if ... :
         return s
-    return '('+ s +')'
 ```

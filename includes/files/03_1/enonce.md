@@ -14,7 +14,6 @@ Exemples :
 >>> delta([1000, 800, 802, 1000, 1003])
 [1000, -200, 2, 198, 3]
 >>> delta([42])
-[42] # (1)
+[42] 
 ```
 
-1. Dans l'énoncé original, il n'y a pas de crochets autour de 42, ce qui est une erreur.
