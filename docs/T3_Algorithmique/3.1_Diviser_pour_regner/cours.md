@@ -245,7 +245,7 @@ On appelera ce mécanisme l'**interclassement**.
 Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
 
 - on part d'une liste vide ```lst_totale```
-- on y ajoute alternativement les éléments de ```lst1``` et ```lst2```
+- on y ajoute alternativement les éléments de ```lst1``` et ```lst2```. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
 - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
@@ -261,3 +261,75 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
         "
         ) }}
 
+
+### 4.2 La fusion
+
+### 4.2.1 Principe
+
+L'idée du tri fusion est le découpage de la liste originale en une multitude de listes ne contenant qu'un seul élément. Ces listes élémentaires seront ensuite interclassées avec la fonction précédente.
+
+![image](data/fusion.png){: .center}
+
+**Principe de l'algorithme du tri fusion :**
+
+- pour trier une liste, on interclasse les deux moitiés de cette liste, précédémment elles-mêmes triées par le tri fusion.
+- si une liste à trier est réduite à un élément, elle est déjà triée. 
+
+
+### 4.2.1 Implémentation
+
+La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
+
+!!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
+    ```python
+    def interclassement(lst1, lst2):
+        lst_totale = []
+        n1, n2 = len(lst1), len(lst2)
+        i1, i2 = 0, 0
+        while i1 < n1 and i2 < n2:
+            if lst1[i1] < lst2[i2]:
+                lst_totale.append(lst1[i1])
+                i1 += 1
+            else:
+                lst_totale.append(lst2[i2])
+                i2 += 1
+        return lst_totale + lst1[i1:] + lst2[i2:]
+
+    def tri_fusion(lst):
+        if len(lst) <= 1:
+            return lst
+        else:
+            m = len(lst) // 2
+            return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
+    ```
+
+
+
+### 4.2.3 Visualisation
+
+Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. C'est faux !
+L'animation suivante montre la progression du tri :
+
+![image](data/gif_fusion.gif){: .center}
+
+Il est aussi conseillé d'observer l'évolution de l'algorithme grâce à PythonTutor :
+
+<iframe width="1000" height="700" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20interclassement%28lst1,%20lst2%29%3A%0A%20%20%20%20lst_totale%20%3D%20%5B%5D%0A%20%20%20%20n1,%20n2%20%3D%20len%28lst1%29,%20len%28lst2%29%0A%20%20%20%20i1,%20i2%20%3D%200,%200%0A%20%20%20%20while%20i1%20%3C%20n1%20and%20i2%20%3C%20n2%3A%0A%20%20%20%20%20%20%20%20if%20lst1%5Bi1%5D%20%3C%20lst2%5Bi2%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst1%5Bi1%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i1%20%2B%3D%201%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst2%5Bi2%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i2%20%2B%3D%201%0A%20%20%20%20return%20lst_totale%20%2B%20lst1%5Bi1%3A%5D%20%2B%20lst2%5Bi2%3A%5D%0A%0Adef%20tri_fusion%28lst%29%3A%0A%20%20%20%20if%20len%28lst%29%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%20lst%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20m%20%3D%20len%28lst%29%20//%202%0A%20%20%20%20%20%20%20%20return%20interclassement%28tri_fusion%28lst%5B%3Am%5D%29,%20tri_fusion%28lst%5Bm%3A%5D%29%29%0A%0Alst%20%3D%20%5B4,%203,%208,%202,%207,%201,%205%5D%0Aprint%28tri_fusion%28lst%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+## 4.3 Complexité
+
+La division par 2 de la taille de la liste pourrait nous amener à penser que le tri fusion est de complexité logarithmique, comme l'algorithme de dichotomie. Il n'en est rien.
+
+En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certe des données d'entrée deux fois plus petites).
+
+On peut montrer que :
+
+!!! note "Complexité du tri fusion :heart:"
+    L'algorithme de tri fusion est en $O(n \log n)$.
+
+    On dit qu'il est **semi-logarithmique**.
+
+Une complexité semi-logarithmique (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$).
+
+![image](data/comparaison.png){: .center}
