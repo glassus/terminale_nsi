@@ -89,9 +89,10 @@ plugins:
  # - mkdocs-jupyter
 
 extra:
-  analytics: google
+  analytics: 
+    provider: google
     property: G-NXDLLVVQEB
-    
+
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:gilles.lassus@ac-bordeaux.fr
