@@ -346,3 +346,13 @@ On peut montrer que :
 Une complexité semi-logarithmique (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$).
 
 ![image](data/comparaison.png){: .center}
+
+
+Une jolie animation permettant de comparer les tris :
+
+![image](data/comparaisons.gif){: .center}
+
+Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms).
+
+
+
