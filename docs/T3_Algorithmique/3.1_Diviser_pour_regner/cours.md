@@ -264,7 +264,7 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
 
 ### 4.2 La fusion
 
-### 4.2.1 Principe
+#### 4.2.1 Principe
 
 L'idée du tri fusion est le découpage de la liste originale en une multitude de listes ne contenant qu'un seul élément. Ces listes élémentaires seront ensuite interclassées avec la fonction précédente.
 
@@ -276,7 +276,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 - si une liste à trier est réduite à un élément, elle est déjà triée. 
 
 
-### 4.2.1 Implémentation
+#### 4.2.2 Implémentation
 
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
@@ -305,7 +305,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
 
 
 
-### 4.2.3 Visualisation
+#### 4.2.3 Visualisation
 
 Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. C'est faux !
 L'animation suivante montre la progression du tri :
