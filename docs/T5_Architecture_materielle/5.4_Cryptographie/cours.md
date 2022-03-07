@@ -30,7 +30,7 @@
         >>> 53 ^ 23
         34
         ```
-        - La fonction ```ord``` permet de renvoyer le code ASCII d'un caractère. La fonction ```chr``` fait l'opération inverse :
+        - La fonction ```ord``` permet de renvoyer le code ASCII d'un caractère. La fonction ```chr``` fait l'opération inverse.
         ```python
         >>> ord('A')
         65
