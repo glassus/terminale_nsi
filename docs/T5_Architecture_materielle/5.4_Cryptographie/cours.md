@@ -11,14 +11,42 @@
 
 ### 1.1 Activité du masque jetable
 
-On considère la variable suivante :
+!!! example "Exercice"
+    === "Énoncé"
+        On considère la variable suivante :
 
-```python
-masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
-```
+        ```python
+        masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
+        ```
 
-- Créer une fonction ```chiffre(message_clair, masque)``` qui chiffre ```message ``` en le XORant avec ```masque```.
-- Créer une fonction ```dechiffre(message_chiffre, masque)``` qui réalise l'opération inverse.
+        - Créer une fonction ```chiffre(message, masque)``` qui chiffre ```message ``` en le XORant avec ```masque```.
+        - Cette fonction doit pouvoir **aussi** servir à déchiffrer le message chiffré.
+
+    === "Aide"
+        - Le ```XOR``` (voir [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.5_Booleens/cours/#disjonction-exclusive-xor){target = "_blank"}) est une opération symétrique :
+        ```python
+        >>> 34 ^ 23
+        53
+        >>> 53 ^ 23
+        34
+        ```
+        - La fonction ```ord``` permet de renvoyer le code ASCII d'un caractère. La fonction ```chr``` fait l'opération inverse :
+        ```python
+        >>> ord('A')
+        65
+        >>> chr(65)
+        'A'
+        ```
+
+      
+
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
 
 ### 1.2 Principe du chiffrement symétrique
 
@@ -31,6 +59,7 @@ masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
 
 #### Qu'appelle-t-on une clé ?
 La clé est un renseignement permettant de chiffrer ou déchiffrer un message. Cela peut être :
+
 - un nombre (dans un simple décalage des lettres de l'alphabet, comme [le chiffre de César](https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage))
 - une phrase (dans la méthode du [masque jetable](https://fr.wikipedia.org/wiki/Masque_jetable))
 - une image (imaginez un chiffrement où on effectue un XOR par les pixels d'une image, comme dans [cette énigme](https://github.com/glassus/nsi/blob/master/Premiere/DM/DM1/enonce.md))
@@ -66,6 +95,7 @@ Il n'a aucune possibilité de savoir où est le bon message original parmi toute
 
 #### Quels sont les chiffrements symétriques modernes ?
 L'algorithme de chiffrement symétrique le plus utilisé actuellement est le chiffrement [AES](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard), pour Advanced Encryption Standard.
+
 - chiffrement par bloc de 128 bits, répartis dans une matrice de 16 octets (matrice carrée de taille 4).
 - ces 128 bits sont transformés par des rotations, multiplications, transpositions, [...] de la matrice initiale, en faisant intervenir dans ces transformations une clé de 128, 192 ou 256 bits.
 - pour l'AES-256 (avec une clé de 256 bits), l'attaque par force brute nécessiterait 2^256 opérations, soit un nombre à 78 chiffres...
@@ -86,10 +116,12 @@ Le principe de base est l'existence d'une **clé publique**, appelée à être d
 ### 2.2 Le rôle interchangeable des clés publiques et privées
 
 L'illustration précédente associe :
+
 - une image de cadenas à la clé publique (car on s'en sert pour chiffrer les messages)
 - une image de clé à la clé privée (car on s'en sert pour déchiffrer les messages)
 
 Concrètement, (nous le verrons dans l'applciation par le chiffrement RSA), la clé privée et la clé publique sont **deux nombres** aux rôles identiques. Appelons-les A et B :
+
 - il est impossible de trouver A en fonction de B. Réciproquement, si on connaît A, il est impossible d'en déduire B.
 - si on chiffre un message avec A, on peut le déchiffrer avec B. Réciproquement, si on chiffre avec B, on peut déchiffrer le message grâce à A.
 - on peut donc chiffrer avec une clé publique et déchiffrer avec la clé privée associée (ce qui est fait dans l'exemple précédent). Mais on peut aussi chiffrer avec la clé privée, et déchiffrer avec la clé publique associée.
@@ -123,12 +155,14 @@ De manière graphique, la connaissance des deux moitiés du disque qui s'assembl
 Dans la situation du 2.1, Alice (qui a distribué largement sa clé publique) ne peut pas s'assurer que le message vient bien de Bob. Il peut avoir été créé par Marc, qui signe «Bob» et usurpe ainsi son identité. 
 
 Le protocole que nous allons décrire ci-dessous permet :
+
 - d'empêcher qu'un message intercepté soit déchiffré (ce qui était déjà le cas dans le 2.1)
 - mais aussi de s'assurer que chaque personne est bien celle qu'elle prétend être : on résout le **problème d'authentification**.
 
 ![image](data/total_auth.png){: .center}
 
 **En résumé :**
+
 - Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
 - Bob est sûr que le message qu'il reçoit vient bien d'Alice.
 
@@ -214,6 +248,7 @@ Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bi
 Actuellement, il n'existe pas d'algorithme efficace pour factoriser un nombre ayant plusieurs centaines de chiffres.
 
 Deux évènements pourraient faire s'écrouler la sécurité du RSA :
+
 - la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  [https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html](https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html))
 - l'avènement d'[ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : [l'algorithme de Schor](https://fr.wikipedia.org/wiki/Algorithme_de_Shor).
 
@@ -227,6 +262,7 @@ Aujourd'hui, plus de 90 % du trafic sur internet est chiffré : les données ne 
 
 
 Le protocole ```https``` est la réunion de deux protocoles :
+
 -  le protocole ```TLS``` (Transport Layer Security, qui a succédé au SSL) : ce protocole, basé sur du **chiffrement asymétrique**, va conduire à la génération d'une clé identique chez le client et chez le serveur.
 - le (bon vieux) protocole  ```http```, mais qui convoiera maintenant des données chiffrées avec la clé générée à l'étape précédente. Les données peuvent toujours être interceptées, mais sont illisibles. Le **chiffrement symétrique** utilisé est actuellement le chiffrement AES.
 
