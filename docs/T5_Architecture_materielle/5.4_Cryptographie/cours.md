@@ -120,7 +120,7 @@ L'illustration précédente associe :
 - une image de cadenas à la clé publique (car on s'en sert pour chiffrer les messages)
 - une image de clé à la clé privée (car on s'en sert pour déchiffrer les messages)
 
-Concrètement, (nous le verrons dans l'applciation par le chiffrement RSA), la clé privée et la clé publique sont **deux nombres** aux rôles identiques. Appelons-les A et B :
+Concrètement, (nous le verrons dans l'application par le chiffrement RSA), la clé privée et la clé publique sont **deux nombres** aux rôles identiques. Appelons-les A et B :
 
 - il est impossible de trouver A en fonction de B. Réciproquement, si on connaît A, il est impossible d'en déduire B.
 - si on chiffre un message avec A, on peut le déchiffrer avec B. Réciproquement, si on chiffre avec B, on peut déchiffrer le message grâce à A.
@@ -145,7 +145,7 @@ et donc
 
 puisque l'application de la clé privée sur la clé publique, ou bien de la clé publique sur la clé privée, permet de retrouver le message en clair.
 
-De manière graphique, la connaissance des deux moitiés du disque qui s'assemblent permet de les faire disparaitre, qu'importe qu'on ait commencé par chiffrer avec la clé publique ou avec la clé privée.
+De manière graphique, la connaissance des deux moitiés du disque qui s'assemblent permet de les faire disparaitre, peu importe qu'on ait commencé par chiffrer avec la clé publique ou avec la clé privée.
 
 ![image](data/gif_auth.webp){: .center}
 
@@ -182,15 +182,15 @@ Le fait que 15 soit égal à 1 modulo 7 (car $15=2 \times 7+1$) s'écrira $15 \e
 De même, $10 \equiv  3 [7]$, $25 \equiv 4 [7]$, $32 \equiv 2 [10]$, etc.
 
 
-##### Étape 1
+#### Étape 1
 Alice choisit 2 grands nombres premiers $p$ et $q$. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons $p = 3$ et $q = 11$.
 
-##### Étape 2
+#### Étape 2
 Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
 >Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
 
-##### Étape 3
+#### Étape 3
 Alice choisit un nombre $e$ qui doit être premier avec $(p-1)(q-1)$.  On note $\phi(n)$ le nombre $(p-1)(q-1)$.
 
 Dans notre exemple, $(p-1)(q-1) = 20$, Alice choisit donc $e = 3$. (mais elle aurait pu aussi choisir 7, 9, 13...).
@@ -199,7 +199,7 @@ Le couple $(e, n)$ sera **la clé publique** d'Alice. Elle la diffuse à qui veu
 
 Dans notre exemple, la clé publique d'Alice est $(3, 33)$.
 
-##### Étape 4
+#### Étape 4
 Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui vérifie l'égalité $e d \equiv 1 [\phi(n)]$.
 
 Dans notre exemple, comme $7 \times 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
@@ -210,7 +210,7 @@ Le couple $(d, n)$ sera **la clé privée** d'Alice. Elle ne la diffuse à perso
 
 Dans notre exemple, la clé privée d'Alice est $(7, 33)$.
 
-##### Étape 5
+#### Étape 5
 Supposons que Bob veuille écrire à Alice pour lui envoyer le nombre 4. 
 Il possède la clé publique d'Alice, qui est $(3, 33)$.
 
@@ -220,7 +220,7 @@ $$4^3 \equiv 31 [33]$$
 
 > Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation $x^3 \equiv 31 [33]$ de manière efficace.
 
-##### Étape 6
+#### Étape 6
 Alice reçoit la valeur 31.  
 Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calculer le reste modulo 33 :
 
@@ -231,9 +231,9 @@ $27512614111 \equiv 4 [33]$
 Elle récupère la valeur 4, qui est bien le message original de Bob.
 
 > **Comment ça marche ?**
-Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat), on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA)) assez facilement que M**ed \equiv M [n].
+Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat), on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA)) assez facilement que $M^{ed} \equiv M [n]$.
 
-Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publique et de la clé privée sont symétriques : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
+Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publique et de la clé privée sont **symétriques** : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
 
 **Animation interactive**
 voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html)

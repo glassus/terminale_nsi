@@ -34,35 +34,36 @@ où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec
 
 
 ```python
-from Crypto.Util.number import bytes_to_long, long_to_bytes
-from Crypto.Random import get_random_bytes 
 import Crypto
 import libnum
+from Crypto.Util.number import bytes_to_long, long_to_bytes
+from Crypto.Random import get_random_bytes 
 
-bits = 128
+bits = 256
 msg = "en NSI on fait de la crypto"
 
 p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 
-n = p*q
-phi = (p-1)*(q-1)
+n = p * q
+phi = (p - 1) * (q - 1)
 
 e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
-d = libnum.invmod(e,phi)  # on calcule l'inverse de e modulo phi
+d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
 
-m = bytes_to_long(msg.encode('utf-8'))
+M = bytes_to_long(msg.encode('utf-8'))
 
-c = pow(m,e, n)
-res = pow(c,d ,n)
+c = pow(M, e, n) # M puissance e modulo n
+res = pow(c, d, n)
 
 print(long_to_bytes(res))
+
 
 ```
 
 1. Analysez le programme ci-dessous pour y retrouver chaque étape du chiffrement RSA.
-2. Observez les deux lignes qui contiennent les opérations de chiffrement et de déchiffrement.
-3. Que faut-il changer pour chiffrer avec la clé privée et déchiffrer avec la clé publique ?
+2. Exécutez le programme et regarder en console le contenu des différentes variables.
+3. Observez les deux lignes qui contiennent les opérations de chiffrement et de déchiffrement :que faut-il changer pour chiffrer avec la clé privée et déchiffrer avec la clé publique ?
 
 ### Exercice 4
 **module RSA** dans les règles de l'art
