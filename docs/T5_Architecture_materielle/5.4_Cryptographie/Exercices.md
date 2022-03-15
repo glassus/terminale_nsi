@@ -66,6 +66,14 @@ print(long_to_bytes(res))
 3. Observez les deux lignes qui contiennent les opérations de chiffrement et de déchiffrement :que faut-il changer pour chiffrer avec la clé privée et déchiffrer avec la clé publique ?
 
 ### Exercice 4
+
+En vous servant du code précédent, déchiffrez le message ```44528752388922004335673733938967390739786061339673400314583577394237347689573```  sachant que :
+
+- $e$ vaut 65537.
+- $p$ et $q$ sont respectivement les 13èmes et 14èmes nombres de Mersenne.
+
+
+### Exercice 5
 **module RSA** dans les règles de l'art
 
 
