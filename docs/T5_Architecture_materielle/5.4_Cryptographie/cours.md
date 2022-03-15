@@ -167,13 +167,23 @@ Le protocole que nous allons décrire ci-dessous permet :
 - Bob est sûr que le message qu'il reçoit vient bien d'Alice.
 
 ### 2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA
-
-Lorsqu'en 1976 Diffie et Hellman présentent le concept de chiffrement asymétrique (souvent appelé _cryptographie à clés publiques_), ils en proposent uniquement un modèle théorique, n'ayant pas trouvé une réelle implémentation de leur protocole.
+ 
+#### 2.3.1 Histoire
+Lorsqu'en 1976 Diffie et Hellman (chercheurs à Stanford) présentent le concept de chiffrement asymétrique (souvent appelé _cryptographie à clés publiques_), ils en proposent uniquement un modèle théorique, n'ayant pas trouvé une réelle implémentation de leur protocole.
 
 Trois chercheurs du MIT (Boston), Ron Rivest, Adi Shamir et Len Adleman se penchent alors sur ce protocole, convaincus qu'il est en effet impossible d'en trouver une implémentation pratique. En 1977, au cours de leurs recherches, ils démontrent en fait l'inverse de ce qu'ils cherchaient : ils créent le premier protocole concret de chiffrement asymétrique : le chiffrement **RSA**.
 
-![image](data/pic_RSA.jpeg){: .center}
 
+![image](data/pic_RSA.jpeg){: .center width=60%}
+
+
+Au même moment à Londres, Clifford Cocks, (chercheur au très secret [GCHQ](https://fr.wikipedia.org/wiki/Government_Communications_Headquarters){. target="_blank"}) apprend que Rivest Shamir et Adleman viennent de découvrir ce que lui-même a découvert **3 ans auparavant** mais qui est resté classé Secret Défense.
+
+Il est le véritable inventeur du RSA... mais le reste du monde ne l'apprendra qu'en 1997 au moment de la déclassification de cette information. 
+
+![image](data/clifford.jpg){: .center width=40%}
+
+#### 2.3.1 Description
 
 Le chiffrement RSA est basé sur *l'arithmétique modulaire*. Faire des calculs *modulo* un entier $n$, c'est ne garder que le reste de la division euclidienne par $n$.
 

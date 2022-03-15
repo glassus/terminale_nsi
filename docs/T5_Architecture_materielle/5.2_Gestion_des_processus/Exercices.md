@@ -81,3 +81,99 @@ Parmi les scénarios suivants, lequel provoque un interblocage ? Justifier.
 
 ![image](data/ex2_3.png){: .center}
 
+## Exercice 3
+_2021, Métropole sujet 2_
+
+**Partie A**
+
+Dans un bureau d’architectes, on dispose de certaines ressources qui ne peuvent être utilisées
+simultanément par plus d’un processus, comme l’imprimante, la table traçante, le modem.
+Chaque programme, lorsqu’il s’exécute, demande l’allocation des ressources qui lui sont
+nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.
+
+![image](data/ex3_1.png){: .center}
+
+On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3
+
+1. Les processus s'exécutent de manière concurrente.
+Justifier qu'une situation d'interblocage peut se produire.
+2. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
+3. Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
+d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
+tant que la table traçante n'est pas disponible :
+    - a. élu
+    - b. bloqué
+    - c. prêt
+    - d. terminé
+
+
+**Partie B**
+
+Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage suivant :
+
+![image](data/ex3_2.png){: .center}
+
+La documentation Linux donne la signification des différents champs :
+- `UID` : identifiant utilisateur effectif ;
+- `PID` : identifiant de processus ;
+- `PPID` : `PID` du processus parent ;
+- `C` : partie entière du pourcentage d'utilisation du processeur par rapport au temps de vie
+des processus ;
+- `STIME` : l'heure de lancement du processus ;
+- `TTY` : terminal de contrôle
+- `TIME` : temps d'exécution
+- `CMD` : nom de la commande du processus
+
+
+1. Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?
+    - a. ```ls -l``` 
+    - b. ```ps -ef``` 
+    - c. ```cd ..``` 
+    - d. ```chmod 741 processus.txt``` 
+
+2. Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
+navigateur Web (chromium-browser) ?
+
+3. Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
+
+
+## Exercice 4
+_2021, Métropole Candidats Libres sujet 2_
+
+**Q1.** Les états possibles d’un processus sont : *prêt*, *élu*, *terminé* et *bloqué*.
+
+**Q1.a.** Expliquer à quoi correspond l’état *élu*.  
+**Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
+
+**Q2.** On suppose que quatre processus C₁, C₂, C₃ et C₄ sont créés sur un ordinateur,
+et qu’aucun autre processus n’est lancé sur celui-ci, ni préalablement ni pendant
+l’exécution des quatre processus.
+L’ordonnanceur, pour exécuter les différents processus prêts, les place dans une
+structure de données de type file. Un processus prêt est enfilé et un processus
+élu est défilé.
+
+**Q2.a.** Parmi les propositions suivantes, recopier celle qui décrit le fonctionnement
+des entrées/sorties dans une file :  
+
+- i.Premier entré, dernier sorti
+- ii. Premier entré, premier sorti
+- iii. Dernier entré, premier sorti
+
+**Q2.b.** On suppose que les quatre processus arrivent dans la file et y sont placés
+dans l’ordre C₁, C₂, C₃ et C₄.
+
+- Les temps d’exécution totaux de C₁, C₂, C₃ et C₄ sont respectivement
+100 ms, 150 ms, 80 ms et 60 ms.
+- Après 40 ms d’exécution, le processus C₁ demande une opération d’écriture
+disque, opération qui dure 200 ms. Pendant cette opération d’écriture, le
+processus C₁ passe à l’état bloqué.
+- Après 20 ms d’exécution, le processus C₃ demande une opération d’écriture
+disque, opération qui dure 10 ms. Pendant cette opération d’écriture, le
+processus C₃ passe à l’état bloqué.
+
+
+Sur la frise chronologique ci-dessous, les
+états du processus C₂ sont donnés. Compléter la frise avec les états des
+processus C₁, C₃ et C₄.
+
+![image](data/ex4_frise.png){: .center}
