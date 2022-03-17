@@ -137,7 +137,7 @@ En réalité, le processeur passe son temps à alterner entre les divers process
 
 
 ## 2.2 L'ordonnancement des processus
-
+-
 
 
 
