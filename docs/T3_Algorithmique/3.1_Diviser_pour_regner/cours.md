@@ -352,7 +352,7 @@ Une jolie animation permettant de comparer les tris :
 
 ![image](data/comparaisons.gif){: .center}
 
-Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms).
+Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms)
 
 
 
