@@ -137,7 +137,37 @@ En réalité, le processeur passe son temps à alterner entre les divers process
 
 
 ## 2.2 L'ordonnancement des processus
--
+
+### 2.2.1 Différents types d'ordonnancement
+
+Si on vous donne 4 tâches A, B, C et D à accomplir, vous pouvez décider :
+
+- de faire la tâche prioritaire d'abord ;
+- de faire la tâche la plus rapide d'abord ;
+- de faire la tâche la plus longue d'abord ;
+- de les faire dans l'ordre où elles vous ont été données ;
+- de faire à tour de rôle chaque tâche pendant un temps fixe jusqu'à ce qu'elles soient toutes terminées;
+- ...
+
+Un processeur est confronté aux mêmes choix : comment déterminer quel processus doit être traité à quel moment ?
+
+Le schéma ci-dessous (issu de [ce site](https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079){. target="_blank"}) présente quelques politiques d'ordonnancement :
+
+![image](data/schedule.png){: .center width=60%}
+
+Sous Linux, l'ordonnancement est effectué par un système hybride où les processus sont exécutés à tour de rôle (on parle de *tourniquet* ou de *Round Robin*) suivant un ordre de priorité dynamique.
+
+> Dans le cas (très fréquent maintenant) d'un processeur *multi-cœurs*, le problème reste identique. Certes, sur 4 cœurs, 4 processus pourront être traités simultanément (une **réelle** simultanéité) mais il reste toujours beaucoup plus de processus à traiter que de cœurs dans le processeur... et un ordonnancement est donc toujours nécessaire.
+
+
+### 2.2.2 Les différents états d'un processus
+
+Selon ce que l'ordonnanceur aura décidé ou non de le confier au processeur pour son exécution, un processus peut se trouver dans 3 états :
+
+- **Prêt** : il attend qu'arrive le moment de son exécution.
+- **Élu** : il est en cours d'exécution par le processeur.
+- **Bloqué** ! 
+
 
 
 

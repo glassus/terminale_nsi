@@ -20,7 +20,7 @@ gauche à la valeur de la chaîne située à droite.
 Ainsi, "CDIII" est le nombre 403 car DIII – C = 503 – 100.
 
 
-On dispose d’un dictionnaire dico, à compléter, où les clés sont les caractères apparaissant
+On dispose d’un dictionnaire `dico`, à compléter, où les clés sont les caractères apparaissant
 dans l’écriture en chiffres romains et où les valeurs sont les nombres entiers associés en
 écriture décimale.
 
@@ -30,13 +30,13 @@ caractères (non vide) représentant un nombre écrit en chiffres romains et ren
 associé en écriture décimale :
 
 ```python linenums='1'
-def rom_to_dec (nombre):
+def rom_to_dec(nombre):
 
     """ Renvoie l’écriture décimale du nombre donné en chiffres romains """
 
     dico = {"I":1, "V":5, ...}
     if len(nombre) == 1:
-        return ...`
+        return ...
 
     else:
         ### on supprime le premier caractère de la chaîne contenue dans la variable nombre

@@ -30,11 +30,11 @@ marquées par des caractères ^ :
 ```
 
 Dans des listes comme celles ci-dessus, un algorithme récursif pour trouver l'intrus consiste
-alors à choisir un indice i multiple de 3 situé approximativement au milieu des indices parmi
+alors à choisir un indice `i` multiple de 3 situé approximativement au milieu des indices parmi
 lesquels se trouve l'intrus. 
 
 
-Puis, en fonction des valeurs de l'élément d'indice i et de son voisin de droite, à appliquer
+Puis, en fonction des valeurs de l'élément d'indice `i` et de son voisin de droite, à appliquer
 récursivement l'algorithme à la moitié droite ou à la moitié gauche des indices parmi lesquels
 se trouve l'intrus. 
 
@@ -53,7 +53,7 @@ def trouver_intrus(tab, g, d):
         return ...
     
     else:
-        nombre_de_triplets = (d - g)// ...
+        nombre_de_triplets = (d - g) // ...
         indice = g + 3 * (nombre_de_triplets // 2)
         if ... :
             return ...
