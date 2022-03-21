@@ -153,7 +153,7 @@ Un processeur est confronté aux mêmes choix : comment déterminer quel process
 
 Le schéma ci-dessous (issu de [ce site](https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079){. target="_blank"}) présente quelques politiques d'ordonnancement :
 
-![image](data/schedule.png){: .center width=60%}
+![image](data/schedule.png){: .center width=80%}
 
 Sous Linux, l'ordonnancement est effectué par un système hybride où les processus sont exécutés à tour de rôle (on parle de *tourniquet* ou de *Round Robin*) suivant un ordre de priorité dynamique.
 
@@ -162,16 +162,39 @@ Sous Linux, l'ordonnancement est effectué par un système hybride où les proce
 
 ### 2.2.2 Les différents états d'un processus
 
-Selon ce que l'ordonnanceur aura décidé ou non de le confier au processeur pour son exécution, un processus peut se trouver dans 3 états :
+Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour son exécution, un processus peut donc se trouver dans 3 états :
 
 - **Prêt** : il attend qu'arrive le moment de son exécution.
 - **Élu** : il est en cours d'exécution par le processeur.
-- **Bloqué** ! 
+- **Bloqué** : pendant son exécution (état **Élu**), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état **Prêt** et attendra à nouveau son tour. 
 
 
+![image](data/cycle.png){: .center}
+
+
+**Pourquoi l'accès à une ressource peut bloquer un processus ?**
+
+Pendant son exécution, un processus peut avoir besoin d'accéder à une ressource déjà occupée (un fichier déjà ouvert, par exemple) ou être en attente d'une entrée-utilisateur (un ```input()``` dans un code ```Python``` par exemple). Dans ce cas-là, le processeur va mettre passer ce processus à l'état **Bloqué**, pour pouvoir ainsi se consacrer à un autre processus.
+
+Une fois débloqué, le processus va repasser à l'état **Prêt** et rejoindre (par exemple) la file d'attente des processus avant d'être à nouveau **Élu** et donc exécuté.
 
 
 ## 3. Interblocage
+
+### 3.1 Définition
+Comme nous venons de le voir, un processus peut être dans l'état bloqué dans l'attente de la libération d'une ressource. 
+
+
+### 3.2 Le deadlock dans la vie courante
+
+![image](data/ciseaux.png){: .center}
+![image](data/stop.png){: .center}
+![image](data/job.png){: .center}
+
+
+
+
+
 
 
 
