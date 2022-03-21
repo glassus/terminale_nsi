@@ -68,4 +68,21 @@ class ABR:
 [1, 3, 7, 9, 9, 1, 3, 7, 9, 9]
 ```
 
-Comme le paramètre ```tab``` est un élément *mutable* (de type ```list``` ), Python ne le réinitialise pas avant chaque appel de la fonction...
+Comme le paramètre optionnel ```tab``` est un élément *mutable* (de type ```list``` ), Python ne le réinitialise pas avant chaque appel de la fonction.
+Vous pouvez constater les conséquences fâcheuses.
+
+Une solution pourrait être d'écrire ceci :
+```python linenums='1'
+def parcours(self, tab = None):
+    ''' Renvoie la liste tab complétée avec tous les
+    éléments de l'ABR triés par ordre croissant. '''
+    if tab is None:
+        tab = []
+    if self.est_vide():
+        return tab
+    else:
+        self.racine.gauche.parcours(tab)
+        tab.append(self.racine.valeur)
+        self.racine.droite.parcours(tab)
+        return tab
+```
