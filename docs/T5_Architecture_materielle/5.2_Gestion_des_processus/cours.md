@@ -26,7 +26,7 @@ Un processus est caractérisé par :
 
 Dans un terminal, la commande ```ps``` va permettre d'afficher la liste des processus actifs. 
 
-(plus précisément, la commande ```ps -lu nom_user``` )
+> Plus précisément, nous allons utilise la commande ```ps -lu nom_user```. L'option ```l``` permet d'afficher un grand nombre de renseignements et l'option ```u``` permet de spécifier l'utilisateur propriétaire des processus.
 
 ![image](data/term1.png){: .center}
 
@@ -178,7 +178,9 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 
 On peut utiliser la métaphore suivante :
 
-> Sur la table de travail du processeur, il n'y a toujours qu'un seul et unique processus : le processus **Élu** du moment. Les processus se succèdent sur cette table de travail, en y repassant plusieurs fois avant d'être déclarés terminés.
+> Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés. Si le professeur ramène devant lui le paquet A, celui-ci devient **Élu**, et le professeur peut commencer à le corriger. Pour se changer les idées, il peut interrompre la correction du paquet A (qui va passer à l'état **Bloqué**) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors **Terminés**.    
+Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'**un seul paquet de copies** (soit A, soit B, soit C).
+
 
 
 **Pourquoi l'accès à une ressource peut bloquer un processus ?**
@@ -246,7 +248,7 @@ Il existe trois stratégies pour éviter les interblocages :
 ![image](data/ciseaux.png){: .center width=30%}
 
 #### 3.5.2 Le carrefour maudit
-![image](data/stop.png){: .center width=30%}
+![image](data/stop.png){: .center width=40%}
 
 #### 3.5.3 Le chômage éternel
 ![image](data/job.png){: .center width=30%}

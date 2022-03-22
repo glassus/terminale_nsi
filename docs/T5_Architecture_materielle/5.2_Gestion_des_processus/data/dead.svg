@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.9833399"
-     inkscape:cx="409.27285"
-     inkscape:cy="318.93785"
+     inkscape:zoom="0.5"
+     inkscape:cx="-6"
+     inkscape:cy="585"
      inkscape:window-width="1880"
      inkscape:window-height="1141"
      inkscape:window-x="40"
@@ -37,7 +37,134 @@
        id="grid824" />
   </sodipodi:namedview>
   <defs
-     id="defs2" />
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path121974" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path121971" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4-1-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7-5-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4-1-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7-5-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-4-1-4-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path121971-7-5-7-2" />
+    </marker>
+  </defs>
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
@@ -119,22 +246,22 @@
          id="tspan7530-7"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="58.667694"
-         y="84.652748">étape 1 :</tspan><tspan
+         y="84.652748">étape A1 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="58.667694"
          y="89.944412"
-         id="tspan27318-9">étape 2 :</tspan><tspan
+         id="tspan27318-9">étape A2 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="58.667694"
          y="95.236069"
-         id="tspan30462-6">étape 3 :</tspan><tspan
+         id="tspan30462-6">étape A3 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="58.667694"
          y="100.52773"
-         id="tspan30464-6">étape 4 :</tspan><tspan
+         id="tspan30464-6">étape A4 :</tspan><tspan
          sodipodi:role="line"
          style="fill:#2b0000;stroke-width:0.264583"
          x="58.667694"
@@ -153,22 +280,22 @@
          id="tspan7530-7-2"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="102.82099"
-         y="84.640762">étape 1 :</tspan><tspan
+         y="84.640762">étape B1 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="102.82099"
          y="89.932426"
-         id="tspan27318-9-8">étape 2 :</tspan><tspan
+         id="tspan27318-9-8">étape B2 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="102.82099"
          y="95.224091"
-         id="tspan30462-6-9">étape 3 :</tspan><tspan
+         id="tspan30462-6-9">étape B3 :</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.82222px;fill:#2b0000;stroke-width:0.264583"
          x="102.82099"
          y="100.51575"
-         id="tspan30464-6-7">étape 4 :</tspan><tspan
+         id="tspan30464-6-7">étape B4 :</tspan><tspan
          sodipodi:role="line"
          style="fill:#2b0000;stroke-width:0.264583"
          x="102.82099"
@@ -277,5 +404,404 @@
          style="fill:#ffffff;stroke-width:0.264583"
          x="104.74123"
          y="75.372795">Processus B</tspan></text>
+    <circle
+       style="opacity:0.683791;fill:#ccff00;fill-opacity:1;stroke:#0e2a18;stroke-width:0.534439;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+       id="path117946-7"
+       cx="28.34004"
+       cy="203.50874"
+       r="6.670013"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.53761px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.5336"
+       x="25.588984"
+       y="206.14359"
+       id="text120546-2"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
+         sodipodi:role="line"
+         id="tspan120544-7"
+         style="stroke-width:0.5336"
+         x="25.588984"
+         y="206.14359">A</tspan></text>
+    <g
+       id="g115191-4"
+       transform="matrix(2.0167599,0,0,2.0167599,-107.18583,-68.185647)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
+      <rect
+         style="opacity:0.683791;fill:#e5c7c7;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+         id="rect109610-9"
+         width="6.614583"
+         height="6.614583"
+         x="80.697914"
+         y="117.73958"
+         ry="0.070873141" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="82.823151"
+         y="122.45427"
+         id="text111942-20"><tspan
+           sodipodi:role="line"
+           id="tspan111940-6"
+           style="fill:#0000ff;stroke-width:0.264583"
+           x="82.823151"
+           y="122.45427">R</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.534441;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-3)"
+       d="M 28.88244,195.94687 C 34.428046,183.54856 43.874509,178.34312 55.5625,177.27083"
+       id="path121969-4"
+       inkscape:transform-center-x="-1.3080266"
+       inkscape:transform-center-y="2.4858764"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.53761px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.5336"
+       x="33.272484"
+       y="178.81458"
+       id="text133021-95"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
+         sodipodi:role="line"
+         id="tspan133019-0"
+         style="stroke-width:0.5336"
+         x="33.272484"
+         y="178.81458">A1</tspan></text>
+    <g
+       id="g121934-5"
+       transform="translate(13.229165,11.112501)">
+      <g
+         id="g121906-4"
+         transform="translate(58.208336,10.583321)">
+        <rect
+           style="opacity:0.683791;fill:#e5c7c7;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+           id="rect109610-1-7"
+           width="6.614583"
+           height="6.614583"
+           x="80.697914"
+           y="117.73959"
+           ry="0.070873141" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="82.823151"
+           y="122.45427"
+           id="text111942-2-4"><tspan
+             sodipodi:role="line"
+             id="tspan111940-9-4"
+             style="fill:#e6112c;fill-opacity:1;stroke-width:0.264583"
+             x="82.823151"
+             y="122.45427">S</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g121928-3"
+       transform="translate(48.286201,-14.356271)">
+      <g
+         id="g121901-0"
+         transform="translate(30.427086,6.6145808)">
+        <circle
+           style="opacity:0.683791;fill:#11e697;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+           id="path117946-3-7"
+           cx="93.025047"
+           cy="137.36617"
+           r="3.3072915" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="91.869728"
+           y="138.68526"
+           id="text120546-1-8"><tspan
+             sodipodi:role="line"
+             id="tspan120544-9-6"
+             style="stroke-width:0.264583"
+             x="91.869728"
+             y="138.68526">B</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-1-5)"
+       d="m 171.97917,133.61458 c -1.32292,6.35 -5.29167,9.78959 -13.22917,9.78959"
+       id="path121969-3-5-8"
+       inkscape:transform-center-x="1.0678717"
+       inkscape:transform-center-y="-0.8942163"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="167.26122"
+       y="145.16418"
+       id="text133021-5-8"><tspan
+         sodipodi:role="line"
+         id="tspan133019-6-4"
+         style="stroke-width:0.264583"
+         x="167.26122"
+         y="145.16418">B1</tspan></text>
+    <g
+       id="g121934-6"
+       transform="matrix(1.9948609,0,0,1.9948609,-151.38758,-61.517615)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
+      <g
+         id="g121906-1"
+         transform="translate(58.208336,10.583321)">
+        <rect
+           style="opacity:0.683791;fill:#e5c7c7;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+           id="rect109610-1-0"
+           width="6.614583"
+           height="6.614583"
+           x="80.697914"
+           y="117.73959"
+           ry="0.070873141" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="82.823151"
+           y="122.45427"
+           id="text111942-2-6"><tspan
+             sodipodi:role="line"
+             id="tspan111940-9-1"
+             style="fill:#e6112c;fill-opacity:1;stroke-width:0.264583"
+             x="82.823151"
+             y="122.45427">S</tspan></text>
+      </g>
+    </g>
+    <circle
+       style="opacity:0.683791;fill:#ccff00;fill-opacity:1;stroke:#0e2a18;stroke-width:0.528636;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+       id="path117946-5"
+       cx="99.032394"
+       cy="174.47151"
+       r="6.5975866"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.4449px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.527806"
+       x="96.311203"
+       y="177.07774"
+       id="text120546-9"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
+         sodipodi:role="line"
+         id="tspan120544-4"
+         style="stroke-width:0.527806"
+         x="96.311203"
+         y="177.07774">A</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.528638;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-1-4-2)"
+       d="m 124.29648,202.58178 c -3.86349,-0.1959 -0.48916,-0.066 -4.80907,-0.30978 -9.48433,-0.53532 -17.05479,-7.55057 -20.166696,-20.99843"
+       id="path121969-3-5-6-9"
+       inkscape:transform-center-x="-1.2576563"
+       inkscape:transform-center-y="-2.2428795"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.4449px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.527806"
+       x="96.62812"
+       y="204.3828"
+       id="text133021-9-0"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/A2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
+         sodipodi:role="line"
+         id="tspan133019-3-9"
+         style="stroke-width:0.527806"
+         x="96.62812"
+         y="204.3828">A2</tspan></text>
+    <g
+       id="g141251"
+       transform="matrix(2.0141524,0,0,2.0141524,-218.30635,-258.49936)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/schema.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
+      <circle
+         style="opacity:0.683791;fill:#ccff00;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+         id="path117946-3"
+         cx="128.08209"
+         cy="134.38698"
+         r="3.3072915" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#28220b;stroke-width:0.264583"
+         x="126.92677"
+         y="135.70607"
+         id="text120546-1"><tspan
+           sodipodi:role="line"
+           id="tspan120544-9"
+           style="fill:#28220b;stroke-width:0.264583"
+           x="126.92677"
+           y="135.70607">B</tspan></text>
+      <g
+         id="g115191"
+         transform="translate(27.78125)">
+        <rect
+           style="opacity:0.683791;fill:#e5c7c7;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+           id="rect109610"
+           width="6.614583"
+           height="6.614583"
+           x="80.697914"
+           y="117.73958"
+           ry="0.070873141" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="82.823151"
+           y="122.45427"
+           id="text111942"><tspan
+             sodipodi:role="line"
+             id="tspan111940"
+             style="fill:#0000ff;stroke-width:0.264583"
+             x="82.823151"
+             y="122.45427">R</tspan></text>
+      </g>
+      <g
+         id="g121934"
+         transform="translate(-30.427083,15.875002)">
+        <g
+           id="g121906"
+           transform="translate(58.208336,10.583321)">
+          <rect
+             style="opacity:0.683791;fill:#e5c7c7;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+             id="rect109610-1"
+             width="6.614583"
+             height="6.614583"
+             x="80.697914"
+             y="117.73959"
+             ry="0.070873141" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="82.823151"
+             y="122.45427"
+             id="text111942-2"><tspan
+               sodipodi:role="line"
+               id="tspan111940-9"
+               style="fill:#e6112c;fill-opacity:1;stroke-width:0.264583"
+               x="82.823151"
+               y="122.45427">S</tspan></text>
+        </g>
+      </g>
+      <circle
+         style="opacity:0.683791;fill:#ccff00;fill-opacity:1;stroke:#0e2a18;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+         id="path117946"
+         cx="95.105461"
+         cy="134.17354"
+         r="3.3072915" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="93.741364"
+         y="135.48001"
+         id="text120546"><tspan
+           sodipodi:role="line"
+           id="tspan120544"
+           style="stroke-width:0.264583"
+           x="93.741364"
+           y="135.48001">A</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
+         d="m 95.249999,130.96875 c 2.749756,-6.14764 7.433741,-8.72873 13.229171,-9.26042"
+         id="path121969"
+         inkscape:transform-center-x="-0.64857828"
+         inkscape:transform-center-y="1.2326087"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-2)"
+         d="m 115.09375,121.70833 c 6.69582,0.72163 10.93755,3.91083 13.22917,9.26042"
+         id="path121969-3-6"
+         inkscape:transform-center-x="0.97278172"
+         inkscape:transform-center-y="0.9968337"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-1)"
+         d="m 128.32292,138.37708 c -1.32292,6.35 -5.29167,9.78959 -13.22917,9.78959"
+         id="path121969-3-5"
+         inkscape:transform-center-x="1.0678717"
+         inkscape:transform-center-y="-0.8942163"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-4-1-4)"
+         d="m 107.77005,148.26488 c -1.93672,-0.0982 -0.24521,-0.0331 -2.41073,-0.15529 -4.75438,-0.26835 -8.549361,-3.78501 -10.10932,-10.52626"
+         id="path121969-3-5-6"
+         inkscape:transform-center-x="-0.6304483"
+         inkscape:transform-center-y="-1.124328"
+         sodipodi:nodetypes="csc" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="97.426781"
+         y="122.47379"
+         id="text133021"><tspan
+           sodipodi:role="line"
+           id="tspan133019"
+           style="stroke-width:0.264583"
+           x="97.426781"
+           y="122.47379">A1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="123.60496"
+         y="149.92668"
+         id="text133021-5"><tspan
+           sodipodi:role="line"
+           id="tspan133019-6"
+           style="stroke-width:0.264583"
+           x="123.60496"
+           y="149.92668">B1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="93.90023"
+         y="149.16771"
+         id="text133021-9"><tspan
+           sodipodi:role="line"
+           id="tspan133019-3"
+           style="stroke-width:0.264583"
+           x="93.90023"
+           y="149.16771">A2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="124.88811"
+         y="124.21086"
+         id="text133021-7"><tspan
+           sodipodi:role="line"
+           id="tspan133019-4"
+           style="stroke-width:0.264583"
+           x="124.88811"
+           y="124.21086">B2</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#48b830;stroke-width:0.665;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 169.33334,112.44792 1.32291,1.32291 1.32292,-2.64583"
+       id="path140163" />
+    <g
+       id="g140832"
+       transform="translate(75.406251,-6.6145867)">
+      <path
+         style="fill:none;stroke:#ed1d3b;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 82.020833,116.41667 2.645834,2.64583"
+         id="path140630" />
+      <path
+         style="fill:none;stroke:#ed1d3b;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 84.666666,116.41667 -2.645834,2.64583"
+         id="path140632" />
+    </g>
   </g>
 </svg>
