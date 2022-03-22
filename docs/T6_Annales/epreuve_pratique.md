@@ -28,4 +28,4 @@ Pour le second exercice, un programme est fourni au candidat. Cet exercice ne de
     - [https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi)
 
 
-La banque d'exercices est publique et peut être téléchargée en un pdf unique [ici](https://github.com/glassus/nsi/raw/master/sujets_epreuves_pratique_2021.pdf).
+Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../../T6_6_Epreuve_pratique/BNS_2022/)

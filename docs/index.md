@@ -7,9 +7,10 @@
         - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
-## Thème en cours d'étude : [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)  
+## Thème en cours d'étude : [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
 
 !!! note "*Anciens thèmes traités*"
+    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
