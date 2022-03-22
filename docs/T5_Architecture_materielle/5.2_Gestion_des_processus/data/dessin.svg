@@ -7,7 +7,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
    sodipodi:docname="dessin.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,8 +24,8 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4916699"
-     inkscape:cx="267.48545"
-     inkscape:cy="143.12818"
+     inkscape:cx="406.92649"
+     inkscape:cy="158.54714"
      inkscape:window-width="1880"
      inkscape:window-height="1141"
      inkscape:window-x="40"
@@ -94,6 +94,20 @@
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path8047" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path8047-6" />
+    </marker>
   </defs>
   <g
      inkscape:label="Calque 1"
@@ -101,7 +115,10 @@
      id="layer1">
     <g
        id="g4357"
-       transform="matrix(1.2427443,0,0,1.2427443,0.46425614,-13.072046)">
+       transform="matrix(1.2427443,0,0,1.2427443,0.46425614,-13.072046)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <rect
          style="opacity:1;fill:#2266f9;fill-opacity:0.392375;stroke:#2266f9;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          id="rect868"
@@ -123,35 +140,45 @@
            y="33.395386">élu</tspan></text>
     </g>
     <g
-       id="g25344"
-       transform="matrix(1.2427443,0,0,1.2427443,-6.1656035,-3.2901393)">
+       id="g2506"
+       transform="translate(-0.27097829,-0.20390084)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <g
-         id="g4367"
-         transform="translate(-54.746211,-26.37336)">
-        <rect
-           style="fill:#13bb50;fill-opacity:0.392375;stroke:#12ba4f;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
-           id="rect868-5"
-           width="12.207"
-           height="8.352026"
-           x="112.65379"
-           y="46.21711"
-           ry="0.088136517" />
-        <text
-           xml:space="preserve"
-           style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-           x="113.66637"
-           y="51.51894"
-           id="text3108-3"><tspan
-             sodipodi:role="line"
-             id="tspan3106-5"
-             style="stroke-width:0.264583"
+         id="g25344"
+         transform="matrix(1.2427443,0,0,1.2427443,-6.1656035,-3.2901393)">
+        <g
+           id="g4367"
+           transform="translate(-54.746211,-26.37336)">
+          <rect
+             style="fill:#13bb50;fill-opacity:0.392375;stroke:#12ba4f;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+             id="rect868-5"
+             width="12.207"
+             height="8.352026"
+             x="112.65379"
+             y="46.21711"
+             ry="0.088136517" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
              x="113.66637"
-             y="51.51894">prêt</tspan></text>
+             y="51.51894"
+             id="text3108-3"><tspan
+               sodipodi:role="line"
+               id="tspan3106-5"
+               style="stroke-width:0.264583"
+               x="113.66637"
+               y="51.51894">prêt</tspan></text>
+        </g>
       </g>
     </g>
     <g
        id="g4362"
-       transform="matrix(1.2427443,0,0,1.2427443,-11.94094,5.4347355)">
+       transform="matrix(1.2427443,0,0,1.2427443,-11.94094,5.4347355)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <rect
          style="fill:#f92228;fill-opacity:0.392375;stroke:#fa2126;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.786564;paint-order:fill markers stroke;stop-color:#000000"
          id="rect868-3"
@@ -174,7 +201,10 @@
     </g>
     <g
        id="g17359"
-       transform="matrix(1.2427443,0,0,1.2427443,10.274881,4.9300961)">
+       transform="matrix(1.2427443,0,0,1.2427443,10.274881,4.9300961)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <rect
          style="opacity:0.683791;fill:#0d2b18;fill-opacity:0.347579;stroke:#0e2a18;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
          id="rect868-5-6"
@@ -196,7 +226,11 @@
            y="17.96748">terminé</tspan></text>
     </g>
     <g
-       id="g26305">
+       id="g26305"
+       transform="translate(1.2703345,1.2566088)"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <g
          id="g25849">
         <g
@@ -205,25 +239,28 @@
           <g
              id="g17359-9"
              transform="translate(-82.321574,6.614583)">
-            <rect
-               style="opacity:0.683791;fill:#0d2b18;fill-opacity:0.347579;stroke:#0e2a18;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
-               id="rect868-5-6-1"
-               width="12.207"
-               height="8.352026"
-               x="112.44791"
-               y="13.229167"
-               ry="0.088136517" />
-            <text
-               xml:space="preserve"
-               style="font-size:2.11667px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-               x="116.13383"
-               y="17.904554"
-               id="text3108-3-7-2"><tspan
-                 sodipodi:role="line"
-                 id="tspan3106-5-5-7"
-                 style="font-size:2.11667px;stroke-width:0.264583"
+            <g
+               id="g2371">
+              <rect
+                 style="opacity:0.683791;fill:#0d2b18;fill-opacity:0.347579;stroke:#0e2a18;stroke-width:0.703266;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.969901;paint-order:fill markers stroke;stop-color:#000000"
+                 id="rect868-5-6-1"
+                 width="12.206856"
+                 height="8.352026"
+                 x="112.44791"
+                 y="13.229167"
+                 ry="0.088136517" />
+              <text
+                 xml:space="preserve"
+                 style="font-size:2.11667px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
                  x="116.13383"
-                 y="17.904554">créé</tspan></text>
+                 y="17.904554"
+                 id="text3108-3-7-2"><tspan
+                   sodipodi:role="line"
+                   id="tspan3106-5-5-7"
+                   style="font-size:2.11667px;stroke-width:0.264583"
+                   x="116.13383"
+                   y="17.904554">créé</tspan></text>
+            </g>
           </g>
         </g>
       </g>
@@ -238,7 +275,7 @@
          id="tspan15224"
          style="stroke-width:0.264583"
          x="101.86458"
-         y="42.333332"></tspan></text>
+         y="42.333332" /></text>
     <text
        xml:space="preserve"
        style="font-size:4.38413px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#483e37;stroke-width:0.328809"
@@ -247,7 +284,10 @@
        id="text18441"
        transform="rotate(-59.975015)"
        inkscape:transform-center-x="-3.7440806"
-       inkscape:transform-center-y="-0.37871398"><tspan
+       inkscape:transform-center-y="-0.37871398"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
          sodipodi:role="line"
          id="tspan18439"
          style="font-size:4.38413px;fill:#483e37;stroke-width:0.328809"
@@ -261,7 +301,10 @@
        id="text18441-3"
        transform="rotate(57.857838)"
        inkscape:transform-center-x="1.5901394"
-       inkscape:transform-center-y="3.5900314"><tspan
+       inkscape:transform-center-y="3.5900314"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
          sodipodi:role="line"
          id="tspan18439-5"
          style="font-size:4.38413px;fill:#483e37;stroke-width:0.328809"
@@ -273,7 +316,10 @@
        id="path8587"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:connection-end="#g4357" />
+       inkscape:connection-end="#g4357"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.328809px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="M 121.25122,31.75 102.66626,62.882234"
@@ -281,28 +327,37 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-start="#g4357"
-       inkscape:connection-end="#g4362" />
+       inkscape:connection-end="#g4362"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.328809px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="M 96.797433,62.882234 76.729167,31.75"
        id="path8931"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:connection-start="#g4362" />
+       inkscape:connection-start="#g4362"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
     <text
        xml:space="preserve"
        style="font-size:4.38413px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#483e37;stroke-width:0.328809"
-       x="87.896255"
-       y="26.319971"
+       x="88.250969"
+       y="24.685095"
        id="text18441-6"
-       transform="rotate(-1.0824058)"
-       inkscape:transform-center-x="-2.5035089"
-       inkscape:transform-center-y="3.0157285"><tspan
+       transform="rotate(-0.10789265)"
+       inkscape:transform-center-x="-2.4547105"
+       inkscape:transform-center-y="2.9383907"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120"><tspan
          sodipodi:role="line"
          id="tspan18439-2"
          style="font-size:4.38413px;fill:#483e37;stroke-width:0.328809"
-         x="87.896255"
-         y="26.319971">élection</tspan></text>
+         x="88.250969"
+         y="24.685095">élection</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.328809px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
        d="m 131.93436,26.560284 18.08452,0"
@@ -310,6 +365,18 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-start="#g4357"
-       inkscape:connection-end="#g17359" />
+       inkscape:connection-end="#g17359"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.328809px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
+       d="m 46.473814,26.458333 h 18.08452"
+       id="path25478-7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T5_Architecture_materielle/5.2_Gestion_des_processus/data/cycle.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
   </g>
 </svg>

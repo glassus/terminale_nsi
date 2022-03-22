@@ -16,7 +16,7 @@ Un processus est caractérisé par :
 
 - l'ensemble des instructions qu'il va devoir accomplir (écrites dans le fichier exécutable obtenu par la compilation du code-source du programme)
 - les ressources que le programme va mobiliser (fichier en ouverture, carte son...)
-- l'état des registres du processeur (voir le cours sur l'architecture Von Neumann en Première)
+- l'état des registres du processeur (voir le cours de Première sur l'[architecture Von Neumann](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/){. target="_blank"})
 
 
 
@@ -75,7 +75,12 @@ Exemple : ```kill 1453``` tuera Chrome (voir la capture du 1.2.1)
 ### 2.1 Expérience : les processus fonctionnent ~~simultanément~~ à tour de rôle.  
 Un ordinateur donne l'illusion de réaliser plusieurs tâches simultanément. Hormis pour les processeurs fonctionnant avec plusieurs cœurs, il n'en est rien.
 
-Les processus s'exécutent les uns après les autres, le processeur ne pouvant en traiter qu'un seul à la fois. Un cadencement extrêmement rapide et efficace donne l'apparence d'une fausse simultanéité. Nous allons la mettre en évidence :
+
+Comme nous l'avons vu, ces processus sont lancés séquentiellement par le système d'exploitation, et sont ensuite en apparence tous «actifs en même temps» (les guillemets sont importants) : on parle de **programmation concurrente**.
+
+Revenons sur l'expression «actifs en même temps», car elle véhicule une fausse idée : ces processus sont bien vivants dans un même laps de temps, mais ils s'exécutent **LES UNS APRÈS LES AUTRES**, le processeur ne pouvant en traiter qu'**un seul à la fois**.
+
+Un cadencement extrêmement rapide et efficace donne l'*apparence* d'une (fausse) simultanéité. Nous allons la mettre en évidence :
 
 Considérons les fichiers ```progA.py``` et ```progB.py``` ci-dessous :
 
@@ -171,25 +176,80 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 
 ![image](data/cycle.png){: .center}
 
+On peut utiliser la métaphore suivante :
+
+> Sur la table de travail du processeur, il n'y a toujours qu'un seul et unique processus : le processus **Élu** du moment. Les processus se succèdent sur cette table de travail, en y repassant plusieurs fois avant d'être déclarés terminés.
+
 
 **Pourquoi l'accès à une ressource peut bloquer un processus ?**
 
-Pendant son exécution, un processus peut avoir besoin d'accéder à une ressource déjà occupée (un fichier déjà ouvert, par exemple) ou être en attente d'une entrée-utilisateur (un ```input()``` dans un code ```Python``` par exemple). Dans ce cas-là, le processeur va mettre passer ce processus à l'état **Bloqué**, pour pouvoir ainsi se consacrer à un autre processus.
+Pendant son exécution, un processus peut avoir besoin d'accéder à une ressource déjà occupée (un fichier déjà ouvert, par exemple) ou être en attente d'une entrée-utilisateur (un ```input()``` dans un code ```Python``` par exemple). Dans ce cas-là, le processeur va passer ce processus à l'état **Bloqué**, pour pouvoir ainsi se consacrer à un autre processus.
 
 Une fois débloqué, le processus va repasser à l'état **Prêt** et rejoindre (par exemple) la file d'attente des processus avant d'être à nouveau **Élu** et donc exécuté.
 
 
 ## 3. Interblocage
 
-### 3.1 Définition
+### 3.1 Définition et exemple
 Comme nous venons de le voir, un processus peut être dans l'état bloqué dans l'attente de la libération d'une ressource. 
 
+Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoire...) ne peuvent être données à deux processus à la fois. Des processus souhaitant accéder à cette ressource sont donc en concurrence sur cette ressource. Un processus peut donc devoir attendre qu'une ressource se libère avant de pouvoir y accéder (et ainsi passer de l'état Bloqué à l'état Prêt).
 
-### 3.2 Le deadlock dans la vie courante
+**Problème :** Et si deux processus se bloquent mutuellement la ressource dont ils ont besoin ?
 
-![image](data/ciseaux.png){: .center}
-![image](data/stop.png){: .center}
-![image](data/job.png){: .center}
+**Exemple :** Considérons 2 processus A et B, et deux ressources R et S. L'action des processus A et B est décrite ci-dessous :
+
+![image](data/tab_proc.png){: .center}
+
+**Déroulement des processus A et B :**
+
+- A et B sont créés et passent à l'état **Prêt**.
+- L'ordonnanceur déclare **Élu** le processus A (ou bien B, cela ne change rien).
+- L'étape A1 de A est réalisée : la ressource R est donc affectée à A.
+- L'ordonnanceur déclare maintenant **Élu** le processus B. A est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'étape B1 de B est réalisée : la ressource S est donc affectée à B.
+- L'ordonnanceur déclare à nouveau **Élu** le processus A. B est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à **Bloqué** et va revenir au processus B qui redevient **Élu**.
+- L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à **Bloqué**.
+
+Les deux processus A et B sont donc dans l'état **Bloqué**, chacun en attente de la libération d'une ressource bloquée par l'autre : ils se bloquent mutuellement.
+
+Cette situation (critique) est appelée **interblocage** ou **deadlock**.
+
+### 3.3 Représentation schématique
+
+- les processus seront représentés par des carrés, les ressources par des cercles.
+- Si à l'étape A1 le processus A a demandé et **reçu** la ressource R, la représentation sera :
+![image](data/A1.png){: .center}
+- Si à l'étape A2 le processus A est **en attente** de la ressource S, la représentation sera :
+![image](data/A2.png){: .center}
+
+Avec ces conventions, la situation précédente peut donc se schématiser par :
+
+![image](data/schema.png){: .center}
+
+Ce type de schéma fait apparaître un **cycle d'interdépendance**, qui caractérise ici la situation de deadlock.
+
+### 3.4 Comment s'en prémunir ? *(HP)*
+
+Il existe trois stratégies pour éviter les interblocages :
+
+- **la prévention** : on oblige le processus à déclarer à l'avance la liste de toutes les ressources auxquelles il va accéder.
+- **l'évitement** : on fait en sorte qu'à chaque étape il reste une possibilité d'attribution de ressources qui évite le deadlock.
+- **la détection/résolution** : on laisse la situation arriver jusqu'au deadlock, puis un algorithme de résolution détermine quelle ressource libérer pour mettre fin à l'interblocage.
+
+
+
+### 3.5 Le deadlock dans la vie courante
+
+#### 3.5.1 L'emballage diabolique
+![image](data/ciseaux.png){: .center width=30%}
+
+#### 3.5.2 Le carrefour maudit
+![image](data/stop.png){: .center width=30%}
+
+#### 3.5.3 Le chômage éternel
+![image](data/job.png){: .center width=30%}
 
 
 
@@ -199,11 +259,10 @@ Comme nous venons de le voir, un processus peut être dans l'état bloqué dans 
 
 
 
-<!--
-## biblio
+??? tip "Sources"
+    - [http://info-mounier.fr/terminale_nsi/archi_se_reseaux/processus.php](http://info-mounier.fr/terminale_nsi/archi_se_reseaux/processus.php)
+    - [http://lycee.educinfo.org/index.php?page=creation_thread&activite=processus](http://lycee.educinfo.org/index.php?page=creation_thread&activite=processus)
+    - [https://www.lecluse.fr/nsi/NSI_T/archi/process/](https://www.lecluse.fr/nsi/NSI_T/archi/process/)
+    - [http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html}](http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html)
+    - [http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html](http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html)
 
-http://info-mounier.fr/terminale_nsi/archi_se_reseaux/processus.php
-http://lycee.educinfo.org/index.php?page=creation_thread&activite=processus
-https://www.lecluse.fr/nsi/NSI_T/archi/process/
-
--->
