@@ -1,12 +1,16 @@
 # Ressources intervention 29 mars
 
 
-### MindMap
+### 1. MindMap
 
 ![image](data/mindmap.png){: .center}
 
 
-### RugbyGame
+### 2. Comparaison de codes
+
+- [code Lassus](https://gist.github.com/glassus/903168b901c0246ed7f4b03b292b4c46){. target = "_blank"}
+
+### 3. RugbyGame
 
 - dépôt : [https://github.com/ffaure32/rugby-game-nsi](https://github.com/ffaure32/rugby-game-nsi){. target = "_blank"}
 
