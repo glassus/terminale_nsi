@@ -114,6 +114,7 @@ Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage s
 ![image](data/ex3_2.png){: .center}
 
 La documentation Linux donne la signification des différents champs :
+
 - `UID` : identifiant utilisateur effectif ;
 - `PID` : identifiant de processus ;
 - `PPID` : `PID` du processus parent ;
