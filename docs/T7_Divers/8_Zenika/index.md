@@ -18,5 +18,5 @@
 
 - ligne à écrire dans un Terminal pour lancer les tests :
 ```python
-python3 -m unittest test_rugby_game
+python3 -m unittest test_rugby_game.py
 ```
