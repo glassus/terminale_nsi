@@ -1,5 +1,6 @@
 
 !!! abstract ":star: Actualités :star:"
+    - [Ressources](T7_Divers/8_Zenika/) pour l'intervention développeurs Zenika
     - [Sujet](data/BacBlancTNSI_2022.pdf){. target="_blank"} du Bac Blanc et son [corrigé](data/BacBlancTNSI_2022corr.pdf){. target="_blank"}.
     - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
     - **Infos orientation :**
