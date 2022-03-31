@@ -220,7 +220,7 @@ Cette situation (critique) est appelée **interblocage** ou **deadlock**.
 
 ### 3.3 Représentation schématique
 
-- les processus seront représentés par des carrés, les ressources par des cercles.
+- les processus seront représentés par des **cercles**, les ressources par des **carrés**.
 - Si à l'étape A1 le processus A a demandé et **reçu** la ressource R, la représentation sera :
 ![image](data/A1.png){: .center}
 - Si à l'étape A2 le processus A est **en attente** de la ressource S, la représentation sera :
