@@ -29,6 +29,9 @@ Lecture du tableau : le logiciel de traitement de texte mobilise (M) la donnée 
 
 Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
+??? tip "Correction"
+    ![image](data/corr_exo1.png){: .center}
+    Le cycle en pointillés montre que les applications s'attendent mutuellement : cette situation s'appelle un interblocage.
 
 ## Exercice 2
 _2021, Métropole sujet 1_
@@ -60,6 +63,13 @@ UNIX ?
     - c. ```end``` 
     - d.   ```kill```
 
+
+??? tip "correction"
+    1. b
+    2. c
+    3. b
+    4. d
+
 **Partie B**
 
 **Q1.** Un processeur choisit à chaque cycle d’exécution le processus qui doit être exécuté. Le
@@ -76,10 +86,20 @@ Reproduire le tableau ci-dessous sur la copie et indiquer dans chacune des cases
 exécuté à chaque cycle.
 ![image](data/ex2_2.png){: .center}
 
+
+??? tip "correction"
+    ![image](data/corr_exo21.png){: .center}
+
+
 **Q2.** On suppose maintenant que les trois processus précédents s’exécutent et utilisent une ou plusieurs ressources parmi R1, R2 et R3.
 Parmi les scénarios suivants, lequel provoque un interblocage ? Justifier.
 
 ![image](data/ex2_3.png){: .center}
+
+??? tip "correction"
+    ![image](data/scenarios.png){: .center}
+    Seul le scenario 2 présente un cycle d'interdépendance : seul le scénario 2 va donc provoquer un interblocage.
+
 
 ## Exercice 3
 _2021, Métropole sujet 2_
@@ -126,17 +146,25 @@ des processus ;
 - `CMD` : nom de la commande du processus
 
 
-1. Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?
+**Q1.** Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?
+
     - a. ```ls -l``` 
     - b. ```ps -ef``` 
     - c. ```cd ..``` 
     - d. ```chmod 741 processus.txt``` 
 
-2. Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
+**Q2.** Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
 navigateur Web (chromium-browser) ?
 
-3. Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
+**Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
+
+??? tip "correction"
+    **Q1.** b.
+
+    **Q2.** 6211
+
+    **Q3.** 6211
 
 ## Exercice 4
 _2021, Métropole Candidats Libres sujet 2_
