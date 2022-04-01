@@ -11,14 +11,15 @@ def depouille(urne):
     return resultat
 
 def vainqueur(election):
-    vainqueur = ''
+    vainqueur = '' #(1)
     nmax = 0
     for candidat in election:
         if election[candidat] > nmax :
             nmax = election[candidat]
-            vainqueur = candidat
+            vainqueur = candidat #(2)
     liste_finale = [nom for nom in election if election[nom] == nmax]
     return liste_finale
-
-
 ```
+
+1. Il est pourtant très déconseillé de nommer une variable avec le même nom que la fonction qui la contient...
+2. Cette variable `vainqueur` est inutile, on ne s'en sert pas dans l'élaboration de la liste finale.
