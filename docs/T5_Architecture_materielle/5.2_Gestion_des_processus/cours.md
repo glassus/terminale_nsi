@@ -26,7 +26,7 @@ Un processus est caractérisé par :
 
 Dans un terminal, la commande ```ps``` va permettre d'afficher la liste des processus actifs. 
 
-> Plus précisément, nous allons utilise la commande ```ps -lu nom_user```. L'option ```l``` permet d'afficher un grand nombre de renseignements et l'option ```u``` permet de spécifier l'utilisateur propriétaire des processus.
+> Plus précisément, nous allons utiliser la commande ```ps -lu nom_user```. L'option ```l``` permet d'afficher un grand nombre de renseignements et l'option ```u``` permet de spécifier l'utilisateur propriétaire des processus.
 
 ![image](data/term1.png){: .center}
 
