@@ -148,10 +148,10 @@ des processus ;
 
 **Q1.** Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?
 
-    - a. ```ls -l``` 
-    - b. ```ps -ef``` 
-    - c. ```cd ..``` 
-    - d. ```chmod 741 processus.txt``` 
+- a. ```ls -l``` 
+- b. ```ps -ef``` 
+- c. ```cd ..``` 
+- d. ```chmod 741 processus.txt``` 
 
 **Q2.** Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
 navigateur Web (chromium-browser) ?
