@@ -29,7 +29,7 @@ Lecture du tableau : le logiciel de traitement de texte mobilise (M) la donnée 
 
 Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
-??? tip "Correction"
+??? check "Correction"
     ![image](data/corr_exo1.png){: .center}
     Le cycle en pointillés montre que les applications s'attendent mutuellement : cette situation s'appelle un interblocage.
 
@@ -37,7 +37,7 @@ Montrer que les applications s'attendent mutuellement. Comment s'appelle cette s
 _2021, Métropole sujet 1_
 
 **Partie A**
-Cette partie est un questionnaire à choix multiples (QCM).
+Cette partie est un questionnaire à choix mulcheckles (QCM).
 Pour chacune des questions, une seule des quatre réponses est exacte.
 
 1. Parmi les commandes ci-dessous, laquelle permet d’afficher les processus en cours
@@ -64,7 +64,7 @@ UNIX ?
     - d.   ```kill```
 
 
-??? tip "correction"
+??? check "correction"
     1. b
     2. c
     3. b
@@ -87,7 +87,7 @@ exécuté à chaque cycle.
 ![image](data/ex2_2.png){: .center}
 
 
-??? tip "correction"
+??? check "correction"
     ![image](data/corr_exo21.png){: .center}
 
 
@@ -96,7 +96,7 @@ Parmi les scénarios suivants, lequel provoque un interblocage ? Justifier.
 
 ![image](data/ex2_3.png){: .center}
 
-??? tip "correction"
+??? check "correction"
     ![image](data/scenarios.png){: .center}
     Seul le scenario 2 présente un cycle d'interdépendance : seul le scénario 2 va donc provoquer un interblocage.
 
@@ -159,7 +159,7 @@ navigateur Web (chromium-browser) ?
 **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
 
-??? tip "correction"
+??? check "correction"
     **Q1.** b.
 
     **Q2.** 6211
@@ -181,7 +181,7 @@ L’ordonnanceur, pour exécuter les différents processus prêts, les place dan
 structure de données de type file. Un processus prêt est enfilé et un processus
 élu est défilé.
 
-??? tip "correction"
+??? check "correction"
     **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
 
     **Q1b.** 
@@ -198,7 +198,7 @@ des entrées/sorties dans une file :
 - ii. Premier entré, premier sorti
 - iii. Dernier entré, premier sorti
 
-??? tip "correction"
+??? check "correction"
     **Q2a.** ii. Premier entré, premier sorti
 
 
@@ -223,6 +223,6 @@ processus C₁, C₃ et C₄.
 
 ![image](data/ex4_frise.png){: .center}
 
-??? tip "correction"
+??? check "correction"
     ![image](data/ex4_frise_corr.png){: .center}
     
