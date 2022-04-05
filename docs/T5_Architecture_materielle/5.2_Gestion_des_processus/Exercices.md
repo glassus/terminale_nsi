@@ -181,12 +181,28 @@ L’ordonnanceur, pour exécuter les différents processus prêts, les place dan
 structure de données de type file. Un processus prêt est enfilé et un processus
 élu est défilé.
 
+??? tip "correction"
+    **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
+
+    **Q1b.** 
+    ![image](data/cycle.png){: .center}
+
+
+    
+
+
 **Q2.a.** Parmi les propositions suivantes, recopier celle qui décrit le fonctionnement
 des entrées/sorties dans une file :  
 
 - i.Premier entré, dernier sorti
 - ii. Premier entré, premier sorti
 - iii. Dernier entré, premier sorti
+
+??? tip "correction"
+    **Q2a.** ii. Premier entré, premier sorti
+
+
+
 
 **Q2.b.** On suppose que les quatre processus arrivent dans la file et y sont placés
 dans l’ordre C₁, C₂, C₃ et C₄.
