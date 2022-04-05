@@ -1,5 +1,6 @@
 
 !!! abstract ":star: Actualités :star:"
+    - [Test mon-oral.net](https://www.mon-oral.net/a/NJU5MGDQ){. target="_blank"}
     - [Trouvez un emploi en Suède](https://www.reddit.com/r/ProgrammerHumor/comments/tw2ner/interesting_job_offer_in_gothenburg/){. target="_blank"}
     - [Ressources](T7_Divers/8_Zenika/) pour l'intervention développeurs Zenika
     - [Sujet](data/BacBlancTNSI_2022.pdf){. target="_blank"} du Bac Blanc et son [corrigé](data/BacBlancTNSI_2022corr.pdf){. target="_blank"}.
