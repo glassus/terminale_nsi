@@ -115,3 +115,22 @@
     -webkit-mask-image: var(--md-admonition-icon--lien);
             mask-image: var(--md-admonition-icon--lien);
   }
+
+
+  :root {
+    --md-admonition-icon--code: :heart: }
+  .md-typeset .admonition.code,
+  .md-typeset details.code {
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .code > .admonition-title,
+  .md-typeset .code > summary {
+    background-color: rgba(106, 38, 122, 0.1);
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .code > .admonition-title::before,
+  .md-typeset .code > summary::before {
+    background-color: rgb(106, 38, 122);
+    -webkit-mask-image: var(--md-admonition-icon--code);
+            mask-image: var(--md-admonition-icon--code);
+  }
