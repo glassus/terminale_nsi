@@ -11,7 +11,7 @@
 
 ## Thème en cours d'étude : [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/)  
 
-!!! note "*Thèmes traités auparavant*"
+!!! note "*Thèmes traités*"
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
