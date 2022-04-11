@@ -1,5 +1,6 @@
 
 !!! abstract ":star: Actualités :star:"
+    - [Entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
     - [Trouvez un emploi en Suède](https://www.reddit.com/r/ProgrammerHumor/comments/tw2ner/interesting_job_offer_in_gothenburg/){. target="_blank"}
     - [Ressources](T7_Divers/8_Zenika/) pour l'intervention développeurs Zenika
     - [Sujet](data/BacBlancTNSI_2022.pdf){. target="_blank"} du Bac Blanc et son [corrigé](data/BacBlancTNSI_2022corr.pdf){. target="_blank"}.
@@ -9,9 +10,10 @@
         - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
-## Thème en cours d'étude : [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/)  
+## Thème en cours d'étude : [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)  
 
 !!! note "*Thèmes traités*"
+    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
