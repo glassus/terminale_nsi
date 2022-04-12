@@ -3,14 +3,13 @@ tableau `tab` d'entiers triés par ordre croissant. Cette fonction insère la va
 tableau et renvoie le nouveau tableau. Les tableaux seront représentés sous la forme de
 listes python.
 
-_Sujet légèrement modifié_
 
 ```python linenums='1'
 def insere(a, tab):
     l = list(tab) #l contient les mêmes éléments que tab
     l.append(a)
     i = ...
-    while a < ... and i >= ...:
+    while a < ... and i >= 0:
         l[i+1] = ...
         l[i] = a
         i = ...
