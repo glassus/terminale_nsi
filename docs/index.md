@@ -1,6 +1,6 @@
 
 !!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}
+    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
     - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
     - [Trouvez un emploi en Suède](https://www.reddit.com/r/ProgrammerHumor/comments/tw2ner/interesting_job_offer_in_gothenburg/){. target="_blank"}
     - [Ressources](T7_Divers/8_Zenika/) pour l'intervention développeurs Zenika
