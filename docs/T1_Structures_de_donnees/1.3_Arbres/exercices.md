@@ -258,9 +258,17 @@ On considère l’arbre binaire de recherche ci-dessous.
 
 **1.b.** Quelle est la hauteur de l’arbre ci-dessus ?
 
+??? tip "corrigé"
+    **1.a.** La taille de l'arbre est 7.  
+    **1.b.** La hauteur de l'arbre est 4.  
+
 **2.** Cet arbre binaire de recherche n’est pas « bien construit ». Proposer un arbre
 binaire de recherche contenant les mêmes clés et dont la hauteur est plus petite
 que celle de l’arbre initial.
+
+??? tip "corrigé"
+    **2.** ![image](data/ex3-2.png){: .center}
+
 
 **3.** Les classes Noeud et Arbre ci-dessous permettent de mettre en œuvre en Python
 la structure d’arbre binaire de recherche. La méthode `insere` permet d’insérer
@@ -308,6 +316,10 @@ a.insere(4)
 a.insere(5)
 ```
 
+??? tip "corrigé"
+    **3.** ![image](data/ex3-3.png){: .center}
+
+
 **4.** Pour calculer la hauteur d’un arbre non vide, on a écrit la méthode ci-dessous dans
 la classe Noeud.
 
@@ -331,8 +343,37 @@ def hauteur(self):
 Écrire la méthode `hauteur` de la classe `Arbre` qui renvoie la hauteur de
 l’arbre.
 
+??? tip "corrigé"
+    **4.**
+    ```python linenums='1'
+    def hauteur(self):
+        return self.racine.hauteur()
+    ```
+
+
 **5.** Écrire les méthodes `taille` des classes `Noeud` et `Arbre` permettant de calculer
 la taille d’un arbre.
+
+??? tip "corrigé"
+    **5.**
+    Méthode ```taille```    de la classe ```Noeud``` :  
+    ```python linenums='1'
+    def taille(self):
+        if self.gauche is None and self.droit is None:
+            return 1
+        elif self.gauche is None:
+            return 1 + self.droit.taille()
+        elif self.droit is None:
+            return 1 + self.gauche.taille()
+        else:
+            return 1 + self.gauche.taille() + self.droit.taille()
+    ```
+    Méthode ```taille```    de la classe ```Arbre``` : 
+    ```python linenums='1'
+    def taille(self):
+        return self.racine.taille()
+    ```
+
 
 **6.** On souhaite écrire une méthode `bien_construit` de la classe `Arbre` qui
 renvoie la valeur `True` si l’arbre est « bien construit » et `False` sinon.
@@ -343,13 +384,30 @@ est $2^h - 1$.
 **6.a** Quelle est la taille minimale, notée `min` d’un arbre binaire de recherche
 « bien construit » de hauteur $ℎ$ ?
 
+??? tip "corrigé"
+    **6.a.** La configuration minimale d'un arbre bien construit de hauteur $h$ peut être :
+
+    ![image](data/ex3-6a.png){: .center}
+    
+    La taille minimale ```min``` est donc égale à $2^{h-1}$.
+
+
+
+
+
 **6.b** Écrire la méthode ```bien_construit``` demandée.
 
-
 ??? tip "corrigé"
-    **1.a.** La taille de l'arbre est 7.  
-    **1.b.** La hauteur de l'arbre est 4.  
+    **6.b.** Intuitivement, un arbre est *mal construit* si sa hauteur est trop grande par rapport à sa taille (trop *étiré*).
 
-    **2.** À venir
+    Donc un arbre est *mal construit* si sa taille est trop petite par rapport à sa hauteur.
 
-    **3.** 
+    Donc un arbre de taille $t$ et de hauteur $h$ est *mal construit* si $t < 2^{h-1}$, puisqu'on a démontré que $2^{h-1}$ était la taille minimale.
+
+    Pour tester si un arbre est *bien construit*, on va donc juste vérifier que $t \geqslant 2^{h-1}$ :
+
+    ```python linenums='1'
+    def bien_construit(self):
+        h = self.taille()
+        return self.taille() >= 2**(h-1)
+    ```
