@@ -461,7 +461,7 @@ class ABR:
                     self.fg = ABR(e)
             if e > self.valeur:
                 if self.fd:
-                self.fd.insererElement(e)
+                    self.fd.insererElement(e)
                 else:
                     self.fd = ABR(e)
 ```
