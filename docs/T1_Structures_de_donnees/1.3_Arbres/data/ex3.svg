@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4142136"
-     inkscape:cx="711.70298"
-     inkscape:cy="1053.2356"
+     inkscape:cx="449.36636"
+     inkscape:cy="544.11867"
      inkscape:window-width="1880"
      inkscape:window-height="1141"
      inkscape:window-x="40"
@@ -35,6 +35,62 @@
      inkscape:current-layer="Layer-1" />
   <defs
      id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36653" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker36951"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36647" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path36662" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36650" />
+    </marker>
     <marker
        style="overflow:visible;"
        id="Arrow2Send"
@@ -104,6 +160,34 @@
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          style="fill:#2a7fff;fill-opacity:1;fill-rule:evenodd;stroke:#2a7fff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          id="path1551-5-4-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path36650-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path36653-5" />
     </marker>
   </defs>
   <g
@@ -192,8 +276,11 @@
      id="path1071-6-2" />
 </g>
 <g
-   transform="translate(-8.8232,-29.63945)"
-   id="g5124">
+   transform="translate(-307.55778,-616.76715)"
+   id="g5124"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
                 <path
    style="fill:none;stroke:#000000;stroke-width:2px"
    d="m 261.429,57.762 -118.572,64.285 71.429,78.572"
@@ -227,8 +314,11 @@
 
             </g>
 <g
-   transform="translate(-8.8232,-69.6395)"
-   id="g5046">
+   transform="translate(-307.55778,-656.7672)"
+   id="g5046"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
                     <g
    id="g847"
    transform="translate(-24.2857,270)">
@@ -256,7 +346,10 @@
                 </g>
 <g
    id="g4620"
-   transform="translate(194.0963,-31.06805)">
+   transform="translate(-104.63828,-618.19575)"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
                         <path
    style="fill:#ffffff;stroke:#000000;stroke-width:2px"
    d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
@@ -264,8 +357,11 @@
 
                     </g>
 <g
-   transform="translate(-22.827333,-48.758413)"
-   id="g5252">
+   transform="translate(-321.56191,-635.88611)"
+   id="g5252"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
                     <g
    id="g860"
    transform="translate(32.5928,162.281)">
@@ -310,8 +406,11 @@
 
                 </g>
 <g
-   transform="translate(-30.90423,-59.6395)"
-   id="g4891">
+   transform="translate(-329.63881,-646.7672)"
+   id="g4891"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
                     <g
    id="g873"
    transform="translate(271.429,169.952)">
@@ -362,45 +461,9 @@
 
         
         
-        <g
-   id="g903"
-   transform="translate(108.65939,100.60315)">
-            <text
-   id="text901"
-   style="font-weight:700;font-size:24px;font-family:SourceSansPro-Bold, 'Source Sans Pro', sans-serif;fill:#ff6600"
-   y="30.568001"
-   x="99.795998">ar<tspan
-   id="tspan899"
-   y="30.568001 30.568001 30.568001"
-   x="121.756 133.948 142.70799">ête</tspan></text>
-
-        </g>
-
+        
         
     <g
-   id="g965-2"
-   style="clip-rule:evenodd;fill-rule:evenodd"
-   transform="translate(309.29329,-12.156047)">
-  <text
-     xml:space="preserve"
-     style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
-     x="-73.242912"
-     y="109.96008"
-     id="text952-7"
-     transform="scale(0.92682081,1.0789572)"><tspan
-       sodipodi:role="line"
-       id="tspan950-0"
-       x="-73.242912"
-       y="109.96008"
-       style="stroke-width:1.65456">D</tspan></text>
-  <circle
-     style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
-     id="path960-9"
-     cx="-60"
-     cy="110"
-     r="20" />
-</g>
-<g
    id="g35879"
    inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
    inkscape:export-xdpi="90"
@@ -1150,6 +1213,95 @@
    inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90" />
+<path
+   style="fill:#ff0000;stroke:#000000;stroke-width:2.51338586;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none"
+   d="m -340.21678,-574.65717 -0.6669,265.44141"
+   id="path36642"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<path
+   style="clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart-7);marker-end:url(#Arrow1Mend-3)"
+   d="m -265.53088,-575.11603 -0.76619,184.32874"
+   id="path36642-6"
+   sodipodi:nodetypes="cc"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px"
+   x="-441.25665"
+   y="-538.62512"
+   id="text38488"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486"
+     x="-441.25665"
+     y="-538.62512">hauteur h</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill-rule:evenodd"
+   x="-253.86215"
+   y="-540.62811"
+   id="text38488-2"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-9"
+     x="-253.86215"
+     y="-540.62811">hauteur h-1</tspan></text>
+<rect
+   style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#d0189f;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   id="rect40957"
+   width="472.30045"
+   height="213.06844"
+   x="-290.47375"
+   y="-591.65826"
+   ry="0.267867"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill-rule:evenodd;fill:#d0189f;fill-opacity:1"
+   x="-127.98688"
+   y="-359.49026"
+   id="text38488-1"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-2"
+     x="-127.98688"
+     y="-359.49026">taille 2^(h-1) - 1</tspan></text>
+<rect
+   style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#18d049;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   id="rect50547"
+   width="651.12158"
+   height="313.59103"
+   x="-460.42245"
+   y="-611.43634"
+   ry="0.267867"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#008000;fill-opacity:1;fill-rule:evenodd"
+   x="-221.5419"
+   y="-275.02197"
+   id="text38488-1-7"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-2-0"
+     x="-221.5419"
+     y="-275.02197">taille 2^(h-1) - 1 + 1 = 2^(h-1)</tspan></text>
 </g>
     </g>
   </g>
