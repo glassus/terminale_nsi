@@ -115,6 +115,9 @@ Toujours d'après Wikipedia, la méthode ```larry.attrape_souris()``` est plutô
 
 ### 2.2 Création d'une classe
 
+![image](data/voitures_animaux.jpeg){: .center width=30%}
+
+
 #### 2.2.1 (mauvaise) manière minimale
 Créons une classe «voiture». Il suffit d'écrire :
 
