@@ -1,5 +1,8 @@
 # Sujets de Baccalauréat
 
+## 2022
+
+ - [Polynésie](data/2022/2022_Polynesie.pdf) 
 ## 2021
 
  - [Amérique du Nord](data/2021/21_Amérique_du_Nord.pdf)
