@@ -2,7 +2,7 @@
 from random import randint
 
 def plus_ou_moins():
-    nb_mystere = randint(1,100)
+    nb_mystere = randint(1,99)
     nb_test = int(input('Proposez un nombre entre 1 et 99 : '))
     compteur = 1
 

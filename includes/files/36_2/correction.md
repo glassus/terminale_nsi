@@ -3,6 +3,10 @@ from math import sqrt
 
 def distance(point1, point2):
     """ Calcule et renvoie la distance entre deux points. """
+    assert int(point1[0]) == point1[0], "coordonnée non entière"
+    assert int(point1[1]) == point1[1], "coordonnée non entière"
+    assert int(point2[0]) == point2[0], "coordonnée non entière"
+    assert int(point2[1]) == point2[1], "coordonnée non entière"
     return sqrt((point1[0] - point2[0])**2 + ((point1[1] - point2[1]))**2)
 
 assert distance((1, 0), (5, 3)) == 5.0, "erreur de calcul"

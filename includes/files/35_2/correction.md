@@ -7,10 +7,10 @@ def dichotomie(tab, x):
     """
     # cas du tableau vide
     if tab = []:
-        return False,1
+        return False, 1
     # cas où x n'est pas compris entre les valeurs extrêmes
     if (x < tab[0]) or (x > tab[-1]):
-        return False,2
+        return False, 2
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:
@@ -21,6 +21,6 @@ def dichotomie(tab, x):
             debut = m + 1
         else:
             fin = m - 1
-    return False
+    return False, 3
 
 ```
