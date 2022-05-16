@@ -11,9 +11,10 @@
         - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 
-## Thème en cours d'étude : [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)  
+## Thème en cours d'étude : [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)   
 
 !!! note "*Thèmes traités*"
+    - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
     - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
