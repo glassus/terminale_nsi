@@ -52,7 +52,7 @@ Conclusion :
 
 > À titre anecdotique, on pourra exécuter avec intérêt cette instruction Python :
 > ```a='a=%r;print(a%%a)';print(a%a)``` 
-> Ce type de code (magique !) existe dans tous les langages et s'appelle un [quine](https://fr.wikipedia.org/wiki/Quine_(informatique)).
+> Ce type de code (magique !) existe dans tous les langages et s'appelle un [quine](https://fr.wikipedia.org/wiki/Quine_(informatique)){. target="_blank"}.
 
 
 
@@ -64,7 +64,7 @@ Considérons le programme suivant :
 
 ```python
 def countdown(n):
-    while n != 0 :
+    while n != 0:
         print(n)
         n = n - 1
     print("fini")
@@ -84,6 +84,7 @@ Est-ce qu'un programme d'_analyse de programmes_ aurait pu faire cela à ma plac
 ### 2.2 Une machine pour prédire l'arrêt ou non d'un programme.
 Après tout, un programme est une suite d'instructions (le code-source), et peut donc être, comme on l'a vu, le paramètre d'entrée d'un autre programme qui l'analyserait. 
 Un tel programme (appelons-le ```halt```) prendrait en entrées :
+
 - un paramètre ```prog``` (le code-source du programme)
 - un paramètre  ```x```, qui serait le paramètre d'entrée de ```prog```.
 
@@ -95,6 +96,7 @@ Un tel programme (appelons-le ```halt```) prendrait en entrées :
 
 
 **Exemple** : 
+
 - ```halt(countdown, 10)``` renverrait ```True```.
 - ```halt(countdown, 10.8)``` renverrait ```False```. 
 
@@ -105,7 +107,7 @@ Un tel programme (appelons-le ```halt```) prendrait en entrées :
 
 ```python
 def halt(prog, x):
-    if "prog(x) s'arrête" :   # ce code n'est pas encore abouti ...
+    if "prog(x) s'arrête":   # mes excuses, je n'ai pas eu le temps de finir totalement ce code
         return True
     else :
         return False
@@ -119,10 +121,10 @@ Considérons le programme :
 
 ```python
 def sym(prog):
-    if halt(prog, prog) == True :
-        while True :
-            pass
-    else :
+    if halt(prog, prog) == True:
+        while True:
+            print("vers l'infini et au-delà !")
+    else:
         return 1
 ```
 
@@ -131,6 +133,7 @@ On peut remarquer que le programme ```halt``` est appelé avec comme paramètres
 ![image](data/halt3.png){: .center width="40%"}
 
 Ce programme ```sym``` reçoit donc en paramètre un programme ```prog```, et :
+
 - va rentrer dans une boucle infinie si ```prog(prog)``` s'arrête.
 - va renvoyer 1 si  ```prog(prog)``` ne s'arrête pas.
 
@@ -152,38 +155,48 @@ Deux cas peuvent se présenter, suivant si ```halt(sym, sym)``` renvoie ```True`
 
 Nous venons de prouver que notre programme ```halt```, censé prédire si un programme ```prog``` peut s'arrêter sur une entrée ```x```, **NE PEUT PAS EXISTER**.
 
-Ce résultat théorique, d'une importance cruciale, s'appelle **le théorème de l'arrêt**.
+Ce résultat théorique, d'une importance cruciale, s'appelle **le problème de l'arrêt**.
+
+!!! note "Problème de l'arrêt :heart: :heart: :heart:"
+    Il **ne peut pas exister** de programme universel qui prendrait en entrées :
+
+     - un programme P 
+     - une entrée E de ce programme P
+
+    et qui déterminerait si ce programme P, lancé avec l'entrée E, va s'arrêter ou non. 
 
 ![image](data/turing16.jpg){: .center width="40%"}
 
 
-Ce résultat a été démontré par [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing) en 1936, dans un article intitulé *«On computable numbers, with an application to the Entscheidungsproblem»*.
+Ce résultat a été démontré par [Alan Turing](https://fr.wikipedia.org/wiki/Alan_Turing){. target="_blank"} en 1936, dans un article intitulé *«On computable numbers, with an application to the Entscheidungsproblem»*.
 
 ![image](data/turing.png){: .center }
 
 
-Pour sa démonstration, il présente un modèle théorique de machine capable d'exécuter des instructions basiques sur un ruban infini, les [machines de Turing](https://fr.wikipedia.org/wiki/Machine_de_Turing).
+Pour sa démonstration, il présente un modèle théorique de machine capable d'exécuter des instructions basiques sur un ruban infini, les [machines de Turing](https://fr.wikipedia.org/wiki/Machine_de_Turing){. target="_blank"}.
 
-À la même époque, le mathématicien [Alonzo Church](https://fr.wikipedia.org/wiki/Alonzo_Church) démontre lui aussi ce théorème de l'arrêt, mais par un moyen totalement différent, en inventant le [lambda-calcul](https://fr.wikipedia.org/wiki/Lambda-calcul).
+À la même époque, le mathématicien [Alonzo Church](https://fr.wikipedia.org/wiki/Alonzo_Church){. target="_blank"} démontre lui aussi ce théorème de l'arrêt, mais par un moyen totalement différent, en inventant le [lambda-calcul](https://fr.wikipedia.org/wiki/Lambda-calcul){. target="_blank"}.
 
-Tous deux mettent ainsi un terme au rêve du mathématicien allemand [David Hilbert](https://fr.wikipedia.org/wiki/David_Hilbert), qui avait en 1928 posé la question de l'existence d'un algorithme capable de répondre «oui» ou «non» à n'importe quel énoncé mathématique posé sous forme décisionnelle («un triangle rectangle peut-il être isocèle ?», «existe-t-il un nombre premier pair ?»)
+Tous deux mettent ainsi un terme au rêve du mathématicien allemand [David Hilbert](https://fr.wikipedia.org/wiki/David_Hilbert){. target="_blank"}, qui avait en 1928 posé la question de l'existence d'un algorithme capable de répondre «oui» ou «non» à n'importe quel énoncé mathématique posé sous forme décisionnelle («un triangle rectangle peut-il être isocèle ?», «existe-t-il un nombre premier pair ?»)
 
 Cette question, appelée «problème de la décision», ou *Entscheidungsproblem* en allemand, est définitivement tranchée par le problème de l'arrêt : un tel théorème ne peut pas exister, puisque par exemple, aucun algorithme ne peut répondre «oui» ou «non» à la question «ce programme va-t-il s'arrêter ?».
 
 
-Le théorème de l'arrêt sera étendu plus tard par [le théorème de Rice](https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Rice).
+Le théorème de l'arrêt sera étendu plus tard par [le théorème de Rice](https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Rice){. target="_blank"}.
 
 Ce résultat démontre que toutes les questions sémantiques (non évidentes) au sujet d'un programme sont indécidables :
+
 - «ce programme va-t-il s'arrêter ?» (le théorème de l'arrêt)
 - «ce programme va renvoyer la valeur 12 ?» 
 - «ce programme va-t-il un jour renvoyer un message d'erreur ?» 
 - ...
 
-[Rice](https://en.wikipedia.org/wiki/Henry_Gordon_Rice) démontre que toutes ces questions peuvent être ramenées (on dit *réduites*) au théorème de l'arrêt, qui est indécidable.
+[Rice](https://en.wikipedia.org/wiki/Henry_Gordon_Rice){. target="_blank"} démontre que toutes ces questions peuvent être ramenées (on dit *réduites*) au théorème de l'arrêt, qui est indécidable.
 
 ## 2. Calculabilité
 
-Le problème de l'arrêt est dit **indécidable** car la fonction qui le résout (notre brave programme ```halt```) n'est pas **calculable**. 
+!!! note "Décidabilité et calculabilité"
+    Le problème de l'arrêt est dit **indécidable** car la fonction qui le résout (notre brave programme ```halt```) n'est pas **calculable**. 
 
 ### 2.1 Notion de calculabilité
 Qu'y a-t-il derrière cette notion de calculabilité ?
@@ -192,7 +205,7 @@ Cette notion, qui jette un pont entre les mathématiques (la vision de Church, p
 Le *calcul* mathématique peut se réduire à une succession d'opérations élémentaires (songez à la multiplication entière comme une série d'additions). Les nombres calculables sont les nombres qui sont générables en un nombre fini d'opérations élémentaires. 
 De la même manière, une fonction mathématique sera dite calculable s'il existe une suite finie d'opérations élémentaires permettant de passer d'un nombre x à son image f(x).
 
-On retrouve cette notion d'opérations élémentaires dans les [machines de Turing](https://fr.wikipedia.org/wiki/Machine_de_Turing). 
+On retrouve cette notion d'opérations élémentaires dans les [machines de Turing](https://fr.wikipedia.org/wiki/Machine_de_Turing){. target="_blank"}. 
 Cette machine (théorique) permet de simuler tout ce qu'un programme informatique (une suite d'instructions) est capable d'exécuter. Un algorithme peut se réduire à une suite d'opérations élementaires, comme une fonction mathématique peut se réduire à une suite de calculs.
 Dès lors, on pourra considérer un algorithme comme une fonction.
 
@@ -209,27 +222,31 @@ Scratch, C, Python, Java, Basic, Haskell, Brainfuck... tous ces langages sont th
 L'étude de la calculabilité d'une fonction (à prendre au sens le plus large, c'est-à-dire un algorithme) ne se limite pas à un choix binaire : «calculable» vs «non calculable».  
 Parmi les fonctions calculables, certaines peuvent l'être rapidement, et d'autre beaucoup moins.
 
-On retrouve alors la notion bien connue de **complexité** algorithmique, qui permet de classifier les algorithmes suivant leur dépendance à la taille de leurs données d'entrée (voir le [cours](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/02_Complexite.ipynb) de Première).
+On retrouve alors la notion bien connue de **complexité** algorithmique, qui permet de classifier les algorithmes suivant leur dépendance à la taille de leurs données d'entrée (voir le [cours](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.2_Complexite/cours/){. target="_blank"} de Première).
 
 On peut regrouper les problèmes suivant la complexité de l'algorithme qui permet de les résoudre.
 
 #### 2.3.1 la classe P
 
-◮ On dira que sont de **«classe P»** tous les problèmes dont l'algorithme de recherche de solution est de **complexité polynomiale**.
+!!! note "Définition de la classe **P**"
+    On dira que sont de **«classe P»** tous les problèmes dont l'algorithme de recherche de solution est de **complexité polynomiale**.
 
 Que retrouve-t-on dans la classe P ? Tous les problèmes dont la solution est un algorithme de complexité linéraire, quadratique, logarithmique... Tout mais surtout pas un algorithme de complexité exponentielle.
 
 Pour le résumer très grossièrement, un problème de classe P est un problème que l'on sait résoudre en temps raisonnable (même grand). 
+
 - le problème du tri d'une liste est dans P.
 - le problème de la factorisation d'un grand nombre (sur lequel repose la sécurité du RSA) n'est *a priori* **pas** dans P.
-- le problème de la primalité («ce nombre est-il premier ?») a longtemps été considéré comme n'étant pas dans P... jusqu'en 2002, où a été découvert le [test de primalité AKS](https://fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_AKS), de complexité polynomiale (d'ordre 6). Ce test est donc maintenant dans P.
+- le problème de la primalité («ce nombre est-il premier ?») a longtemps été considéré comme n'étant pas dans P... jusqu'en 2002, où a été découvert le [test de primalité AKS](https://fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_AKS){. target="_blank"}, de complexité polynomiale (d'ordre 6). Ce test est donc maintenant dans P.
 
 
 #### 2.3.2 la classe NP
 
-◮ On dira que sont de **«classe NP»** tous les problèmes dont l'algorithme de recherche de solution est **Non-déterministe Polynomial**.
+!!! note "Définition de la classe **NP**"
+    On dira que sont de **«classe NP»** tous les problèmes dont l'algorithme de recherche de solution est **Non-déterministe Polynomial**.
+ 
 
-> Warning : NP ne signifie **pas** Non-Polynomial !!!
+> Warning : :warning: NP ne signifie **pas** Non-Polynomial !!! :warning:
 
 Que veut dire la formulation «non-déterministe polynomial» ? Cela fait référence à ce que serait capable de faire une machine de Turing (donc, n'importe quel ordinateur) travaillant de manière **non-déterministe**, donc capable d'explorer simultanément plusieurs solutions possibles. On peut imaginer un arbre dont le parcours se ferait simultanément dans toutes les branches, et non en largeur ou profondeur comme nous l'avons vu.
 
@@ -239,13 +256,14 @@ Très bien, mais les machines non-déterministes... cela n'existe pas réellemen
 
 Si la solution peut être trouvée de manière polynomiale par une machine non-déterministe, une machine déterministe *qui aurait de la chance* en partant directement vers la bonne solution la trouverait elle aussi de manière polynomiale. On simplifie souvent cela en disant «la vérification de la solution est polynomiale». Cela nous donnne cette définition plus accessible de la classe NP :
 
-◮ On dira que sont de **«classe NP»** tous les problèmes dont l'algorithme de **vérification** de solution est **polynomial**.
+!!! note "Définition (plus simple) de la classe **NP**"
+    On dira que sont de **«classe NP»** tous les problèmes dont l'algorithme de **vérification** de solution est **polynomial**.
 
 Pour le résumer très grossièrement, un problème de classe NP est un problème dont on sait vérifier facilement si une solution proposée marche ou pas :
 
 - la résolution d'un sudoku est dans NP : si quelqu'un vous montre un sudoku rempli, vous pouvez très rapidement lui dire si sa solution est valable ou pas.
 - la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui.)
-- le problème du [sac à dos](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/06_Algorithmes_gloutons.ipynb) (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.
+- le problème du [sac à dos](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#3-le-probleme-du-sac-a-dos-knapsack-problem){. target="_blank"} (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.
 - le problème du voyageur de commerce (ou TSP : Traveller Sales Problem), en version décisionnelle, est dans NP. Si on vous propose un trajet, vous pouvez facilement vérifier que sa longueur est (par exemple) inférieure à 150 km.
 
 
@@ -255,7 +273,7 @@ Malheureusement, aucun de ces problèmes cités n'a (à ce jour) d'algorithme de
 
 Tous les problèmes de P ont une solution qui peut être **trouvée** de manière polynomiale. Donc évidemment, la vérification de cette solution est aussi polynomiale. Donc tous les problèmes de P sont dans NP. On dit que P est inclus dans NP, que l'on écrit **P ⊂ NP**.
 
-Voici une capture d'écran de l'excellente vidéo [Nos algorithmes pourraient-ils être BEAUCOUP plus rapides ? (P=NP ?)](https://www.youtube.com/watch?v=AgtOCNCejQ8) de l'excellent David Louapre :
+Voici une capture d'écran de l'excellente vidéo [Nos algorithmes pourraient-ils être BEAUCOUP plus rapides ? (P=NP ?)](https://www.youtube.com/watch?v=AgtOCNCejQ8){. target="_blank"} de l'excellent David Louapre :
 
 ![image](data/louapre.png){: .center width="80%"}
 
@@ -267,11 +285,11 @@ Si quelqu'un trouve un jour un algorithme de polynomial de factorisation, alors 
 
 Mais certains de ces problèmes dans NP ont une propriété remarquable : la résolution polynomiale d'un seul d'entre eux ferait ramener la **totalité** des problèmes NP dans P. On dit que ces problèmes sont NP-complets (marqués en rouge ci-dessus)
 Concrètement, si vous trouvez une solution polynomiale de résolution du sudoku, vous entrainez avec lui dans P tous les autres problèmes NP, et vous aurez ainsi prouvé que P = NP.
-Accessoirement, vous gagnerez aussi le prix d'[un million de dollars](https://fr.wikipedia.org/wiki/Probl%C3%A8mes_du_prix_du_mill%C3%A9naire) promis par la fondation Clay à qui tranchera cette question...
+Accessoirement, vous gagnerez aussi le prix d'[un million de dollars](https://fr.wikipedia.org/wiki/Probl%C3%A8mes_du_prix_du_mill%C3%A9naire){. target="_blank"} promis par la fondation Clay à qui tranchera cette question...
 (prix que vous partagerez bien évidemment avec votre professeur de NSI)
 
 
-Actuellement, à part le grand [Donald Knuth](https://fr.wikipedia.org/wiki/Donald_Knuth), la plupart des chercheurs qui travaillent à ce problème sont plutôt pessimistes, et pensent que P ≠ NP. 
+Actuellement, à part le grand [Donald Knuth](https://fr.wikipedia.org/wiki/Donald_Knuth){. target="_blank"}, la plupart des chercheurs qui travaillent à ce problème sont plutôt pessimistes, et pensent que P ≠ NP. 
 Cela signifie qu'ils pensent que certains problèmes ne pourront jamais avoir une solution polynomiale. 
 
 Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...
