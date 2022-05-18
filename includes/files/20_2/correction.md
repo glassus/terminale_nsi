@@ -28,7 +28,7 @@ def est_magique(carre):
 
     #test de la somme de chaque colonne
     for j in range(n):
-        if carre.somme_ligne(j) != s:
+        if carre.somme_colonne(j) != s:
             return False
 
     #test de la somme de chaque diagonale
