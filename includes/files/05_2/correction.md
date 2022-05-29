@@ -27,7 +27,7 @@ class Carte:
 
     """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
     def getCouleur(self):
-        return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur]
+        return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur - 1]
 
 class PaquetDeCarte:
     def __init__(self):
