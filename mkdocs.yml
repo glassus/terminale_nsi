@@ -10,10 +10,12 @@ theme:
   custom_dir: my_theme_customizations/
   font: false
   language: fr
+  favicon: xtra/favTNSI.png
   icon:
     logo: material/code-greater-than
     repo : fontawesome/brands/github
-    favicon: xtra/favTNSI.png
+    admonition:
+      note: fontawesome/solid/pen-to-square
 
   features:
     - navigation.instant

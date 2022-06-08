@@ -185,7 +185,7 @@ L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
 Le parcours **postfixe** est aussi un parcours en profondeur d'abord.
 
 !!! note "Méthode du parcours postfixe :heart:"
-    (parfois aussi appelé *post ordre*)
+    (parfois aussi appelé **post-ordre** ou encore **suffixe**)
 
     - Chaque nœud est visité **après** ses fils le soient.
     - On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
