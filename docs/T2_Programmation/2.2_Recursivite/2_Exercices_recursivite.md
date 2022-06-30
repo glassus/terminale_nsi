@@ -210,7 +210,7 @@
             # arrivee : la pile d'arrivée ("A", "B" ou "C") """
 
             if n == 1 :
-                print(depart + " vers " + C)
+                print(depart + " vers " + arrivee)
             else :
                 hanoi(n-1, depart, arrivee, inter) 
                 print(depart + " vers " + arrivee)
