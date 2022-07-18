@@ -320,7 +320,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
 
 #### 4.2.3 Visualisation
 
-Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. C'est faux !
+Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
 L'animation suivante montre la progression du tri :
 
 <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player>
