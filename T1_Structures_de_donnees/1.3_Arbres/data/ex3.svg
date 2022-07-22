@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="ex3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:serif="http://www.serif.com/">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="449.36636"
+     inkscape:cy="544.11867"
+     inkscape:window-width="1880"
+     inkscape:window-height="1141"
+     inkscape:window-x="40"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer-1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36653" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker36951"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36647" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round"
+         id="path36662" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path36650" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Send"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.3) rotate(180) translate(-2.3,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#2ca05a;stroke-opacity:0.956863;fill:#2ca05a;fill-opacity:1"
+         id="path1551" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#ff6600;stroke-width:1pt;stroke-opacity:1;fill:#ff6600;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1521" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Send-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2ca05a;fill-opacity:1;fill-rule:evenodd;stroke:#2ca05a;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:0.956863"
+         id="path1551-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Send-6-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2a7fff;fill-opacity:1;fill-rule:evenodd;stroke:#2a7fff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path1551-5-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Send-6-1-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2a7fff;fill-opacity:1;fill-rule:evenodd;stroke:#2a7fff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path1551-5-4-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path36650-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path36653-5" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="clip-rule:evenodd;fill-rule:evenodd"
+       id="g1223"
+       transform="matrix(0.26458333,0,0,0.26458333,156.89032,251.17623)">
+      <g
+         serif:id="Layer 1"
+         id="Layer-1">
+        <g
+   id="g1312"
+   transform="translate(390)">
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m -160,-50 v 410 0"
+     id="path1071" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M -320,20 H 40"
+     id="path1073" />
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M -320,90 H 40"
+     id="path1073-7" />
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M -330,160 H 30"
+     id="path1073-7-9" />
+  <g
+     id="g1292">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -330,20 V 90"
+       id="path1090" />
+    <path
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -340,90 v 70"
+       id="path1090-5" />
+    <path
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -350,160 v 70"
+       id="path1090-5-2" />
+  </g>
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M -340,230 H 20"
+     id="path1073-7-9-2" />
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m -230,-50 v 410 0"
+     id="path1071-8" />
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m -300,-50 v 410 0"
+     id="path1071-8-7" />
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m -90,-50 v 410 0"
+     id="path1071-6" />
+  <g
+     id="g1287">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -230,-60 h 70"
+       id="path1167" />
+    <path
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -300,-70 h 70"
+       id="path1167-9" />
+    <path
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -160,-70 h 70"
+       id="path1167-9-3" />
+    <path
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -90,-60 h 70"
+       id="path1167-1" />
+  </g>
+  <path
+     style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m -20,-50 v 410 0"
+     id="path1071-6-2" />
+</g>
+<g
+   transform="translate(-307.55778,-616.76715)"
+   id="g5124"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+                <path
+   style="fill:none;stroke:#000000;stroke-width:2px"
+   d="m 261.429,57.762 -118.572,64.285 71.429,78.572"
+   id="path5112" />
+
+                <g
+   transform="translate(0,-30)"
+   id="path5114">
+                    <path
+   id="path834"
+   style="fill:none;stroke:#000000;stroke-width:2px"
+   d="m 142.857,152.047 -71.428,78.572 -35.715,80" />
+
+                </g>
+
+                
+                <path
+   style="fill:none;stroke:#000000;stroke-width:2px"
+   d="M 262.857,56.333 380,120.619 311.429,199.19"
+   id="path5120" />
+
+                <g
+   transform="translate(0,-30)"
+   id="path5122">
+                    <path
+   id="path841"
+   style="fill:none;stroke:#000000;stroke-width:2px"
+   d="m 378.571,152.047 74.286,77.143" />
+
+                </g>
+
+            </g>
+<g
+   transform="translate(-307.55778,-656.7672)"
+   id="g5046"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+                    <g
+   id="g847"
+   transform="translate(-24.2857,270)">
+                        <g
+   id="g3717">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path3705" />
+
+                        </g>
+
+                    </g>
+
+                    <g
+   id="g851"
+   transform="translate(47.1429,270)">
+                        <g
+   id="g4337">
+                            
+                        </g>
+
+                    </g>
+
+                </g>
+<g
+   id="g4620"
+   transform="translate(-104.63828,-618.19575)"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+                        <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4622" />
+
+                    </g>
+<g
+   transform="translate(-321.56191,-635.88611)"
+   id="g5252"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+                    <g
+   id="g860"
+   transform="translate(32.5928,162.281)">
+                        <g
+   id="g4443">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4445" />
+
+                        </g>
+
+                    </g>
+
+                    <g
+   id="g864"
+   transform="translate(175.45,162.281)">
+                        <g
+   id="g4453">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4455" />
+
+                        </g>
+
+                    </g>
+
+                    <g
+   id="g868"
+   transform="translate(103.307,84.2332)">
+                        <g
+   id="g4014">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4016" />
+
+                        </g>
+
+                    </g>
+
+                </g>
+<g
+   transform="translate(-329.63881,-646.7672)"
+   id="g4891"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+                    <g
+   id="g873"
+   transform="translate(271.429,169.952)">
+                        <g
+   id="g4871">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4602" />
+
+                        </g>
+
+                    </g>
+
+                    <g
+   id="g878"
+   transform="translate(414.286,169.952)">
+                        <g
+   id="g4803">
+                            <g
+   id="g4750">
+                                <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4752" />
+
+                            </g>
+
+                        </g>
+
+                    </g>
+
+                    <g
+   id="g882"
+   transform="translate(342.143,91.9047)">
+                        <g
+   id="g4861">
+                            <path
+   style="fill:#ffffff;stroke:#000000;stroke-width:2px"
+   d="m 82.857,59.409 c 0,12.931 -10.64,23.572 -23.571,23.572 -12.931,0 -23.572,-10.641 -23.572,-23.572 0,-12.93 10.641,-23.571 23.572,-23.571 12.931,0 23.571,10.641 23.571,23.571 z"
+   id="path4863" />
+
+                        </g>
+
+                    </g>
+
+                </g>
+
+        
+        
+        
+        
+    <g
+   id="g35879"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <g
+     id="g965-36"
+     style="clip-rule:evenodd;fill-rule:evenodd"
+     transform="translate(-406.71057,-198.2737)"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"
+     inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-2.png">
+    <text
+       xml:space="preserve"
+       style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+       x="-73.242912"
+       y="109.96008"
+       id="text952-0"
+       transform="scale(0.92682081,1.0789572)"><tspan
+         sodipodi:role="line"
+         id="tspan950-6"
+         x="-73.242912"
+         y="109.96008"
+         style="stroke-width:1.65456">4</tspan></text>
+    <circle
+       style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="path960-2"
+       cx="-60"
+       cy="110"
+       r="20" />
+  </g>
+</g>
+<g
+   id="g35867"
+   transform="translate(0.16182232,9.1386993)"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <g
+     id="g965-6"
+     style="clip-rule:evenodd;fill-rule:evenodd"
+     transform="translate(-364.71577,-132.93095)"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"
+     inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-2.png">
+    <text
+       xml:space="preserve"
+       style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+       x="-72.472687"
+       y="111.3689"
+       id="text952-1"
+       transform="scale(0.92682082,1.0789572)"><tspan
+         sodipodi:role="line"
+         id="tspan950-8"
+         x="-72.472687"
+         y="111.3689"
+         style="stroke-width:1.65456">5</tspan></text>
+    <circle
+       style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="path960-7"
+       cx="-60"
+       cy="110"
+       r="20" />
+  </g>
+</g>
+<g
+   id="g35873"
+   transform="translate(4.8697751,6.7922432)"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <g
+     id="g965-9"
+     style="clip-rule:evenodd;fill-rule:evenodd"
+     transform="translate(-301.49054,-130.68371)"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"
+     inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-2.png">
+    <text
+       xml:space="preserve"
+       style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+       x="-81.124161"
+       y="111.53539"
+       id="text952-2"
+       transform="scale(0.92682082,1.0789572)"><tspan
+         sodipodi:role="line"
+         id="tspan950-02"
+         x="-81.124161"
+         y="111.53539"
+         style="stroke-width:1.65456">12</tspan></text>
+    <circle
+       style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="path960-3"
+       cx="-60"
+       cy="110"
+       r="20" />
+  </g>
+</g>
+<g
+   id="g965"
+   transform="translate(-226.51777,-268.38341)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png">
+  <text
+     xml:space="preserve"
+     style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+     x="-80.507912"
+     y="110.74857"
+     id="text952"
+     transform="scale(0.92682082,1.0789572)"><tspan
+       sodipodi:role="line"
+       id="tspan950"
+       x="-80.507912"
+       y="110.74857"
+       style="stroke-width:1.65456">20</tspan></text>
+  <ellipse
+     style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+     id="path960"
+     cx="-60"
+     cy="110"
+     rx="20.001261"
+     ry="20" />
+</g>
+<g
+   id="g965-3"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(-363.90597,-266.45084)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png">
+  <text
+     xml:space="preserve"
+     style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+     x="-73.242912"
+     y="109.96008"
+     id="text952-6"
+     transform="scale(0.92682081,1.0789572)"><tspan
+       sodipodi:role="line"
+       id="tspan950-7"
+       x="-73.242912"
+       y="109.96008"
+       style="stroke-width:1.65456">8</tspan></text>
+  <circle
+     style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+     id="path960-5"
+     cx="-60"
+     cy="110"
+     r="20" />
+</g>
+<g
+   id="g965-35"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(-295.74489,-338.43658)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png">
+  <text
+     xml:space="preserve"
+     style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:1.65456"
+     x="-81.72834"
+     y="111.59123"
+     id="text952-62"
+     transform="scale(0.92682082,1.0789572)"><tspan
+       sodipodi:role="line"
+       id="tspan950-9"
+       x="-81.72834"
+       y="111.59123"
+       style="stroke-width:1.65456">10</tspan></text>
+  <circle
+     style="opacity:0.931187;fill:none;fill-opacity:0.933333;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+     id="path960-1"
+     cx="-60"
+     cy="110"
+     r="20" />
+</g>
+<path
+   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -369.49578,-213.9141 -40.6593,42.94078"
+   id="path1065"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g965-35"
+   inkscape:connection-end="#g965-3"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png" />
+<path
+   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -300.57596,-172.60935 -41.11118,-41.60174"
+   id="path1069"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g965"
+   inkscape:connection-end="#g965-35"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png" />
+<path
+   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -434.54039,-139.51283 -21.53576,34.30112"
+   id="path1372"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g965-3"
+   inkscape:connection-end="#g965-36"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png" />
+<g
+   id="g35992"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <text
+     xml:space="preserve"
+     style="font-size:26.473px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill-rule:evenodd;stroke-width:1.65456"
+     x="-357.68262"
+     y="-72.221817"
+     id="text952-2-7"
+     transform="scale(0.92682082,1.0789572)"><tspan
+       sodipodi:role="line"
+       id="tspan950-02-8"
+       x="-357.68262"
+       y="-72.221817"
+       style="stroke-width:1.65456">15</tspan></text>
+  <circle
+     style="clip-rule:evenodd;opacity:0.931187;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#2d2d2d;stroke-width:2.202;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
+     id="path960-3-4"
+     cx="-317.92935"
+     cy="-88.201469"
+     r="20" />
+</g>
+<path
+   style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m -294.68817,-140.12853 -15.07087,33.67238"
+   id="path1406"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g965"
+   inkscape:connection-end="#path960-3-4"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<g
+   id="g995"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990"><tspan
+       sodipodi:role="line"
+       id="tspan988"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">C</tspan></text>
+</g>
+<g
+   id="g995-3"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(35)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972-6"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990-7"><tspan
+       sodipodi:role="line"
+       id="tspan988-5"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">B</tspan></text>
+</g>
+<g
+   id="g995-35"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(70)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972-62"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990-9"><tspan
+       sodipodi:role="line"
+       id="tspan988-1"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">K</tspan></text>
+</g>
+<g
+   id="g995-3-2"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(105)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972-6-7"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990-7-0"><tspan
+       sodipodi:role="line"
+       id="tspan988-5-9"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">E</tspan></text>
+</g>
+<g
+   id="g995-36"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(140)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972-0"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990-6"><tspan
+       sodipodi:role="line"
+       id="tspan988-2"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">F</tspan></text>
+</g>
+<g
+   id="g995-3-6"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(175)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <rect
+     style="opacity:0.529365;fill:none;fill-opacity:0.933333;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+     id="rect972-6-1"
+     width="30"
+     height="40"
+     x="-560"
+     y="265"
+     ry="1.6474299" />
+  <text
+     xml:space="preserve"
+     style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#483737;stroke-width:2.12787"
+     x="-555.42749"
+     y="297.52664"
+     id="text990-7-8"><tspan
+       sodipodi:role="line"
+       id="tspan988-5-7"
+       x="-555.42749"
+       y="297.52664"
+       style="fill:#483737;stroke-width:2.12787">A</tspan></text>
+</g>
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-62-2"
+   width="30"
+   height="40"
+   x="-350"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#483737;fill-rule:evenodd;stroke-width:2.12787"
+   x="-347.03638"
+   y="297.43127"
+   id="text990-9-0"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan988-1-2"
+     x="-347.03638"
+     y="297.43127"
+     style="fill:#483737;stroke-width:2.12787">G</tspan></text>
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-6-7-7"
+   width="30"
+   height="40"
+   x="-315"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-2"
+   width="30"
+   height="40"
+   x="-280"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-6-3"
+   width="30"
+   height="40"
+   x="-245"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#483737;fill-rule:evenodd;stroke-width:2.12787"
+   x="-240.42749"
+   y="297.52664"
+   id="text990-7-6"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan988-5-1"
+     x="-240.42749"
+     y="297.52664"
+     style="fill:#483737;stroke-width:2.12787">Z</tspan></text>
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-62-9"
+   width="30"
+   height="40"
+   x="-210"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-6-7-4"
+   width="30"
+   height="40"
+   x="-175"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-0-5"
+   width="30"
+   height="40"
+   x="-140"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-6-1-1"
+   width="30"
+   height="40"
+   x="-105"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#483737;fill-rule:evenodd;stroke-width:2.12787"
+   x="-100.42749"
+   y="297.52664"
+   id="text990-7-8-0"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan988-5-7-6"
+     x="-100.42749"
+     y="297.52664"
+     style="fill:#483737;stroke-width:2.12787">X</tspan></text>
+<rect
+   style="clip-rule:evenodd;opacity:0.529365;fill:none;fill-opacity:0.933333;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+   id="rect972-62-2-3"
+   width="30"
+   height="40"
+   x="-70"
+   y="265"
+   ry="1.6474299"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#483737;fill-rule:evenodd;stroke-width:2.12787"
+   x="-67.036377"
+   y="297.43127"
+   id="text990-9-0-2"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan988-1-2-0"
+     x="-67.036377"
+     y="297.43127"
+     style="fill:#483737;stroke-width:2.12787">Y</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:34.0458px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#483737;fill-rule:evenodd;stroke-width:2.12787"
+   x="-30.42749"
+   y="297.52664"
+   id="text990-7-0-5-5"><tspan
+     sodipodi:role="line"
+     id="tspan988-5-9-9-5"
+     x="-30.42749"
+     y="297.52664"
+     style="fill:#483737;stroke-width:2.12787" /></text>
+<g
+   id="g1371"
+   transform="translate(138.46632,-4.5143511)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000"
+     x="-550"
+     y="325"
+     id="text1291"><tspan
+       sodipodi:role="line"
+       id="tspan1289"
+       x="-550"
+       y="325">4</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-514.79614"
+     y="324.63614"
+     id="text1291-4"><tspan
+       sodipodi:role="line"
+       id="tspan1289-5"
+       x="-514.79614"
+       y="324.63614">5</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-480.25455"
+     y="324.51749"
+     id="text1291-2"><tspan
+       sodipodi:role="line"
+       id="tspan1289-54"
+       x="-480.25455"
+       y="324.51749">6</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-445.69525"
+     y="324.80737"
+     id="text1291-7"><tspan
+       sodipodi:role="line"
+       id="tspan1289-4"
+       x="-445.69525"
+       y="324.80737">7</tspan></text>
+</g>
+<g
+   id="g1371-3"
+   style="clip-rule:evenodd;fill-rule:evenodd"
+   transform="translate(-1.0470314,-4.8895026)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000"
+     x="-550"
+     y="325"
+     id="text1291-1"><tspan
+       sodipodi:role="line"
+       id="tspan1289-49"
+       x="-550"
+       y="325">0</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-514.79614"
+     y="324.63614"
+     id="text1291-4-2"><tspan
+       sodipodi:role="line"
+       id="tspan1289-5-0"
+       x="-514.79614"
+       y="324.63614">1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-480.25455"
+     y="324.51749"
+     id="text1291-2-6"><tspan
+       sodipodi:role="line"
+       id="tspan1289-54-8"
+       x="-480.25455"
+       y="324.51749">2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+     x="-445.69525"
+     y="324.80737"
+     id="text1291-7-9"><tspan
+       sodipodi:role="line"
+       id="tspan1289-4-2"
+       x="-445.69525"
+       y="324.80737">3</tspan></text>
+</g>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-269.26599"
+   y="320.76944"
+   id="text1291-1-6"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-49-4"
+     x="-269.26599"
+     y="320.76944">8</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-234.06213"
+   y="320.40558"
+   id="text1291-4-2-9"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-5-0-5"
+     x="-234.06213"
+     y="320.40558">9</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-204.52203"
+   y="320.4079"
+   id="text1291-2-6-0"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-54-8-4"
+     x="-204.52203"
+     y="320.4079">10</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-168.52734"
+   y="320.37558"
+   id="text1291-7-9-8"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-4-2-7"
+     x="-168.52734"
+     y="320.37558">11</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-134.21312"
+   y="321.0173"
+   id="text1291-1-7"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-49-2"
+     x="-134.21312"
+     y="321.0173">12</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-99.165627"
+   y="320.63516"
+   id="text1291-4-2-7"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-5-0-2"
+     x="-99.165627"
+     y="320.63516">13</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd"
+   x="-65.515068"
+   y="321.10626"
+   id="text1291-2-6-2"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan1289-54-8-6"
+     x="-65.515068"
+     y="321.10626">14</tspan></text>
+<path
+   style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+   d="M -434.40541,-31.197619 -456.8591,-70.868332"
+   id="path35903"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g35867"
+   inkscape:connection-end="#g35879"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<path
+   style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+   d="m -347.38435,-31.630755 20.21858,-38.831426"
+   id="path36016"
+   inkscape:connector-type="polyline"
+   inkscape:connector-curvature="0"
+   inkscape:connection-start="#g35873"
+   inkscape:connection-end="#g35992"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-3.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<path
+   style="fill:#ff0000;stroke:#000000;stroke-width:2.51338586;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none"
+   d="m -340.21678,-574.65717 -0.6669,265.44141"
+   id="path36642"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<path
+   style="clip-rule:evenodd;fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart-7);marker-end:url(#Arrow1Mend-3)"
+   d="m -265.53088,-575.11603 -0.76619,184.32874"
+   id="path36642-6"
+   sodipodi:nodetypes="cc"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px"
+   x="-441.25665"
+   y="-538.62512"
+   id="text38488"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486"
+     x="-441.25665"
+     y="-538.62512">hauteur h</tspan></text>
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill-rule:evenodd"
+   x="-253.86215"
+   y="-540.62811"
+   id="text38488-2"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-9"
+     x="-253.86215"
+     y="-540.62811">hauteur h-1</tspan></text>
+<rect
+   style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#d0189f;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   id="rect40957"
+   width="472.30045"
+   height="213.06844"
+   x="-290.47375"
+   y="-591.65826"
+   ry="0.267867"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill-rule:evenodd;fill:#d0189f;fill-opacity:1"
+   x="-127.98688"
+   y="-359.49026"
+   id="text38488-1"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-2"
+     x="-127.98688"
+     y="-359.49026">taille 2^(h-1) - 1</tspan></text>
+<rect
+   style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#18d049;stroke-width:2.51339;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000;stop-opacity:1"
+   id="rect50547"
+   width="651.12158"
+   height="313.59103"
+   x="-460.42245"
+   y="-611.43634"
+   ry="0.267867"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90" />
+<text
+   xml:space="preserve"
+   style="font-size:16px;line-height:1.25;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono';letter-spacing:0px;word-spacing:0px;clip-rule:evenodd;fill:#008000;fill-opacity:1;fill-rule:evenodd"
+   x="-221.5419"
+   y="-275.02197"
+   id="text38488-1-7"
+   inkscape:export-filename="/home/gilles/Dropbox/nsidocs/terminale_nsi/docs/T1_Structures_de_donnees/1.3_Arbres/data/ex3-6a.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><tspan
+     sodipodi:role="line"
+     id="tspan38486-2-0"
+     x="-221.5419"
+     y="-275.02197">taille 2^(h-1) - 1 + 1 = 2^(h-1)</tspan></text>
+</g>
+    </g>
+  </g>
+</svg>
