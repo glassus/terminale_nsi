@@ -5,15 +5,16 @@
 ![image](data/BO.png){: .center}
 
 <!--
-<gif-player src="https://media.giphy.com/media/TN0GTccRi7Ixa/giphy.gif" speed="0.5" play></gif-player>
-<gif-player src="https://media.giphy.com/media/nh5QMbO89SFTG/giphy.gif" size="contain" prerender style="width:300px;height:200px"></gif-player>
+<gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_naive.gif" speed="1" play></gif-player>
 
 -->
 
 ## 1. Recherche naïve
-![image](data/gif_naive.gif){: .center}
 
+???+ tip "Illustration de l'algorithme"
+    <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_naive.gif" speed="1" play></gif-player>
 
+    _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 ### 1.1 Premier algorithme
 
 ### 1.2 Exercice 1
@@ -21,6 +22,11 @@
 ### 1.3 Exercice 2
 
 ## 2. Algorithme de Boyer-Moore
+
+???+ tip "Illustration de l'algorithme"
+    <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
+
+    _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
 ### 2.1 Principe
 
