@@ -21,7 +21,7 @@
 
 ### 1.3 Exercice 2
 
-## 2. Algorithme de Boyer-Moore
+## 2. Algorithme de Boyer-Moore-Horspool
 
 ???+ tip "Illustration de l'algorithme"
     <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
