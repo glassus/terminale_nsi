@@ -1,0 +1,181 @@
+.md-typeset div.arithmatex  {
+    overflow: initial;
+}
+
+.md-typeset .admonition {
+    font-size: 0.8rem;
+}
+
+.md-typeset details, .tabbed-set {
+    font-size: 0.8rem;
+}
+
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+:root {
+    --md-admonition-icon--fabquestion: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z"/></svg>')
+  }
+  .md-typeset .admonition.fabquestion,
+  .md-typeset details.fabquestion {
+    border-color: rgb(96, 80, 189);
+  }
+  .md-typeset .fabquestion > .admonition-title,
+  .md-typeset .fabquestion > summary {
+    background-color: rgba(96, 80, 189, 0.1);
+    border-color: rgb(96, 80, 189);
+  }
+  .md-typeset .fabquestion > .admonition-title::before,
+  .md-typeset .fabquestion > summary::before {
+    background-color: rgb(96, 80, 189);
+    -webkit-mask-image: var(--md-admonition-icon--fabquestion);
+            mask-image: var(--md-admonition-icon--fabquestion);
+  }
+  
+  :root {
+    --md-admonition-icon--rappel: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784 9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"/></svg>')
+  }
+  .md-typeset .admonition.rappel,
+  .md-typeset details.rappel {
+    border-color: rgb(96, 96, 96);
+  }
+  .md-typeset .rappel > .admonition-title,
+  .md-typeset .rappel > summary {
+    background-color: rgba(96, 96, 96, 0.1);
+    border-color: rgb(96, 96, 96);
+  }
+  .md-typeset .rappel > .admonition-title::before,
+  .md-typeset .rappel > summary::before {
+    background-color: rgb(96, 96, 96);
+    -webkit-mask-image: var(--md-admonition-icon--rappel);
+            mask-image: var(--md-admonition-icon--rappel);
+  }
+  
+  
+  :root {
+    --md-admonition-icon--aide: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm173.696 119.559-63.399 63.399c-10.987-18.559-26.67-34.252-45.255-45.255l63.399-63.399a218.396 218.396 0 0 1 45.255 45.255zM256 352c-53.019 0-96-42.981-96-96s42.981-96 96-96 96 42.981 96 96-42.981 96-96 96zM127.559 82.304l63.399 63.399c-18.559 10.987-34.252 26.67-45.255 45.255l-63.399-63.399a218.372 218.372 0 0 1 45.255-45.255zM82.304 384.441l63.399-63.399c10.987 18.559 26.67 34.252 45.255 45.255l-63.399 63.399a218.396 218.396 0 0 1-45.255-45.255zm302.137 45.255-63.399-63.399c18.559-10.987 34.252-26.67 45.255-45.255l63.399 63.399a218.403 218.403 0 0 1-45.255 45.255z"/></svg>')
+  }
+  .md-typeset .admonition.aide,
+  .md-typeset details.aide {
+    border-color: rgb(77, 146, 77);
+  }
+  .md-typeset .aide > .admonition-title,
+  .md-typeset .aide > summary {
+    background-color: rgba(77, 146, 77, 0.1);
+    border-color: rgb(77, 146, 77);
+  }
+  .md-typeset .aide > .admonition-title::before,
+  .md-typeset .rappel > summary::before {
+    background-color: rgb(77, 146, 77);
+    -webkit-mask-image: var(--md-admonition-icon--aide);
+            mask-image: var(--md-admonition-icon--aide);
+  }
+  
+  
+  :root {
+  --md-admonition-icon--capytale: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm173.696 119.559-63.399 63.399c-10.987-18.559-26.67-34.252-45.255-45.255l63.399-63.399a218.396 218.396 0 0 1 45.255 45.255zM256 352c-53.019 0-96-42.981-96-96s42.981-96 96-96 96 42.981 96 96-42.981 96-96 96zM127.559 82.304l63.399 63.399c-18.559 10.987-34.252 26.67-45.255 45.255l-63.399-63.399a218.372 218.372 0 0 1 45.255-45.255zM82.304 384.441l63.399-63.399c10.987 18.559 26.67 34.252 45.255 45.255l-63.399 63.399a218.396 218.396 0 0 1-45.255-45.255zm302.137 45.255-63.399-63.399c18.559-10.987 34.252-26.67 45.255-45.255l63.399 63.399a218.403 218.403 0 0 1-45.255 45.255z"/></svg>')
+  }
+  .md-typeset .admonition.capytale,
+  .md-typeset details.capytale {
+    border-color: rgb(57, 37, 36);
+  }
+  .md-typeset .capytale > .admonition-title,
+  .md-typeset .capytale > summary {
+    background-color: rgba(18, 31, 92, 0.3);
+    border-color: rgb(218, 161, 75);
+  }
+  .md-typeset .capytale > .admonition-title::before,
+  .md-typeset .rappel > summary::before {
+    background-color: rgb(18, 31, 92);
+    -webkit-mask-image: var(--md-admonition-icon--capytale);
+            mask-image: var(--md-admonition-icon--capytale);
+  }
+  
+  
+  :root {
+    --md-admonition-icon--lien: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"/></svg>')
+  }
+  .md-typeset .admonition.lien,
+  .md-typeset details.lien {
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .lien > .admonition-title,
+  .md-typeset .lien > summary {
+    background-color: rgba(106, 38, 122, 0.1);
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .lien > .admonition-title::before,
+  .md-typeset .rappel > summary::before {
+    background-color: rgb(106, 38, 122);
+    -webkit-mask-image: var(--md-admonition-icon--lien);
+            mask-image: var(--md-admonition-icon--lien);
+  }
+
+
+  :root {
+    --md-admonition-icon--code: :heart: }
+  .md-typeset .admonition.code,
+  .md-typeset details.code {
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .code > .admonition-title,
+  .md-typeset .code > summary {
+    background-color: rgba(106, 38, 122, 0.1);
+    border-color: rgb(106, 38, 122);
+  }
+  .md-typeset .code > .admonition-title::before,
+  .md-typeset .code > summary::before {
+    background-color: rgb(106, 38, 122);
+    -webkit-mask-image: var(--md-admonition-icon--code);
+            mask-image: var(--md-admonition-icon--code);
+  }
+
+
+  th {
+    border: 1px solid var(--md-typeset-table-color);
+    border-spacing: 0;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    background-color: #18BDC5;
+    color: #fff;
+}
+
+  td {
+    border: 1px solid var(--md-typeset-table-color);
+    border-spacing: 0;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+}
+
+
+.md-typeset__table {
+    line-height: 1;
+}
+
+.md-typeset__table table:not([class]) {
+    font-size: .74rem;
+    border-right: none;
+}
+
+
+.md-typeset__table table:not([class]) td,
+.md-typeset__table table:not([class]) th {
+    padding: 9px;
+}
+
+/* light mode alternating table bg colors */
+.md-typeset__table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+/* dark mode alternating table bg colors */
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+    background-color: hsla(var(--md-hue),25%,25%,1)
+}
