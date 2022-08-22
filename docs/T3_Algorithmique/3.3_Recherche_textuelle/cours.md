@@ -88,6 +88,7 @@ with open("Les_Miserables.txt") as f:
         1. Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité ```Ctrl-F``` proposée par votre navigateur
         2. Mesurez le temps d'exécution de votre algorithme à l'aide du module ```time```.  
     === "Correction"
+        *à faire*
          
 
 
