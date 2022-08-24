@@ -222,7 +222,7 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
 ```
 
 
-!!! example "{{ exercice() }}"
+!!! example "Exercice 1"
     === "Énoncé"
         Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
         
@@ -340,7 +340,7 @@ dir(batmobile)
 On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avons créés pour notre objet.
 
 
-!!! example "{{ exercice() }}"
+!!! example "Exercice 2"
     === "Énoncé"
         Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
 
