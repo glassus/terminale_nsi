@@ -135,7 +135,8 @@ $1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1$
 Un arbre complet de hauteur $h$ (en prenant la convention que l'arbre vide a pour hauteur 0) a donc une taille égale à $2^{h}-1$.
 
 **Remarque :** On en déduit une inégalité classique sur l'encadrement de la taille $t$ d'un arbre binaire (non nécessairement complet) de hauteur $h$ :
-$$ h \leqslant t \leqslant 2^{h}-1$$
+
+$$h \leqslant t \leqslant 2^{h}-1$$
 
 ## 2. Parcours d'arbres
 Les arbres étant une structure hiérarchique, leur utilisation implique la nécessité d'un **parcours** des valeurs stockées. Par exemple pour toutes les récupérer dans un certain ordre, ou bien pour en chercher une en particulier.  
