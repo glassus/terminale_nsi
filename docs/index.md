@@ -1,5 +1,19 @@
 
 
+!!! abstract ":star: Actualités :star:"
+    - Bienvenue à tous !
+    - [Conseils divers](T7_Divers/1_Conseils_generaux/cours/) et rappel des [bonnes pratiques](T2_Programmation/2.4_Pratiques_de_programmation/cours/)
+
+
+
+
+## Thème en cours d'étude :
+- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
+
+
+
+
+<!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
     Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
 
@@ -12,7 +26,7 @@
 
 
 
-<!--
+
 !!! abstract ":star: Actualités :star:"
     - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
     - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
