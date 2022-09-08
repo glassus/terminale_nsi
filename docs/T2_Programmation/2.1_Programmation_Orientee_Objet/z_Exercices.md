@@ -19,7 +19,7 @@
             >>> compare(riri, fifi)
             'Philippe'
             ```
-<!--
+
     === "Correction"
 
    
@@ -36,7 +36,7 @@
             else:
                 return eleve2.nom
         ```
--->   
+
 
 !!! example "Exercice 2"
     === "Énoncé"
@@ -153,7 +153,7 @@
             >>> mario.energie
             0
             ```
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         class Player:
             def __init__(self):
@@ -168,7 +168,7 @@
             def soin(self):
                 if self.energie > 0:
                     self.energie += 1
-        ``` -->
+
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2ef0-54279)"
     !!! example "Exercice"
