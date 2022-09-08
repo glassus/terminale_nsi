@@ -168,7 +168,7 @@
             def soin(self):
                 if self.energie > 0:
                     self.energie += 1
-
+        ```
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2ef0-54279)"
     !!! example "Exercice"
