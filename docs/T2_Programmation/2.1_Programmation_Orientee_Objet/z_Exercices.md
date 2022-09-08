@@ -1,6 +1,10 @@
 # Exercices
 
 
+         
+
+
+
 !!! example "Exercice 1"
     === "Énoncé"
         1. Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
@@ -15,8 +19,10 @@
             >>> compare(riri, fifi)
             'Philippe'
             ```
-
+<!--
     === "Correction"
+
+   
         ```python linenums='1'
         class Eleve:
             def __init__(self, nom, classe, note):
@@ -30,7 +36,8 @@
             else:
                 return eleve2.nom
         ```
-            
+-->   
+
 !!! example "Exercice 2"
     === "Énoncé"
         Écrire une classe ```TriangleRect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
@@ -51,7 +58,7 @@
 
 
 
-    === "Correction"
+<!--     === "Correction"
 
         ```python linenums='1'
         class TriangleRect:
@@ -59,7 +66,7 @@
                 self.cote1 = a
                 self.cote2 = b
                 self.hypotenuse = (self.cote1**2 + self.cote2**2)**0.5
-        ``` 
+        ```  -->
 
 !!! example "Exercice 3"
     === "Énoncé"
@@ -83,7 +90,7 @@
             >>> t.affiche()
             'Il est 17 heures, 26 minutes et 5 secondes'
             ```
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         class Chrono:
             def __init__(self, h, m, s):
@@ -109,7 +116,7 @@
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
-        ```
+        ``` -->
   
 
 !!! example "Exercice 4"
@@ -146,7 +153,7 @@
             >>> mario.energie
             0
             ```
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         class Player:
             def __init__(self):
@@ -161,7 +168,7 @@
             def soin(self):
                 if self.energie > 0:
                     self.energie += 1
-        ```
+        ``` -->
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2ef0-54279)"
     !!! example "Exercice"
@@ -186,7 +193,7 @@
                 Solde actuel du compte : 10000950 euros
                 ```
                 
-        === "Correction"
+<!--         === "Correction"
             ```python linenums='1'
             class CompteBancaire:
                 def __init__(self, titulaire, solde):
@@ -205,5 +212,5 @@
                     self.solde += somme
                     print("Vous avez déposé {} euros".format(somme))
                     print("Solde actuel du compte : {} euros".format(self.solde))
-            ```
+            ``` -->
 
