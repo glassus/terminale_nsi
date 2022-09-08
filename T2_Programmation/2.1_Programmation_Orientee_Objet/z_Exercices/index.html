@@ -2319,7 +2319,7 @@
 <h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -2337,14 +2337,8 @@
 </code></pre></div>
 </details>
 </div>
-</div>
-</div>
-</div>
-<!--
-    === "Correction"
-
-
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2366,8 +2360,10 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">eleve2</span><span class="o">.</span><span class="n">nom</span>
 </code></pre></div></td></tr></table></div>
--->
-
+</div>
+</div>
+</div>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label></div>
@@ -2460,7 +2456,7 @@
 
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une classe <code>Player</code> qui :</p>
@@ -2496,26 +2492,25 @@
 </code></pre></div>
 </details>
 </div>
+<div class="tabbed-block">
+<p>```python linenums='1'
+class Player:
+    def <strong>init</strong>(self):
+        self.energie = 3
+        self.alive = True</p>
+<div class="highlight"><pre><span></span><code>def blessure(self):
+    self.energie -= 1
+    if self.energie &lt;= 0:
+        self.alive = False
+
+def soin(self):
+    if self.energie &gt; 0:
+        self.energie += 1
+</code></pre></div>
 </div>
 </div>
 </div>
-<!--     === "Correction"
-        ```python linenums='1'
-        class Player:
-            def __init__(self):
-                self.energie = 3
-                self.alive = True
-
-            def blessure(self):
-                self.energie -= 1
-                if self.energie <= 0:
-                    self.alive = False
-
-            def soin(self):
-                if self.energie > 0:
-                    self.energie += 1
-        ``` -->
-
+</div>
 <div class="admonition capytale">
 <p class="admonition-title">À faire sur Capytale : <a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2ef0-54279">activité 2ef0-54279</a></p>
 <div class="admonition example">
