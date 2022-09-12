@@ -438,7 +438,7 @@ class Joueur :
 
 Instancions le joueur Nans Ducuing
 ```python
->>> nducuing = Joueur("Nans DUCUING", "UBB", 27)
+>>> nducuing = Joueur("Nans DUCUING", "UBB", 31)
 ```
 
 ![image](data/ducuing.png){: .center width=15%}
