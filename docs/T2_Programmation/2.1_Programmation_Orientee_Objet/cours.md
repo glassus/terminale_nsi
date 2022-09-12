@@ -396,7 +396,7 @@ class Fraction :
         self.denominateur = den
     
     def __str__(self):
-        return str(self.numerateur)+"/"+str(self.denominateur)
+        return str(self.numerateur)+ "/" +str(self.denominateur)
 ```
 
 

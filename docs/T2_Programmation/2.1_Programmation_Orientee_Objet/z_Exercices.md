@@ -194,7 +194,7 @@
                 Solde actuel du compte : 10000950 euros
                 ```
                 
-<!--         === "Correction"
+        === "Correction"
             ```python linenums='1'
             class CompteBancaire:
                 def __init__(self, titulaire, solde):
@@ -213,7 +213,7 @@
                     self.solde += somme
                     print("Vous avez déposé {} euros".format(somme))
                     print("Solde actuel du compte : {} euros".format(self.solde))
-            ``` -->
+            ```
 
 
 
@@ -275,8 +275,7 @@
         8 de coeur
         ```
 
-
- <!--    === "Correction"
+    === "Correction"
         ```python linenums='1'
         class Carte:
             """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
@@ -316,5 +315,5 @@
                 if 0 <= pos < len(self.contenu) :
                     return self.contenu[pos]
 
-        ``` -->
+        ```
          
