@@ -2499,7 +2499,7 @@
 <p class="admonition-title">À faire sur Capytale : <a class="" href="https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc" target="_blank">activité 2ef0-54279</a></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Créer une classe <code>CompteBancaire</code> dont la méthode constructeur recevra en paramètres :</p>
@@ -2522,34 +2522,49 @@
 </code></pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<!--         === "Correction"
-            ```python linenums='1'
-            class CompteBancaire:
-                def __init__(self, titulaire, solde):
-                    self.titulaire = titulaire
-                    self.solde = solde
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">CompteBancaire</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulaire</span><span class="p">,</span> <span class="n">solde</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">titulaire</span> <span class="o">=</span> <span class="n">titulaire</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">=</span> <span class="n">solde</span>
 
-                def retrait(self, somme):
-                    if somme > self.solde:
-                        print("Retrait impossible")
-                    else :
-                        self.solde -= somme
-                        print("Vous avez retiré {} euros".format(somme))
-                        print("Solde actuel du compte : {} euros".format(self.solde))
+    <span class="k">def</span> <span class="nf">retrait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">somme</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrait impossible&quot;</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">-=</span> <span class="n">somme</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez retiré </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solde actuel du compte : </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">))</span>
 
-                def depot(self, somme):
-                    self.solde += somme
-                    print("Vous avez déposé {} euros".format(somme))
-                    print("Solde actuel du compte : {} euros".format(self.solde))
-            ``` -->
-
+    <span class="k">def</span> <span class="nf">depot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">+=</span> <span class="n">somme</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez déposé </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solde actuel du compte : </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice 6</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Cet exercice est l'exercice 5.2 de la BNS (version 2022)</strong>.</p>
@@ -2637,50 +2652,85 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 <span class="mi">8</span> <span class="n">de</span> <span class="n">coeur</span>
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Valet&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Dame&quot;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">==</span> <span class="mi">13</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Roi&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;As&quot;</span>
+
+    <span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trefle&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">PaquetDeCarte</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[</span><span class="n">Carte</span><span class="p">(</span><span class="n">couleur</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="k">for</span> <span class="n">couleur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>
+
+    <span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<!--    === "Correction"
-        ```python linenums='1'
-        class Carte:
-            """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
-            def __init__(self, c, v):
-                assert c in range(1,5)
-                assert v in range(1,14)
-                self.Couleur = c
-                self.Valeur = v
-
-            """Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi"""
-            def getNom(self):
-                if (self.Valeur > 1 and self.Valeur < 11):
-                    return str( self.Valeur)
-                elif self.Valeur == 11:
-                    return "Valet"
-                elif self.Valeur == 12:
-                    return "Dame"
-                elif self.Valeur == 13:
-                    return "Roi"
-                else:
-                    return "As"
-
-            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def getCouleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur - 1]
-
-        class PaquetDeCarte:
-            def __init__(self):
-                self.contenu = []
-
-            """Remplit le paquet de cartes"""
-            def remplir(self):
-                self.contenu = [Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range(1, 14)]
-
-            """Renvoie la Carte qui se trouve à la position donnée"""
-            def getCarteAt(self, pos):
-                if 0 <= pos < len(self.contenu) :
-                    return self.contenu[pos]
-
-        ``` -->
+</div>
 
   <hr>
 <div class="md-source-file">
