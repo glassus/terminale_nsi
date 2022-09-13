@@ -2444,246 +2444,136 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="11-rajout-dun-rebond-sur-les-parois">1.1  Rajout d'un rebond sur les parois<a class="headerlink" href="#11-rajout-dun-rebond-sur-les-parois" title="Permanent link">⚓︎</a></h3>
 <p>Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse <code>dx</code> et <code>dy</code>).</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<!-- ??? info "Correction"
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">64</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">480</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">dx</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">dy</span> <span class="o">=</span> <span class="mi">4</span>
+    largeur = 64
+    hauteur = 480
+    taille = 20
+    dx = 7
+    dy = 4
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre.fill([0,0,0])
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
+    x = largeur // 2
+    y = hauteur // 2
 
-<span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+    couleur = (45,170,250)
 
 
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleur</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
+    while True :
+        fenetre.fill([0,0,0])
+        pygame.draw.circle(fenetre,couleur,(x,y),taille)
 
-    <span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
-    <span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span>
+        x += dx
+        y += dy
 
-    <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="n">dy</span>
+        # rebond en haut ou en bas
+        if y < taille or y > hauteur - taille:
+            dy = -dy
 
-    <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dx</span> <span class="o">=</span> <span class="o">-</span><span class="n">dx</span>
+        # rebond à gauche ou à droite
+        if x < taille or x > largeur - taille:
+            dx = -dx
 
 
 
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        pygame.display.update()
 
-    <span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
-    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        # routine pour pouvoir fermer «proprement» la fenêtre Pygame
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
 
 
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
+        time.sleep(0.03)
+    ``` -->
+
 <h3 id="12-rajout-dune-deuxieme-balle">1.2 Rajout d'une deuxième balle<a class="headerlink" href="#12-rajout-dune-deuxieme-balle" title="Permanent link">⚓︎</a></h3>
 <p>Attention au nommage des variables...</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<!-- ??? info "Correction"
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">64</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">480</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">dxA</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">dyA</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
-<span class="n">dyB</span> <span class="o">=</span> <span class="mi">3</span>
+    largeur = 64
+    hauteur = 480
+    taille = 20
+    dxA = 7
+    dyA = 4
+    dxB = -5
+    dyB = 3
 
 
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre.fill([0,0,0])
 
-<span class="n">xA</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">yA</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">xB</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">yB</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
-
-
-<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
-<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurA</span><span class="p">,(</span><span class="n">xA</span><span class="p">,</span><span class="n">yA</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurB</span><span class="p">,(</span><span class="n">xB</span><span class="p">,</span><span class="n">yB</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
-
-    <span class="n">xA</span> <span class="o">+=</span> <span class="n">dxA</span>
-    <span class="n">yA</span> <span class="o">+=</span> <span class="n">dyA</span>
-
-    <span class="n">xB</span> <span class="o">+=</span> <span class="n">dxB</span>
-    <span class="n">yB</span> <span class="o">+=</span> <span class="n">dyB</span>
+    xA = largeur // 2
+    yA = hauteur // 2
+    xB = largeur // 2
+    yB = hauteur // 2
 
 
-    <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yA</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dyA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyA</span>
+    couleurA = (45,170,250)
+    couleurB = (155,17,250)
 
-    <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xA</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dxA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxA</span>
+    while True :
+        fenetre.fill([0,0,0])
+        pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
+        pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
 
-    <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yB</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dyB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyB</span>
+        xA += dxA
+        yA += dyA
 
-    <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xB</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
-        <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxB</span>   
-
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-
-    <span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
-    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        xB += dxB
+        yB += dyB
 
 
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
+        # rebond en haut ou en bas
+        if yA < taille or yA > hauteur - taille:
+            dyA = -dyA
+
+        # rebond à gauche ou à droite
+        if xA < taille or xA > largeur - taille:
+            dxA = -dxA
+
+        # rebond en haut ou en bas
+        if yB < taille or yB > hauteur - taille:
+            dyB = -dyB
+
+        # rebond à gauche ou à droite
+        if xB < taille or xB > largeur - taille:
+            dxB = -dxB   
+
+        pygame.display.update()
+
+        # routine pour pouvoir fermer «proprement» la fenêtre Pygame
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
+
+
+        time.sleep(0.03)
+    ``` -->
+
 <h3 id="13-gestion-de-la-collision-entre-les-deux-balles">1.3 Gestion de la collision entre les deux balles<a class="headerlink" href="#13-gestion-de-la-collision-entre-les-deux-balles" title="Permanent link">⚓︎</a></h3>
 <ol>
 <li>À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.</li>
-<li>
-<p>Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<li>Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.</li>
+</ol>
+<!-- 
+    ??? info "Correction"
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2829,13 +2719,12 @@
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-</details>
-</li>
-<li>
-<p>Pour l'illusion du rebond, échangez les valeurs respectives de <code>dx</code> et <code>dy</code> pour les deux balles.</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+ -->
+
+<p>Q3. Pour l'illusion du rebond, échangez les valeurs respectives de <code>dx</code> et <code>dy</code> pour les deux balles.</p>
+<!-- 
+    ??? info "Correction"
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2983,118 +2872,71 @@
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-</details>
-</li>
-</ol>
+
+
+ -->
 <h3 id="14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres">1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.<a class="headerlink" href="#14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres" title="Permanent link">⚓︎</a></h3>
 <p>... vraiment ? Peut-on continuer comme précédemment ?</p>
 <h2 id="2-la-poo-a-la-rescousse-creation-dune-classe-balle">2. La POO à la rescousse : création d'une classe Balle<a class="headerlink" href="#2-la-poo-a-la-rescousse-creation-dune-classe-balle" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-la-classe-balle">2.1 la classe Balle<a class="headerlink" href="#21-la-classe-balle" title="Permanent link">⚓︎</a></h3>
 <p>L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...<br />
 Créez cette classe et instanciez une balle.</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-<span class="c1"># randint(0,10) -&gt; nb aléatoire entre 0 et 10</span>
+<!-- ??? info "Correction"
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
+    from random import randint
+    # randint(0,10) -> nb aléatoire entre 0 et 10
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
+    largeur = 400
+    hauteur = 400
+    taille = 20
 
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre.fill([0,0,0])
 
 
-<span class="k">class</span> <span class="nc">Balle</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">largeur</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>        
-        <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="n">taille</span>
+    class Balle:
+        def __init__(self):
+            self.x = randint(0, largeur)
+            self.y = randint(0, hauteur)        
+            self.dx = randint(2,5)
+            self.dy = randint(2,5)
+            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
+            self.taille = taille
 
-    <span class="k">def</span> <span class="nf">dessine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">)</span>    
+        def dessine(self):
+            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
 
-    <span class="k">def</span> <span class="nf">bouge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
+        def bouge(self):
+            self.x += self.dx
+            self.y += self.dy
 
-<span class="n">ma_balle</span> <span class="o">=</span> <span class="n">Balle</span><span class="p">()</span>     
+    ma_balle = Balle()     
 
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    while True :
+        fenetre.fill([0,0,0])
 
-    <span class="n">ma_balle</span><span class="o">.</span><span class="n">dessine</span><span class="p">()</span>
-    <span class="n">ma_balle</span><span class="o">.</span><span class="n">bouge</span><span class="p">()</span>
+        ma_balle.dessine()
+        ma_balle.bouge()
 
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
 
 
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
+        time.sleep(0.05)
+
+    ``` -->
+
 <p>Puis plusieurs balles ! (qui se collisionnent...)</p>
-<details class="info">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<!-- ??? info "Correction"
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3242,7 +3084,8 @@ Créez cette classe et instanciez une balle.</p>
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-</details>
+
+ -->
 <div class="admonition capytale">
 <p class="admonition-title">Dépôt de projet sur Capytale : <a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906">fd7c-59906</a></p>
 <p>Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
@@ -3256,7 +3099,7 @@ Je pourrai ainsi le consulter au fur et à mesure de votre progression.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 septembre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 septembre 2022</span>
       
     
   </small>
