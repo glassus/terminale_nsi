@@ -43,7 +43,7 @@ while True :
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
-??? info "Correction"
+<!-- ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
@@ -92,12 +92,12 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 
 
         time.sleep(0.03)
-    ```
+    ``` -->
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
 
-??? info "Correction"
+<!-- ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
@@ -164,12 +164,12 @@ Attention au nommage des variables...
 
 
         time.sleep(0.03)
-    ```
+    ``` -->
 
 ### 1.3 Gestion de la collision entre les deux balles
 1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
 2. Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.
-
+<!-- 
     ??? info "Correction"
         ```python linenums='1'
         import pygame, sys
@@ -247,9 +247,10 @@ Attention au nommage des variables...
             time.sleep(0.03)
 
         ```
+ -->
 
-3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
-
+Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
+<!-- 
     ??? info "Correction"
         ```python linenums='1'
         import pygame, sys
@@ -330,7 +331,7 @@ Attention au nommage des variables...
         ```
 
 
-
+ -->
 ### 1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.
 ... vraiment ? Peut-on continuer comme précédemment ?
 
@@ -340,7 +341,7 @@ Attention au nommage des variables...
 L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...  
 Créez cette classe et instanciez une balle.
 
-??? info "Correction"
+<!-- ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
@@ -391,13 +392,13 @@ Créez cette classe et instanciez une balle.
 
         time.sleep(0.05)
 
-    ```
+    ``` -->
 
 
 
 Puis plusieurs balles ! (qui se collisionnent...)
 
-??? info "Correction"
+<!-- ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
@@ -445,7 +446,7 @@ Puis plusieurs balles ! (qui se collisionnent...)
                 if ((self.x-balle.x)**2 + (self.y-balle.y)**2)**0.5 < self.taille + balle.taille:
                     self.dx, balle.dx = balle.dx, self.dx
                     self.dy, balle.dy = balle.dy, self.dy
-                
+       
             
             
     # 2. Créer 10 balles  (par ex)     
@@ -475,7 +476,7 @@ Puis plusieurs balles ! (qui se collisionnent...)
         time.sleep(0.05)
     ```
 
-
+ -->
 !!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
