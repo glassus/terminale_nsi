@@ -90,7 +90,7 @@
             >>> t.affiche()
             'Il est 17 heures, 26 minutes et 5 secondes'
             ```
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         class Chrono:
             def __init__(self, h, m, s):
@@ -116,7 +116,7 @@
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
-        ``` -->
+        ```
   
 
 !!! example "Exercice 4"
