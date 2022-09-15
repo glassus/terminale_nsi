@@ -43,44 +43,40 @@ while True :
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
-<!-- ??? info "Correction"
+??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
     from pygame.locals import *
 
-    largeur = 64
-    hauteur = 480
-    taille = 20
-    dx = 7
-    dy = 4
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 40
+
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
     fenetre.fill([0,0,0])
 
-    x = largeur // 2
-    y = hauteur // 2
-
+    x = 300
+    y = 200
+    dx = 4
+    dy = -3
     couleur = (45,170,250)
-
 
     while True :
         fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleur,(x,y),taille)
+        pygame.draw.circle(fenetre,couleur,(x,y),RAYON)
 
         x += dx
         y += dy
-        
-        # rebond en haut ou en bas
-        if y < taille or y > hauteur - taille:
-            dy = -dy
 
-        # rebond à gauche ou à droite
-        if x < taille or x > largeur - taille:
+        if (y <= RAYON) or (y >= HAUTEUR - RAYON):
+           dy = -dy
+        if (x <= RAYON) or (x >= LARGEUR - RAYON):
             dx = -dx
 
-        
+
 
         pygame.display.update()
 
@@ -91,8 +87,9 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
                 sys.exit()
 
 
-        time.sleep(0.03)
-    ``` -->
+        time.sleep(0.02)
+
+    ```
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
@@ -332,6 +329,9 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
 
 
  -->
+
+
+
 ### 1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.
 ... vraiment ? Peut-on continuer comme précédemment ?
 
