@@ -8,9 +8,8 @@
 
 
 ## Thème en cours d'étude :
+- [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
-
-
 
 
 <!--
