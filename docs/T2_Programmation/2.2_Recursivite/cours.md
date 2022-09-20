@@ -173,7 +173,9 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     === "Énoncé"
         On considère la fonction ```factorielle(n)``` (notée $n!$ en mathématiques), qui calcule le produit d'un entier $n$ par les entiers positifs qui lui sont inférieurs:
+
         $$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
+        
         Exemple : $5!=5\times4\times3\times2\times1=120$
 
         Par convention, $1!=1$
