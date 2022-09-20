@@ -276,7 +276,7 @@
 
 
 
-- [lien](data/DS02.pdf) vers le DS
-- [lien](data/DS02_correction.pdf) vers sa correction
+<!-- - [lien](data/DS02.pdf) vers le DS
+- [lien](data/DS02_correction.pdf) vers sa correction -->
 
 
