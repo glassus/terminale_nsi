@@ -1,14 +1,20 @@
 
 
-!!! abstract ":star: Actualités :star:"
+<!-- !!! abstract "Actualités"
     - Bienvenue à tous !
     - [Conseils divers](T7_Divers/1_Conseils_generaux/cours/) et rappel des [bonnes pratiques](T2_Programmation/2.4_Pratiques_de_programmation/cours/)
 
 
+ -->
 
 
-## Thème en cours d'étude :
-- [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
+!!! note ":star: Thèmes en cours d'étude :star: "
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
+    - [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
+
+
+
+### *Thèmes déjà traités*
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
 
 
