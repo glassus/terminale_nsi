@@ -213,8 +213,11 @@ Lors d'un appel à une fonction récursive, le processeur utilise une structure 
 
 La pile d'appels de notre fonction ```mystere(5)``` peut donc être schématisée comme ceci :
 
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_exec.gif" speed="1" play></gif-player>
+</center>
 
-![](data/pile_exec.webp){: .center width=30%}
+<!-- ![](data/pile_exec.webp){: .center width=30%} -->
 
 ### 3.2 Limitation de la taille de la pile
 Nous venons de voir que notre appel à ```mystere(5)``` générait une pile de hauteur 6 (on parlera plutôt de *profondeur* 6). Cette profondeur est-elle limitée ?
@@ -290,7 +293,9 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 Appelons ```F(n)``` la fonction calculant de manière récursive le n-ième terme de la suite. Observons en détail la pile d'exécution lors du calcul de ```F(4)```.
 
 
-![](data/pile_fibo.webp){: .center}
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_fibo.gif" speed="1" play></gif-player>
+</center>
 
 
 !!! aide "Analyse grâce à PythonTutor"
@@ -387,5 +392,9 @@ speed(0)
 trace(5,100)
 ```
 
-![](data/arbre.gif){: .center width=50%}
+
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/arbre.gif" speed="1" play></gif-player>
+</center>
+
 
