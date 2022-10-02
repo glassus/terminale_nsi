@@ -1,11 +1,15 @@
 
 
-<!-- !!! abstract "Actualités"
-    - Bienvenue à tous !
-    - [Conseils divers](T7_Divers/1_Conseils_generaux/cours/) et rappel des [bonnes pratiques](T2_Programmation/2.4_Pratiques_de_programmation/cours/)
+!!! abstract "Actualités"
+    Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été [annoncées](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm){. target="_blank"} :
+
+    - le sujet comportera 3 exercices (il n'y a plus de choix comme auparavant)
+    - seuls les items marqués BAC dans les sommaires des différents thèmes sont au programme de l'épreuve.
 
 
- -->
+
+
+
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "

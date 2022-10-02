@@ -1,5 +1,5 @@
 0. [Autour de GNU/Linux](../5.0_Autour_de_GNU_Linux/cours/)
-1. [Systèmes sur puce](../5.1_Systemes_sur_puce/cours/)  (BAC)
+1. [Systèmes sur puce](../5.1_Systemes_sur_puce/cours/)
 2. [Gestion des processus](../5.2_Gestion_des_processus/cours/)  (BAC)
 3. [Protocoles de routage](../5.3_Protocoles_de_routage/cours/)  (BAC)
 4. [Cryptographie](../5.4_Cryptographie/cours/)
