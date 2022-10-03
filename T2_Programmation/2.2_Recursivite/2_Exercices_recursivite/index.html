@@ -2442,7 +2442,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Proposer une nouvelle fonction récursive <code>puissance(x,n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :</p>
+<p>Proposer une nouvelle fonction récursive <code>puissance_mod(x,n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :</p>
 <ul>
 <li>si <span class="arithmatex">\(n\)</span> est pair, <span class="arithmatex">\(a^n=(a \times a)^{n/2}\)</span></li>
 <li>sinon <span class="arithmatex">\(a^n=a \times (a \times a)^{(n-1)/2}\)</span></li>
@@ -2456,14 +2456,14 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
