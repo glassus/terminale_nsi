@@ -123,7 +123,7 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Proposer une nouvelle fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :
+        Proposer une nouvelle fonction récursive ```puissance_mod(x,n)``` qui calcule le nombre $x^n$. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :
 
         - si $n$ est pair, $a^n=(a \times a)^{n/2}$
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
@@ -132,14 +132,14 @@
         {{ correction(True,
         "
         ```python linenums='1'
-        def puissance(x,n):
+        def puissance_mod(x,n):
             if n == 0 :
                 return 1
             else :
                 if n % 2 == 0:
-                    return puissance(x*x,n//2)
+                    return puissance_mod(x*x,n//2)
                 else :
-                    return x*puissance(x*x,(n-1)//2)
+                    return x*puissance_mod(x*x,(n-1)//2)
         ```
         "
         ) }}       
