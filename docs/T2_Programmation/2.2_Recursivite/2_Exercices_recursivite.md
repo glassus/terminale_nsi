@@ -201,7 +201,7 @@
 
         Écrire une fonction récursive ```hanoi(n, A, B, C)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.
 
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         def hanoi(n, depart, inter, arrivee):
             """ n : nombre d'assiettes dans la pile
@@ -217,8 +217,8 @@
                 hanoi(n-1, inter, depart, arrivee)
 
         hanoi(5, "A", "B", "C")
-        ``` -->
-"
+        ```
+
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
