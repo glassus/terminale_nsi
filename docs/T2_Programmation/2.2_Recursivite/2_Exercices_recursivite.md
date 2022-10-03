@@ -2,22 +2,22 @@
 
 {{ initexo(0) }}
 
-!!! capytale "À faire sur Capytale : [activité 8de6-74512](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/8de6-74512)"
-    !!! example "{{ exercice() }}"
-        === "Énoncé"
-            Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
-        === "Correction"
-            {{ correction(False,
-            "
-            ```python linenums='1'
-            def puissance(x, n):
-                if n == 0:
-                    return 1
-                else:
-                    return x * puissance(x, n-1)
-            ```
-            "
-            ) }}
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        def puissance(x, n):
+            if n == 0:
+                return 1
+            else:
+                return x * puissance(x, n-1)
+        ```
+        "
+        ) }}
 
 
 
