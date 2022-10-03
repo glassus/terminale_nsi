@@ -2491,7 +2491,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label><label for="__tabbed_7_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère le jeu des <strong>Tours de Hanoï</strong>.
@@ -2508,27 +2508,39 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </ol>
 <p>Écrire une fonction récursive <code>hanoi(n, A, B, C)</code> qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.</p>
 </div>
-</div>
-</div>
-</div>
-<!--     === "Correction"
-        ```python linenums='1'
-        def hanoi(n, depart, inter, arrivee):
-            """ n : nombre d'assiettes dans la pile
-            # depart : la pile de départ("A", "B" ou "C")
-            # inter : la pile intermédaire("A", "B" ou "C")
-            # arrivee : la pile d'arrivée ("A", "B" ou "C") """
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; n : nombre d&#39;assiettes dans la pile</span>
+<span class="sd">    # depart : la pile de départ(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
+<span class="sd">    # inter : la pile intermédaire(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
+<span class="sd">    # arrivee : la pile d&#39;arrivée (&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;) &quot;&quot;&quot;</span>
 
-            if n == 1 :
-                print(depart + " vers " + arrivee)
-            else :
-                hanoi(n-1, depart, arrivee, inter) 
-                print(depart + " vers " + arrivee)
-                hanoi(n-1, inter, depart, arrivee)
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">inter</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
 
-        hanoi(5, "A", "B", "C")
-        ``` -->
-<p>"</p>
+<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label></div>
