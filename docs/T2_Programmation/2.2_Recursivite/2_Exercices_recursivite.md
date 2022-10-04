@@ -31,7 +31,7 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def pgcd(a, b):
@@ -162,7 +162,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def recherche(lst,m):
