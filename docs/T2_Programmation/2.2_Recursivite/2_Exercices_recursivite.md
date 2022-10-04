@@ -241,7 +241,7 @@
 
         2) Créer une fonction ```triangle(n,l)``` qui trace le flocon complet.
 
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         from turtle import *
 
@@ -267,7 +267,7 @@
                 
         triangle(5,400)
 
-        ``` -->
+        ```
 
 
 ??? info "Bibliographie"
