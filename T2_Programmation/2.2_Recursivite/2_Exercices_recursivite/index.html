@@ -2581,7 +2581,7 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label><label for="__tabbed_8_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Cet exercice a pour objectif le tracé du flocon de Von Koch.
@@ -2597,37 +2597,57 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </ul>
 <p>2) Créer une fonction <code>triangle(n,l)</code> qui trace le flocon complet.</p>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">floc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">triangle</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+        <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="n">triangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<!--     === "Correction"
-        ```python linenums='1'
-        from turtle import *
-
-        def floc(n, l):
-            if n == 0:
-                forward(l)
-            else:
-                floc(n-1,l/3)
-                left(60)
-                floc(n-1,l/3)
-                right(120)
-                floc(n-1,l/3)
-                left(60)
-                floc(n-1,l/3)
-
-
-        speed(0)
-
-        def triangle(n,l):
-            for _ in range(3):
-                floc(n,l)
-                right(120)
-
-        triangle(5,400)
-
-        ``` -->
-
+</div>
 <details class="info">
 <summary>Bibliographie</summary>
 <ul>
