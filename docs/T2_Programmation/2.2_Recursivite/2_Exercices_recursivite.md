@@ -270,6 +270,42 @@
         ```
 
 
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Exercice de diffusion récursive sur Capytale à retrouver [ici](https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc){. target="_blank"}
+
+<!--     === "Correction"
+        ```python linenums='1'
+        def propager(grid, i, j, color):
+            if grid[i,j].green == 0:
+                return None # 
+
+            grid[i,j].green = color
+
+            # l'élément en haut fait partie de la composante
+            if ((i-1) >= 0 and grid[i-1,j].green == 180):
+                propager(grid, i-1, j, color)
+
+            # l'élément en bas fait partie de la composante
+            if ((i+1) < n and grid[i+1,j].green == 180):
+                propager(grid, i+1, j, color)
+
+            # l'élément à gauche fait partie de la composante
+            if ((j-1) >= 0 and grid[i,j-1].green == 180):
+                propager(grid, i, j-1, color)
+
+            # l'élément à droite fait partie de la composante
+            if ((j+1) < n and grid[i,j+1].green == 180): # 
+                propager(grid, i, j+1, color)
+
+
+        grid = initgrid()
+        propager(grid,0,3,0)
+        grid.show()
+        ``` -->
+
+
 ??? info "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
