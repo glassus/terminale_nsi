@@ -2648,6 +2648,46 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </div>
 </div>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  9</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Énoncé</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Exercice de diffusion récursive sur Capytale à retrouver <a class="" href="https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc" target="_blank">ici</a></p>
+</div>
+</div>
+</div>
+</div>
+<!--     === "Correction"
+        ```python linenums='1'
+        def propager(grid, i, j, color):
+            if grid[i,j].green == 0:
+                return None # 
+
+            grid[i,j].green = color
+
+            # l'élément en haut fait partie de la composante
+            if ((i-1) >= 0 and grid[i-1,j].green == 180):
+                propager(grid, i-1, j, color)
+
+            # l'élément en bas fait partie de la composante
+            if ((i+1) < n and grid[i+1,j].green == 180):
+                propager(grid, i+1, j, color)
+
+            # l'élément à gauche fait partie de la composante
+            if ((j-1) >= 0 and grid[i,j-1].green == 180):
+                propager(grid, i, j-1, color)
+
+            # l'élément à droite fait partie de la composante
+            if ((j+1) < n and grid[i,j+1].green == 180): # 
+                propager(grid, i, j+1, color)
+
+
+        grid = initgrid()
+        propager(grid,0,3,0)
+        grid.show()
+        ``` -->
+
 <details class="info">
 <summary>Bibliographie</summary>
 <ul>
@@ -2663,7 +2703,7 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 octobre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 octobre 2022</span>
       
     
   </small>
