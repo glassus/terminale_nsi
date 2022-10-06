@@ -813,9 +813,74 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Exercices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Exercices
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-dune-bibliotheque" class="md-nav__link">
+    Gestion d'une bibliothèque
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion d'une bibliothèque">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classe-livre" class="md-nav__link">
+    ▸ classe Livre
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classe-bibliotheque" class="md-nav__link">
+    ▸ classe Bibliotheque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dutilisation-des-classes" class="md-nav__link">
+    ▸ Exemple d'utilisation des classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    ▸ Question
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2756,13 +2821,166 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 </div>
 </div>
 </div>
+<div class="admonition abstract">
+<p class="admonition-title">DS02</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Sujet</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h2 id="gestion-dune-bibliotheque">Gestion d'une bibliothèque<a class="headerlink" href="#gestion-dune-bibliotheque" title="Permanent link">⚓︎</a></h2>
+<p>Il s'agit de gérer les livres d'une bibliothèque, à l'aide de deux classes, la classe <code>Livre</code> et la classe <code>Bibliotheque</code>.</p>
+<p>Le cahier des charges ci-dessous comporte la description des deux classes, ainsi qu'un exemple concret de leur utilisation.</p>
+<h3 id="classe-livre">▸ classe <code>Livre</code><a class="headerlink" href="#classe-livre" title="Permanent link">⚓︎</a></h3>
+<p>Elle comporte 3 attributs :
+- <code>titre</code> : le titre du livre
+- <code>auteur</code> : le nom de l'auteur
+- <code>etat</code> : un nombre entier entre 0 et 5. Si l'état vaut 0, le livre est trop abîmé et doit être retiré de la bibliothèque. L'état d'un livre ne peut pas être négatif.</p>
+<p>Elle comporte 2 méthodes :
+- <code>degrade</code> : enlève 1 à l'état du livre.
+- <code>description</code> : affiche les renseignements sur le livre</p>
+<h3 id="classe-bibliotheque">▸ classe <code>Bibliotheque</code><a class="headerlink" href="#classe-bibliotheque" title="Permanent link">⚓︎</a></h3>
+<p>Elle comporte 1 attribut :
+- <code>livres</code> : une liste (vide à la création de l'objet)</p>
+<p>Elle comporte 3 méthodes :
+- <code>ajoute</code> : prend un livre en paramètre et l'ajoute à la bibliothèque.
+- <code>supprime_livres_abimes</code> : enlève de la bibliothèque les livres trop abîmés.
+- <code>inventaire</code> : affiche le contenu de la bibliothèque</p>
+<h3 id="exemple-dutilisation-des-classes">▸ Exemple d'utilisation des classes<a class="headerlink" href="#exemple-dutilisation-des-classes" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span> <span class="o">=</span> <span class="n">Bibliotheque</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">livre1</span> <span class="o">=</span> <span class="n">Livre</span><span class="p">(</span><span class="s2">&quot;Les Misérables&quot;</span><span class="p">,</span> <span class="s2">&quot;Victor Hugo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">livre2</span> <span class="o">=</span> <span class="n">Livre</span><span class="p">(</span><span class="s2">&quot;Les fleurs du mal&quot;</span><span class="p">,</span> <span class="s2">&quot;Charles Baudelaire&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span><span class="o">.</span><span class="n">ajoute</span><span class="p">(</span><span class="n">livre1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span><span class="o">.</span><span class="n">ajoute</span><span class="p">(</span><span class="n">livre2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">livre1</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+<span class="n">Titre</span> <span class="p">:</span> <span class="n">Les</span> <span class="n">Misérables</span>
+<span class="n">Auteur</span> <span class="p">:</span> <span class="n">Victor</span> <span class="n">Hugo</span>
+<span class="n">Etat</span> <span class="p">:</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">livre2</span><span class="o">.</span><span class="n">degrade</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">livre2</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+<span class="n">Titre</span> <span class="p">:</span> <span class="n">Les</span> <span class="n">fleurs</span> <span class="n">du</span> <span class="n">mal</span>
+<span class="n">Auteur</span> <span class="p">:</span> <span class="n">Charles</span> <span class="n">Baudelaire</span>
+<span class="n">Etat</span> <span class="p">:</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span><span class="o">.</span><span class="n">inventaire</span><span class="p">()</span>
+<span class="o">-------------------------------</span>
+<span class="n">contenu</span> <span class="n">de</span> <span class="n">ma</span> <span class="n">bibliothèque</span> <span class="p">:</span>
+<span class="o">-------------------------------</span>
+
+<span class="n">Titre</span> <span class="p">:</span> <span class="n">Les</span> <span class="n">Misérables</span>
+<span class="n">Auteur</span> <span class="p">:</span> <span class="n">Victor</span> <span class="n">Hugo</span>
+<span class="n">Etat</span> <span class="p">:</span> <span class="mi">3</span>
+
+<span class="n">Titre</span> <span class="p">:</span> <span class="n">Les</span> <span class="n">fleurs</span> <span class="n">du</span> <span class="n">mal</span>
+<span class="n">Auteur</span> <span class="p">:</span> <span class="n">Charles</span> <span class="n">Baudelaire</span>
+<span class="n">Etat</span> <span class="p">:</span> <span class="mi">0</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span><span class="o">.</span><span class="n">supprime_livres_abimes</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ma_bibli</span><span class="o">.</span><span class="n">inventaire</span><span class="p">()</span>
+<span class="o">-------------------------------</span>
+<span class="n">contenu</span> <span class="n">de</span> <span class="n">ma</span> <span class="n">bibliothèque</span> <span class="p">:</span>
+<span class="o">-------------------------------</span>
+
+<span class="n">Titre</span> <span class="p">:</span> <span class="n">Les</span> <span class="n">Misérables</span>
+<span class="n">Auteur</span> <span class="p">:</span> <span class="n">Victor</span> <span class="n">Hugo</span>
+<span class="n">Etat</span> <span class="p">:</span> <span class="mi">3</span>
+</code></pre></div>
+<h3 id="question">▸ Question<a class="headerlink" href="#question" title="Permanent link">⚓︎</a></h3>
+<p>Proposer un code pour la classe <code>Livre</code> et la classe <code>Bibliotheque</code> répondant au cahier des charges.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Livre</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titre</span><span class="p">,</span> <span class="n">auteur</span><span class="p">,</span> <span class="n">etat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">titre</span> <span class="o">=</span> <span class="n">titre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auteur</span> <span class="o">=</span> <span class="n">auteur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">=</span> <span class="n">etat</span>
+
+    <span class="k">def</span> <span class="nf">degrade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Titre :&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titre</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Auteur :&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">auteur</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Etat :&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">etat</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Bibliotheque</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">livres</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">ajoute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">livre</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">livres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">livre</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">supprime_livres_abimes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">livre</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">livres</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">livre</span><span class="o">.</span><span class="n">etat</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">livres</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">livre</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">inventaire</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;contenu de ma bibliothèque :&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">livre</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">livres</span><span class="p">:</span>
+            <span class="n">livre</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+<span class="n">ma_bibli</span> <span class="o">=</span> <span class="n">Bibliotheque</span><span class="p">()</span>
+<span class="n">livre1</span> <span class="o">=</span> <span class="n">Livre</span><span class="p">(</span><span class="s2">&quot;Les Misérables&quot;</span><span class="p">,</span> <span class="s2">&quot;Victor Hugo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">livre2</span> <span class="o">=</span> <span class="n">Livre</span><span class="p">(</span><span class="s2">&quot;Les fleurs du mal&quot;</span><span class="p">,</span> <span class="s2">&quot;Charles Baudelaire&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">livre1</span><span class="o">.</span><span class="n">description</span><span class="p">()</span>
+<span class="n">ma_bibli</span><span class="o">.</span><span class="n">ajoute</span><span class="p">(</span><span class="n">livre1</span><span class="p">)</span>
+<span class="n">ma_bibli</span><span class="o">.</span><span class="n">ajoute</span><span class="p">(</span><span class="n">livre2</span><span class="p">)</span>
+<span class="n">ma_bibli</span><span class="o">.</span><span class="n">inventaire</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 octobre 2022</span>
       
     
   </small>
