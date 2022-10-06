@@ -275,6 +275,9 @@
     === "Énoncé"
         Exercice de diffusion récursive sur Capytale à retrouver [ici](https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc){. target="_blank"}
 
+        ![image](data/diffusion.png){: .center}
+        
+
 <!--     === "Correction"
         ```python linenums='1'
         def propager(grid, i, j, color):
