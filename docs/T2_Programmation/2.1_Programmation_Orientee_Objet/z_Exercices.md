@@ -316,4 +316,129 @@
                     return self.contenu[pos]
 
         ```
-         
+
+!!! abstract "DS02"
+    === "Sujet"
+        ## Gestion d'une bibliothèque
+
+        Il s'agit de gérer les livres d'une bibliothèque, à l'aide de deux classes, la classe `Livre` et la classe `Bibliotheque`.
+
+        Le cahier des charges ci-dessous comporte la description des deux classes, ainsi qu'un exemple concret de leur utilisation.
+
+        ### ▸ classe `Livre` 
+        Elle comporte 3 attributs :
+        - `titre` : le titre du livre
+        - `auteur` : le nom de l'auteur
+        - `etat` : un nombre entier entre 0 et 5. Si l'état vaut 0, le livre est trop abîmé et doit être retiré de la bibliothèque. L'état d'un livre ne peut pas être négatif.
+
+        Elle comporte 2 méthodes :
+        - `degrade` : enlève 1 à l'état du livre.
+        - `description` : affiche les renseignements sur le livre
+
+
+        ### ▸ classe `Bibliotheque`
+
+        Elle comporte 1 attribut :
+        - `livres` : une liste (vide à la création de l'objet)
+
+        Elle comporte 3 méthodes :
+        - `ajoute` : prend un livre en paramètre et l'ajoute à la bibliothèque.
+        - `supprime_livres_abimes` : enlève de la bibliothèque les livres trop abîmés.
+        - `inventaire` : affiche le contenu de la bibliothèque
+
+
+        ### ▸ Exemple d'utilisation des classes 
+
+        ```python
+        >>> ma_bibli = Bibliotheque()
+        >>> livre1 = Livre("Les Misérables", "Victor Hugo", 3)
+        >>> livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
+        >>> ma_bibli.ajoute(livre1)
+        >>> ma_bibli.ajoute(livre2)
+        >>> livre1.description()
+        Titre : Les Misérables
+        Auteur : Victor Hugo
+        Etat : 3
+        >>> livre2.degrade()
+        >>> livre2.description()
+        Titre : Les fleurs du mal
+        Auteur : Charles Baudelaire
+        Etat : 0
+        >>> ma_bibli.inventaire()
+        -------------------------------
+        contenu de ma bibliothèque :
+        -------------------------------
+
+        Titre : Les Misérables
+        Auteur : Victor Hugo
+        Etat : 3
+
+        Titre : Les fleurs du mal
+        Auteur : Charles Baudelaire
+        Etat : 0
+
+        >>> ma_bibli.supprime_livres_abimes()
+        >>> ma_bibli.inventaire()
+        -------------------------------
+        contenu de ma bibliothèque :
+        -------------------------------
+
+        Titre : Les Misérables
+        Auteur : Victor Hugo
+        Etat : 3
+
+        ```
+
+        ### ▸ Question
+
+        Proposer un code pour la classe `Livre` et la classe `Bibliotheque` répondant au cahier des charges.
+
+    === "Correction"
+
+        ```python linenums='1'
+        class Livre():
+            def __init__(self, titre, auteur, etat):
+                self.titre = titre
+                self.auteur = auteur
+                self.etat = etat
+
+            def degrade(self):
+                if self.etat > 0:
+                    self.etat -= 1
+
+            def description(self):
+                print("Titre :", self.titre)
+                print("Auteur :",self.auteur)
+                print("Etat :", self.etat)
+
+        class Bibliotheque:
+            def __init__(self):
+                self.livres = []
+
+            def ajoute(self, livre):
+                self.livres.append(livre)
+
+            def supprime_livres_abimes(self):
+                for livre in self.livres:
+                    if livre.etat == 0:
+                        self.livres.remove(livre)
+
+            def inventaire(self):
+                print("---------------")
+                print("contenu de ma bibliothèque :")
+                print("---------------")
+                for livre in self.livres:
+                    livre.description()
+                    print()
+
+        ma_bibli = Bibliotheque()
+        livre1 = Livre("Les Misérables", "Victor Hugo", 3)
+        livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
+        livre1.description()
+        ma_bibli.ajoute(livre1)
+        ma_bibli.ajoute(livre2)
+        ma_bibli.inventaire()
+
+
+
+        ```
