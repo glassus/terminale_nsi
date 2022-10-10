@@ -1,8 +1,10 @@
 
 
 !!! abstract "Actualités"
-    -  Installer la dernière version de Thonny : instructions [ici](http://127.0.0.1:8000/terminale_nsi/T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
-    
+    -  Installer la dernière version de Thonny : instructions [ici](T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
+
+    - Mini-Projets : voir ces instructions sur [Pygame]https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/)
+
 
 
     Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été [annoncées](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm){. target="_blank"} :
