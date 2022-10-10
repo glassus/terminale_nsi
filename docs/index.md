@@ -1,10 +1,16 @@
 
 
 !!! abstract "Actualités"
+    -  Installer la dernière version de Thonny : instructions [ici](http://127.0.0.1:8000/terminale_nsi/T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
+    
+
+
     Les modalités des épreuves écrites (du 20 au 22 mars 2023) ont été [annoncées](https://www.education.gouv.fr/bo/22/Hebdo36/MENE2226770N.htm){. target="_blank"} :
 
     - le sujet comportera 3 exercices (il n'y a plus de choix comme auparavant)
     - seuls les items marqués *BAC* dans les sommaires des différents thèmes sont au programme de l'épreuve.
+
+
 
 
 

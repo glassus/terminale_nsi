@@ -29,3 +29,16 @@ ou bien même la console ci-dessous !
 ou l'IDE qui suit :
 
 {{ IDEv() }}
+
+
+## Installer la dernière version de Thonny (avec export Python Tutor !)
+
+!!! note "Procédure sur nos VMs au lycée"
+    Dans un terminal ouvert dans votre dossier ```eleve``` 
+    
+    1. ```mkdir thonny``` 
+    2. ```cd thonny``` 
+    3. ```wget https://github.com/thonny/thonny/releases/download/v4.0.1/thonny-4.0.1-x86_64.tar.gz``` 
+    4. ```tar -xf thonny-4.0.1-x86_64.tar.gz``` 
+    5. ```cd thonny```
+    6. ```install```  
