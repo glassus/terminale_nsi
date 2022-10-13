@@ -1,9 +1,9 @@
 
 
 !!! abstract "Actualités"
-    -  Installer la dernière version de Thonny : instructions [ici](T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
+    - Installer la dernière version de Thonny : instructions [ici](T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
 
-    - Mini-Projets : voir ces instructions sur [Pygame]https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/)
+    - Mini-Projets : voir ces instructions sur [Pygame](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/)
 
 
 
