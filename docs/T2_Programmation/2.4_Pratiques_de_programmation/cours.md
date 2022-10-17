@@ -452,6 +452,9 @@ Tout ceci en admettant, bien sûr, que vos tests _eux-mêmes_ ne comportent pas 
 
 ![image](data/bug.jpg){: .center width=40%}
 
+![image](data/tests_couvrants.jpeg){: .center}
+
+
 
 
 ---
