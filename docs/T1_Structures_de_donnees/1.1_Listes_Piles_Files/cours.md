@@ -329,7 +329,7 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Pile:
@@ -344,8 +344,9 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
                 self.data.append(x)
 
             def depile(self):
-                if self.est_vide() == True :
-                    raise IndexError('Vous avez essayé de dépiler une pile vide !')
+                if self.est_vide():
+                    print('Vous avez essayé de dépiler une pile vide !')
+                    return None
                 else :
                     return self.data.pop() 
 
@@ -704,7 +705,3 @@ class File:
 
 ---
 
----
-## DS et correction
-- [DS03](data/DS03.pdf)
-- [DS03_correction](data/DS03corr.pdf)
