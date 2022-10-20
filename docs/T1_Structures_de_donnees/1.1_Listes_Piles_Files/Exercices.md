@@ -9,7 +9,7 @@
     === "Correction Q2"
         ![image](data/ex1Q2.png){: .center width=50%}
 
-<!--     === "Correction Q3"
+    === "Correction Q3"
         ```python linenums='1'
         def maximum(P):
             if est_vide(P):
@@ -39,7 +39,7 @@
             while not est_vide(Q):
                 empile(P, depile(Q))
             return m
-        ```  -->
+        ``` 
 
 <!--     === "Correction Q4"
         **Q4a.** On va vider la pile ```p``` dans une pile ```q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
