@@ -396,7 +396,7 @@ class Cellule :
         À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
     === "Correction :heart:"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         class Pile:
@@ -404,10 +404,10 @@ class Cellule :
                 self.data = None
             
             def est_vide(self):
-                return self.data is None
+                return self.data == None
             
-            def empile(self, x):
-                self.data = Cellule(x,self.data)
+            def empile(self, val):
+                self.data = Cellule(val ,self.data)
             
             def depile(self):
                 v = self.data.contenu #on récupère la valeur à renvoyer
