@@ -3,12 +3,12 @@
     === "Énoncé"
         Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
 
-<!--     === "Correction Q1"
-        ![image](data/ex1Q1.png){: .center width=50%} -->
+    === "Correction Q1"
+        ![image](data/ex1Q1.png){: .center width=50%}
 
-<!--     === "Correction Q2"
+    === "Correction Q2"
         ![image](data/ex1Q2.png){: .center width=50%}
- -->
+
 <!--     === "Correction Q3"
         ```python linenums='1'
         def maximum(P):
