@@ -404,7 +404,7 @@ class Cellule :
                 self.data = None
             
             def est_vide(self):
-                return self.data == None
+                return self.data is None
             
             def empile(self, x):
                 self.data = Cellule(x,self.data)
