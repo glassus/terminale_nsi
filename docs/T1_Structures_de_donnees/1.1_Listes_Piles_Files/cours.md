@@ -484,9 +484,6 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         "
         ) }}
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
 
 
 
