@@ -104,9 +104,9 @@ False
         return abs(ord(l1) - ord(l2)) == 32
     ```
 
-#### 2. Une seule simplification de la chaine de caractères
+#### 2. Une seule simplification de la chaîne de caractères
 
-Écrire une fonction ```simplifie``` qui prend en paramètre une chaine de caractère ```s``` et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.
+Écrire une fonction ```simplifie``` qui prend en paramètre une chaîne de caractère ```s``` et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.
 
 Principe : on parcourt la chaîne et dès qu'on trouve une simplification à faire, on simplifie la chaîne et on la renvoie immédiatement.
 
@@ -144,7 +144,7 @@ Pour information, on rappelle la technique de *slicing* de chaîne de caractère
 
 #### 3. Résolution du problème
 
-Après vous être demandé comment savoir facilement qu'une chaine n'était plus simplifiable, proposer une fonction ```reduction``` qui prend en paramètre une chaîne ```s``` et qui renvoie cette chaîne ```s``` une fois effectuées **toutes** les simplifications possibles.
+Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction ```reduction``` qui prend en paramètre une chaîne ```s``` et qui renvoie cette chaîne ```s``` une fois effectuées **toutes** les simplifications possibles.
 
 *Exemple d'utilisation :*
 ```python
@@ -216,11 +216,11 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
 
 
 ??? aide "Aide à la construction de l'algorithme"
-    Pour chaque lettre de la chaine :
+    Pour chaque lettre de la chaîne :
     
     - si la pile est vide, on empile cette lettre
     - sinon, on regarde si la lettre est simplifiable avec la lettre du haut de la pile :
-        - si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaine
+        - si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne
         - si non, on empile cette lettre sur la pile, et on passe à la suivante.
 
 ??? aide "Correction"
