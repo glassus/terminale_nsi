@@ -278,6 +278,8 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 
         Bien comprendre que la classe ```Pile()``` et ses méthodes n'existent pas vraiment. Nous *jouons* avec son interface.
 
+        On prendra pour convention que la tête de la pile est à droite.
+
         ```python
         1. p = Pile() 
         2. p.empile(3)   
@@ -295,16 +297,16 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         {{ correction(True,
         "
         ```python
-        1. p = Pile()  # p=None
-        2. p.empile(3)   # p= 3
-        3. p.empile(5)  # p= 3 5 par convention
+        1. p = Pile()  # p = None
+        2. p.empile(3)   # p = 3
+        3. p.empile(5)  # p = 3 5 par convention
         4. p.est_vide()  #  False
-        4. p.empile(1)  # p= 3 5 1
-        5. p.depile()  # p= 3 5    valeur renvoyée : 1
-        6. p.depile()  # p= 3      valeur renvoyée : 5
-        7. p.empile(9)  # p= 3 9
-        8. p.depile()  # p= 3       valeur renvoyée :9
-        9. p.depile()  # p= None      valeur renvoyée : 3
+        4. p.empile(1)  # p = 3 5 1
+        5. p.depile()  # p = 3 5    valeur renvoyée : 1
+        6. p.depile()  # p = 3      valeur renvoyée : 5
+        7. p.empile(9)  # p = 3 9
+        8. p.depile()  # p = 3       valeur renvoyée :9
+        9. p.depile()  # p est vide      valeur renvoyée : 3
         10. p.est_vide() # True
         ```
         "
@@ -407,7 +409,7 @@ class Cellule :
                 return self.data == None
             
             def empile(self, val):
-                self.data = Cellule(val ,self.data)
+                self.data = Cellule(val, self.data)
             
             def depile(self):
                 v = self.data.contenu #on récupère la valeur à renvoyer
@@ -495,9 +497,13 @@ Comme expliqué précédemment, une file travaille en mode FIFO (First In First 
 Pour être utilisée, une interface de file doit proposer a minima :
 
 - la création d'une file vide
-- l'ajout d'un élément dans la file (qui sera forcément **au dessous**). On dira qu'on **enfile**.
-- le retrait d'un élément de la file (qui sera forcément celui du **dessus**) et le renvoi de sa valeur. On dira qu'on **défile**.
+- l'ajout d'un élément dans la file. On dira qu'on **enfile**.
+- le retrait d'un élément de la file et le renvoi de sa valeur. On dira qu'on **défile**.
 
+
+La représentation la plus courante d'une file se fait horizontalement, en enfilant par la gauche et en défilant par la droite :
+
+![image](data/repfile.png){: .center}
 
 
 ### 4.1 Utilisation d'une interface de file
@@ -505,7 +511,7 @@ Pour être utilisée, une interface de file doit proposer a minima :
 !!! example "{{ exercice() }}"
     === "Énoncé"
         On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
-        Par convention, on enfilera **à droite** et on défilera **à gauche**.
+        Par convention, on enfilera **à gauche** et on défilera **à droite**.
         ```python
         1. f = File()
         2. f.enfile(3) 
@@ -525,14 +531,14 @@ Pour être utilisée, une interface de file doit proposer a minima :
         ```python
         1. f est vide
         2. f = 3
-        3. f  = 3 5
+        3. f = 5 3
         4. val renvoyée : False
-        5. f  = 3 5 1
-        6. val renvoyée : 3 , f =  5 1
+        5. f  = 1 5 3
+        6. val renvoyée : 3 , f = 1 5
         7. val renvoyée : 5 , f =  1 
-        8. f =  1 9
+        8. f =  9 1
         9. val renvoyée : 1 , f =  9 
-        10. val renvoyée : 9 , f =  
+        10. val renvoyée : 9 , f est vide  
         11. val renvoyée : True
         ```
         "
@@ -545,8 +551,8 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 
 - ```File()``` : crée une file vide.
 - ```est_vide()``` : indique si la file est vide.
-- ```enfile()``` : insère un élément en bas de la file.
-- ```defile()``` : renvoie la valeur de l'élément en haut de la file ET le supprime de la file.
+- ```enfile()``` : insère un élément en queue de file.
+- ```defile()``` : renvoie la valeur de l'élément en tête de la file ET le supprime de la file.
 - ```__str__()``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
 
 
@@ -554,7 +560,8 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
     === "Énoncé"
         Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
         
-        Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```. 
+        Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
+
     === "Correction"
         {{ correction(True,
         "
@@ -565,20 +572,20 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
             
             def est_vide(self):
                 return len(self.data) == 0 
-            
-        
-            def enfile(self,x):
-                self.data.append(x)
+                    
+            def enfile(self, x):
+                self.data.insert(0, x)
 
             def defile(self):
-                if self.est_vide() == True :
-                    raise IndexError('Vous avez essayé de défiler une file vide !')
+                if self.est_vide():
+                    print('Vous avez essayé de défiler une file vide !')
+                    return None
                 else :
-                    return self.data.pop(0) 
+                    return self.data.pop() 
 
             def __str__(self):       # Hors-Programme : pour afficher 
                 s = '|'              # convenablement la file avec print(p)
-                for k in self.data :
+                for k in self.data:
                     s = s + str(k) + '|'
                 return s
         ```
@@ -588,7 +595,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
         >>> f.enfile(5)
         >>> f.enfile(8)
         >>> print(f)
-        |5|8|
+        |8|5|
         >>> f.defile()
         5
         ```
@@ -601,7 +608,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 **Remarque :**  
 Notre implémentation répond parfaitement à l'interface qui était demandée. Mais si le «cahier des charges» obligeait à ce que les opérations ```enfile()``` et ```defile()``` aient lieu en temps constant (en $O(1)$), notre implémentation ne conviendrait pas.  
 
-En cause : notre méthode ```defile()``` agit en temps linéaire  ($O(n)$) et non pas en temps constant. L'utilisation de la structure de «liste» de Python (les *tableaux dynamiques*) provoque, lors de l'instruction ```self.data.pop(0) ``` un redimensionnement de la liste, qui voit disparaître son premier élément. Chaque élément doit être recopié dans la case qui précède, avant de supprimer la dernière case. Ceci nous coûte un temps linéaire.
+En cause : notre méthode ```enfile()``` agit en temps linéaire  ($O(n)$) et non pas en temps constant. L'utilisation de la structure de «liste» de Python (les *tableaux dynamiques*) provoque, lors de l'instruction ```self.data.insert(0, x)``` un redimensionnement de la liste. Le tableau doit être agrandi et chaque élément doit être recopié dans la case suivante. Ceci nous coûte un temps linéaire.
 
 ### 4.3 Implémentation d'une file avec deux piles
 
@@ -612,7 +619,10 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 - quand on veut défiler, on dépile sur la pile de sortie.
 - si celle-ci est vide, on dépile entièrement la pile d'entrée dans la pile de sortie.
 
-![](data/2piles1file.webp){: .center .width=30%}
+
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/data/2piles1file.gif" speed="1" play></gif-player>
+</center>
 
 
 ```python linenums='1'
@@ -622,7 +632,13 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 # de cette interface, leur mécanisme interne n'a aucune influence
 # sur le code de la classe File que nous ferons ensuite.
 
-# au hasard, on choisit celle avec la liste chaînée :
+# Par exemple, on choisit celle avec la liste chaînée :
+
+class Cellule :
+    def __init__(self, contenu, suivante):
+        self.contenu = contenu
+        self.suivante = suivante
+
 
 class Pile:
     def __init__(self):
@@ -632,7 +648,7 @@ class Pile:
         return self.data == None
     
     def empile(self, x):
-        self.data = Cellule(x,self.data)
+        self.data = Cellule(x, self.data)
     
     def depile(self):
         v = self.data.contenu #on récupère la valeur à renvoyer
@@ -647,16 +663,8 @@ class Pile:
             c = c.suivante
         return s
 
-    
-# il ne faut pas oublier de remettre la classe Cellule qui intervient
-# dans notre classe Pile :
-
-class Cellule :
-    
-    def __init__(self, contenu, suivante):
-        self.contenu = contenu
-        self.suivante = suivante
-    
+# -------------------------------------------------------    
+# Implémentation d'une file à l'aide de deux piles 
 
 class File:
     def __init__(self):
@@ -671,10 +679,11 @@ class File:
 
     def defile(self):
         if self.est_vide():
-            raise IndexError("File vide !")
+            print("File vide !")
+            return None
 
-        if self.sortie.est_vide() == True :
-            while self.entree.est_vide() == False :
+        if self.sortie.est_vide():
+            while not self.entree.est_vide():
                 self.sortie.empile(self.entree.depile())
 
         return self.sortie.depile()
