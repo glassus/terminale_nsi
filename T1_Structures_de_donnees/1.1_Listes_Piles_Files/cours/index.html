@@ -2700,6 +2700,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :</p>
 <div class="tabbed-block">
 <p>On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile <code>p</code> et la valeur éventuellement renvoyée.</p>
 <p>Bien comprendre que la classe <code>Pile()</code> et ses méthodes n'existent pas vraiment. Nous <em>jouons</em> avec son interface.</p>
+<p>On prendra pour convention que la tête de la pile est à droite.</p>
 <div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span> 
 <span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   
 <span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  
@@ -2714,16 +2715,16 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>  <span class="c1"># p=None</span>
-<span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># p= 3</span>
-<span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p= 3 5 par convention</span>
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>  <span class="c1"># p = None</span>
+<span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># p = 3</span>
+<span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p = 3 5 par convention</span>
 <span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>  <span class="c1">#  False</span>
-<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p= 3 5 1</span>
-<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3 5    valeur renvoyée : 1</span>
-<span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3      valeur renvoyée : 5</span>
-<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p= 3 9</span>
-<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= 3       valeur renvoyée :9</span>
-<span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p= None      valeur renvoyée : 3</span>
+<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p = 3 5 1</span>
+<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3 5    valeur renvoyée : 1</span>
+<span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3      valeur renvoyée : 5</span>
+<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p = 3 9</span>
+<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3       valeur renvoyée :9</span>
+<span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p est vide      valeur renvoyée : 3</span>
 <span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># True</span>
 </code></pre></div>
 </div>
@@ -2865,7 +2866,7 @@ Test de l'implémentation :
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="n">val</span> <span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contenu</span> <span class="c1">#on récupère la valeur à renvoyer</span>
@@ -2927,9 +2928,11 @@ Attention, il ne faut pas réinventer la classe <code>Pile</code>, mais s'en ser
 Pour être utilisée, une interface de file doit proposer a minima :</p>
 <ul>
 <li>la création d'une file vide</li>
-<li>l'ajout d'un élément dans la file (qui sera forcément <strong>au dessous</strong>). On dira qu'on <strong>enfile</strong>.</li>
-<li>le retrait d'un élément de la file (qui sera forcément celui du <strong>dessus</strong>) et le renvoi de sa valeur. On dira qu'on <strong>défile</strong>.</li>
+<li>l'ajout d'un élément dans la file. On dira qu'on <strong>enfile</strong>.</li>
+<li>le retrait d'un élément de la file et le renvoi de sa valeur. On dira qu'on <strong>défile</strong>.</li>
 </ul>
+<p>La représentation la plus courante d'une file se fait horizontalement, en enfilant par la gauche et en défilant par la droite :</p>
+<p><img alt="image" class="center" src="../data/repfile.png" /></p>
 <h3 id="41-utilisation-dune-interface-de-file">4.1 Utilisation d'une interface de file<a class="headerlink" href="#41-utilisation-dune-interface-de-file" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
@@ -2937,7 +2940,7 @@ Pour être utilisée, une interface de file doit proposer a minima :</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file <code>f</code> et la valeur éventuellement renvoyée.
-Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>à gauche</strong>.
+Par convention, on enfilera <strong>à gauche</strong> et on défilera <strong>à droite</strong>.
 <div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 <span class="mf">2.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
 <span class="mf">3.</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -2954,14 +2957,14 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">f</span> <span class="n">est</span> <span class="n">vide</span>
 <span class="mf">2.</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="mf">3.</span> <span class="n">f</span>  <span class="o">=</span> <span class="mi">3</span> <span class="mi">5</span>
+<span class="mf">3.</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">5</span> <span class="mi">3</span>
 <span class="mf">4.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="kc">False</span>
-<span class="mf">5.</span> <span class="n">f</span>  <span class="o">=</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">1</span>
-<span class="mf">6.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">3</span> <span class="p">,</span> <span class="n">f</span> <span class="o">=</span>  <span class="mi">5</span> <span class="mi">1</span>
+<span class="mf">5.</span> <span class="n">f</span>  <span class="o">=</span> <span class="mi">1</span> <span class="mi">5</span> <span class="mi">3</span>
+<span class="mf">6.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">3</span> <span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span> <span class="mi">5</span>
 <span class="mf">7.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">5</span> <span class="p">,</span> <span class="n">f</span> <span class="o">=</span>  <span class="mi">1</span> 
-<span class="mf">8.</span> <span class="n">f</span> <span class="o">=</span>  <span class="mi">1</span> <span class="mi">9</span>
+<span class="mf">8.</span> <span class="n">f</span> <span class="o">=</span>  <span class="mi">9</span> <span class="mi">1</span>
 <span class="mf">9.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">f</span> <span class="o">=</span>  <span class="mi">9</span> 
-<span class="mf">10.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">9</span> <span class="p">,</span> <span class="n">f</span> <span class="o">=</span>  
+<span class="mf">10.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="mi">9</span> <span class="p">,</span> <span class="n">f</span> <span class="n">est</span> <span class="n">vide</span>  
 <span class="mf">11.</span> <span class="n">val</span> <span class="n">renvoyée</span> <span class="p">:</span> <span class="kc">True</span>
 </code></pre></div>
 </div>
@@ -2973,8 +2976,8 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
 <ul>
 <li><code>File()</code> : crée une file vide.</li>
 <li><code>est_vide()</code> : indique si la file est vide.</li>
-<li><code>enfile()</code> : insère un élément en bas de la file.</li>
-<li><code>defile()</code> : renvoie la valeur de l'élément en haut de la file ET le supprime de la file.</li>
+<li><code>enfile()</code> : insère un élément en queue de file.</li>
+<li><code>defile()</code> : renvoie la valeur de l'élément en tête de la file ET le supprime de la file.</li>
 <li><code>__str__()</code> : permet d'afficher la file sous forme agréable (par ex : <code>|3|6|2|5|</code>) par <code>print()</code></li>
 </ul>
 <div class="admonition example">
@@ -2983,7 +2986,7 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Créer la classe ci-dessus. Là encore, le type <code>list</code>  de Python est peut être utilisé.</p>
-<p>Penser à aller voir <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists">ici</a> les méthodes des objets de types <code>list</code>. </p>
+<p>Penser à aller voir <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists">ici</a> les méthodes des objets de types <code>list</code>, notamment la méthode <code>insert</code>.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -3014,19 +3017,19 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
     <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> 
 
-
-    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de défiler une file vide !&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de défiler une file vide !&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> 
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> 
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
         <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>              <span class="c1"># convenablement la file avec print(p)</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
             <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
@@ -3034,7 +3037,7 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="o">.</span><span class="n">enfile</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="o">|</span><span class="mi">5</span><span class="o">|</span><span class="mi">8</span><span class="o">|</span>
+<span class="o">|</span><span class="mi">8</span><span class="o">|</span><span class="mi">5</span><span class="o">|</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="o">.</span><span class="n">defile</span><span class="p">()</span>
 <span class="mi">5</span>
 </code></pre></div>
@@ -3044,7 +3047,7 @@ Par convention, on enfilera <strong>à droite</strong> et on défilera <strong>�
 </div>
 <p><strong>Remarque :</strong><br />
 Notre implémentation répond parfaitement à l'interface qui était demandée. Mais si le «cahier des charges» obligeait à ce que les opérations <code>enfile()</code> et <code>defile()</code> aient lieu en temps constant (en <span class="arithmatex">\(O(1)\)</span>), notre implémentation ne conviendrait pas.  </p>
-<p>En cause : notre méthode <code>defile()</code> agit en temps linéaire  (<span class="arithmatex">\(O(n)\)</span>) et non pas en temps constant. L'utilisation de la structure de «liste» de Python (les <em>tableaux dynamiques</em>) provoque, lors de l'instruction <code>self.data.pop(0)</code> un redimensionnement de la liste, qui voit disparaître son premier élément. Chaque élément doit être recopié dans la case qui précède, avant de supprimer la dernière case. Ceci nous coûte un temps linéaire.</p>
+<p>En cause : notre méthode <code>enfile()</code> agit en temps linéaire  (<span class="arithmatex">\(O(n)\)</span>) et non pas en temps constant. L'utilisation de la structure de «liste» de Python (les <em>tableaux dynamiques</em>) provoque, lors de l'instruction <code>self.data.insert(0, x)</code> un redimensionnement de la liste. Le tableau doit être agrandi et chaque élément doit être recopié dans la case suivante. Ceci nous coûte un temps linéaire.</p>
 <h3 id="43-implementation-dune-file-avec-deux-piles">4.3 Implémentation d'une file avec deux piles<a class="headerlink" href="#43-implementation-dune-file-avec-deux-piles" title="Permanent link">⚓︎</a></h3>
 <p>Comment créer une file avec 2 piles ?<br />
 L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p>
@@ -3053,7 +3056,9 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
 <li>quand on veut défiler, on dépile sur la pile de sortie.</li>
 <li>si celle-ci est vide, on dépile entièrement la pile d'entrée dans la pile de sortie.</li>
 </ul>
-<p><img .width="30%" alt="" class="center" src="../data/2piles1file.webp" /></p>
+<p><center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/data/2piles1file.gif" speed="1" play></gif-player>
+</center></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3114,14 +3119,19 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># il est impératif de comprendre qu&#39;on peut choisir l&#39;implémentation</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># il est impératif de comprendre qu&#39;on peut choisir l&#39;implémentation</span>
 <span class="c1"># de la classe Pile qu&#39;on préfère parmi les deux traitées plus haut.</span>
 <span class="c1"># Comme elles ont la MÊME INTERFACE et qu&#39;on ne va se servir que</span>
 <span class="c1"># de cette interface, leur mécanisme interne n&#39;a aucune influence</span>
 <span class="c1"># sur le code de la classe File que nous ferons ensuite.</span>
 
-<span class="c1"># au hasard, on choisit celle avec la liste chaînée :</span>
+<span class="c1"># Par exemple, on choisit celle avec la liste chaînée :</span>
+
+<span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
+
 
 <span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -3131,7 +3141,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contenu</span> <span class="c1">#on récupère la valeur à renvoyer</span>
@@ -3146,16 +3156,8 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
             <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
         <span class="k">return</span> <span class="n">s</span>
 
-
-<span class="c1"># il ne faut pas oublier de remettre la classe Cellule qui intervient</span>
-<span class="c1"># dans notre classe Pile :</span>
-
-<span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
-
+<span class="c1"># -------------------------------------------------------    </span>
+<span class="c1"># Implémentation d&#39;une file à l&#39;aide de deux piles </span>
 
 <span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -3170,10 +3172,11 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
 
     <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="s2">&quot;File vide !&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File vide !&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entree</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
@@ -3198,7 +3201,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 octobre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 octobre 2022</span>
       
     
   </small>
