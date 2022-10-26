@@ -71,7 +71,7 @@ Cet exercice est basé sur l'[énigme n°5](https://adventofcode.com/2018/day/5)
 Le but est de réduire le plus possible une chaîne de caractères (comme ```dabAcCaCBAcCcaDA``` ) en obéissant à la règle suivante :
 
 !!! tip "Règle de simplification"
-    Dès que deux lettres identiques mais de casse différente (majuscule-minuscule ou minuscule-majuscule) sont côte-à-côte dans la chaîne, on les supprime de la chaîne.
+    Dès que deux lettres identiques mais de casse différente (majuscule-minuscule ou minuscule-majuscule) sont côte à côte dans la chaîne, on les supprime de la chaîne.
 
 Exemple : 
 ```
