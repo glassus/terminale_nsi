@@ -2458,8 +2458,8 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<h4 id="2-une-seule-simplification-de-la-chaine-de-caracteres">2. Une seule simplification de la chaine de caractères<a class="headerlink" href="#2-une-seule-simplification-de-la-chaine-de-caracteres" title="Permanent link">⚓︎</a></h4>
-<p>Écrire une fonction <code>simplifie</code> qui prend en paramètre une chaine de caractère <code>s</code> et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.</p>
+<h4 id="2-une-seule-simplification-de-la-chaine-de-caracteres">2. Une seule simplification de la chaîne de caractères<a class="headerlink" href="#2-une-seule-simplification-de-la-chaine-de-caracteres" title="Permanent link">⚓︎</a></h4>
+<p>Écrire une fonction <code>simplifie</code> qui prend en paramètre une chaîne de caractère <code>s</code> et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.</p>
 <p>Principe : on parcourt la chaîne et dès qu'on trouve une simplification à faire, on simplifie la chaîne et on la renvoie immédiatement.</p>
 <p><em>Exemples d'utilisation :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
@@ -2492,7 +2492,7 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 </code></pre></div></td></tr></table></div>
 </details>
 <h4 id="3-resolution-du-probleme">3. Résolution du problème<a class="headerlink" href="#3-resolution-du-probleme" title="Permanent link">⚓︎</a></h4>
-<p>Après vous être demandé comment savoir facilement qu'une chaine n'était plus simplifiable, proposer une fonction <code>reduction</code> qui prend en paramètre une chaîne <code>s</code> et qui renvoie cette chaîne <code>s</code> une fois effectuées <strong>toutes</strong> les simplifications possibles.</p>
+<p>Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction <code>reduction</code> qui prend en paramètre une chaîne <code>s</code> et qui renvoie cette chaîne <code>s</code> une fois effectuées <strong>toutes</strong> les simplifications possibles.</p>
 <p><em>Exemple d'utilisation :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">reduction</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
 <span class="s1">&#39;dabCBAcaDA&#39;</span>
@@ -2575,11 +2575,11 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 <p>Vous pouvez utiliser l'implémentation de pile disponible <a class="" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python" target="_blank">ici</a>.</p>
 <details class="aide">
 <summary>Aide à la construction de l'algorithme</summary>
-<p>Pour chaque lettre de la chaine :</p>
+<p>Pour chaque lettre de la chaîne :</p>
 <ul>
 <li>si la pile est vide, on empile cette lettre</li>
 <li>sinon, on regarde si la lettre est simplifiable avec la lettre du haut de la pile :<ul>
-<li>si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaine</li>
+<li>si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne</li>
 <li>si non, on empile cette lettre sur la pile, et on passe à la suivante.</li>
 </ul>
 </li>
