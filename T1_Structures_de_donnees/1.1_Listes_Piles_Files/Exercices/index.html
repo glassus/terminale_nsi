@@ -2478,44 +2478,33 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
 <span class="s1">&#39;cde&#39;</span>
 </code></pre></div></p>
-<details class="aide">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-            <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
+<!-- ??? aide "Correction"
+    ```python linenums='1'
+    def simplifie(s):
+        for i in range(len(s) - 1):
+            if simplifiable(s[i+1], s[i]):
+                return s[:i] + s[i+2:]
+        return s
+    ``` -->
+
 <h4 id="3-resolution-du-probleme">3. Résolution du problème<a class="headerlink" href="#3-resolution-du-probleme" title="Permanent link">⚓︎</a></h4>
 <p>Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction <code>reduction</code> qui prend en paramètre une chaîne <code>s</code> et qui renvoie cette chaîne <code>s</code> une fois effectuées <strong>toutes</strong> les simplifications possibles.</p>
 <p><em>Exemple d'utilisation :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">reduction</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
 <span class="s1">&#39;dabCBAcaDA&#39;</span>
 </code></pre></div></p>
-<details class="aide">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="n">fini</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">fini</span><span class="p">:</span>
-        <span class="n">s_temp</span> <span class="o">=</span> <span class="n">s</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_temp</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-            <span class="n">fini</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
+<!-- ??? aide "Correction"
+    ```python linenums='1'
+    def reduction(s):
+        fini = False
+        while not fini:
+            s_temp = s
+            s = simplifie(s)
+            if len(s_temp) == len(s):
+                fini = True
+        return s
+    ``` -->
+
 <h4 id="4-le-vrai-enonce-dadvent-of-code">4. Le vrai énoncé d'Advent of Code<a class="headerlink" href="#4-le-vrai-enonce-dadvent-of-code" title="Permanent link">⚓︎</a></h4>
 <p>Dans cette énigme n°5, la réponse à donner est le nombre de caractères de la chaîne une fois simplifiée. Ce qui ne devrait pas nous poser de problème.</p>
 <p>Par contre, la chaîne <code>'dabAcCaCBAcCcaDA'</code> sur laquellle nous avons travaillé n'est qu'un exemple...
@@ -2524,9 +2513,8 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 </code></pre></div>
 <p>Anecdotique ? Pas vraiment...</p>
 <p>Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?</p>
-<details class="aide">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<!-- ??? aide "Correction"
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2568,8 +2556,10 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
 </code></pre></div></td></tr></table></div>
-<p>Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)</p>
-</details>
+
+    Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)
+ -->
+
 <h4 id="5-sauve-par-une-pile">5. Sauvé par une pile<a class="headerlink" href="#5-sauve-par-une-pile" title="Permanent link">⚓︎</a></h4>
 <p>Cet exercice peut être résolu <strong>beaucoup</strong> plus efficacement grâce à l'utilisation d'une pile... mais comment ?</p>
 <p>Vous pouvez utiliser l'implémentation de pile disponible <a class="" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python" target="_blank">ici</a>.</p>
@@ -2585,9 +2575,8 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 </li>
 </ul>
 </details>
-<details class="aide">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<!-- ??? aide "Correction"
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2625,15 +2614,15 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">taille</span><span class="p">())</span>     
 </code></pre></div></td></tr></table></div>
-<p>Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.</p>
-</details>
+
+    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent. -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 octobre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 novembre 2022</span>
       
     
   </small>
