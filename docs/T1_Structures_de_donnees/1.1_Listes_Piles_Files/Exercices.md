@@ -133,14 +133,14 @@ Pour information, on rappelle la technique de *slicing* de chaîne de caractère
 ```
 
 
-??? aide "Correction"
+<!-- ??? aide "Correction"
     ```python linenums='1'
     def simplifie(s):
         for i in range(len(s) - 1):
             if simplifiable(s[i+1], s[i]):
                 return s[:i] + s[i+2:]
         return s
-    ```
+    ``` -->
 
 #### 3. Résolution du problème
 
@@ -152,7 +152,7 @@ Après vous être demandé comment savoir facilement qu'une chaîne n'était plu
 'dabCBAcaDA'
 ```
 
-??? aide "Correction"
+<!-- ??? aide "Correction"
     ```python linenums='1'
     def reduction(s):
         fini = False
@@ -162,7 +162,7 @@ Après vous être demandé comment savoir facilement qu'une chaîne n'était plu
             if len(s_temp) == len(s):
                 fini = True
         return s
-    ```
+    ``` -->
 
 #### 4. Le vrai énoncé d'Advent of Code
 
@@ -180,7 +180,7 @@ Anecdotique ? Pas vraiment...
 
 Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?
 
-??? aide "Correction"
+<!-- ??? aide "Correction"
     ```python linenums='1'
     s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
 
@@ -206,7 +206,7 @@ Effectuez la réduction de cette chaîne avec votre programme précédent. Que r
     ```
     
     Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)
-
+ -->
 
 #### 5. Sauvé par une pile
 
@@ -223,7 +223,7 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
         - si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne
         - si non, on empile cette lettre sur la pile, et on passe à la suivante.
 
-??? aide "Correction"
+<!-- ??? aide "Correction"
     ```python linenums='1'
     s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
 
@@ -246,4 +246,4 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
     print(p.taille())     
     ```
 
-    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
+    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent. -->
