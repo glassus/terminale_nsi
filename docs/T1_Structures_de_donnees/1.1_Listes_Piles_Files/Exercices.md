@@ -237,9 +237,7 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
             p.empile(lettre)
         else:
             sommet = p.depile()
-            if simplifiable(sommet, lettre):
-                continue
-            else:
+            if not simplifiable(sommet, lettre):
                 p.empile(sommet)
                 p.empile(lettre)
 
