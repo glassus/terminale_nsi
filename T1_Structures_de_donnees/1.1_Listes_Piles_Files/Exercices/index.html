@@ -2593,9 +2593,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span> <span class="c1"># ne pas oublier de récupérer une implémentation de la classe Pile()...</span>
 
@@ -2607,9 +2605,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
         <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">sommet</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">sommet</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
-            <span class="k">continue</span>
-        <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">sommet</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
             <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
             <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
 
