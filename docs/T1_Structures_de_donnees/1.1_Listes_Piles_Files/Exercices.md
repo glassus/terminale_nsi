@@ -180,7 +180,7 @@ Anecdotique ? Pas vraiment...
 
 Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?
 
-<!-- ??? aide "Correction"
+??? aide "Correction"
     ```python linenums='1'
     s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
 
@@ -223,7 +223,7 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
         - si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne
         - si non, on empile cette lettre sur la pile, et on passe à la suivante.
 
-<!-- ??? aide "Correction"
+??? aide "Correction"
     ```python linenums='1'
     s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
 
@@ -246,4 +246,4 @@ Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.
     print(p.taille())     
     ```
 
-    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent. -->
+    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
