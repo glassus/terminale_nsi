@@ -97,11 +97,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#exercice-1" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -549,45 +544,9 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Exercices
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Exercices
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    Exercice 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2343,10 +2302,9 @@
 
   <h1>Exercices</h1>
 
-<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction Q1</label><label for="__tabbed_1_3">Correction Q2</label><label for="__tabbed_1_4">Correction Q3</label></div>
+<p class="admonition-title">Exercice 1</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Corr. Q1</label><label for="__tabbed_1_3">Corr. Q2</label><label for="__tabbed_1_4">Corr. Q3</label><label for="__tabbed_1_5">Corr. Q4</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf" target="blank">Centres Étrangers 1 - 2021</a></p>
@@ -2406,30 +2364,245 @@
     <span class="k">return</span> <span class="n">m</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p><strong>Q4a.</strong> On va vider la pile <code>p</code> dans une pile <code>q</code> tout en comptant le nombre d'éléments dépilés dans une variable <code>t</code>. 
+On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> dans <code>p</code>.</p>
+<p><strong>Q4b</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">creer_pile</span><span class="p">()</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">depile</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
+        <span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">Q</span><span class="p">):</span>
+        <span class="n">empile</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">depile</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">t</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<!--     === "Correction Q4"
-        **Q4a.** On va vider la pile ```p``` dans une pile ```q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
-        On redonne ensuite à ```p``` son état initial en vidant ```q``` dans ```p```.
-
-        **Q4b**
-
-        ```python linenums='1'
-        def taille(P):
-            if est_vide(P):
-                return 0
-            Q = creer_pile()
-            t = 0
-            while not est_vide(P):
-                empile(Q, depile(P))
-                t += 1
-            while not est_vide(Q):
-                empile(P, depile(Q))
-            return t
-        ``` -->
-
-<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h3>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Corr. Q1</label><label for="__tabbed_2_3">Corr. Q2a</label><label for="__tabbed_2_4">Corr. Q2b</label><label for="__tabbed_2_5">Corr. Q3</label><label for="__tabbed_2_6">Corr. Q4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf" target="blank">La Réunion J2 - 2022</a></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="image" class="center" src="../data/ex2Q1.png" width="70%" /></p>
+</div>
+<div class="tabbed-block">
+<p>La variable <code>temp</code> contient la valeur 25.</p>
+</div>
+<div class="tabbed-block">
+<p><code>p1</code> est identique, elle contient toujours les valeurs 25, 3 et 7. </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">nb1</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">nb2</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">nb1</span> <span class="o">+</span> <span class="n">nb2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="n">pile_vide</span><span class="p">()</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">addition</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">multiplication</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:7"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Corr. Q1a</label><label for="__tabbed_3_3">Corr. Q1b</label><label for="__tabbed_3_4">Corr. Q2a</label><label for="__tabbed_3_5">Corr. Q2b</label><label for="__tabbed_3_6">Corr. Q3</label><label for="__tabbed_3_7">Corr. Q4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf" target="blank">Métropole Candidats Libres J1 - 2021</a></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pile1</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+<span class="n">pile1</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">pile2</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pile2</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>L'affichage produit est <code>7, 5, 5, 2</code>.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Cas n°1 : <code>3, 2</code> </li>
+<li>Cas n°2 : <code>3, 2, 5, 7</code></li>
+<li>Cas n°3 : <code>3</code></li>
+<li>Cas n°4 : <code>«pile vide»</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>La fonction <code>mystere</code> permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">etendre</span><span class="p">(</span><span class="n">pile1</span><span class="p">,</span> <span class="n">pile2</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">pile2</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">pile2</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="n">pile1</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">supprime_toutes_occurences</span><span class="p">(</span><span class="n">pile</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+    <span class="n">p_temp</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">pile</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">element</span><span class="p">:</span>
+            <span class="n">p_temp</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:6"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><input id="__tabbed_4_6" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Corr. Q1a</label><label for="__tabbed_4_3">Corr. Q1b</label><label for="__tabbed_4_4">Corr. Q2</label><label for="__tabbed_4_5">Corr. Q3</label><label for="__tabbed_4_6">Corr. Q4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf" target="blank">Amérique du Nord J1 - 2021</a></p>
+</div>
+<div class="tabbed-block">
+<p>Le contenu de la pile P sera </p>
+<div class="highlight"><pre><span></span><code><span class="o">|</span> <span class="s2">&quot;rouge&quot;</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;vert&quot;</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;jaune&quot;</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;rouge&quot;</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s2">&quot;jaune&quot;</span> <span class="o">|</span>
+ <span class="n">_________</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille_file</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
+    <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F_temp</span><span class="p">):</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">n</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">former_pile</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File -&gt; Pile&quot;&quot;&quot;</span>
+    <span class="n">P_temp</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+        <span class="n">empiler</span><span class="p">(</span><span class="n">P_temp</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P_temp</span><span class="p">):</span>
+        <span class="n">empiler</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">depiler</span><span class="p">(</span><span class="n">P_temp</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">P</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File, Int -&gt; Int&quot;&quot;&quot;</span>
+    <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F_temp</span><span class="p">):</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">deFiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">n</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;rouge&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> \
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;vert&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> \
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;jaune&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_jaune</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<details class="example">
+<summary>Exercice 5</summary>
 <p>Cet exercice est basé sur l'<a class="" href="https://adventofcode.com/2018/day/5" target="_blank">énigme n°5</a> d'Advent Of Code 2018.</p>
 <p>Le but est de réduire le plus possible une chaîne de caractères (comme <code>dabAcCaCBAcCcaDA</code> ) en obéissant à la règle suivante :</p>
 <div class="admonition tip">
@@ -2480,39 +2653,48 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
 <span class="s1">&#39;cde&#39;</span>
 </code></pre></div></p>
-<!-- ??? aide "Correction"
-    ```python linenums='1'
-    def simplifie(s):
-        for i in range(len(s) - 1):
-            if simplifiable(s[i+1], s[i]):
-                return s[:i] + s[i+2:]
-        return s
-    ``` -->
-
+<details class="aide">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h4 id="3-resolution-du-probleme">3. Résolution du problème<a class="headerlink" href="#3-resolution-du-probleme" title="Permanent link">⚓︎</a></h4>
 <p>Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction <code>reduction</code> qui prend en paramètre une chaîne <code>s</code> et qui renvoie cette chaîne <code>s</code> une fois effectuées <strong>toutes</strong> les simplifications possibles.</p>
 <p><em>Exemple d'utilisation :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">reduction</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
 <span class="s1">&#39;dabCBAcaDA&#39;</span>
 </code></pre></div></p>
-<!-- ??? aide "Correction"
-    ```python linenums='1'
-    def reduction(s):
-        fini = False
-        while not fini:
-            s_temp = s
-            s = simplifie(s)
-            if len(s_temp) == len(s):
-                fini = True
-        return s
-    ``` -->
-
+<details class="aide">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">fini</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">fini</span><span class="p">:</span>
+        <span class="n">s_temp</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_temp</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="n">fini</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h4 id="4-le-vrai-enonce-dadvent-of-code">4. Le vrai énoncé d'Advent of Code<a class="headerlink" href="#4-le-vrai-enonce-dadvent-of-code" title="Permanent link">⚓︎</a></h4>
 <p>Dans cette énigme n°5, la réponse à donner est le nombre de caractères de la chaîne une fois simplifiée. Ce qui ne devrait pas nous poser de problème.</p>
 <p>Par contre, la chaîne <code>'dabAcCaCBAcCcaDA'</code> sur laquellle nous avons travaillé n'est qu'un exemple...
 La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
-<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjIiqwtTWQJczeEauUAZDdFfmwWMccbBOojBbXxKnNkkKsSeEsxXmxlpPLXMuULlSJqnSsNQmMmMCYyXDdvVDdtTxYmBbsSNdDnyYaAOBbouUwWiIMyYzZyPptGDbpoOPBdnNtTapPeEAHhrXxRtSjJsTPpepPGgCcEfFenNEmMGUpPugCanNAnNcEzZTtQqZzRreMmpzPpzZZJbBjxXTtEcCemMPJjXxhHTtydDmIOolLiJQqHhkKMmjVeEsSWwnNQqsNgGnLkKlcCSvdVvcCDeWPpwEvVUuNnTGhHgVZEenNQqRrTtSspjJPHhcNnYyCwoOHhcFJjaAXxDdqQfTnbBNtSsyLlYCGgWEezZiufFUhHHSshkKTvVoOtIfFTbBtTyYeqQEZnNztDdNnxYytFflLTWwSgGsmsSMXzvIikeEfFpPKdDccCTtFfqlRrLQgGqxyYXQCpuUPkQqKTeEtSsXmMmMxVDdWweuUEyYtFfboOBbBbBTuBbrReEKfAaFkoeEtTYyRroOQqcCjYyYycCtTJOLVvkKWwYylukKqnFfilEeXxLgVvqQGINQZJjlnNLzVvKkpjkKJPsSBIibQmMqXQqHhrTtRayYAECczgGZeHhFfMCbBcVvfFZzRrNlLwQqZzWnjUukKxXkKFfJuUzZqQyYfPpiIOojJFNZzhHlLnVfFvwYHhyWMmOUuqtTARWwrZNnzasSzYLlyCBbcLlKkoOZZzIiKkQiqQIRiIkKrgFfpPnexXEPpNTtOobgGBEeCDdcoOQqGQCUuhoOSnNsbBWwfFwiIFfEeZzWQEIieSmMaAsFfEeSsHKkhjOoJmvVMlLGtvVTTWwtgXSsxpPIZziKHhXXCLlcxyaeEcCAYxkLlCcEefOoFLlWweEyOnNojJZzYcXxmMWwXxydXxDFfgGYGGgxOpPoUuXRrgplLPWwqLlQEQYylLqgSsjJDsSIidIVviGnNaAFfelLVvdDHsShmCcroOOoJjSsQqqQHVFfvhiqQeEWmnNzZjJJbtTBsSjGgoOMKDdfqxXQFjJmMitTIcCkcCwrRxnNFfvVXIRDdJAXxahHZzJjzZBbjjbBJhuUAaxXHMwpPfFmMcCfuUyAfFauZUuuUzRrUjJuPZzfKlLdDhsSSsAatyYaAHhTbnNBbBQqmmiFfIxOZzoXAaAaWwMWwzZaAMhrRHHsNnSBboEeXCcxOrAaZzsSRkLqzZQPplFaIiAhHZzwWMmEeWwnplLmMQXDdYsSyWwxHhRrWwoOKhoOltTLHAaDdkgGLkKlquUPpXxdnNrRpXxPbNnbVviIGgBBzFfZIiwWDCcGggJjiIGxXxQGgqQqteENwWnTiIAAaaSsNnTVPpbBFfvtXCcDuUdDdBdhHKOokiWSCcswIcCcCKkoPSspOWwUkKuAaKkoOwhAawWaALlHCcWcJYyKkMmMmhHzZjvVtThHCDYyALlNnrRGcCVvpPgvCcMmVLhwWuUmMHUupPladDHhNnpPMTtmazZvVAakUuxXKDmMZzdGgLlABbNnMmWqQRrvVeEjSsJwJMmjTwAEQqeFfRrQqQqaqQdaADWGgtFfacCaBboVvZzDdOZzTtgGOFfGgoqBWwbxXZzsBVVvDnNhHXxdvZwWzOrRosSEeyYVvUuEebWwoOXxUuQqTqQtBbiIEXxeBHQqtTiIxXRZCtTchHQqzBktTKIitTNvVnYZzysEeSMBbKAjJpPFfavxLlXVQqKkDEMmYyenNXxtTlYbFfByLIiQqKkGPhHpFaxXAfglLYySsBpPvVbyYdnNyyYYKkXzZeEeEWwRxXreEgGUusHCPpczJjZOohsSpWtTwgGPKkvVFpPVvfSsOMmnPpNoOozezNnZksMmSIiaAEeGgoOpPuUWwDYcsYySPXCcYyoUNnCcuOZzLbBlAGguxnNwWvHhVXsPaApSPpQOoKtTVvExXekOmMoOooZzOOoIihQqHCcqmzIiZMQHhqTsSQqfFtxzwWrReETtmwNsOxXovVAeJjEaSnWMSNtTnsWsSwaAvVZJrRjfFnaANDdYzlLOoQqZysrRtTwvVWSRdAkXxKarvqQVgpPGOomkPpKMHhpPlkKDdpPLSszLlZyYBbxgGUuCdDeEcaACcXCclLRLllLIigGmMrRXxBbCcOoeELnNbBKxDdXHhkmMlTtpeEPQqzZDnNIiDBhqApPaQnNcpPCiSsqQIHiqQTsLnNlWKkNnwtWwAaThHFfGuUgSLsRrSliItFfDduQqSstTwcCKkWUhHLlSoGrbBOoRgWCcwgVvGtKkhPpBbHSsKkTFfUZEekKfcCWwHhYyFbBaAzuFrRAHvrReEVlLFfhaisVvSHvVXxlLjEeJJjgGjdDcCJhWwKkmMSXPpxsKzZwAaWkttTTaSapPXKkkrRhkgzZGCcKxXHuUKZWwzZzSsxdbBDXKkxfTtIiAaFhHmxXMnNJjUuxeEXuGgUuUzuUZjJvbBVtTpUuYykKPnNfFGGKkgoOxXggFfGrJjRoOaAOodHhxnNXcPtQqAaTmMZbBzpXeEdmzZmMkTtpPKFeEedDdDEhHqubBUQYQqykKcrRCfMSsAnPzZTtpuUNWwIiuURrdDaeECgGcyYzMIimXQqqaAQnJjwWaAeEKqQBCDdeEfeEGgaPpbBAhHKKkbmMBkOouCcrlcCdDsSLRmYyNnSRgGiFfIrcOHhUugGzZTdDtVPGgpvGgXxouLlNnlLUGgwZzHWwhPptTWfiFWwfoOsSIvsZzSVsSuSsUFGgETTkKzZtteJdIiDlLlLugjTiItFfJNnwWGiIlLKkTtnNDsSdpPUeEeEJjgGPSspzZbcjJCBAaeVPpLfSsFTXxtlBbhkFkKfuUQqKNnHkKMSshQqVvOpPrRXxZzSzZsZzHhNnWWwwqQUuBLlyYrRgGfTtFrxXUuEeYyUuKvVdDkqURFfFlLfxfFXmkKMCZAaYyTgGAatzcrNOoIntTNisSnrJjUuRHTthwWwByYmMDhHqQWzOjJoZwdhHFfboOdVvNdFDdOjJoeEOoIihHfqCcQaAmMcoJjZsDAadSeEzOSsCGeEUAcCaFaAtTnNYvVUuyZzLoiIcCOlhHfVvUuIicCeEDsSdDdrREeESsejWNnWwGgOdDuUfFcClLMEHhZzemtTEvVeXxGpPgSOUudDNfFPpnyrROoYEMmeyiIYoqVvuUJNnDdjQGgofFAaOuXKklfFdDmMLAauUSwWrXxRhHBWQqwbseEeExXbnNCcBEgGVCXQqxcwWvPPHhpraARICcQqwQPpqsStTWAaDdQxDdBbXlZzLbBdtsCcOoSOoaAEeHTthlcdDCLuUTDksSKktTqQvWOowhHCkKbxVvwWXCOoDdYycPpcPpNnCIIiiulIieELCcPrRCUujJGNMmngfFTcCvVdUuDtjJtTfNniwmMmMVvNnosSVvLlOWmMHXxWpPwXxgGhaAJjvpPlLigGBbCMmHhcIkKDuUdDeOoqaAQEJKkjrRyYzZIifFkKKRruVvNneTtpPuUEkKYIiyqCpPfFpPLlFfTtnahjJHANUuhNnIidoOpPycZHhznSsYytTUujJhHNCqzZBwKkWEejJCcHDdSshRrOwWohHbCcmabBAmMMXdDcJjCtlLTUuZztBNnbxXTuUSxwWjJXsYyLlHhMmhyYKsSkBjCcJHhMZzUuvSVvZzCcehHEFEeftnIiRrNTqVvmIiugGUTSstSsVNnDdhVkKveEHwWzZvAagGXxipPaAIvVhHhDjJBbdtTWbBFfwdDQqVHhtTtkvrptTrRPRzWgGwrRjJxtbYyqQhHBePpFfELVXxeEvNnlXjJgGxGKkgoDYypPpNnPdlwCcWzNnsSZLwcCoOrvVKkJjdDdTtDiyYyYItqQTyYmMwWSYHhrDdufkJjhHWvVwpwWylPMmzZpLESsmjJMeBbaAWwJjuQqMJjXeEaAaFffFFhnNCcZdDYyzeGgESTtoKkBbmhHedDFfHhcCdDWAawlEVvXDdxlVvioOIOYyogKkbBGLHWwhWwpPWwxRrXflLPWCciTtCcNnNmMNnnSsYyqyYlpPIiBbLrfFRmMVvQIFfZzduwtJjyMmbCNnsScCmMmptSOoEeoXuUxOsKkEWuVyYuUPpQpcCPtRrcCtFfKcCfZRrzdDFkSFYyfMmsftTlEeLECMRrmcTtQGKkgqCMNnLlxYyXaPuUcCaAqQtTAEeaMmpZznvWwVTtUkKuRrIiUuJjtTwfFjJWsSjJttTTNjJqQtIiTkMKIikmyxwWXYPLgGRccCCrPpTEetNniINnpPBzZbFFffBBbaAbOFrRfXxpRZzrFfPxyWwYUVjJvuMmPpXxxXBODdoPpGmMbSIisBgejJEwWbgGXXxxoOtTJjcHsShgGxXCzFAafsSAaZUuxTBiOooOuULlUDduDdFQqfIbdjJuUrWzZiIPFVvDdiIfpwGfFsBnBtTbvVsSNJYyXFfxbyYCPtTpKHkKzxXCcZUuuUKECcyYCcZzeIoiIMOpkKPfFdDYywWouUAjJaFtTfxXjZbBzJvFfyYjJOoMmCceBbKkEkKLlxmxXMCcCcMryYRGDdOogzQFfqHEbBtOoNOCcstTNnSoDSGgseUuLlExbdDBXkKLlJuSbBbcrRCdDBaAsWaAwtTBbVZzvqiIMmuUHtTwWfFFFfKkqQxYRWwYyeEfbBVviGzZQqCRrsSXDdxXxcvTtHOotThkKPptTpZzPCcVfFnNzIiZyIMmiVvUuYwHhuUjJdDWfQXkKxMmCtTcFfhiIDdHdsSDFEefqZzKkQROorqyZVvzRtKHWwmMjbBJUuKkRPprLlfgnNpKoOMmTtaALlbBHWdDGgwhQqOqxXiIIiYyDdzZrGcaAFfhHxEeNnpqqQQTMmqmMrlLTIeGgEmGgMZzWwATtavnNsaPpGgASZzVhHOLLbBlwWkKYyiVlFfLoOtlLTFfCOoVvjJcYkKXxpJjPHhmMZzyUaAuNNnvVtTzSsbpaAPBDwWGgbBFarzZRAfBwSRrkaACcrRizZIKkiuUQqWwIXxKQqpPzzfFZZnNnNyDdVvCmbpPYkKAZzaDuUdXQdDqzJuUTVvoOteERrdDoQqcCcbBwGgdDvcCKkVEZkKzeRrdhHCcDHhkYyATtagGVvbBFBqQBbQSsUuAjTjJvGzZpGgPCbTXnNwWJjbBhtjJmMPpQqqQuUBbEWweYKkyTXxxJIivRrvhHXxRriIIqQijJVlLIOfZzlsSLQqdyYvVJIijHTBBbbmIimMlLNnMxgGXYypPTwWteUvFGgfpPVHhoOOjJohCKkcAawPpWsSeBfFJjyYbAYyKdDbJjBPJjZzUjJTtuzLeEgjJIsSiGiIbBRrMJjCcbgGJjxRrXmMgGinNfgGFxuUkKCceEMPpmXIdDBuBbUKoOkuUXgGxEexrRxQqXXodDdDWeebBEPpxXxoOXboOqQDdBhHJRPpuUQqrjJiIXxsSjaALlSsuyYUXhHHJhbBzZPplLdFfyYDwWbauYySSssUaAASBbsJjUtTulRgVvGJjeEmFYypPZzPpqTtzSuxXBbUmMVKkvRroOwVUuiIfpPVvXxbBYAaHhGIMmjJdQqqQDisVSsvUugGSyYsSPiIpsWwhHSHhciICujJUJBbyQEhHeafFWwooOOFIimMXrRxyWFfBbQqqQwNnZaAzRrwmHYmMyxXhzAaZvVbBTEetMQGgqXxWZmMZzzRrNnXzZOoxfFJjgGgGTPpgddDYyDSsIixDdXSGgsguUMiImGymMCcyYoOPCcwNnWpiIYyjEerXxAadDKkNuUQqnQuUOoqSswDdEeXeExWoOjIGCcOolqbBQEeMmmMLFHhAJjWwvVcCnNqQaqQunNrRUXxrRQOIiuBbkEecCLREenNrjDdRrDnNwWTtzlLMmuaAIqeLKcmHCsSBbFfchQqfTtFMIijDdCKXxHPvVRrWweMmLlrREqvxXVQSsSprRPPpsyYjKdkKDNzFfZnkwWlRrLnNYBbyeEjJmMvITtiAaVuUUuJFfjMePpECcepXxPGaARrdyYDiIMmgnSsIAnbBZIioODdSszNEeFBbYaAyfFiIvVvmMfjaeEcCAhHsSQqFfJFVFAaQqfCuUPpPMmBbbnNGgjfFJqTgcCqIWMmVvoOliVvIFeEzZBqkKQbQqcCfxszZpPMmYyvIiVWwSsYkKHgGGFfLlgZzKkvVOoLgGiIRrgBsSbqqZjbBXxvVaGgAJoMPpsSmOjJaAOJjIIiizuUZYylLdKxXkgrXbBLlgGKkxnNBbWwldmMuFfULlGgFfmKkQqfLlJjFuMmPpUIiHYyIcCTtYyigGdDhnNRroOkKgGMJiIMmzfFsfbBFSXdDwACJEejcnpNniIIjJicuUCnNmMWwpPPsSRrLlPpFlMmqizsSZQqiIqQRTzZtTUuRrdDJIcCcCnVJmMjvzZAagGjoMmxXSaAsiIiIOeELlNnoPpUlVvLkKuYyOoOeQeEuaANRrxXnDDiIddUXxqWXFfuSsOoUIixzSsZYyYyYaAXxNLlXxnZzKkupPfFaEeCzZABboOaQqjkKfFJvMmVvUuVPpZzMSyYPpsOoNBySsYbktTOKGgzMKksSmMacTtCSsrRAxXPwPVUuWwlvbBBbxUkKaNngiIkBbFfJIiGgjChHcMmIiXxxXKkHKlLkeMmEkOoKdDAoOoOahKBbhSfAahJhHjJwjSsJjJmbBYenNEqQUxXykKNnXxbBrRwGgWXBbjJnRhHnNOyYoOCeEmTtFfMJjeEcsSFfeEvVnNEVlrRLjmNXWPpsSeEwtTKkbmRkKsSHhrRrRgGrUMMmmzZyvVYocCOSWwVvsfFdrdCcgGDRQAaqbfrRFBwpPMmWGgdNnJjvVDKYyPpxGKkgzDmMdZPnNpWVTtvFmKkELqQtTleTtwWclLcwWUuCTtCOnNaDdMmRrAiIgdLlDaAYyGBcOZzolaEeaZmqQbpPUuBgGdDcCgGhfVvvVFGgoOsSrRxoKkOXYXxMmCpPhHlLVvcIiEefFOodDlUVuUGgQMQqHPphmOMmolLCuUASssUuVUuvdwWDaAEeTaDdVmMvCcDdjBbZnNznNMyYRrmcCnNJVvrxXtTiXxiVSsvIvVBbxDPpdPpoVvSqDdQZkKzsOXffaAYmMGgZzguUpaTxxvVWzZWwwBRhHrSoOFhHEeyYTtfoOIEeisSsZoiGPrLIimpqQzZPMhEtTeqJjGQqyFfYgEejJvGlLbBgqQVxDXxwWdVjJlaALjJjnoONmdUfFVvuTtDmMNnmMPluULSszrRLXtTOoxSNCbBCccngnNrRbBGYhHyqQibFfJSvVsTMmtzmMZZsNXxnSzugGjXxJWwjJlVvnNAIrRAavViiIUytOCXxcnNCEeckKTtjJonXxNnYyJjMmhHqQMmFmBxGWkJszMPrkSspPJrRkzZKjQnBbWQqjGTtgoOTsLlSHhDzNnJhHPpQYygkccCCPpKGjJMmDvVCGcxXTtEUwFfkKWlLurRRrESKJreVvZrMeyYNnEDdDgGnGgNdDokKOnNiCVvxXcIzEoOemvVMOoXKkbNnvVBcYvVbBgGWwmMtTNKkGiIgOoOooOHhCqQsMmSnNJsSfQWCCcGlLeEuUgZztIiTqzZQIxZzXkMThybBEAaOgnNUDdiIilLgLlGjJIuUPArJEcCoKLlkOuUbBBTrYyEeiImMSNnlBuUbwWAueEgbBZhHgdDlLOoGocCwWfEXCcAKQqkSzZegGKktTlLCCdDIiPpcuuvsSVUXxfflDdLtmuUMqQTpYyPdDVMmvXVvxJjuUxXuUmMOClYyFuRvVcpPqBPpboJjaVvADbBdfFFilWaOoAwPpLfKkvGBbKZzcCHhwBbFfmMWUbBuKkrbAaSsCclDqbBAaYDCIiEwXxWejNYEXudCcCUudalWwgGLpWwPVvWjICcZzidDxXhHzZJTtYyeEoyUurjJRYdDTtyPhkKnNHOPpJTtjELlNdxEerRHhgGiIXMmJjDJLlDqQHFrRrRmMqQotTOEevVrRWwCkGgKJRrAkqQyJPXkKxEhTtfgGFHEDdcCcCzZYNDqQdsiIMGkKvaAsCcWwSrNnPXxwqbBQHhWrsBXxgPQqpDdUGIUuwpPcCFptTtJKkNqQnolLZcCkKRsSpvVGaKkAnpPLPKkKkoJjOxXRrUukKxbBefgGAYylRrtTLbBaxXniNFbVvBeOoPpEEdDYynMOXxopjJPuUeEoOpPLlemMYEeGEegeEQqXTtDxXcCdMmnrCcRqQhEefFHiIZHBxXbdOoDuVvUpPuYwUtdDTluUxTtXRrLLzcCZAUnMmNWZzbBnNAGgbBxXpXFRrZlLeGgXxEeJQqxOGgKkMSsyxXTVvtwWAaHhyYHhsSAoOOofFfChHsScinNcCIFupPCYTtyceEprRPewWbGJjgcMBCcCBbZzcbmGjYyhTtzUuxXZHcCMUumAaYyRjUaQqAuJrLlPpKkuODdWwoGgcCUUDduzTtZwWKYyQqQqGggsIXxiSOmdDMognUuxgGHNndDwWtTOHhoLllrRrRfvVbIvVXDdooFWwfFfOnrcCUXxBbuRQqHxLWmUuxXJjxTtzZVfFXtTwWoSDdcCshzZHPpVvTtDkjYkKrWwRUukKwWyUuOzZopPQqRqvlLVQbTtqQiIYVpPEWjjJJmbBjJMEnNelLgzCcJDdAaOoJjdDdDjyYTtRwdDAaaNMmOoGCkKcWpVvPXkKqQeExwgnHhVtkdDKCcTGYlLNnRrRETlIiNdDzrGgOonpPOlLJjsGvVgtLlLlaAzaAaAZiIYZzyVvTmuUGEeizZIDLlRrtDTtdfFcCowWOdUuyYEeDgSuUKAfkKNvdDVnGaAgFaAauonNOUQqwDdHhbTtBWgGBJjtTwqQpBbFfwWPKkZBbzyiHCchRrDdWLlwEePpZzleEJjpPgGLsStHhiIiIWwPpWwTLqNpsSPQqHyYhbBVHMXxmzXJjwWRUuZzkKJAajgGNxXYsOoSAayiiOCcouUtTlLIiyAaDdXxGgYoOTtjJgGlTNnXhHBbxVvnnNpsSPNjJIyduUwnNWWwJjKkWwYFIiRPVMmHGgNrmMJZzEeHJWMqDdQeEFfySPpklLKIvVDeztTfSFfsuUFrRTwWuOHhVvoeEVvbBkKDAwWJrRwWWfFUukWORWbBEewaAnlLLSslIJXxjUuUzeEeEZwWOoujSsHpHtThOoTtlLHJOdDSJjQIigFxqHhQYyOoYNnyXWkXZzUxBznOoNnWwlgGgsSTtocPpAaEXbBGMCcmcFftTrhHunyYlzmMnzZsSNekKEsZzuUeiIpPsSlLJjRUumMrbcCVdIiHLldDtTqKkAziIZHhEOoMmCXxcVvSswWAaCMmlGTtgpPLQOQFfqzAaVvEHhzEevVnNnQqNqTtnNpPTNpfFGnNzZZpXamoODdygDqQmMdDdyIkKiSiXxSsIiRgDdGhNnHgGlTdnNDYWwyeEvVCcXxJeEpPqQoCcOPEEelLjJoOEJjeDdqQWwyIIiLEelUuyYfFQqcshHheEHSCvVOonEeNnAaAALIilpxGnOoNOjJoDoMmruURKklLOKigGuUBnNbGgbBgGFsDYydIXkKHhNnhHToOhKkeNnEzJmMhHjmpmMPdDaAEeRZTFYyyMmeEtTMXxmUuBuUbQqQnNTeEtqCcvLlVQSMBZzYyAlbFzZdDTtRZzgEeaxXAgGLcpPHhUuCghyYKkckoFuUfOKyYOoCrdDegGpcwQqJjCcVvMmPpjeENnJfZzdDozZiIALqQlAbgGGvVgfNnMmZzFoOfiIHOvINpQSvdeECtWwbBrDdQqGgRfiXxKkYyBIibIphHUoOurYQUuqyLlTjuZSszDPpULludVFQPjJlLBbIGgiCGguhIiRDdqLlQuUsSPcCpnZzNsEefoOlLoOFDdqQzmMZSsqQhHSGgTNNgGnnZejkfFbBhrRHRrniOoIrRNeEQQqqUNnitBbTfwbgGBWwkLlOmnNgGCcDdhOhHZJjzxXodDvMjJmCcrCcgcCGRashiIHSubcCiPQqrRiIimbEHhtTlLeBaAeEjJMQqcCJqQApPENeEBvVuKSskjrTtvVRTyYCcjJxcCXGYMPpmowpPjJIaAjeLlEJSqQPUSnakKlWUnNuNNpPLlnnBbhGoOCcErPIipgGcCoOQAqQGgflnNVvFjJfLfFolLVvsSiozNnPpZjkKkBkkKKbKJQqcssSxBbuUEeOobBdXxRaArCFfMbkQqCcAaNbLdQqqQDlLvRKRisSInNnjJvMmYhurrrRtTxOHaAhorJwWWwBIBoODgGMGbBgmyNaZDfFwWJjCcuUpZMEeFfRRrhHmFfsKkDdSMdDmuUFfjJWBbwrRurRXEFUuRYyroSsOiHXSyVEeeEoOqQTtkCcVHSKWwlAxzPKoOzQWCyNnYcwKruQgGuUeEcCqUuURVvkKvVuwWGVKchvoOzZyZzJRrjYjJjJVHMmOoeELlCJjoErRPsbbFyYYDdpPdDKkZGgzhnNOnNWeGgEMmWLltwWyxXGwWganNjZZzUgGCzZyYqQZgGMmzhHaAkqQKdSsIiDfFuUIiwWRrDdlljURrVviLwWNmYyMfFKkMWsSwnNEeQDjJggGmEeWJGksSlLxbBAxxeolXxLOdDEHhyyrRYYRrZvaAVzSsSsospcCYPpyCcPLlkKxjJfFkKkEKkBXxbeKCbBDdcSvfrMmFfbBNNKgGknxXyiIYaQqAnLGgEezJTtNnlLVbWwbnlLNGAEfNndDFiITgMmEegEeGMswWAaUuBOgGBboQdYOdjJJrRbBfFIieEGgwWjCcbxXnZhEepmMXQqxgGPAanoOPmOoGhHZOrCeNmMnBiKkRghHHhGfKGgIaAiPkZHhzkKiQIiFfqIKpPpdvVOoDrzpPZjJFfNSFuaASjJNkKGKkxXKPpSskKkaABaKkyYFfAwuUWREebJjnjYyInRrNdUuDUhHuMgoOGcjJCQRLlkUuKYyxTtXQqrlLqQpPLxXsSUbFSqkKNnQTtsfmSRruRWwriJjKkKkJBbdDAtbBTagWwjZzVmMSRrsHDABbXxuBbUCJjcpSsXxMTtQqmPbBqQWofUuFZOozOTpwWnygHgGOfFSsTRrtLGTBbtcCTtvsEcCiIoOeBbJjfjJFLKkrRYjJzElEeLwWhHnNYyCrTwWtWpNCcNnNnpPFfyJjKWwlJCVDdvcOojWwLEkOoIiKEeQyYCcmwWMfpWEaaaAaAAJjAsOStNybBYsZzSAaVvmIipPMmpPcCCcAtJxaAxXXOojdDyOoYqQrWSMZQqYydDzsSmpSsiSuUsIRrjkKJhtTZzMmZzIicJjQxGgbBsZWwzSUiIbQqUlbBtRraAzZTVLpaAkyhHbOohNnHrRaAizywWIsTiIteyYtTESzsDbBERakJjKArCPdEeKkhbBYyHIsSqqQVvjfFJjJezmoBDrRfFdbvVVRrRrBbGgxAaGgjJXSKSrRpwWBbPDdhHidDQqIwAanRFfgGliDdtTzZvbRwWrGlneENLgaAvqgvCWwcVqzZBJAaEuEJjNgGneUlLzZzlqkMmjPpJaIilqHhWwXxEOogGGIPJjCoOJByYYydSsVUuxslmMLKkWwQqwzZHPphTtPLlhuHhMqQdcSEYcCrRyVvVUuvgOoGLYosSORdmMWivmMyYGgEEymMYZzezZiIBzZFXWwmEVvsSYyeBbEbpPBVvEaeVvIinNEYcFnoOFfkzpPZnNKvYySsRrpsSSLlMbBqtTdDQtTYYJjkGgKLlhJjUVZELLlUnXGgxjdDgEiNNnnSFdDdDZAasSzuYyWwhsQSsXUYFflLEGZzFfnBcaZzUbGgNvlCcMmuUBTtbLVeEUhmvVCfFcoFfcCOMHuiIXbBxHQtOWDNndwDNQcXQqKlpItsXxjJcCSzyWRtTrwOwWeEJjlLIWwKBnNrxXkKVNWCcwcCNnnbBvgGbBeECcxEeNJjTTtlLtrjmMJEekKafNnxfFLQqTmMxXNnaexhHbjJPpKkwGgLmtTMiIYdDgGygrRxXGxqQXKcCLHhlAODdoaAfgPOlNpPPXrnLqQlzynWHhSJZzWLgQqjZzvVJchHNnNbNQsSuaAtTWJDdtMRbBMSLlomMZetSsSaNnCcAaptTkKSTcPpbBCcCOkKotIiwWAiILgxAaXlLWtTuwciOWwhBQuhrRuUHwWijIiTtvoOVNNnnDaouUEnNDuUnuPYSlVvHhLhRriIYgGyHmMUrRusoUaXaACgGDXxAjckKQwWKkwWzZBGvVWwhHcCWCcwWgPxgGhEeTVvRrgGKDdkBbLMmDOUuNcbBcCMmqQVZpOoxXVBbnvVgGMmCcxuGgUVviIBMeSscCEkKeWwEpmswnNcCYydQqDkKWkKjEeJijwWVvJCngGOorgyKUuktdLagGzZFfnAakKtsYfFHhXxsSIiNdDiQnNOohCvPpVoOHZFWwUumMPetTXuRrCcUNneEGgdeDBbdYyiqQIlLlLNtTpHsSttTTBbgGcADdfdDFLlSuUeBbDAadRwWvSYysZzrcMmnNCVGgFYgqibBhZzHYyIQNUhbhcvVlLCAknXceEaYyafSzZseQqEEheeMnNStTNhDdHnCceiNKkMmbOoHhYXjJJjYFOWwIiofBbZzoOpzZXxgbpfwndDVvgieESsqPhQBcCVdNnJYyAahHjPYPpyEhtHhBLjJrXxZhHfFIiQthHqQSdcbEepEeNnPRryWwhHYvVphHHyYysSdYyYyhHDgJjcNnxRrgGNndDgGXWwTnArRaQqFfVvPpLlNeEofXxiGgIRYyrSiIGgdDwDDdKlLtTyXcCnNaqBbpTtMFbvjJQhHlLEckKZzYyiIbBZUuTtIQeEqhHAtTHBbhxXnNpPcwlLgGYeAaSNZILufFbljJiILBSCPpcAabxIiLWNKUuQqHbPpAaYQqOopPwWGtKkSsTnIhqPpQuUsuUAaSHRmMrQqhPxXSsvBtAqQZxXsRrSEDdqfFPpLTtQGgjJqfAnYRYAxokKFIfFDdPpqsNLdDBHhJPpMmjSgGsYoOQqyusSUhaSNEhgGWmXXxhHdDxMhdDeESsTtYYANpSsPTfKkTGgtjRhHrJAnNasSTtaAsSdGrRrfFXxCmMIDBbDlVKkvyrRtToOzZOXkJjHGAagfFhPogLEvhZYyxXzdQhHgGTqQgjmpPMJtTRMmPVvbPyYnbBNFBbzXxhoOHoMeEUuwWtTmzGwARoIIiaXDdKkVdDeIiEdBbZAYywWIvVJjiBgGbQpwbQMgGTtmqFfBTADdqbckKCRSsHhrIzZJaOptMmTPRRrFYySssinBUubxXYNnIDdbFfTUdDqQyzClbXxTISsgXpPXwTtWAaxGlvEuUwCcPmjuUQbBqaRulLFsSVyYHIIkKihDpPxKwIibBjDdJeyGitQqQqFgGzZQqyYQqAlyMAdDabBMnNhkHPphWwkTIEeHzZhRrZZzkKZclwzZUuDVyoWwzZQqzxupPsSUWSswXxgeEuUvVsSzuUDcCVvdQqayYASxXNBbDtCcgYyJjEmMYypJjJToOtcCndDQqKkNZzOdDlLKNJpPtOeIiefFEUtTZzyYoOXhHxchSokKOsqQHCrOsSfGgFSsCRrcTaAbBtxXuYybLgoupPUSsVvojJOUdDuOQzgGDdcCZTcjjJJaWwfFmMFnNzZqZzmUuLeWlSUTfHaCUuiRriIlaAScCBaFDQFZzrRhHAjJQQCEecoOjeEkKJiDAadTttIiSwciCcIKEArUiWKBbkKXhkPpIyYrRDkjfFwWfnNFfaAehEgGeHKDeEHtTzYyiYXxMuUNvkfFXKZzkvVxMvVRkKrCibSErRLlYtFfMmKkvpPVWwmMZGgEKkJjKFfkxXBboOcjJfGgFkTtmEOUsSIVFGQqIDdTttlLTTWzZgpPrqJxXYyPnLlNpjaASwWPqwyYfagOYAhMOcBxYdDrsSRSsRrJjOLloPpmCvVUuDdrROoRrgFFflHvVxtkKTusuUYyXmMaAxSeNYyCvVcnEYcjJPuiamMgfyzQcCPpmpTxDdZatTVLeXBbAnMzqGkWKtfFfFBRUnNuLlAMmaQMkYMmPpyanADHlFfAZzGWwVMmvDxXJAajKPpkUuPoiIOmMhIEeeNKkyEGlKEekAaxXuAGXxnGgNBrVvUlzZAaFXQqBBbbDcCdsSxbBjzdDDOxQqdkKQqQqxnxiFfHrMmlWUNnuHhnWfFgGoOepHhNnaAuUtasGRIiyYAixaAXVvSsbMEemAaaFNhHvViIiZzIIipEQqcCTtNmMGRrgNiVvIgmyYoOxGNExmCcMXtKbHlrGKxXkeLlulLYbBLsSlBbCcSyYIiwmaGGEVvZzkKStTXxsZvZZmMyJjqnwYyxFAafEllGfFNngmMscCnjJbaAVnVqQvNnfRrzGIbBiQqpPThuyYUuUhHxXjJcCOoNVvEenBZzNEqQemMpuUuPpQqrmMxXhlLSMIbbBpkKPTtpPBKjjJIqQqIYyIKsScAaAabBJoKmknNerLlGpovxXhPpHzofhdpgNnxsSsYNnBbHdDhaGwWIBRrbEeixXzJjZfRrFaAAajNnjjJowWWuIiTXIJGgjWWwfLhHlFIiwJcCCcjAqjJIkKIigAaXxJhLQqUQqrREJjRrFfeHIEePpkKiplLsPphHUwaAIpPwaaAAEQgGRruHFfmpPwWsSfKswTtWVvRrkBsSXxNnuaAfdsSgLhUuHlGtTtIiTyYKWwTiIUureTlLtEmKKBboOsgCTQrZyYtiIeEUfcCcQEeRTVvkGglOttTxoKwWksCgZzYyJjXVlLsTtgGXUxQdPoOHhMVmmhHknmMkYyaHxSsXnNhtTeqwWQPpnRXuZEezEeWJjpeEEPpVvnNtOoTtKkNrReAaAlLaFfJXxSfFCciIfkVGUuvVHnqIizOlarqnNTfFtQnNuRrLEelURkBSYysbOoEeVYyvLRrXxNnxXnzeEkxuzZbBCYSoJOqBPXxpUugttTTVSyxAWhITRViIvhHeEPfpiFSsRYytDdXNiiIqQLMtTNnEeaqlUuhHHvrnNtTSVMmhHTKkzZtRNmMcCPHcQqChqVHgovVrgGRHMBbwWHZzLliIhNmMncCNnwWPpoBAabplAaUuLiiIIhhHHeEjUuTmoyfiIFYoTtvVxUuXqVPpyYJjwWlLvbBTtaAUKmMSLlskHEpmMjYXPiyJjLboNURrwYyfFgkKGldDpPLGoOKNnfFDAadGgNpPWwHCxTtOqNQqnQeEQqzepOojFUluXxUCVvgJrRjKoWJjFfwWGgGgwEVWRrwsCcMrppPNJlLQGgzNncCqTcsSCwDdvgOIiaAbPplLBKJTtEhEVvamJjpPcCLLTJgGjtYWauUAXxdDgiBbIGBcTPMwYXPMrCmepTtZbBNEeXAIibpPSFfHwWoOOoYnNMEeQKkdDYCaAcygcnBKkDoOcMmCrBnArzGldMxanlzNuUZSsHhclLgVTgdDkEAeGIBrRVvuyYdoZVvEeqQfFbBfxXeEXjJxExtzHMpcCPMLBAaUuUlwWVqQaAYaAyVvIuunNUUPptTQwBxXBbQsuUXOoxuonNOUqQEzfJdDUeEjJBbuYyjUxZTtHFfbjJCcAaKjJUuAakBesSzZScKkwWCcCsRrrVvhHUmMMoJjLlqQTVvTvexXdWIARBbGbBcBbMzogXxGOCUkPoAotTOktyYMqnNQbNqxXZzLmLNaVvhlLEeGgIwWPpAEmyYUNnqQTtuNXBbxNBbMmsSdDnFpPNnFvVcCncqQSsYykKCUsLlxxRNItGgRUurTqpwWPumwWwFTtqUctTVPpzZHVvInAadDNojJrZzRDUQqxXTtlLGlLkKRrghqQHzaASsJNvjaAoORrTjJaObBHhMmMmgQTUwWKNnoOkvVoqXeEyYaftTFlhHGrobeEdDvVvVsfrRFcAPpXtxXTxVujJvZzIielLESaKhxEtyYCcTLlQqGgeEecVvEeIRXbJjKHhpXsYUuVvRWQjrRJqfSsFNhHqQnHRRlLCcIkKooDiqCrRDbhDdsgGGJjKDgGdkRHGgXxPMmQNnwWlaHhAlRrLhHftTyDQnLbBJwWjMmoFpdDPXuUEWQjFfCcyYYzZvRWuUfFwrPpUOoufFbBAahHMMoVbFUYyCWoOLZjJXxZGqQwWypbsSwWcoMmOCnnVvNQnbahsSUKkAaJQfkvVOoiIrRvOKkpPCVbYyAkKecaACtTnGEAJaRHhjJOeEoaSvkKVxXYpPvMNniINnztTkZzMhjPpaAqQkiuvVSwWHsACckZzualLVWwoGPpgOxIigGRrlCYUtTuxmMcCXtkAFmuUBuXQqQqAUrkqQpAjWzZliCJtHhArdDRQqGOoZdBziIyfFYGhtTEeHVvflCrRqPrRkKZiDpPyYhHKkCcduJTtxPpYyTMeEnTtGgkKNixbjJIPpSGfMiImBbFbBnysSYnLDqQjJdXxlLwWrROjJVKxoOaJjBbADKkUuRmMrnPpKTfFityYyaxJtTkuMHzJHhtTFKkBiWiIqNcoYhHUutXXjJBYysSbKkFfoORTtuAaPFYyfpidyYDsSFGaAmMgSjJiaAdCkKjvVHdDhjJDJuUjdOofBbFjlkSpPsGYeEEeuNOHKknCOdcCPpUuTtDeEEegGTrlAnTtYkMhpPHqVXxNnIiMpniLhHpPYRPpMoOLJcpPeMJjDQqAomMOaEetWTmJkrDaAVvdCcSsqUOjJouQgkKGNnllGMmRNJjfTtAErsVJUulLxXEBYyIibExXqdDiuUjZxXzvVRlcCLgCctTCINmMLlmQDdSsEeRGgrRsSlbDZIiXtuUzZTeESnNxKkXsJjxzpPWRrYqSiPpfIgAOpHwWPlLpswwWWwDvVdVvLzFKkNXxwlLWnzmJjQqqhNnMWxXGmMgwnNdXLlHOgGZziUuWFfXLlIHhGcCqQgcBbbqQGaATtgBKkEJjHuUeyYVXQDdxshaAdDWsSfFQAqIbBRddDVGgqgGQclRrjnCcNLmLlNlGDdHhZcCmVZAazvtwnbBdXKkzsSlznfiZETdDMdDlKkJjLMGgmZcTjtTgGJEkKeWyYwPpxXtTjqQJWwvSsWtTwGgiLvEeVZznNlIPFfpcBbbBCAPRTcCsEehHqMxRQqNnaAaALbysaQOGOoaAOoZxXdYydDpPdpjmMPBgGbEYzZhHGFfKkDpPHhdEetuUhHYWKjOImPnAaeEITpPFffFZztNEgTetNfgHhHhGTFfPTtlLDChnZzNFdQUYqKFfZiITIfiTCInNjyrRDNWhHDriIKkyYsXXbBOoWjJrfyYUuFIeEXxhkKHiSsgGRwdcCKkXOoNnXaEeuOIiogGSNfpRUkKFVhouUOQCNnIuUXrTQNnnRrRcCWdRyFfkjpPJRMfYyKkvBcCJWcCwjsAasSwmMmVOoviFfUuoFfqQlLLgMTPzQGgqAaiIZkANWUvVwtqQYyTWEkYnRUGXWFfIijlaArRoYUHhzZGSsSLlsZaADbBfFzMmZKbBkgrRGwWVUSeEYsaWwOKkHdFfoTflvVEeyYxXoOMzQHsIYLDdZWSsVvXxgGQUkKcCEHExATBukAaKkNaeffFFcMiIYSWEewdqQqXRrnmDIxPplLJEUqQmhAVTcmMRIhARrpXyuWQdDnNwWqzZdzWEirRydVILocnNWoOtJjnCczyYlYuCNnFqQCxXJsSTvjagJgdvVtTyYcSAaeDvnNVKkQquUsAaRfgJjGFrkGFqQfmMoLFMmMAahwIIiJjnNitTfFUucRWOvVvrRpgGPreERcIiCGIiiIKOGggFfFfxqwNTjJHFosqipJqQMoSsOmfGgFIihcUuyaOoXFfKknNxhHIVoORWIYCULbKqjNjJnyYnNWwHhZzkrzQqZewXgGEeiVvImsmvVmJjjokKMuUpbuqoOQUTtdDvVyqjwWBCccCULlsSuMAyOAajJdlHSsyEwWykgGKwWNnssqnoOOlnDiIhxZzVrRvGtewxyYjJZRbLkKmqIAavTuUAMmxOoXaCWwWwcCctTPVvpwqfoOFQWPogGvVSBhEpPXxjyYbVvRrdMmNnWcxlFkKfLHzDdZqXWSsLXxlYwVCQLlyOQrRqaAuLUufFluirLmVyVvhHKwqqQQtrRZvKkNFfKeEGnOhWzXxZwWmChHEeIbOohHBQjJkKqsRrSZzYOQCcqwBTpZzxgGXrSzZsNeEaJrRYyxppKVvkOJjoqbEeNKBbvVwqZzdgGnSiIscCUvhYyUutXHaFsEuKSsHhheMAaGgsSzZhBbJMmNxCqdgGgGHfSlLsGgYysSRrYsVFftTtVvoiPpbzRpFYyezHmMwYjrdSyYfGlqRrncxihHIEeIqTQqycokyiYxZvNnxjJGgMmXeECchpXxPzZQzxNWvlLSnNKksVwjJqhHQnGpgTtGZVUjJuvzPnFEGgXxVRrNbOyYoBCwvxCONrRnNImMinoRZtTAhzQqQOoPkibBVxPpXaAadBcCbGBZzcCWdiILPuUTdYyubTSNRkhbXxBPTNntXKvApPatTMamVvMAUWGEvVWLAaiAfFUupEKZrRYRrRrdDyJCcoOLVvdjJDlLlRrmMjJjrRxNnioPCcWwRrpNnHETadDbpxTyasBoOVqECcMaiImzZSBcjPAapSsODiKiZnAKkwNncWhHPImTtVSAayYsdrnVPpZvWIioOzZfCcqNfPeorROoOOIiXuUustWpvxXUuUmxLlAaGbyteExDdQmMqIiIBGkdxfBHukiVvbQMutIiTbEeMzxXLUulMfFmQqfTtFcAtxbypPDPpdZBZzXxwpPBbqLBbaAjJfzZKkrWiNnIwRplbtXAEtSXxVOctmuoGgOHdDhlZXunQRWOIlYDSrRyYOobJiwWLliIZzIWqowriCnxXuMmUyEnCEzZyYNGysQqbBIiAEeXGPpAvVaGzZCSMMhZzHAPDdqlCcLpjnNUnMKynNJnNjvVepPaAEJjOtFfDdkKEYlLBHhbsSgaAgDdGUCvVcuPBKkVTtajJcCAznlLCSsSntTXkOaHoIAqQeEHNZFSBbMbhmcItTmMphOuxbzjJZhlIiRsfCuUHiwpPQqWAtTerEVsSvVRrYzZnvNqtFfmMTPptNKUutrHFfhjJlaACnnNBbYGgQqypgbEeZgHhwWyYZFFBubBUuUrRNQzZJtTuUDLqFJFOoqwfFJjWuUBbfbBOEGgDdvVXxeoFQRgGohDdHkKBAabMyTtjDdfxXwBbmSsDqntxXTlUDArRtgAOuiLPVBqFLuzZEeUEesKiXtdVvxXGOxlJwWBQqJjOPnNBIODdoURrtYyLUuNnTtdyYMjoOIXyYJRMmevVBYddkqQEewFnHhSvVqQMqQeEgGFfESsYmcsSCkEMfsSFzZmsOaRTtqpPQrtTMIeMdfpzUSsHFBbfhBbBbZzUnNxvAaVXFMVvhTtUXAaxnmkWwgBxzVHRrAaUCFgGpiUSORHQXYtHEfFbXRIBPgHhRrVvAEeEHUuheDdqQStzZxJVlLYOoYyLsrRXtTxwqPpHiaFlLsSsgIiVGgvyTehzyYTsjJJhLsMRrqQmkSsXnNMmfRqsSHhcgRLlVvnNIiYLOkcuUCKXIXbuwWUAKkaftucQmZMmzMIIUWwuHhiiqPpPamgCcGACQAGjbkKZzZpcEfeGbbBwtTCcnNCcBbWLXOrDhgGBahjYymuhHQJjdWnNxXmuUJcAXxamMXiIkbhXaSToOonJNnFfPOHhnNEfdutRjOHhlHhLAUuYqoQCUuWwhHxcPXxAMBQyYGgqilDplpwgGFKFQqfTtEBNqRXWbfONnoFnNMIyLxUINexRrXPiwvVmDdksrRTtaAFGjUOEyAzEJbtuYyQDdvVqTroOrgGRNmsSOovryWwYGejJEcsuUtTsLmIgGtMLlRVvXwWxAaQqddnJjZnaANwgUusqCOvMNnnNAGgaAcvjnnNnOAaUHZzwxwwktZzdDAaTKGgyYTZDcCdjGgJoOEenkimCHldkCcSDmMgmMWRXtTxQqxGpYzZVOovCpJnUufiIlgcrqQfvTDaJjUAfFaQAkQnwWcCUMSiwSJAuLloFfQUfPpZapSFdDgmfFHHfdrJcIYFfGHhUQqzPplLeHCczrcBzZjZhuDmEBqlLBfCeGgQqMqJognNVvMPpNnPGgNYyDdIiRqHhhHurRUmDjYypPBeWuUmqxahHCcAgANrRWmMoiIdaLlAiIlLsGuUgGnNgSWiILNHhnTxXmMtoqmoMlXghIlLOolYKkjvVGbBwWZzAgGdDOaKkAMmQkDHGxLlPSRrvVsHBoOEeaMmAsSctaUNuUGgxxpPaNSwIiIcCsSgYdDyVgLlXKyhYCcLOoIiKgnNhHYuCCLGVnkgGLbAaEcCfSAHhahZelYyTzPpZAatLUJdDdWwOyYoDrrsBiIbwYyroOqQlHMmhBEUqQKMtTmlArkByYyYoOiJPmMQOoqYyYwWnUugFfNcVVyfFjNXNnxRrRrMmMAZSszKYytYwAYQhJqQoOlDEemewxLtTKFfbyYsbBJjCcLJpMmjJrVYyWqBDFfdOoEeGcvGKkFfLKyYkewNnfFZCnsjJSBiIbYMboEEcCeyYAadDXhHUKIikbFUoWwqQOuvdgDmMeUoOOouvVdDtkXTsSACocOoGhHgGjYysSuQGUuGQqgGGzWwKTlLtSdvVuUoOgGfRLDtUdDVtTvuYxXuCIsSYyCKkyaMbBmuTdDnWvrDCbBYDqxSseEpcTiKyYkyFMHhDlfjJlTHnzNnZNIihjMBbguBbfwvNnOoVlKvdptTwWlLjJAwUKkzeEKStTtJKGxeyYXNJOonNWtBbXxxjTqsSKkrGjvVBbBqQGrqQmVvfiCckxiIXYAVjaeMmTLHhsIiIJRdDskKxXxYykKEqjWqQEeZTtxxWwlpPDdLXQduFzVvZyYltTfFsGOhcCHogSbBjbBobBOJaEbqvfllAUsSuZlLuUzGopPOgGgpPAKkFOcCzZBUubEeNnWwTBuUzvVBXpByobmJjGgsMmMmpDEhHAaQAEeayYPNELlIghjJHJLWcMmCIigllsSyuwHALsSlpPJxvTDdSstVbBQqGfFNnrnAaNogYyyYGDwogGdmMQqFAoncCNgoOXaaAAXkKMBMmbhEePpBnNlLffYoTNJjXVvKkPhCUurcyLVvlzrGgIgNdvwJeEjWVSsYGgqjnsShHxPpXueEwlZzHhHhLWRrmNnRrrzEsSeNHhhfdLfOoRluUwWmDazZAJvLlVeERrgGNVKtmbBMZzHuUMmbBVMmJuHYycChUjRrDbzlLguUYvzixMmxXFfFfXFmiIMWwKhGChHZehxqwWIWwYHXalVRrPpcZTqgGJzZjjQztTZBsKkRrSjNBBbPptTsSbncGgCyYTmhkaUKknNXxuAOtFRDnNzZlUKXNfKSjcvJlLmuUJjOZzBptTPCszZQqxXjYyJkYyKoAYyYvVzfFIvrRxXJZTPpUmbBXxKkFfEewqlfFgvVGtjsSEezZBbjxXeDyfFUuDrqINIieEWwAaEtOxxOSsAazrXxownNWoRPAQIiMmJdJLTtnPScCspexmMXqtOehkkeEefLlAauNnuULlNBHhjGoziIrIRrHscPpCbTtmMUPpeEtPIfFZzVvGgVIiFfNbVUubRApLWqnlaAWwMaeiRDAMmeGgEaIidumDHhKVVgGiIizDdZIvrRXxKkCcvCiIckMhHmsVvACrtjpWwfqQUgKqQyJHlmxXMAaTnNtvVbdAgLlzZrjTewyxXYGjUxXqMQeEgXHhwWxGjGgxnLYZzyWHhcBbWkKBNnbnWfvfyYnNdVIeEiWwOLzKeLlWwgdtTDGVvdYXxAMqQqbeEFHVblxoACcJLibuyYSQAxrOoVJRbBZQEetbZzBTJIdgxXGDrKXTAYyZzrRaAHhgKFarRkmMvmAWyYwrRWPAyYSDKyYfNPYyfmMXGgxudDeEGgWRkZzGghKvVYuVxYjHhXxJYKucaQBsSLYIYyEWwLEerRlLVoSsmacksSKqTZhHuUDMZODdNYHpWRGMzZgbBgYDdzcCjFsSUyDxhKYcgHhGzaaUSpPfVvqQzZbrRcCEeEuJjULFfGIypPyYPIimkMfFIRBbQLxhGAXzamyfFdDWUQwWwWPnNpDcCdvXhieEoAaOnTtRzSGCtTNaAHpdxXDyKkVQsbAaOXZCnrbGsSyyYodDyYQjgnNYyiHsXIiJvVrRuouwWKdmZPpUwNnzjJPWpPwPuUQMmquMeETtXBbBMahpPHgGCWJjFSMmBAjJPyYpavVWOMImuUMosUzqQZrRMmuiISCqQDEedKJoJEkhvVvVXMzGsiXLZhnEeNHzSYyHhWrvEeEeTKzZNzwykHdDMPpmhMSmwWoJdIUdZezZbohLlgVqZPJmYSMLlPCYXfAoVIPpCciNBbnIyPpRrNHhAXxOoTLltPhYycgqppTtKkQqJOvVoPdAHhaUvXvwLlJlLLlzLIilZzWwpaDHIitRxXkEFfZnNdHhioHeiPhwcebnNCxMmAerIiIoOezqQWHTthodDPCcXBUuTYyQXSseExqauUoOiEeIMcCmmMkKGxFJhijJIJsBwWfFRYyfmrHPyRQCcdTtJExXiPDjEfZNiAHNUuYHnXhWwTvaAHhOGgoCZzccfstbLlYfFyzmqjqQFXKKkXWIiyPPpkocFhhuveCczBRaJRpzFfZmzZgRrWyYwDdETtJvWCDdmiRKkgGtTqUuNnKkwWkKUkKecWGjaAyYyYqFxSsXfbBQieeEdDECFfSxXWwExUuEtTjJUuYETtMYlYWwrRzxGDSJjwomQqaChHbBvVSZOonYmMjJYyHzJmpdsSDuMvVmCXTvsKfPVvKlzKYyoRKTtpdRrPPamMeEcnGbLisSTtgEJjfgzZNnbBMmXxtTXgkiSlLsiIjnFhgNnVkKseEtaoOYyoTKmfFcpKPBDcLDdBVOoCFDNMmtbSwqiIlyYfFZZVCcTSpPwWhHNndDdwWiaYZgDrRHhZPEYTtXOomMrxXQaAMMfziIKMgLlpPkaAcCqhHKyYvGgXbBxKuuUaAvuUtFKkjIDXFHpBbuUmFfMPipKbshYeEyYzeWBbwjvVJYxXpmMBbqcCSCGgRmOgvSsyjQotyYHwjRPuDItNTtnkPEepfTtFkKsSkKPpkBuMkKmjJFfVTSSZzsyRxZFNfNniRrFjJJlLQwJjXxzzjUgObHfFFpxXWwPMnKkVjQqjrbHUfPpIdXJHkCrRDdsSczZKZzwuUqQfufosBbWWgGwwSOIilmzZifsLbjJKXcVvuUyYDafnyYfFNFHvBbbusEeuUSUhGZzgTPurWjMxraUGHgGqyhhyRowJtkFfeEfmMcCYFFfIvRVPBbjGgxXXxJpaNJXxaLlxhopRvqhgFPgJgKCTtBAabnMmkKbTVvOZBCQqTxDwccCCvamMQMmuMmoOUzZjdflEzyCGgRcfFCCcsSTWeEQMmuYnjFyYHgukoOUiwWWeEmtqVvtThwWkKtkKTFdDfwMmQmXxMMeEyAatTUIalXSsxbSsIbvVMSSsYRrsxQXxTSwWyYKTtvCtTTPkdIHhlLnVvlGghdSXxCTjscnmMqcCmMsSFfPHFoOgTKwCdeiHotQqgELMHgkeNKkmMnzZhHNnddGgDDUSCoCySssuUSYcOFWwfpPJrSsKPkKkKkKNOonmeEYOTtoAahGeEgHdYZzBkKkaAKwRUurAEPpueEVvVqndEHhKkinVvaAKkIsdJiInNyXMaAmxqQtaASVqTUMoSsRnfFIZyYMmqQXbBSlxVvRIPjUSTxXvVnfFJjDdOoDKkdeENJVvqYLPprRWdqUyYueEnoOuUEeNEFlXbBxPfhtTCWweEnGgokqQkKGgKBlSsdzCtTcOSmiqxFpWuLXxBRSsHuEEemLwYyGdTJjtDIiDhTtFfHdhHGGRTfFGgCeEcgCetsVxTUiiHNvXxVJgJXjJZZNBNnVounXicRrCIRnoLDjXxEcCwWMmeJmmMyHRPpqdOoRzUZzTxRpzZhUZzuFdUEsHLRUVgVvVRrCzBbcyYaNwiIaBdWwLXlqQLEexrhmhlDZUPoAFfXOUoOakKUuiEFxkZzvVHhkAaYMmSqQUpsymBbwLlqOuWKRJjXDdMmFfxUumMaArHhnlnkvmujJRrwWUDcIsSodVvvJoOjBbebBoROorKkFfMmRkoDvRDANnkKpPdQqExLzZlBbxiIQqaPphowxyJMmWeqzgGZFfystTSgRrSzzZCcRXpPRJjGgyYlsZqQuIoOWIilxYyYHgZJuTtUjTtjJbtDmgCmMcgGgydXkKJxBvYltQDdAHQqDOEYvkivVxjjuNxXBbEbBtSUlScNdNiKeECckoOoEgRAYcCmMyswWaASbqWpPRrakBtvpMwAXMdZotAsXpPAaxXEhDdHwafqQjpNniZkKzLcjkkIeQCPKtJseFDFYyNIEqEeQIiVjtYpPDfpYPOKktTEVYpPhkNwtTdNpPawXVvttUIiuZsdONtaytVvrVYyqFeeQgrRZRcCrAtkKAZdTbBtvbXlRrcXxAfrmzBbJjZrwIQqtTUuiOoWsckbKvVkBKbbXxBBuUCbRDZKREkoOJFjeKUqQKIiOoFvsBSRrGBbbvVAHdRVQcCatVvVbzpfXXVYmJmTVaCckWwKspPZHhySTjICwgGmCcMaFhHSUmSsVtTRrKoOkMEexEACdDXxsoKbBoSCrROMSsmeEyCInAaOeoOovVZZPlLBJnLlTNWvMmmuqExXebmkuIXxReDNGwssSSYUMNvsJjSKCNaUuAWUpPuqqQzqMmLlBeEkDXffpfXEdDFGHZDTTBbeGgAfmxXxHfImMdGUtTbhHBGpLlPlLgugDiFhXxcCHhwZzSsWXMFaEtkKtdzhgGgfexFEiIePFFxdKNnbMmSsQZQxXwFfnckVnpPmuyWgoOFfndErFfiUKMBaAQUMVwntyYNjbpzzOrNqQnRkKEoNiFfcSQkKqsYoWwcsOkOkKEeScaUueXSsmqQmMRrvMusNnIifAnNNnWGgciJtsYzSAvtMjMyZzqemgGMEQvGgxaAxFwaTtzZAWPZBvTAqAaQqvrDhaBgsbSVfbBkuSskETtJfjKGgerRrkzNndrBcCiIxXSRSsYyMTrEeRtRFajJCLZzxBVgMmGDoOzaTaYyzAaGqEEfQvRvVUuTYFfATnoDSzTTxWAnDuUWnKHuUyveyYtToMmpyPFrYyRXxdEbaABeyTTtUuJveiQqnrMmRfdfEswmMWSWwkKSjTkpfFcqEiJjKKJClIUuPyYXTtxJFbCcBAKkWeiIxSiIaTOLlzholLOHZzDmxaWmPVTbKAImMiwQBartTGeHnNhOoOInDxXnCsMmLusTaAexXnUJJXcCIvVKVoVJXxjvOyFhHfeodhVXxvaBIibqUvVueEJjTLSszZyHhVbXjxXoOxDYRcCtgGTrGGMdTBYyKkdbBDzGhyXLwoOiUzSdDLzZrxrZsGYMfFmQqQqQEwjYXWOnNBbHAFhHfXXeDiIaAadaArVBbdOKrOPpEMmVDODdiCLldMVKNLMmWwXxNkwUoQGgWMaAYSPusyYKkyKvVKXfeIAPpuoxiDdIaOpuzdLHMTQTtTtqBbtPpHRlxXDbAWFsSfnEpHhPeAowWdDOMmCZcvGvurlhSeuDfHiIPrXtuZoOrDQOorhMmbBbBYMRPpbBDdKkuUrdlOHhmMNrxNUOUuvbnzzdDxiIjGjNndDnSshIIsSutXgGlvVLvSEeTEcGOoQFfyYqtrggIiGggWlMeUhHhrblWwUwPfXQIMsoZNJvVjWwnDLbONEecvVtTHFprRLfeOoQDxXwlyQmMqQAajtsBbRruJpicCrXLsuUxZzziNrHhOmuKAapPkWwtQvsTYkKodDOjpPDSiYyNjJMmJxXjIBbeDNQvEyYDdeUeaWbyZzQpPqbPcCpWwBDoOeEOVvyYoyMWQqwpkRjcsuEKoeEOGhmtUuTleGTOhHhxXIEDcWlLktGfrRhpQqAapPQNNnCSJqQtcsDHLNiDKptcVkstqXSysmBimMxXBLGkKCcCcgAiLluVvYmqiImMWuUWwHQZtTzeETMwIWwuKUGhfIiDdTtJNyhHUqwtzXxSYyAasZKkhHuUcCrcYUuZeLFDJzZafFAkhSsHKqAaorRpPOAViINnnNWBbpPdXtcbzooHhOkKtDdBkKNckGnNjGpfGkKyYyYHQVrPOHXAjnLlAvQqPprVZziyYoOfAayYytTPHhpFlLKTjWOrYHHYQhgWwuARpPgGXmJyYwRUptGvVguUHBVFTLBbltfhWcCwveEVAdtTCxkBlSFIMvVLUuFUFUuWAaiqQiIIhjxNnDiFuhBRJJOovNNnmfhBoGuJZZWqjfIFnfzXrBbYstvmMUbKwWBbQqBbeEOonNKBbePpSshHETidUprzZJWEepPkKhTOqkKZyYzJYrXxRVGoMrcsLlQPydDEZycCIiYymMjJHSBkPIhfCcmMtTKkxdiJfTVqQupPUUhHkMmSDdsVkQPpKJjWwTtBbGmkPpZFmHhXxiImfFqRxHhyeHzZhMOPpojJMmHvVhmMmNGgnXxpyYwGrRYygWzZzdGzyAIrRDVvqNnQstzZvzzNnlLLcCQWsBrOoRTyYrRkKfFLlnBbdfMmhHcvxeEXblCdbgDdGpkYyYyPwWCaAMkdaADtOYCcyATSvGyYHRrfoONJvVbBiIIxXKGzZxGFBbeEesSGBbICclBgNHhCApRrPppDPkeErOkZLkdDpFkaASVtxcUrRsSPMjZheMmElLyNzscAnNMOWsdUuhHgXZySQaAqsLymCccCeybBeXekKgGscIJgwCQqECNncupPjJQrcCIbBMsScwJjVjeGvVMPrjArbqQKkZEVDaAdUHHfCOKpWwYwxkxfbPSspfFBJQMoOZBTSFhFfHCTiMmQqHhITttVtHxNhSsdDynhrRaItTnBbzFeJIiPpdpAaIHhejDqHhQqrYRPpIirphRsSFfMmMFrDdbSnNEFfeDdlLjHjfXgaRrSsJjAAtbxpTtOwTtZEiRGgEalLlrRjJHaAhaApPbBzZLhHufvVaAFCcUXcRiIgGrBECfFWHIipIEhOTtFfIaAKkEeuoOUDzeKyYrCcQqsSThdAPZjNnWwWGgVZzvVxVuDpjeEaAPPQGCHpaAanfFYivOaFxycJjvVpmEesyMoOgTtGjpzQvGHOBZYLlUJjuyzEnNzDuWwiDjOThwWwWHtJQqjMsmKYaIiAWZnktEeEeVRwslxoOiIIPpWwSgZmxwWfFHKeQqjOHhjkUuaKkAgGqVuUvQcOmYcCyMJjimmMowbsfNsSnwhHcAmbxGgqiIXxQzZmMmGgUZmMzqQppTtZvVLlWrxXpPRukKzMhHkKIiBbDkUOUWTtDdwjxqQSXxhIGJqQqOYgBnNRGgNcoEeOFfzxyYoWwBSqOovYfhHqQFyYAaPhsSncgsZrvVGgNwWWRrwQqqQIHxVkKcQqCeEquwYMALlZxaKBbkgzZSCkSsKLuUlcyYCcsHIiwWXlqrimKMpjJYigzZDdlecCBqQGoOgFsuAAZKkgGCykHvVXuUdYufJZvVMmyaAGzZlLmMVvGmgrwOoPhynoHhhHzqHhQdqzZQeEDmdoOOWwonNztQCAMUuOtTXxvleiylbqACLEeTtKklUkWaAoOcCwUuyyXvUycmMCUuXxvVkHKrwFfWwUFpnFmhHMkhlLHdsMmapXxwKkaMVDdKXxSsGghHAfkGatxkHhKkRiVvjqzrjvRXaWwqsBbPpUBIljaOXyYLBvhfBQmaGdDgyIiDtTLlEkZlTtorUuRvFVFwNsLlSuUwZzCCcTtwlNndDVvNwWXJqmQuIiJgMmaAAXxaxXWEtJRGXIixaDBXxLeESshjYqQkGQquFPJVvTRcaSYFfyuDnNdqAcCyYjJaQUFFUuffQqdDdMUDdrFkKfIVvEAmTTttZhlLHzbBWwXxekKBbELNNnQwlpVaUuAvPPUuarBvBnvwWfFipDdTuCcgGKPpkKkBHhxXSsSZcCzHhaAhijdyYDJRrRaAZOgJbnRrUFEKKHEoTQEyYNljDjMOomUuqFfaxXNnprbBOcCQqORZoXXoTeniRrNnQaARdBbYdEJPpJiITBbLQTtkKWTcCFfOoVvtJjMupPsStzjtTViZyaYyOScdDknNKboMjVCJsXxkIcCiFnxkufFLcCdrfToKHIiXxMtLlJbqJQtdDzCvLVvApPwWxSYyEeshmMyOoiBbaAQXHEzcgHkfIZVbBYNnyyDdGZzZBdRrvhTkvRrnyYLKklFfWwsSjdMLyYrFlDFVvHIikKnZRfFMnNkKUNCZzcqFfQqQJQyXxvVDduUDnGlLiNnRSZzsZYCRKkcHwWpxXxntOMmyFFbHmOoCcxlLxGOafDdnNnNJYyjolLODBbIiOWdOrRAaRguqqQGgQUXjQPpfQqFqahzZWUYLYyLGAawMjJmljlIWwiLGienpbBquUedPSxXNnPpMBOYbgGkKPNnXxxbqQZbqQtMmBbBRjJrVeEveNnEbofatTGSsgaLLFVQBeAnNsSLRrfmMpPUNnTtDHhUucCuUqXzwiIJMmMmQBbeWwXSrjiSltEAJvayKSsIgGFOomMMRgbYIZziyyYJgRQtJXUuTwjnxEXgkjTskZrRunNWajJPDdSrRsDVkLGgWFMmUiIGmqQJVZzfFvtGgLsyYoOSFLrRdmfYItCnNYygGPNnXyYQdycdKkRVMiImwNGgFfdDpvVPtUsSngGNcCnNYyHFfhAYcicUyaATdBblrFDsTtkZggDdgCcqUJgCOxXcatxQqWwKWwYyTEdGDkKVLlfBXxRGgruxXLKklOoxeOBFfmysSNcYyVvzWmMWHfFhwLlElRrglLVCiSsIgbQwvzZRPVvjSslPpkKNyYWwnSBOoklXWpPaAEMdtTLjHqyYyhHaWPpyTkLljdDJamnJYTmMtBbvvCRrhHXxndDLYylYymMGUTtuNymMVvxXrRpjIZzFfbKRaLRgGbKkBrkuHhebEUueZzmUuMLRWAaSOoWwRRjuVmMvEzHsFeBlWwqQOoKNvgMCcmlcbSsBcUydDqQGklyHYTtkxGvtTzZGidDWshHnAXpNnPXGgGgnuSmMsArRMmTCSjKkYyJjJsjJbhVvQqpXZzghdfFIiKCcqQfFOoqoagZzJyTmMtLiHGIBrRbivVxLmOEeQqMQOlLlyYwpPjJDOwiIJjnIiaGXQMwEeWwXxxXkKEFfbJcCrRdMAaNSsvEeVnvpPVQXKkxaAroOnAWwapPpmqQGOjQfFmpPUyYxXuEcFbVvUuUuQbeMdrRUuXxUHzJYyBwTtqQuUWbbCRZhEZuFfHhCcgyiCWwjRDFhhMGPpfAasPAzOoFuqOpPUaRrjswWWITtsmmMuNBbKkfFMmqKdDaquxXAdtVtTFRMmnNCGjJUuLFUUuuNjPiIcUuybBPgXsSrwGdeEsjJKvVYyDLwuUWhcMIuUKpPNpPqQsNnSztIiJfFgGQqjWILliWGgXyYLlWhwWuoSsiaAIcSsCNvVNCcJVoOCqQrRcCxXwWaXxYyTtGOogmVocQKkhHRYyrSRrGWzGgJjNDDfFrmTiMlSqQSCgIirRDqwWQdygGvGgVXxwWwWgGwJxXjWYutTURVMaAnRVtTvtUTBeLlEjeuUZeEaYqEeQeEeLlgGDdouJlLNnFfgVvfGgSKMbBWwWbxXBIpEniuXlYmMimOoBwxrdDZzQnbekXxfWOoPLlLlLPdZzDddDLIbmapCXcpPqyYOQyCVvcaPpoJrHhfnNFTNnUDFPpoKknBbNONEenQqeopHyYtbBThjyYNUuOtsAMmxHeEBHhKQqxGgZzEeCjuUMwDaAqLlUMJTtHRrUukKAbrvVRHdRoxlBpPgEFeCPpdDPMmHhzlLBJgDyYdaqcaMApCUTFBxiiIxmMolJjyrGuuUUCABbacCjJQrFmMxOhHoKiOoISHhlHNnjStUurRZHmMEtYpgGPGKkpPSfVvAIhfFQWNnKkKkSlyVXxvmMvjPpXTsaHhGpbirxAaBehQqkKKkTyxqhrostToOufFIVvVEevPiYyItTfcuOoxXJjhvZXbMmGKMNufFHtTmfuuZUaRrAuPFogGnNODyYmEiIAakPpKiejJOoEmhHhHAoSRreEeqQgGKMHhBbyYcCOKkoyemsazZAwRuUrWhHNeEfWKlLIiDkKDAmMagRrGybhHEroOjxifFJmrRDsSlTufFWwibpobjLiIXogIlLiDTxIsSAaIikOyWWwwYoSlfyYQbvplIUosSDdaGTitfFTEeYGgySsIadfFRrCcCcuLaAlLNQZzLlFfdAaSsFfsSMXxMmBbWVvFJoOjJwWYmdDOWtTPpwbBrfjjJLlmVvMfdceECDQldjkZzKqnbqQffhHzGzPpBGPNtwWTfFcbBLRTknTQIiOoaAnNkXaABbxKnugdDZTtnNzGUVNnNZzyveREaZzzZIhcFHeEhSrLHtTBgGzZXUoHRrPnNUuiCJjMHgGmMBJjuUmsfzmuUMnVvhMmHhRraixXOhAoKxsiIfFSNjcCJqQVvsclLNZUvVjJulLWwuCcUNQIiqnvwWCcSsbRroOpAaGyMmeToIiYwWkmNrRuJEePQpapPkKmmscgSHhskKgxaSYSsgnecNeYYyNcdDlLIRiIWOUuQwjBsdSsAayLiQqowrqNUxzLUMGgmMrRlLTCQqovzZsTeaxuUTBSssSLPatTuUAuUFlAaQxXWbHhzYBXDnNdWwTiRrIXxaCLdZzfFDCcdDlZmBUmMmqBKkIiIKXtTxUhbpPFXDKwWgdDbhHiXTeEYBrRVbBvpPgXMuVnNPwTSIiUxIioELlpnNBbFSslLSsNQqnnQeEkKFdDwVzvdDiINvVRDSsEevTtMiTMmZztpwCWaNiIzIkIdRroTySsYtJTOonNtCZzbsMAmEyYedDenNQvbwWSAYtXPBAtehOIrJjRXGgqQzrvVaqRrQAhBbHbBexXvVERhHcCVvkezZPfHhFGgaIljJwegwumAarRVkbBxpHKrnNnstOoBUDJjtwWpBblDwxQBbdDQBbqTDdtqXbAasSgEsSYyeDAJjxXvIuUKxwWXpqZHazrnNcXVfZzFWcoOnvefvVNgXZqHVzXxXyIqQYKOCYZzsStQiXCUfFgGuOodDNWUuwLlQLgtTNnFsDRJyQqWyYhUuWwZEfPrZBbBIOTvSyRKkrRrSsFhDQcXEjJxXenXxMmjHQqwCcWmEHovVnNOJjkAbBqQAaaUDdtTeSdDIifqQAVFfvhKWIiwkxTHuNfsSSsLYzZylFiIDRrpPPpQWknBrRQPPXjAnRPtboOaAZcCzmMrRWTtoLlkKylLiLlLlcMDdlLwHohTtmJjMHiINCcgknrRSslLFfVmMzUuTqQWpPkYvMlRfFIUUoYOcGgCoqvJjNnVnNcSsvWTtymTtMwxQAahXCwHhDYyBJeXxnNHbsXuUxOptViQMlBrzMjOgxXGoJmXphHoOgGPWEmMTgpPXHdxXkKNbBLgGtToNQUunNoOSSYSseYhLfVvFxXDoYaYbOoBXxymbJRrYyQYBPmpPDdqcCQEeOJxdVvDGgXpXxxXPpooOOPoOMPpMSMseEbBQqSrNnYyCcRxWERKicCIcCJQkdDBgGlTtucyiwPpWXxwIAadDirviAqQYCdDwWzZHBqNnbBeEQbNnjPIQSOcCfhtnWKkQXRrGJBbjokganFfNrRcCAxXMVvmVowrKxXkCnNQqWHmflDdEXxeOgKSvVaAGgdEsClLDGjOoGAJVlVvLtjcokSmMgGVvaAsKqqQQOfcUyLSsnUoOuNZNTwhHGdDgmMsSCOalDdLqQDzZdADdliFtTfvDaAYRrkKxXIeMmwZEeDwUYxPzZaHaAirCtvxXxKkXayYHMmMuejXidMdDNxQqQDcCsEeymCEAAaraRrARnhcCHKUbLlJjaAtabBXehcCeoOuqwDdEeXxzlQqyilLSDdbBhqZmUuwWLFtxLlcuUCXOqQDhoASyshHuvdpPzmpPMgGguKkkKkKyOhHdDLJyYbBwxgsSurNyXxKesJjOonRrNSXxuwnagGtTtMmTKptmbBGlOWwIcCIieEoOMOoWSscCSJjFfbmMVFPpmFfrzZKYlLrDwrNdDNnjJqtRRUurxwWicWwqHvwWfurOoPFnsnfFEejoOJNZzVvUAtvVTxlLxDBbxqQxSUuSsSeCciIEFfBbsRZEeBbzdwsQJjqSjQqWyYwJniIdRbBrYuUJiEeoOctIGqQGggFivVtGgzQqCHnNhfhHQqFdDcWwkQyuqDGgWfFwfTtHcKkSssSdAapLlElLetFnTEtGeLlTtGCceEeEgnicCNpMioJkAaXxwyvlDdLVTgyeBbpJNIinPdDDDwGgxsEegGSXKkFjJeEvnNVjJOofWzgXxoirRISsqAHhSbBYBlrXkKGgmLlUuQStrplLazZVdDTWwttCzmvVtKkeNnzIFNZJkKjDdqSdDsQxXBbuiUuIULlZzLZxDNkKWTcCNnlSsLlLuUMlIiLzgLnMlJLCnNwQqWoOvDzSkWwdDybBYKsEeZrHhiQaqaCtTcAwdWwDYKkyHSXDTtdJjqxvEhefFeElLbbBBHhClTDdtLiqsStTQxwISsohxDFfCcmXxHQMWwLlkKZfQcCuUqZlsSWShPofFBREexXSsrbaGiFIsQQqVNnvydDwBbdBEepPNnLVMmvHhsSrqMnVvicAEeaGrJsSuUIQOoeehHjTtJjNKkdDnsSrRmMvhHDOmModSReaFnrgLaAGgNnLGgQqDdRKjMtmMwTzZdmEpPYoOkKylLwWCjNnlQqmTtvRkKEeDdMmrVeErylINPZzecCEmvQpPmKyeENaUuMmuUoOLqQGgRtSsUuUXxuocNhDdonUNnxXWwdzZeyYiIEDygyYKDnNdVvLJJYycDjJIsaAbBsSeZzEfIUrxBbtTxSsTUuyOFfCFfnAnNaCxXCcHhcTtQQqQMmqpPwIbfeRrtcCrRTEjrRMmZhbfFQJQqrRXxjNgGnqBmUKsSsSjXwMmtTZzDdWApPdDLlPuUpYWwTItEekMmEKkkKeNHhoOpPdaBbVvPpYhHyAXaAkqQvolNtTdDNqQHyYhtTgWwsEeiBXRrImtXjntTNUIzpKkQqQcvVBbLFdDjJgZbDzgaTjckKILwBbJQqaKkPoOKYyRuNnaxUbMfaKJjnNDduUTrRycCcLXvQqcCAUKaShwWsUMmInNKJuxXUHmKRrhlLHZsoIiOSUTtuRrrRmVykpPMmKsAwWIiyYWwrAjEeaeXxgNMmEQZzqNnaBvyYcBboObBoVBTmGgMtbjJCcJjAaKFqjuHABNqNjTtJtHhBbTlLwWgYyGBfFtTbBPYgzzNnlbBwcujaAJFffFQqfBgjJGvOmmPpcCVJjyJJjqwLMmlextTfOlNgGqdYuUFnNJjRrbBeEjJLqxXpeRrEETtrRelLeEhrYygSHBdcbeEBQIdOOirrheEwryfFSKkKkxMmPkJiIzLlZjUiIuBAaxriCtTqQXrRHlLkAXxsmMflCcLHSshFVqCcQULWwlvyNnRrSsNnoOQFfqkKYMmaCSBZzvNnVORgLAqQxMmUAauQOWwutGHhgqxHKkFfhXGKkoAtmpPHDdhlFvVfLMJeEuUVnjZQqueETtdanLlNoUuiIzZOAOCLlcUuiiKkIHVvhhvCdDCcfBbnEeNTtCcUuSswWbBFAaupPQfWIiMUQinrIiXXeESuNfVvfJjnMeaiHcCAnynNYlMltTuUIiQntFfTBmTuURdUuDrUufFGggGQqKaOpKucZuUKkDdPpmCgrNnaiKkWwwXxDuUxXEVaMmAtBbtOmuTtRtTdDEhzKkXuJjDdFZeriOoIRuZzUoOgGHhWVvwSqiIbWqiMBbIimRrvkXxAaKhHsGgjJSsSEeLubyYYfFylzZmjJwoOWmXqQBbLlxhZRrTXxXCcewKkyYCcWFzODHhyYxXSsUbigEaeKGtvGCANnalLkQqKzKknrRPpZLuUNAXmDLckKCxXgZWwROoaNtTMmbQqRdbNPpCGwaAlLWqmgGyJjhWwsBaACcavVxnzPEMcRmFfQMmqHhckKCpxrbBdDtTrRVvkKRyWmSsptCHhbwyBbTtlAaLllgGMAeHeoOjkBbIioGDdVWDDddKDdkVvJjtQNnkKZJjnNqjsYySPdDXxhHpzZnPtTRmSxXveFfOkGcLnNufJPEZoXvZzVchnkKxXkOogWulnNLnOBlzyYZYIpxvVBbyPpJkKoOPehaAoOuQlLOdDEeORrMXxtJpoOPmMiInNfFuUTtPTtObBLlsiIFfSCcyYltTLmjJhOoOGhvQpnrIiTtNnVvcCvsAaRVhtTLQUIiuAlLmlItTnjOoJPpLljJxTraAHhLluUrRfIPFppBbPNFfnWgGwDQGgRrqzZhHdDdrlLtbBcCEeiHUuwcCaDdXYsvGDcCdbGvVfFvVMmgIiwWeHhEQLlotSbBsTkKjHhOsjJycnTtNTtUuQjJqUXKZNryYRXWwxiIlVzZvDFfpPdKrRrRANneEKkVdDvLoZNZzVvnxXtTQNhBbgGgvKMmFIcCiIiTtXxTTttsJjjoaAORrHhEnTePyYwZwWiIzlJjLpPxXcCUxcCxXrNEAKWwNSsKMMvEGgejJmGgVvpDqXcCuxlLUUuOXxoWwvVuSvxTtpMmPGcSOXYyZgMmGpPzuedDEUToLKtIiuUrqCFuwWTIiXxVfdDFvzZrRXxzRrRjUuSsJqtxXJBbGgaAjcGBPYypbSkkGgiIMhHRtkDFUbqQKSkFMhUBbqesSgGyhHYWieEWQqXxuSPhulHjGiuUpxXPQGgaAaPpTtoONEenUuixtUwOJJyFfYrRiIgrRAKCcRrkySXGPDIivFftSsTMmjJWwXxWwVEeDdAaHFOlLZVOtcWwCTPgcCREGgKMOorRbBGDdgkAarRvVOuMmUjeECpPVlLvkiiQiKkCcJkimsHoORQqUMRDvVdrmYyOhHoPFfKlLrRkiIyYzZnTtbPpHrRtgcCgAlLaGZRrPpcCFvVHhNLlXxXYyxXKuUkxvBNSLLeXWkKNRrQYzzVTWwtzepHhPgeEuUhHgAMWWhHwsybBULlEgRxXLhBkYyTengXMGnbBGgmMvVKknejgGJGgJjyYPnhGgfFHoOfjJFfEeQqfFXxAfBbFBKkIaXwBJjbgGWxuUAargNPpnSAAvVgGaTPGgEoOnNEewGgNtOoYyTwshHSrUuRzwWdDZUuqQfFDdoOsmMSQqLRhIPoeEOAapPoXBbEetTxOpXhHNXDXEeoIidDdrtTRQAaqbBZJfLuRbXxgaUIiLgeBbYqQnEiHjvxXVJbBkTtKpdBbgaeEGMmmMgLhtTdiIaoSsoOONaAGgAKmqrbsSmDdMfFdDTkwfFKlLaAgQcCZmNQqnNaxEVvlBbvvSsVjJAzXtPMqZYVvFGAifDdFIAaRrIUpGgNnCAayUqQXdDgGhpYyPLfHRGgKAakrhGnKkbBNcMObBPpopPvkbgGsSBjJKdDGgVKkyhHXbComgGHaUuyjJoFfGAFUuWryYbIiQqBRQpcCsQRGdDTtIiGgwAaNnNntigfpMmPDdviMmZfFzMmjJKkupDVvdcXxZzkKCPooOePpMKjJCzYyZHhfFQqeWwzTyMmlAaLOoeMmsUIigGMmuLlBIaAoOcCcmiIKYyVnDdmEeyeEqQIuUCcMmZgRrGhdkEMmnNXxFJKdiHFfNnhKHxTtkwWwIZzuJJjjRaeQqxuUXktTRrCWsTAaIBbqqoOafZNnzqdtTwWSsfAaAzZbsZzFKeEkfLuUIcpPAJjhFtchHCJjwmMgGxXFfWusQFfqDLXsSxwFfZzfFWwElPpMQCccCjJnNfAOoCtqGlBzZUwWIHhwWiuUCGgcsSRroRuEoTjnkMmhaAuUHlLokKTtKkjPRrOoXxSspNwWXxniIPRrPpeBbOoGTlXxLdvVUDduZznsnNlPRrbqQBSsPplLpLgGZzZmMliEeILquAajJEnNeWwUZzdDVvGgQGunPpNUwWCvVcUgGuXZOSsNTtnYvdDdWLuUFfCzMmoOaAzZvVzeHWwhEiiICctKMDdmpPHhKHmIimcCYLBbvXxVafqQjJTCcIrRgnNbBtWwZFnNjNnBbqQJfzTYEWkXdHihRnNiIrCOocXxvfUrrRAftTtTFDdaAsSPpwWJYyVoORrvbBNnMJjpmMWlsSOBboLiIeVzZAaLLwWlzZSsgxGNnitBiCcILqQccfFCZYsShyXxYIwWiHutBiyMuUOocCJIijwWmyYNIfnNOoFSLlfrpPrRQqVvoFfAgGuUjiBPpqQQawWtceEcCBbCcbBCPpqyYQlvVLWPYCcyBkgLlGFfKbziIZqLlRrYyeELlcCaiIaAzDbBvwWxAzZRrNiInOoiOraWgZwWOZBqQbNnfwWpBprNnpTtPIiGtyYqDMlLmQqHVWwqrFfRQelCcDdGNnOpXxdDKDdcVvCxopPYLdfrRFuUpHhCcPjJjJiIeEdijhVvHJcRODdogGDdgcLUnNSslLulCDXxTXxtFdDtnbVvByYaykKyHwHensAFfpvVPHBbQqRrbvrRZoOyYzTtfwWFUuVlcChHnSQpPrRifOaAXayryNEeaFYylQfFeQqukKUzaiIOoTbVpGgHiNUugyGPpgBgeEGUuhknwlnMmKkNLlvpcCPXbBxVXIiBsUlizFXxfnlLoOtTsEyWCIiGgkKhUbBuHaDdeHhEizNXxnCDdeqVBfjJYyFiaAIfsSofFOmPQAxYkdjJWsFHhOMmIitpPRrqQRrJjxXfFCNnOowOocCWGkiIKYhaAPBoOCDsTqzRlbhHTHepGgPpKkJjnNpPDviBbIrRbqHpdDQgbBJjfFrGgRGrRrRIGNvVWFpPPRrBGkKGgUupjJPkKPyCcEgGeRrCcOdDoxyBCAacTtWwHhnIqZzQLlwuUWEsmEEHeicCIFMIimlLAFfAnNCxNCcsSyYTtkKKaoPpOHPpfFfFBHuvVnGyzZkeEKtTfvRVoOrXxERrRrDdiIsDdfFaGgKkzvVQgGJjhHqZCjJhPnoOEDTtuifFhHIURrxpPxXEsSbBpsloOLeESgGfzvVhkKoOcHhXxfFHDdiIqAaISsnrRyZzSTyYyYKwWkNFGOogRrVvfsSAXxlgGDbBTqQzTtNwWnZsSIiPwWpYEeGRNcIxnNOOeMmEpPPpooXSMiIWwdDgUueEGyTtYjJvwWtTmMRnoONrTtVfFiwWnNLlIuUPBeDoOdEpPbmbXXxxXwmMWXxNvPzlLvyYkKCmeEMtTZxSGgskKwbQbBqBFkKXxmhHMpPfWXBbpPEezzZnJjLRrlmMtTXxodlOxXTZztoUKkutJjRrHlLXpbBGJjwDhHdgbyYjzZPRrpJvVqFrRjJvVfjJCJaYyddxXDcpPsSxXxAKkuHhOdDzZIIiypMuUmUNGgGgdegGOAdeENnaAWwJcCIYyUqYycCbCcHooOICkKfFQIiqsSWUwlJjLGZzYyEelGLMmlgEeaKkTUuZzbxXWwBfFtlvVMmLlLKzZkaqCcvVvqQVQMtTrRmvVFfuULlOohHAzZsPAsLlTELlzOsyYmrmkMmJjKTjZzwpPUSsDfaAsSFdUtOoTuqMmnBnpPCnNGlHhwjsAjJHInNihawNHhYZaAdDNRdXxYyDxpndKkDQqLsSaOowWMmtTAyYKkiIKkooOUupUBYyVgGvUplLPfFAaubuGFxXaFfDdLlkmMbBlWIojJOiaAJjltTLBXSsSsEGgbsTtStTliILrRBpCfFJjMmULlbnNBucPAtlXFoOLlALlRdKkCcAaDUuFfFfnvVaAXVlLvRbmMNnklLqQUuigGIiorRYZUuThvVXFfxHiPLkQvVqxaAnNqQCqkmMKgBbGnkKVUuvdBHhboTqEJjehgYyhHGOonBZzoOgGkKuKkQqACMmFiIfbIijJyAaCcEeyYYmHhMpPNgIieyeEuxsSqSHUfsIeGJNmHhMsSuleFnNfMmhHzyrcCRYvuUsSzZuYyvjaAjJJVYyFfHyqvdDVlLIiQytMmXxTmsPeEVNfgnNGCYyyAPpeFfeiOoZzJjIDdMJjxrRtTfbezmXgGxGVvgqQMZXxGgVIwDrylNnesCDmFYyfwWUHzZaAwWpgGHOohPpWqBGgbqBbQipCchHnNPIQhHSGgyHhYUuXvDSsyYbHSwWsKmMkhqQjcuUpiIiJmMDqQCcuUjJdjoOgenMbBmEevVfFxXNnNQVvLATiItKGyYgGgbmMNVvoOCMmcnBpBbPpWwPPYypQLZCczZaAqQejbQGQbBVBXxVDdIHhsSsSLgGrNeEtTjJXAaXuUFfxpSsPJMXxmjJjxWsfmMFksIivOTtpPMofFNlLnAaZzOPrHhRWwpZEapPxXAQIiiDpceaAdSiIOoeQqEhHiICcJjYyZiYZIBGgdXqQxPpDgGEeYqQWQXxqbBwgVvGgGZoOXxEezZjJkKuDdAasbBSUsSzNnKPSsTtOofFIilvjJLuBuwoOWSlLHhsEeXqCvgGlLVbuUpDdPAcCAaajJBmMHgGeELjJOolTtPswRbBAdDaTaMnTgGszZoXxSaeRrEeiIEAeEuUewWwPFiItkKTqmZzMfFeljJEeQqIElLeiLaDPpdAoOAIiaLlkYeEGguUvVKjMmJlLwvVIiWYyknPhHwRceKkPpDQqdeEjJZMIimyvVmOKkPiIpoMuKkUpPlSVcCglohGYNjJPtWwwhHwWadhxXCoOcqQzLlQDmMdqZvmSsMZzrRJrRGjzZyYIEeURruUTtBbsMpPVrRvsSBulqmyYiJNBrPAeGgEaxXpYysSNxXGgnbsSIikNnKgnsUUutTfMmsnRIikFQqXxlLrhHInNbEEecRoYyeEzcCgeEjJzZdDBSoOsbMEerRpqPphHQSsNHYyzNBDiIOooyDqeXxEGgbTtSHSshxXmGaAtipPIecCpPahHgBOoBvjvVZJRrjjJBbCclMyxXYmRUugqQGFeEVAaLlkKCcskKXSlkKqQWwVvLObGgNrRnLlzZwWdoODBHhXwWXaqQaAoyYhHzZOXKgdRruUDjwWwyYMmMGdqmOoZzmMnlQqIuJRrLLcLlSshHuBbkKzvVmMZzVvnNJxXAdyYDDdLlWIiwYfFzZTwmMOowoHUuZgGzXxYBboOyyyUjJuueElbBLSsUYfWwSsNnCcmMBBoOSpeOkvgoPpOUTWwtbBkqQErRejJdDWCcwmBbmMMQqkKqZrROokpZXaLkJjshvJXxvVjKCcvYsKkxbhHBhZzkKBbeEIeEnIUuBbiNVvOofeEexUFwWDdfMrqQmzeEPmfFMdbNnBMjJzZvVtCtTuUcEeTNnpGgMnNeEkKmPmPpxXGgzmTtGgoOMJjJjmVvpPMmMAnuUNnZAazYeEdaWwAbibjRoODdXYyRpPRIiEeUgGIVvijJHypPVqQNZzrYyxXkbBrmWwyYYyRrbBMSswWMmVQyKkDdYqLllBnDSsdpYyTtDuUvVdDdiIPfFhHSyYsKsSBpPBbmcRrDtPlHhBbLaApOoTXKkSaLljeDdGgEJrRACjJDBbdOIOFMmaqRaAlpPhHXxLeXxCcixXOoRrYybBIgHTHhtwjJLAUuNsupsiWGgqQOGgxXyQJjqgFfeEtTPptJCcsSUbneaikKIwWOojuUIpIBOoXxTtcCVvUArRtTVHFfJjMooHhOKWFmMIYyuKJQqEzUuZDdbqQBztrxXHHpPhAaUYQqnNDdpPylxXoPpOdDFdDfIiMmLcIipqfvUJHhtBeETQqtNnbEXUuLlxsSeeERPFsSTcmPEepMnXxNbWwmMPpvVBDvVGgVsjJyYqPRruUTtSsFfMmZgGzDdniVSsoPpDdhBbZznrRNFBAaaaOaAFcAaCWtThHCPjGgEeJtTvwWVURruiIERHnNGlGrfYyWGgtTwPLVvMmlpBLFfHhCcsadDAScCtTabMmbBmMmOobBXxNnskKyYXhHBbHhoOxqYfLlbBDdyYRrkKtzrVvMIimMZHMmlLHiIhtBbZzMmxnPpNzZpPiSWwfndDNVvIkHhPpbBdEegNnlxXLXPJuUjoOaUCcuoOaNZWwzJVvjYyjJXxQoOINvVnNnimMdDzZqyYiYWwegFfFfGpjtLrIBbsYnNGYMAxZUuqQzPzwWgPnLltEeDdQZeZOoOooqceuUbqQLlBaWwJjWwQhXkKiITtxDvBywWYPpESnNZKkLdeEhHDNURtTCJjiIgxVvzZRrzZuUPAapeCQpPqIigxXGOoOGLBxXbNWwrRaAZpMuUmPbXuxDdiIasSEejJAKCDdvVcwqQqpsSPNnKkaAIiQpPhHfGqskmZzMKoWHbBhwtTjDzZdhrRwWPfFhJiNeEroyYBbwKRsSRrXxroOLlxXPpwjvVaoOdUVWwvStTbBstZCcEOovVdTtirRsSsCcYjnNJgrRgGjJGpeETtPmwjNnXxmMUuJjGghjtwWYyTRJjnvVhSslLvprrwWRfQqrRykKCGgTfFXxpPtcxXDOtToYnNPMmpizAauUGlLgZATtaeEtLINndDInfFrAaQqRXxruUxZhvlLmIiDGgdMUunQlMPpmKkaUuAiwWxXIZzxXfnNFeEDdIXxYWVWwvIibksGHhgeqQEGqQGDdVvgeEXzmTtMSoOhHsZxdZwxXWzxXDTtiIHhTiOoIdsSEPXxpejJgMSorIilLpPRWUuwExXeCckKNSszZRYSsyfFZnmMcCgGiILqQyYtkKenNFmxXMrRsSRrQSsROorqzZfHhrvJjMmvVVrRygvACcWruIiwWIiiIUZGwevMKyYkmYkKaACQqceEaAyCcpXxPVvymMkKBpPNnrubBUJuUiIKBYybdOoEenNDkKVvJgGjdoOCcOxvXvHhVMFxXflXxpPLeIiJjEUzZVvFfuLoOaGgFfFlLfAjJhHlwxXyYNnlQqUuBbXiIhdDPpYEevVyNSsFfKknNOfFxiBFLZxXzsShXPcpMmPCRrpNnhHNGGkaAiIKGgkKMuUvzZVzZmNnkJYHhJjyfFfFgCBTtJjgGEDdUarRhhHEeMcmMCmGgHYmuNmgGMqQnnNuUUPpPdDpddDDodDXjdGgAaDlLxXOoaFfAEzfxPbHhCcBAuUwWLeElmMaVUuvyYEeawdDueeWwEEatTljTtJaAWwMmaAuWcCyYyGgpPMmPpuUzZCcUhtTQqUuzNtTxfFyEvVmbBEexXnRrwWNNXZzCeETtcmMKksSwWRruVvUyrRYDSsdpluUNgeElLZzBbPvVrzOlLDdLlcCRrjfFIiFfmMTdDPfTtWibBguyDdYxXdDAaGxXQoObBqbtTZzSdDRzZpRrRVIDditOoKcCkTgUumSnyzZeeDmMaAdphLlHyYjYKuuUfqQFUgGSsaxXDTtdqQjrRJjtTcDdBbfOoFfhdjzZnuUxXjJejJoTtjJTtpSslzZLYkwRrWVvSsKEeVvGgOSsoOKkfFKkwyYAuyYMmUDEexqQXgGDdeEtnNTCoOccOoDUbBjJTtiIKddDDsSZzkxqQrRZzepPynoJjPpytTIinNhHasRrmMSAOloOfFLoqQYOHEEbBeehBbmMxiIXXhKkYYyyHzeyYEZYLlvVyxmMrRJFNlEeLsSlLagGAnKkgLaAlGfghHGhkKHUDduTtcdyNFfnhHQddDaALSWwsrRBxXgGRkgiIVDwWdFIPptTfIigGOQCrJjUfLQqcyYqQoOxXwWoNnTtITtrRiDYZzydzZvVHfkKFhOSsoDdFHsSeELmMQmMqHUuhcyYCuTtUuUTtiIqpPdDQldDipPIhqQFnNVwWjJvJjvVMcLBblFfZzfHhFQqCCsScmkJGgYyAuUajKUMmFfhHcHRrhTtECcgGsaSsxeAaQyYgkAaKuUjhHJbBXxQqQqTtIyYiGqjJFOXxZzzGcCuUcCUBbBbgGXeExJjTtKiIUukMmaBbLsNnjJXxMKkEemnNBlLbRtxXGgsSbWwHBbhejRwWCcabBpZzURrmMzZuqQuGWNnaAtTzZwTtEeodlLDvVdDwWeYHtpeEPeEmidsSpPDzoOZrROMWwmoUutoOTITtmMDdKickKuKkUQeEGgqwKkqFrRjcCkKcMmeMmElLnyZaBbAzCxVwWnNvOocCgGuUOooOLlnIicCZzdpPDeENhHLlZGgIiZmMzdfFHjJgGaAhjJmRHiIrRhzgGVvECcQqvVIiHhFfLlYOqQaAoyRRrjIisSksfFlLCcKrRkqQqQehHeCjBbiPpmMIJgRrtTqQtTnNcwwWWdiSsIuUoOfMmFqgGIsSaxXFfFfUsSIiHdDhuAijrIiWhHwWGgZzSsWwkKtTMmwBbPpRZNnzZFeEaAfgGVvzZIixXdpPGqQgbBtzwWlLZeEIirRfFJvzZPpVwNiIqcCKKkRJjpmZzrRlLZHhSbBAajKqQNnwVvCcgXupPULlhHrRDdMmbMGgPZzpfeLlXxEqQNFfOnNKkvVoTYulLaLUOoHhjBCmMcIrqQoOKkRCcslZMESsegGmMmZzzZpXxaAqSsQKVvkkKZzhHCcMhbBuUHIiujJrxXRWwUgyYGJvXlLjpPQqJHhdDMcCaAIimXxbBZzKksSQnNsSqQbBRrlOoIiLHAaxXBblQdDqsfFSRUuctTCpAajgGJgSsXgkKGxINjJnBhHbrRlLMmoOOzbowWOhHxXXXnKkNtAQqPmMJjGUStTsLlQqEeEeuyFLlFjJZzIFfRAtAaJeqQEwWMmjSaVvnNoOoOGgcNndyYbBFfDaAqjJsSjJvIiEehDdHcCuLsSFfYyXxXVeEvTtuUxXxNnytwWTevcCTtVEHeyYEMzejJEAxXaKkWwAAPpLVvbBCboMPpfXxSUuswFxHhXKkSsjJfvLlCcKzZkVXwEMmnNexXWkQPplLgGXxiIgPpGqQMmahHAqDliILxXdDUuKCclpPLkPbBvVuXzZNnxhHdDUpVcCrRvuSSstTZhHzjJjfOouUVvvVwWrRFRTtrJsMQqZzIisSfFBxnMbMmVvBJhKksSaAGgHDdvKktTrCcReiAafFIhHzrRZeEHhosSrNxYuDdYySYyaAsZzySssStuUTOaAoMcCWgMmGhBZzSseLyYlrREKkbHgGDdQrRUuMmqtTjYyHuAaYjXxJyUAaFCccCBbsmMrRHYykrRDiIdgGvRrVWWbBwPpwqQeqQEkzZwWKYyJUujDlCcgGOovwWVLWwdhHpPFfKGAnNZzusSXhHoOvVGFfgVuIiOZzoZPpWwzOKkoULYTtYyVxJjXHhyGgVvUuvTtpCcsSWmMpVQqvmCcZkWwSsFfoXxKnXIixmlLLwzZLlHhLlVvIiWZzlbBeEKkYlLWwLlhHfFMmycAUpPnHhnNNeRTtrEEeFfygGwdkKDtTSMmsEBsSbNnJNijsSuUtruURAWwarIQNnTtqQPpTpPCctRrAaLxBbaAiIXfNoOwLlWZzaWOFfbBAatTBbozZxZKKGgkhHdDgGkxJjXuxXUBbVuUvtTjKwWyVcCvPkKprRYqQkCcfFJjDlLLRGZzDEIienmMcCRrNGDcCWwdgiIuUKsSkozJjtTQQsSFfXxQPpVvqGlzXxZhUueEMmMpXrxXRxGgPIibBwWOUaAuomsSSsyOdNSsnQqDoKzTxXtfFZkiISXxkKavVmMAXZzyYvvVCcMmVLmMwiQGVhHpvVvUuVPLKklUuvHhtIiqvVQzZQKkRrBEQqevVpcTtGEMmMHhmrRegkGgKWwpaBbAPiTtIfxXFNnxXDdeEfadDGgaAihHSYyzZsbZbhHBZzzBNJjUupPEsDcCRrdSJjmZzvVpPJMmyYGvVgnVvUuNpftEeTFUuhqQBbSsrRkZzVkKvcJnNjJPphYyHCkzYGgDdyuUZdCcdDgGDxsSXBblEQiqQqQUlLKkZdnNOcCMmopPEeTHhtJBbllLAanoONpPKcCeOonnNNEBbSsAaUIcCiotTqUJjuAaCcflrRLBbgiJkKPOoYypRJYGOosDhHMHhnNmdeEsRrSNnbwHhWkKlsSLBFfScGfFPpgCtAvuUVaXNnxLJHhyYjlYEefuUAqJFfvVjQqOoUuWwmMoOYabBAjxrRXBiIbgyFQPpucCUqvlLWFfsKkZQkKkYTtaAycqXxQCYOoSsxXdDpPytTKMmfMrLBxoOEeXgJLljGNnHcCmMsSjAIiaXxPpaADbBMmZzRryYJeEjdKcCkhHhiIxEwzZAaOjJodsSDjbQMmqpPBQqJOmmBbMhHlaAjcCWvVwJqQZUyYTtWKkwPptyYiITsSHnNcQqCjJhxXuHhwWpmMyYdDkmMIaAiaMpPqQmMeEmvVhHGgBbBrRBbibgGBIbEkKFlLFfPpHhyYmMfgGLlWwHuEthDFSntTfLlFNWwsoiVFfbBEevVIxXXAarRylLYjJxMlLNnPpmoOPpijXIigGjJqQCkKOopPCVvmMhYyYiIfFyeEHcctLlTHNnMmNnAapBbPNnMmxtmMmnfFNjJbBMAaYykKEeBqyYQcguUUuFwWfhHmSsSngGNsMkKVhHtjJJKkChHcaqsSIiwWAabfqyYQKWLlxXxXCOkkKfFKEtUuTejZxyLNnQqoOcCleEBfFNnlLGgMcYEeTtshIiHWtTBbbFfEedZumlLMUnXxvEeIUKnNkuyYUuloiFfiiIfFIAXCcPtTpxXvmMKkVwWxwMmWaAaADdQquCzXxZTtyYidDfFIcSsUapPFfxXbBhHfFqQWtToOIiwnNjYylLgGcCOoHhCcJeEAaKkRrtQqPpRiIjJfAaFOoMmQtPiIPNnwWVvuUpXCgRQdoOCcDYFfyEeuUeEuhHmcVUuvCMmMUobBvbBcCqVvQVGYygDaAdkMZzmOoPGIiMmpPkKFaAUuhkTWwoZzPSsAxXapUBAabudDOYyfFgGSsIiGgWwreeWwEEAzZgGaYoOLCgkKGtTQqKkGgVvclwgDdGWyYpPiRrZjJzaAfFeEmMneVvbBrVvREKkRrlFfLqAaQjJaANSsSXxsoBbOLrRlsgGSYpPyPpLzsSZZzlICcJjmMFgSrRsdDvVFfJuUOojIGgFrMoOmSsCYNnbByeEccTtIilXxLUuqQKkCGgIiSJrRjxXshHkKIicCIPpifFxXyXfIiyZzGgYBKRrkmXxRrMdDgvpPVIxXiDdGgwWqLlQDdbrRBGTnNrRtbPpIihQGgZaAcCzfFvVeEvVCzZcmmMMUjDrRqtTeERrUuQddnTeaAhCcSsPpQRrqGglfKkFLZmXVqQNnmOpPSsSsiOohHJjCcXCcxkXxJjxXzZhVvkcBjXxXxbSgGpPgSsxBbdDeEpcGgCPXRRrCbjeEtTJBAaccdDfFtbQqBTAabBCHCchZzXVRraAIiLlvwWYyUupPxDiIOoxXtCcIiQqXXbBMmaArpPRogGSseRrzZcCFfEcCkKkAaBDdoOhHKkbIiyYrRLIilKOosDUudSlQqDdyYpvMmVLxXlAaiWwIWwKoOAmceTtFkKTWwcvVCTRrhHqsSPpvUgGsSwvVeTAaPMRrRdDriISUuoOsVvjJyIiYMmJjcFRrfJxXPpjdDBbKkyYBlLYaxXTjJhHtaVvAALeElgtTcCGqiIQzZMBIibIimaAcCTWbBUvVDVLlvEeWwCcTAIiJHhjKlLkatgTtxqQXQqGKkwJMWwaAmwWjIipDdmMHhpCcufFoOUwWPqQiIPuUzZpiITttTPpXxNjdDEeAaQqJDFfdQqnaAduUZzDFOdDHNnhoeLHhrmMnNDdRcTNntHTtYyPpeEWwjOoqQJhCKmMkzbBZENzZnuBbUFfcCMwWOaIiTQqNntpPTtAeEiILIirRbKyYkzZBZvhHVzsSduUxXxXzmeEwWMZPJjQqpTtXxTtpvVuUPfFHDEedhDWwIilZvVXxzcCLlsHCeEcLlGgVvgvVGsSfAxBeEbtTmUTtUuXxeEnNmMYbfQqFBlTtLuOoOoUhHghHGdDPVvKFlLURoJjOZzZzyTteEsZzOLllLoRUubBVKkvvKkJjVrRPpVDdnNvYyzZuUrRekKEWvUuLlVOTkPpPpKXNnkKyZuUzYwWZOoxXVKHLlTtWwhXxqcYyUuCaAFfBAabQbBpReyAaYEzZrQqPgGToOxXCkXHhqQxkRrKKcbAaBTtdAaNnDvHjJdDQdDUuqnNkQqlLKNnWwMVcCmMIdDigvVGwSsTtWvfPpgGFDdKkwMmzZxZzTbaASszZvhHVBmMUutDdXsUGgygGMmYuHhSWQCfBbFcRrmMNnhoOHsSAaskKGgfFAaFlLffhHFbBVXxRrhHvuUVxXDwWTtdlLDOKkoneElLNANnhdDNKknuUNeEnJjjJDuUdRrPpHadDWwDdSsFsSfdDVvTTtTxXtbnNBgGqQtdmKkPpbeEZzAscCSaHsSxPpdaADDdoIiOqQHhYyQDdYDWwvwwgGWLnNlkiKpPkIiIKOoLlWyYVMmTWwthHEerVvRsJjSrRfZzFHGgMmzfFHhZAauURMJjmrkKcXzsrRSnVvNZxiIKcCkQekKlLEHOoLlhdDCcUkwWkKdGLlaAgJYykKjVxyYXIJjBbFaAccioOMmICpTtqPpIiaAZzQqlKkLIiYGgylLQjJssSNnSCDlLdcCcUTtBcbBVUuJwWjZAhHKkaXxBbzeEKZzWwAGPpffFUTFftuFWKkwSlLsOogjJauUvVEbBefFrRFffFnKknNNqzZcCzZRrvVAaipeEekKiIEuCuUyYcUexyYZTtzcCfhHFIiDddDeEUzxXZAfFfIiFrxXRatTYyIiaAvAavVVhHMmlLWwhHIiEvGgtTcCVTtesdgXtTRWwrJjGgxuUhyYHMmqWcfzZFEeCeOosSEVvQqwgPpGnNvSUusVjJEeQXxGOoVvgGAaeMUumESEegGTtstTYyFfDotTbBAaKbBkiIwJbBuUpPZaALlvFfEedzvVZDtTmMVtFFffyFfJjmJjMYgGTzgGhHxqQXfIiFuOogDnDWLlwWdDTFftzZBbBbJHhjOocCsjOLloJSuMmNHhnsShHQNnBhHbRQwWqEePpXprRHiIVviIAMmaEefFhQqnNAaPlLRrxbjJgGaSsAtTjROzZouUKkSgGWDdwNGgnSssQqBbdDdHMJjAOoamhKkiIDBbrfFOoPpJPjJxXsSZzGgVzZvOolLpbBxXNOoHhMmnBfFbLlHDdyYhIiNbeEBXxhRrHhHnsSoEeoORrnqQNXxcvVcCCRlLrQmMYyqHpPgNnkKgGOfFiImMoGIiMWwZtTzKuUkFfmmcCvcXxCEbKkBXxuUgGjdDCwkKWeEuUuUTtVjJVvDdvnNCcPplLqQsGXxaArRZSszuYytTUsSkKHhgEkKeJOoxXeEiIxGcCgXGgFfcCGgjMaApPQqZzBfkKKkFDdgGonNrRDdEeOMmRrLlYyqQacCuUJjAePpEuUbGgBuUdDWwUfFReErSsubGgBbtTGgcCUFfFcbjUurRJrRkMMiIZzmZzmOoNSCcKkRrsRrxZmUEeDduMbBmMoBiIsMmSOoWwMmDdyYxWkfZzFoOKwxXXbAaCXVvxcsSsStBbTRzZKkzZCrsSTjJtRcekKkKErrIiRzmFfMCzZcCcZfFtTOsUuSDRrtTxXeExEeCTcCtsSGlkKVvLkcCKgIiDKZzdDkDdQqXxXmMPqQpxnNAgGGFfrRsSeEAagUrRRhHrMmuhHkKdCcNUuKknYkAaKGhHgaAyzZslLSDMmCcLCchHhHlsQYykKqAICcNnuUffFuUMGgbBbBdDVvjJmyYOsCndLlwWDNciIhHvVlDdKlLkXhHaAMmKkFfKkkMmLlKxwgGWvVLlLIbdLlFfxXmVvBbFyYfRrAiIaMrRrCoOcrOoIinNEuUiIyYhHeRUuxXrYwWRrjJbBAakVvJjKpHOohPuUyEedDKwWMOlLoFfKknNsSBbmeEAdDakhXxeEHRXUaaPHKGgreKkEReEWwzZkhpAvyUuYDdeEVxppPCqQdDULVvtGgmMeETlPpGoeEWdDyYcCmMwTtNnxQqXEeOzZwGgWTtqQKkgUAaiVyYvuUwWIrRuuTrRtyUOouxYyXIidKkNnKnoONCoOcvVnNrbBRNVvxTYytXnRroOsSFfyYwWAayUMmeXxEueUuEKknNYEZSkuaAeExXUKoOxEHhekmOQqWrRwojjYTtTjJgGPptOoGgzZlLBbywWYyvVJJjJjJgGWwsAFfaSMGgNneEehHkKEmVvbqQrZmFfSsMVvzHhkKoOIaABbCnNefFMmEcAaiZzhqQdDbJjrRYytvVLlTCKkcLleEwQqWqQmMSrRTtEeQuURrxXQxaPpAyYAaXkKTtqIHEehmMlLqQrLlROoNoJjEJjeXxOGgnfFIxXimMKkLliXBwQqWKkpYBbyPfGgFUuzpPZjNWwnJiIOoDdbdDNnKZzkmMpvoOVbBbBPlbBLxQSsqAbjJBZxlLCcjVIiaAvJXEeCcSBfFbszAFfbrFVvfNnRGgjdDImpPMfFiuZzUJvQqSsluBbUkKCJjcpPLrRiIVcCveEVlLUulZzLOowWgxXZzGqOoQWVveEIiKkwnNnNhHoOCcAoaAOEeaLlnNcCCsScFlLkaAKEMmNnaAvPiFfIpVnExXetqQTKkNlFftTXxuUUuLLlefDzZdSsqQlLTxXSstmMYCcPpeEyPaALXxRrTMmtrXpgGPvVxcCNnQqDBbdRlNJcCjFfRrIiCcOojJRrzZutpjJRwWAaZzrlLiGgKkIeEPTUgGprrouUORYySsGgRBbVvUYsAaSJqQjdDjJrRPgGxXpCZzcFtxXTzZFDUudKXxkHhftTKkxXTVvwWtWenNEIiemZzMZxXzEDdbBuUqZzuUQvVsLwiIWlSeVvwWEktTabBAKqTtjJQaLDdlAVRruIBbTtiURrvdDCbBTcCTtSbBsEeLlRrtOpPYypPohNeEnZfFzHvmMViIMmOoQqmMqmMDJjdjPpIiRrCpPcJHznNZcIiDWwdlLpPzfFZFfNulLUpdDPpPeEsSxXgGniIHhoOmMoObBKLlkAajJlFokKOfOoLGxXIiDdgqkyYuUKxXYywWooxXpGYygwWPOtTWzZwXxLNzZOonlpEeOoGgPDdlLZzmTtCfFcZwWFfUuDnNdbNnBRqeECcEenNQrKkNnzVaABbaALhFfHDdwWlvxCcXBOouUbvTtggGGVHhrRxUudCcDUgVnNqQaAvhzZHjBbywWYIirRJhXxHLuUJjlZzUuwWrRlEQqeLQqqQlTtWwveEVLaeEAmMfbGgBFWwHhzbGgBWHhwxfxXFXZNWwdDnuUvVmMGOoTDdRrBrRbNnteGRrgcCgGWwEiIZZsSzRrCvVDdcaewWEAiIBfFbzwWjuUJUvtTLlBYybBbTQqPptTtGNnQqgMUumSstsSnNtTCcfFvBbWwXxVVvGWweUuEKkCdFfTtiIDcHhcCCcOPpAaogoOJjJoOjcCRaAIiNLTtlnpPInNircCHhloOLuUvvVVqQYxiIXyMtTsSWsSJjHhWoJjUovEeVZzOuPNjJgGnIipcCkwWKOUNUunxXvVMmRyoRrOjJYrOZzmvVrRXxMPdHhbBoOxXDEeOoKknNpHyYhcCHKkrRUlLOoupPvVuUyYhAaxXoMXxgGmuTxXtGgxXsSGgdDwyYQPpKkqwXsSxmMIiRryYFfYycCJjCcOoYyzZYQGIiPpaAGggqyYgUjRrGgJbBuPpLly&#39;</span>
-</code></pre></div>
 <p>Anecdotique ? Pas vraiment...</p>
 <p>Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?</p>
 <details class="aide">
@@ -2561,7 +2743,6 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 </code></pre></div></td></tr></table></div>
 <p>Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)</p>
 </details>
-<p>--&gt;</p>
 <h4 id="5-sauve-par-une-pile">5. Sauvé par une pile<a class="headerlink" href="#5-sauve-par-une-pile" title="Permanent link">⚓︎</a></h4>
 <p>Cet exercice peut être résolu <strong>beaucoup</strong> plus efficacement grâce à l'utilisation d'une pile... mais comment ?</p>
 <p>Vous pouvez utiliser l'implémentation de pile disponible <a class="" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python" target="_blank">ici</a>.</p>
@@ -2615,13 +2796,14 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 </code></pre></div></td></tr></table></div>
 <p>Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.</p>
 </details>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 novembre 2022</span>
       
     
   </small>
