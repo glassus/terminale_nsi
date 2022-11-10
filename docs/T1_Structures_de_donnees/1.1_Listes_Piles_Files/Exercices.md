@@ -205,7 +205,7 @@
 
 
 
-??? example "Exercice 5"
+!!! example "Exercice 5"
 
     Cet exercice est basé sur l'[énigme n°5](https://adventofcode.com/2018/day/5){. target="_blank"} d'Advent Of Code 2018.
 
