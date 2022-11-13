@@ -312,7 +312,7 @@
     Par contre, la chaîne ```'dabAcCaCBAcCcaDA'``` sur laquellle nous avons travaillé n'est qu'un exemple...
     La **vraie** chaîne contient 50000 caractères : 
 
-    --8<-- "https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/data/chaine.md"
+    --8<-- "includes/files/chaine.md"
 
 
 
