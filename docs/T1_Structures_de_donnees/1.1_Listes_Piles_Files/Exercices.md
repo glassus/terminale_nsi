@@ -100,8 +100,8 @@
         ```python linenums='1'
         pile1 = Pile()
         pile1.empiler(7)
-        pile2.empiler(5)
-        pile2.empiler(2)
+        pile1.empiler(5)
+        pile1.empiler(2)
         ```
 
     === "Corr. Q1b"
