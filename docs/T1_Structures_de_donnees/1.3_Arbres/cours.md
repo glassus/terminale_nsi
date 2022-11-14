@@ -35,7 +35,7 @@ dans l'arbre ci-dessus,
 
 ### 1.2 Exemples d'arbres
 
-#### 1.2.1 La famille royale britannique
+#### 1.2.1 La famille royale britannique (avant le 08 septembre 2022)
 
 ![image](data/windsor.png){: .center width=60%}
 
