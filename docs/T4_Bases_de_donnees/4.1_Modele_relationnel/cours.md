@@ -52,14 +52,17 @@ Prenons l'exemple d'une bibliothèque dont la base de données possède une rela
 ![](data/rel_livres.png
 )
 
-!!! aide "Vocabulaire"
-    - **relation** , ou **table** : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.
+!!! aide "Vocabulaire :heart: :heart: :heart:"
+    - **relation**, ou **table** : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.
     - **enregistrement**, ou **tuple**, ou **n-uplet**, ou **t-uplet**, ou **vecteur** : cela correspond à une ligne du tableau, et donc un ensemble de valeurs liées entre elles : l'auteur «Eric VUILLARD» a bien écrit le livre «L'Ordre du jour». 
     Il est **interdit** que deux enregistrements soient totalement identiques. 
     Le nombre d'enregistrements d'une relation s'appelle son **cardinal**.
     - **attribut** : c'est l'équivalent d'une colonne. Il y a dans notre relation un attribut «code», un attribut «Titre», etc.
-    - **domaine** : le domaine désigne «le type» (au sens type ```Int```, ```Float```, ```String```). L'attribut «Éditeur» est une chaîne de caractères, par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. 
-    - **schéma** : le schéma d'une relation est le regroupement de tous les attributs et de leur domaine respectif. Ici notre schéma serait ```((Code, Entier), (Titre, Chaîne de caractères), (Auteur, Chaîne de caractères), (Éditeur, Chaîne de caractères), (ISBN, Entier))``` 
+    - **domaine** : le domaine désigne «le type» (au sens type ```Int```, ```Float```, ```String```).      
+    L'attribut «Éditeur» est une chaîne de caractères, son domaine est donc ```String```.  
+    Par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. Son domaine est donc ```Int```.
+    - **schéma** : le schéma d'une relation est le regroupement de tous les attributs et de leur domaine respectif. Ici notre schéma serait : 
+    ```((Code, Entier), (Titre, Chaîne de caractères), (Auteur, Chaîne de caractères), (Éditeur, Chaîne de caractères), (ISBN, Entier))``` 
 
 
 
@@ -86,7 +89,8 @@ Par définition, l'attribut «ISBN» pourrait jouer le rôle de clé primaire.
 
 Quant à l'attribut «Code», il s'agit sans doute d'une nomenclature «maison» correspondant à une étiquette collée sur la tranche des livres : c'est donc une clé primaire qu'on qualifiera d'«artificielle».  
 
-Attention, il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».
+:warning: **Attention** :warning:  
+Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».
 
 ## 4. D'autres relations
 
@@ -138,19 +142,21 @@ Une version non-redondante de la relation «Emprunteurs» serait donc celle-ci :
 | 125           | 13/10/2020 | 1023 |
 | 125           | 13/10/2020 | 486  |
 
-## 6. Contraintes d'intégrité
+## 6. Les 3 contraintes d'intégrité
 
-### 6.1 Contrainte de domaine
-Tout attribut d'un enregistrement doit respecter le domaine indiqué dans le schéma relationnel.
+!!! note "Contrainte de domaine :heart:"
+    Tout attribut d'un enregistrement doit respecter le domaine indiqué dans le schéma relationnel.
 
 Attention, certains domaines sont subtils. Par exemple, si une relation possède un attribut "Code Postal", le domaine de cet attribut devra être ```String``` plutôt que ```Entier``` . Dans le cas contraire, un enregistrement possédant le code postal ```03150``` serait converti en ```3150``` (car pour les entiers, 03150 = 3150). Or le code postal ```3150``` n'existe pas.
 
-### 6.2 Contrainte de relation
-La contrainte de relation impose que tout enregistrement soit unique : cette contrainte est réalisée par l'existence obligatoire d'une clé primaire.
+!!! note "Contrainte de relation :heart:"
+    Tout enregistrement est unique.  
+    Cette contrainte est assurée par l'existence obligatoire d'une clé primaire.
+
 Cette clé primaire est souvent créée de manière artificielle (voir ```id_emprunteurs```  dans la table ci-dessus par exemple).
 
-### 6.3 Contrainte de référence
-La cohérence entre les différentes tables d'une base de données est assurée par les clés étrangères : dans une table, la valeur d'un attribut qui est clé étrangère doit obligatoirement pouvoir être retrouvée dans la table dont cet attribut est clé primaire.
+!!! note "Contrainte de référence :heart:"
+    La cohérence entre les différentes tables d'une base de données est assurée par les clés étrangères : dans une table, la valeur d'un attribut qui est clé étrangère doit obligatoirement pouvoir être retrouvée dans la table dont cet attribut est clé primaire.
 
 Par exemple, la relation «Emprunts_v2» ci-dessous n'est pas valable :
 
@@ -191,11 +197,12 @@ Considérons la base de données Tour de France 2020, contenant les relations su
 | LTS  |  Lotto Soudal               |
 | ...  | ...                         |
 
-Le schéma relationnel de cette table s'écrira souvent :
-Equipes ( <ins>codeEquipe</ins>  ```String```,  nomEquipe ```String``` ) 
+!!! aide "Écriture classique d'un schéma relationnel :heart:"
+    Le schéma relationnel de cette table sera fréquemment donné sous cette forme :  
+    Equipes ( <ins>codeEquipe</ins>  ```String```,  nomEquipe ```String``` ) 
 
-Notez le soulignement sous le mot «codeEquipe», qui signifie que cet attribut est une clé primaire. 
-Les clés étrangères, lorsqu'elles existent, peuvent être signalées par une astérisque *.
+    Notez le soulignement sous le mot «codeEquipe», qui signifie que cet attribut est une clé primaire. 
+    Les clés étrangères, lorsqu'elles existent, peuvent être signalées par une astérisque *.
 
 
 **relation Coureurs**
@@ -256,9 +263,11 @@ Temps ( <ins>dossard</ins>*  ```Int```,  <ins>numéroEtape</ins> *  ```Int```,  
 Remarquez que la clé primaire de cette relation est le couple dossard-numéroEtape.
 
 
-**Représentation graphique**
-
-![](data/schema_tdf.png)
+!!! aide "Diagramme relationnel :heart:"
+    Fréquemment, on présentera l'ensemble des renseignements d'un modèle relationnel sous forme d'un diagramme qui synthétise la composition des différentes tables et les relations entre elles.
+    ![](data/schema_tdf.png){: .center}
+    
+    
 
 
 ---
