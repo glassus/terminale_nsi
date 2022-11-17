@@ -203,9 +203,49 @@
                    nb_elements(F, "jaune") <= nb_jaune
         ```
 
-
-
 !!! example "Exercice 5"
+    === "Énoncé"
+        Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
+
+    === "Corr. Q1"
+        Il faut écrire l'instruction : 
+
+        ```python
+        panier_1.enfile((31002, "café noir", 1.50, 50525))
+        ```
+    === "Corr. Q2"
+        ```python linenums='1'
+        def remplir(self, panier_temp):
+            while not panier_temp.est_vide():
+                article = panier_temp.defile()
+                self.enfile(article)
+        ```
+    === "Corr. Q3"
+        ```python linenums='1'
+        def prix_total(self):
+            total = 0
+            panier_temp = Panier()
+            while not self.est_vide():
+                article = self.defile()
+                total += article[2]
+                panier_temp.enfile(article)
+            self.remplir(panier_temp)
+            return total          
+ 
+        ```
+    === "Corr. Q4"
+        ```python linenums='1'
+        def duree_passage_en_caisse(self):
+            if self.est_vide():
+                return None
+            horaire_premier = self.defile()[3]
+            while not self.est_vide():
+                horaire_dernier = self.defile()[3]
+            return horaire_dernier - horaire_premier                 
+        ```
+
+
+??? example "Exercice 6"
 
     Cet exercice est basé sur l'[énigme n°5](https://adventofcode.com/2018/day/5){. target="_blank"} d'Advent Of Code 2018.
 
