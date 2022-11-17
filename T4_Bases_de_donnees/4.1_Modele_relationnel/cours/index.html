@@ -1335,36 +1335,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-contraintes-dintegrite" class="md-nav__link">
-    6. Contraintes d'intégrité
+  <a href="#6-les-3-contraintes-dintegrite" class="md-nav__link">
+    6. Les 3 contraintes d'intégrité
   </a>
-  
-    <nav class="md-nav" aria-label="6. Contraintes d'intégrité">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-contrainte-de-domaine" class="md-nav__link">
-    6.1 Contrainte de domaine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-contrainte-de-relation" class="md-nav__link">
-    6.2 Contrainte de relation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-contrainte-de-reference" class="md-nav__link">
-    6.3 Contrainte de référence
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1444,8 +1417,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../4.2_Langage_SQL/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../4.2_Langage_SQL/02_exercices/" class="md-nav__link">
-        Exercices sur le langage SQL
+        Exercices SQL
       </a>
     </li>
   
@@ -1459,21 +1446,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.2_Langage_SQL/03_python_et_SQL/" class="md-nav__link">
-        Python et SQL / mini-projets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4.2_Langage_SQL/cours/" class="md-nav__link">
-        Langage SQL
+        Exercices Python-SQL
       </a>
     </li>
   
@@ -2464,15 +2437,18 @@ le modèle relationnel est à ce jour le modèle de base de données le plus uti
 <p>Prenons l'exemple d'une bibliothèque dont la base de données possède une relation «livres» :
 <img alt="" src="../data/rel_livres.png" /></p>
 <div class="admonition aide">
-<p class="admonition-title">Vocabulaire</p>
+<p class="admonition-title">Vocabulaire <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <ul>
-<li><strong>relation</strong> , ou <strong>table</strong> : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.</li>
+<li><strong>relation</strong>, ou <strong>table</strong> : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.</li>
 <li><strong>enregistrement</strong>, ou <strong>tuple</strong>, ou <strong>n-uplet</strong>, ou <strong>t-uplet</strong>, ou <strong>vecteur</strong> : cela correspond à une ligne du tableau, et donc un ensemble de valeurs liées entre elles : l'auteur «Eric VUILLARD» a bien écrit le livre «L'Ordre du jour». 
 Il est <strong>interdit</strong> que deux enregistrements soient totalement identiques. 
 Le nombre d'enregistrements d'une relation s'appelle son <strong>cardinal</strong>.</li>
 <li><strong>attribut</strong> : c'est l'équivalent d'une colonne. Il y a dans notre relation un attribut «code», un attribut «Titre», etc.</li>
-<li><strong>domaine</strong> : le domaine désigne «le type» (au sens type <code>Int</code>, <code>Float</code>, <code>String</code>). L'attribut «Éditeur» est une chaîne de caractères, par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. </li>
-<li><strong>schéma</strong> : le schéma d'une relation est le regroupement de tous les attributs et de leur domaine respectif. Ici notre schéma serait <code>((Code, Entier), (Titre, Chaîne de caractères), (Auteur, Chaîne de caractères), (Éditeur, Chaîne de caractères), (ISBN, Entier))</code> </li>
+<li><strong>domaine</strong> : le domaine désigne «le type» (au sens type <code>Int</code>, <code>Float</code>, <code>String</code>).    <br />
+L'attribut «Éditeur» est une chaîne de caractères, son domaine est donc <code>String</code>.<br />
+Par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifestement par 978. Son domaine est donc <code>Int</code>.</li>
+<li><strong>schéma</strong> : le schéma d'une relation est le regroupement de tous les attributs et de leur domaine respectif. Ici notre schéma serait : 
+<code>((Code, Entier), (Titre, Chaîne de caractères), (Auteur, Chaîne de caractères), (Éditeur, Chaîne de caractères), (ISBN, Entier))</code> </li>
 </ul>
 </div>
 <h2 id="3-cle-primaire">3. Clé Primaire<a class="headerlink" href="#3-cle-primaire" title="Permanent link">⚓︎</a></h2>
@@ -2493,7 +2469,8 @@ Le nombre d'enregistrements d'une relation s'appelle son <strong>cardinal</stron
 Il peut arriver aussi que deux livres aient le même titre : l'attribut «Titre» n'est donc pas une bonne clé primaire.</p>
 <p>Par définition, l'attribut «ISBN» pourrait jouer le rôle de clé primaire.</p>
 <p>Quant à l'attribut «Code», il s'agit sans doute d'une nomenclature «maison» correspondant à une étiquette collée sur la tranche des livres : c'est donc une clé primaire qu'on qualifiera d'«artificielle».  </p>
-<p>Attention, il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».</p>
+<p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> <strong>Attention</strong> <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /><br />
+Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».</p>
 <h2 id="4-dautres-relations">4. D'autres relations<a class="headerlink" href="#4-dautres-relations" title="Permanent link">⚓︎</a></h2>
 <p>Ajoutons maintenant les relations ci-dessous :</p>
 <p><strong>Relation «Emprunts»</strong> </p>
@@ -2606,15 +2583,22 @@ Il peut arriver aussi que deux livres aient le même titre : l'attribut «Titre�
 </tr>
 </tbody>
 </table>
-<h2 id="6-contraintes-dintegrite">6. Contraintes d'intégrité<a class="headerlink" href="#6-contraintes-dintegrite" title="Permanent link">⚓︎</a></h2>
-<h3 id="61-contrainte-de-domaine">6.1 Contrainte de domaine<a class="headerlink" href="#61-contrainte-de-domaine" title="Permanent link">⚓︎</a></h3>
+<h2 id="6-les-3-contraintes-dintegrite">6. Les 3 contraintes d'intégrité<a class="headerlink" href="#6-les-3-contraintes-dintegrite" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Contrainte de domaine <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <p>Tout attribut d'un enregistrement doit respecter le domaine indiqué dans le schéma relationnel.</p>
+</div>
 <p>Attention, certains domaines sont subtils. Par exemple, si une relation possède un attribut "Code Postal", le domaine de cet attribut devra être <code>String</code> plutôt que <code>Entier</code> . Dans le cas contraire, un enregistrement possédant le code postal <code>03150</code> serait converti en <code>3150</code> (car pour les entiers, 03150 = 3150). Or le code postal <code>3150</code> n'existe pas.</p>
-<h3 id="62-contrainte-de-relation">6.2 Contrainte de relation<a class="headerlink" href="#62-contrainte-de-relation" title="Permanent link">⚓︎</a></h3>
-<p>La contrainte de relation impose que tout enregistrement soit unique : cette contrainte est réalisée par l'existence obligatoire d'une clé primaire.
-Cette clé primaire est souvent créée de manière artificielle (voir <code>id_emprunteurs</code>  dans la table ci-dessus par exemple).</p>
-<h3 id="63-contrainte-de-reference">6.3 Contrainte de référence<a class="headerlink" href="#63-contrainte-de-reference" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Contrainte de relation <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Tout enregistrement est unique.<br />
+Cette contrainte est assurée par l'existence obligatoire d'une clé primaire.</p>
+</div>
+<p>Cette clé primaire est souvent créée de manière artificielle (voir <code>id_emprunteurs</code>  dans la table ci-dessus par exemple).</p>
+<div class="admonition note">
+<p class="admonition-title">Contrainte de référence <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <p>La cohérence entre les différentes tables d'une base de données est assurée par les clés étrangères : dans une table, la valeur d'un attribut qui est clé étrangère doit obligatoirement pouvoir être retrouvée dans la table dont cet attribut est clé primaire.</p>
+</div>
 <p>Par exemple, la relation «Emprunts_v2» ci-dessous n'est pas valable :</p>
 <p><strong>Relation «Emprunts_v2»</strong> </p>
 <table>
@@ -2704,10 +2688,13 @@ Cette clé primaire est souvent créée de manière artificielle (voir <code>id_
 </tr>
 </tbody>
 </table>
-<p>Le schéma relationnel de cette table s'écrira souvent :
+<div class="admonition aide">
+<p class="admonition-title">Écriture classique d'un schéma relationnel <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Le schéma relationnel de cette table sera fréquemment donné sous cette forme :<br />
 Equipes ( <ins>codeEquipe</ins>  <code>String</code>,  nomEquipe <code>String</code> ) </p>
 <p>Notez le soulignement sous le mot «codeEquipe», qui signifie que cet attribut est une clé primaire. 
 Les clés étrangères, lorsqu'elles existent, peuvent être signalées par une astérisque *.</p>
+</div>
 <p><strong>relation Coureurs</strong></p>
 <table>
 <thead>
@@ -2891,8 +2878,11 @@ Equipes ( <ins>dossard</ins>  <code>Int</code>,  nomCoureur <code>String</code>,
 <p>Schéma : 
 Temps ( <ins>dossard</ins>*  <code>Int</code>,  <ins>numéroEtape</ins> *  <code>Int</code>,  tempsRéalisé <code>String</code>) </p>
 <p>Remarquez que la clé primaire de cette relation est le couple dossard-numéroEtape.</p>
-<p><strong>Représentation graphique</strong></p>
-<p><img alt="" src="../data/schema_tdf.png" /></p>
+<div class="admonition aide">
+<p class="admonition-title">Diagramme relationnel <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Fréquemment, on présentera l'ensemble des renseignements d'un modèle relationnel sous forme d'un diagramme qui synthétise la composition des différentes tables et les relations entre elles.
+<img alt="" class="center" src="../data/schema_tdf.png" /></p>
+</div>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -2908,7 +2898,7 @@ Temps ( <ins>dossard</ins>*  <code>Int</code>,  <ins>numéroEtape</ins> *  <code
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 novembre 2022</span>
       
     
   </small>
