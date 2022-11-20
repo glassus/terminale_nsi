@@ -1436,8 +1436,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../02_exercices/" class="md-nav__link">
-        Exercices SQL
+      <a href="../02_exercices_inter/" class="md-nav__link">
+        Exercices SQL interactifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_exercices_ecrit/" class="md-nav__link">
+        Exercices SQL débranchés
       </a>
     </li>
   
@@ -2428,25 +2442,8 @@ Sa simplicité d'utilisation en fera notre choix pour illustrer cette présentat
 <img alt="" src="../data/sqlonline.png" /></li>
 </ul>
 </details>
-<details class="abstract">
-<summary>2. Au sein d'un notebook Jupyter</summary>
-<ul>
-<li>Si nécessaire, installez via le terminal les paquets suivants :
-<div class="highlight"><pre><span></span><code>sudo pip3 install jupyter-sql
-sudo pip3 install ipython-sql
-sudo apt install python3-sql
-</code></pre></div></li>
-<li>Dans un notebook Jupyter, votre première cellule doit être 
-<div class="highlight"><pre><span></span><code>%load_ext sql
-%sql sqlite:///livres.db
-</code></pre></div>
-en ayant bien pris soin de mettre le fichier <code>livres.db</code> dans le même répertoire que votre fichier Jupyter.</li>
-</ul>
-<p>Ensuite, chaque requête devra être précédée de la ligne <code>%% sql</code>.
-<img alt="" src="../data/jupyter.png" /></p>
-</details>
 <div class="admonition abstract">
-<p class="admonition-title">3. Avec un logiciel externe : DB Browser for SQLite <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /></p>
+<p class="admonition-title">2. Avec un logiciel externe : DB Browser for SQLite <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2b50.svg" title=":star:" /></p>
 <ul>
 <li>Installez <code>DB Browser for SQLite</code>, téléchargeable à l'adresse <a href="https://sqlitebrowser.org/">https://sqlitebrowser.org/</a></li>
 <li>Ouvrez le fichier <code>livres.db</code>.<br />
@@ -2454,13 +2451,48 @@ en ayant bien pris soin de mettre le fichier <code>livres.db</code> dans le mêm
 </ul>
 </div>
 <hr />
-<p>Dans toute la suite, les manipulations sont à faire en interrogeant la base de données <code>livres.db</code>, avec l'une des méthodes indiquées ci-dessus.
-Cette base de données contient les tables suivantes :
-<img alt="" class="center" src="../data/schemaDB.png" /></p>
+<p>Dans toute la suite, les manipulations sont à faire en interrogeant la base de données <code>livres.db</code>, avec l'une des méthodes indiquées ci-dessus.</p>
+<p>Voici le diagramme relationnel de cette base :
+<img alt="" class="center" src="../data/ERD_livres.png" /></p>
+<ul>
+<li>les clés primaires sont en bleu (suivi d'une icone de clé)</li>
+<li>les clés étrangères sont en noir et reliées à leur clé primaire.</li>
+</ul>
+<!-- diagramme réalisé depuis https://app.quickdatabasediagrams.com/
+.db -> .sql fait avec DBbrowser -->
+
 <h3 id="11-selection-de-donnees">1.1. Sélection de données<a class="headerlink" href="#11-selection-de-donnees" title="Permanent link">⚓︎</a></h3>
+<h4 id="110-exemple-0">1.1.0 Exemple 0<a class="headerlink" href="#110-exemple-0" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Requête basique : SELECT, FROM <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li><strong>Commande :</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</code></pre></div></li>
+<li><strong>Traduction :</strong> </li>
+</ul>
+<p>On veut tous les titres de la table «livre».</p>
+<ul>
+<li><strong>Résultat :</strong>   </li>
+</ul>
+<p><img alt="" src="../data/ex0.png" /></p>
+</div>
+<p><strong>Remarques</strong>  </p>
+<ul>
+<li>
+<p>Les mots-clés SQL sont traditionnellement écrits en MAJUSCULES. 
+<img alt="image" class="center" src="../data/SQLmeme2.png" width="40%" /></p>
+</li>
+<li>
+<p>Le <code>;</code> signale la fin de l'instruction. Il peut donc être omis s'il n'y a pas d'instructions enchaînées (ce qui sera toujours notre cas).  </p>
+</li>
+<li>
+<p>L'indentation n'est pas syntaxique (pas comme en Python). On peut faire des retours à la ligne et des indentations pour rendre le code plus lisible.</p>
+</li>
+</ul>
 <h4 id="111-exemple-1">1.1.1 Exemple 1<a class="headerlink" href="#111-exemple-1" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
-<p class="admonition-title">Requête basique : SELECT, FROM, WHERE <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Requête filtrée : SELECT, FROM, WHERE <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li><strong>Commande :</strong> 
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1990</span><span class="p">;</span><span class="w"></span>
@@ -2473,9 +2505,25 @@ Cette base de données contient les tables suivantes :
 </ul>
 <p><img alt="" src="../data/ex1.png" /></p>
 </div>
+<p>Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques <code>=</code> , <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> peuvent être utilisés, mais aussi le mot-clé IN :</p>
+<h4 id="111bis-exemple-1bis">1.1.1bis Exemple 1bis<a class="headerlink" href="#111bis-exemple-1bis" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Requête avec plusieurs possibilités : WHERE ... IN... <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li><strong>Commande :</strong> 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span><span class="w"> </span><span class="mi">1991</span><span class="p">,</span><span class="w"> </span><span class="mi">1992</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></li>
+<li><strong>Traduction :</strong> </li>
+</ul>
+<p>On veut les titres de la table «livre» qui sont parus en 1990, 1991 ou 1992.</p>
+<ul>
+<li><strong>Résultat :</strong>   </li>
+</ul>
+<p><img alt="" src="../data/ex1bis.png" /></p>
+</div>
 <h4 id="112-exemple-2">1.1.2 Exemple 2<a class="headerlink" href="#112-exemple-2" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
-<p class="admonition-title">Requête avec booléen : AND <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Requête avec booléens : AND - OR <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li><strong>Commande :</strong> 
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"> </span><span class="k">WHERE</span><span class="w">   </span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1970</span><span class="w"> </span><span class="k">AND</span><span class="w"></span>
@@ -2552,6 +2600,8 @@ L'astérisque <code>*</code> est un joker (<em>wildcard</em> en anglais).</p>
 </ul>
 <p><img alt="" src="../data/ex6.png" /></p>
 </div>
+<p><strong>Remarque</strong><br />
+L'alias <code>AS</code> sera souvent utilisé pour raccourcir un nom, notamment lors des jointures de plusieurs tables (voir plus loin).</p>
 <h3 id="12-operations-sur-les-donnees-selection-avec-agregation">1.2. Opérations sur les données : sélection avec agrégation<a class="headerlink" href="#12-operations-sur-les-donnees-selection-avec-agregation" title="Permanent link">⚓︎</a></h3>
 <p>Les requêtes effectuées jusqu'ici ont juste sélectionné des données grâce à différents filtres : aucune action à partir de ces données n'a été effectuée.<br />
 Nous allons maintenant effectuer des opérations à partir des données sélectionnées. On appelle ces opérations des <strong>opérations d'agrégation</strong>.</p>
@@ -2598,7 +2648,8 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 </code></pre></div></li>
 <li><strong>Traduction :</strong> </li>
 </ul>
-<p>On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».</p>
+<p>On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».<br />
+<em>Attention : là encore, ce calcul n'a aucun sens...</em></p>
 <ul>
 <li><strong>Résultat :</strong>   </li>
 </ul>
@@ -2614,7 +2665,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 </code></pre></div></li>
 <li><strong>Traduction :</strong> </li>
 </ul>
-<p>On veut trouver la pus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec <strong>MAX</strong> pour la recherche du maximum.</p>
+<p>On veut trouver la plus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec <strong>MAX</strong> pour la recherche du maximum.</p>
 <ul>
 <li><strong>Résultat :</strong>   </li>
 </ul>
@@ -2662,7 +2713,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 <img alt="" src="../data/noex1.png" /></p>
 <p>Le contenu est peu lisible : qui a emprunté quel livre ?<br />
 Souvenons-nous du diagramme de la base de données.</p>
-<p><img alt="" class="center" src="../data/schemaDB.png" width="100%" /></p>
+<p><img alt="" class="center" src="../data/ERD_livres.png" /></p>
 <p>Pour que la table «emprunt» soit lisible, il faudrait (dans un premier temps) que l'on affiche à la place de l'ISBN le titre de l'ouvrage. Or ce titre est disponible dans la table «livres».  On va donc procéder à une <strong>jointure</strong> de ces deux tables.</p>
 <h4 id="131-exemple-13">1.3.1 Exemple 13<a class="headerlink" href="#131-exemple-13" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
@@ -2681,6 +2732,7 @@ Comme plusieurs tables sont appelées, nous préfixons chaque colonne avec le no
 </code></pre></div>
 doit se comprendre comme ceci : on «invite» la table «livres» (dont on va afficher la colonne «titre»). La correspondance entre la table «livres» et la table «emprunt» doit se faire sur l'attribut ISBN, qui est la clé primaire de «livres» et une clé étrangère d'«emprunts».<br />
 Il est donc très important de spécifier ce sur quoi les deux tables vont se retrouver (ici, l'ISBN) </p>
+<p><img alt="image" class="center" src="../data/ex_join.png" /></p>
 <ul>
 <li><strong>Résultat :</strong>  </li>
 </ul>
@@ -2871,7 +2923,7 @@ et le résultat serait : </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 décembre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2022</span>
       
     
   </small>
@@ -2921,13 +2973,13 @@ et le résultat serait : </p>
       
       
         
-        <a href="../02_exercices/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices SQL" rel="next">
+        <a href="../02_exercices_inter/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices SQL interactifs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Exercices SQL
+              Exercices SQL interactifs
             </div>
           </div>
           <div class="md-footer__button md-icon">

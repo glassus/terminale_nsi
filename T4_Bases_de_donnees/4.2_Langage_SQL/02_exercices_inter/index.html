@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Exercices SQL - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>Exercices SQL interactifs - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercices-sur-le-langage-sql" class="md-skip">
+        <a href="#exercices-sql-interactifs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercices SQL
+              Exercices SQL interactifs
             
           </span>
         </div>
@@ -1343,62 +1343,24 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Exercices SQL
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Exercices SQL
+        Exercices SQL interactifs
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+            
+          
+            
+              
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    Exercice 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-3" class="md-nav__link">
-    Exercice 3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-4" class="md-nav__link">
-    Exercice 4
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../02_exercices_ecrit/" class="md-nav__link">
+        Exercices SQL débranchés
+      </a>
     </li>
   
 
@@ -2353,247 +2315,402 @@
     
                   
 
-  <a href="https://github.com/glassus/terminale_nsi/edit/master/docs/T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices.md" title="Editer cette page" class="md-content__button md-icon">
+  <a href="https://github.com/glassus/terminale_nsi/edit/master/docs/T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter.md" title="Editer cette page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="exercices-sur-le-langage-sql">Exercices sur le langage SQL<a class="headerlink" href="#exercices-sur-le-langage-sql" title="Permanent link">⚓︎</a></h1>
-<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
-<p><em>(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)</em></p>
-<p>On veut créer une base de données <code>baseHopital.db</code>  qui contiendra les trois tables suivantes :</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Patients</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Int</code></td>
-<td>id</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>nom</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>prenom</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>genre</td>
-</tr>
-<tr>
-<td><code>Int</code></td>
-<td>annee_naissance</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Ordonnances</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Int</code></td>
-<td>code</td>
-</tr>
-<tr>
-<td><code>Int</code></td>
-<td>id_patient</td>
-</tr>
-<tr>
-<td><code>Int</code></td>
-<td>matricule_medecin</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>date_ord</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>medicaments</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Medecins</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Int</code></td>
-<td>matricule</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>nom_prenom</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>specialite</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>telephone</td>
-</tr>
-</tbody>
-</table>
-<p>On suppose que les dates sont données sous la forme <code>jj-mm-aaaa</code>.</p>
-<p><strong>Q1.</strong> Donner les commandes SQLite permettant de créer ces tables.</p>
+<h1 id="exercices-sql-interactifs">Exercices SQL interactifs<a class="headerlink" href="#exercices-sql-interactifs" title="Permanent link">⚓︎</a></h1>
+<p>sur des bases de données réelles</p>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  1</p>
+<p><em>Questions interactives à réaliser sur le site sqlzoo.net.</em></p>
+<p><strong>Q1.</strong> Travail sur SELECT, (base de données Nobel) <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial" target="_blank">ici</a>.</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="w"></span>
-<span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTOINCREMENT</span><span class="p">,</span><span class="w"></span>
-<span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">genre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">annee_naissance</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<p>Corrections extraites du dépôt <em>https://github.com/jisaw/sqlzoo-solutions</em>.
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Third section of sqlzoo, SELECT from Nobel</span>
+<span class="cm">*/</span><span class="w"></span>
 
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Ordonnances</span><span class="p">(</span><span class="w"></span>
-<span class="n">code</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"></span>
-<span class="n">id_patient</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"></span>
-<span class="n">matricule_medecin</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"></span>
-<span class="n">date_ord</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">medicaments</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<span class="c1">--#1</span>
+<span class="cm">/*</span>
+<span class="cm">Change the query shown so that it displays Nobel prizes for 1950.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">yr</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1950</span><span class="w"></span>
 
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="w"></span>
-<span class="n">matricule</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"></span>
-<span class="n">nom_prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">specialite</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">telephone</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
-</code></pre></div>
+<span class="c1">--#2</span>
+<span class="cm">/*</span>
+<span class="cm">Show who won the 1962 prize for Literature.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1962</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Literature&#39;</span><span class="w"></span>
+
+<span class="c1">--#3</span>
+<span class="cm">/*</span>
+<span class="cm">Show the year and subject that won &#39;Albert Einstein&#39; his prize.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">yr</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Albert Einstein&#39;</span><span class="w"></span>
+
+<span class="c1">--#4</span>
+<span class="cm">/*</span>
+<span class="cm">Give the name of the &#39;Peace&#39; winners since the year 2000, including 2000.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Peace&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2000</span><span class="w"></span>
+
+<span class="c1">--#5</span>
+<span class="cm">/*</span>
+<span class="cm">Show all details (yr, subject, winner) of the Literature prize winners for 1980 to 1989 inclusive</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">yr</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">yr</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">1980</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">1989</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Literature&#39;</span><span class="w"></span>
+
+<span class="c1">--#6</span>
+<span class="cm">/*</span>
+<span class="cm">Show all details of the presidential winners:</span>
+
+<span class="cm">Theodore Roosevelt</span>
+<span class="cm">Woodrow Wilson</span>
+<span class="cm">Jimmy Carter</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Theodore Roosevelt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Woodrow Wilson&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Jimmy Carter&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#7</span>
+<span class="cm">/*</span>
+<span class="cm">Show the winners with first name John</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;john%&#39;</span><span class="w"></span>
+
+<span class="c1">--#8</span>
+<span class="cm">/*</span>
+<span class="cm">Show the Physics winners for 1980 together with the Chemistry winners for 1984.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Physics&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1980&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Chemistry&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1984</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#9</span>
+<span class="cm">/*</span>
+<span class="cm">Show the winners for 1980 excluding the Chemistry and Medicine</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1980</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Medicine&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#10</span>
+<span class="cm">/*</span>
+<span class="cm">Show who won a &#39;Medicine&#39; prize in an early year (before 1910, not including 1910) together with winners of a &#39;Literature&#39; prize in a later year (after 2004, including 2004)</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">subject</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Medicine&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1910</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Literature&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2004</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#11</span>
+<span class="cm">/*</span>
+<span class="cm">Find all details of the prize won by PETER GRÜNBERG</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;peter gr%nberg&#39;</span><span class="w"></span>
+
+<span class="c1">--#12</span>
+<span class="cm">/*</span>
+<span class="cm">Find all details of the prize won by EUGENE O&#39;NEILL</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Eugene O&#39;&#39;Neill&#39;</span><span class="w"></span>
+
+<span class="c1">--#13</span>
+<span class="cm">/*</span>
+<span class="cm">Knights in order</span>
+
+<span class="cm">List the winners, year and subject where the winner starts with Sir. Show the the most recent first, then by name order.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">winner</span><span class="p">,</span><span class="w"> </span><span class="n">yr</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">winner</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;sir%&#39;</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">yr</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w"> </span><span class="n">winner</span><span class="w"></span>
+
+<span class="c1">--#14</span>
+<span class="cm">/*</span>
+<span class="cm">The expression subject IN (&#39;Chemistry&#39;,&#39;Physics&#39;) can be used as a value - it will be 0 or 1.</span>
+
+<span class="cm">Show the 1984 winners ordered by subject and winner name; but list Chemistry and Physics last.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">winner</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">yr</span><span class="o">=</span><span class="mi">1984</span><span class="w"></span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">),</span><span class="n">subject</span><span class="p">,</span><span class="n">winner</span><span class="w"></span>
+</code></pre></div></p>
 </details>
-<p><strong>Q2.</strong> Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente. Donner la commande SQLite correspondante.</p>
+<p><strong>Q2.</strong> Travail sur SUM et COUNT, (base de données World) <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="https://sqlzoo.net/wiki/SUM_and_COUNT" target="_blank">ici</a>. (jusqu'à la question 5.)</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
+<p>Corrections extraites du dépôt <em>https://github.com/jisaw/sqlzoo-solutions</em>.
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Fifth section of sqlzoo, SUM and COUNT</span>
+<span class="cm">*/</span><span class="w"></span>
+
+
+<span class="c1">--#1</span>
+<span class="cm">/*</span>
+<span class="cm">Show the total population of the world.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+
+<span class="c1">--#2</span>
+<span class="cm">/*</span>
+<span class="cm">List all the continents - just once each.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="p">(</span><span class="n">continent</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+
+<span class="c1">--#3</span>
+<span class="cm">/*</span>
+<span class="cm">Give the total GDP of Africa</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">gdp</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">continent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Africa&#39;</span><span class="w"></span>
+
+<span class="c1">--#4</span>
+<span class="cm">/*</span>
+<span class="cm">How many countries have an area of at least 1000000</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1000000</span><span class="w"></span>
+
+<span class="c1">--#5</span>
+<span class="cm">/*</span>
+<span class="cm">What is the total population of (&#39;France&#39;,&#39;Germany&#39;,&#39;Spain&#39;)</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;France&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Spain&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#6</span>
+<span class="cm">/*</span>
+<span class="cm">For each continent show the continent and number of countries.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">continent</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">continent</span><span class="w"></span>
+
+
+<span class="c1">--#7</span>
+<span class="cm">/*</span>
+<span class="cm">For each continent show the continent and number of countries with populations of at least 10 million.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">continent</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">population</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10000000</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">continent</span><span class="w"></span>
+
+<span class="c1">--#8</span>
+<span class="cm">/*</span>
+<span class="cm">List the continents that have a total population of at least 100 million.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">continent</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">world</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">continent</span><span class="w"></span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100000000</span><span class="w"></span>
+</code></pre></div></p>
 </details>
-<p>Commentaire : NULL sert ici à ne rien mettre là où le SGBD gère tout seul la clé primaire en autoincrement. (hors-programme)</p>
-<p><strong>Q3.</strong> Le patient numéro 100 a changé de genre et est maintenant une femme. Donner la commande SQLite modifiant en conséquence ses données.</p>
+<p><strong>Q3.</strong> Travail sur JOIN, (base de données Euro2012) <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="https://sqlzoo.net/wiki/The_JOIN_operation" target="_blank">ici</a>.</p>
 <details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<summary>correction</summary>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Sixth section of sqlzoo, Join</span>
+<span class="cm">*/</span><span class="w"></span>
+
+
+<span class="c1">--#1</span>
+<span class="cm">/*</span>
+<span class="cm">The first example shows the goal scored by &#39;Bender&#39;.</span>
+
+<span class="cm">Show matchid and player name for all goals scored by Germany.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">matchid</span><span class="p">,</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">goal</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">teamid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GER&#39;</span><span class="w"></span>
+
+<span class="c1">--#2</span>
+<span class="cm">/*</span>
+<span class="cm">From the previous query you can see that Lars Bender&#39;s goal was scored in game 1012. Notice that the column matchid in the goal table corresponds to the id column in the game table.</span>
+
+<span class="cm">Show id, stadium, team1, team2 for game 1012</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="n">stadium</span><span class="p">,</span><span class="n">team1</span><span class="p">,</span><span class="n">team2</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1012</span><span class="w"></span>
+
+<span class="c1">--#3</span>
+<span class="cm">/*</span>
+<span class="cm">You can combine the two steps into a single query with a JOIN. You will get all the game details and all the goal details if you use</span>
+
+<span class="cm">SELECT *</span>
+<span class="cm">  FROM game JOIN goal ON (id=matchid)</span>
+<span class="cm">Show the player, teamid and mdate and for every German goal. teamid=&#39;GER&#39;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">teamid</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="n">matchid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">teamid</span><span class="o">=</span><span class="s1">&#39;GER&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#4</span>
+<span class="cm">/*</span>
+<span class="cm">Use the same JOIN as in the previous question.</span>
+
+<span class="cm">Show the team1, team2 and player for every goal scored by a player called Mario player LIKE &#39;Mario%&#39;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">team1</span><span class="p">,</span><span class="w"> </span><span class="n">team2</span><span class="p">,</span><span class="w"> </span><span class="n">player</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="n">matchid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Mario%&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#5</span>
+<span class="cm">/*</span>
+<span class="cm">The table eteam gives details of every national team including the coach. You can JOIN goal to eteam using the phrase goal JOIN eteam on teamid=id</span>
+
+<span class="cm">Show player, teamid, coach, gtime for all goals scored in the first 10 minutes gtime&lt;=10</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">teamid</span><span class="p">,</span><span class="w"> </span><span class="n">coach</span><span class="p">,</span><span class="w"> </span><span class="n">gtime</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">goal</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">eteam</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">teamid</span><span class="o">=</span><span class="n">id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">gtime</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#6</span>
+<span class="cm">/*</span>
+<span class="cm">To JOIN game with eteam you could use either</span>
+<span class="cm">game JOIN eteam ON (team1=eteam.id) or game JOIN eteam ON (team2=eteam.id)</span>
+
+<span class="cm">Notice that because id is a column name in both game and eteam you must specify eteam.id instead of just id</span>
+
+<span class="cm">List the the dates of the matches and the name of the team in which &#39;Fernando Santos&#39; was the team1 coach.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="w"> </span><span class="n">teamname</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">eteam</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">team1</span><span class="o">=</span><span class="n">eteam</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">coach</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%Santos&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#7</span>
+<span class="cm">/*</span>
+<span class="cm">List the player for every goal scored in a game where the stadium was &#39;National Stadium, Warsaw&#39;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">player</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">goal</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">game</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="n">matchid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">stadium</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;National Stadium, Warsaw&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#8</span>
+<span class="cm">/*</span>
+<span class="cm">The example query shows all goals scored in the Germany-Greece quarterfinal.</span>
+<span class="cm">Instead show the name of all players who scored a goal against Germany.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="p">(</span><span class="n">player</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">matchid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">((</span><span class="n">team1</span><span class="o">=</span><span class="s1">&#39;GER&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">team2</span><span class="o">=</span><span class="s1">&#39;GER&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">teamid</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;GER&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">--#9</span>
+<span class="cm">/*</span>
+<span class="cm">Show teamname and the total number of goals scored.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">teamname</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">player</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">eteam</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="n">teamid</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">teamname</span><span class="w"></span>
+
+<span class="c1">--#10</span>
+<span class="cm">/*</span>
+<span class="cm">Show the stadium and the number of goals scored in each stadium.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">stadium</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">player</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">goals</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="n">matchid</span><span class="p">)</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">stadium</span><span class="w"></span>
+
+<span class="c1">--#11</span>
+<span class="cm">/*</span>
+<span class="cm">For every match involving &#39;POL&#39;, show the matchid, date and the number of goals scored.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">matchid</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">player</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">goals</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">matchid</span><span class="o">=</span><span class="n">id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">team1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;POL&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">team2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;POL&#39;</span><span class="p">))</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">matchid</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="w"></span>
+
+<span class="c1">--#12</span>
+<span class="cm">/*</span>
+<span class="cm">For every match where &#39;GER&#39; scored, show matchid, match date and the number of goals scored by &#39;GER&#39;</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">player</span><span class="p">)</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">game</span><span class="w"></span>
+<span class="w">  </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="o">=</span><span class="n">matchid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">team1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GER&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">team2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;GER&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">teamid</span><span class="o">=</span><span class="s1">&#39;GER&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="w"></span>
+
+<span class="c1">--#13</span>
+<span class="cm">/*</span>
+<span class="cm">List every match with the goals scored by each team as shown. This will use &quot;CASE WHEN&quot; which has not been explained in any previous exercises.</span>
+<span class="cm">mdate   team1   score1  team2   score2</span>
+<span class="cm">1 July 2012 ESP 4   ITA 0</span>
+<span class="cm">10 June 2012    ESP 1   ITA 1</span>
+<span class="cm">10 June 2012    IRL 1   CRO 3</span>
+<span class="cm">...</span>
+<span class="cm">Notice in the query given every goal is listed. If it was a team1 goal then a 1 appears in score1, otherwise there is a 0.</span>
+<span class="cm">You could SUM this column to get a count of the goals scored by team1. Sort your result by mdate, matchid, team1 and team2.</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="n">team1</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">teamid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">team1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">score1</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="n">team2</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">teamid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">team2</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">END</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">score2</span><span class="w"> </span><span class="k">FROM</span><span class="w"></span>
+<span class="w">    </span><span class="n">game</span><span class="w"> </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">goal</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matchid</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="n">team1</span><span class="p">,</span><span class="n">team2</span><span class="w"></span>
+<span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">mdate</span><span class="p">,</span><span class="w"> </span><span class="n">matchid</span><span class="p">,</span><span class="w"> </span><span class="n">team1</span><span class="p">,</span><span class="w"> </span><span class="n">team2</span><span class="w"></span>
 </code></pre></div>
 </details>
-<p><strong>Q4.</strong> Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">specialite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;épidémiologie&quot;</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q5.</strong>  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Ordonnances</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">id_patient</span><span class="w"></span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">matricule_medecin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">matricule</span><span class="w"></span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">specialite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;psychiatrie&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">date_ord</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%04-2020%&quot;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
-<p>Questions interactives à réaliser sur le site sqlzoo.net</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  2</p>
+<p>Gestion d'un réseau d'agences de location de voitures. <br />
+<em>D'après le travail de J. Le Coupanec (Académie de Rennes)</em></p>
+<p>La base de données <a href="../data/locations.db">locations.db</a> contient les tables <code>Agences</code>,<code>Locations</code>, <code>Vehicules</code>.
+<img alt="" src="../data/diag_locations.png" /></p>
 <ol>
-<li>Travail sur SELECT, (base de données Nobel) <a href="https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial">ici</a></li>
+<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_1&amp;db=locations" target="_blank">9 questions</a> sur la relation Agence. (Travail sur SELECT)</li>
+<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_2&amp;db=locations" target="_blank">11 questions</a> sur la relation Véhicules. (Travail sur SELECT plus des fonctions d'agrégation)</li>
+<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_3&amp;db=locations" target="_blank">12 questions</a> sur la relation Locations. (Travail sur des jointures)</li>
+<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_4&amp;db=locations" target="_blank">17 questions</a> sur la relation Véhicules. (Travail sur UPDATE, INSERT, DELETE)</li>
 </ol>
-<p>Correction : voir <a href="https://github.com/jisaw/sqlzoo-solutions/blob/master/select-from-nobel.sql">https://github.com/jisaw/sqlzoo-solutions/blob/master/select-from-nobel.sql</a></p>
-<ol>
-<li>Travail sur SUM et COUNT, (base de données World) <a href="https://sqlzoo.net/wiki/SUM_and_COUNT">ici</a></li>
-</ol>
-<p>Correction : voir <a href="https://github.com/jisaw/sqlzoo-solutions/blob/master/sum-and-count.sql">https://github.com/jisaw/sqlzoo-solutions/blob/master/sum-and-count.sql</a></p>
-<ol>
-<li>Travail sur JOIN, (base de données Euro2012) <a href="https://sqlzoo.net/wiki/The_JOIN_operation">ici</a></li>
-</ol>
-<p>Correction : voir <a href="https://github.com/jisaw/sqlzoo-solutions/blob/master/join.sql">https://github.com/jisaw/sqlzoo-solutions/blob/master/join.sql</a></p>
-<h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
-<p><em>basé sur le travail de G.Viateau (Bayonne)</em></p>
-<p>On considère ci-dessous le schéma de la base de données du stock d'un supermarché :</p>
-<p><img alt="" src="../data/exo3_schema.png" /></p>
-<p><strong>Q1</strong>. Quelle requête SQL donne le prix d'achat du produit dont le <code>nom_court</code> est «Liq_Vaiss_1L» ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prix_achat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom_court</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Liq_Vaiss_1L&#39;</span><span class="w"> </span>
-</code></pre></div>
-</details>
-<p><strong>Q2</strong>. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">adresse</span><span class="p">,</span><span class="w"> </span><span class="n">cp</span><span class="p">,</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Fournisseurs</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Avenir_confiseur&#39;</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q3</strong>. Quelle requête donne les produits étant en rupture de stock ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Produits</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"></span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Stocks</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Produits</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stocks</span><span class="p">.</span><span class="n">produit</span><span class="w"></span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Stocks</span><span class="p">.</span><span class="n">quantite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q4</strong>. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ampoule%&quot;</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q5</strong>. Quelle requête permet d'avoir le prix moyen de ces ampoules ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">prix_vente</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ampoule%&quot;</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q6</strong>. Quelle requête permet d'identifier le produit le plus cher du magasin ?</p>
-<details class="note">
-<summary>Correction</summary>
-<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_court</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">prix_vente</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-ou</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">prix_vente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">prix_vente</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-</details>
-<p><strong>Q7</strong>. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? <em>(on pourra utiliser la fonction SQL <code>NOW()</code> qui renvoie la date actuelle )</em></p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Stocks</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">produits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="w"></span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">date_peremption</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">();</span><span class="w"></span>
-</code></pre></div>
-</details>
-<h2 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h2>
-<p><em>site réalisé par J. Le Coupanec (Académie de Rennes)</em></p>
-<p>Sur la page <a href="http://colbert.bzh/sql/">http://colbert.bzh/sql/</a>, suivez le parcours des deux TPs :</p>
-<ul>
-<li>TP1 : Gestion d'un réseau d'agences de location de voitures.
-La base de données <a href="../data/locations.db">locations.db</a> contient les tables <code>Agences</code>,<code>Locations</code>, <code>Vehicules</code>.
-<img alt="" src="../data/diag_locations.png" /></li>
-</ul>
-<p><br>
-<br></p>
-<ul>
-<li>TP2 : Le championnat de France 2015-2016
-La base de données <a href="../data/soccer.db">soccer.db</a> contient les tables <code>Team</code>,<code>Match</code>, <code>Event</code>, <code>Player</code>.  </li>
-</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  3</p>
+<p>Championnat de France de Football 2015-2016</p>
+<p><em>D'après le travail de J. Le Coupanec (Académie de Rennes)</em></p>
+<p>La base de données <a href="../data/soccer.db">soccer.db</a> contient les tables <code>Team</code>,<code>Match</code>, <code>Event</code>, <code>Player</code>.  </p>
 <p><img alt="" src="../data/soccer_diag.png" /></p>
+<ol>
+<li>Répondez à ces <a class="" href="https://colbert.bzh/sql/tp.html?html=soccer_1&amp;db=soccer" target="_blank">12 questions</a> générales.</li>
+<li>Répondez à ces <a class="" href="https://colbert.bzh/sql/tp.html?html=soccer_2&amp;db=soccer" target="_blank">11 questions</a> sur l'équipe de Lorient.</li>
+</ol>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 novembre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2022</span>
       
     
   </small>
@@ -2643,13 +2760,13 @@ La base de données <a href="../data/soccer.db">soccer.db</a> contient les table
       
       
         
-        <a href="../03_python_et_SQL/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices Python-SQL" rel="next">
+        <a href="../02_exercices_ecrit/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Exercices SQL débranchés" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Exercices Python-SQL
+              Exercices SQL débranchés
             </div>
           </div>
           <div class="md-footer__button md-icon">
