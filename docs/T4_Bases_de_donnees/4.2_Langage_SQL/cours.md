@@ -120,7 +120,7 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
     - **Traduction :** 
 
     On veut les titres de la table «livre» qui sont parus en 1990, 1991 ou 1992.
-    
+
     - **Résultat :**   
 
     ![](data/ex1bis.png)
@@ -359,7 +359,7 @@ Il est donc très important de spécifier ce sur quoi les deux tables vont se re
 #### 1.3.2 Exemple 14 
 
 
-Le résultat précédemment a permis d'améliorer la visibilité de la table «emprunt», mais il reste la colonne «code_barre» qui est peu lisible. Nous pouvons la remplacer par le titre du livre, en faisant une nouvelle jointure, en invitant maintenant les deux tables «livre» et «usager».
+Le résultat précédent a permis d'améliorer la visibilité de la table «emprunt», mais il reste la colonne «code_barre» qui est peu lisible. Nous pouvons la remplacer par le titre du livre, en faisant une nouvelle jointure, en invitant maintenant les deux tables «livre» et «usager».
 
 !!! note "Jointure de 3 tables : JOIN :heart:"
     - **Commande :** 
