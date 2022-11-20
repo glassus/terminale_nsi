@@ -23,12 +23,13 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
+    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 
 
 
 
 ### *Thèmes déjà traités*
+- [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
 - [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   

@@ -44,25 +44,7 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
     ![](data/sqlonline.png)
 
 
-??? abstract "2. Au sein d'un notebook Jupyter"
-    - Si nécessaire, installez via le terminal les paquets suivants :
-    ```
-    sudo pip3 install jupyter-sql
-    sudo pip3 install ipython-sql
-    sudo apt install python3-sql
-    ``` 
-    - Dans un notebook Jupyter, votre première cellule doit être 
-    ```
-    %load_ext sql
-    %sql sqlite:///livres.db
-    ``` 
-    en ayant bien pris soin de mettre le fichier ```livres.db``` dans le même répertoire que votre fichier Jupyter.
-
-    Ensuite, chaque requête devra être précédée de la ligne ```%% sql```.
-    ![](data/jupyter.png)
-
-
-!!! abstract "3. Avec un logiciel externe : DB Browser for SQLite :star: :star: :star:"
+!!! abstract "2. Avec un logiciel externe : DB Browser for SQLite :star: :star: :star:"
     - Installez ```DB Browser for SQLite```, téléchargeable à l'adresse [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
     - Ouvrez le fichier ```livres.db```.  
     ![](data/dbbrowser.png)
@@ -72,16 +54,48 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
 --------
 
 Dans toute la suite, les manipulations sont à faire en interrogeant la base de données ```livres.db```, avec l'une des méthodes indiquées ci-dessus.
-Cette base de données contient les tables suivantes :
-![](data/schemaDB.png){: .center}
+
+Voici le diagramme relationnel de cette base :
+![](data/ERD_livres.png){: .center}
+
+
+- les clés primaires sont en bleu (suivi d'une icone de clé)
+- les clés étrangères sont en noir et reliées à leur clé primaire.
+
+<!-- diagramme réalisé depuis https://app.quickdatabasediagrams.com/
+.db -> .sql fait avec DBbrowser -->
 
 
 ### 1.1. Sélection de données
- 
+
+#### 1.1.0 Exemple 0 
+
+!!! note "Requête basique : SELECT, FROM :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre FROM livre ;
+    ``` 
+    - **Traduction :** 
+
+    On veut tous les titres de la table «livre».
+
+    - **Résultat :**   
+
+    ![](data/ex0.png)
+
+**Remarques**  
+
+- Les mots-clés SQL sont traditionnellement écrits en MAJUSCULES. 
+![image](data/SQLmeme2.png){: .center width=40%}
+
+- Le ```;``` signale la fin de l'instruction. Il peut donc être omis s'il n'y a pas d'instructions enchaînées (ce qui sera toujours notre cas).  
+
+- L'indentation n'est pas syntaxique (pas comme en Python). On peut faire des retours à la ligne et des indentations pour rendre le code plus lisible.
+
 
 #### 1.1.1 Exemple 1 
 
-!!! note "Requête basique : SELECT, FROM, WHERE :heart:"
+!!! note "Requête filtrée : SELECT, FROM, WHERE :heart:"
     - **Commande :** 
     ```sql
     SELECT titre FROM livre WHERE annee >= 1990;
@@ -94,9 +108,27 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex1.png)
 
+
+Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```=``` , ```!=```, ```>```, ```>=```, ```<```, ```<=``` peuvent être utilisés, mais aussi le mot-clé IN :
+#### 1.1.1bis Exemple 1bis 
+
+!!! note "Requête avec plusieurs possibilités : WHERE ... IN... :heart:"
+    - **Commande :** 
+    ```sql
+    SELECT titre FROM livre WHERE annee IN (1990, 1991, 1992);
+    ``` 
+    - **Traduction :** 
+
+    On veut les titres de la table «livre» qui sont parus en 1990, 1991 ou 1992.
+    
+    - **Résultat :**   
+
+    ![](data/ex1bis.png)
+
+
 #### 1.1.2 Exemple 2 
 
-!!! note "Requête avec booléen : AND :heart:"
+!!! note "Requête avec booléens : AND - OR :heart:"
     - **Commande :** 
     ```sql
     SELECT titre FROM livre WHERE   annee >= 1970 AND
@@ -174,6 +206,8 @@ Cette base de données contient les tables suivantes :
 
     ![](data/ex6.png)
 
+**Remarque**  
+L'alias ```AS``` sera souvent utilisé pour raccourcir un nom, notamment lors des jointures de plusieurs tables (voir plus loin).
 
 ### 1.2. Opérations sur les données : sélection avec agrégation
 
@@ -223,7 +257,8 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
     ``` 
     - **Traduction :** 
 
-    On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».
+    On veut calculer la moyenne des années de parution des livres de la table livres comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée «moyenne».  
+    *Attention : là encore, ce calcul n'a aucun sens...*
 
     - **Résultat :**   
 
@@ -240,7 +275,7 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
     ``` 
     - **Traduction :** 
 
-    On veut trouver la pus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec **MAX** pour la recherche du maximum.
+    On veut trouver la plus petite valeur de la colonne «annee» parmi les livres de la tables livre comportant le mot "Astérix". Le résultat sera le seul élément d'une colonne nommée minimum. Le fonctionnement est identique avec **MAX** pour la recherche du maximum.
 
     - **Résultat :**   
 
@@ -292,7 +327,7 @@ SELECT * FROM emprunt;
 Le contenu est peu lisible : qui a emprunté quel livre ?  
 Souvenons-nous du diagramme de la base de données.
 
- ![](data/schemaDB.png){: .center width=100%}
+ ![](data/ERD_livres.png){: .center}
 
  Pour que la table «emprunt» soit lisible, il faudrait (dans un premier temps) que l'on affiche à la place de l'ISBN le titre de l'ouvrage. Or ce titre est disponible dans la table «livres».  On va donc procéder à une **jointure** de ces deux tables.
 
@@ -313,6 +348,9 @@ JOIN livre ON emprunt.isbn = livre.isbn
 ``` 
 doit se comprendre comme ceci : on «invite» la table «livres» (dont on va afficher la colonne «titre»). La correspondance entre la table «livres» et la table «emprunt» doit se faire sur l'attribut ISBN, qui est la clé primaire de «livres» et une clé étrangère d'«emprunts».  
 Il est donc très important de spécifier ce sur quoi les deux tables vont se retrouver (ici, l'ISBN) 
+
+![image](data/ex_join.png){: .center}
+
 
 - **Résultat :**  
 
