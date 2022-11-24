@@ -2673,14 +2673,18 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 </div>
 <h4 id="125-exemple-11">1.2.5 Exemple 11<a class="headerlink" href="#125-exemple-11" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
-<p class="admonition-title">Classer des valeurs : ORDER BY, ASC, DESC <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Classer des valeurs : ORDER BY, ASC, DESC, LIMIT <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <ul>
-<li><strong>Commande :</strong> 
+<li>
+<p><strong>Commande :</strong> 
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"></span>
 <span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Astérix%&quot;</span><span class="w"></span>
 <span class="w">                </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"></span>
-</code></pre></div></li>
-<li><strong>Traduction :</strong> </li>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Traduction :</strong> </p>
+</li>
 </ul>
 <p>On veut afficher tous les albums d'Astérix, et leur année de parution, classés par année décroissante.</p>
 <ul>
@@ -2688,7 +2692,19 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 </ul>
 <p><img alt="" src="../data/ex11.png" /></p>
 <ul>
-<li><strong>Comportement par défaut :</strong> Si le paramètre ASC ou DESC est omis, le classement se fait par ordre <strong>croissant</strong> (donc ASC est le paramètre par défaut).</li>
+<li>
+<p><strong>Comportement par défaut :</strong> Si le paramètre ASC ou DESC est omis, le classement se fait par ordre <strong>croissant</strong> (donc ASC est le paramètre par défaut).</p>
+</li>
+<li>
+<p><strong>Utilisation de LIMIT :</strong> Le mot-clé LIMIT (suivi d'un nombre) permet de limiter le nombre de résultats affichés.<br />
+Ainsi la requête<br />
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livre</span><span class="w"></span>
+<span class="w">                </span><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Astérix%&quot;</span><span class="w"></span>
+<span class="w">                </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+<span class="w">                </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+permet d'obtenir les renseignements sur l'Astérix le plus récent.                    </p>
+</li>
 </ul>
 </div>
 <h4 id="125-exemple-12">1.2.5 Exemple 12<a class="headerlink" href="#125-exemple-12" title="Permanent link">⚓︎</a></h4>
@@ -2768,7 +2784,8 @@ Notez ici que des alias sont donnés aux tables (par <strong>AS</strong>) afin d
 <ul>
 <li>Vous pouvez travailler en ligne ou bien dans votre SGBD préféré, avec la base <a href="../data/sql-murder-mystery.db">sql-murder-mystery.db</a>. Attention pour valider votre réponse, il faudra vous rendre en bas de la page officielle.</li>
 </ul>
-<p>&lt;!-- - Vous pouvez trouver des éléments de correction <a href="https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab" target="_blank">ici</a>... -&gt;</p>
+<!-- - Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target="_blank"}... -->
+
 <h2 id="2-creation-et-modification-dune-base-de-donnees">2. Création et modification d'une base de données<a class="headerlink" href="#2-creation-et-modification-dune-base-de-donnees" title="Permanent link">⚓︎</a></h2>
 <p><em>rappel</em> : <img alt="" src="../data/extraitBO.png" /></p>
 <p>L'objectif est de créer la table suivante :</p>
@@ -2807,7 +2824,7 @@ Notez ici que des alias sont donnés aux tables (par <strong>AS</strong>) afin d
 </tbody>
 </table>
 <h4 id="21-exemple-15">2.1 Exemple 15<a class="headerlink" href="#21-exemple-15" title="Permanent link">⚓︎</a></h4>
-<p><em>La création d'une table n'est pas explicitement au programme de NSI.</em></p>
+<p><em>La création d'une table n'est pas explicitement au programme de NSI. Personne ne sait vraiment pourquoi</em></p>
 <div class="admonition note">
 <p class="admonition-title">Création d'une table : CREATE TABLE <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <ul>
@@ -2820,12 +2837,14 @@ Notez ici que des alias sont donnés aux tables (par <strong>AS</strong>) afin d
 <span class="w">        </span><span class="n">NSI</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"></span>
 <span class="w">        </span><span class="p">);</span><span class="w"></span>
 </code></pre></div></li>
-<li><strong>Remarques :</strong> </li>
-</ul>
-<p>C'est l'utilisateur qui spécifie, éventuellement, quel attribut sera une clé primaire.</p>
-<ul>
-<li><strong>Résultat :</strong><br />
-Dans DB Browser, il faut avoir au préalable créé une nouvelle base de données.</li>
+<li>
+<p><strong>Remarque :</strong><br />
+C'est l'utilisateur qui spécifie, éventuellement, quel attribut sera une clé primaire.</p>
+</li>
+<li>
+<p><strong>Résultat :</strong><br />
+Dans DB Browser, il faut avoir au préalable créé une nouvelle base de données.</p>
+</li>
 </ul>
 </div>
 <p><img alt="" src="../data/ex15.png" /></p>
@@ -2919,7 +2938,7 @@ et le résultat serait : </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 novembre 2022</span>
       
     
   </small>

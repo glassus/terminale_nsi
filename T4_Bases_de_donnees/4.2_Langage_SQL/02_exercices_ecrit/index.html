@@ -2335,24 +2335,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Int</code></td>
 <td>id</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>nom</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>prenom</td>
-</tr>
-<tr>
-<td><code>Text</code></td>
-<td>genre</td>
-</tr>
-<tr>
 <td><code>Int</code></td>
+</tr>
+<tr>
+<td>nom</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td>prenom</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td>genre</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
 <td>annee_naissance</td>
+<td><code>Int</code></td>
 </tr>
 </tbody>
 </table>
@@ -2365,24 +2365,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Int</code></td>
 <td>code</td>
+<td><code>Int</code></td>
 </tr>
 <tr>
-<td><code>Int</code></td>
 <td>id_patient</td>
-</tr>
-<tr>
 <td><code>Int</code></td>
+</tr>
+<tr>
 <td>matricule_medecin</td>
+<td><code>Int</code></td>
 </tr>
 <tr>
-<td><code>Text</code></td>
 <td>date_ord</td>
+<td><code>Text</code></td>
 </tr>
 <tr>
-<td><code>Text</code></td>
 <td>medicaments</td>
+<td><code>Text</code></td>
 </tr>
 </tbody>
 </table>
@@ -2395,29 +2395,36 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Int</code></td>
 <td>matricule</td>
+<td><code>Int</code></td>
 </tr>
 <tr>
-<td><code>Text</code></td>
 <td>nom_prenom</td>
+<td><code>Text</code></td>
 </tr>
 <tr>
-<td><code>Text</code></td>
 <td>specialite</td>
+<td><code>Text</code></td>
 </tr>
 <tr>
-<td><code>Text</code></td>
 <td>telephone</td>
+<td><code>Text</code></td>
 </tr>
 </tbody>
 </table>
 <p>On suppose que les dates sont données sous la forme <code>jj-mm-aaaa</code>.</p>
-<p><strong>Q1.</strong> Donner les commandes SQL permettant de créer ces tables.</p>
+<p>On donne le diagramme relationnel de cette base :
+<img alt="image" class="center" src="../data/deb_ex1.png" /></p>
+<p><strong>Q0.</strong> Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.</p>
+<details class="note">
+<summary>Correction</summary>
+<p>Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))</p>
+</details>
+<p><strong>Q1.</strong> (HP) Donner les commandes SQL permettant de créer ces tables.</p>
 <details class="note">
 <summary>Correction</summary>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="w"></span>
-<span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="n">AUTOINCREMENT</span><span class="p">,</span><span class="w"></span>
+<span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"></span>
 <span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
 <span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
 <span class="n">genre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
@@ -2429,7 +2436,9 @@
 <span class="n">id_patient</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"></span>
 <span class="n">matricule_medecin</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"></span>
 <span class="n">date_ord</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
-<span class="n">medicaments</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"></span>
+<span class="n">medicaments</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"></span>
+<span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">id_patient</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="n">Id</span><span class="p">),</span><span class="w"></span>
+<span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">matricule_medecin</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="n">matricule</span><span class="p">)</span><span class="w"></span>
 <span class="p">);</span><span class="w"></span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="w"></span>
@@ -2440,17 +2449,16 @@
 <span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </details>
-<p><strong>Q2.</strong> Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente. Donner la commande SQLite correspondante.</p>
+<p><strong>Q2.</strong> Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </details>
-<p>Commentaire : NULL sert ici à ne rien mettre là où le SGBD gère tout seul la clé primaire en autoincrement. (hors-programme)</p>
-<p><strong>Q3.</strong> Le patient numéro 100 a changé de genre et est maintenant une femme. Donner la commande SQLite modifiant en conséquence ses données.</p>
+<p><strong>Q3.</strong> Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">genre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </details>
 <p><strong>Q4.</strong> Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.</p>
@@ -2527,6 +2535,63 @@ ou</p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  3</p>
 <p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf" target="_blank">Amérique du Sud J1 2022</a></p>
+<details class="note">
+<summary>Correction Q1.a.</summary>
+<p>La relation Sport a pour clé primaire l'attribut NomSport et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.</p>
+</details>
+<details class="note">
+<summary>Correction Q1.b.</summary>
+<ul>
+<li>
+<p>Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.</p>
+</li>
+<li>
+<p>Contrainte d'intégrité de relation :  le couple (nomSport, nomStation) ne peut pas se retrouver deux fois dans la table (car il forme une clé primaire)</p>
+</li>
+<li>
+<p>Contrainte d'intégrité de référence :  l'attribut nomStation ne peut pas être un nom n'apparaissant pas dans la relation Station.</p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>Correction Q2.a.</summary>
+<p>La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ("planche à voile" , "La tramontane catalane") existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
+Il faut donc utiliser :
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Sports</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1350</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomSport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;planche à voile&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">nomStation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;La tramontane catalane&quot;</span><span class="w">        </span>
+</code></pre></div></p>
+</details>
+<details class="note">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Station</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;Soleil Rouge&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Bastia&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Corse&quot;</span><span class="p">)</span><span class="w">  </span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Sport</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;plongée&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Soleil Rouge&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">900</span><span class="p">)</span><span class="w">        </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q3.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">mail</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Client</span><span class="w">        </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomStation</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Sport</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomSport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;plongee&quot;</span><span class="w">      </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q4.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">ville</span><span class="p">,</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">nomStation</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Station</span><span class="w"></span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Sport</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Sport</span><span class="p">.</span><span class="n">nomStation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">nomStation</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Sport</span><span class="p">.</span><span class="n">nomSport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;plongee&quot;</span><span class="w">        </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q4.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Sejour</span><span class="w"></span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Station</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">nomStation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sejour</span><span class="p">.</span><span class="n">nomStation</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Sejour</span><span class="p">.</span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2020</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Corse&quot;</span><span class="w"></span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  4</p>
@@ -2542,7 +2607,7 @@ ou</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 novembre 2022</span>
       
     
   </small>
