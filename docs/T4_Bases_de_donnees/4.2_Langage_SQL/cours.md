@@ -283,13 +283,14 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 
 #### 1.2.5 Exemple 11 
 
-!!! note "Classer des valeurs : ORDER BY, ASC, DESC :heart:"
+!!! note "Classer des valeurs : ORDER BY, ASC, DESC, LIMIT :heart:"
     - **Commande :** 
     ```sql
     SELECT titre, annee FROM livre
                     WHERE titre LIKE "%Astérix%"
                     ORDER BY annee DESC;
     ``` 
+
     - **Traduction :** 
 
     On veut afficher tous les albums d'Astérix, et leur année de parution, classés par année décroissante.
@@ -299,6 +300,17 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
     ![](data/ex11.png)
 
     - **Comportement par défaut :** Si le paramètre ASC ou DESC est omis, le classement se fait par ordre **croissant** (donc ASC est le paramètre par défaut).
+
+    - **Utilisation de LIMIT :** Le mot-clé LIMIT (suivi d'un nombre) permet de limiter le nombre de résultats affichés.  
+    Ainsi la requête  
+    ```sql
+    SELECT titre, annee FROM livre
+                    WHERE titre LIKE "%Astérix%"
+                    ORDER BY annee DESC
+                    LIMIT 1;
+    ``` 
+    permet d'obtenir les renseignements sur l'Astérix le plus récent.                    
+       
 
 #### 1.2.5 Exemple 12 
 
@@ -391,7 +403,7 @@ Rendez-vous sur [cette page](https://mystery.knightlab.com/walkthrough.html){:ta
 
 - Vous pouvez travailler en ligne ou bien dans votre SGBD préféré, avec la base [sql-murder-mystery.db](data/sql-murder-mystery.db). Attention pour valider votre réponse, il faudra vous rendre en bas de la page officielle.
 
-<!-- - Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target="_blank"}... ->
+<!-- - Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target="_blank"}... -->
 
 ## 2. Création et modification d'une base de données
 
@@ -408,7 +420,7 @@ L'objectif est de créer la table suivante :
 
 #### 2.1 Exemple 15 
 
-*La création d'une table n'est pas explicitement au programme de NSI.*
+*La création d'une table n'est pas explicitement au programme de NSI. Personne ne sait vraiment pourquoi*
 
 !!! note "Création d'une table : CREATE TABLE :heart:"
     - **Commande :** 
@@ -421,8 +433,7 @@ L'objectif est de créer la table suivante :
             NSI INTEGER
             );
     ``` 
-    - **Remarques :** 
-
+    - **Remarque :**  
     C'est l'utilisateur qui spécifie, éventuellement, quel attribut sera une clé primaire.
 
     - **Résultat :**  

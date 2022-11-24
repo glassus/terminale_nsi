@@ -6,43 +6,52 @@
 
 !!! abstract "{{ exercice() }}"
 
-      *(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)*
+    *(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)*
 
-      On veut créer une base de données ```baseHopital.db```  qui contiendra les trois tables suivantes :
+    On veut créer une base de données ```baseHopital.db```  qui contiendra les trois tables suivantes :
 
-      |  | Patients |
-      |-----|----|
-      | ```Int```  | id |
-      | ```Text```  | nom |
-      | ```Text```  | prenom |
-      | ```Text```  | genre |
-      | ```Int```  | annee_naissance |
-
-
-      |  | Ordonnances |
-      |-----|----|
-      | ```Int```  | code |
-      | ```Int```  | id_patient |
-      | ```Int```  | matricule_medecin |
-      | ```Text```  | date_ord |
-      | ```Text```  | medicaments |
-
-      |  | Medecins |
-      |-----|----|
-      | ```Int```  | matricule |
-      | ```Text```  | nom_prenom |
-      | ```Text```  | specialite |
-      | ```Text```  | telephone |
+    |  | Patients |
+    |-----|----|
+    | id | ```Int```  |
+    | nom | ```Text```  |
+    | prenom | ```Text```  |
+    | genre | ```Text```  |
+    | annee_naissance | ```Int```  |
 
 
-      On suppose que les dates sont données sous la forme ```jj-mm-aaaa```.
+    |  | Ordonnances |
+    |-----|----|
+    | code | ```Int```  |
+    | id_patient | ```Int```  |
+    | matricule_medecin  | ```Int```  |
+    | date_ord | ```Text```  |
+    | medicaments | ```Text```  |
 
-      **Q1.** Donner les commandes SQL permettant de créer ces tables.
+    |  | Medecins |
+    |-----|----|
+    | matricule | ```Int```  |
+    | nom_prenom | ```Text```  |
+    | specialite | ```Text```  |
+    | telephone | ```Text```  |
+
+
+    On suppose que les dates sont données sous la forme ```jj-mm-aaaa```.
+
+    On donne le diagramme relationnel de cette base :
+    ![image](data/deb_ex1.png){: .center}
+    
+    **Q0.** Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.
+
+    ??? note "Correction"
+        Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))
+
+
+    **Q1.** (HP) Donner les commandes SQL permettant de créer ces tables.
 
     ??? note "Correction"
         ```SQL
         CREATE TABLE Patients(
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id INTEGER PRIMARY KEY,
         nom TEXT,
         prenom TEXT,
         genre TEXT,
@@ -54,7 +63,9 @@
         id_patient INTEGER,
         matricule_medecin INTEGER,
         date_ord TEXT,
-        medicaments INTEGER
+        medicaments TEXT,
+        FOREIGN KEY(id_patient) REFERENCES Patients(Id),
+        FOREIGN KEY(matricule_medecin) REFERENCES Medecins(matricule)
         );
 
         CREATE TABLE Medecins(
@@ -68,20 +79,19 @@
 
 
 
-      **Q2.** Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente. Donner la commande SQLite correspondante.
+    **Q2.** Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.
 
     ??? note "Correction"
         ```SQL
-        INSERT INTO Patients VALUES (NULL, "Wizeunit", "Anne", "F", 2000);
+        INSERT INTO Patients VALUES (1, "Wizeunit", "Anne", "F", 2000);
         ```
-      Commentaire : NULL sert ici à ne rien mettre là où le SGBD gère tout seul la clé primaire en autoincrement. (hors-programme)
+     
 
-
-      **Q3.** Le patient numéro 100 a changé de genre et est maintenant une femme. Donner la commande SQLite modifiant en conséquence ses données.
+      **Q3.** Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.
 
     ??? note "Correction"
         ```SQL
-        UPDATE Patients SET genre = 'F' WHERE id = 100 ;
+        UPDATE Patients SET prenom = 'Alice' WHERE id = 100 ;
         ```
 
 
@@ -93,7 +103,7 @@
         DELETE FROM Medecins WHERE specialite = "épidémiologie";
         ```
 
-      **Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
+    **Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
       
     ??? note "Correction"
         ```SQL
@@ -179,6 +189,58 @@
 
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Sud J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+
+    ??? note "Correction Q1.a."
+        La relation Sport a pour clé primaire l'attribut NomSport et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
+
+    ??? note "Correction Q1.b."
+        - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
+
+        - Contrainte d'intégrité de relation :  le couple (nomSport, nomStation) ne peut pas se retrouver deux fois dans la table (car il forme une clé primaire)
+
+        - Contrainte d'intégrité de référence :  l'attribut nomStation ne peut pas être un nom n'apparaissant pas dans la relation Station.
+
+    ??? note "Correction Q2.a."
+        La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ("planche à voile" , "La tramontane catalane") existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
+        Il faut donc utiliser :
+        ```SQL
+        UPDATE Sports SET prix = 1350 
+        WHERE nomSport = "planche à voile" AND nomStation = "La tramontane catalane"        
+        ```
+
+    ??? note "Correction Q2.b."
+        ```SQL
+        INSERT INTO Station VALUES ("Soleil Rouge", "Bastia", "Corse")  
+        INSERT INTO Sport VALUES ("plongée", "Soleil Rouge", 900)        
+        ```
+
+    ??? note "Correction Q3.a."
+        ```SQL
+        SELECT mail FROM Client        
+        ```
+
+    ??? note "Correction Q3.b."
+        ```SQL
+        SELECT nomStation FROM Sport
+        WHERE nomSport = "plongee"      
+        ```
+
+    ??? note "Correction Q4.a."
+        ```SQL
+        SELECT Station.ville, Station.nomStation FROM Station
+        JOIN Sport ON Sport.nomStation = Station.nomStation
+        WHERE Sport.nomSport = "plongee"        
+        ```
+
+    ??? note "Correction Q4.b."
+        ```SQL
+        SELECT COUNT(*) FROM Sejour
+        JOIN Station ON Station.nomStation = Sejour.nomStation
+        WHERE Sejour.annee = 2020 AND Station.region = "Corse"
+        ```
+
+
+
 
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}

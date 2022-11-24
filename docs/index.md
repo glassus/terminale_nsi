@@ -3,7 +3,7 @@
 !!! abstract "Actualités"
 
     - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
-    - Installer la dernière version de Thonny : instructions [ici](T7_Divers/3_Thonny/cours/#installer-la-derniere-version-de-thonny-avec-export-python-tutor){. target="_blank"}
+    - Sujet du Concours Général 2022 [ici](./data/CG_2022_NSI.pdf){. target="_blank"}
 
     - Mini-Projets : voir ces instructions sur [Pygame](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/)
 
