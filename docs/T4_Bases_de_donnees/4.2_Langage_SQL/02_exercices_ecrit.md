@@ -248,5 +248,124 @@
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
 
+    ??? note "Correction Q1.a."
+        L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
+
+    ??? note "Correction Q1.b."
+        L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
+
+    ??? note "Correction Q2.a."
+        Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
+
+    ??? note "Correction Q2.b."
+        ```SQL
+        SELECT nom_ville FROM Centres 
+        WHERE altitude >= 700 AND altitude <= 1200;
+        ```
+
+    ??? note "Correction Q2.c."
+        ```SQL
+        SELECT longitude, nom_ville FROM Centres*
+        WHERE longitude > 5
+        ORDER BY nom_ville;
+        ```
+
+    ??? note "Correction Q3.a."
+        Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
+
+    ??? note "Correction Q3.b."
+        ```SQL
+        INSERT INTO Mesures VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
+        ```
+
+    ??? note "Correction Q4.a."
+        Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
+
+    ??? note "Correction Q4.b."
+        ```SQL
+        SELECT DISTINCT Centres.nom_ville
+        JOIN Mesures ON Mesures.id_centre = Centres.id_centre
+        WHERE Mesures.temperature < 10
+        AND Mesures.date <= 2021-10-31
+        AND Mesures.date >= 2021-10-01;
+        ```
+
+    
+
+
+
+
+
+
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
+
+    ??? note "Correction Q1.a."
+        ```
+        Hey Jude
+        I Want To Hold Your Hand
+        ``` 
+
+    ??? note "Correction Q1.b."
+        ```SQL
+        SELECT nom FROM interpretes
+        WHERE pays = 'Angleterre';
+        ```
+
+    ??? note "Correction Q1.c."
+        ```
+        I Want To Hold Your Hand, 1963
+        Like a Rolling Stone, 1965
+        Respect, 1967
+        Hey Jude, 1968
+        Imagine, 1970
+        Smells Like Teen Spirit, 1991
+        ``` 
+
+    ??? note "Correction Q1.d."
+        ```SQL
+        SELECT COUNT(*) FROM morceaux;
+        ```
+
+    ??? note "Correction Q1.e."
+        ```SQL
+        SELECT titre FROM morceaux
+        ORDER BY titre;
+        ```
+
+    ??? note "Correction Q2.a."
+        La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
+
+    ??? note "Correction Q2.b."
+        ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
+        ```interpretes``` : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   
+
+    ??? note "Correction Q2.c."    
+        La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
+
+    ??? note "Correction Q3.a."
+        ```SQL
+        UPDATE morceaux
+        SET annee = 1971
+        WHERE titre = 'Imagine'
+        ```
+
+    ??? note "Correction Q3.b."
+        ```SQL
+        INSERT INTO interpretes
+        VALUES (6, "The Who", "Angleterre")
+        ```      
+
+    ??? note "Correction Q3.c."
+        ```SQL
+        INSERT INTO morceaux
+        VALUES (7, "My Generation", 1965, 6)
+        ```     
+
+    ??? note "Correction Q4."
+        ```SQL
+        SELECT morceaux.titre
+        FROM morceaux
+        JOIN interpretes ON interpretes.id_interprete = morceaux.id_interprete
+        WHERE interpretes.pays = "États-Unis"
+        ```      
