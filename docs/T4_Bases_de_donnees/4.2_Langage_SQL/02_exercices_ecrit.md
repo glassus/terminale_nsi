@@ -194,7 +194,7 @@
     Exercice 1 du sujet [Amérique du Sud J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
  
     ??? note "Correction Q1.a."
-        La relation Sport a pour clé primaire l'attribut NomSport et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
+        La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
 
     ??? note "Correction Q1.b."
         - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
