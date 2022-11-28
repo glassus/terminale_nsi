@@ -123,52 +123,52 @@
     ![](data/exo3_schema.png)
 
     **Q1**. Quelle requête SQL donne le prix d'achat du produit dont le ```nom_court``` est «Liq_Vaiss_1L» ?
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' 
         ```
-#}
+
 
     **Q2**. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?
 
-{# 
+ 
     ??? note "Correction"
         ```SQL
         SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
         ``` 
-#}
+
 
 
 
     **Q3**. Quelle requête donne les produits étant en rupture de stock ?
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT Produits.nom FROM Produits
         JOIN Stocks ON Produits.id = Stocks.produit
         WHERE Stocks.quantite = 0;
         ```
-#}
+
 
     **Q4**. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT nom FROM Produits WHERE nom LIKE "%ampoule%";
         ```
-#}
+
 
     **Q5**. Quelle requête permet d'avoir le prix moyen de ces ampoules ?
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT AVG(prix_vente) FROM Produits WHERE nom LIKE "%ampoule%";
         ```
-#}
+
 
     **Q6**. Quelle requête permet d'identifier le produit le plus cher du magasin ?
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT nom_court FROM Produits ORDER BY prix_vente DESC LIMIT 1;
@@ -178,17 +178,17 @@
         ```SQL
         SELECT nom FROM Produits WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
         ``` 
-#}
+
 
     **Q7**. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? _(on pourra utiliser la fonction SQL ```NOW()``` qui renvoie la date actuelle )_
-{#
+
     ??? note "Correction"
         ```SQL
         SELECT p.nom FROM Produits AS p
         JOIN Stocks AS s ON s.produits = p.id
         WHERE s.date_peremption < NOW();
         ```
-#}
+
 
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Sud J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
