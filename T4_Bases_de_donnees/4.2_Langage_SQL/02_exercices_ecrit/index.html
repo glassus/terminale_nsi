@@ -2536,6 +2536,8 @@ ou</p>
 <p class="admonition-title">Exercice  3</p>
 <p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf" target="_blank">Amérique du Sud J1 2022</a></p>
 <details class="note">
+<summary>Correction</summary>
+<details class="note">
 <summary>Correction Q1.a.</summary>
 <p>La relation Sport a pour clé primaire le <strong>couple</strong> NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.</p>
 </details>
@@ -2592,117 +2594,185 @@ Il faut donc utiliser :
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Sejour</span><span class="p">.</span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2020</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Station</span><span class="p">.</span><span class="n">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Corse&quot;</span><span class="w"></span>
 </code></pre></div>
 </details>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  4</p>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf" target="_blank">Centres Étrangers J1 2022</a></p>
-</div>
-<!-- 
-    ??? note "Correction Q1.a."
-        L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
-
-    ??? note "Correction Q1.b."
-        L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
-
-    ??? note "Correction Q2.a."
-        Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
-
-    ??? note "Correction Q2.b."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span><span class="w"> </span>
+<details class="note">
+<summary>Correction</summary>
+<details class="note">
+<summary>Correction Q1.a.</summary>
+<p>L'attribut <code>id_mesure</code> semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.</p>
+</details>
+<details class="note">
+<summary>Correction Q1.b.</summary>
+<p>L'attribut <code>id_centres</code> semble être une clé primaire de la relation <code>Centres</code>. On le retrouve aussi (sous le même nom) dans la relation <code>Mesures</code>. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.</p>
+</details>
+<details class="note">
+<summary>Correction Q2.a.</summary>
+<p>Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        </p>
+</details>
+<details class="note">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">altitude</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">700</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">altitude</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q2.c."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">longitude</span><span class="p">,</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span><span class="o">*</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q2.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">longitude</span><span class="p">,</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span><span class="o">*</span><span class="w"></span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">longitude</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_ville</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q3.a."
-        Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
-
-    ??? note "Correction Q3.b."
-        <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Mesures</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3650</span><span class="p">,</span><span class="w"> </span><span class="mi">138</span><span class="p">,</span><span class="w"> </span><span class="mi">2021</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">1013</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q3.a.</summary>
+<p>Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.</p>
+</details>
+<details class="note">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Mesures</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3650</span><span class="p">,</span><span class="w"> </span><span class="mi">138</span><span class="p">,</span><span class="w"> </span><span class="mi">2021</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">1013</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q4.a."
-        Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
-
-    ??? note "Correction Q4.b."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Centres</span><span class="p">.</span><span class="n">nom_ville</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q4.a.</summary>
+<p>Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.</p>
+</details>
+<details class="note">
+<summary>Correction Q4.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Centres</span><span class="p">.</span><span class="n">nom_ville</span><span class="w"></span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">Mesures</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Mesures</span><span class="p">.</span><span class="n">id_centre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Centres</span><span class="p">.</span><span class="n">id_centre</span><span class="w"></span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Mesures</span><span class="p">.</span><span class="n">temperature</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
 <span class="k">AND</span><span class="w"> </span><span class="n">Mesures</span><span class="p">.</span><span class="nb">date</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span><span class="w"></span>
 <span class="k">AND</span><span class="w"> </span><span class="n">Mesures</span><span class="p">.</span><span class="nb">date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2021</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">01</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
- -->
-
+</details>
+</details>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  5</p>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf" target="_blank">Métropole J2 2022</a></p>
-</div>
-<!-- 
-    ??? note "Correction Q1.a."
-        <div class="highlight"><pre><span></span><code>Hey Jude
+<details class="note">
+<summary>Correction</summary>
+<details class="note">
+<summary>Correction Q1.a.</summary>
+<div class="highlight"><pre><span></span><code>Hey Jude
 I Want To Hold Your Hand
 </code></pre></div>
-
-    ??? note "Correction Q1.b."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">interpretes</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q1.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">interpretes</span><span class="w"></span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Angleterre&#39;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q1.c."
-        <div class="highlight"><pre><span></span><code>I Want To Hold Your Hand, 1963
+</details>
+<details class="note">
+<summary>Correction Q1.c.</summary>
+<div class="highlight"><pre><span></span><code>I Want To Hold Your Hand, 1963
 Like a Rolling Stone, 1965
 Respect, 1967
 Hey Jude, 1968
 Imagine, 1970
 Smells Like Teen Spirit, 1991
 </code></pre></div>
-
-    ??? note "Correction Q1.d."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span><span class="p">;</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q1.d.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q1.e."
-        <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q1.e.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q2.a."
-        La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
-
-    ??? note "Correction Q2.b."
-        ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
-        ```interpretes``` : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   
-
-    ??? note "Correction Q2.c."    
-        La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
-
-    ??? note "Correction Q3.a."
-        <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q2.a.</summary>
+<p>La clé étrangère de la table <code>morceaux</code> est l'attribut <code>id_interprete</code> qui fait référence à la clé primaire <code>id_interprete</code> de la table <code>interpretes</code>.   </p>
+</details>
+<details class="note">
+<summary>Correction Q2.b.</summary>
+<p><code>morceaux</code> : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))<br />
+<code>interpretes</code> : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   </p>
+</details>
+<details class="note">
+<summary>Correction Q2.c.</summary>
+<p>La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.</p>
+</details>
+<details class="note">
+<summary>Correction Q3.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
 <span class="k">SET</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1971</span><span class="w"></span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Imagine&#39;</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q3.b."
-        <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">interpretes</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">interpretes</span><span class="w"></span>
 <span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;The Who&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Angleterre&quot;</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q3.c."
-        <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
+</details>
+<details class="note">
+<summary>Correction Q3.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
 <span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;My Generation&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1965</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-
-    ??? note "Correction Q4."
-        ```SQL
-        SELECT morceaux.titre
-        FROM morceaux
-        JOIN interpretes ON interpretes.id_interprete = morceaux.id_interprete
-        WHERE interpretes.pays = "États-Unis"
-        ```       -->
+</details>
+<details class="note">
+<summary>Correction Q4.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">morceaux</span><span class="p">.</span><span class="n">titre</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span><span class="w"></span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">interpretes</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">interpretes</span><span class="p">.</span><span class="n">id_interprete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">morceaux</span><span class="p">.</span><span class="n">id_interprete</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">interpretes</span><span class="p">.</span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;États-Unis&quot;</span><span class="w"></span>
+</code></pre></div>
+</details>
+</details>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  6</p>
+<p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf" target="_blank">La Réunion J2 2022</a></p>
+<details class="note">
+<summary>Correction</summary>
+<details class="note">
+<summary>Correction Q1.</summary>
+<p>Le couple <code>(NumClient, NumChambre)</code> ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple <code>(NumClient, NumChambre)</code> ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation <code>Reservations</code>.</p>
+</details>
+<details class="note">
+<summary>Correction Q2.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom</span><span class="p">,</span><span class="w"> </span><span class="n">Prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Clients</span><span class="w">            </span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Telephone</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Clients</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Grace&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hopper&quot;</span><span class="w"></span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q3.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumChambre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Reservations</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateArr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2024-12-28&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">AND</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateDep</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2024-12-28&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q4.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Chambres</span><span class="w"></span>
+<span class="k">SET</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NumChambre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">404</span><span class="w"></span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Correction Q4.b</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Reservations</span><span class="p">.</span><span class="n">NumChambre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Reservations</span><span class="w"></span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Clients</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">NumClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reservations</span><span class="p">.</span><span class="n">NumClient</span><span class="w"></span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Codd&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Edgar&#39;</span><span class="w"></span>
+</code></pre></div>
+</details>
+</details>
+</div>
 
   <hr>
 <div class="md-source-file">
