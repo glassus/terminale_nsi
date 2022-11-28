@@ -192,7 +192,7 @@
 
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Sud J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
-
+<!-- 
     ??? note "Correction Q1.a."
         La relation Sport a pour clé primaire l'attribut NomSport et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
 
@@ -241,13 +241,13 @@
         JOIN Station ON Station.nomStation = Sejour.nomStation
         WHERE Sejour.annee = 2020 AND Station.region = "Corse"
         ```
-
+ -->
 
 
 
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
-
+<!-- 
     ??? note "Correction Q1.a."
         L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
 
@@ -289,7 +289,7 @@
         AND Mesures.date <= 2021-10-31
         AND Mesures.date >= 2021-10-01;
         ```
-
+ -->
     
 
 
@@ -299,7 +299,7 @@
 
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
-
+<!-- 
     ??? note "Correction Q1.a."
         ```
         Hey Jude
@@ -368,4 +368,4 @@
         FROM morceaux
         JOIN interpretes ON interpretes.id_interprete = morceaux.id_interprete
         WHERE interpretes.pays = "États-Unis"
-        ```      
+        ```       -->

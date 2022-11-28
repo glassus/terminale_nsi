@@ -2,6 +2,7 @@
 
 !!! abstract "Actualités"
 
+    - [GPT3 -> SQL](https://twitter.com/marcelpociot/status/1596271845648781312){. target="_blank"}
     - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
     - Sujet du Concours Général 2022 [ici](./data/CG_2022_NSI.pdf){. target="_blank"}
 
@@ -23,6 +24,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Exercices SQL](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
     - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 
 
