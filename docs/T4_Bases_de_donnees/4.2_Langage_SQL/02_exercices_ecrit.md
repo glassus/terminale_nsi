@@ -268,7 +268,7 @@
 
         ??? note "Correction Q2.c."
             ```SQL
-            SELECT longitude, nom_ville FROM Centres*
+            SELECT longitude, nom_ville FROM Centres
             WHERE longitude > 5
             ORDER BY nom_ville;
             ```
