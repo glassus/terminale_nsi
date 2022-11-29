@@ -286,7 +286,7 @@
 
         ??? note "Correction Q4.b."
             ```SQL
-            SELECT DISTINCT Centres.nom_ville
+            SELECT DISTINCT Centres.nom_ville FROM Centres
             JOIN Mesures ON Mesures.id_centre = Centres.id_centre
             WHERE Mesures.temperature < 10
             AND Mesures.date <= 2021-10-31
