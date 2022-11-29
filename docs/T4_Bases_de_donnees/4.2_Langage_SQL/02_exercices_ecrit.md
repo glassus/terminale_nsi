@@ -376,7 +376,7 @@
 
 
 !!! abstract "{{exercice()}}"
-    Exercice 4 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
+    Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
     ??? note "Correction"
         ??? note "Correction Q1."
