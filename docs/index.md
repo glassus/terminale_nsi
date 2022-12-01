@@ -7,7 +7,7 @@
         - vous pouvez joindre le leaderboard NSI-Mauriac avec le code 476812-30106a90.
         - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/).
         - quelques conseils [ici](T7_Divers/9_AOC/cours/){. target="_blank"}
-    - [GPT3 -> SQL](https://twitter.com/marcelpociot/status/1596271845648781312){. target="_blank"}
+        - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes.
     - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
     - Sujet du Concours Général 2022 [ici](./data/CG_2022_NSI.pdf){. target="_blank"}
 
