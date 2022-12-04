@@ -8,7 +8,7 @@
         - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/).
         - quelques conseils [ici](T7_Divers/9_AOC/cours/){. target="_blank"}
         - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes.
-    - 14 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
+    - 16 sujets posés en 2022 sont disponibles [ici](T6_Annales/liste_sujets/){. target="_blank"}
     - Sujet du Concours Général 2022 [ici](./data/CG_2022_NSI.pdf){. target="_blank"}
 
     - Mini-Projets : voir ces instructions sur [Pygame](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/)
@@ -29,13 +29,13 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Exercices SQL](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
-    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
 
 
 
 
 ### *Thèmes déjà traités*
+- [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
