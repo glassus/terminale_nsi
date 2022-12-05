@@ -6,7 +6,7 @@
 
 ![image](data/BO2.png){: .center}
 
-
+{{ initexo(0) }}
 
 ## 1. Terminologie
 
@@ -52,17 +52,17 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
 ![image](data/arbo-unix.gif){: .center width=40%}
 
 
-#### 1.2.4 Exercice
-Quelque part à l'intérieur des dossiers contenus dans l'archive [dossiers.zip](data/dossiers.zip) se trouve un fichier ```tresor.txt```. Quel secret renferme-t-il ?
+!!! example "{{ exercice() }}"
+    Quelque part à l'intérieur des dossiers contenus dans l'archive [dossiers.zip](data/dossiers.zip) se trouve un fichier ```tresor.txt```. Quel secret renferme-t-il ?
 
-Attention, cette recherche est à faire uniquement en ligne de commande :
+    Attention, cette recherche est à faire uniquement en ligne de commande :
 
-- ```ls``` : pour lister les dossiers et fichiers d'un répertoire
-- ```cd Dossier``` : pour se rendre dans le repértoire ```Dossier```
-- ```cd ..``` : pour remonter d'un niveau dans l'arborescence
-- ```unzip monarchive.zip``` : pour décompresser une archive
-- ```tree``` : pour afficher l'arborescence du répertoire courant
-- ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
+    - ```ls``` : pour lister les dossiers et fichiers d'un répertoire
+    - ```cd Dossier``` : pour se rendre dans le repértoire ```Dossier```
+    - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
+    - ```unzip monarchive.zip``` : pour décompresser une archive
+    - ```tree``` : pour afficher l'arborescence du répertoire courant
+    - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
 ### 1.3 Caractéristiques d'un arbre
 
@@ -210,12 +210,13 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 
 Un parcours préfixe commencera toujours par la racine, alors qu'un parcours postfixe finira toujours par la racine. Dans un parcours infixe, la racine sera «au milieu» (pas nécessairement parfaitement).
 
-### 2.6 Exercice 1
-
-![](data/exo_parcours.png){: .center}
 
 
-!!! example "Exercice"
+
+
+
+!!! example "{{ exercice() }}"
+    ![](data/exo_parcours.png){: .center}
     === "Énoncé"
         Donner le rendu de chaque parcours :
 
@@ -232,11 +233,9 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
     === "Corr. postfixe"
         postfixe : 4 7 8 5 2 9 6 3 1
 
-### 2.7 Exercice 2
 
-![](data/exo_2.png){: .center}
-
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
+    ![](data/exo_2.png){: .center}
     === "Énoncé"
         Donner le rendu de chaque parcours :
 
@@ -272,7 +271,7 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
     ```
 
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Dessinez l'arbre créé par les instructions suivantes :
         ```python
@@ -307,7 +306,7 @@ Pour cela  il faut construire des méthodes permettant d'accéder à ces attribu
 
 #### 3.1.1 Implémentation avec encapsulation
 
-!!! note "Classe `Arbre` avec encapsulation :heart:"
+!!! note "Classe `Arbre` avec encapsulation"
     ```python linenums='1'
     class Arbre:
         def __init__(self, data):
@@ -399,16 +398,18 @@ On voit que l'implémentation avec accès direct aux attributs est beaucoup plus
 
 ### 3.2 Implémentation à partir de tuples imbriqués
 
-Considérons qu'un arbre peut se représenter par le tuple ```(valeur, sous-arbre gauche, sous-arbre droit)```.
-
-L'arbre ci-dessous :
-![](data/imp_tuple.png){: .center}
-peut alors être représenté par le tuple :
 
 
-```python
->>> a = (2, (8, (6,(),()), (9,(),())), (1, (7, (),()), ()))
-```
+!!! note "`Arbre` sous forme de tuples imbriqués :heart:"
+    Un arbre peut se représenter par le tuple ```(valeur, sous-arbre gauche, sous-arbre droit)```.
+    L'arbre ci-dessous :
+    ![](data/imp_tuple.png){: .center}
+    est représenté par le tuple :
+
+
+    ```python
+    >>> a = (2, (8, (6,(),()), (9,(),())), (1, (7, (),()), ()))
+    ```
 
 Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
 
@@ -420,7 +421,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
 (1, (7, (), ()), ())
 ```
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
     ![](data/carac3.png){: .center}
     === "Énoncé"
         Écrire le tuple représentant l'arbre ci-dessous.       
@@ -453,7 +454,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 
 
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
         ```python
