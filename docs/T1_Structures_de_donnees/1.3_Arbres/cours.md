@@ -497,7 +497,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
     === "Énoncé"
         Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
         ```python
-        a = [3, 4, Δ, 7, 5, Δ, Δ]
+        a = [3, 4, Δ, 7, 5]
         ```       
         
     === "Correction"
