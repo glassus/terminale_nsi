@@ -395,6 +395,45 @@ C'est déjà fini !
 
 On voit que l'implémentation avec accès direct aux attributs est beaucoup plus simple et rapide. Néanmoins, elle peut être considérée comme incorrecte dans certains langages qui obligent à passer par des accesseurs ou mutateurs pour lire ou modifier les attributs.
 
+#### 3.1.2 Représentation graphique en console
+
+La méthode ```affiche``` suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :
+
+```python linenums='1'
+def affiche(self, indent = 0):
+    val = self.data
+    s = ' '*2*indent + '|' + '_' + str(val) + '\n'
+    if self.left is not None:
+        s += self.left.affiche(indent + 1)
+    if self.left is None and self.right is not None:
+        s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'     
+
+    if self.right is not None:
+        s += self.right.affiche(indent + 1)
+    if self.right is None and self.left is not None:
+        s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'  
+    return s
+```
+
+La représentation de cet arbre :
+![](data/exo_imp.png){: .center}
+donnera alors :
+
+```python
+>>> print(a.affiche())
+|_4
+  |_3
+    |_6
+    |_None
+  |_1
+    |_2
+    |_7
+      |_9
+      |_None
+```
+
+
+
 
 ### 3.2 Implémentation à partir de tuples imbriqués
 
