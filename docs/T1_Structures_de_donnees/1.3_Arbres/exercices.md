@@ -2,6 +2,50 @@
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}"
+    Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
+
+    ??? tip "Correction 1."
+        C'est un arbre binaire car chaque nœud possède au maximum deux fils. 
+
+    ??? tip "Correction 2.a."
+        ```V``` est un dictionnaire. 
+
+    ??? tip "Correction 2.b."
+        ```python
+        V['J']
+        ```
+
+    ??? tip "Correction 2.c."
+        ```python linenums='1'
+        def somme(W):
+            s = 0
+            for cle in W:
+                s += W[cle]
+            return s
+        ```
+
+    ??? tip "Correction 2.d."
+        ```python linenums='1'
+        def VMax(W):
+            val_max = 0
+            for cle in W:
+                if W[cle] > val_max:
+                    val_max = W[cle]
+                    cle_max = cle
+            return cle_max
+        ```
+
+    ??? tip "Correction 3."
+        Cet algorithme calcule le nombre total de nœuds de l'arbre, donc sa taille de l'arbre.
+        C'est un algorithme récursif qui va renvoyer, si on n'est pas positionné sur un arbre vide, la valeur 1 (correspond au nœud racine sur lequel on est positionné), plus la taille des deux sous-arbres gauche et droits. 
+        
+    ??? tip "Correction 4.a."
+        todo 
+
+    ??? tip "Correction 4.b."
+        todo   
+
+!!! example "{{ exercice() }}"
     *2020, sujet 0*
 
     **Question  1**

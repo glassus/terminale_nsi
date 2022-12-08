@@ -371,13 +371,13 @@ C'est déjà fini !
 
 
 ```python
->>> a = Arbre(4)
->>> a.left = Arbre(3)
->>> a.right = Arbre(1)
->>> a.right.left = Arbre(2)
->>> a.right.right = Arbre(7)
->>> a.left.left = Arbre(6)
->>> a.right.right.left = Arbre(9)
+a = Arbre(4)
+a.left = Arbre(3)
+a.right = Arbre(1)
+a.right.left = Arbre(2)
+a.right.right = Arbre(7)
+a.left.left = Arbre(6)
+a.right.right.left = Arbre(9)
 ```
 
 
@@ -596,9 +596,28 @@ a.right.right.right = Arbre(3)
 6-1-2-8-4-3-5-7-9-
 ```
 
-!!! tip "Pause vidéo" 
+!!! aide "Pause vidéo" 
     - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
-    - À l'aide de la vidéo, codez le parcours infixe en itératif 
+    - À l'aide de la vidéo, codez le parcours infixe en itératif.  
+    ??? tip "solution"
+        ```python linenums='1'
+        def infixe(arbre):
+            parcours = []
+            pile = []
+
+            current = arbre
+
+            while pile != [] or current is not None:
+                if current is not None:
+                    pile.append(current)
+                    current = current.left
+                else:
+                    current = pile.pop()
+                    parcours.append(current.data)
+                    current = current.right
+
+            return parcours
+        ```
 
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
@@ -612,6 +631,22 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
             return 1 + taille(arbre.left) + taille(arbre.right)
     ```
 
+
+Exemple avec l'arbre 
+![](data/exo_2.png){: .center}
+
+
+```python linenums='1'
+a = Arbre(9)
+a.left = Arbre(8)
+a.right = Arbre(7)
+a.left.left = Arbre(6)
+a.left.right = Arbre(2)
+a.right.right = Arbre(5)
+a.left.right.left = Arbre(1)
+a.right.right.left = Arbre(4)
+a.right.right.right = Arbre(3)
+```
 
 ```python
 >>> taille(a)
@@ -642,18 +677,17 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 
 !!! note "Nombre de feuilles d'un arbre :heart:"
     ```python
-    def nbfeuilles(arbre):
+    def nb_feuilles(arbre):
         if arbre is None:
             return 0
         if (arbre.left is None) and (arbre.right is None):
             return 1
-        else :
-            return nbfeuilles(arbre.left) +  nbfeuilles(arbre.right)
+        return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
     ```
 
 
 ```python
->>> nbfeuilles(a)
+>>> nb_feuilles(a)
 4
 ```
 
