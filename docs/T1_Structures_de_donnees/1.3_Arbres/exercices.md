@@ -40,10 +40,10 @@
         C'est un algorithme récursif qui va renvoyer, si on n'est pas positionné sur un arbre vide, la valeur 1 (correspond au nœud racine sur lequel on est positionné), plus la taille des deux sous-arbres gauche et droits. 
         
     ??? tip "Correction 4.a."
-        todo 
+        Le parcours est ```A-B-C-E-D-F-G-I-H-J```  
 
     ??? tip "Correction 4.b."
-        todo   
+        C'est un parcours préfixe.   
 
 !!! example "{{ exercice() }}"
     *2020, sujet 0*
@@ -74,7 +74,7 @@
     3. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
     bas ?
     4. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a :
-    $$ h \leqslant n \leqslant 2^h-1 $$
+    $h\leqslant n \leqslant 2^h-1$
 
 
     **Question 3**  

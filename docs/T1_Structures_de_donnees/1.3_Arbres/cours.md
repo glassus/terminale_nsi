@@ -661,7 +661,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
     def hauteur(arbre):
         if arbre is None:
             return 0
-        else :
+        else:
             return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
     ```
 
