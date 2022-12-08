@@ -2956,13 +2956,13 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 </code></pre></div></td></tr></table></div>
 </div>
 <p>C'est déjà fini !</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
    <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f0100361f40</span><span class="o">&gt;</span>
@@ -3151,12 +3151,47 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">6</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span>
 </code></pre></div>
-<div class="admonition tip">
+<div class="admonition aide">
 <p class="admonition-title">Pause vidéo</p>
 <ul>
 <li>Regardez et appréciez <a class="" href="https://youtu.be/OTfp2_SwxHk" target="_blank">cette vidéo</a></li>
-<li>À l'aide de la vidéo, codez le parcours infixe en itératif </li>
+<li>À l'aide de la vidéo, codez le parcours infixe en itératif.  </li>
 </ul>
+<details class="tip">
+<summary>solution</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">current</span> <span class="o">=</span> <span class="n">arbre</span>
+
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="k">return</span> <span class="n">parcours</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="42-calcul-de-la-taille-dun-arbre">4.2 Calcul de la taille d'un arbre<a class="headerlink" href="#42-calcul-de-la-taille-dun-arbre" title="Permanent link">⚓︎</a></h3>
 <p>Rappel : la taille d'un arbre est le nombre de ses nœuds.</p>
@@ -3169,6 +3204,26 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
         <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
 </code></pre></div>
 </div>
+<p>Exemple avec l'arbre 
+<img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">9</span>
 </code></pre></div>
@@ -3190,16 +3245,15 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <p>Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.</p>
 <div class="admonition note">
 <p class="admonition-title">Nombre de feuilles d'un arbre <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nbfeuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">nbfeuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span>  <span class="n">nbfeuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span>  <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nbfeuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">4</span>
 </code></pre></div>
 <h3 id="45-recherche-dune-valeur-dans-un-arbre">4.5 Recherche d'une valeur dans un arbre<a class="headerlink" href="#45-recherche-dune-valeur-dans-un-arbre" title="Permanent link">⚓︎</a></h3>
@@ -3435,7 +3489,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 décembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 décembre 2022</span>
       
     
   </small>
