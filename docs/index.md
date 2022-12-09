@@ -1,8 +1,7 @@
 
 
 !!! abstract "Actualités"
-    ![image](T7_Divers/9_AOC/data/ban.png){: .center width=40%}
-    
+    - 2 «sujets 0» correspondant à la nouvelle maquette du bac version 2023 (3 exos) ont été publiés. À retrouver [ici](T6_Annales/liste_sujets/){. target="_blank"}.
     - :star: :star: :star: [Advent of code 2022](https://adventofcode.com/2022) :star: :star: :star: a démarré !
         - vous pouvez joindre le leaderboard NSI-Mauriac avec le code 476812-30106a90.
         - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/).
