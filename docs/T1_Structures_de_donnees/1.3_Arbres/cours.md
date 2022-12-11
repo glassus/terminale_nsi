@@ -747,7 +747,7 @@ a.left.right = Arbre(1)
 a.right.right = Arbre(3)
 ```
 
-!!! note "Parcours en largeur (BFS) :heart:"
+!!! note "Parcours en largeur (BFS) "
     ```python
     from queue import Queue
 
@@ -794,7 +794,7 @@ Employer une méthode récursive imposerait de garder en mémoire dans l'explora
 Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.
 
 
-!!! note "Être ou ne pas être un ABR :heart:"
+!!! note "Être ou ne pas être un ABR"
     ```python linenums='1'
     def infixe(arbre, s = None):
         if s is None:
