@@ -755,7 +755,7 @@ a.right.right = Arbre(3)
         file = Queue()
         file.put(arbre)
         sol = []
-        while file.empty() is False :
+        while not file.empty():
             a = file.get()
             if a is not None :
                 sol.append(a.data)
