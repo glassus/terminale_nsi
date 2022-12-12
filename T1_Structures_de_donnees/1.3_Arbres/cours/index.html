@@ -3314,7 +3314,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="n">file</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
     <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
     <span class="n">sol</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">file</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span> <span class="p">:</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">file</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>
             <span class="n">sol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
@@ -3489,7 +3489,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 décembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 décembre 2022</span>
       
     
   </small>
