@@ -2537,8 +2537,8 @@ valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>Fa
 <strong>1.d.</strong> Les valeurs possibles de <code>val</code> sont 16 et 17.  </p>
 <p><strong>2.a.</strong> Parcours infixe : 12-13-15-16-18-19-21-23-32<br />
 <strong>2.b.</strong> Parcours suffixe : 12-13-16-15-21-19-32-23-18  </p>
-<p><strong>3.a.</strong> à venir<br />
-<strong>3.b.</strong> <br />
+<p><strong>3.a.</strong> <img alt="image" class="center" src="../data/exobac.png" /></p>
+<p><strong>3.b.</strong> <br />
 <div class="highlight"><pre><span></span><code><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">racine</span><span class="o">.</span><span class="n">insere</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
 </code></pre></div>
@@ -2589,26 +2589,7 @@ valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>Fa
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2647,25 +2628,6 @@ valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>Fa
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">ad</span>
         <span class="k">return</span> <span class="kc">False</span>
-
-
-    <span class="c1"># version récursive (non demandée)</span>
-
-    <span class="k">def</span> <span class="nf">recherche_rec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">==</span> <span class="n">v</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ag</span><span class="o">.</span><span class="n">recherche_rec</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ad</span><span class="o">.</span><span class="n">recherche_rec</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">False</span>
 
 
 <span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
@@ -2871,12 +2833,22 @@ les algorithmes de tri.</p>
 <p><strong>Partie A : Étude d'un exemple</strong></p>
 <p>Considérons l'arbre binaire de recherche ci-dessous :</p>
 <p><img alt="image" class="center" src="../data/ex4_1.png" /></p>
-<ol>
-<li>Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.</li>
-<li>Indiquer quels sont les nœuds de la branche qui se termine par la feuille qui a pour
-valeur 3.</li>
-<li>Dessiner l’arbre obtenu après l’ajout de la valeur 6.</li>
-</ol>
+<p><strong>Q1.</strong> Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>Le nœud racine est 5 et ses fils sont 2 et 7.</p>
+</details>
+<p><strong>Q2.</strong> Indiquer quels sont les nœuds de la branche qui se termine par la feuille qui a pour
+valeur 3.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>La branche qui se termine par la feuille 3 a pour nœuds 5, 2 et 3.</p>
+</details>
+<p><strong>Q3.</strong> Dessiner l’arbre obtenu après l’ajout de la valeur 6.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p><img alt="image" class="center" src="../data/ex5_3.png" /></p>
+</details>
 <p><strong>Partie B : Implémentation en Python</strong></p>
 <p>Voici un extrait d’une implémentation en Python d'une classe modélisant un arbre binaire
 de recherche.</p>
@@ -2928,16 +2900,18 @@ de recherche.</p>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">ABR</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>
-<p>Expliquer le rôle de la fonction <code>__init__</code>.</p>
-</li>
-<li>
-<p>Dans cette implémentation, expliquer ce qui se passe si on ajoute un élément déjà
+<p><strong>Q1.</strong> Expliquer le rôle de la fonction <code>__init__</code>.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>La fonction <code>__init__</code> est appelée «méthode constructeur», c'est elle qui crée l'objet et le dote de tous les attributs nécessaires.</p>
+</details>
+<p><strong>Q2.</strong> Dans cette implémentation, expliquer ce qui se passe si on ajoute un élément déjà
 présent dans l’arbre.</p>
-</li>
-<li>
-<p>Recopier et compléter les pointillés ci-dessous permettant de
+<details class="tip">
+<summary>corrigé</summary>
+<p>Si on ajoute un élément déjà présent dans l'arbre, la valeur <code>e</code> sera égale à <code>self.valeur</code> (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé. </p>
+</details>
+<p><strong>Q3.</strong> Recopier et compléter les pointillés ci-dessous permettant de
 créer l’arbre de la partie A.
 <div class="highlight"><pre><span></span><code><span class="n">arbre</span> <span class="o">=</span> <span class="n">ABR</span><span class="p">(</span><span class="o">..........</span> <span class="p">)</span>
 <span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2945,23 +2919,35 @@ créer l’arbre de la partie A.
 <span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="o">..........</span> <span class="p">)</span>
 </code></pre></div></p>
-</li>
-</ol>
+<details class="tip">
+<summary>corrigé</summary>
+<div class="highlight"><pre><span></span><code><span class="n">arbre</span> <span class="o">=</span> <span class="n">ABR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">arbre</span><span class="o">.</span><span class="n">insererElement</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p><strong>Partie C : Tri par arbre binaire de recherche</strong></p>
 <p>On souhaite trier un ensemble de valeurs entières distinctes grâce à un arbre binaire de
 recherche. Pour cela, on ajoute un à un les éléments de l’ensemble dans un arbre
 initialement vide. Il ne reste plus qu’à parcourir l’arbre afin de lire et de stocker dans un
 tableau résultat les valeurs dans l’ordre croissant.</p>
-<ol>
-<li>
-<p>Donner le nom du parcours qui permet de visiter les valeurs d’un arbre binaire de
+<p><strong>Q1.</strong> Donner le nom du parcours qui permet de visiter les valeurs d’un arbre binaire de
 recherche dans l’ordre croissant.</p>
-</li>
-<li>
-<p>Comparer la complexité de cette méthode de tri avec celle du tri par insertion ou
+<details class="tip">
+<summary>corrigé</summary>
+<p>Le parcours qui permet de visiter les valeurs d'un ABR dans l'ordre croissant est le parcours infixe.</p>
+</details>
+<p><strong>Q2.</strong> Comparer la complexité de cette méthode de tri avec celle du tri par insertion ou
 du tri par sélection.</p>
-</li>
-</ol>
+<details class="tip">
+<summary>corrigé</summary>
+<p><em>question difficile</em>
+Pour créer l'ABR, il faut d'abord insérer chacune des valeurs. La fonction <code>insertion</code> reposant sur une division par 2 à chaque étape de la taille de l'espace de recherche, on peut dire qu'elle a une complexité logarithmique. Mais cette opération est à effectuer autant de fois qu'il y a d'éléments à insérer : il faut donc multiplier la complexité logarithmique par <code>n</code>, ce qui fera donc une complexité en <span class="arithmatex">\(n \log(n)\)</span>.
+L'algorithme de parcours infixe est lui aussi linéraire, ce qui ne change pas la complexité totale.
+Cette complexité est meilleure que le tris par insertion ou sélection, qui sont de complexité quadratique.</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
@@ -2996,9 +2982,21 @@ Les nœuds ont été nommés dans l'ordre de leur insertion dans l'arbre ci-dess
 en coloriant en rouge le chemin parcouru.</p>
 <p>Préciser sous quel nœud la valeur 25 sera insérée et si elle est insérée en fils
 gauche ou en fils droit, et expliquer toutes les étapes de la décision.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p><img alt="image" class="center" src="../data/ex6_1.png" width="50%" /></p>
+<p>25 étant plus petit que 26, on part dans son sous-arbre gauche.<br />
+25 étant plus grand que 3, on part dans son sous-arbre droit.<br />
+25 étant plus grand que 15, on part dans son sous-arbre droit.<br />
+25 étant plus grand que 19, on insère 25 en tant que fils droit de 19. </p>
+</details>
 <p><strong>Q2.</strong> Préciser toutes les valeurs entières que l’on peut stocker dans le nœud fils
 gauche du nœud04 (vide pour l'instant), en respectant les règles sur les arbres
-binaires de recherche ? </p>
+binaires de recherche.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.</p>
+</details>
 <p><strong>Q3.</strong> Voici un algorithme récursif permettant de parcourir et d'afficher les valeurs de
 l'arbre :</p>
 <div class="highlight"><pre><span></span><code><span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># A est un arbre binaire de recherche</span>
@@ -3007,11 +3005,28 @@ l'arbre :</p>
     <span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Q3.a.</strong> Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37</p>
+</details>
 <p><strong>Q3.b.</strong> Choisir le type de parcours d'arbres binaires de recherche réalisé parmi les
 propositions suivantes : Préfixe, Suffixe ou Infixe.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>On reconnait un parcours préfixe.</p>
+</details>
 <p><strong>Q4.</strong> En vous inspirant de l’algorithme précédent, écrire un algorithme Parcours2
 permettant de parcourir et d'afficher les valeurs de l'arbre A dans l'ordre
 croissant.</p>
+<details class="tip">
+<summary>corrigé</summary>
+<p>Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Parcours2</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># A est un arbre binaire de recherche</span>
+    <span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_gauche</span><span class="p">)</span>
+    <span class="n">Afficher</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+    <span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 
   <hr>
@@ -3019,7 +3034,7 @@ croissant.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 décembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 décembre 2022</span>
       
     
   </small>
