@@ -193,7 +193,8 @@
         **2.a.** Parcours infixe : 12-13-15-16-18-19-21-23-32  
         **2.b.** Parcours suffixe : 12-13-16-15-21-19-32-23-18  
 
-        **3.a.** à venir  
+        **3.a.** ![image](data/exobac.png){: .center}
+        
         **3.b.**   
         ```python
         racine = Noeud(18)
@@ -245,25 +246,6 @@
                     else:
                         arbre = arbre.ad
                 return False
-
-
-            # version récursive (non demandée)
-
-            def recherche_rec(self, v):
-                if self is None:
-                    return False
-                if self.v == v:
-                    return True
-                if v < self.v:
-                    if self.ag is not None:
-                        return self.ag.recherche_rec(v)
-                    else:
-                        return False
-                else:
-                    if self.ad is not None:
-                        return self.ad.recherche_rec(v)
-                    else:
-                        return False
 
 
         racine = Noeud(18)
@@ -477,12 +459,19 @@
 
     ![image](data/ex4_1.png){: .center}
 
-    1. Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.
-    2. Indiquer quels sont les nœuds de la branche qui se termine par la feuille qui a pour
+    **Q1.** Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.
+    ??? tip "corrigé"
+        Le nœud racine est 5 et ses fils sont 2 et 7.
+
+    **Q2.** Indiquer quels sont les nœuds de la branche qui se termine par la feuille qui a pour
     valeur 3.
-    3. Dessiner l’arbre obtenu après l’ajout de la valeur 6.
+    ??? tip "corrigé"
+        La branche qui se termine par la feuille 3 a pour nœuds 5, 2 et 3.
 
-
+    **Q3.** Dessiner l’arbre obtenu après l’ajout de la valeur 6.
+    ??? tip "corrigé"
+        ![image](data/ex5_3.png){: .center}
+        
     **Partie B : Implémentation en Python**
 
     Voici un extrait d’une implémentation en Python d'une classe modélisant un arbre binaire
@@ -515,12 +504,17 @@
                         self.fd = ABR(e)
     ```
 
-    1. Expliquer le rôle de la fonction `__init__`.
+    **Q1.** Expliquer le rôle de la fonction `__init__`.
+    ??? tip "corrigé"
+        La fonction `__init__` est appelée «méthode constructeur», c'est elle qui crée l'objet et le dote de tous les attributs nécessaires.
 
-    2. Dans cette implémentation, expliquer ce qui se passe si on ajoute un élément déjà
+    **Q2.** Dans cette implémentation, expliquer ce qui se passe si on ajoute un élément déjà
     présent dans l’arbre.
+    ??? tip "corrigé"
+        Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé. 
 
-    3. Recopier et compléter les pointillés ci-dessous permettant de
+
+    **Q3.** Recopier et compléter les pointillés ci-dessous permettant de
     créer l’arbre de la partie A.
     ```python
     arbre = ABR(.......... )
@@ -529,6 +523,15 @@
     arbre.insererElement(7)
     arbre.insererElement(.......... )
     ```
+    ??? tip "corrigé"
+        ```python
+        arbre = ABR(5)
+        arbre.insererElement(2)
+        arbre.insererElement(3)
+        arbre.insererElement(7)
+        arbre.insererElement(8)
+        ```
+
 
     **Partie C : Tri par arbre binaire de recherche**
 
@@ -537,11 +540,18 @@
     initialement vide. Il ne reste plus qu’à parcourir l’arbre afin de lire et de stocker dans un
     tableau résultat les valeurs dans l’ordre croissant.
 
-    1. Donner le nom du parcours qui permet de visiter les valeurs d’un arbre binaire de
+    **Q1.** Donner le nom du parcours qui permet de visiter les valeurs d’un arbre binaire de
     recherche dans l’ordre croissant.
+    ??? tip "corrigé"   
+        Le parcours qui permet de visiter les valeurs d'un ABR dans l'ordre croissant est le parcours infixe.
 
-    2. Comparer la complexité de cette méthode de tri avec celle du tri par insertion ou
+    **Q2.** Comparer la complexité de cette méthode de tri avec celle du tri par insertion ou
     du tri par sélection.
+    ??? tip "corrigé"   
+        *question difficile*
+        Pour créer l'ABR, il faut d'abord insérer chacune des valeurs. La fonction ```insertion``` reposant sur une division par 2 à chaque étape de la taille de l'espace de recherche, on peut dire qu'elle a une complexité logarithmique. Mais cette opération est à effectuer autant de fois qu'il y a d'éléments à insérer : il faut donc multiplier la complexité logarithmique par ```n```, ce qui fera donc une complexité en $n \log(n)$.
+        L'algorithme de parcours infixe est lui aussi linéraire, ce qui ne change pas la complexité totale.
+        Cette complexité est meilleure que le tris par insertion ou sélection, qui sont de complexité quadratique.
 
 
 
@@ -589,9 +599,20 @@
     Préciser sous quel nœud la valeur 25 sera insérée et si elle est insérée en fils
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
+    ??? tip "corrigé" 
+        ![image](data/ex6_1.png){: .center width=50%}
+        
+        25 étant plus petit que 26, on part dans son sous-arbre gauche.  
+        25 étant plus grand que 3, on part dans son sous-arbre droit.  
+        25 étant plus grand que 15, on part dans son sous-arbre droit.  
+        25 étant plus grand que 19, on insère 25 en tant que fils droit de 19. 
+
+
     **Q2.** Préciser toutes les valeurs entières que l’on peut stocker dans le nœud fils
     gauche du nœud04 (vide pour l'instant), en respectant les règles sur les arbres
-    binaires de recherche ? 
+    binaires de recherche.
+    ??? tip "corrigé" 
+        Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
 
     **Q3.** Voici un algorithme récursif permettant de parcourir et d'afficher les valeurs de
     l'arbre :
@@ -604,10 +625,25 @@
     ```
 
     **Q3.a.** Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.
+    ??? tip "corrigé" 
+        Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37
+
+
 
     **Q3.b.** Choisir le type de parcours d'arbres binaires de recherche réalisé parmi les
     propositions suivantes : Préfixe, Suffixe ou Infixe.
+    ??? tip "corrigé" 
+        On reconnait un parcours préfixe.
 
     **Q4.** En vous inspirant de l’algorithme précédent, écrire un algorithme Parcours2
     permettant de parcourir et d'afficher les valeurs de l'arbre A dans l'ordre
     croissant.
+    ??? tip "corrigé" 
+        Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:
+
+        ```python
+        Parcours2(A)  # A est un arbre binaire de recherche
+            Parcours(A.fils_gauche)
+            Afficher(A.valeur)
+            Parcours(A.fils_droit)
+        ```
