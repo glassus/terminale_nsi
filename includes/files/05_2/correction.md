@@ -7,8 +7,8 @@ Attention, le code proposé ne respecte pas les standards de notation :
 class Carte:
     """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
     def __init__(self, c, v):
-        assert c in range(1,5)
-        assert v in range(1,14)
+        assert c in range(1, 5)
+        assert v in range(1, 14)
         self.Couleur = c
         self.Valeur = v
 
@@ -39,6 +39,7 @@ class PaquetDeCarte:
 
     """Renvoie la Carte qui se trouve à la position donnée"""
     def getCarteAt(self, pos):
+        assert pos in range(0, 52)
         if 0 <= pos < len(self.contenu) :
             return self.contenu[pos]
 
