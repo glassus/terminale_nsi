@@ -4593,11 +4593,12 @@ Exemple :</p>
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
 
@@ -4628,6 +4629,7 @@ Exemple :</p>
 
     <span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">52</span><span class="p">)</span>
         <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
@@ -12815,14 +12817,14 @@ Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le
 </div>
 </div>
 </div>
-<p><em>Remerciements pour le signalement et la correction des nombreuses erreurs : Alexandre Hainaut, Noé Pierre, Cyrille Jochault, Sébastien Rivillon, Clémentine et Laorine (AEFE Montréal), Théo EwzZer, Laurent Briend, Matteo Gaillard.</em></p>
+<p><em>Remerciements pour le signalement et la correction des nombreuses erreurs : Alexandre Hainaut, Noé Pierre, Cyrille Jochault, Sébastien Rivillon, Clémentine et Laorine (AEFE Montréal), Théo EwzZer, Laurent Briend, Matteo Gaillard, Pierre Mouries.</em></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 juin 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 décembre 2022</span>
       
     
   </small>
