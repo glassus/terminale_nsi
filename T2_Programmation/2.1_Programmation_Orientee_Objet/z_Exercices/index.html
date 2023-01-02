@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices.md" class="md-nav__link">
+      <a href="../../../T1_Structures_de_donnees/1.3_Arbres/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -2822,12 +2822,12 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, </span>
 <span class="sd">       Valet, Dame, Roi&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">):</span>
@@ -2841,7 +2841,7 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;As&quot;</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trefle&#39;</span> <span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
@@ -2849,11 +2849,11 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="err">???</span> <span class="o">=</span> <span class="p">[</span> <span class="err">???</span> <span class="k">for</span> <span class="n">couleur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="err">???</span><span class="p">)</span> <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="err">???</span><span class="p">)]</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve a  la position donnee&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve a  la position donnee&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
         <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="err">???</span> <span class="p">:</span>
             <span class="k">return</span> <span class="err">???</span>
@@ -2904,14 +2904,14 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span><span class="p">)</span>
@@ -2924,7 +2924,7 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">&quot;As&quot;</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trefle&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
@@ -2932,11 +2932,11 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[</span><span class="n">Carte</span><span class="p">(</span><span class="n">couleur</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="k">for</span> <span class="n">couleur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>
 
-    <span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
         <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>

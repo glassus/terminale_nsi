@@ -653,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices.md" class="md-nav__link">
+      <a href="../../1.3_Arbres/exercices/" class="md-nav__link">
         Exercices
       </a>
     </li>
@@ -2637,7 +2637,7 @@ On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> 
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille_file</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -2658,7 +2658,7 @@ On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> 
 <span class="normal">7</span>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">former_pile</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;File -&gt; Pile&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Pile&quot;&quot;&quot;</span>
     <span class="n">P_temp</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
     <span class="n">P</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -2681,7 +2681,7 @@ On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> 
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;File, Int -&gt; Int&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;File, Int -&gt; Int&quot;&quot;&quot;</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -2700,7 +2700,7 @@ On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> 
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;rouge&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> \
            <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;vert&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> \
            <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s2">&quot;jaune&quot;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_jaune</span>
