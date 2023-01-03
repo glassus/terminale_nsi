@@ -1,3 +1,11 @@
+!!! abstract "Exercice 1"
+    === "Énoncé"
+        Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
+    
+        
+
+
+
 ## Exercice 1
 
 Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
