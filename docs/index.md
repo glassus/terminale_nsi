@@ -12,12 +12,11 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-
-
+    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 
 
 ### *Thèmes déjà traités*
+- [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)

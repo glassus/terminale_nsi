@@ -25,6 +25,7 @@ theme:
     - toc.integrate
     - header.autohide
     - content.code.annotate 
+    - content.code.copy
 
   palette:
     # Light mode
