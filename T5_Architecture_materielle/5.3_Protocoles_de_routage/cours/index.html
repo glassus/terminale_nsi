@@ -2502,8 +2502,9 @@
 <li><a href="https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/" target="_blank">cours</a> de 1ère sur l'architecture d'un réseau</li>
 <li><a href="https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/" target="_blank">cours</a> de 1ère sur les différents protocoles de communication dans un réseau.</li>
 </ul>
-<p><strong>Notions essentielles :</strong>
-Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Notions essentielles <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :</p>
 <ul>
 <li>La machine A calcule (grâce au masque de sous-réseau) si B est dans le même sous-réseau qu'elle, ou pas.</li>
 <li>Si oui, elle peut donc connaître l'adresse MAC de la carte réseau de la machine B (soit elle la possède déjà dans sa table ARP, soit elle la demande en envoyant un message de broadcast à tout le sous-réseau : «qui possède cette adresse IP_B ?»).
@@ -2516,6 +2517,7 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 </li>
 </ul>
 <p>Ces questions trouveront des réponses grâce à <strong>table de routage</strong> du routeur.</p>
+</div>
 <h2 id="1-tables-de-routage">1. Tables de routage<a class="headerlink" href="#1-tables-de-routage" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/tables.png" /></p>
 <p>Les tables de routage sont des informations stockées dans le routeur permettant d'aiguiller intelligemment les données qui lui sont transmises.</p>
@@ -2828,7 +2830,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 janvier 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 janvier 2023</span>
       
     
   </small>
