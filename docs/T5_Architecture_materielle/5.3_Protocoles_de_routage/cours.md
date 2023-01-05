@@ -28,7 +28,7 @@
 
 ## 1. Tables de routage
 
-![](data/tables.png){: .center}
+![](data/reseau_total2.png){: .center}
 
 
 Les tables de routage sont des informations stockées dans le routeur permettant d'aiguiller intelligemment les données qui lui sont transmises.
@@ -40,16 +40,31 @@ Dans le réseau ci-dessus, si l'ordinateur d'adresse ```192.168.0.5``` veut inte
 - le routeur va donc regarder dans sa table de routage l'adresse passerelle d'un autre routeur vers qui elle doit rediriger les données. Si le sous-réseau C fait partie de sa table de routage, le routeur R1 saura alors que le meilleur chemin est (par exemple) de confier les données au routeur R3.
 - si le sous-réseau C ne fait pas partie de la table de routage, le routeur R1 va alors le rediriger vers une route «par défaut» (que l'on peut assimiler au panneau «toutes directions» sur les panneaux de signalisation).
 
-Par exemple, la table de routage du routeur R1 pourrait être :
+!!! note "interface et passerelle :heart: :heart: :heart:"
+    Les tables de routage des routeurs font très souvent apparaître deux colonnes, _interface_ et _passerelle_, dont il ne faut pas confondre l'utilité :
 
-| Destination | Passerelle |
-|-|-|
-| 192.168.0.0 /24 | 192.168.0.254 |
-| 172.17.1.0 /24 | 172.17.1.254 |
-| 10.0.5.0 /24 | 10.0.5.152 |
-| 10.5.2.0 /24 | 172.17.1.254 |
-| 10.7.3.0 /24 | 10.0.5.135 |
+    - **interface** : c'est l'adresse IP de la carte réseau du routeur par où va **sortir** le paquet à envoyer. Il y a donc **toujours** une adresse d'interface à renseigner (car un paquet sort bien de quelque part !). Parfois cette interface sera juste nommée _interface1_ ou _interface2_.
 
+    - **passerelle** : c'est l'adresse IP de la carte réseau du routeur **à qui on va confier le paquet**, si on n'est pas capable de le délivrer directement (donc si l'adresse IP de destination n'est pas dans notre propres sous-réseau). Cette adresse de passerelle n'est donc pas _systématiquement_ mentionnée. Quand elle l'est, elle donne le renseignement sur le prochain routeur à qui le paquet est confié.
+
+
+**Exemple: table de routage du routeur R1**
+
+![](data/reseau_total2.png){: .center width=70%}
+
+| Destination | Interface | Passerelle |
+|:-:|-|-|
+| F | 192.168.0.254 | | 
+| A | 10.0.5.152 | |
+| E | 172.17.1.254 | |  
+| B | 172.17.1.254 |172.17.1.123| 
+| C | 10.0.5.152 |10.0.5.135| 
+
+Les trois réseaux F, A et E sont directement accessibles au routeur R1, puisqu'il en fait partie : il n'a donc pas besoin d'adresse passerelle pour communiquer avec ces réseaux.
+
+Par contre, la communication avec le réseau B nécessite de confier le paquet au routeur R2 (c'est le choix de cette table de routage). Il faut donc mentionner l'adresse IP de ce routeur R2 (172.17.1.123), qu'on appelle adresse de passerelle.
+
+De la même manière, la communication avec le réseau C nécessite de confier le paquet au routeur R3 (c'est le choix de cette table de routage). Il faut donc mentionner l'adresse IP de ce routeur R3 (10.0.5.135).
 
 
 #### Comment sont construites les tables de routage ?
