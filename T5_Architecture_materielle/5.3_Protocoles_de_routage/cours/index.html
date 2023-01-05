@@ -17,7 +17,7 @@
         <link rel="next" href="../Exercices/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3bd4f189.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
@@ -2519,7 +2519,7 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <p>Ces questions trouveront des réponses grâce à <strong>table de routage</strong> du routeur.</p>
 </div>
 <h2 id="1-tables-de-routage">1. Tables de routage<a class="headerlink" href="#1-tables-de-routage" title="Permanent link">⚓︎</a></h2>
-<p><img alt="" class="center" src="../data/tables.png" /></p>
+<p><img alt="" class="center" src="../data/reseau_total2.png" /></p>
 <p>Les tables de routage sont des informations stockées dans le routeur permettant d'aiguiller intelligemment les données qui lui sont transmises.</p>
 <p>Dans le réseau ci-dessus, si l'ordinateur d'adresse <code>192.168.0.5</code> veut interroger le serveur <code>10.7.3.8</code> :</p>
 <ul>
@@ -2528,37 +2528,59 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <li>le routeur va donc regarder dans sa table de routage l'adresse passerelle d'un autre routeur vers qui elle doit rediriger les données. Si le sous-réseau C fait partie de sa table de routage, le routeur R1 saura alors que le meilleur chemin est (par exemple) de confier les données au routeur R3.</li>
 <li>si le sous-réseau C ne fait pas partie de la table de routage, le routeur R1 va alors le rediriger vers une route «par défaut» (que l'on peut assimiler au panneau «toutes directions» sur les panneaux de signalisation).</li>
 </ul>
-<p>Par exemple, la table de routage du routeur R1 pourrait être :</p>
+<div class="admonition note">
+<p class="admonition-title">interface et passerelle <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Les tables de routage des routeurs font très souvent apparaître deux colonnes, <em>interface</em> et <em>passerelle</em>, dont il ne faut pas confondre l'utilité :</p>
+<ul>
+<li>
+<p><strong>interface</strong> : c'est l'adresse IP de la carte réseau du routeur par où va <strong>sortir</strong> le paquet à envoyer. Il y a donc <strong>toujours</strong> une adresse d'interface à renseigner (car un paquet sort bien de quelque part !). Parfois cette interface sera juste nommée <em>interface1</em> ou <em>interface2</em>.</p>
+</li>
+<li>
+<p><strong>passerelle</strong> : c'est l'adresse IP de la carte réseau du routeur <strong>à qui on va confier le paquet</strong>, si on n'est pas capable de le délivrer directement (donc si l'adresse IP de destination n'est pas dans notre propres sous-réseau). Cette adresse de passerelle n'est donc pas <em>systématiquement</em> mentionnée. Quand elle l'est, elle donne le renseignement sur le prochain routeur à qui le paquet est confié.</p>
+</li>
+</ul>
+</div>
+<p><strong>Exemple: table de routage du routeur R1</strong></p>
+<p><img alt="" class="center" src="../data/reseau_total2.png" width="70%" /></p>
 <table>
 <thead>
 <tr>
-<th>Destination</th>
+<th align="center">Destination</th>
+<th>Interface</th>
 <th>Passerelle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>192.168.0.0 /24</td>
+<td align="center">F</td>
 <td>192.168.0.254</td>
+<td></td>
 </tr>
 <tr>
-<td>172.17.1.0 /24</td>
-<td>172.17.1.254</td>
-</tr>
-<tr>
-<td>10.0.5.0 /24</td>
+<td align="center">A</td>
 <td>10.0.5.152</td>
+<td></td>
 </tr>
 <tr>
-<td>10.5.2.0 /24</td>
+<td align="center">E</td>
 <td>172.17.1.254</td>
+<td></td>
 </tr>
 <tr>
-<td>10.7.3.0 /24</td>
+<td align="center">B</td>
+<td>172.17.1.254</td>
+<td>172.17.1.123</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td>10.0.5.152</td>
 <td>10.0.5.135</td>
 </tr>
 </tbody>
 </table>
+<p>Les trois réseaux F, A et E sont directement accessibles au routeur R1, puisqu'il en fait partie : il n'a donc pas besoin d'adresse passerelle pour communiquer avec ces réseaux.</p>
+<p>Par contre, la communication avec le réseau B nécessite de confier le paquet au routeur R2 (c'est le choix de cette table de routage). Il faut donc mentionner l'adresse IP de ce routeur R2 (172.17.1.123), qu'on appelle adresse de passerelle.</p>
+<p>De la même manière, la communication avec le réseau C nécessite de confier le paquet au routeur R3 (c'est le choix de cette table de routage). Il faut donc mentionner l'adresse IP de ce routeur R3 (10.0.5.135).</p>
 <h4 id="comment-sont-construites-les-tables-de-routage">Comment sont construites les tables de routage ?<a class="headerlink" href="#comment-sont-construites-les-tables-de-routage" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li>Soit à la main par l'administrateur réseau, quand le réseau est petit : on parle alors de table <strong>statique</strong>.</li>
@@ -2830,7 +2852,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 janvier 2023</span>
       
     
   </small>

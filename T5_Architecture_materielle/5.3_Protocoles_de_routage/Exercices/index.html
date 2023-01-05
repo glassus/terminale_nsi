@@ -17,7 +17,7 @@
         <link rel="next" href="../../5.4_Cryptographie/Exercices/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3bd4f189.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
@@ -101,11 +101,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#exercice-1" class="md-skip">
-          Aller au contenu
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1634,66 +1629,9 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Exercices
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Exercices
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    Exercice 1
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-3" class="md-nav__link">
-    Exercice 3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-4" class="md-nav__link">
-    Exercice 4
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-5" class="md-nav__link">
-    Exercice 5
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2470,21 +2408,66 @@
 
 
 
-  <h1>Exercices</h1>
-
 <div class="admonition abstract">
-<p class="admonition-title">Exercice 1</p>
+<p class="admonition-title">Exercice  1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf" target="_blank">La Réunion J1 2022</a></p>
+<details class="tip">
+<summary>Correction Q1.a.</summary>
+<p>Une adresse IPv4 se code à l'aide de 4 octets.</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b.</summary>
+<p>Le PC3 a pour adresse <code>172.150.4.30 / 24</code>. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque <code>255.255.255.0</code> en notation décimale.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<p><img alt="image" class="center" src="../data/ex5LR2022.png" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q3.a.</summary>
+<p>Pour être dans le réseau 1, il faut que le &amp; logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (<code>172.150.4.0</code> ).</p>
+<p>Le réseau étant en <code>/24</code> (équivalent au masque <code>255.255.255.0</code>), cela signifie que l'adresse IP de la machine soit de la forme <code>172.150.4.???</code>.</p>
+<p>Attention, il faut en plus s'assurer que l'adresse ne soit pas déjà utilisée, et qu'elle ne soit pas l'adresse du réseau (<code>172.150.4.0</code>) ou de broadcast (<code>172.150.4.255</code>).</p>
+<p>Il reste alors les adresses 4) et 6). (<code>172.150.4.11</code> et <code>172.150.4.200</code>)</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.b.</summary>
+<p>La commande permettant de connaître son adresse IP est <code>ifconfig</code> ou <code>ip addr</code> sous Linux / MacOS. Ou bien <code>ipconfig</code> sous Windows.  </p>
+</details>
+<details class="tip">
+<summary>Correction Q4.</summary>
+<p>La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.</p>
+<p>La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. </p>
+</details>
+<details class="tip">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">adresse</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">liste_IP</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">IP</span> <span class="ow">in</span> <span class="n">liste_IP</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trouvée&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liste_IP</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pas trouvée, ajoutée&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 </div>
 </div>
 </div>
-<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Créer une fonction <code>meme_sous_reseau(ip_a, ip_b, masque)</code> qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.</p>
-<p>Exercice à réaliser en Test Driven Developpement à partir du squelette de code ci-dessous, en testant chaque fonction après sa réalisation, jusqu'à la fonction finale.</p>
+<p>Exercice (difficile) à réaliser en Test Driven Developpement à partir du squelette de code ci-dessous, en testant chaque fonction après sa réalisation, jusqu'à la fonction finale.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_ip_to_list</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    entrée : ip (string) </span>
@@ -2536,8 +2519,8 @@
     <span class="k">assert</span> <span class="n">meme_sous_reseau</span><span class="p">(</span><span class="s2">&quot;192.168.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.3&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="k">assert</span> <span class="n">meme_sous_reseau</span><span class="p">(</span><span class="s2">&quot;192.168.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.0.3&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
 </code></pre></div>
-<details class="tip">
-<summary>Correction</summary>
+</div>
+<div class="tabbed-block">
 <p>Exercice difficile, il n'est pas à savoir faire mais c'est bien de le comprendre !
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_ip_to_list</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -2585,8 +2568,15 @@
     <span class="k">assert</span> <span class="n">meme_sous_reseau</span><span class="p">(</span><span class="s2">&quot;192.168.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.3&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="k">assert</span> <span class="n">meme_sous_reseau</span><span class="p">(</span><span class="s2">&quot;192.168.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.0.3&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
 </code></pre></div></p>
-</details>
-<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><em>2020, sujet 0</em></p>
 <p>On considère un réseau composé de plusieurs routeurs reliés de la façon suivante :</p>
 <p><img alt="image" class="center" src="../data/ex1.png" width="40%" /></p>
@@ -2601,8 +2591,8 @@ sauts. Déterminer le trajet parcouru.</li>
 <p><strong>Question 2</strong></p>
 <p>Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en suivant le
 protocole RIP.</p>
-<details class="tip">
-<summary>Correction</summary>
+</div>
+<div class="tabbed-block">
 <p><strong>Q1.1.</strong> Le trajet parcouru de A à G est A-C-F-G<br />
 <strong>Q1.2.</strong> 
 Table de routage de G :  </p>
@@ -2685,8 +2675,15 @@ Nouvelle table de routage de A :  </p>
 </tr>
 </tbody>
 </table>
-</details>
-<h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><em>2021, sujet Métropole 1</em></p>
 <p>On représente ci-dessous un réseau dans lequel R1, R2, R3, R4, R5 et R6 sont des
 routeurs. Le réseau local L1 est relié au routeur R1 et le réseau local L2 au routeur R6.</p>
@@ -2714,8 +2711,8 @@ routage. Le coût des liaisons entre les routeurs est donné par le tableau suiv
 Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.</p>
 <p>b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivant au réseau L2, en utilisant le protocole OSPF.</p>
 <p>c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.</p>
-<details class="tip">
-<summary>Correction</summary>
+</div>
+<div class="tabbed-block">
 <p>1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2.<br />
 1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2.<br />
 2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6.<br />
@@ -2724,9 +2721,16 @@ Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le co
 3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
 <img alt="image" class="center" src="../data/bac1_corr.png" width="50%" />
 3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).</p>
-</details>
-<h2 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h2>
-<p><em>2021, sujet Métropole 2</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  5</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><em>2021, sujet Métropole 2</em> (sujet modifié, correction d'erreurs sur les adresses passerelles)</p>
 <table>
 <thead>
 <tr>
@@ -2741,14 +2745,6 @@ Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le co
 </table>
 <p>La figure 1 ci-dessus représente le schéma d’un réseau d’entreprise. Il y figure deux réseaux locaux L1 et L2. Ces deux réseaux locaux sont interconnectés par les routeurs R2, R3, R4 et R5. Le réseau local L1 est constitué des PC portables P1 et P2 connectés à la passerelle R1 par le switch Sw1. Les serveurs S1 et S2 sont connectés à la passerelle R6 par le switch Sw2.</p>
 <p>Le tableau 1 suivant indique les adresses IPv4 des machines constituants le réseau de l’entreprise.</p>
-<div class="admonition note">
-<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> À lire impérativement <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></p>
-<p>J'ai eu la confirmation que cet exercice proposait à tort une adresse de passerelle y compris lorsque le routeur accédait directement au réseau.<br />
-Les tableaux ci-dessous ont donc été <strong>modifiés</strong> par rapport à ce qui a été fait en classe.<br />
-Les adresses de passerelles n'apparaissent maintenant que quand elles sont réellement nécessaires. </p>
-<p>Je rappelle la définition d'une adresse de passerelle :<br />
-<img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /> C'est une adresse vers laquelle un ordinateur (ou un routeur) va envoyer un paquet <strong>dont il ne sait pas quoi faire</strong> parce que son adresse de destination ne fait pas partie de son sous-réseau. On dit qu'on «confie» le paquet à un autre routeur afin que celui-ci l'achemine vers la bonne destination. <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
-</div>
 <table>
 <thead>
 <tr>
@@ -2793,8 +2789,8 @@ et L2 ? </p>
 <p>3/ Dans l’annexe A figurent les tables de routages des routeurs R1, R2, R5 et R6 au
 démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lignes laissées vides des tables de routage des routeurs R5 et R6 pour que les échanges entre les ordinateurs des réseaux L1 et L2 se fassent en empruntant le chemin le plus court en nombre de sauts.</p>
 <p><img alt="" src="../data/ex3_4_corrige.png" /></p>
-<details class="tip">
-<summary>Correction</summary>
+</div>
+<div class="tabbed-block">
 <p>1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16. <br />
 1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.<br />
 Pour le réseau L2 (175.6.0.0/16), l'adresse min est 175.6.0.1/16 et l'adresse max est 175.6.255.254/16<br />
@@ -2853,8 +2849,15 @@ Dans la table R5, il manque les lignes</li>
 </tr>
 </tbody>
 </table>
-</details>
-<h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  6</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p><em>2021, sujet Amérique du Nord</em></p>
 <p>Un constructeur automobile possède six sites de production qui échangent des documents entre eux. Les sites de production sont reliés entre eux par six routeurs A, B, C, D, E et F.<br />
 On donne ci-dessous les tables de routage des routeurs A à F obtenues avec le protocole RIP.</p>
@@ -2866,21 +2869,24 @@ Recopier sur la copie le schéma ci-dessous : </li>
 </ol>
 <p><img alt="image" class="center" src="../data/graphAN.png" /></p>
 <p>En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.</p>
-<details class="tip">
-<summary>Correction</summary>
+</div>
+<div class="tabbed-block">
 <ol>
-<li>A-B-E-F<br />
-2.
-<img alt="image" class="center" src="../data/graphAN_corr.png" /></li>
+<li>A-B-E-F  </li>
 </ol>
-</details>
+<p>2.
+<img alt="image" class="center" src="../data/graphAN_corr.png" /></p>
+</div>
+</div>
+</div>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 janvier 2023</span>
       
     
   </small>
