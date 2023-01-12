@@ -172,7 +172,7 @@
 
         1. Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
         sauts. Déterminer le trajet parcouru.
-        2. Déterminer une table de routage possible pour le routeur G obtenu à l’aide du protocole RIP.
+        2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.
 
         **Question 2**
 
