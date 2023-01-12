@@ -73,14 +73,14 @@ De la même manière, la communication avec le réseau C nécessite de confier l
 
 ## 2. Le protocole RIP
 
-_voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP)
+_voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP){. target="_blank"}
 
-Le Routing Information Protocol est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.
-Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.
 
-Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il est connecté, suivant les règles ci-dessous :
+!!! abstract "Les règles du protocole RIP :heart: :heart: :heart:"
+    Le Routing Information Protocol (RIP) est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.  
+    Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.  
+    Ensuite, chaque routeur va recevoir périodiquement (toutes les 30 secondes) la table des réseaux auquel il est connecté, et mettre à jour sa propre table suivant les règles ci-dessous :
 
-!!! abstract "les règles du protocole RIP :heart:"
     - s'il découvre une route vers un nouveau réseau inconnu, il l'ajoute à sa table en augmentant de 1 la distance annoncée par le routeur qui lui a transmis sa table.
 
     - s'il découvre une route vers un réseau connu mais plus courte (en rajoutant 1) que celle qu'il possède dans sa table,  il actualise sa table.
