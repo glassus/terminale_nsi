@@ -2694,12 +2694,12 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <li>Soit de manière <strong>dynamique</strong> : les réseaux s'envoient eux-mêmes des informations permettant de mettre à jour leurs tables de routages respectives. Des algorithmes de détermination de meilleur chemin sont alors utilisés : nous allons en découvrir deux, le protocole RIP et le protocole OSPF.</li>
 </ul>
 <h2 id="2-le-protocole-rip">2. Le protocole RIP<a class="headerlink" href="#2-le-protocole-rip" title="Permanent link">⚓︎</a></h2>
-<p><em>voir le TP débranché</em> : <a href="https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP">le jeu dont vous êtes le routeur</a></p>
-<p>Le Routing Information Protocol est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.
-Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.</p>
-<p>Ensuite, chaque routeur reçoit périodiquement la table des réseaux auquel il est connecté, suivant les règles ci-dessous :</p>
+<p><em>voir le TP débranché</em> : <a class="" href="https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP" target="_blank">le jeu dont vous êtes le routeur</a></p>
 <div class="admonition abstract">
-<p class="admonition-title">les règles du protocole RIP <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Les règles du protocole RIP <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
+<p>Le Routing Information Protocol (RIP) est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.<br />
+Au début, chaque routeur ne connaît que les réseaux auquel il est directement connecté, associé à la distance 1.<br />
+Ensuite, chaque routeur va recevoir périodiquement (toutes les 30 secondes) la table des réseaux auquel il est connecté, et mettre à jour sa propre table suivant les règles ci-dessous :</p>
 <ul>
 <li>
 <p>s'il découvre une route vers un nouveau réseau inconnu, il l'ajoute à sa table en augmentant de 1 la distance annoncée par le routeur qui lui a transmis sa table.</p>
@@ -2959,7 +2959,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 janvier 2023</span>
       
     
   </small>
