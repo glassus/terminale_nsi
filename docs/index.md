@@ -2,13 +2,7 @@
 
 !!! abstract "Actualités"
     - :new: page sur l'orientation post-bac :new: à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
-
-
-
-
-
-
-
+    - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
