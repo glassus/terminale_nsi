@@ -3,44 +3,44 @@
 
 
 !!! abstract "{{ exercice() }}"
-    === "Énoncé"
-        Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
-    
-        ??? tip "Correction Q1.a."
-            Une adresse IPv4 se code à l'aide de 4 octets.
 
-        ??? tip "Correction Q1.b."
-            Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
+    Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
-        ??? tip "Correction Q2."
-            ![image](data/ex5LR2022.png){: .center}
+    ??? tip "Correction Q1.a."
+        Une adresse IPv4 se code à l'aide de 4 octets.
 
-        ??? tip "Correction Q3.a."
-            Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
+    ??? tip "Correction Q1.b."
+        Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
 
-            Le réseau étant en ```/24``` (équivalent au masque ```255.255.255.0```), cela signifie que l'adresse IP de la machine soit de la forme ```172.150.4.???```.
+    ??? tip "Correction Q2."
+        ![image](data/ex5LR2022.png){: .center}
 
-            Attention, il faut en plus s'assurer que l'adresse ne soit pas déjà utilisée, et qu'elle ne soit pas l'adresse du réseau (```172.150.4.0```) ou de broadcast (```172.150.4.255```).
+    ??? tip "Correction Q3.a."
+        Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
 
-            Il reste alors les adresses 4) et 6). (```172.150.4.11``` et ```172.150.4.200```)
+        Le réseau étant en ```/24``` (équivalent au masque ```255.255.255.0```), cela signifie que l'adresse IP de la machine soit de la forme ```172.150.4.???```.
 
-        ??? tip "Correction Q3.b."
-            La commande permettant de connaître son adresse IP est ```ifconfig``` ou ```ip addr``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.  
+        Attention, il faut en plus s'assurer que l'adresse ne soit pas déjà utilisée, et qu'elle ne soit pas l'adresse du réseau (```172.150.4.0```) ou de broadcast (```172.150.4.255```).
 
-        ??? tip "Correction Q4." 
-            La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
+        Il reste alors les adresses 4) et 6). (```172.150.4.11``` et ```172.150.4.200```)
 
-            La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. 
+    ??? tip "Correction Q3.b."
+        La commande permettant de connaître son adresse IP est ```ifconfig``` ou ```ip addr``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.  
 
-        ??? tip "Correction Q5."       
-            ```python linenums='1'
-            def adresse(IP, liste_IP):
-                if IP in liste_IP:
-                    print("trouvée")
-                else:
-                    liste_IP.append(IP)
-                    print("pas trouvée, ajoutée")
-            ```
+    ??? tip "Correction Q4." 
+        La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
+
+        La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. 
+
+    ??? tip "Correction Q5."       
+        ```python linenums='1'
+        def adresse(IP, liste_IP):
+            if IP in liste_IP:
+                print("trouvée")
+            else:
+                liste_IP.append(IP)
+                print("pas trouvée, ajoutée")
+        ```
 
 !!! abstract "{{ exercice() }}"
     === "Énoncé"
@@ -376,3 +376,92 @@
         ![image](data/graphAN_corr.png){: .center}
     
 
+!!! abstract "{{ exercice() }}"
+    Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
+
+    ??? tip "Correction Q1.a."
+        ```195.168.1.0/24``` 
+
+    ??? tip "Correction Q1.b."
+        ```195.168.1.17/24``` 
+
+    ??? tip "Correction Q1.c"
+        Le réseau T2 a pour adresse ```172.162.1.0/24```. Sur ce réseau, 254 adresses sont initialement disponibles (de ```172.162.1.1```  à ```172.162.1.254```, puisque l'adresse ```172.162.1.255``` est réservée pour le *broadcast* sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.
+
+    ??? tip "Correction Q2."
+        - côté R4 : ```200.158.4.1```
+        - côté R2 : ```198.164.3.2``` (car la ```198.164.3.1``` est déjà prise par R2)
+        - côté S3 : ```199.160.1.1```  
+
+    ??? tip "Correction Q3.a."
+        Parcours possibles :  
+        - S1-R1-R2-S2
+        - S1-R1-R4-R2-S2
+        - S1-R1-R4-R3-R2-S2 
+
+    ??? tip "Correction Q3.b."
+        Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. 
+
+    ??? tip "Correction Q3.c"
+        Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.
+
+    ??? tip "Correction Q4."
+        Le câble utilisé est le cable c) Ethernet.  
+
+        (le câble «Internet» n'existe, les câbles VGA et HDMI servent à relier un ordinateur à un écran).
+
+    ??? tip "Correction Q5.a."
+        $10=\dfrac{10^9}{d}$ donc $d=\dfrac{10^9}{10}=10^8$.
+
+        Le débit de cette liaison est donc de $10^8$ bits par seconde, soit 100 Mbps.
+
+    ??? tip "Correction Q5.b."
+        ![image](data/exoNC.png){: .center}
+        Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2.
+
+        Coût des autres parcours :
+        - R1-R2 : 10
+        - R1-R4-R3-R2 : 151
+
+        Le parcours R1-R4-R2 est donc bien le parcours minimal.
+        
+
+
+
+!!! abstract "{{ exercice() }}"
+    Parties 2, 3 et 4 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
+
+    **Partie 1**
+    ??? tip "Correction Q1."
+        Le réseau services a pour adresse IP ```195.168.254.0```.
+
+    ??? tip "Correction Q2."
+        Le réseau services a pour adresse ```195.168.254.0```. Comme le masque de sous-réseau utilisé est ```255.255.255.0```, 254 adresses sont initialement disponibles (```195.168.254.1```  à ```195.168.254.254```, puisque l'adresse ```195.168.254.255``` est réservée pour le *broadcast* sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.
+
+    ??? tip "Correction Q3."
+        Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est ```192.168.254.2```. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.
+
+    **Partie 2**
+    ??? tip "Correction Q1."
+        La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```. 
+
+    ??? tip "Correction Q2."
+        La couche Transport montre que le protocole utilisé est le protocole UDP.
+
+    ??? tip "Correction Q3."
+        Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
+
+    **Partie 3**
+    ??? tip "Correction Q1."
+        Table de routage du routeur R4 :
+        
+        | Destination | Routeur suivant | Distance | 
+        |:-----:|:-----:|:-------:|
+        | R1 | R2 | 2 | 
+        | R2 | R2 | 1 | 
+        | R3 | R2 | 2 | 
+        | R5 | R6 | 2 | 
+        | R6 | R6 | 1 | 
+
+    ??? tip "Correction Q2."
+        Pour minimiser le nombre de sauts (protocole RIP), le trajet sera ```R1-R2-R4-R6```. 
