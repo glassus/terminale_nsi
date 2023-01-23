@@ -146,6 +146,7 @@ Une définition pourrait être :
 
 !!! abstract "Définition :heart:"
     Un problème peut se résoudre en employant le paradigme *diviser pour régner* lorsque :  
+
     - il est possible de décomposer ce problème en sous-problèmes **indépendants**.  
     - la taille de ces sous-problèmes est une **fraction** du problème initial
 
@@ -229,7 +230,39 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
         donne le graphique suivant :
 
-        ![image](data/carre.png){: .center}
+        ![image](data/carre.png){: .center width=50%}
+
+    === "Correction"
+        ```python linenums='1'
+        import matplotlib.pyplot as plt
+        import time
+
+        def puissance(a, n):
+            if n == 0:
+                return 1
+            else:
+                return a * puissance(a, n-1)
+
+
+        def puissance_mod(a, n):
+            if n == 0:
+                return 1
+            if n % 2 == 0:
+                return puissance_mod(a*a, n//2)
+            else:
+                return a * puissance_mod(a*a, (n-1)//2)
+
+
+        def mesure_puissance(n):
+            t0 = time.time()
+            p = puissance(3,n)
+            return time.time()-t0
+
+        def mesure_puissance_mod(n):
+            t0 = time.time()
+            p = puissance_mod(3,n)
+            return time.time()-t0
+        ```
         
 ## 4. Le tri-fusion
 En anglais le *merge sort*.
@@ -343,9 +376,9 @@ On peut montrer que :
 !!! note "Complexité du tri fusion :heart:"
     L'algorithme de tri fusion est en $O(n \log n)$.
 
-    On dit qu'il est **semi-logarithmique**.
+    On dit qu'il est **quasi-linéaire**. (ou *linéarithmique*)
 
-Une complexité semi-logarithmique (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$).
+Une complexité quasi-linéaire (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$). Mais elle est plus proche de la complexité linéaire.
 
 ![image](data/comparaison.png){: .center}
 
