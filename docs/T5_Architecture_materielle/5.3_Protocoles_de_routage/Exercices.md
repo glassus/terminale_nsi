@@ -431,7 +431,7 @@
 !!! abstract "{{ exercice() }}"
     Parties 2, 3 et 4 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
 
-    **Partie 1**
+    **Partie 2**
     ??? tip "Correction Q1."
         Le réseau services a pour adresse IP ```195.168.254.0```.
 
@@ -441,7 +441,7 @@
     ??? tip "Correction Q3."
         Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est ```192.168.254.2```. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.
 
-    **Partie 2**
+    **Partie 3**
     ??? tip "Correction Q1."
         La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```. 
 
@@ -451,10 +451,10 @@
     ??? tip "Correction Q3."
         Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
 
-    **Partie 3**
+    **Partie 4**
     ??? tip "Correction Q1."
         Table de routage du routeur R4 :
-        
+
         | Destination | Routeur suivant | Distance | 
         |:-----:|:-----:|:-------:|
         | R1 | R2 | 2 | 
