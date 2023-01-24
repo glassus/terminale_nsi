@@ -6,6 +6,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
     - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
 
 
