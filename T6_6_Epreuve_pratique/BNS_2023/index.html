@@ -5280,9 +5280,71 @@ de la pile. </p>
 <p class="admonition-title">Exercice 11.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="21:3"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Énoncé</label><label for="__tabbed_21_2">Correction</label><label for="__tabbed_21_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>On modélise la représentation binaire d'un entier non signé par un tableau d'entiers dont
+les éléments sont 0 ou 1. Par exemple, le tableau <code>[1, 0, 1, 0, 0, 1, 1]</code> représente
+l'écriture binaire de l'entier dont l'écriture décimale est
+<code>2**6 + 2**4 + 2**1 + 2**0 = 83</code>.</p>
+<p>À l'aide d'un parcours séquentiel, écrire la fonction <code>convertir</code> répondant aux
+spécifications suivantes :</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab est un tableau d&#39;entiers, dont les éléments sont 0 ou 1 et</span>
+<span class="sd">    représentant un entier écrit en binaire. Renvoie l&#39;écriture</span>
+<span class="sd">    décimale de l&#39;entier positif dont la représentation binaire</span>
+<span class="sd">    est donnée par le tableau tab</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+Exemple :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="mi">83</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="mi">130</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">puissance</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">puissance</span><span class="p">)</span>
+        <span class="n">puissance</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>On modélise la représentation binaire d&#39;un entier non signé par un tableau d&#39;entiers dont
+les éléments sont 0 ou 1. Par exemple, le tableau `[1, 0, 1, 0, 0, 1, 1]` représente
+l&#39;écriture binaire de l&#39;entier dont l&#39;écriture décimale est
+`2**6 + 2**4 + 2**1 + 2**0 = 83`.
+
+À l&#39;aide d&#39;un parcours séquentiel, écrire la fonction `convertir` répondant aux
+spécifications suivantes :
+
+```python
+def convertir(tab):
+    &quot;&quot;&quot;
+    tab est un tableau d&#39;entiers, dont les éléments sont 0 ou 1 et
+    représentant un entier écrit en binaire. Renvoie l&#39;écriture
+    décimale de l&#39;entier positif dont la représentation binaire
+    est donnée par le tableau tab
+    &quot;&quot;&quot;
+```
+Exemple :
+```python
+&gt;&gt;&gt; convertir([1, 0, 1, 0, 0, 1, 1])
+83
+&gt;&gt;&gt; convertir([1, 0, 0, 0, 0, 0, 1, 0])
+130
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -5291,11 +5353,112 @@ de la pile. </p>
 <p class="admonition-title">Exercice 11.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="22:3"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><input id="__tabbed_22_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Énoncé</label><label for="__tabbed_22_2">Correction</label><label for="__tabbed_22_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>La fonction <code>tri_insertion</code> suivante prend en argument une liste <code>tab</code> et trie cette liste en
+utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la
+spécification demandée.</p>
+<p>On rappelle le principe du tri par insertion : on considère les éléments à trier un par un,
+le premier élément constituant, à lui tout seul, une liste triée de longueur 1. On range
+ensuite le second élément pour constituer une liste triée de longueur 2, puis on range le
+troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite… A chaque
+étape, le premier élément de la sous-liste non triée est placé dans la sous-liste des
+éléments déjà triés de sorte que cette sous-liste demeure triée.  </p>
+<p>Le principe du tri par insertion est donc d'insérer à la n-ième itération, le n-ième élément
+à la bonne place.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">valeur_insertion</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="c1"># la variable j sert à déterminer où placer la valeur à ranger</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="c1"># tant qu&#39;on a pas trouvé la place de l&#39;élément à insérer</span>
+        <span class="c1"># on décale les valeurs du tableau vers la droite</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">valeur_insertion</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]:</span>
+            <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="hll">        <span class="n">valeur_insertion</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span>        <span class="c1"># la variable j sert à déterminer où placer la valeur à ranger</span>
+<span class="hll">        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+</span>        <span class="c1"># tant qu&#39;on a pas trouvé la place de l&#39;élément à insérer</span>
+        <span class="c1"># on décale les valeurs du tableau vers la droite</span>
+<span class="hll">        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">valeur_insertion</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+</span><span class="hll">            <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class="hll">            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span class="hll">        <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeur_insertion</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>La fonction <span class="sb">`tri_insertion`</span> suivante prend en argument une liste <span class="sb">`tab`</span> et trie cette liste en
+utilisant la méthode du tri par insertion. Compléter cette fonction pour qu&#39;elle réponde à la
+spécification demandée.
+
+On rappelle le principe du tri par insertion : on considère les éléments à trier un par un,
+le premier élément constituant, à lui tout seul, une liste triée de longueur 1. On range
+ensuite le second élément pour constituer une liste triée de longueur 2, puis on range le
+troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite… A chaque
+étape, le premier élément de la sous-liste non triée est placé dans la sous-liste des
+éléments déjà triés de sorte que cette sous-liste demeure triée.  
+
+Le principe du tri par insertion est donc d&#39;insérer à la n-ième itération, le n-ième élément
+à la bonne place.
+
+
+```python linenums=&#39;1&#39;
+def tri_insertion(tab):
+    n = len(tab)
+    for i in range(1, n):
+        valeur_insertion = tab[...]
+        # la variable j sert à déterminer où placer la valeur à ranger
+        j = ...
+        # tant qu&#39;on a pas trouvé la place de l&#39;élément à insérer
+        # on décale les valeurs du tableau vers la droite
+        while j &gt; ... and valeur_insertion &lt; tab[...]:
+            tab[j] = tab[j-1]
+            j = ...
+        tab[j] = ...
 </code></pre></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
