@@ -1,4 +1,4 @@
-```python linenums='1'
+```python linenums='1' hl_lines='4 6 9 16 17 19 20'
 urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
 
 def depouille(urne):

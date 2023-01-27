@@ -1,4 +1,4 @@
-```python linenums='1'
+```python linenums='1' hl_lines='14 16 17 31 32'
 def voisinage(n, ligne, colonne):
     """ Renvoie la liste des coordonnées des voisins de la case
     (ligne, colonne) en gérant les cases sur les bords. """
