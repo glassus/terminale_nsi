@@ -7419,9 +7419,53 @@ def nbre_coups():
 <p class="admonition-title">Exercice 21.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="41:3"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><input id="__tabbed_41_3" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">Énoncé</label><label for="__tabbed_41_2">Correction</label><label for="__tabbed_41_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Le codage par différence (<em>delta encoding</em> en anglais) permet de compresser un tableau de
+données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt que la
+donnée elle-même). On se retrouve alors avec un tableau de données plus petit, nécessitant
+moins de place en mémoire. Cette méthode se révèle efficace lorsque les valeurs consécutives
+sont proches. </p>
+<p>Programmer la fonction <code>delta(liste)</code> qui prend en paramètre un tableau non vide de nombres entiers
+et qui renvoie un tableau contenant les valeurs entières compressées à l’aide cette technique.</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">delta</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">802</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1003</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">delta</span><span class="p">([</span><span class="mi">42</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">42</span><span class="p">]</span> 
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delta</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="p">[</span><span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">diff</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau de
+données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt que la
+donnée elle-même). On se retrouve alors avec un tableau de données plus petit, nécessitant
+moins de place en mémoire. Cette méthode se révèle efficace lorsque les valeurs consécutives
+sont proches.
+
+Programmer la fonction `delta(liste)` qui prend en paramètre un tableau non vide de nombres entiers
+et qui renvoie un tableau contenant les valeurs entières compressées à l’aide cette technique.
+
+Exemples :
+
+```python
+&gt;&gt;&gt; delta([1000, 800, 802, 1000, 1003])
+[1000, -200, 2, 198, 3]
+&gt;&gt;&gt; delta([42])
+[42] 
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -7430,11 +7474,290 @@ def nbre_coups():
 <p class="admonition-title">Exercice 21.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="42:3"><input checked="checked" id="__tabbed_42_1" name="__tabbed_42" type="radio" /><input id="__tabbed_42_2" name="__tabbed_42" type="radio" /><input id="__tabbed_42_3" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="__tabbed_42_1">Énoncé</label><label for="__tabbed_42_2">Correction</label><label for="__tabbed_42_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
+représentée sous forme d’arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
+sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
+nous connaissons bien.  </p>
+<p><img alt="image" class="center" src="../data2023/21_arbre.png" width="30%" /></p>
+<p>En parcourant en profondeur infixe l’arbre binaire ci-dessus, on
+retrouve l’expression notée habituellement :  </p>
+<div class="arithmatex">\[(3 \times (8 + 7)) − (2 + 1)\]</div>
+<p>La classe <code>Noeud</code> ci-après permet d’implémenter une structure
+d’arbre binaire.</p>
+<p>Compléter la fonction récursive <code>expression_infixe</code> qui prend
+en paramètre un objet de la classe <code>Noeud</code> et qui renvoie
+l’expression arithmétique représentée par l’arbre binaire passé
+en paramètre, sous forme d’une chaîne de caractères contenant
+des parenthèses.  </p>
+<p>Résultat attendu avec l’arbre ci-dessus :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kc">None</span><span class="p">))),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
+<span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">)))</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="s1">&#39;((3*(8+7))-(2+1))&#39;</span>
 </code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    classe implémentant un noeud d&#39;arbre binaire</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        un objet Noeud possède 3 attributs :</span>
+<span class="sd">        - gauche : le sous-arbre gauche,</span>
+<span class="sd">        - valeur : la valeur de l&#39;étiquette,</span>
+<span class="sd">        - droit : le sous-arbre droit.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">g</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">d</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie la représentation du noeud en chaine de caractères</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">est_une_feuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie True si et seulement si le noeud est une feuille</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span>
+
+
+<span class="k">def</span> <span class="nf">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    classe implémentant un noeud d&#39;arbre binaire</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        un objet Noeud possède 3 attributs :</span>
+<span class="sd">        - gauche : le sous-arbre gauche,</span>
+<span class="sd">        - valeur : la valeur de l&#39;étiquette,</span>
+<span class="sd">        - droit : le sous-arbre droit.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">g</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">d</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie la représentation du noeud en chaine de caractères</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">est_une_feuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie True si et seulement si le noeud est une feuille</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span>
+
+
+<span class="k">def</span> <span class="nf">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+<span class="hll">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span>    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="hll">        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">gauche</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">droit</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+</span>    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
+représentée sous forme d’arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
+sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
+nous connaissons bien.  
+
+![<span class="nt">image</span>](<span class="na">data2023/21_arbre.png</span>){: .center width=30%}
+
+En parcourant en profondeur infixe l’arbre binaire ci-dessus, on
+retrouve l’expression notée habituellement :  
+
+
+$$(3 \times (8 + 7)) − (2 + 1)$$
+
+
+La classe <span class="sb">`Noeud`</span> ci-après permet d’implémenter une structure
+d’arbre binaire.
+
+Compléter la fonction récursive <span class="sb">`expression_infixe`</span> qui prend
+en paramètre un objet de la classe <span class="sb">`Noeud`</span> et qui renvoie
+l’expression arithmétique représentée par l’arbre binaire passé
+en paramètre, sous forme d’une chaîne de caractères contenant
+des parenthèses.  
+
+Résultat attendu avec l’arbre ci-dessus :
+
+```python
+&gt;&gt;&gt; e = Noeud(Noeud(Noeud(None, 3, None), &#39;*&#39;, Noeud(Noeud(None, 8, None),
+&#39;+&#39;, Noeud(None, 7, None))), &#39;-&#39;, Noeud(Noeud(None, 2, None), &#39;+&#39;,
+Noeud(None, 1, None)))
+
+&gt;&gt;&gt; expression_infixe(e)
+&#39;((3*(8+7))-(2+1))&#39;
+</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    classe implémentant un noeud d&#39;arbre binaire</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        un objet Noeud possède 3 attributs :</span>
+<span class="sd">        - gauche : le sous-arbre gauche,</span>
+<span class="sd">        - valeur : la valeur de l&#39;étiquette,</span>
+<span class="sd">        - droit : le sous-arbre droit.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">g</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">d</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie la représentation du noeud en chaine de caractères</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">est_une_feuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        renvoie True si et seulement si le noeud est une feuille</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span>
+
+
+<span class="k">def</span> <span class="nf">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -7446,9 +7769,94 @@ def nbre_coups():
 <p class="admonition-title">Exercice 22.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="43:3"><input checked="checked" id="__tabbed_43_1" name="__tabbed_43" type="radio" /><input id="__tabbed_43_2" name="__tabbed_43" type="radio" /><input id="__tabbed_43_3" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="__tabbed_43_1">Énoncé</label><label for="__tabbed_43_2">Correction</label><label for="__tabbed_43_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>On rappelle que :</p>
+<ul>
+<li>le nombre <span class="arithmatex">\(a^n\)</span> est le nombre <span class="arithmatex">\(a \times a \times a \times \dots \times a\)</span>, où le facteur <span class="arithmatex">\(a\)</span> apparaît $n fois,</li>
+<li>en langage Python, l’instruction <code>t[-1]</code> permet d’accéder au dernier élément du
+tableau <code>t</code>.</li>
+</ul>
+<p>Dans cet exercice, l’opérateur <code>**</code>  et la fonction <code>pow</code> ne sont pas autorisés.</p>
+<p>Programmer en langage Python une fonction <code>liste_puissances</code> qui prend en argument
+un nombre entier <code>a</code>, un entier strictement positif <code>n</code> et qui renvoie la liste de ses puissances
+<span class="arithmatex">\(\rm{[a^1, a^2, ..., a^n]}\)</span>.</p>
+<p>Programmer également une fonction <code>liste_puisssances_borne</code> qui prend en
+argument un nombre entier <code>a</code> supérieur ou égal à 2 et un entier <code>borne</code>, et qui renvoie la
+liste de ses puissances, à l’exclusion de <span class="arithmatex">\(\rm{a^0}\)</span>, strictement inférieures à <code>borne</code>.</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">243</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances_borne</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances_borne</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances_borne</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">[]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">liste_puissances</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">lst</span>
+
+<span class="k">def</span> <span class="nf">liste_puissances_borne</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">borne</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="k">while</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">borne</span><span class="p">:</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">val</span> <span class="o">*</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>On rappelle que :
+
+- le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n fois,
+- en langage Python, l’instruction `t[-1]` permet d’accéder au dernier élément du
+tableau `t`.
+
+Dans cet exercice, l’opérateur ```**```  et la fonction `pow` ne sont pas autorisés.
+
+Programmer en langage Python une fonction `liste_puissances` qui prend en argument
+un nombre entier `a`, un entier strictement positif `n` et qui renvoie la liste de ses puissances
+$\rm{[a^1, a^2, ..., a^n]}$.
+
+Programmer également une fonction `liste_puisssances_borne` qui prend en
+argument un nombre entier `a` supérieur ou égal à 2 et un entier `borne`, et qui renvoie la
+liste de ses puissances, à l’exclusion de $\rm{a^0}$, strictement inférieures à `borne`.
+
+Exemples :
+
+```python
+&gt;&gt;&gt; liste_puissances(3, 5)
+[3, 9, 27, 81, 243]
+&gt;&gt;&gt; liste_puissances(-2, 4)
+[-2, 4, -8, 16]
+&gt;&gt;&gt; liste_puissances_borne(2, 16)
+[2, 4, 8]
+&gt;&gt;&gt; liste_puissances_borne(2, 17)
+[2, 4, 8, 16]
+&gt;&gt;&gt; liste_puissances_borne(5, 5)
+[]
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -7457,11 +7865,255 @@ def nbre_coups():
 <p class="admonition-title">Exercice 22.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="44:3"><input checked="checked" id="__tabbed_44_1" name="__tabbed_44" type="radio" /><input id="__tabbed_44_2" name="__tabbed_44" type="radio" /><input id="__tabbed_44_3" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="__tabbed_44_1">Énoncé</label><label for="__tabbed_44_2">Correction</label><label for="__tabbed_44_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>On affecte à chaque lettre de l'alphabet un code selon le tableau ci-dessous :</p>
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+<th align="center">E</th>
+<th align="center">F</th>
+<th align="center">G</th>
+<th align="center">H</th>
+<th align="center">I</th>
+<th align="center">J</th>
+<th align="center">K</th>
+<th align="center">L</th>
+<th align="center">M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">N</th>
+<th align="center">O</th>
+<th align="center">P</th>
+<th align="center">Q</th>
+<th align="center">R</th>
+<th align="center">S</th>
+<th align="center">T</th>
+<th align="center">U</th>
+<th align="center">V</th>
+<th align="center">W</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+<th align="center">Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">17</td>
+<td align="center">18</td>
+<td align="center">19</td>
+<td align="center">20</td>
+<td align="center">21</td>
+<td align="center">22</td>
+<td align="center">23</td>
+<td align="center">24</td>
+<td align="center">25</td>
+<td align="center">26</td>
+</tr>
+</tbody>
+</table>
+<p>Pour un mot donné, on détermine d’une part son <em>code alphabétique concaténé</em>, obtenu
+par la juxtaposition des codes de chacun de ses caractères, et d’autre part, <em>son code
+additionné</em>, qui est la somme des codes de chacun de ses caractères.</p>
+<p>Par ailleurs, on dit que ce mot est « <em>parfait</em> » si le code additionné divise le code concaténé.</p>
+<p>Exemples :</p>
+<ul>
+<li>
+<p>Pour le mot <code>"PAUL"</code>, le code concaténé est la chaîne <code>'1612112'</code>, soit l’entier 1 612 112.
+Son code additionné est l’entier 50 car 16 + 1 + 21 + 12 = 50.
+50 ne divise pas l’entier 1 612 112 ; par conséquent, le mot <code>"PAUL"</code> n’est pas
+parfait.</p>
+</li>
+<li>
+<p>Pour le mot <code>"ALAIN"</code>, le code concaténé est la chaîne <code>'1121914'</code>, soit l’entier
+1 121 914. Le code additionné est l’entier 37 car 1 + 12 + 1 + 9 + 14 = 37.
+37 divise l’entier 1 121 914 ; par conséquent, le mot <code>"ALAIN"</code> est parfait.</p>
+</li>
+</ul>
+<p>Compléter la fonction <code>est_parfait</code> ci-dessous qui prend comme argument une chaîne
+de caractères <code>mot</code> (en lettres majuscules) et qui renvoie le code alphabétique concaténé,
+le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <code>mot</code> est parfait ou pas.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;G&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+        <span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">&quot;W&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="c1"># mot est une chaîne de caractères (en lettres majuscules)</span>
+    <span class="n">code_concatene</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">code_additionne</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+        <span class="n">code_concatene</span> <span class="o">=</span> <span class="n">code_concatene</span> <span class="o">+</span> <span class="o">...</span>
+        <span class="n">code_additionne</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">code_concatene</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">code_concatene</span><span class="p">)</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">mot_est_parfait</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mot_est_parfait</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">code_additionne</span><span class="p">,</span> <span class="n">code_concatene</span><span class="p">,</span> <span class="n">mot_est_parfait</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;PAUL&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1612112</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;ALAIN&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">1121914</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">&quot;G&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+        <span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">&quot;W&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="c1"># mot est une chaîne de caractères (en lettres majuscules)</span>
+    <span class="n">code_concatene</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="hll">    <span class="n">code_additionne</span> <span class="o">=</span> <span class="mi">0</span>
+</span>    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+<span class="hll">        <span class="n">code_concatene</span> <span class="o">=</span> <span class="n">code_concatene</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+</span><span class="hll">        <span class="n">code_additionne</span> <span class="o">=</span> <span class="n">code_additionne</span> <span class="o">+</span> <span class="n">dico</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+</span>    <span class="n">code_concatene</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">code_concatene</span><span class="p">)</span>
+<span class="hll">    <span class="k">if</span> <span class="n">code_concatene</span> <span class="o">%</span> <span class="n">code_additionne</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span>        <span class="n">mot_est_parfait</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mot_est_parfait</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">code_additionne</span><span class="p">,</span> <span class="n">code_concatene</span><span class="p">,</span> <span class="n">mot_est_parfait</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>On affecte à chaque lettre de l&#39;alphabet un code selon le tableau ci-dessous :
+
+| A | B | C | D | E | F | G | H | I | J | K | L | M |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
+
+
+| N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 
+
+
+
+Pour un mot donné, on détermine d’une part son <span class="ge">*code alphabétique concaténé*</span>, obtenu
+par la juxtaposition des codes de chacun de ses caractères, et d’autre part, *son code
+additionné*, qui est la somme des codes de chacun de ses caractères.
+
+Par ailleurs, on dit que ce mot est « <span class="ge">*parfait*</span> » si le code additionné divise le code concaténé.
+
+Exemples :
+
+<span class="k">-</span><span class="w"> </span>Pour le mot <span class="sb">`&quot;PAUL&quot;`</span>, le code concaténé est la chaîne <span class="sb">`&#39;1612112&#39;`</span>, soit l’entier 1 612 112.
+Son code additionné est l’entier 50 car 16 + 1 + 21 + 12 = 50.
+50 ne divise pas l’entier 1 612 112 ; par conséquent, le mot <span class="sb">`&quot;PAUL&quot;`</span> n’est pas
+parfait.
+
+<span class="k">-</span><span class="w"> </span>Pour le mot <span class="sb">`&quot;ALAIN&quot;`</span>, le code concaténé est la chaîne <span class="sb">`&#39;1121914&#39;`</span>, soit l’entier
+1 121 914. Le code additionné est l’entier 37 car 1 + 12 + 1 + 9 + 14 = 37.
+37 divise l’entier 1 121 914 ; par conséquent, le mot <span class="sb">`&quot;ALAIN&quot;`</span> est parfait.
+
+
+Compléter la fonction <span class="sb">`est_parfait`</span> ci-dessous qui prend comme argument une chaîne
+de caractères <span class="sb">`mot`</span> (en lettres majuscules) et qui renvoie le code alphabétique concaténé,
+le code additionné de <span class="sb">`mot`</span>, ainsi qu’un booléen qui indique si <span class="sb">`mot`</span> est parfait ou pas.
+
+```python linenums=&#39;1&#39;
+dico = {&quot;A&quot;: 1, &quot;B&quot;: 2, &quot;C&quot;: 3, &quot;D&quot;: 4, &quot;E&quot;: 5, &quot;F&quot;: 6,
+        &quot;G&quot;: 7, &quot;H&quot;: 8, &quot;I&quot;: 9, &quot;J&quot;: 10, &quot;K&quot;: 11, &quot;L&quot;: 12,
+        &quot;M&quot;: 13, &quot;N&quot;: 14, &quot;O&quot;: 15, &quot;P&quot;: 16, &quot;Q&quot;: 17,
+        &quot;R&quot;: 18, &quot;S&quot;: 19, &quot;T&quot;: 20, &quot;U&quot;: 21, &quot;V&quot;: 22,
+        &quot;W&quot;: 23, &quot;X&quot;: 24, &quot;Y&quot;: 25, &quot;Z&quot;: 26}
+
+
+def est_parfait(mot):
+    # mot est une chaîne de caractères (en lettres majuscules)
+    code_concatene = &quot;&quot;
+    code_additionne = ...
+    for c in mot:
+        code_concatene = code_concatene + ...
+        code_additionne = ...
+    code_concatene = int(code_concatene)
+    if ... :
+        mot_est_parfait = True
+    else:
+        mot_est_parfait = False
+    return code_additionne, code_concatene, mot_est_parfait
 </code></pre></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;PAUL&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">1612112</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_parfait</span><span class="p">(</span><span class="s2">&quot;ALAIN&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">1121914</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
