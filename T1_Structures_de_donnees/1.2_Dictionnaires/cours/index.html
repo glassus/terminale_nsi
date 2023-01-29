@@ -2741,12 +2741,13 @@ Ce mot binaire de 128 bits est représenté par une chaîne de 32 caractères (e
 <p>En effet, les simples chaînes de caractères peuvent aussi être transformées par une fonction de hachage :
 <img alt="" class="center" src="../data/terminal.png" /></p>
 <p><img alt="" class="center" src="../data/md5.png" /></p>
-<p>Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !</p>
+<p>Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !!!</p>
 <p><strong>Stockage des mots de passe sur un serveur</strong></p>
 <p>Les sites qui nécessitent une authentification par login / mot de passe ne conservent pas en clair les mots de passe sur leur serveur. La moindre compromission de leur serveur serait en effet dramatique. Ce qui est conservé est l'empreinte du mot de passe après son passage par une fonction de hachage.<br />
 Par exemple, un site où notre mot de passe serait <code>vive la NSI</code> conserverait dans ses bases de données l'empreinte <code>e74fb2f94c052bbf16cea4a795145e35</code>.<br />
-À chaque saisie du mot de passe côté client, l'empreinte est recalculée (toujours côté client, afin de ne pas faire transiter le mot de passe en clair), puis comparée au niveau du serveur avec l'empreinte stockée. 
-De cette façon, si les communications entre le client et le serveur sont interceptées, ou bien si le serveur est compromis, le non-réversibilité de la fonction de hachage assure que le mot de passe ne peut pas être retrouvé par les attaquants.</p>
+À chaque saisie du mot de passe côté client, l'empreinte est recalculée (côté serveur), puis comparée avec l'empreinte stockée. 
+Lors du transit du mot de passe, le chiffrement effectué par le protocole <code>https</code> assure la protection en cas d'interception.
+De cette façon, si le serveur est compromis, le non-réversibilité de la fonction de hachage assure que le mot de passe ne peut pas être retrouvé par les attaquants.</p>
 <p><strong>Non-réversibilité de la fonction de hachage, vraiment ?</strong> </p>
 <p>Prenons l'empreinte MD5 <code>bdc87b9c894da5168059e00ebffb9077</code> et allons fureter du côté de (par exemple) <a href="https://md5.gromweb.com/" target="_blank">https://md5.gromweb.com/</a></p>
 <p>Notre empreinte ne résiste pas bien longtemps...<br />
@@ -2818,14 +2819,13 @@ TypeError: unhashable type: &#39;list&#39;
 139646916523504
 </code></pre></div>
 <p>Un variable contenant un entier est donc un objet <strong>immuable</strong> car si on modifie la valeur de l'entier, la référence de la variable changera aussi. Comme un dictionnaire a besoin d'avoir des clés dont les références soient définitives, seuls les objets <strong>immuables</strong> peuvent donc servir de clés dans les dictionnaires.</p>
-<p><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f6f-290099">Lien vers la correction du DS sur les dictionnaires (Capytale)</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 janvier 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 janvier 2023</span>
       
     
   </small>
