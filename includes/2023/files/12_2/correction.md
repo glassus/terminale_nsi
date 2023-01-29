@@ -1,4 +1,4 @@
-```python linenums='1' hl_lines = '5 7 10-12'
+```python linenums='1' hl_lines='5 7 10-12'
 def empaqueterR(liste_masses, c):
 n = len(liste_masses)
 nb_boites = 0
