@@ -17,7 +17,7 @@
         <link rel="next" href="../../T6_Annales/epreuve_bac/">
       
       <link rel="icon" href="../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.8">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
@@ -177,7 +177,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Recherche">
         
         <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
@@ -5656,19 +5656,30 @@ ensemble d’objets dont les masses sont contenues dans la liste <code>liste_mas
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<p><code>python linenums='1' hl_lines = '5 7 10-12'
-def empaqueterR(liste_masses, c):
-n = len(liste_masses)
-nb_boites = 0
-boites = [0]*n
-for masse in liste_masses :
-    i = 0
-    while i &lt;= nb_boites and boites[i] + masse &gt; c:
-        i = i + 1
-    if i == nb_boites + 1:
-        nb_boites = nb_boites + 1
-    boites[i] = boites[i] + masse
-return nb_boites + 1</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">empaqueterR</span><span class="p">(</span><span class="n">liste_masses</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_masses</span><span class="p">)</span>
+<span class="n">nb_boites</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">boites</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+<span class="hll"><span class="k">for</span> <span class="n">masse</span> <span class="ow">in</span> <span class="n">liste_masses</span> <span class="p">:</span>
+</span>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="hll">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nb_boites</span> <span class="ow">and</span> <span class="n">boites</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">masse</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">:</span>
+</span>        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">nb_boites</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+<span class="hll">        <span class="n">nb_boites</span> <span class="o">=</span> <span class="n">nb_boites</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class="hll">    <span class="n">boites</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">boites</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">masse</span>
+</span><span class="hll"><span class="k">return</span> <span class="n">nb_boites</span> <span class="o">+</span> <span class="mi">1</span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>On dispose d’un ensemble d’objets dont on connaît, pour chacun, la masse. On
@@ -8125,9 +8136,90 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 23.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="45:3"><input checked="checked" id="__tabbed_45_1" name="__tabbed_45" type="radio" /><input id="__tabbed_45_2" name="__tabbed_45" type="radio" /><input id="__tabbed_45_3" name="__tabbed_45" type="radio" /><div class="tabbed-labels"><label for="__tabbed_45_1">Énoncé</label><label for="__tabbed_45_2">Correction</label><label for="__tabbed_45_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>On considère des tables (des tableaux de dictionnaires) qui contiennent des enregistrements
+relatifs à des animaux hébergés dans un refuge. Les attributs des enregistrements sont
+<code>'nom'</code>, <code>'espece'</code>, <code>'age'</code>, <code>'enclos'</code>. Voici un exemple d'une telle table :</p>
+<div class="highlight"><pre><span></span><code><span class="n">animaux</span> <span class="o">=</span> <span class="p">[</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Medor&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chien&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Titine&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Belle&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chien&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Mirza&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}]</span>
+</code></pre></div>
+<p>Programmer une fonction <code>selection_enclos</code> qui :</p>
+<ul>
+<li>prend en paramètres :<ul>
+<li>une table <code>table_animaux</code> contenant des enregistrements relatifs à des
+animaux (comme dans l'exemple ci-dessus),</li>
+<li>un numéro d'enclos <code>num_enclos</code> ;</li>
+</ul>
+</li>
+<li>renvoie une table contenant les enregistrements de <code>table_animaux</code> dont l'attribut
+<code>'enclos'</code> est <code>num_enclos</code>.</li>
+</ul>
+<p>Exemples avec la table <code>animaux</code> ci-dessus :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">selection_enclos</span><span class="p">(</span><span class="n">animaux</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">[{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Titine&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span>
+ <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Mirza&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">selection_enclos</span><span class="p">(</span><span class="n">animaux</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">[{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Medor&#39;</span><span class="p">,</span> <span class="s1">&#39;espece&#39;</span><span class="p">:</span><span class="s1">&#39;chien&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;enclos&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">selection_enclos</span><span class="p">(</span><span class="n">animaux</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="p">[]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">selection_enclos</span><span class="p">(</span><span class="n">table_animaux</span><span class="p">,</span> <span class="n">num_enclos</span><span class="p">):</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">table_animaux</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">animal</span><span class="p">[</span><span class="s1">&#39;enclos&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">num_enclos</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">table</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>On considère des tables (des tableaux de dictionnaires) qui contiennent des enregistrements
+relatifs à des animaux hébergés dans un refuge. Les attributs des enregistrements sont
+`&#39;nom&#39;`, `&#39;espece&#39;`, `&#39;age&#39;`, `&#39;enclos&#39;`. Voici un exemple d&#39;une telle table :
+
+```python
+animaux = [ {&#39;nom&#39;:&#39;Medor&#39;, &#39;espece&#39;:&#39;chien&#39;, &#39;age&#39;:5, &#39;enclos&#39;:2},
+            {&#39;nom&#39;:&#39;Titine&#39;, &#39;espece&#39;:&#39;chat&#39;, &#39;age&#39;:2, &#39;enclos&#39;:5},
+            {&#39;nom&#39;:&#39;Tom&#39;, &#39;espece&#39;:&#39;chat&#39;, &#39;age&#39;:7, &#39;enclos&#39;:4},
+            {&#39;nom&#39;:&#39;Belle&#39;, &#39;espece&#39;:&#39;chien&#39;, &#39;age&#39;:6, &#39;enclos&#39;:3},
+            {&#39;nom&#39;:&#39;Mirza&#39;, &#39;espece&#39;:&#39;chat&#39;, &#39;age&#39;:6, &#39;enclos&#39;:5}]
+```
+
+Programmer une fonction `selection_enclos` qui :
+
+- prend en paramètres :
+    - une table `table_animaux` contenant des enregistrements relatifs à des
+animaux (comme dans l&#39;exemple ci-dessus),
+    - un numéro d&#39;enclos `num_enclos` ;
+- renvoie une table contenant les enregistrements de `table_animaux` dont l&#39;attribut
+`&#39;enclos&#39;` est `num_enclos`.
+
+Exemples avec la table `animaux` ci-dessus :
+
+```python
+&gt;&gt;&gt; selection_enclos(animaux, 5)
+[{&#39;nom&#39;:&#39;Titine&#39;, &#39;espece&#39;:&#39;chat&#39;, &#39;age&#39;:2, &#39;enclos&#39;:5},
+ {&#39;nom&#39;:&#39;Mirza&#39;, &#39;espece&#39;:&#39;chat&#39;, &#39;age&#39;:6, &#39;enclos&#39;:5}]
+
+&gt;&gt;&gt; selection_enclos(animaux, 2)
+[{&#39;nom&#39;:&#39;Medor&#39;, &#39;espece&#39;:&#39;chien&#39;, &#39;age&#39;:5, &#39;enclos&#39;:2}]
+
+&gt;&gt;&gt; selection_enclos(animaux, 7)
+[]
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8136,11 +8228,212 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 23.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="46:3"><input checked="checked" id="__tabbed_46_1" name="__tabbed_46" type="radio" /><input id="__tabbed_46_2" name="__tabbed_46" type="radio" /><input id="__tabbed_46_3" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="__tabbed_46_1">Énoncé</label><label for="__tabbed_46_2">Correction</label><label for="__tabbed_46_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>On considère des tableaux de nombres dont tous les éléments sont présents exactement
+trois fois et à suivre, sauf un élément qui est présent une unique fois et que l'on appelle «
+l'intrus ». Voici quelques exemples :</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="c1">#l&#39;intrus est 7</span>
+
+<span class="n">tab_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="c1">#l&#39;intrus est 8</span>
+
+<span class="n">tab_c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="c1">#l&#39;intrus est 3</span>
 </code></pre></div>
+On remarque qu'avec de tels tableaux :</p>
+<ul>
+<li>pour les indices multiples de 3 situés strictement avant l'intrus, l'élément
+correspondant et son voisin de droite sont égaux,</li>
+<li>pour les indices multiples de 3 situés après l'intrus, l'élément correspondant et son
+voisin de droite - s'il existe - sont différents.</li>
+</ul>
+<p>Ce que l'on peut observer ci-dessous en observant les valeurs des paires de voisins
+marquées par des caractères ^ :</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+ <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>
+ <span class="mi">0</span>        <span class="mi">3</span>        <span class="mi">6</span>        <span class="mi">9</span>        <span class="mi">12</span>       <span class="mi">15</span>       <span class="mi">18</span>       <span class="mi">21</span>
+</code></pre></div>
+<p>Dans des listes comme celles ci-dessus, un algorithme récursif pour trouver l'intrus consiste
+alors à choisir un indice <code>i</code> multiple de 3 situé approximativement au milieu des indices parmi
+lesquels se trouve l'intrus. </p>
+<p>Puis, en fonction des valeurs de l'élément d'indice <code>i</code> et de son voisin de droite, à appliquer
+récursivement l'algorithme à la moitié droite ou à la moitié gauche des indices parmi lesquels
+se trouve l'intrus. </p>
+<p>Par exemple, si on s’intéresse à l’indice 12, on voit les valeurs 2 et 4 qui sont
+différentes : l’intrus est donc à gauche de l’indice 12 (indice 12 compris)</p>
+<p>En revanche, si on s’intéresse à l’indice 3, on voit les valeurs 9 et 9 qui sont
+identiques : l’intrus est donc à droite des indices 3-4-5, donc à partir de l’indice 6.</p>
+<p>Compléter la fonction récursive <code>trouver_intrus</code> proposée page suivante qui met
+en œuvre cet algorithme.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie la valeur de l&#39;intrus situé entre les indices g et d </span>
+<span class="sd">    dans la liste tab où :</span>
+<span class="sd">    tab vérifie les conditions de l&#39;exercice,</span>
+<span class="sd">    g et d sont des multiples de 3.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nombre_de_triplets</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">g</span><span class="p">)</span> <span class="o">//</span> <span class="o">...</span>
+        <span class="n">indice</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">nombre_de_triplets</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
+<span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="mi">7</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie la valeur de l&#39;intrus situé entre les indices g et d </span>
+<span class="sd">    dans la liste tab où :</span>
+<span class="sd">    tab vérifie les conditions de l&#39;exercice,</span>
+<span class="sd">    g et d sont des multiples de 3.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="n">tab</span><span class="p">[</span><span class="n">g</span><span class="p">]</span>
+</span>
+    <span class="k">else</span><span class="p">:</span>
+<span class="hll">        <span class="n">nombre_de_triplets</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">g</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span>
+</span>        <span class="n">indice</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">nombre_de_triplets</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="hll">        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">!=</span> <span class="n">tab</span><span class="p">[</span><span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="p">:</span>
+</span><span class="hll">            <span class="k">return</span> <span class="n">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">indice</span><span class="p">)</span>
+</span>        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="k">return</span> <span class="n">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">indice</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>On considère des tableaux de nombres dont tous les éléments sont présents exactement
+trois fois et à suivre, sauf un élément qui est présent une unique fois et que l&#39;on appelle «
+l&#39;intrus ». Voici quelques exemples :
+
+```python
+tab_a = [3, 3, 3, 9, 9, 9, 1, 1, 1, 7, 2, 2, 2, 4, 4, 4, 8, 8, 8, 5, 5, 5]
+<span class="gh">#l&#39;intrus est 7</span>
+
+tab_b = [8, 5, 5, 5, 9, 9, 9, 18, 18, 18, 3, 3, 3]
+<span class="gh">#l&#39;intrus est 8</span>
+
+tab_c = [5, 5, 5, 1, 1, 1, 0, 0, 0, 6, 6, 6, 3, 8, 8, 8]
+<span class="gh">#l&#39;intrus est 3</span>
+</code></pre></div>
+On remarque qu'avec de tels tableaux :</p>
+<ul>
+<li>pour les indices multiples de 3 situés strictement avant l'intrus, l'élément
+correspondant et son voisin de droite sont égaux,</li>
+<li>pour les indices multiples de 3 situés après l'intrus, l'élément correspondant et son
+voisin de droite - s'il existe - sont différents.</li>
+</ul>
+<p>Ce que l'on peut observer ci-dessous en observant les valeurs des paires de voisins
+marquées par des caractères ^ :</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+ <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>
+ <span class="mi">0</span>        <span class="mi">3</span>        <span class="mi">6</span>        <span class="mi">9</span>        <span class="mi">12</span>       <span class="mi">15</span>       <span class="mi">18</span>       <span class="mi">21</span>
+</code></pre></div>
+<p>Dans des listes comme celles ci-dessus, un algorithme récursif pour trouver l'intrus consiste
+alors à choisir un indice <code>i</code> multiple de 3 situé approximativement au milieu des indices parmi
+lesquels se trouve l'intrus. </p>
+<p>Puis, en fonction des valeurs de l'élément d'indice <code>i</code> et de son voisin de droite, à appliquer
+récursivement l'algorithme à la moitié droite ou à la moitié gauche des indices parmi lesquels
+se trouve l'intrus. </p>
+<p>Par exemple, si on s’intéresse à l’indice 12, on voit les valeurs 2 et 4 qui sont
+différentes : l’intrus est donc à gauche de l’indice 12 (indice 12 compris)</p>
+<p>En revanche, si on s’intéresse à l’indice 3, on voit les valeurs 9 et 9 qui sont
+identiques : l’intrus est donc à droite des indices 3-4-5, donc à partir de l’indice 6.</p>
+<p>Compléter la fonction récursive <code>trouver_intrus</code> proposée page suivante qui met
+en œuvre cet algorithme.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie la valeur de l&#39;intrus situé entre les indices g et d </span>
+<span class="sd">    dans la liste tab où :</span>
+<span class="sd">    tab vérifie les conditions de l&#39;exercice,</span>
+<span class="sd">    g et d sont des multiples de 3.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nombre_de_triplets</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">g</span><span class="p">)</span> <span class="o">//</span> <span class="o">...</span>
+        <span class="n">indice</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">nombre_de_triplets</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
+<span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+<span class="mi">7</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8152,9 +8445,70 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 24.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="47:3"><input checked="checked" id="__tabbed_47_1" name="__tabbed_47" type="radio" /><input id="__tabbed_47_2" name="__tabbed_47" type="radio" /><input id="__tabbed_47_3" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="__tabbed_47_1">Énoncé</label><label for="__tabbed_47_2">Correction</label><label for="__tabbed_47_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre
+d’apparitions de ce caractère dans la chaîne.</p>
+<p>Exemples :</p>
+<ul>
+<li>le nombre d’occurrences du caractère ‘o’ dans ‘bonjour’ est 2 ;</li>
+<li>le nombre d’occurrences du caractère ‘b’ dans ‘Bébé’ est 1 ;</li>
+<li>le nombre d’occurrences du caractère ‘B’ dans ‘Bébé’ est 1 ;</li>
+<li>le nombre d’occurrences du caractère ‘ ‘ dans ‘Hello world !’ est 2.</li>
+</ul>
+<p>On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
+occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
+les valeurs l’occurrence de ces caractères.</p>
+<p>Par exemple : avec la phrase 'Hello world !' le dictionnaire est le suivant :</p>
+<p><code>{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}</code></p>
+<p><em>L’ordre des clefs n’a pas d’importance.</em></p>
+<p>Écrire une fonction <code>nbr_occurrences</code> prenant comme paramètre une chaîne de
+caractères <code>chaine</code> et renvoyant le dictionnaire des nombres d’occurrences des
+caractères de cette chaîne.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nbr_occurrences</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+    <span class="n">nb_occ</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">nb_occ</span><span class="p">:</span>
+            <span class="n">nb_occ</span><span class="p">[</span><span class="n">caractere</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nb_occ</span><span class="p">[</span><span class="n">caractere</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">nb_occ</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre
+d’apparitions de ce caractère dans la chaîne.
+
+Exemples :
+
+- le nombre d’occurrences du caractère ‘o’ dans ‘bonjour’ est 2 ;
+- le nombre d’occurrences du caractère ‘b’ dans ‘Bébé’ est 1 ;
+- le nombre d’occurrences du caractère ‘B’ dans ‘Bébé’ est 1 ;
+- le nombre d’occurrences du caractère ‘ ‘ dans ‘Hello world !’ est 2.
+
+On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
+occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
+les valeurs l’occurrence de ces caractères.
+
+Par exemple : avec la phrase &#39;Hello world !&#39; le dictionnaire est le suivant :
+
+`{&#39;H&#39;: 1,&#39;e&#39;: 1,&#39;l&#39;: 3,&#39;o&#39;: 2,&#39; &#39;: 2,&#39;w&#39;: 1,&#39;r&#39;: 1,&#39;d&#39;: 1,&#39;!&#39;: 1}`
+
+*L’ordre des clefs n’a pas d’importance.*
+
+Écrire une fonction `nbr_occurrences` prenant comme paramètre une chaîne de
+caractères `chaine` et renvoyant le dictionnaire des nombres d’occurrences des
+caractères de cette chaîne.
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8163,11 +8517,152 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 24.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="48:3"><input checked="checked" id="__tabbed_48_1" name="__tabbed_48" type="radio" /><input id="__tabbed_48_2" name="__tabbed_48" type="radio" /><input id="__tabbed_48_3" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="__tabbed_48_1">Énoncé</label><label for="__tabbed_48_2">Correction</label><label for="__tabbed_48_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>La fonction <code>fusion</code> prend deux listes <code>lst1</code>, <code>lst2</code> d’entiers triées par ordre croissant et les
+fusionne en une liste triée <code>lst12</code> qu’elle renvoie.</p>
+<p>Le code Python de la fonction <code>fusion</code> est</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span><span class="n">lst2</span><span class="p">):</span>
+    <span class="n">n1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">)</span>
+    <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
+    <span class="n">lst12</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">)</span>
+    <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
+            <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="n">i1</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
+            <span class="n">i2</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">:</span>
+        <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">i1</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
+        <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">i2</span> <span class="o">=</span> <span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">lst12</span>
+</code></pre></div></td></tr></table></div>
+<p>Compléter le code.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fusion</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+    <span class="n">n1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">)</span>
+    <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
+    <span class="n">lst12</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">)</span>
+    <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="hll">    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="p">:</span>
+</span>        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
+<span class="hll">            <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span>
+</span><span class="hll">            <span class="n">i1</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="mi">1</span>
+</span>        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
+<span class="hll">            <span class="n">i2</span> <span class="o">=</span> <span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span>
+</span>        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">:</span>
+<span class="hll">        <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span>
+</span>        <span class="n">i1</span> <span class="o">=</span> <span class="n">i1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="hll">        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</span>    <span class="k">while</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
+<span class="hll">        <span class="n">lst12</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
+</span>        <span class="n">i2</span> <span class="o">=</span> <span class="n">i2</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="hll">        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</span>    <span class="k">return</span> <span class="n">lst12</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>La fonction <span class="sb">`fusion`</span> prend deux listes <span class="sb">`lst1`</span>, <span class="sb">`lst2`</span> d’entiers triées par ordre croissant et les
+fusionne en une liste triée <span class="sb">`lst12`</span> qu’elle renvoie.
+
+Le code Python de la fonction <span class="sb">`fusion`</span> est
+
+```python linenums=&#39;1&#39;
+def fusion(lst1,lst2):
+    n1 = len(lst1)
+    n2 = len(lst2)
+    lst12 = [0] * (n1 + n2)
+    i1 = 0
+    i2 = 0
+    i = 0
+    while i1 &lt; n1 and ... :
+        if lst1[i1] &lt; lst2[i2]:
+            lst12[i] = ...
+            i1 = ...
+        else:
+            lst12[i] = lst2[i2]
+            i2 = ...
+        i += 1
+    while i1 &lt; n1:
+        lst12[i] = ...
+        i1 = i1 + 1
+        i = ...
+    while i2 &lt; n2:
+        lst12[i] = ...
+        i2 = i2 + 1
+        i = ...
+    return lst12
+</code></pre></div>
+<p>Compléter le code.</p>
+<p>Exemple :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fusion</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8179,9 +8674,46 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 25.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="49:3"><input checked="checked" id="__tabbed_49_1" name="__tabbed_49" type="radio" /><input id="__tabbed_49_2" name="__tabbed_49" type="radio" /><input id="__tabbed_49_3" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="__tabbed_49_1">Énoncé</label><label for="__tabbed_49_2">Correction</label><label for="__tabbed_49_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Écrire une fonction <code>enumere</code> qui prend en paramètre une liste <code>L</code> et renvoie un
+dictionnaire <code>d</code> dont les clés sont les éléments de <code>L</code> avec pour valeur associée la liste des
+indices de l’élément dans la liste <code>L</code>.</p>
+<p>Exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">enumere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">]}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">enumere</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">d</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Écrire une fonction `enumere` qui prend en paramètre une liste `L` et renvoie un
+dictionnaire `d` dont les clés sont les éléments de `L` avec pour valeur associée la liste des
+indices de l’élément dans la liste `L`.
+
+Exemple :
+
+```python
+&gt;&gt;&gt; enumere([1, 1, 2, 3, 2, 1])
+{1: [0, 1, 5], 2: [2, 4], 3: [3]}
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8190,11 +8722,173 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 25.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="50:3"><input checked="checked" id="__tabbed_50_1" name="__tabbed_50" type="radio" /><input id="__tabbed_50_2" name="__tabbed_50" type="radio" /><input id="__tabbed_50_3" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="__tabbed_50_1">Énoncé</label><label for="__tabbed_50_2">Correction</label><label for="__tabbed_50_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.<br />
+Les attributs <code>fg</code> et <code>fd</code> prennent pour valeurs des instances de la classe <code>Arbre</code> ou <code>None</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etiquette</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">etiquette</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">parcours</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fg</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span>
+        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">parcours</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste</span>
+</code></pre></div></td></tr></table></div>
+<p>La fonction récursive <code>parcours</code> renvoie la liste des étiquettes des nœuds de l’arbre
+implémenté par l’instance <code>arbre</code> dans l’ordre du parcours en profondeur infixe à partir
+d’une liste vide passée en argument.</p>
+<p>Compléter le code de la fonction <code>insere</code> qui insère un nœud d’étiquette <code>cle</code> en feuille de
+l’arbre implémenté par l’instance <code>arbre</code> selon la spécification indiquée et de façon que
+l’arbre ainsi complété soit encore un arbre binaire de recherche.</p>
+<p>Tester ensuite ce code en utilisant la fonction <code>parcours</code> et en insérant successivement
+des nœuds d’étiquette 1, 4, 6 et 8 dans l’arbre binaire de recherche représenté ci-
+dessous :</p>
+<p><img alt="image" class="center" src="../data2023/25_arbre.png" width="15%" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; arbre est une instance de la classe Arbre qui implémente</span>
+<span class="sd">        un arbre binaire de recherche.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot; arbre est une instance de la classe Arbre qui implémente</span>
+<span class="sd">    un arbre binaire de recherche.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="hll">    <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">fg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span>            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+<span class="hll">        <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span>            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Tests :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">parcours</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[])</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">parcours</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[])</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Un arbre binaire est implémenté par la classe <span class="sb">`Arbre`</span> donnée ci-dessous.  
+Les attributs <span class="sb">`fg`</span> et <span class="sb">`fd`</span> prennent pour valeurs des instances de la classe <span class="sb">`Arbre`</span> ou <span class="sb">`None`</span>.
+
+```python linenums=&#39;1&#39;
+class Arbre:
+    def <span class="gs">__init__</span>(self, etiquette):
+        self.v = etiquette
+        self.fg = None
+        self.fd = None
+
+def parcours(arbre, liste):
+    if arbre != None:
+        parcours(arbre.fg, liste)
+        liste.append(arbre.v)
+        parcours(arbre.fd, liste)
+    return liste
+</code></pre></div>
+<p>La fonction récursive <code>parcours</code> renvoie la liste des étiquettes des nœuds de l’arbre
+implémenté par l’instance <code>arbre</code> dans l’ordre du parcours en profondeur infixe à partir
+d’une liste vide passée en argument.</p>
+<p>Compléter le code de la fonction <code>insere</code> qui insère un nœud d’étiquette <code>cle</code> en feuille de
+l’arbre implémenté par l’instance <code>arbre</code> selon la spécification indiquée et de façon que
+l’arbre ainsi complété soit encore un arbre binaire de recherche.</p>
+<p>Tester ensuite ce code en utilisant la fonction <code>parcours</code> et en insérant successivement
+des nœuds d’étiquette 1, 4, 6 et 8 dans l’arbre binaire de recherche représenté ci-
+dessous :</p>
+<p><img alt="image" class="center" src="../data2023/25_arbre.png" width="15%" /></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; arbre est une instance de la classe Arbre qui implémente</span>
+<span class="sd">        un arbre binaire de recherche.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8206,9 +8900,62 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 26.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="51:3"><input checked="checked" id="__tabbed_51_1" name="__tabbed_51" type="radio" /><input id="__tabbed_51_2" name="__tabbed_51" type="radio" /><input id="__tabbed_51_3" name="__tabbed_51" type="radio" /><div class="tabbed-labels"><label for="__tabbed_51_1">Énoncé</label><label for="__tabbed_51_2">Correction</label><label for="__tabbed_51_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Programmer la fonction <code>multiplication</code>, prenant en paramètres deux nombres entiers
+<code>n1</code> et <code>n2</code>, et qui renvoie le produit de ces deux nombres.</p>
+<p>Les seules opérations autorisées sont l’addition et la soustraction. </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">15</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">)</span>
+<span class="mi">32</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="mi">0</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+    <span class="c1"># on se ramène d&#39;abord au cas où n1 et n2 sont tous les deux positifs :</span>
+    <span class="k">if</span> <span class="n">n1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n2</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="o">-</span><span class="n">n2</span><span class="p">)</span>
+
+    <span class="n">resultat</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n2</span><span class="p">):</span>
+        <span class="n">resultat</span> <span class="o">+=</span> <span class="n">n1</span>
+    <span class="k">return</span> <span class="n">resultat</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers
+`n1` et `n2`, et qui renvoie le produit de ces deux nombres.
+
+Les seules opérations autorisées sont l’addition et la soustraction.
+
+```python
+&gt;&gt;&gt; multiplication(3, 5)
+15
+&gt;&gt;&gt; multiplication(-4, -8)
+32
+&gt;&gt;&gt; multiplication(-2, 6)
+-12
+&gt;&gt;&gt; multiplication(-2, 0)
+0
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8217,11 +8964,116 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 26.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="52:3"><input checked="checked" id="__tabbed_52_1" name="__tabbed_52" type="radio" /><input id="__tabbed_52_2" name="__tabbed_52" type="radio" /><input id="__tabbed_52_3" name="__tabbed_52" type="radio" /><div class="tabbed-labels"><label for="__tabbed_52_1">Énoncé</label><label for="__tabbed_52_2">Correction</label><label for="__tabbed_52_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
+ne recopiera pas les commentaires.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab : tableau d’entiers trié dans l’ordre croissant</span>
+<span class="sd">    x : nombre entier</span>
+<span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="n">debut</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fin</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab : tableau d’entiers trié dans l’ordre croissant</span>
+<span class="sd">    x : nombre entier</span>
+<span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
+<span class="hll">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+</span>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+<span class="hll">            <span class="k">return</span> <span class="kc">True</span>
+</span>        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="n">debut</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fin</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
+ne recopiera pas les commentaires.
+
+```python linenums=&#39;1&#39;
+def dichotomie(tab, x):
+    &quot;&quot;&quot;
+    tab : tableau d’entiers trié dans l’ordre croissant
+    x : nombre entier
+    La fonction renvoie True si tab contient x et False sinon
+    &quot;&quot;&quot;
+    debut = 0
+    fin = len(tab) - 1
+    while debut &lt;= fin:
+        m = ...
+        if x == tab[m]:
+            return ...
+        if x &gt; tab[m]:
+            debut = m + 1
+        else:
+            fin = ...
+    return ...
 </code></pre></div>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8233,9 +9085,49 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 27.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="53:3"><input checked="checked" id="__tabbed_53_1" name="__tabbed_53" type="radio" /><input id="__tabbed_53_2" name="__tabbed_53" type="radio" /><input id="__tabbed_53_3" name="__tabbed_53" type="radio" /><div class="tabbed-labels"><label for="__tabbed_53_1">Énoncé</label><label for="__tabbed_53_2">Correction</label><label for="__tabbed_53_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Écrire une fonction <code>recherche_min</code> qui prend en paramètre un tableau de nombres non
+trié <code>tab</code>, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les
+tableaux seront représentés sous forme de liste Python.</p>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_min</span><span class="p">([</span><span class="mi">5</span><span class="p">])</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_min</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_min</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="mi">2</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_min</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">indice_min</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
+            <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">indice_min</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Écrire une fonction `recherche_min` qui prend en paramètre un tableau de nombres non
+trié `tab`, et qui renvoie l&#39;indice de la première occurrence du minimum de ce tableau. Les
+tableaux seront représentés sous forme de liste Python.
+
+Exemples :
+```python
+&gt;&gt;&gt; recherche_min([5])
+0
+&gt;&gt;&gt; recherche_min([2, 4, 1])
+2
+&gt;&gt;&gt; recherche_min([5, 3, 2, 2, 4])
+2
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8244,11 +9136,145 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 27.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="54:3"><input checked="checked" id="__tabbed_54_1" name="__tabbed_54" type="radio" /><input id="__tabbed_54_2" name="__tabbed_54" type="radio" /><input id="__tabbed_54_3" name="__tabbed_54" type="radio" /><div class="tabbed-labels"><label for="__tabbed_54_1">Énoncé</label><label for="__tabbed_54_2">Correction</label><label for="__tabbed_54_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>On considère la fonction <code>separe</code> ci-dessous qui prend en argument un tableau <code>tab</code> dont
+les éléments sont des <code>0</code> et des <code>1</code> et qui sépare les <code>0</code> des <code>1</code> en plaçant les <code>0</code> en début de
+tableau et les <code>1</code> à la suite.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">gauche</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">droite</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="n">gauche</span> <span class="o">&lt;</span> <span class="n">droite</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">gauche</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="n">gauche</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">tab</span><span class="p">[</span><span class="n">gauche</span><span class="p">],</span> <span class="n">tab</span><span class="p">[</span><span class="n">droite</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="n">droite</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">tab</span>
+</code></pre></div></td></tr></table></div>
+<p>Compléter la fonction <code>separe</code> ci-dessus.</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
+<p>Description d’étapes effectuées par la fonction separe sur le tableau ci-dessous :
+<code>tab = [1, 0, 1, 0, 1, 0, 1, 0]</code></p>
+<ul>
+<li>
+<p><strong>Etape 1 :</strong> on regarde la première case, qui contient un 1 : ce 1 va aller dans la seconde
+partie du tableau final et on l’échange avec la dernière case.
+Il est à présent bien positionné : on ne prend plus la dernière case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 2 :</strong> on regarde à nouveau la première case, qui contient maintenant un 0 : ce 0 va
+aller dans la première partie du tableau final et est bien positionné : on ne prend plus la
+première case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 3 :</strong> on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première
+partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 4 :</strong> on regarde la troisième case, qui contient un 1 : ce 1 va aller dans la seconde
+partie du tableau final et on l’échange avec l’avant-dernière case.
+Il est à présent bien positionné : on ne prend plus l’avant-dernière case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+</ul>
+<p>Et ainsi de suite...</p>
+<p><code>tab = [0, 0, 0, 0, 1, 1, 1, 1]</code></p>
+<p>Compléter la fonction <code>separe</code> présentée à la page précédente</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">gauche</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="hll">    <span class="n">droite</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</span>    <span class="k">while</span> <span class="n">gauche</span> <span class="o">&lt;</span> <span class="n">droite</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">gauche</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+<span class="hll">            <span class="n">gauche</span> <span class="o">=</span> <span class="n">gauche</span> <span class="o">+</span> <span class="mi">1</span>
+</span>        <span class="k">else</span> <span class="p">:</span>
+<span class="hll">            <span class="n">tab</span><span class="p">[</span><span class="n">gauche</span><span class="p">],</span> <span class="n">tab</span><span class="p">[</span><span class="n">droite</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">droite</span><span class="p">],</span> <span class="n">tab</span><span class="p">[</span><span class="n">gauche</span><span class="p">]</span>
+</span><span class="hll">            <span class="n">droite</span> <span class="o">=</span> <span class="n">droite</span> <span class="o">-</span> <span class="mi">1</span>
+</span>    <span class="k">return</span> <span class="n">tab</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`separe`</span> ci-dessous qui prend en argument un tableau <span class="sb">`tab`</span> dont
+les éléments sont des <span class="sb">`0`</span> et des <span class="sb">`1`</span> et qui sépare les <span class="sb">`0`</span> des <span class="sb">`1`</span> en plaçant les <span class="sb">`0`</span> en début de
+tableau et les <span class="sb">`1`</span> à la suite.
+
+```python linenums=&#39;1&#39;
+def separe(tab):
+    gauche = 0
+    droite = ...
+    while gauche &lt; droite :
+        if tab[gauche] == 0 :
+            gauche = ...
+        else :
+            tab[gauche], tab[droite] = ...
+            droite = ...
+    return tab
+</code></pre></div>
+<p>Compléter la fonction <code>separe</code> ci-dessus.</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+<p>Description d’étapes effectuées par la fonction separe sur le tableau ci-dessous :
+<code>tab = [1, 0, 1, 0, 1, 0, 1, 0]</code></p>
+<ul>
+<li>
+<p><strong>Etape 1 :</strong> on regarde la première case, qui contient un 1 : ce 1 va aller dans la seconde
+partie du tableau final et on l’échange avec la dernière case.
+Il est à présent bien positionné : on ne prend plus la dernière case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 2 :</strong> on regarde à nouveau la première case, qui contient maintenant un 0 : ce 0 va
+aller dans la première partie du tableau final et est bien positionné : on ne prend plus la
+première case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 3 :</strong> on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première
+partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+<li>
+<p><strong>Etape 4 :</strong> on regarde la troisième case, qui contient un 1 : ce 1 va aller dans la seconde
+partie du tableau final et on l’échange avec l’avant-dernière case.
+Il est à présent bien positionné : on ne prend plus l’avant-dernière case en compte.<br />
+<code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
+</li>
+</ul>
+<p>Et ainsi de suite...</p>
+<p><code>tab = [0, 0, 0, 0, 1, 1, 1, 1]</code></p>
+<p>Compléter la fonction <code>separe</code> présentée à la page précédente
+```             </p>
 </div>
 </div>
 </div>
@@ -8260,9 +9286,70 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 28.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="55:3"><input checked="checked" id="__tabbed_55_1" name="__tabbed_55" type="radio" /><input id="__tabbed_55_2" name="__tabbed_55" type="radio" /><input id="__tabbed_55_3" name="__tabbed_55" type="radio" /><div class="tabbed-labels"><label for="__tabbed_55_1">Énoncé</label><label for="__tabbed_55_2">Correction</label><label for="__tabbed_55_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Écrire une fonction qui prend en paramètre un tableau d'entiers non vide et qui renvoie la
+moyenne de ces entiers. La fonction est spécifiée ci-après et doit passer les assertions
+fournies.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span> <span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    moyenne(list) -&gt; float</span>
+<span class="sd">    Entrée : un tableau non vide d&#39;entiers</span>
+<span class="sd">    Sortie : nombre de type float</span>
+<span class="sd">    Correspondant à la moyenne des valeurs présentes dans le</span>
+<span class="sd">    tableau</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="mf">1.5</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    moyenne(list) -&gt; float</span>
+<span class="sd">    Entrée : un tableau non vide d&#39;entiers</span>
+<span class="sd">    Sortie : nombre de type float</span>
+<span class="sd">    Correspondant à la moyenne des valeurs présentes dans le</span>
+<span class="sd">    tableau</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="n">elt</span>
+    <span class="k">return</span> <span class="n">somme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Écrire une fonction qui prend en paramètre un tableau d&#39;entiers non vide et qui renvoie la
+moyenne de ces entiers. La fonction est spécifiée ci-après et doit passer les assertions
+fournies.
+```python
+def moyenne (tab):
+    &#39;&#39;&#39;
+    moyenne(list) -&gt; float
+    Entrée : un tableau non vide d&#39;entiers
+    Sortie : nombre de type float
+    Correspondant à la moyenne des valeurs présentes dans le
+    tableau
+    &#39;&#39;&#39;
+
+assert moyenne([1]) == 1
+assert moyenne([1, 2, 3, 4, 5, 6, 7] == 4
+assert moyenne([1, 2]) == 1.5
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8271,11 +9358,177 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 28.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="56:3"><input checked="checked" id="__tabbed_56_1" name="__tabbed_56" type="radio" /><input id="__tabbed_56_2" name="__tabbed_56" type="radio" /><input id="__tabbed_56_3" name="__tabbed_56" type="radio" /><div class="tabbed-labels"><label for="__tabbed_56_1">Énoncé</label><label for="__tabbed_56_2">Correction</label><label for="__tabbed_56_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>Le but de l'exercice est de compléter une fonction qui détermine si une valeur est présente
+dans un tableau de valeurs triées dans l'ordre croissant.</p>
+<p>L'algorithme traite le cas du tableau vide et il est écrit pour que la recherche dichotomique ne se fasse que dans le cas où
+la valeur est comprise entre les valeurs extrêmes du tableau.</p>
+<p>On distingue les trois cas qui renvoient <code>False</code> en renvoyant <code>False, 1</code> , <code>False, 2</code> et
+<code>False, 3</code>.</p>
+<p>Compléter l'algorithme de dichotomie donné ci-après.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab : tableau trié dans l’ordre croissant</span>
+<span class="sd">    x : nombre entier</span>
+<span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># cas du tableau vide</span>
+    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">1</span>
+
+    <span class="c1"># cas où x n&#39;est pas compris entre les valeurs extrêmes</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">2</span>
+
+    <span class="n">debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="n">debut</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fin</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([],</span><span class="mi">28</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab : tableau trié dans l’ordre croissant</span>
+<span class="sd">    x : nombre entier</span>
+<span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># cas du tableau vide</span>
+<span class="hll">    <span class="k">if</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[]:</span>
+</span>        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">1</span>
+
+    <span class="c1"># cas où x n&#39;est pas compris entre les valeurs extrêmes</span>
+<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+</span>        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">2</span>
+
+    <span class="n">debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
+<span class="hll">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+</span>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+<span class="hll">            <span class="k">return</span> <span class="kc">True</span>
+</span>        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
+            <span class="n">debut</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="n">fin</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span class="hll">    <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">3</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Le but de l&#39;exercice est de compléter une fonction qui détermine si une valeur est présente
+dans un tableau de valeurs triées dans l&#39;ordre croissant.
+
+L&#39;algorithme traite le cas du tableau vide et il est écrit pour que la recherche dichotomique ne se fasse que dans le cas où
+la valeur est comprise entre les valeurs extrêmes du tableau.
+
+On distingue les trois cas qui renvoient <span class="sb">`False`</span> en renvoyant <span class="sb">`False, 1`</span> , <span class="sb">`False, 2`</span> et
+<span class="sb">`False, 3`</span>.
+
+Compléter l&#39;algorithme de dichotomie donné ci-après.
+
+```python linenums=&#39;1&#39;
+def dichotomie(tab, x):
+    &quot;&quot;&quot;
+    tab : tableau trié dans l’ordre croissant
+    x : nombre entier
+    La fonction renvoie True si tab contient x et False sinon
+    &quot;&quot;&quot;
+    # cas du tableau vide
+    if ...:
+        return False, 1
+
+    # cas où x n&#39;est pas compris entre les valeurs extrêmes
+    if (x &lt; tab[0]) or ...:
+        return False, 2
+
+    debut = 0
+    fin = len(tab) - 1
+    while debut &lt;= fin:
+        m = ...
+        if x == tab[m]:
+            return ...
+        if x &gt; tab[m]:
+            debut = m + 1
+        else:
+            fin = ...
+    return ...
+</code></pre></div>
+<p>Exemples :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([],</span><span class="mi">28</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8287,9 +9540,105 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 29.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="57:3"><input checked="checked" id="__tabbed_57_1" name="__tabbed_57" type="radio" /><input id="__tabbed_57_2" name="__tabbed_57" type="radio" /><input id="__tabbed_57_3" name="__tabbed_57" type="radio" /><div class="tabbed-labels"><label for="__tabbed_57_1">Énoncé</label><label for="__tabbed_57_2">Correction</label><label for="__tabbed_57_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.
+Les attributs <code>fg</code> et <code>fd</code> prennent pour valeurs des instances de la classe <code>Arbre</code> ou <code>None</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etiquette</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">etiquette</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<p><img alt="image" class="center" src="../data2023/29_arbre1.png" /></p>
+<p>L’arbre ci-dessus sera donc implémenté de la manière suivante :
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Écrire une fonction récursive <code>taille</code> prenant en paramètre une instance <code>a</code> de la classe
+<code>Arbre</code> et qui renvoie la taille de l’arbre que cette instance implémente.</p>
+<p>Écrire de même une fonction récursive <code>hauteur</code> prenant en paramètre une instance <code>a</code>
+de la classe <code>Arbre</code> et qui renvoie la hauteur de l’arbre que cette instance implémente.</p>
+<p>Si un arbre a un seul nœud, sa taille et sa hauteur sont égales à 1.
+S’il est vide, sa taille et sa hauteur sont égales à 0.</p>
+<p>Tester les deux fonctions sur l’arbre représenté ci-dessous :</p>
+<p><img alt="image" class="center" src="../data2023/29_arbre2.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">fg</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">fg</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>Tests :</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fg</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">fg</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Un arbre binaire est implémenté par la classe `Arbre` donnée ci-dessous.
+Les attributs `fg` et `fd` prennent pour valeurs des instances de la classe `Arbre` ou `None`.
+
+```python
+class Arbre:
+    def __init__(self, etiquette):
+        self.v = etiquette
+        self.fg = None
+        self.fd = None
+```
+
+![image](data2023/29_arbre1.png){: .center}
+
+L’arbre ci-dessus sera donc implémenté de la manière suivante :
+```python
+a = Arbre(1)
+a.fg = Arbre(4)
+a.fd = Arbre(0)
+a.fd.fd = Arbre(7)
+```
+
+Écrire une fonction récursive `taille` prenant en paramètre une instance `a` de la classe
+`Arbre` et qui renvoie la taille de l’arbre que cette instance implémente.
+
+Écrire de même une fonction récursive `hauteur` prenant en paramètre une instance `a`
+de la classe `Arbre` et qui renvoie la hauteur de l’arbre que cette instance implémente.
+
+Si un arbre a un seul nœud, sa taille et sa hauteur sont égales à 1.
+S’il est vide, sa taille et sa hauteur sont égales à 0.
+
+Tester les deux fonctions sur l’arbre représenté ci-dessous :
+
+![image](data2023/29_arbre2.png){: .center}
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8298,11 +9647,144 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 29.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="58:3"><input checked="checked" id="__tabbed_58_1" name="__tabbed_58" type="radio" /><input id="__tabbed_58_2" name="__tabbed_58" type="radio" /><input id="__tabbed_58_3" name="__tabbed_58" type="radio" /><div class="tabbed-labels"><label for="__tabbed_58_1">Énoncé</label><label for="__tabbed_58_2">Correction</label><label for="__tabbed_58_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>La méthode <code>insert</code> de la classe <code>list</code> permet d’insérer un élément dans une liste à un
+<code>indice</code> donné.</p>
+<p>Le but de cet exercice est, <em>sans utiliser cette méthode</em>, d’écrire une fonction <code>ajoute</code>
+réalisant cette insertion en produisant une nouvelle liste.</p>
+<p>Cette fonction <code>ajoute</code> prend en paramètres trois variables <code>indice</code>, <code>element</code> et <code>liste</code>
+et renvoie une liste <code>L</code> dans laquelle les éléments sont ceux de la liste <code>liste</code> avec, en
+plus, l’élément <code>element</code> à l’indice <code>indice</code>.<br />
+On considère que les variables <code>indice</code> et <code>element</code> sont des entiers positifs et que les
+éléments de <code>liste</code> sont également des entiers positifs.<br />
+Les éléments de la liste <code>liste</code>, dont les indices sont supérieurs ou égaux à <code>indice</code>
+apparaissent décalés vers la droite dans la liste <code>L</code>.<br />
+Si <code>indice</code> est supérieur ou égal au nombre d’éléments de la liste <code>liste</code>, l’élément
+element est ajouté dans <code>L</code> après tous les éléments de la liste <code>liste</code>.</p>
+<p>Exemple :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Compléter et tester le code ci-dessous :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajoute</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="n">nbre_elts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">L</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajoute</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="n">nbre_elts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="hll">    <span class="k">if</span> <span class="n">indice</span> <span class="o">&lt;</span> <span class="n">nbre_elts</span><span class="p">:</span>
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">):</span>
+<span class="hll">            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span class="hll">        <span class="n">L</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span>
+</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<span class="hll">            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span>    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span><span class="p">):</span>
+<span class="hll">            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span class="hll">        <span class="n">L</span><span class="p">[</span><span class="n">nbre_elts</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span> 
+</span>    <span class="k">return</span> <span class="n">L</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>La méthode <span class="sb">`insert`</span> de la classe <span class="sb">`list`</span> permet d’insérer un élément dans une liste à un
+<span class="sb">`indice`</span> donné.
+
+Le but de cet exercice est, <span class="ge">*sans utiliser cette méthode*</span>, d’écrire une fonction <span class="sb">`ajoute`</span>
+réalisant cette insertion en produisant une nouvelle liste.
+
+Cette fonction <span class="sb">`ajoute`</span> prend en paramètres trois variables <span class="sb">`indice`</span>, <span class="sb">`element`</span> et <span class="sb">`liste`</span>
+et renvoie une liste <span class="sb">`L`</span> dans laquelle les éléments sont ceux de la liste <span class="sb">`liste`</span> avec, en
+plus, l’élément <span class="sb">`element`</span> à l’indice <span class="sb">`indice`</span>.  
+On considère que les variables <span class="sb">`indice`</span> et <span class="sb">`element`</span> sont des entiers positifs et que les
+éléments de <span class="sb">`liste`</span> sont également des entiers positifs.  
+Les éléments de la liste <span class="sb">`liste`</span>, dont les indices sont supérieurs ou égaux à <span class="sb">`indice`</span>
+apparaissent décalés vers la droite dans la liste <span class="sb">`L`</span>.  
+Si <span class="sb">`indice`</span> est supérieur ou égal au nombre d’éléments de la liste <span class="sb">`liste`</span>, l’élément
+element est ajouté dans <span class="sb">`L`</span> après tous les éléments de la liste <span class="sb">`liste`</span>.
+
+Exemple :
+```python
+&gt;&gt;&gt; ajoute(1, 4, [7, 8, 9])
+[7, 4, 8, 9]
+&gt;&gt;&gt; ajoute(3, 4, [7, 8, 9])
+[7, 8, 9, 4]
+&gt;&gt;&gt; ajoute(4, 4, [7, 8, 9])
+[7, 8, 9, 4]
 </code></pre></div>
+<p>Compléter et tester le code ci-dessous :</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajoute</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="n">nbre_elts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nbre_elts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbre_elts</span><span class="p">):</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">L</span>
+</code></pre></div></td></tr></table></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8314,9 +9796,43 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 30.1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="59:3"><input checked="checked" id="__tabbed_59_1" name="__tabbed_59" type="radio" /><input id="__tabbed_59_2" name="__tabbed_59" type="radio" /><input id="__tabbed_59_3" name="__tabbed_59" type="radio" /><div class="tabbed-labels"><label for="__tabbed_59_1">Énoncé</label><label for="__tabbed_59_2">Correction</label><label for="__tabbed_59_3">Source Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Écrire une fonction <code>moyenne</code> qui prend en paramètre un tableau non vide de nombres
+flottants et qui renvoie la moyenne des valeurs du tableau. Les tableaux seront
+représentés sous forme de liste Python.</p>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">1.0</span><span class="p">])</span>
+<span class="mf">1.0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">])</span>
+<span class="mf">2.3333333333333335</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="n">somme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Écrire une fonction `moyenne` qui prend en paramètre un tableau non vide de nombres
+flottants et qui renvoie la moyenne des valeurs du tableau. Les tableaux seront
+représentés sous forme de liste Python.
+
+Exemples :
+```python
+&gt;&gt;&gt; moyenne([1.0])
+1.0
+&gt;&gt;&gt; moyenne([1.0, 2.0, 4.0])
+2.3333333333333335
+```
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8325,11 +9841,80 @@ def est_parfait(mot):
 <p class="admonition-title">Exercice 30.2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="60:3"><input checked="checked" id="__tabbed_60_1" name="__tabbed_60" type="radio" /><input id="__tabbed_60_2" name="__tabbed_60" type="radio" /><input id="__tabbed_60_3" name="__tabbed_60" type="radio" /><div class="tabbed-labels"><label for="__tabbed_60_1">Énoncé</label><label for="__tabbed_60_2">Correction</label><label for="__tabbed_60_3">Sources Markdown</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>
+<p>On considère la fonction <code>binaire</code> ci-dessous qui prend en paramètre un entier positif <code>a</code> en écriture décimale et qui renvoie son écriture binaire sous la forme d'une chaine de caractères.</p>
+<p>L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
+l’exemple ci-après.</p>
+<p><img alt="image" class="center" src="../data2023/30_divisions.png" /></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">while</span> <span class="n">a</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">bin_a</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">bin_a</span>
+</code></pre></div></td></tr></table></div>
+Compléter le code de la fonction <code>binaire</code>.</p>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
+<span class="s1">&#39;1010011&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span>
+<span class="s1">&#39;1111111&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="s1">&#39;0&#39;</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="hll">    <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+</span>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
+</span><span class="hll">        <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_a</span>
+</span><span class="hll">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
+</span>    <span class="k">return</span> <span class="n">bin_a</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`binaire`</span> ci-dessous qui prend en paramètre un entier positif <span class="sb">`a`</span> en écriture décimale et qui renvoie son écriture binaire sous la forme d&#39;une chaine de caractères.
+
+L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
+l’exemple ci-après.
+
+![<span class="nt">image</span>](<span class="na">data2023/30_divisions.png</span>){: .center}
+
+
+
+```python linenums=&#39;1&#39;
+def binaire(a):
+    bin_a = ...
+    a = a // 2
+    while a ... :
+        bin_a = ... + bin_a
+        a = ...
+    return bin_a
 </code></pre></div>
+Compléter le code de la fonction <code>binaire</code>.</p>
+<p>Exemples :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
+<span class="s1">&#39;1010011&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span>
+<span class="s1">&#39;1111111&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="s1">&#39;0&#39;</span>
+</code></pre></div>
+```             </p>
 </div>
 </div>
 </div>
@@ -8611,7 +10196,7 @@ def est_parfait(mot):
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 janvier 2023</span>
       
     
   </small>
