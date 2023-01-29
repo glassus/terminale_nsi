@@ -238,15 +238,16 @@ En effet, les simples chaînes de caractères peuvent aussi être transformées 
 
 ![](data/md5.png){: .center}
 
-Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !
+Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !!!
 
 
 **Stockage des mots de passe sur un serveur**
 
 Les sites qui nécessitent une authentification par login / mot de passe ne conservent pas en clair les mots de passe sur leur serveur. La moindre compromission de leur serveur serait en effet dramatique. Ce qui est conservé est l'empreinte du mot de passe après son passage par une fonction de hachage.  
 Par exemple, un site où notre mot de passe serait ```vive la NSI``` conserverait dans ses bases de données l'empreinte ```e74fb2f94c052bbf16cea4a795145e35```.  
-À chaque saisie du mot de passe côté client, l'empreinte est recalculée (toujours côté client, afin de ne pas faire transiter le mot de passe en clair), puis comparée au niveau du serveur avec l'empreinte stockée. 
-De cette façon, si les communications entre le client et le serveur sont interceptées, ou bien si le serveur est compromis, le non-réversibilité de la fonction de hachage assure que le mot de passe ne peut pas être retrouvé par les attaquants.
+À chaque saisie du mot de passe côté client, l'empreinte est recalculée (côté serveur), puis comparée avec l'empreinte stockée. 
+Lors du transit du mot de passe, le chiffrement effectué par le protocole ```https``` assure la protection en cas d'interception.
+De cette façon, si le serveur est compromis, le non-réversibilité de la fonction de hachage assure que le mot de passe ne peut pas être retrouvé par les attaquants.
 
 **Non-réversibilité de la fonction de hachage, vraiment ?** 
 
@@ -354,6 +355,3 @@ print(id(a))
 
 
 Un variable contenant un entier est donc un objet **immuable** car si on modifie la valeur de l'entier, la référence de la variable changera aussi. Comme un dictionnaire a besoin d'avoir des clés dont les références soient définitives, seuls les objets **immuables** peuvent donc servir de clés dans les dictionnaires.
-
-
-[Lien vers la correction du DS sur les dictionnaires (Capytale)](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f6f-290099)
