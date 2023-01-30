@@ -1,7 +1,8 @@
 
 
 !!! abstract "Actualités"
-    - :new: page sur l'orientation post-bac :new: à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
+    - :star: :star: :star: les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
+    - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
     - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
 
 
