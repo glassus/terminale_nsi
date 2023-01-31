@@ -183,7 +183,7 @@ On remarque donc que le temps moyen est remarquablement **constant**. Il ne dép
     Il y a donc une différence fondamentale à connaître entre les temps de recherche d'un éléments à l'intérieur :
 
     - d'une **liste** : temps **proportionnel** à la taille de la liste.
-    - d'un **dictionnaire** : temps **constant**, indépendant de la taille de la liste.
+    - d'un **dictionnaire** : temps **constant**, indépendant de la taille du dictionnaire.
 
 
 Attention : en ce qui concerne **les temps d'accès** à un élément, la structure de tableau dynamique des listes de Python fait que ce temps d'accès est aussi en temps constant (comme pour les dictionnaires). On voit alors que les listes Python ne sont pas des *listes chaînées*, où le temps d'accès à un élément est directement proportionnel à la position de cet élément dans la liste.
