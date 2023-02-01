@@ -24,158 +24,54 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
 
 ## 1. Dictionnaire et temps d'accès aux données 
 
-!!! aide "TP : protocole de test pour comparer les temps d'accès aux données."
-    **Indication :** on utilisera la fonction ```time.time()``` (après avoir importé le module ```time```) qui donne le nombre de secondes (à $10^{-7}$ près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée [Heure Unix](https://fr.wikipedia.org/wiki/Heure_Unix) ou [Temps Posix](https://fr.wikipedia.org/wiki/Heure_Unix)).
-    ```python
-    >>> import time
-    >>> time.time()
-    1639001177.0923798
-    ```
+Observons le code suivant :
 
+```python linenums='1'
+import time
 
-
-
-### 1.1 Préparation des mesures
-
-Considérons deux fonctions ```fabrique_liste()``` et ```fabrique_dict()``` capables de fabriquer respectivement des listes et des dictionnaires de taille donnée en paramètre.
-
-
-```python
 def fabrique_liste(nb):
-    lst = [k**2 for k in range(nb)]
+    lst = [k for k in range(nb)]
     return lst
 
 def fabrique_dict(nb):
     dct = {}
     for k in fabrique_liste(nb):
-        dct[k] = 42
+        dct[k] = k
     return dct
+
+def mesures(nb):
+    lst = fabrique_liste(nb)
+    d = fabrique_dict(nb)
+    
+    tps_total = 0
+    for _ in range(10):
+        t0 = time.time()
+        test = 'a' in lst # on cherche une donnée inexistante
+        delta_t = time.time() - t0
+        tps_total += delta_t
+    tps_moyen_lst = tps_total / 10
+
+    tps_total = 0
+    for _ in range(10):
+        t0 = time.time()
+        test = 'a' in d # on cherche une donnée inexistante
+        delta_t = time.time() - t0
+        tps_total += delta_t
+    tps_moyen_d = tps_total / 10
+    
+    print(f"temps pour liste de taille {nb}           : {tps_moyen_lst}")
+    print(f"temps pour un dictionnaire de taille {nb} : {tps_moyen_d}")
 ```
 
+La fonction ```mesures``` prend en paramètre un nombre ```nb``` qui sera la taille de la liste ou du dictionnaire.  
+Dans le corps de cette fonction, la liste ```lst``` et le dictionnaire ```d``` sont fabriqués *avant le commencement de la mesure du temps*.  
+La liste ```lst``` contient des nombres (de `1` à ```nb```), et le dictionnaire ```d``` associe à un nombre (de `1` à ```nb```) sa propre valeur.
 
-```python
->>> lst = fabrique_liste(10)
->>> dct = fabrique_dict(10)
->>> lst
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
->>> dct
-{0: 42, 1: 42, 4: 42, 9: 42, 16: 42, 25: 42, 36: 42, 49: 42, 64: 42, 81: 42}
-```
-
-Le contenu de ces listes ou dictionnaires n'a pas grand intérêt. Dans nos mesures, on y cherchera une valeur qui n'y figure pas : la chaîne de caractères ```"a"```. On dit qu'on se place dans **le pire des cas**.
-
-### 1.2 Mesures des temps de recherche
+Dans ces deux structures, nous allons partir à la recherche d'une valeur qui n'a aucune chance de s'y trouver : la chaine de caractères ```'a'```.
 
 
-#### 1.2.1 Temps de recherche pour les listes
+10 fois de suite (pour avoir un temps moyen le plus juste possible), on va donc mesurer le temps mis pour chercher la chaine ```'a'```, qui n'est présente ni dans la liste ```lst``` ni dans le dictionnaire ```d```. On mesure donc une recherche dans **le pire des cas**.
 
-
-- avec 10 valeurs :
-
-
-```python
-lst = fabrique_liste(10)
-```
-
-
-```python
-%timeit "a" in lst
-```
-
-    138 ns ± 0.054 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-
-Nous sommes donc à l'ordre de grandeur $100 \times 10^{-9}$, soit $10^{-7}$ secondes.
-
-- avec 100 valeurs :
-
-
-```python
-lst = fabrique_liste(100)
-```
-
-
-```python
-%timeit "a" in lst
-```
-
-    1.11 µs ± 1.54 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-
-
-Nous sommes donc à l'ordre de grandeur $1 \times 10^{-6}$, soit $10^{-6}$ secondes.
-
-- avec 1000 valeurs :
-
-
-```python
-lst = fabrique_liste(1000)
-```
-
-
-```python
-%timeit "a" in lst
-```
-
-    11.2 µs ± 41.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
-
-
-Nous sommes donc à l'ordre de grandeur $10 \times 10^{-6}$, soit $10^{-5}$ secondes.
-
-**Conclusion** : le temps de recherche d'une valeur dans une **liste** est directement **proportionnel** à la longueur de cette liste. On dit qu'il est linéaire, ou bien qu'il est en $O(n)$.
-
-#### 1.2.2 Temps de recherche pour les dictionnaires
-On va rechercher si ```"a"``` est une clé valide pour notre dictionnaire.
-
-- avec 10 valeurs :
-
-
-```python
-dct = fabrique_dict(10)
-```
-
-
-```python
-%timeit "a" in dct
-```
-
-    31.2 ns ± 0.221 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-
-Nous sommes donc à l'ordre de grandeur $10 \times 10^{-9}$, soit $10^{-8}$ secondes.
-
-- avec 100 valeurs :
-
-
-```python
-dct = fabrique_dict(100)
-```
-
-
-```python
-%timeit "a" in dct
-```
-
-    31.2 ns ± 0.233 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-
-Nous sommes donc toujours à l'ordre de grandeur $10 \times 10^{-9}$, soit $10^{-8}$ secondes.
-
-- avec 10000 valeurs :
-
-
-```python
-dct = fabrique_dict(10000)
-```
-
-
-```python
-%timeit "a" in dct
-```
-
-    33.9 ns ± 0.168 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-
-On retrouve avec 10000 valeurs le même temps de recherche qu'avec 10 valeurs.
 
 On remarque donc que le temps moyen est remarquablement **constant**. Il ne dépend pas du nombre d'éléments du dictionnaire dans lequel on cherche. On dit qu'il est en $O(1)$.
 
