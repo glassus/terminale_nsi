@@ -644,20 +644,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-preparation-des-mesures" class="md-nav__link">
-    1.1 Préparation des mesures
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-mesures-des-temps-de-recherche" class="md-nav__link">
-    1.2 Mesures des temps de recherche
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#13-fonctions-de-hachage-hors-programme" class="md-nav__link">
     1.3 Fonctions de hachage  (hors-programme)
   </a>
@@ -2627,99 +2613,80 @@
 </ul>
 <p>En Python, le <strong>dictionnaire</strong> est une structure native de tableau associatif.</p>
 <h2 id="1-dictionnaire-et-temps-dacces-aux-donnees">1. Dictionnaire et temps d'accès aux données<a class="headerlink" href="#1-dictionnaire-et-temps-dacces-aux-donnees" title="Permanent link">⚓︎</a></h2>
-<div class="admonition aide">
-<p class="admonition-title">TP : protocole de test pour comparer les temps d'accès aux données.</p>
-<p><strong>Indication :</strong> on utilisera la fonction <code>time.time()</code> (après avoir importé le module <code>time</code>) qui donne le nombre de secondes (à <span class="arithmatex">\(10^{-7}\)</span> près) écoulées depuis le 01 janvier 1970 à 00h00 (appelée <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Heure Unix</a> ou <a href="https://fr.wikipedia.org/wiki/Heure_Unix">Temps Posix</a>).
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="mf">1639001177.0923798</span>
-</code></pre></div></p>
-</div>
-<h3 id="11-preparation-des-mesures">1.1 Préparation des mesures<a class="headerlink" href="#11-preparation-des-mesures" title="Permanent link">⚓︎</a></h3>
-<p>Considérons deux fonctions <code>fabrique_liste()</code> et <code>fabrique_dict()</code> capables de fabriquer respectivement des listes et des dictionnaires de taille donnée en paramètre.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
+<p>Observons le code suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">lst</span>
 
 <span class="k">def</span> <span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">dct</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-        <span class="n">dct</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+        <span class="n">dct</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
     <span class="k">return</span> <span class="n">dct</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dct</span>
-<span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">36</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">49</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">64</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">81</span><span class="p">:</span> <span class="mi">42</span><span class="p">}</span>
-</code></pre></div>
-<p>Le contenu de ces listes ou dictionnaires n'a pas grand intérêt. Dans nos mesures, on y cherchera une valeur qui n'y figure pas : la chaîne de caractères <code>"a"</code>. On dit qu'on se place dans <strong>le pire des cas</strong>.</p>
-<h3 id="12-mesures-des-temps-de-recherche">1.2 Mesures des temps de recherche<a class="headerlink" href="#12-mesures-des-temps-de-recherche" title="Permanent link">⚓︎</a></h3>
-<h4 id="121-temps-de-recherche-pour-les-listes">1.2.1 Temps de recherche pour les listes<a class="headerlink" href="#121-temps-de-recherche-pour-les-listes" title="Permanent link">⚓︎</a></h4>
-<ul>
-<li>avec 10 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>138 ns ± 0.054 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-</code></pre></div>
-<p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(100 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-7}\)</span> secondes.</p>
-<ul>
-<li>avec 100 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>1.11 µs ± 1.54 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-</code></pre></div>
-<p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(1 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-6}\)</span> secondes.</p>
-<ul>
-<li>avec 1000 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">lst</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>11.2 µs ± 41.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
-</code></pre></div>
-<p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-6}\)</span>, soit <span class="arithmatex">\(10^{-5}\)</span> secondes.</p>
-<p><strong>Conclusion</strong> : le temps de recherche d'une valeur dans une <strong>liste</strong> est directement <strong>proportionnel</strong> à la longueur de cette liste. On dit qu'il est linéaire, ou bien qu'il est en <span class="arithmatex">\(O(n)\)</span>.</p>
-<h4 id="122-temps-de-recherche-pour-les-dictionnaires">1.2.2 Temps de recherche pour les dictionnaires<a class="headerlink" href="#122-temps-de-recherche-pour-les-dictionnaires" title="Permanent link">⚓︎</a></h4>
-<p>On va rechercher si <code>"a"</code> est une clé valide pour notre dictionnaire.</p>
-<ul>
-<li>avec 10 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>31.2 ns ± 0.221 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-</code></pre></div>
-<p>Nous sommes donc à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-8}\)</span> secondes.</p>
-<ul>
-<li>avec 100 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>31.2 ns ± 0.233 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-</code></pre></div>
-<p>Nous sommes donc toujours à l'ordre de grandeur <span class="arithmatex">\(10 \times 10^{-9}\)</span>, soit <span class="arithmatex">\(10^{-8}\)</span> secondes.</p>
-<ul>
-<li>avec 10000 valeurs :</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">dct</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">dct</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>33.9 ns ± 0.168 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-</code></pre></div>
-<p>On retrouve avec 10000 valeurs le même temps de recherche qu'avec 10 valeurs.</p>
+
+<span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+
+    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
+    <span class="n">tps_moyen_lst</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
+
+    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
+    <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2">           : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>La fonction <code>mesures</code> prend en paramètre un nombre <code>nb</code> qui sera la taille de la liste ou du dictionnaire.<br />
+Dans le corps de cette fonction, la liste <code>lst</code> et le dictionnaire <code>d</code> sont fabriqués <em>avant le commencement de la mesure du temps</em>.<br />
+La liste <code>lst</code> contient des nombres (de <code>1</code> à <code>nb</code>), et le dictionnaire <code>d</code> associe à un nombre (de <code>1</code> à <code>nb</code>) sa propre valeur.</p>
+<p>Dans ces deux structures, nous allons partir à la recherche d'une valeur qui n'a aucune chance de s'y trouver : la chaine de caractères <code>'a'</code>.</p>
+<p>10 fois de suite (pour avoir un temps moyen le plus juste possible), on va donc mesurer le temps mis pour chercher la chaine <code>'a'</code>, qui n'est présente ni dans la liste <code>lst</code> ni dans le dictionnaire <code>d</code>. On mesure donc une recherche dans <strong>le pire des cas</strong>.</p>
 <p>On remarque donc que le temps moyen est remarquablement <strong>constant</strong>. Il ne dépend pas du nombre d'éléments du dictionnaire dans lequel on cherche. On dit qu'il est en <span class="arithmatex">\(O(1)\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Temps de recherche <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
@@ -2839,7 +2806,7 @@ TypeError: unhashable type: &#39;list&#39;
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">31 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 février 2023</span>
       
     
   </small>
