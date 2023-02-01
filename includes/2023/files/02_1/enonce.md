@@ -1,4 +1,4 @@
-Écrire une fonction `indices_maxi` qui prend qui prend en paramètre une liste `tab`, non vide, de
+Écrire une fonction `indices_maxi` qui prend en paramètre une liste `tab`, non vide, de
 nombres entiers et renvoie un couple donnant d’une part le plus grand élément de cette
 liste et d’autre part la liste des indices de la liste `tab` où apparaît ce plus grand élément.
 
