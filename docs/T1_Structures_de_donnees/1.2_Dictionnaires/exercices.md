@@ -1,4 +1,4 @@
-# Création d'une rainbow table :rainbow:
+# Exercice : création d'une rainbow table :rainbow:
 
 **Objectif** :
 
