@@ -250,7 +250,6 @@ L'idée essentielle est que chaque clé est hachée pour donner une empreinte un
 
 Le dictionnaire :
 
-
 ```python
 d = {"pommes":3, "poires":0, "bananes":5}
 ```
