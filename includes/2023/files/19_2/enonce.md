@@ -24,7 +24,7 @@ def cesar(message, decalage):
             resultat = resultat + ALPHABET[indice]
         else:
             resultat = ...
-        return resultat
+    return resultat
 ```
 
 Compléter la fonction ```cesar```.
