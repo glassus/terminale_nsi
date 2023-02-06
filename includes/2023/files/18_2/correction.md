@@ -4,7 +4,7 @@ def est_un_ordre(tab):
     Renvoie True si tab est de longueur n et contient tous les entiers
     de 1 à n, False sinon
     '''
-    for i in range(1,len(tab)):
+    for i in range(1, len(tab)+1):
         if i not in tab:
             return False
     return True
