@@ -4,7 +4,7 @@ def ajoute(cle, a):
         a = ABR(None, cle, None)
     elif cle > a.cle:
         a.droit = ajoute(cle, a.droit)
-    else:
+    elif cle < a.cle:
         a.gauche = ajoute(cle, a.gauche)
     return a
 ```
