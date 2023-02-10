@@ -1,4 +1,4 @@
-```python linenums='1' hl_lines='10 12'16'
+```python linenums='1' hl_lines='10 12 16 17'
 def dichotomie(tab, x):
     """
     tab : tableau d’entiers trié dans l’ordre croissant

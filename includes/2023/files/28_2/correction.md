@@ -6,7 +6,7 @@ def dichotomie(tab, x):
     La fonction renvoie True si tab contient x et False sinon
     """
     # cas du tableau vide
-    if tab = []:
+    if tab == []:
         return False, 1
 
     # cas où x n'est pas compris entre les valeurs extrêmes

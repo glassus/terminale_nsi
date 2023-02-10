@@ -1,9 +1,9 @@
 ```python linenums='1'
-def liste_puissances(a, n):
-    lst = [a]*n
-    for i in range(1, n):
-        lst[i] = a * lst[i-1]
-    return lst
+def liste_puissances(a,n):
+    puissances = [a]
+    for i in range(n-1):
+        puissances.append(puissances[-1] * a)
+    return puissances
 
 def liste_puissances_borne(a, borne):
     lst = []
