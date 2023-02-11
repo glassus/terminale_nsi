@@ -1,5 +1,29 @@
+# Épreuve Pratique BNS 2023
 
-### Exercice 01.1
+
+
+Les sujets ci-dessous correspondent à la dernière version officielle, publiée le **25/01/2023**.  
+Pour signaler des erreurs éventuelles : `gilles.lassus@ac-bordeaux.fr`  
+*(merci à Rémi Vanicat, Pierre Mouriès, Cyrille Jochault, Vincent Bruneau, Tristan Bringuier)*
+
+:arrow_down: **Téléchargements**
+
+- Une archive contenant les 45 dossiers (contenant chacun les deux fichiers ```.pdf``` et ```.py```) : [BNS_2023.zip](data2023/BNS_2023.zip){. target="_blank"} (2,9 Mo)
+- Un pdf unique de tous les sujets : [BNS_2023_pdf_unique.pdf](data2023/BNS_2023_pdf_unique.pdf){. target="_blank"} (3,2 Mo)
+
+
+<!-- !!! info ":star: Pourquoi proposer une correction ? :star:" 
+    - La BNS  est une banque de sujets **publique**, publiée bien en amont de l'Épreuve Pratique, afin que les futurs candidats puissent s'entraîner à la résolution des exercices.  
+    - Pour que **mes** élèves puissent travailler en autonomie, une proposition de corrigé figure en regard de l'énoncé.
+    - Pour que d'autres puissent aussi travailler ces sujets et ces corrigés, éventuellement me signaler des erreurs, les corriger, et les partager à leur tour, ces corrections sont accessibles **à tous**.  -->
+
+
+
+## ▶ Sujet 01
+
+[Version originale du sujet](pdf2023/23-NSI-01.pdf){. target = "_blank"} en pdf.
+
+### Exercice 01.1 
 !!! example "Exercice 01.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/01_1/enonce.md"
@@ -9,11 +33,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/01_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 01.2
+### Exercice 01.2 
 !!! example "Exercice 01.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/01_2/enonce.md"
@@ -25,10 +47,12 @@
         ```md
         --8<-- "includes/2023/files/01_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-01.py)XXX
-    
-### Exercice 02.1
+        
+## ▶ Sujet 02
+
+[Version originale du sujet](pdf2023/23-NSI-02.pdf){. target = "_blank"} en pdf.
+
+### Exercice 02.1 
 !!! example "Exercice 02.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/02_1/enonce.md"
@@ -38,11 +62,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/02_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 02.2
+### Exercice 02.2 
 !!! example "Exercice 02.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/02_2/enonce.md"
@@ -54,10 +76,12 @@
         ```md
         --8<-- "includes/2023/files/02_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-02.py)XXX
-    
-### Exercice 03.1
+        
+## ▶ Sujet 03
+
+[Version originale du sujet](pdf2023/23-NSI-03.pdf){. target = "_blank"} en pdf.
+
+### Exercice 03.1 
 !!! example "Exercice 03.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/03_1/enonce.md"
@@ -67,11 +91,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/03_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 03.2
+### Exercice 03.2 
 !!! example "Exercice 03.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/03_2/enonce.md"
@@ -83,10 +105,12 @@
         ```md
         --8<-- "includes/2023/files/03_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-03.py)XXX
-    
-### Exercice 04.1
+        
+## ▶ Sujet 04
+
+[Version originale du sujet](pdf2023/23-NSI-04.pdf){. target = "_blank"} en pdf.
+
+### Exercice 04.1 
 !!! example "Exercice 04.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/04_1/enonce.md"
@@ -96,11 +120,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/04_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 04.2
+### Exercice 04.2 
 !!! example "Exercice 04.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/04_2/enonce.md"
@@ -112,10 +134,12 @@
         ```md
         --8<-- "includes/2023/files/04_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-04.py)XXX
-    
-### Exercice 05.1
+        
+## ▶ Sujet 05
+
+[Version originale du sujet](pdf2023/23-NSI-05.pdf){. target = "_blank"} en pdf.
+
+### Exercice 05.1 
 !!! example "Exercice 05.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/05_1/enonce.md"
@@ -125,11 +149,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/05_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 05.2
+### Exercice 05.2 
 !!! example "Exercice 05.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/05_2/enonce.md"
@@ -141,10 +163,12 @@
         ```md
         --8<-- "includes/2023/files/05_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-05.py)XXX
-    
-### Exercice 06.1
+        
+## ▶ Sujet 06
+
+[Version originale du sujet](pdf2023/23-NSI-06.pdf){. target = "_blank"} en pdf.
+
+### Exercice 06.1 
 !!! example "Exercice 06.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/06_1/enonce.md"
@@ -154,11 +178,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/06_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 06.2
+### Exercice 06.2 
 !!! example "Exercice 06.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/06_2/enonce.md"
@@ -170,10 +192,12 @@
         ```md
         --8<-- "includes/2023/files/06_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-06.py)XXX
-    
-### Exercice 07.1
+        
+## ▶ Sujet 07
+
+[Version originale du sujet](pdf2023/23-NSI-07.pdf){. target = "_blank"} en pdf.
+
+### Exercice 07.1 
 !!! example "Exercice 07.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/07_1/enonce.md"
@@ -183,11 +207,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/07_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 07.2
+### Exercice 07.2 
 !!! example "Exercice 07.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/07_2/enonce.md"
@@ -199,10 +221,12 @@
         ```md
         --8<-- "includes/2023/files/07_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-07.py)XXX
-    
-### Exercice 08.1
+        
+## ▶ Sujet 08
+
+[Version originale du sujet](pdf2023/23-NSI-08.pdf){. target = "_blank"} en pdf.
+
+### Exercice 08.1 
 !!! example "Exercice 08.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/08_1/enonce.md"
@@ -212,11 +236,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/08_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 08.2
+### Exercice 08.2 
 !!! example "Exercice 08.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/08_2/enonce.md"
@@ -228,10 +250,12 @@
         ```md
         --8<-- "includes/2023/files/08_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-08.py)XXX
-    
-### Exercice 09.1
+        
+## ▶ Sujet 09
+
+[Version originale du sujet](pdf2023/23-NSI-09.pdf){. target = "_blank"} en pdf.
+
+### Exercice 09.1 
 !!! example "Exercice 09.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/09_1/enonce.md"
@@ -241,11 +265,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/09_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 09.2
+### Exercice 09.2 
 !!! example "Exercice 09.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/09_2/enonce.md"
@@ -257,10 +279,12 @@
         ```md
         --8<-- "includes/2023/files/09_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-09.py)XXX
-    
-### Exercice 10.1
+        
+## ▶ Sujet 10
+
+[Version originale du sujet](pdf2023/23-NSI-10.pdf){. target = "_blank"} en pdf.
+
+### Exercice 10.1 
 !!! example "Exercice 10.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/10_1/enonce.md"
@@ -270,11 +294,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/10_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 10.2
+### Exercice 10.2 
 !!! example "Exercice 10.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/10_2/enonce.md"
@@ -286,10 +308,12 @@
         ```md
         --8<-- "includes/2023/files/10_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-10.py)XXX
-    
-### Exercice 11.1
+        
+## ▶ Sujet 11
+
+[Version originale du sujet](pdf2023/23-NSI-11.pdf){. target = "_blank"} en pdf.
+
+### Exercice 11.1 
 !!! example "Exercice 11.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/11_1/enonce.md"
@@ -299,11 +323,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/11_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 11.2
+### Exercice 11.2 
 !!! example "Exercice 11.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/11_2/enonce.md"
@@ -315,10 +337,12 @@
         ```md
         --8<-- "includes/2023/files/11_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-11.py)XXX
-    
-### Exercice 12.1
+        
+## ▶ Sujet 12
+
+[Version originale du sujet](pdf2023/23-NSI-12.pdf){. target = "_blank"} en pdf.
+
+### Exercice 12.1 
 !!! example "Exercice 12.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/12_1/enonce.md"
@@ -328,11 +352,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/12_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 12.2
+### Exercice 12.2 
 !!! example "Exercice 12.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/12_2/enonce.md"
@@ -344,10 +366,12 @@
         ```md
         --8<-- "includes/2023/files/12_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-12.py)XXX
-    
-### Exercice 13.1
+        
+## ▶ Sujet 13
+
+[Version originale du sujet](pdf2023/23-NSI-13.pdf){. target = "_blank"} en pdf.
+
+### Exercice 13.1 
 !!! example "Exercice 13.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/13_1/enonce.md"
@@ -357,11 +381,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/13_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 13.2
+### Exercice 13.2 
 !!! example "Exercice 13.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/13_2/enonce.md"
@@ -373,10 +395,12 @@
         ```md
         --8<-- "includes/2023/files/13_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-13.py)XXX
-    
-### Exercice 14.1
+        
+## ▶ Sujet 14
+
+[Version originale du sujet](pdf2023/23-NSI-14.pdf){. target = "_blank"} en pdf.
+
+### Exercice 14.1 
 !!! example "Exercice 14.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/14_1/enonce.md"
@@ -386,11 +410,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/14_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 14.2
+### Exercice 14.2 
 !!! example "Exercice 14.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/14_2/enonce.md"
@@ -402,10 +424,12 @@
         ```md
         --8<-- "includes/2023/files/14_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-14.py)XXX
-    
-### Exercice 15.1
+        
+## ▶ Sujet 15
+
+[Version originale du sujet](pdf2023/23-NSI-15.pdf){. target = "_blank"} en pdf.
+
+### Exercice 15.1 
 !!! example "Exercice 15.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/15_1/enonce.md"
@@ -415,11 +439,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/15_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 15.2
+### Exercice 15.2 
 !!! example "Exercice 15.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/15_2/enonce.md"
@@ -431,10 +453,12 @@
         ```md
         --8<-- "includes/2023/files/15_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-15.py)XXX
-    
-### Exercice 16.1
+        
+## ▶ Sujet 16
+
+[Version originale du sujet](pdf2023/23-NSI-16.pdf){. target = "_blank"} en pdf.
+
+### Exercice 16.1 
 !!! example "Exercice 16.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/16_1/enonce.md"
@@ -444,11 +468,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/16_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 16.2
+### Exercice 16.2 
 !!! example "Exercice 16.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/16_2/enonce.md"
@@ -460,10 +482,12 @@
         ```md
         --8<-- "includes/2023/files/16_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-16.py)XXX
-    
-### Exercice 17.1
+        
+## ▶ Sujet 17
+
+[Version originale du sujet](pdf2023/23-NSI-17.pdf){. target = "_blank"} en pdf.
+
+### Exercice 17.1 
 !!! example "Exercice 17.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/17_1/enonce.md"
@@ -473,11 +497,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/17_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 17.2
+### Exercice 17.2 
 !!! example "Exercice 17.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/17_2/enonce.md"
@@ -489,10 +511,12 @@
         ```md
         --8<-- "includes/2023/files/17_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-17.py)XXX
-    
-### Exercice 18.1
+        
+## ▶ Sujet 18
+
+[Version originale du sujet](pdf2023/23-NSI-18.pdf){. target = "_blank"} en pdf.
+
+### Exercice 18.1 
 !!! example "Exercice 18.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/18_1/enonce.md"
@@ -502,11 +526,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/18_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 18.2
+### Exercice 18.2 
 !!! example "Exercice 18.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/18_2/enonce.md"
@@ -518,10 +540,12 @@
         ```md
         --8<-- "includes/2023/files/18_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-18.py)XXX
-    
-### Exercice 19.1
+        
+## ▶ Sujet 19
+
+[Version originale du sujet](pdf2023/23-NSI-19.pdf){. target = "_blank"} en pdf.
+
+### Exercice 19.1 
 !!! example "Exercice 19.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/19_1/enonce.md"
@@ -531,11 +555,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/19_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 19.2
+### Exercice 19.2 
 !!! example "Exercice 19.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/19_2/enonce.md"
@@ -547,10 +569,12 @@
         ```md
         --8<-- "includes/2023/files/19_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-19.py)XXX
-    
-### Exercice 20.1
+        
+## ▶ Sujet 20
+
+[Version originale du sujet](pdf2023/23-NSI-20.pdf){. target = "_blank"} en pdf.
+
+### Exercice 20.1 
 !!! example "Exercice 20.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/20_1/enonce.md"
@@ -560,11 +584,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/20_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 20.2
+### Exercice 20.2 
 !!! example "Exercice 20.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/20_2/enonce.md"
@@ -576,10 +598,12 @@
         ```md
         --8<-- "includes/2023/files/20_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-20.py)XXX
-    
-### Exercice 21.1
+        
+## ▶ Sujet 21
+
+[Version originale du sujet](pdf2023/23-NSI-21.pdf){. target = "_blank"} en pdf.
+
+### Exercice 21.1 
 !!! example "Exercice 21.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/21_1/enonce.md"
@@ -589,11 +613,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/21_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 21.2
+### Exercice 21.2 
 !!! example "Exercice 21.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/21_2/enonce.md"
@@ -605,10 +627,12 @@
         ```md
         --8<-- "includes/2023/files/21_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-21.py)XXX
-    
-### Exercice 22.1
+        
+## ▶ Sujet 22
+
+[Version originale du sujet](pdf2023/23-NSI-22.pdf){. target = "_blank"} en pdf.
+
+### Exercice 22.1 
 !!! example "Exercice 22.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/22_1/enonce.md"
@@ -618,11 +642,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/22_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 22.2
+### Exercice 22.2 
 !!! example "Exercice 22.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/22_2/enonce.md"
@@ -634,10 +656,12 @@
         ```md
         --8<-- "includes/2023/files/22_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-22.py)XXX
-    
-### Exercice 23.1
+        
+## ▶ Sujet 23
+
+[Version originale du sujet](pdf2023/23-NSI-23.pdf){. target = "_blank"} en pdf.
+
+### Exercice 23.1 
 !!! example "Exercice 23.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/23_1/enonce.md"
@@ -647,11 +671,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/23_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 23.2
+### Exercice 23.2 
 !!! example "Exercice 23.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/23_2/enonce.md"
@@ -663,10 +685,12 @@
         ```md
         --8<-- "includes/2023/files/23_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-23.py)XXX
-    
-### Exercice 24.1
+        
+## ▶ Sujet 24
+
+[Version originale du sujet](pdf2023/23-NSI-24.pdf){. target = "_blank"} en pdf.
+
+### Exercice 24.1 
 !!! example "Exercice 24.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/24_1/enonce.md"
@@ -676,11 +700,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/24_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 24.2
+### Exercice 24.2 
 !!! example "Exercice 24.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/24_2/enonce.md"
@@ -692,10 +714,12 @@
         ```md
         --8<-- "includes/2023/files/24_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-24.py)XXX
-    
-### Exercice 25.1
+        
+## ▶ Sujet 25
+
+[Version originale du sujet](pdf2023/23-NSI-25.pdf){. target = "_blank"} en pdf.
+
+### Exercice 25.1 
 !!! example "Exercice 25.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/25_1/enonce.md"
@@ -705,11 +729,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/25_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 25.2
+### Exercice 25.2 
 !!! example "Exercice 25.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/25_2/enonce.md"
@@ -721,10 +743,12 @@
         ```md
         --8<-- "includes/2023/files/25_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-25.py)XXX
-    
-### Exercice 26.1
+        
+## ▶ Sujet 26
+
+[Version originale du sujet](pdf2023/23-NSI-26.pdf){. target = "_blank"} en pdf.
+
+### Exercice 26.1 
 !!! example "Exercice 26.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/26_1/enonce.md"
@@ -734,11 +758,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/26_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 26.2
+### Exercice 26.2 
 !!! example "Exercice 26.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/26_2/enonce.md"
@@ -750,10 +772,12 @@
         ```md
         --8<-- "includes/2023/files/26_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-26.py)XXX
-    
-### Exercice 27.1
+        
+## ▶ Sujet 27
+
+[Version originale du sujet](pdf2023/23-NSI-27.pdf){. target = "_blank"} en pdf.
+
+### Exercice 27.1 
 !!! example "Exercice 27.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/27_1/enonce.md"
@@ -763,11 +787,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/27_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 27.2
+### Exercice 27.2 
 !!! example "Exercice 27.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/27_2/enonce.md"
@@ -779,10 +801,12 @@
         ```md
         --8<-- "includes/2023/files/27_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-27.py)XXX
-    
-### Exercice 28.1
+        
+## ▶ Sujet 28
+
+[Version originale du sujet](pdf2023/23-NSI-28.pdf){. target = "_blank"} en pdf.
+
+### Exercice 28.1 
 !!! example "Exercice 28.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/28_1/enonce.md"
@@ -792,11 +816,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/28_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 28.2
+### Exercice 28.2 
 !!! example "Exercice 28.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/28_2/enonce.md"
@@ -808,10 +830,12 @@
         ```md
         --8<-- "includes/2023/files/28_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-28.py)XXX
-    
-### Exercice 29.1
+        
+## ▶ Sujet 29
+
+[Version originale du sujet](pdf2023/23-NSI-29.pdf){. target = "_blank"} en pdf.
+
+### Exercice 29.1 
 !!! example "Exercice 29.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/29_1/enonce.md"
@@ -821,11 +845,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/29_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 29.2
+### Exercice 29.2 
 !!! example "Exercice 29.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/29_2/enonce.md"
@@ -837,10 +859,12 @@
         ```md
         --8<-- "includes/2023/files/29_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-29.py)XXX
-    
-### Exercice 30.1
+        
+## ▶ Sujet 30
+
+[Version originale du sujet](pdf2023/23-NSI-30.pdf){. target = "_blank"} en pdf.
+
+### Exercice 30.1 
 !!! example "Exercice 30.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/30_1/enonce.md"
@@ -850,11 +874,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/30_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 30.2
+### Exercice 30.2 
 !!! example "Exercice 30.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/30_2/enonce.md"
@@ -866,10 +888,12 @@
         ```md
         --8<-- "includes/2023/files/30_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-30.py)XXX
-    
-### Exercice 31.1
+        
+## ▶ Sujet 31
+
+[Version originale du sujet](pdf2023/23-NSI-31.pdf){. target = "_blank"} en pdf.
+
+### Exercice 31.1 
 !!! example "Exercice 31.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/31_1/enonce.md"
@@ -879,11 +903,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/31_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 31.2
+### Exercice 31.2 
 !!! example "Exercice 31.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/31_2/enonce.md"
@@ -895,10 +917,12 @@
         ```md
         --8<-- "includes/2023/files/31_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-31.py)XXX
-    
-### Exercice 32.1
+        
+## ▶ Sujet 32
+
+[Version originale du sujet](pdf2023/23-NSI-32.pdf){. target = "_blank"} en pdf.
+
+### Exercice 32.1 
 !!! example "Exercice 32.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/32_1/enonce.md"
@@ -908,11 +932,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/32_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 32.2
+### Exercice 32.2 
 !!! example "Exercice 32.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/32_2/enonce.md"
@@ -924,10 +946,12 @@
         ```md
         --8<-- "includes/2023/files/32_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-32.py)XXX
-    
-### Exercice 33.1
+        
+## ▶ Sujet 33
+
+[Version originale du sujet](pdf2023/23-NSI-33.pdf){. target = "_blank"} en pdf.
+
+### Exercice 33.1 
 !!! example "Exercice 33.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/33_1/enonce.md"
@@ -937,11 +961,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/33_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 33.2
+### Exercice 33.2 
 !!! example "Exercice 33.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/33_2/enonce.md"
@@ -953,10 +975,12 @@
         ```md
         --8<-- "includes/2023/files/33_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-33.py)XXX
-    
-### Exercice 34.1
+        
+## ▶ Sujet 34
+
+[Version originale du sujet](pdf2023/23-NSI-34.pdf){. target = "_blank"} en pdf.
+
+### Exercice 34.1 
 !!! example "Exercice 34.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/34_1/enonce.md"
@@ -966,11 +990,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/34_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 34.2
+### Exercice 34.2 
 !!! example "Exercice 34.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/34_2/enonce.md"
@@ -982,10 +1004,12 @@
         ```md
         --8<-- "includes/2023/files/34_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-34.py)XXX
-    
-### Exercice 35.1
+        
+## ▶ Sujet 35
+
+[Version originale du sujet](pdf2023/23-NSI-35.pdf){. target = "_blank"} en pdf.
+
+### Exercice 35.1 
 !!! example "Exercice 35.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/35_1/enonce.md"
@@ -995,11 +1019,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/35_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 35.2
+### Exercice 35.2 
 !!! example "Exercice 35.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/35_2/enonce.md"
@@ -1011,10 +1033,12 @@
         ```md
         --8<-- "includes/2023/files/35_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-35.py)XXX
-    
-### Exercice 36.1
+        
+## ▶ Sujet 36
+
+[Version originale du sujet](pdf2023/23-NSI-36.pdf){. target = "_blank"} en pdf.
+
+### Exercice 36.1 
 !!! example "Exercice 36.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/36_1/enonce.md"
@@ -1024,11 +1048,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/36_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 36.2
+### Exercice 36.2 
 !!! example "Exercice 36.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/36_2/enonce.md"
@@ -1040,10 +1062,12 @@
         ```md
         --8<-- "includes/2023/files/36_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-36.py)XXX
-    
-### Exercice 37.1
+        
+## ▶ Sujet 37
+
+[Version originale du sujet](pdf2023/23-NSI-37.pdf){. target = "_blank"} en pdf.
+
+### Exercice 37.1 
 !!! example "Exercice 37.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/37_1/enonce.md"
@@ -1053,11 +1077,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/37_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 37.2
+### Exercice 37.2 
 !!! example "Exercice 37.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/37_2/enonce.md"
@@ -1069,10 +1091,12 @@
         ```md
         --8<-- "includes/2023/files/37_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-37.py)XXX
-    
-### Exercice 38.1
+        
+## ▶ Sujet 38
+
+[Version originale du sujet](pdf2023/23-NSI-38.pdf){. target = "_blank"} en pdf.
+
+### Exercice 38.1 
 !!! example "Exercice 38.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/38_1/enonce.md"
@@ -1082,11 +1106,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/38_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 38.2
+### Exercice 38.2 
 !!! example "Exercice 38.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/38_2/enonce.md"
@@ -1098,10 +1120,12 @@
         ```md
         --8<-- "includes/2023/files/38_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-38.py)XXX
-    
-### Exercice 39.1
+        
+## ▶ Sujet 39
+
+[Version originale du sujet](pdf2023/23-NSI-39.pdf){. target = "_blank"} en pdf.
+
+### Exercice 39.1 
 !!! example "Exercice 39.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/39_1/enonce.md"
@@ -1111,11 +1135,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/39_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 39.2
+### Exercice 39.2 
 !!! example "Exercice 39.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/39_2/enonce.md"
@@ -1127,10 +1149,12 @@
         ```md
         --8<-- "includes/2023/files/39_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-39.py)XXX
-    
-### Exercice 40.1
+        
+## ▶ Sujet 40
+
+[Version originale du sujet](pdf2023/23-NSI-40.pdf){. target = "_blank"} en pdf.
+
+### Exercice 40.1 
 !!! example "Exercice 40.1"
     === "Énoncé" 
         --8<-- "includes/2023/files/40_1/enonce.md"
@@ -1140,11 +1164,9 @@
 
     === "Source Markdown"
             --8<-- "includes/2023/files/40_1/enonce.md"
-    
-    :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/)XXX
 
 
-### Exercice 40.2
+### Exercice 40.2 
 !!! example "Exercice 40.2"
     === "Énoncé" 
         --8<-- "includes/2023/files/40_2/enonce.md"
@@ -1156,6 +1178,150 @@
         ```md
         --8<-- "includes/2023/files/40_2/enonce.md"
         ```             
-          
-    :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/glassus/terminale_nsi/main/docs/T6_6_Epreuve_pratique/data2023/scripts/23-NSI-40.py)XXX
-    
+
+## ▶ Sujet 41
+
+[Version originale du sujet](pdf2023/23-NSI-41.pdf){. target = "_blank"} en pdf.
+
+### Exercice 41.1 
+!!! example "Exercice 41.1"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/41_1/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/41_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "includes/2023/files/41_1/enonce.md"
+
+
+### Exercice 41.2 
+!!! example "Exercice 41.2"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/41_2/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/41_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "includes/2023/files/41_2/enonce.md"
+        ```             
+        
+## ▶ Sujet 42
+
+[Version originale du sujet](pdf2023/23-NSI-42.pdf){. target = "_blank"} en pdf.
+
+### Exercice 42.1 
+!!! example "Exercice 42.1"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/42_1/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/42_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "includes/2023/files/42_1/enonce.md"
+
+
+### Exercice 42.2 
+!!! example "Exercice 42.2"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/42_2/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/42_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "includes/2023/files/42_2/enonce.md"
+        ```             
+        
+## ▶ Sujet 43
+
+[Version originale du sujet](pdf2023/23-NSI-43.pdf){. target = "_blank"} en pdf.
+
+### Exercice 43.1 
+!!! example "Exercice 43.1"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/43_1/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/43_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "includes/2023/files/43_1/enonce.md"
+
+
+### Exercice 43.2 
+!!! example "Exercice 43.2"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/43_2/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/43_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "includes/2023/files/43_2/enonce.md"
+        ```             
+        
+## ▶ Sujet 44
+
+[Version originale du sujet](pdf2023/23-NSI-44.pdf){. target = "_blank"} en pdf.
+
+### Exercice 44.1 
+!!! example "Exercice 44.1"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/44_1/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/44_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "includes/2023/files/44_1/enonce.md"
+
+
+### Exercice 44.2 
+!!! example "Exercice 44.2"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/44_2/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/44_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "includes/2023/files/44_2/enonce.md"
+        ```             
+        
+## ▶ Sujet 45
+
+[Version originale du sujet](pdf2023/23-NSI-45.pdf){. target = "_blank"} en pdf.
+
+### Exercice 45.1 
+!!! example "Exercice 45.1"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/45_1/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/45_1/correction.md"
+
+    === "Source Markdown"
+            --8<-- "includes/2023/files/45_1/enonce.md"
+
+
+### Exercice 45.2 
+!!! example "Exercice 45.2"
+    === "Énoncé" 
+        --8<-- "includes/2023/files/45_2/enonce.md"
+
+    === "Correction"
+        --8<-- "includes/2023/files/45_2/correction.md"
+
+    === "Sources Markdown"
+        ```md
+        --8<-- "includes/2023/files/45_2/enonce.md"
+        ```             
+
+
