@@ -1,6 +1,5 @@
 Écrire une fonction `min_et_max` qui prend en paramètre un tableau de nombres `tab` non vide, et qui renvoie la plus petite et la plus grande valeur du tableau sous la
-forme d’un dictionnaire à deux clés `min` et `max`. Les tableaux seront représentés sous
-forme de liste Python.
+forme d’un dictionnaire à deux clés `min` et `max`.
 
 Les tableaux seront représentés sous forme de liste Python.
 
