@@ -4,11 +4,11 @@ def est_cyclique(plan):
     Renvoie True si le plan d'envoi de messages est cyclique et False sinon.
     '''
     expediteur = 'A'
-    destinataire = plan[expediteur]
+    destinataire = plan[...]
     nb_destinaires = 1
     
-    while destinataire != expediteur:
-        destinataire = plan[destinataire]
-        nb_destinaires += 1
+    while destinataire != ...:
+        destinataire = plan[...]
+        nb_destinaires += ...
 
-    return nb_destinaires == len(plan)
+    return nb_destinaires == ...

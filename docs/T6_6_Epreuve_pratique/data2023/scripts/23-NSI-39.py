@@ -1,6 +1,12 @@
-def nombre_de_mots(phrase):
-    nb_mots = 0
-    for caractere in phrase:
-        if caractere == ' ' or caractere == '.':
-            nb_mots += 1
-    return nb_mots
+def pantheon(eleves, notes):
+    note_maxi = 0
+    meilleurs_eleves =  ...
+
+    for i in range(...) :
+        if notes[i] == ... :
+            meilleurs_eleves.append(...)
+        elif notes[i] > note_maxi:
+            note_maxi = ...
+            meilleurs_eleves = [...]
+
+    return (note_maxi,meilleurs_eleves)

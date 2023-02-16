@@ -1,13 +1,10 @@
-def ecriture_binaire_entier_positif(n):
-    # cas particulier pour n = 0
-    if n == 0:
-        return [0]
-    # cas général
-    b = []
-    bits = 0
-    while n != 0:
-        b.append(n % 2)
-        bits += 1
-        n = n // 2
-    b.reverse()
-    return b
+valeurs = [100, 50, 20, 10, 5, 2, 1]
+
+def rendu_glouton(a_rendre, rang):
+    if a_rendre == 0:
+        return ...
+    v = valeurs[rang]
+    if v <= ... :
+        return ... + rendu_glouton(a_rendre - v, rang)
+    else :
+        return rendu_glouton(a_rendre, ...)
