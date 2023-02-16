@@ -24,22 +24,22 @@ class Noeud:
     def inserer(self, cle):
         '''Méthode d'insertion de clé dans un arbre binaire de recherche
         Paramètre d'entrée : cle (int)'''
-        if cle < self.valeur:
+        if cle < ...:
             # on insère à gauche
             if self.gaucheExiste():
                 # on descend à gauche et on retente l'insertion de la clé
-                self.gauche.inserer(cle)
+                ...
             else:
                 # on crée un fils gauche
-                self.gauche = Noeud(cle)
-        elif cle > self.valeur:
+                self.gauche = ...
+        elif cle > ...:
             # on insère à droite
-            if self.droitExiste():
+            if ...:
                 # on descend à droite et on retente l'insertion de la clé
-                self.droit.inserer(cle)
+                ...
             else:
                 # on crée un fils droit
-                self.droit = Noeud(cle)
+                ... = Noeud(cle)
 
 arbre = Noeud(7)
 for cle in (3, 9, 1, 6):

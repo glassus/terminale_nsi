@@ -1,19 +1,19 @@
 def propager(M, i, j, val):
-    if M[i][j] == 1:
+    if M[i][j] == ...:
         M[i][j] = val
 
     # l'element en haut fait partie de la composante
-    if i-1 >= 0 and M[i-1][j] == 1:
+    if i-1 >= 0 and M[i-1][j] == ... :
         propager(M, i-1, j, val)
 
     # l'element en bas fait partie de la composante
-    if i+1 < len(M) and M[i+1][j] == 1:
-        propager(M, i+1, j, val)
+    if ... < len(M) and M[i+1][j] == 1:
+        propager(M, ..., j, val)
 
     # l'element à gauche fait partie de la composante
-    if j-1 and M[i][j-1] == 1:
-        propager(M, i, j-1, val)
+    if ... and M[i][j-1] == 1:
+        propager(M, ..., ..., val)
 
     # l'element à droite fait partie de la composante
-    if j+1 and M[i][j+1] == 1:
-        propager(M, i, j+1, val)
+    if ... and ... :
+        propager(..., ..., ..., ...)

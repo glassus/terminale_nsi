@@ -3793,7 +3793,7 @@
 <p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>25/01/2023</strong>.<br />
 Pour signaler des erreurs éventuelles : <code>gilles.lassus@ac-bordeaux.fr</code><br />
 <em>(merci à Rémi Vanicat, Pierre Mouriès, Cyrille Jochault, Vincent Bruneau, Tristan Bringuier)</em></p>
-<p><img alt="⬇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong></p>
+<p><img alt="⬇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>  </p>
 <ul>
 <li>Une archive contenant les 45 dossiers (contenant chacun les deux fichiers <code>.pdf</code> et <code>.py</code>) : <a class="" href="../data2023/BNS_2023.zip" target="_blank">BNS_2023.zip</a> (2,9 Mo)</li>
 <li>Un pdf unique de tous les sujets : <a class="" href="../data2023/BNS_2023_pdf_unique.pdf" target="_blank">BNS_2023_pdf_unique.pdf</a> (3,2 Mo) </li>
@@ -14294,18 +14294,14 @@ Soit <code>T=[5,2,4,10]</code>. Après <code>T.reverse()</code>, la liste devien
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># cas particulier pour n = 0</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="c1"># cas général</span>
     <span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">bits</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">bits</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="n">b</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">b</span>
@@ -14980,7 +14976,7 @@ nombre.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 février 2023</span>
       
     
   </small>
