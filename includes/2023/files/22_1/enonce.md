@@ -1,6 +1,6 @@
 On rappelle que :
 
-- le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n fois,
+- le nombre $a^n$ est le nombre $a \times a \times a \times \dots \times a$, où le facteur $a$ apparaît $n$ fois,
 - en langage Python, l’instruction `t[-1]` permet d’accéder au dernier élément du
 tableau `t`.
 

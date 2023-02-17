@@ -7,12 +7,13 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-    - [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
 
 
 ### *Thèmes déjà traités*
+- [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+- [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
+- [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
 - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
