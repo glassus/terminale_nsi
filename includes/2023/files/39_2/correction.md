@@ -8,7 +8,7 @@ def pantheon(eleves, notes):
             meilleurs_eleves.append(eleves[i])
         elif notes[i] > note_maxi:
             note_maxi = notes[i]
-            meilleurs_eleves = [i]
+            meilleurs_eleves = [eleves[i]]
 
     return (note_maxi, meilleurs_eleves)
 ```
