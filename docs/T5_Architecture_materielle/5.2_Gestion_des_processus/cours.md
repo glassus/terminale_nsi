@@ -58,7 +58,9 @@ On ferme ```top``` par la combinaison de touches ```Ctrl-C```.
 
 
 !!! info "Pourcentage d'utilisation du CPU"
-    En face de chaque processus est affichée sa consommation de CPU. Elle est calculée en prenant, sur un intervalle de temps donné, le temps qu'a passé le CPU à traiter le processus en question, et en divisant ce temps par le temps total de la mesure.
+    En face de chaque processus est affichée sa consommation de CPU. Elle est calculée en prenant, sur un intervalle de temps donné, le temps qu'a passé le CPU à traiter le processus en question, et en divisant ce temps par le temps total de la mesure. 
+
+    $$\text{Pourcentage d'utilisation CPU} = \frac{\text{Temps d'utilisation CPU}}{\text{Temps total écoulé}} \times 100$$
 
 Si on repère alors un processus qui consomme beaucoup trop de ressources, on peut utiliser...
 

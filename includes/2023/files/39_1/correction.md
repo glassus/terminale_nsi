@@ -2,8 +2,8 @@ Version récursive :
 
 ```python linenums='1'
 def fibonacci(n):
-    if n == 0 :
-        return 0   
+    if n == 1 :
+        return 1   
     elif n == 1 :
         return 1
     else :
@@ -13,9 +13,9 @@ def fibonacci(n):
 Version impérative :
 ```python linenums='1'
 def fibonacci(n):
-    a = 0
+    a = 1
     b = 1
-    for k in range(n-1):
+    for k in range(n-2):
         t = b
         b = a + b
         a = t
@@ -36,4 +36,6 @@ def fibonacci(n):
         d[k] = d[k-1] + d[k-2]
     return d[n]
 ```
+
+On peut constater que la version récursive échoue à calculer ```fibonacci(45)```, alors que les deux autres versions le font quasi-immédiatement. 
 
