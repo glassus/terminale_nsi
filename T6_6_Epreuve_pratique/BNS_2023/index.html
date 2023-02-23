@@ -3789,7 +3789,7 @@
 
 
 <h1 id="epreuve-pratique-bns-2023">Épreuve Pratique BNS 2023<a class="headerlink" href="#epreuve-pratique-bns-2023" title="Permanent link">⚓︎</a></h1>
-<p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>25/01/2023</strong>. <br />
+<p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>25/01/2023</strong>.  <br />
 Pour signaler des erreurs éventuelles : <code>gilles.lassus@ac-bordeaux.fr</code><br />
 <em>(merci à Rémi Vanicat, Pierre Mouriès, Cyrille Jochault, Vincent Bruneau, Tristan Bringuier)</em></p>
 <p><img alt="⬇" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>  </p>
@@ -13325,8 +13325,8 @@ strictement positif et qui renvoie le terme d’indice <code>n</code> de cette s
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>   
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>   
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span> <span class="p">:</span>
@@ -13341,9 +13341,9 @@ strictement positif et qui renvoie le terme d’indice <code>n</code> de cette s
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
         <span class="n">t</span> <span class="o">=</span> <span class="n">b</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">t</span>
@@ -13364,6 +13364,7 @@ strictement positif et qui renvoie le terme d’indice <code>n</code> de cette s
         <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">d</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
+<p>On peut constater que la version récursive échoue à calculer <code>fibonacci(45)</code>, alors que les deux autres versions le font quasi-immédiatement. </p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>On s’intéresse à la suite d’entiers définie par :
@@ -14975,7 +14976,7 @@ nombre.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 février 2023</span>
       
     
   </small>
