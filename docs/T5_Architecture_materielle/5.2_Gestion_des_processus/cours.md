@@ -56,6 +56,10 @@ La commande ```top``` permet de connaître en temps réel la liste des processus
 
 On ferme ```top``` par la combinaison de touches ```Ctrl-C```.
 
+
+!!! info "Pourcentage d'utilisation du CPU"
+    En face de chaque processus est affichée sa consommation de CPU. Elle est calculée en prenant, sur un intervalle de temps donné, le temps qu'a passé le CPU à traiter le processus en question, et en divisant ce temps par le temps total de la mesure.
+
 Si on repère alors un processus qui consomme beaucoup trop de ressources, on peut utiliser...
 
 ### 1.2.4 La commande ```kill``` 
