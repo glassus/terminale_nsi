@@ -1,7 +1,7 @@
 # Le modèle relationnel
-![](data/top.png)
+![](data/top.png){: .center}
 
-![](data/prog.png)
+![](data/prog.png){: .center}
 
 ## 0. De la nécessité d'organiser le stockage de ses données
 
@@ -91,6 +91,9 @@ Quant à l'attribut «Code», il s'agit sans doute d'une nomenclature «maison»
 
 :warning: **Attention** :warning:  
 Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».
+
+![image](data/meme_primary_key.png){: .center}
+
 
 ## 4. D'autres relations
 
