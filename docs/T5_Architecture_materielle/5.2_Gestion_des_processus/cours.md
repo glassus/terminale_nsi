@@ -179,12 +179,19 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 - **Élu** : il est en cours d'exécution par le processeur.
 - **Bloqué** : pendant son exécution (état **Élu**), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état **Prêt** et attendra à nouveau son tour. 
 
+Voici les transitions possibles entre ces états (diagramme de Sylvain Melot) : 
 
-![image](data/cycle.png){: .center}
+
+![image](data/etats_process.png){: .center}
 
 On peut utiliser la métaphore suivante :
 
-> Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés. Si le professeur ramène devant lui le paquet A, celui-ci devient **Élu**, et le professeur peut commencer à le corriger. Pour se changer les idées, il peut interrompre la correction du paquet A (qui va passer à l'état **Bloqué**) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors **Terminés**.    
+Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés.
+
+- Si le professeur ramène devant lui le paquet A, celui-ci devient **Élu**, et le professeur peut commencer à le corriger.
+- Pour se changer les idées, il peut interrompre la correction du paquet A (qui repassera à l'état **Prêt** en attendant son tour) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors **Terminés**. 
+- Si, pendant la correction du paquet, le professeur donne celui-ci à sa fille pour qu'elle classe les copies par ordre alphabétique, ce paquet sera **Bloqué**. Il ne reviendra à l'état **Prêt** que quand la fille du professeur aura rendu le paquet.
+
 Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'**un seul paquet de copies** (soit A, soit B, soit C).
 
 
