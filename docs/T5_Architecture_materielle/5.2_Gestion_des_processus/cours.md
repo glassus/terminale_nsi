@@ -227,9 +227,9 @@ Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoi
 - A et B sont créés et passent à l'état **Prêt**.
 - L'ordonnanceur déclare **Élu** le processus A (ou bien B, cela ne change rien).
 - L'étape A1 de A est réalisée : la ressource R est donc affectée à A.
-- L'ordonnanceur déclare maintenant **Élu** le processus B. A est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'ordonnanceur déclare maintenant **Élu** le processus B. A est donc passé à **Prêt** en attendant que son tour revienne.
 - L'étape B1 de B est réalisée : la ressource S est donc affectée à B.
-- L'ordonnanceur déclare à nouveau **Élu** le processus A. B est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'ordonnanceur déclare à nouveau **Élu** le processus A. B est donc passé à **Prêt** en attendant que son tour revienne.
 - L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à **Bloqué** et va revenir au processus B qui redevient **Élu**.
 - L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à **Bloqué**.
 

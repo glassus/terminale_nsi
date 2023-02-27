@@ -29,7 +29,7 @@ Lecture du tableau : le logiciel de traitement de texte mobilise (M) la donnée 
 
 Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
-??? check "Correction"
+??? tip "Correction"
     ![image](data/corr_exo1.png){: .center}
     Le cycle en pointillés montre que les applications s'attendent mutuellement : cette situation s'appelle un interblocage.
 
@@ -37,7 +37,7 @@ Montrer que les applications s'attendent mutuellement. Comment s'appelle cette s
 _2021, Métropole sujet 1_
 
 **Partie A**
-Cette partie est un questionnaire à choix mulcheckles (QCM).
+Cette partie est un questionnaire à choix multiples (QCM).
 Pour chacune des questions, une seule des quatre réponses est exacte.
 
 1. Parmi les commandes ci-dessous, laquelle permet d’afficher les processus en cours
@@ -64,7 +64,7 @@ UNIX ?
     - d.   ```kill```
 
 
-??? check "correction"
+??? tip "correction"
     1. b
     2. c
     3. b
@@ -87,7 +87,7 @@ exécuté à chaque cycle.
 ![image](data/ex2_2.png){: .center}
 
 
-??? check "correction"
+??? tip "correction"
     ![image](data/corr_exo21.png){: .center}
 
 
@@ -96,7 +96,7 @@ Parmi les scénarios suivants, lequel provoque un interblocage ? Justifier.
 
 ![image](data/ex2_3.png){: .center}
 
-??? check "correction"
+??? tip "correction"
     ![image](data/scenarios.png){: .center}
     Seul le scenario 2 présente un cycle d'interdépendance : seul le scénario 2 va donc provoquer un interblocage.
 
@@ -115,9 +115,20 @@ nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.
 
 On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3
 
-1. Les processus s'exécutent de manière concurrente.
+**Q1.** Les processus s'exécutent de manière concurrente.
 Justifier qu'une situation d'interblocage peut se produire.
-2. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
+
+??? tip "correction"
+    Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
+    ![image](data/2021_2.png){: .center}
+    On voit apparaître un cycle d'interdépendance : il peut donc y avoir une situation d'interblocage.
+
+**Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
+
+??? tip "correction"
+    On peut par exemple inverser la demande d'imprimante et de table traçante.
+
+
 3. Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
 d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
 tant que la table traçante n'est pas disponible :
@@ -126,6 +137,8 @@ tant que la table traçante n'est pas disponible :
     - c. prêt
     - d. terminé
 
+??? tip "correction"
+    Il sera à l'état bloqué.
 
 **Partie B**
 
@@ -159,7 +172,7 @@ navigateur Web (chromium-browser) ?
 **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
 
-??? check "correction"
+??? tip "correction"
     **Q1.** b.
 
     **Q2.** 6211
@@ -174,7 +187,7 @@ _2021, Métropole Candidats Libres sujet 2_
 **Q1.a.** Expliquer à quoi correspond l’état *élu*.  
 **Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
 
-??? check "correction"
+??? tip "correction"
     **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
 
     **Q1b.** 
@@ -196,7 +209,7 @@ des entrées/sorties dans une file :
 - ii. Premier entré, premier sorti
 - iii. Dernier entré, premier sorti
 
-??? check "correction"
+??? tip "correction"
     **Q2a.** ii. Premier entré, premier sorti
 
 
@@ -222,7 +235,52 @@ processus C₁, C₃ et C₄.
 ![image](data/ex4_frise.png){: .center}
 
 
-??? check "correction"
+??? tip "correction"
     ![image](data/ex4_frise_corr.png){: .center}
+
+
+## Exercice 5
+Exercice 2 du sujet [Amérique du Nord J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="_blank"}
+
+??? tip "correction Q1.a."
+    proposition 2
+
+??? tip "correction Q1.b."
+    ```cd lycee``` 
+
+??? tip "correction Q1.c."
+    ```mkdir algorithmique``` 
+
+??? tip "correction Q1.d."
+    ```rm image1.jpg``` 
+
+??? tip "correction Q2.a."
+    927
+
+??? tip "correction Q2.b."
+    1058 (ou 927)
+
+??? tip "correction Q2.c."
+    1153 et 1154
+
+??? tip "correction Q2.d."
+    923 et 1036
+
+??? tip "correction Q3.a."
+    ![image](data/ANJ2_1.png){: .center}
+    
+??? tip "correction Q3.b."
+    ![image](data/ANJ2_2.png){: .center}
+
+
+??? tip "correction Q4.a."
+    Un processus peut être Prêt, Elu, ou Bloqué.
+    ![image](data/ANJ2_3.png){: .center}
+    Si chaque ligne de chaque processus est exécutée à tour de rôle, un cycle d'interdépendance apparait, et donc un interblocage.
+
+
+??? tip "correction Q4.b."
+    En inversant la demande de R3 et R1 pour le processus P3, le risque d'interblocage disparaît.
+    [fichier](ANJ2_last.svg){. target="_blank"}
 
     
