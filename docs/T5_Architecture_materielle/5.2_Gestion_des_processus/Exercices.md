@@ -174,21 +174,19 @@ _2021, Métropole Candidats Libres sujet 2_
 **Q1.a.** Expliquer à quoi correspond l’état *élu*.  
 **Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
 
-**Q2.** On suppose que quatre processus C₁, C₂, C₃ et C₄ sont créés sur un ordinateur,
-et qu’aucun autre processus n’est lancé sur celui-ci, ni préalablement ni pendant
-l’exécution des quatre processus.
-L’ordonnanceur, pour exécuter les différents processus prêts, les place dans une
-structure de données de type file. Un processus prêt est enfilé et un processus
-élu est défilé.
-
 ??? check "correction"
     **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
 
     **Q1b.** 
     ![image](data/cycle.png){: .center}
 
-
-    
+**Q2.** On suppose que quatre processus C₁, C₂, C₃ et C₄ sont créés sur un ordinateur,
+et qu’aucun autre processus n’est lancé sur celui-ci, ni préalablement ni pendant
+l’exécution des quatre processus.
+L’ordonnanceur, pour exécuter les différents processus prêts, les place dans une
+structure de données de type file. Un processus prêt est enfilé et un processus
+élu est défilé.
+ 
 
 
 **Q2.a.** Parmi les propositions suivantes, recopier celle qui décrit le fonctionnement
@@ -223,8 +221,8 @@ processus C₁, C₃ et C₄.
 
 ![image](data/ex4_frise.png){: .center}
 
-{#
+
 ??? check "correction"
     ![image](data/ex4_frise_corr.png){: .center}
-#}
+
     
