@@ -223,6 +223,8 @@ processus C₁, C₃ et C₄.
 
 ![image](data/ex4_frise.png){: .center}
 
+{#
 ??? check "correction"
     ![image](data/ex4_frise_corr.png){: .center}
+#}
     
