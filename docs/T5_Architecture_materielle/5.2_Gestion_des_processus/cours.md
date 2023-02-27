@@ -184,6 +184,12 @@ Voici les transitions possibles entre ces états (diagramme de Sylvain Melot) :
 
 ![image](data/etats_process.png){: .center}
 
+
+Ou de manière simplifiée :
+
+![image](data/cycle.png){: .center}
+
+
 On peut utiliser la métaphore suivante :
 
 Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés.
