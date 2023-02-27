@@ -17,7 +17,7 @@
         <link rel="next" href="../Exercices/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
@@ -2838,12 +2838,16 @@ Tout se passe donc comme si les deux processus avaient été lancés et traités
 <li><strong>Élu</strong> : il est en cours d'exécution par le processeur.</li>
 <li><strong>Bloqué</strong> : pendant son exécution (état <strong>Élu</strong>), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état <strong>Prêt</strong> et attendra à nouveau son tour. </li>
 </ul>
-<p><img alt="image" class="center" src="../data/cycle.png" /></p>
+<p>Voici les transitions possibles entre ces états (diagramme de Sylvain Melot) : </p>
+<p><img alt="image" class="center" src="../data/etats_process.png" /></p>
 <p>On peut utiliser la métaphore suivante :</p>
-<blockquote>
-<p>Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont <strong>Prêts</strong> à être corrigés. Si le professeur ramène devant lui le paquet A, celui-ci devient <strong>Élu</strong>, et le professeur peut commencer à le corriger. Pour se changer les idées, il peut interrompre la correction du paquet A (qui va passer à l'état <strong>Bloqué</strong>) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors <strong>Terminés</strong>.  <br />
-Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<strong>un seul paquet de copies</strong> (soit A, soit B, soit C).</p>
-</blockquote>
+<p>Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont <strong>Prêts</strong> à être corrigés.</p>
+<ul>
+<li>Si le professeur ramène devant lui le paquet A, celui-ci devient <strong>Élu</strong>, et le professeur peut commencer à le corriger.</li>
+<li>Pour se changer les idées, il peut interrompre la correction du paquet A (qui repassera à l'état <strong>Prêt</strong> en attendant son tour) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors <strong>Terminés</strong>. </li>
+<li>Si, pendant la correction du paquet, le professeur donne celui-ci à sa fille pour qu'elle classe les copies par ordre alphabétique, ce paquet sera <strong>Bloqué</strong>. Il ne reviendra à l'état <strong>Prêt</strong> que quand la fille du professeur aura rendu le paquet.</li>
+</ul>
+<p>Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<strong>un seul paquet de copies</strong> (soit A, soit B, soit C).</p>
 <p><strong>Pourquoi l'accès à une ressource peut bloquer un processus ?</strong></p>
 <p>Pendant son exécution, un processus peut avoir besoin d'accéder à une ressource déjà occupée (un fichier déjà ouvert, par exemple) ou être en attente d'une entrée-utilisateur (un <code>input()</code> dans un code <code>Python</code> par exemple). Dans ce cas-là, le processeur va passer ce processus à l'état <strong>Bloqué</strong>, pour pouvoir ainsi se consacrer à un autre processus.</p>
 <p>Une fois débloqué, le processus va repasser à l'état <strong>Prêt</strong> et rejoindre (par exemple) la file d'attente des processus avant d'être à nouveau <strong>Élu</strong> et donc exécuté.</p>
@@ -2908,7 +2912,7 @@ Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'<stron
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">27 février 2023</span>
       
     
   </small>
