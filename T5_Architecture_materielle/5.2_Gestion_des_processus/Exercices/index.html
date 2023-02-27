@@ -1696,6 +1696,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2665,7 +2672,7 @@ On donne ci-dessous un tableau indiquant à un instant précis l'état des proce
 </tbody>
 </table>
 <p>Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?</p>
-<details class="check">
+<details class="tip">
 <summary>Correction</summary>
 <p><img alt="image" class="center" src="../data/corr_exo1.png" />
 Le cycle en pointillés montre que les applications s'attendent mutuellement : cette situation s'appelle un interblocage.</p>
@@ -2673,7 +2680,7 @@ Le cycle en pointillés montre que les applications s'attendent mutuellement : c
 <h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
 <p><em>2021, Métropole sujet 1</em></p>
 <p><strong>Partie A</strong>
-Cette partie est un questionnaire à choix mulcheckles (QCM).
+Cette partie est un questionnaire à choix multiples (QCM).
 Pour chacune des questions, une seule des quatre réponses est exacte.</p>
 <ol>
 <li>Parmi les commandes ci-dessous, laquelle permet d’afficher les processus en cours
@@ -2707,7 +2714,7 @@ UNIX ?<ul>
 </ul>
 </li>
 </ol>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <ol>
 <li>b</li>
@@ -2729,14 +2736,14 @@ tableau ci-dessous donne pour trois processus P1, P2, P3 :</p>
 Reproduire le tableau ci-dessous sur la copie et indiquer dans chacune des cases le processus
 exécuté à chaque cycle.
 <img alt="image" class="center" src="../data/ex2_2.png" /></p>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><img alt="image" class="center" src="../data/corr_exo21.png" /></p>
 </details>
 <p><strong>Q2.</strong> On suppose maintenant que les trois processus précédents s’exécutent et utilisent une ou plusieurs ressources parmi R1, R2 et R3.
 Parmi les scénarios suivants, lequel provoque un interblocage ? Justifier.</p>
 <p><img alt="image" class="center" src="../data/ex2_3.png" /></p>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><img alt="image" class="center" src="../data/scenarios.png" />
 Seul le scenario 2 présente un cycle d'interdépendance : seul le scénario 2 va donc provoquer un interblocage.</p>
@@ -2750,10 +2757,20 @@ Chaque programme, lorsqu’il s’exécute, demande l’allocation des ressource
 nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.</p>
 <p><img alt="image" class="center" src="../data/ex3_1.png" /></p>
 <p>On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3</p>
+<p><strong>Q1.</strong> Les processus s'exécutent de manière concurrente.
+Justifier qu'une situation d'interblocage peut se produire.</p>
+<details class="tip">
+<summary>correction</summary>
+<p>Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
+<img alt="image" class="center" src="../data/2021_2.png" />
+On voit apparaître un cycle d'interdépendance : il peut donc y avoir une situation d'interblocage.</p>
+</details>
+<p><strong>Q2</strong>. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</p>
+<details class="tip">
+<summary>correction</summary>
+<p>On peut par exemple inverser la demande d'imprimante et de table traçante.</p>
+</details>
 <ol>
-<li>Les processus s'exécutent de manière concurrente.
-Justifier qu'une situation d'interblocage peut se produire.</li>
-<li>Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</li>
 <li>Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
 d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
 tant que la table traçante n'est pas disponible :<ul>
@@ -2764,6 +2781,10 @@ tant que la table traçante n'est pas disponible :<ul>
 </ul>
 </li>
 </ol>
+<details class="tip">
+<summary>correction</summary>
+<p>Il sera à l'état bloqué.</p>
+</details>
 <p><strong>Partie B</strong></p>
 <p>Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage suivant :</p>
 <p><img alt="image" class="center" src="../data/ex3_2.png" /></p>
@@ -2789,7 +2810,7 @@ des processus ;</li>
 <p><strong>Q2.</strong> Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
 navigateur Web (chromium-browser) ?</p>
 <p><strong>Q3.</strong> Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?</p>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><strong>Q1.</strong> b.</p>
 <p><strong>Q2.</strong> 6211</p>
@@ -2800,7 +2821,7 @@ navigateur Web (chromium-browser) ?</p>
 <p><strong>Q1.</strong> Les états possibles d’un processus sont : <em>prêt</em>, <em>élu</em>, <em>terminé</em> et <em>bloqué</em>.</p>
 <p><strong>Q1.a.</strong> Expliquer à quoi correspond l’état <em>élu</em>.<br />
 <strong>Q1.b.</strong> Proposer un schéma illustrant les passages entre les différents états.</p>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><strong>Q1a.</strong> Élu signifie que le processus est actuellement en cours d'exécution par le processeur.</p>
 <p><strong>Q1b.</strong> 
@@ -2819,7 +2840,7 @@ des entrées/sorties dans une file :  </p>
 <li>ii. Premier entré, premier sorti</li>
 <li>iii. Dernier entré, premier sorti</li>
 </ul>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><strong>Q2a.</strong> ii. Premier entré, premier sorti</p>
 </details>
@@ -2839,9 +2860,62 @@ processus C₃ passe à l’état bloqué.</li>
 états du processus C₂ sont donnés. Compléter la frise avec les états des
 processus C₁, C₃ et C₄.</p>
 <p><img alt="image" class="center" src="../data/ex4_frise.png" /></p>
-<details class="check">
+<details class="tip">
 <summary>correction</summary>
 <p><img alt="image" class="center" src="../data/ex4_frise_corr.png" /></p>
+</details>
+<h2 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h2>
+<p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf" target="_blank">Amérique du Nord J2 2022</a></p>
+<details class="tip">
+<summary>correction Q1.a.</summary>
+<p>proposition 2</p>
+</details>
+<details class="tip">
+<summary>correction Q1.b.</summary>
+<p><code>cd lycee</code> </p>
+</details>
+<details class="tip">
+<summary>correction Q1.c.</summary>
+<p><code>mkdir algorithmique</code> </p>
+</details>
+<details class="tip">
+<summary>correction Q1.d.</summary>
+<p><code>rm image1.jpg</code> </p>
+</details>
+<details class="tip">
+<summary>correction Q2.a.</summary>
+<p>927</p>
+</details>
+<details class="tip">
+<summary>correction Q2.b.</summary>
+<p>1058 (ou 927)</p>
+</details>
+<details class="tip">
+<summary>correction Q2.c.</summary>
+<p>1153 et 1154</p>
+</details>
+<details class="tip">
+<summary>correction Q2.d.</summary>
+<p>923 et 1036</p>
+</details>
+<details class="tip">
+<summary>correction Q3.a.</summary>
+<p><img alt="image" class="center" src="../data/ANJ2_1.png" /></p>
+</details>
+<details class="tip">
+<summary>correction Q3.b.</summary>
+<p><img alt="image" class="center" src="../data/ANJ2_2.png" /></p>
+</details>
+<details class="tip">
+<summary>correction Q4.a.</summary>
+<p>Un processus peut être Prêt, Elu, ou Bloqué.
+<img alt="image" class="center" src="../data/ANJ2_3.png" />
+Si chaque ligne de chaque processus est exécutée à tour de rôle, un cycle d'interdépendance apparait, et donc un interblocage.</p>
+</details>
+<details class="tip">
+<summary>correction Q4.b.</summary>
+<p>En inversant la demande de R3 et R1 pour le processus P3, le risque d'interblocage disparaît.
+<a class="" href="ANJ2_last.svg" target="_blank">fichier</a></p>
 </details>
 
   <hr>

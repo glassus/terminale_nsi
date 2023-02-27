@@ -2865,9 +2865,9 @@ Tout se passe donc comme si les deux processus avaient été lancés et traités
 <li>A et B sont créés et passent à l'état <strong>Prêt</strong>.</li>
 <li>L'ordonnanceur déclare <strong>Élu</strong> le processus A (ou bien B, cela ne change rien).</li>
 <li>L'étape A1 de A est réalisée : la ressource R est donc affectée à A.</li>
-<li>L'ordonnanceur déclare maintenant <strong>Élu</strong> le processus B. A est donc passé à <strong>Bloqué</strong> en attendant que son tour revienne.</li>
+<li>L'ordonnanceur déclare maintenant <strong>Élu</strong> le processus B. A est donc passé à <strong>Prêt</strong> en attendant que son tour revienne.</li>
 <li>L'étape B1 de B est réalisée : la ressource S est donc affectée à B.</li>
-<li>L'ordonnanceur déclare à nouveau <strong>Élu</strong> le processus A. B est donc passé à <strong>Bloqué</strong> en attendant que son tour revienne.</li>
+<li>L'ordonnanceur déclare à nouveau <strong>Élu</strong> le processus A. B est donc passé à <strong>Prêt</strong> en attendant que son tour revienne.</li>
 <li>L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à <strong>Bloqué</strong> et va revenir au processus B qui redevient <strong>Élu</strong>.</li>
 <li>L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à <strong>Bloqué</strong>.</li>
 </ul>
