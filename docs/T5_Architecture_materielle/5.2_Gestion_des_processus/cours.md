@@ -179,7 +179,7 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 - **Élu** : il est en cours d'exécution par le processeur.
 - **Bloqué** : pendant son exécution (état **Élu**), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état **Prêt** et attendra à nouveau son tour. 
 
-Voici les transitions possibles entre ces états (diagramme de Sylvain Melot) : 
+Voici les transitions possibles entre ces états (diagramme issu de [https://info.blaisepascal.fr/nsi-processus-et-ressources](https://info.blaisepascal.fr/nsi-processus-et-ressources){. target="_blank"}) : 
 
 
 ![image](data/etats_process.png){: .center}
