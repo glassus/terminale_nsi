@@ -27,7 +27,7 @@ En considérant les quatre exemples ci-dessus, cette fonction donne :
 
 ```python
 >>> ou_exclusif(a, b)
-[1, 1, 0, 1, 1, 0, 0, 1])
+[1, 1, 0, 1, 1, 0, 0, 1]
 >>> ou_exclusif(c, d)
 [1, 1, 1, 0]
 ```
