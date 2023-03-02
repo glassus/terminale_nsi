@@ -18,7 +18,7 @@
     ```
 
 ??? tip "Correction Q2"
-    La complexité est linéaire, car le nombre d'opération est proportionnel à la taille du tableau ```t```.
+    La complexité est linéaire, car le nombre d'opérations est proportionnel à la taille du tableau ```t```.
 
 ??? tip "Correction Q3.a"
     Il suffit d'insérer la ligne ```dist = distance(obj, cible)``` en dessous de la boucle ```for``` et d'utiliser cette variable ```dist``` partout à la place de ```distance(obj, cible)```.
@@ -34,3 +34,23 @@
             i += 1
         kppv.insert(i, (idx, d)) 
     ```
+
+
+## Exercice 2
+
+### Partie A
+
+??? tip "Correction Q1"
+    ```ifconfig``` 
+
+??? tip "Correction Q2"
+    ```DHCP``` (NDLR : question hors-programme)
+
+??? tip "Correction Q3"
+    ```192.168.1.1``` 
+
+??? tip "Correction Q4"
+    C’est possible et cette adresse serait celle de la box vers Internet. 
+
+??? tip "Correction Q5"
+    Oui, car les adresses 192.168.x.x ne sont pas routées sur Internet. 
