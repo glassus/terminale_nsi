@@ -2734,6 +2734,31 @@ Il faut donc que le coût R1-R4 soit inférieur à 40, ce qui sera le cas pour u
     <span class="k">return</span> <span class="n">ext</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<details class="tip">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ligne</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">indice_max</span><span class="p">,</span> <span class="n">dmax</span> <span class="o">=</span> <span class="n">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dmax</span> <span class="o">&lt;=</span> <span class="n">seuil</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ligne</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">indice_max</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">indice_max</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="mise-en-pratique-de-lalgorithme-de-douglas-peucker-exercice-4">Mise en pratique de l'algorithme de Douglas-Peucker (exercice 4)<a class="headerlink" href="#mise-en-pratique-de-lalgorithme-de-douglas-peucker-exercice-4" title="Permanent link">⚓︎</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
