@@ -156,6 +156,22 @@
         return ext
     ```
 
+??? tip "Correction Q5."
+    ```python linenums='1'
+    def simplifie(ligne, seuil):
+        n = len(ligne)
+        if n <= 2:
+            return ligne
+        else:
+            indice_max, dmax = le_plus_loin(ligne)
+            if dmax <= seuil:
+                return [ligne[0], ligne[n-1]]
+            else:
+                return simplifie(extrait(ligne, 0, indice_max), seuil) + \
+                    simplifie(extrait(ligne, indice_max+1, n-1), seuil)
+    ```
+
+
 ## Mise en pratique de l'algorithme de Douglas-Peucker (exercice 4)
 
 ```python linenums='1'
