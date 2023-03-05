@@ -174,9 +174,18 @@
 
 ## Mise en pratique de l'algorithme de Douglas-Peucker (exercice 4)
 
+Téléchargez d'abord le fichier [coord_france.txt](data/coord_france.txt) puis placez-le dans le même dossier que le code Python ci-dessous :
+
+
 ```python linenums='1'
 from math import sqrt
 import matplotlib.pyplot as plt
+
+data = open('coord_france.txt').read().splitlines()
+france = []
+for couple in data:
+    cpl = couple.split(',')
+    france.append((int(cpl[0]), int(cpl[1])))
 
 def distance_points(a, b):
     return sqrt((b[0]-a[0])**2 + (b[1]-a[1])**2)
@@ -230,44 +239,74 @@ def simplifie(ligne, seuil):
                    simplifie(extrait(ligne, indice_max+1, n-1), seuil)
 
 
-france = [(8.74, 14.18),(8.12, 13.96),(8.08, 13.14),(7.62, 12.8),
-         (7.04, 12.5),(6.84, 12.24),(6.52, 12.04),(5.86, 12.14),
-         (5.74, 12.56),(5.26, 12.58),(5.34, 12.12),(5.48, 11.64),
-         (5.54, 11.28),(5.18, 11.3),(4.76, 11.26),(4.46, 11.14),
-         (4.24, 11.62),(3.86, 11.58),(3.50, 11.48),(2.80, 11.3),
-         (2.90, 11.0), (3.18, 10.78),(2.68, 10.68),(3.04, 10.5),
-         (3.60, 10.3),(4.06, 10.02),(4.44, 9.92),(4.62, 9.62),
-         (4.98, 9.32),(4.92, 8.94),(5.04, 8.52),(5.52, 8.38),
-         (5.66, 7.98),(5.58, 7.64),(5.96, 7.22),(5.66, 7.26),
-         (5.52, 6.46),(5.46, 5.72),(5.24, 5.04),(5.00, 4.74),
-         (5.34, 4.52),(5.72, 4.20),(6.24, 3.98),(6.86, 3.86),
-         (7.18, 3.80),(7.34, 4.04),(7.64, 3.82),(8.04, 3.74),
-         (8.28, 3.42),(8.76, 3.46),(9.04, 3.50),(9.42, 3.52),
-         (9.32, 4.08),(9.78, 4.58),(10.3, 4.86),(10.66, 4.76),
-         (11.18, 4.64),(11.56, 4.48),(12.22, 4.42),(12.68, 4.54),
-         (12.98, 5.08),(13.42, 5.64),(12.86, 5.84),(12.68, 6.32),
-         (12.8, 6.66),(12.34, 6.86),(12.86, 7.22),(12.58, 7.68),
-         (12.68, 8.00),(12.48, 8.38),(12.04, 8.52),(11.84, 8.12),
-         (11.9, 8.82), (12.44, 9.46),(12.98, 9.92),(13.04, 10.5),
-         (13.08, 11.22),(13.46, 11.76),(12.78, 11.86),(12.26, 11.96),
-         (11.8, 12.34),(11.14, 12.34),(10.72, 12.72),(10.62, 13.16),
-         (10.3, 12.78),(9.98, 12.9),(10.04, 13.34),(9.64, 13.4),
-         (9.34, 13.54),(9.34, 13.92),(8.92, 13.82),(8.74, 14.18)]
-
 def trace(ligne, seuil):
     new_ligne = simplifie(ligne, seuil)
     x = [p[0] for p in new_ligne]
     y = [p[1] for p in new_ligne]
-    plt.plot(x, y, 'r-')
-    plt.text(2, 14, 'seuil : ' + str(seuil))
+    plt.plot(x, y, 'b-', linewidth=0.5)
+    plt.text(195014, 2865745, 'seuil : ' + str(seuil))
     plt.axis('equal')
+    plt.axis('off')
     plt.show()
 
 trace(france, 0)
-
 ```
 
+Le rendu avec un seuil égal à 0 est celui-ci :
+
 ![image](data/Figure_1.png){: .center}
-![image](data/Figure_2.png){: .center}
-![image](data/Figure_3.png){: .center}
-![image](data/Figure_4.png){: .center}
+
+Vous pouvez faire varier le seuil entre 0 et 5000 et observer les modifications.
+
+
+
+## Exercice 5
+
+??? tip "Correction Q1"
+    La plus grande somme est 16, via la branche 2-7-4-3.
+
+??? tip "Correction Q2.a."
+    ```python
+    a = Noeud(2)
+    a.modifier_sag(Noeud(7))
+    a.modifier_sad(Noeud(5))
+    a.sag.modifier_sag(Noeud(4))
+    a.sag.modifier_sad(Noeud(1))
+    a.sad.modifier_sad(Noeud(8))
+    ```
+
+??? tip "Correction Q2.b."
+    La méthode ```niveau``` renvoie 2 (qui est la hauteur de cet arbre, en prenant la convention que l'arbre réduit à son nœud-racine a une hauteur de 0).
+    
+??? tip "Correction Q3."
+    ```python linenums='1'
+    def pgde_somme(self):
+        if self.sag != None and self.sad != None:
+            pgde_g = self.sag.pgde_somme()
+            pgde_d = self.sad.pgde_somme()
+            return self.etiquette + max(pgde_g, pgde_d)
+
+        if self.sag != None:
+            return self.sag.pgde_somme() + self.etiquette
+        if self.sad != None:
+            return self.sad.pgde_somme() + self.etiquette
+        return self.etiquette   
+    ```
+    
+??? tip "Correction Q4.a."
+    ![image](data/ASJ2_exo5.png){: .center}
+    
+??? tip "Correction Q4.b."
+    ```python linenums='1'
+    def est_magique(self):
+        if self.sag != None and self.sad != None:
+            return self.sag.est_magique() and self.sad.est_magique() \
+                and self.sag.pgde_somme() == self.sad.pgde_somme()
+        if self.sag != None:
+            return self.sag.est_magique()
+        if self.sad != None:
+            return self.sad.est_magique()
+        return True   
+    ```
+    
+    
