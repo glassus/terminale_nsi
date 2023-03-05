@@ -6,11 +6,13 @@
     - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
 
 
-!!! note ":star: Thèmes en cours d'étude :star: "
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+!!! note ":star: Révisions épreuve écrite :star: "
+    - sujet : [Amérique du Sud J2](T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf)  :arrow_right: [correction](T6_Annales/corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
+    - sujet : [Sujet 0 - version B](T6_Annales/data/2023/2023-sujet_0-b.pdf)
 
 
 ### *Thèmes déjà traités*
+- [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
 - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
 - [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
 - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
