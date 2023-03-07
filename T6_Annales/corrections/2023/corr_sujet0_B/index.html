@@ -2542,8 +2542,137 @@
 <h1 id="correction-du-sujet-0-version-b-2023">Correction du sujet 0 version B / 2023<a class="headerlink" href="#correction-du-sujet-0-version-b-2023" title="Permanent link">⚓︎</a></h1>
 <p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../../../data/2023/2023-sujet_0-b.pdf" target="_blank">Sujet</a></p>
 <h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
-<details>
-<summary>correction Q1</summary>
+<details class="tip">
+<summary>correction Q1.a.</summary>
+<p>Commande 1 : <code>cd /home/documents/collections/timbres</code> (chemin absolu)<br />
+Commande 2 : <code>cd ../collections/timbres</code> (chemin relatif)</p>
+</details>
+<details class="tip">
+<summary>correction Q1.b.</summary>
+<p><code>cd /home/documents/collections/timbres</code></p>
+</details>
+<details class="tip">
+<summary>correction Q2.a.</summary>
+<p><span class="arithmatex">\(C = \dfrac{10^8}{100 \times 10^6} = 1\)</span></p>
+</details>
+<details class="tip">
+<summary>Correction Q2.b.</summary>
+<p><img alt="image" class="center" src="../data/sujet0B_1.png" />
+La route minimale est donc A-B-C-E-F-G (coût total de 1,04)</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.</summary>
+<p>Les descripteurs de ce fichier sont :</p>
+<ul>
+<li><code>nom_timbre</code> (valeurs associées : <code>Gustave Eiffel</code>, <code>Marianne</code>, <code>Alan Turing</code>)</li>
+<li><code>annee_fabrication</code> (valeurs associées : <code>1950</code>, <code>1989</code>, <code>2012</code>)</li>
+<li><code>nom_collectionneur</code> (valeurs associées : <code>Dupont</code>, <code>Durand</code>)</li>
+</ul>
+</details>
+<details class="tip">
+<summary>Correction Q4.a.</summary>
+<p>Une clé primaire est attribut qui désigne de manière unique un enregistrement.</p>
+</details>
+<details class="tip">
+<summary>Correction Q4.b.</summary>
+<p>Non, car deux enregistrements possèdent le nom «Gustave Eiffel».</p>
+</details>
+<details class="tip">
+<summary>Correction Q4.c.</summary>
+<p>Telle que la relation est présentée, oui, l'attribut <code>annee_fabrication</code> pourrait être une clé primaire car chaque enregistrement présente une année de fabrication différente. Cela dit, il faudrait être sûr qu'un seul timbre est édité par année...</p>
+</details>
+<details class="tip">
+<summary>Correction Q4.d.</summary>
+<p>On peut créer une clé primaire artificielle (un nombre entier), ou bien considérer le couple (<code>nom</code>, <code>annee_fabrication</code>) comme clé primaire.</p>
+</details>
+<details class="tip">
+<summary>Correction Q5.a.</summary>
+<p>Cette requête va modifier l'attribut <code>ref_licence</code> de Jean-Pierre Dupond ET de Alexandra, qui auront donc la même référence de licence <code>'Ythpswz'</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q5.b.</summary>
+<p>L'attribut <code>ref_licence</code> ne peut plus être une clé primaire car deux enregistrements différents auront la même valeur pour cet attribut.</p>
+</details>
+<details class="tip">
+<summary>Correction Q6.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nbre_timbres</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">collectionneurs</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee_naissance</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1963</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+<details class="tip">
+<summary>Correction Q1.a.</summary>
+<p>Une fonction récursive est une fonction qui fait appel à elle-même dans sa propre définition.</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b.</summary>
+<p>Lors du premier appel de la fonction, le paramètre <code>n</code> vaut 3. Lors des appels récursifs, ce paramètre va décroître à 2, 1 puis 0 puisque l'appel se fait sous condition que <code>n &gt;= 0</code>. Le dernier appel se fait avec la valeur <code>n = -1</code>. Lors de l'exécution de <code>compte_rebours(n-1)</code>, rien ne se passe. La dernière valeur affichée est donc 0.   </p>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; renvoie le produit des nombres entiers</span>
+<span class="sd">    strictement positifs inférieurs à n &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q3.a.</summary>
+<p>L'affichage en console sera :
+<div class="highlight"><pre><span></span><code><span class="mi">3</span>
+<span class="mi">2</span>
+<span class="mi">1</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Correction Q3.b.</summary>
+<p>La variable <code>res</code> contiendra la valeur 6.</p>
+</details>
+<details class="tip">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">somme_entiers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="n">nb</span>
+    <span class="k">return</span> <span class="n">somme</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
+<details class="tip">
+<summary>Correction Q1.a.</summary>
+<p>Exemple d'attribut : <code>valeur</code><br />
+Exemple de méthode : <code>get_valeur</code></p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b</summary>
+<p>Après exécution, <code>a</code> vaut 15 et <code>b</code> vaut 6. </p>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<p><img alt="image" class="center" src="../data/sujet0B_2.png" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q3.</summary>
+<p>Ce n'est pas un ABR car la valeur 13 est censée être plus petite que la valeur 12.
+<img alt="image" class="center" src="../data/sujet0B_3.png" /></p>
+</details>
+<details class="tip">
+<summary>Correction Q4.</summary>
+<p>La liste renvoyée est <code>[1, 6, 10, 15, 16, 18, 16, 25]</code>. </p>
 </details>
 
   <hr>
@@ -2551,7 +2680,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 mars 2023</span>
       
     
   </small>
