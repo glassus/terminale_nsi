@@ -308,5 +308,3 @@ Vous pouvez faire varier le seuil entre 0 et 5000 et observer les modifications.
             return self.sad.est_magique()
         return True   
     ```
-    
-    
