@@ -3,7 +3,7 @@
 ## 2023
 
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
-- [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf)
+- [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](../corrections/2023/corr_sujet0_B/){. target="_blank"}
 
 ## 2022
 
@@ -12,7 +12,7 @@
 - [Amérique du Nord J1](data/2022/2022_Amerique_Nord_J1.pdf)
 - [Amérique du Nord J2](data/2022/2022_Amerique_Nord_J2.pdf)
 - [Amérique du Sud J1](data/2022/2022_Amerique_Sud_J1.pdf)
-- [Amérique du Sud J2](data/2022/2022_Amerique_Sud_J2.pdf) / [correction](../corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
+- [Amérique du Sud J2](data/2022/2022_Amerique_Sud_J2.pdf) :arrow_right: [correction](../corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
 - [Asie J1](data/2022/2022_Centres_Etrangers_J1.pdf)
 - [Asie J2](data/2022/2022_Asie_J2.pdf)
 - [Centres Étrangers J2](data/2022/2022_Centres_Etrangers_J2.pdf)
