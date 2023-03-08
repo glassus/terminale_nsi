@@ -32,7 +32,8 @@
     Non, car deux enregistrements possèdent le nom «Gustave Eiffel».
 
 ??? tip "Correction Q4.c."
-    Telle que la relation est présentée, oui, l'attribut ```annee_fabrication``` pourrait être une clé primaire car chaque enregistrement présente une année de fabrication différente. Cela dit, il faudrait être sûr qu'un seul timbre est édité par année...
+    Non, car deux enregistrements ont été fabriqués en 1989. *(merci Vincent)*
+   
 
 ??? tip "Correction Q4.d."
     On peut créer une clé primaire artificielle (un nombre entier), ou bien considérer le couple (```nom```, ```annee_fabrication```) comme clé primaire.
