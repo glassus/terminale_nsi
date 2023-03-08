@@ -32,7 +32,7 @@
     Non, car deux enregistrements possèdent le nom «Gustave Eiffel».
 
 ??? tip "Correction Q4.c."
-    Non, car deux enregistrements ont été fabriqués en 1989. *(merci Vincent)*
+    Non, car deux enregistrements possèdent ont pour année de fabrication 1989. *(merci Vincent)*
    
 
 ??? tip "Correction Q4.d."
