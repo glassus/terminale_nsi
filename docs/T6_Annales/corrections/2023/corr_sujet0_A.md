@@ -38,8 +38,8 @@
     def recherche_nom(tab_mus):
         lst = []
         for mus in tab_mus:
-            if mus[nb_concerts] >= 4:
-                lst.append(mus[nom])
+            if mus['nb_concerts'] >= 4:
+                lst.append(mus['nom'])
         return lst
     ```
 
