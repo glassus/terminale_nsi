@@ -8,8 +8,9 @@
 
 !!! note ":star: Révisions épreuve écrite :star: "
     - sujet : [Amérique du Sud J2](T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf)  :arrow_right: [correction](T6_Annales/corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
-    - sujet : [Sujet 0 - version B](T6_Annales/data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_B.md){. target="_blank"}
-    - sujet : [Sujet 0 - version A](T6_Annales/data/2023/2023-sujet_0-a.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_A.md){. target="_blank"}
+    - sujet : [Sujet 0 - version B](T6_Annales/data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_B/){. target="_blank"}
+    - sujet : [Sujet 0 - version A](T6_Annales/data/2023/2023-sujet_0-a.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_A/){. target="_blank"}
+    - Dictonnaires : exercice 2 du sujet [Centres Etrangers J1 2021](T6_Annales/data/2021/21_Centres_Etrangers_1.pdf) :arrow_right: [correction](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
 
 
 ### *Thèmes déjà traités*
