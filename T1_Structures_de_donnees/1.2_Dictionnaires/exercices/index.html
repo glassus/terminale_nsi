@@ -17,7 +17,7 @@
         <link rel="next" href="../../1.3_Arbres/cours/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-creation-dune-rainbow-table" class="md-skip">
+        <a href="#exercices-sur-les-dictionnaires" class="md-skip">
           Aller au contenu
         </a>
       
@@ -618,9 +618,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Exercice
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Exercice
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-creation-dune-rainbow-table" class="md-nav__link">
+    Exercice 1 : création d'une rainbow table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2549,7 +2587,8 @@
   
 
 
-<h1 id="exercice-creation-dune-rainbow-table">Exercice : création d'une rainbow table <img alt="🌈" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f308.svg" title=":rainbow:" /><a class="headerlink" href="#exercice-creation-dune-rainbow-table" title="Permanent link">⚓︎</a></h1>
+<h1 id="exercices-sur-les-dictionnaires">Exercices sur les dictionnaires<a class="headerlink" href="#exercices-sur-les-dictionnaires" title="Permanent link">⚓︎</a></h1>
+<h2 id="exercice-1-creation-dune-rainbow-table">Exercice 1 : création d'une rainbow table <img alt="🌈" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f308.svg" title=":rainbow:" /><a class="headerlink" href="#exercice-1-creation-dune-rainbow-table" title="Permanent link">⚓︎</a></h2>
 <p><strong>Objectif</strong> :</p>
 <p>Créer une fonction <code>inverse_md5()</code> qui va chercher dans un dictionnaire (construit préalablement) le mot correspondant au hash donné en paramètre.</p>
 <p>Exemple : 
@@ -2568,13 +2607,71 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
 </code></pre></div></li>
 </ul>
+<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+<p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf" target="_blank">Centres Etrangers J1 2021</a></p>
+<details class="tip">
+<summary>Correction Q1.a.</summary>
+<p><code>flotte[26]</code> renvoie  <code>{"type : "classique", "etat" : 1, "station" : "Coliseum"}</code></p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b.</summary>
+<p><code>flotte[80]["etat"]</code> renvoie la valeur <code>0</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.c.</summary>
+<p><code>flotte[99]["etat"]</code> renverra une erreur car la clé 99 n'existe pas.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.a.</summary>
+<p>Les valeurs possibles pour <code>choix</code> sont <code>electrique</code> ou <code>classique</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.b.</summary>
+<p>En fonction du choix (<code>electrique</code> ou <code>classique</code>), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'<code>etat</code> 1).<br />
+Seule la première station sera renvoyée, à cause du <code>return</code>. Si aucun vélo n'est disponible, la fonction ne renverra rien.</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Citadelle&quot;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;electrique&quot;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">,</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
+    <span class="n">velo_dispo</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">,</span> <span class="n">stations</span><span class="p">[</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">800</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">velo_dispo</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">,</span> <span class="n">id_velo</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">velo_dispo</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 mars 2023</span>
       
     
   </small>
@@ -2660,7 +2757,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
