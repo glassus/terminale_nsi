@@ -1,5 +1,15 @@
 # Vers l'algorithme de dichotomie
 
+Exemple d'utilisation :
+
+```python
+>>> tab = [1, 5, 7, 9, 12, 13]
+>>> recherche_dichotomique(tab, 12)
+True
+>>> recherche_dichotomique(tab, 17)
+False
+```
+
 
 ??? note "Code à trous, newbie version"
     ```python linenums='1'

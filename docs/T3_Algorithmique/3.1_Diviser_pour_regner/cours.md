@@ -11,6 +11,9 @@ Notre fonction renverra donc un booléen.
 
 La recherche *naïve* (élément par élément) est naturellement de complexité linéaire. Nous allons voir que la méthode dichotomique est plus efficace.
 
+
+:arrow_right: [Activité d'introduction](../intro_dichotomie/){. target="_blank"}
+
 ### 1.1 Version impérative
 
 !!! note "Dichotomie version impérative :heart:"
