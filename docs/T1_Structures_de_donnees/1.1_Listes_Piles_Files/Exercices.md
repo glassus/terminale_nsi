@@ -426,4 +426,74 @@
 
         Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
 
+### Exercice 7
+!!! example "Exercice 7"
+    Exercice 3 du sujet [Madagascar J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Madagascar_J1.pdf){. target="blank"}
 
+    [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
+
+    ??? tip "Correction Q1."
+        ```python linenums='1' hl_lines='3 4'
+        def ajout(f):
+            couleurs = ("bleu", "rouge", "jaune", "vert")
+            indice = randint(0, 3)
+            enfiler(f, couleur[indice])
+            return f
+        ```
+
+    ??? tip "Correction Q2."
+        ```python
+        def vider(f):
+            while not est_vide(f):
+                defiler(f)
+        ```
+
+    ??? tip "Correction Q3."
+        ```python linenums='1' hl_lines='5 6 8-10'
+        def affich_seq(sequence):
+            stock = creer_file_vide()
+            ajout(sequence)
+            while not est_vide(sequence):
+                c = defiler(sequence)
+                affichage(c)
+                time.sleep(0.5)
+                enfiler(stock, c)
+            while not est_vide(stock):
+                sequence(defiler(stock))        
+        ```
+
+    ??? tip "Correction Q4.a."
+        ```python linenums='1' hl_lines='2 6 7 8 10-12'
+        def tour_de_jeu(sequence):
+            affich_seq(sequence)
+            stock = creer_file_vide()
+            while not est_vide(sequence):
+                c_joueur = saisie_joueur()
+                c_seq = defiler(sequence)
+                if c_joueur == c_seq:
+                    enfiler(stock, c_seq)
+                else:
+                    vider(sequence)
+            while not est_vide(stock):
+                enfiler(sequence, defiler(stock))
+        ```
+
+    ??? tip "Correction Q4.b."
+        ```python linenums='1'
+        def tour_de_jeu_modifie(sequence):
+            while True:
+                affich_seq(sequence)
+                stock = creer_file_vide()
+                while not est_vide(sequence):
+                    c_joueur = saisie_joueur()
+                    c_seq = defiler(sequence)
+                    if c_joueur == c_seq:
+                        enfiler(stock, c_seq)
+                    else:
+                        vider(sequence)
+                        vider(stock)
+                while not est_vide(stock):
+                    enfiler(sequence, defiler(stock))
+        ```
+        
+        
