@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/exercices/">
       
       
         <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../../3.2_Programmation_dynamique/cours/">
+        <link rel="next" href="../../3.3_Recherche_textuelle/cours/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>Vers l'algorithme de dichotomie - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>Exercices - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
       
     
     
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vers-lalgorithme-de-dichotomie" class="md-skip">
+        <a href="#exercices-de-programmation-dynamique" class="md-skip">
           Aller au contenu
         </a>
       
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vers l'algorithme de dichotomie
+              Exercices
             
           </span>
         </div>
@@ -1086,16 +1086,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -1104,7 +1104,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           3.1 Diviser pour regner
@@ -1117,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
+      <a href="../../3.1_Diviser_pour_regner/cours/" class="md-nav__link">
         Cours
       </a>
     </li>
@@ -1136,16 +1136,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
       
       
       
@@ -1154,7 +1154,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           3.2 Programmation dynamique
@@ -1167,9 +1167,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.2_Programmation_dynamique/cours/" class="md-nav__link">
-        Programmation dynamique
+      <a href="../cours/" class="md-nav__link">
+        Cours
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Exercices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Exercices
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2539,133 +2594,87 @@
   
 
 
-<h1 id="vers-lalgorithme-de-dichotomie">Vers l'algorithme de dichotomie<a class="headerlink" href="#vers-lalgorithme-de-dichotomie" title="Permanent link">⚓︎</a></h1>
-<details class="note">
-<summary>Code à trous, newbie version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="n">i_centre</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
-        <span class="n">val_centrale</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>         
-        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>              
-            <span class="k">return</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>                
-            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">1</span>            
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="note">
-<summary>Code à trous, regular version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="n">i_centre</span> <span class="o">=</span> <span class="o">...</span>   
-        <span class="n">val_centrale</span> <span class="o">=</span> <span class="o">...</span>         
-        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span> <span class="p">:</span>              
-            <span class="k">return</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>                
-            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>        
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="note">
-<summary>Code à trous, expert version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>   
-        <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>         
-        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span> <span class="p">:</span>              
-            <span class="k">return</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>                
-            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>         
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="note">
-<summary>Code à trous, God version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-    <span class="o">...</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<p>Pour tester :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
-<span class="kc">False</span>
+<h1 id="exercices-de-programmation-dynamique">Exercices de programmation dynamique<a class="headerlink" href="#exercices-de-programmation-dynamique" title="Permanent link">⚓︎</a></h1>
+<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
+<p>Exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf" target="_blank">Métropole J2 2022</a></p>
+<details class="tip">
+<summary>Correction Q1.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">cellule</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Labyrinthe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grille</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construire_grille</span><span class="p">(</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">construire_grille</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+        <span class="n">grille</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="hll">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hauteur</span><span class="p">):</span>
+</span>            <span class="n">ligne</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="hll">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
+</span><span class="hll">                <span class="n">cellule</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span><span class="hll">                <span class="n">ligne</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cellule</span><span class="p">)</span>
+</span>            <span class="n">grille</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">grille</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q3.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">cellule2</span><span class="o">.</span><span class="n">murs</span><span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+<details class="tip">
+<summary>Correction Q4.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="n">c1_lig</span> <span class="o">==</span> <span class="n">c2_lig</span> <span class="ow">and</span> <span class="n">c1_col</span> <span class="o">-</span> <span class="n">c2_col</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">cellule1</span><span class="o">.</span><span class="n">murs</span><span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">cellule2</span><span class="o">.</span><span class="n">murs</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+<details class="tip">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">creer_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">haut</span><span class="p">,</span> <span class="n">long</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">haut</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span> <span class="c1"># Cas de base</span>
+<span class="hll">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">colonne</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">+</span> <span class="n">long</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span>            <span class="bp">self</span><span class="o">.</span><span class="n">creer_passage</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">long</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Cas de base</span>
+<span class="hll">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">ligne</span> <span class="o">+</span> <span class="n">haut</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span class="hll">            <span class="bp">self</span><span class="o">.</span><span class="n">creer_passage</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">colonne</span><span class="p">)</span>
+</span>    <span class="k">else</span><span class="p">:</span> <span class="c1"># Appels récursifs</span>
+            <span class="c1"># Code non étudié (Ne pas compléter)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q6.</summary>
+<p><img alt="image" class="center" src="../data/exo5.png" /></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 mars 2023</span>
       
     
   </small>
