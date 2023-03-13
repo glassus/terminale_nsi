@@ -205,7 +205,7 @@ Considérons la base de données Tour de France 2020, contenant les relations su
     Equipes ( <ins>codeEquipe</ins>  ```String```,  nomEquipe ```String``` ) 
 
     Notez le soulignement sous le mot «codeEquipe», qui signifie que cet attribut est une clé primaire. 
-    Les clés étrangères, lorsqu'elles existent, peuvent être signalées par une astérisque *.
+    Les clés étrangères, lorsqu'elles existent, peuvent être signalées par une astérisque * ou un dièse #.
 
 
 **relation Coureurs**
