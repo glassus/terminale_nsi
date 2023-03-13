@@ -1,7 +1,7 @@
 # Annales des Épreuves Écrites
 
 ## 2023
-
+- [Madagascar J1](data/2023/2023_Madagascar_J1.pdf)
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
 - [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](../corrections/2023/corr_sujet0_B/){. target="_blank"}
 
