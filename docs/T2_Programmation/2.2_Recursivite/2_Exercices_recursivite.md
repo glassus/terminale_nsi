@@ -355,7 +355,7 @@ Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_n
     ``` 
 
 ??? tip "correction Q4.b"
-    "GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palidromique.
+    "GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palindromique.
 
 ??? tip "correction Q4.c"
     ```python linenums='1'
@@ -372,7 +372,7 @@ Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_n
 
 
 
-
+{#
 ??? info "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
@@ -382,4 +382,4 @@ Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_n
 <!-- - [lien](data/DS02.pdf) vers le DS
 - [lien](data/DS02_correction.pdf) vers sa correction -->
 
-
+#}

@@ -500,7 +500,7 @@
         
         ou bien
 
-         ```python linenums='1'
+        ```python linenums='1'
         def tour_de_jeu_modifie(sequence):
             affich_seq(sequence)
             stock = creer_file_vide()
