@@ -3255,22 +3255,36 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
             <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>ou bien</p>
-<p><code>python linenums='1'
-def tour_de_jeu_modifie(sequence):
-    affich_seq(sequence)
-    stock = creer_file_vide()
-    while not est_vide(sequence):
-        c_joueur = saisie_joueur()
-        c_seq = defiler(sequence)
-        if c_joueur == c_seq:
-            enfiler(stock, c_seq)
-        else:
-            vider(sequence)
-            print("Perdu ! On rejoue !")
-            tour_de_jeu_modifie(sequence)
-    while not est_vide(stock):
-        enfiler(sequence, defiler(stock))
-    tour_de_jeu_modifie(sequence)</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+        <span class="n">c_joueur</span> <span class="o">=</span> <span class="n">saisie_joueur</span><span class="p">()</span>
+        <span class="n">c_seq</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">c_joueur</span> <span class="o">==</span> <span class="n">c_seq</span><span class="p">:</span>
+            <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c_seq</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">vider</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perdu ! On rejoue !&quot;</span><span class="p">)</span>
+            <span class="n">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
+    <span class="n">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </details>
 </div>
 
