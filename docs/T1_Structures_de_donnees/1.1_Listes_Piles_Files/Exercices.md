@@ -459,7 +459,7 @@
                 time.sleep(0.5)
                 enfiler(stock, c)
             while not est_vide(stock):
-                sequence(defiler(stock))        
+                enfiler(sequence, defiler(stock))        
         ```
 
     ??? tip "Correction Q4.a."

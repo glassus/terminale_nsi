@@ -312,6 +312,38 @@
 ## Exercice 
 Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
+??? tip "correction Q1.a."
+    Proposition 2
+
+??? tip "correction Q1.b."
+    ```txt[0]``` vaut 'b'  
+    ```txt[taille-1]``` vaut 'r'  
+    ```interieur``` vaut 'onjou'  
+
+
+??? tip "correction Q2."
+    ```python linenums='1'
+    def test_palindrome():
+        assert palindrome("kayak") == True
+        assert palindrome("canoe") == False   
+    ```
+    On teste les deux cas possibles.
+
+??? tip "correction Q."
+    djfl
+
+??? tip "correction Q."
+    djfl
+
+??? tip "correction Q."
+    djfl
+
+
+
+
+
+
+
 
 
 
