@@ -13,8 +13,9 @@
     - Dictionnaires : exercice 2 du sujet [Centres Etrangers J1 2021](T6_Annales/data/2021/21_Centres_Etrangers_1.pdf) :arrow_right: [correction](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
     - Programmation dynamique : exercice 5 du sujet [Métropole J2 2022](T6_Annales/data/2022/2022_Metropole_J2.pdf) :arrow_right: [correction](T3_Algorithmique/3.2_Programmation_dynamique/exercices/){. target="_blank"}
     - Piles/Files : exercice 3 du sujet [Madagascar J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Madagascar_J1.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/#exercice-7){. target="_blank"}
+    - Récursivité : exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"} :arrow_right: [correction](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/#exercice){. target="_blank"}
 
-   
+
 ### *Thèmes déjà traités*
 - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
 - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
