@@ -329,14 +329,40 @@ Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_n
     ```
     On teste les deux cas possibles.
 
-??? tip "correction Q."
-    djfl
+??? tip "correction Q3."
+    ```python linenums='1'
+    def palindrome_imperatif(txt):
+        if len(txt) < 2:
+            return True
+        i = 0
+        j = len(txt)-1
+        while i<j:
+            if txt[i] != txt[j]:
+                return False
+            i += 1
+            j -= 1
+        return True
+    ```
 
-??? tip "correction Q."
-    djfl
+??? tip "correction Q4.a."
+    ```python linenums='1'
+    def complementaire(txt):
+        comp = {"A":"T", "T":"A", "G":"C", "C":"G"}
+        sol = ""
+        for c in txt:
+            sol += comp[c]
+        return sol
+    ``` 
 
-??? tip "correction Q."
-    djfl
+??? tip "correction Q4.b"
+    "GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palidromique.
+
+??? tip "correction Q4.c"
+    ```python linenums='1'
+    def est_palindromique(txt):
+        txt_total = txt + complementaire(txt)
+        return palindrome(txt_total)
+    ```
 
 
 
