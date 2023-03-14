@@ -3225,6 +3225,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
 </details>
 <details class="tip">
 <summary>Correction Q4.b.</summary>
+<p>Question bizarre...</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3253,6 +3254,23 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
         <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
             <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
+<p>ou bien</p>
+<p><code>python linenums='1'
+def tour_de_jeu_modifie(sequence):
+    affich_seq(sequence)
+    stock = creer_file_vide()
+    while not est_vide(sequence):
+        c_joueur = saisie_joueur()
+        c_seq = defiler(sequence)
+        if c_joueur == c_seq:
+            enfiler(stock, c_seq)
+        else:
+            vider(sequence)
+            print("Perdu ! On rejoue !")
+            tour_de_jeu_modifie(sequence)
+    while not est_vide(stock):
+        enfiler(sequence, defiler(stock))
+    tour_de_jeu_modifie(sequence)</code></p>
 </details>
 </div>
 
@@ -3261,7 +3279,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2023</span>
       
     
   </small>
