@@ -3015,16 +3015,57 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 On teste les deux cas possibles.</p>
 </details>
 <details class="tip">
-<summary>correction Q.</summary>
-<p>djfl</p>
+<summary>correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">palindrome_imperatif</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">txt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">txt</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
 </details>
 <details class="tip">
-<summary>correction Q.</summary>
-<p>djfl</p>
+<summary>correction Q4.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">complementaire</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="n">comp</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">:</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span><span class="s2">&quot;G&quot;</span><span class="p">}</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">txt</span><span class="p">:</span>
+        <span class="n">sol</span> <span class="o">+=</span> <span class="n">comp</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</code></pre></div></td></tr></table></div>
 </details>
 <details class="tip">
-<summary>correction Q.</summary>
-<p>djfl</p>
+<summary>correction Q4.b</summary>
+<p>"GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palidromique.</p>
+</details>
+<details class="tip">
+<summary>correction Q4.c</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_palindromique</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="n">txt_total</span> <span class="o">=</span> <span class="n">txt</span> <span class="o">+</span> <span class="n">complementaire</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">palindrome</span><span class="p">(</span><span class="n">txt_total</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </details>
 <details class="info">
 <summary>Bibliographie</summary>
