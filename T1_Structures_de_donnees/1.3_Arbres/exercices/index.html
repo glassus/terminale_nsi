@@ -3282,6 +3282,19 @@ croissant.</p>
     <span class="k">return</span> <span class="n">nb</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<details class="tip">
+<summary>Correction Q3.b..</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>Fichier des mots français : <a href="data/gutemberg.txt">gutemberg.txt</a></p>
 
   <hr>
