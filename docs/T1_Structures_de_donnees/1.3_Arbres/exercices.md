@@ -668,7 +668,17 @@ Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/term
         return nb
     ```
 
+??? tip "Correction Q3.b.."
+    ```python linenums='1'
+    def hauteur(un_abr):
+        if un_abr.est_vide():
+            return 0
+        else:
+            return 1 + max(hauteur(un_abr.sous_arbre_gauche, hauteur(un_abr.sous_arbre_droit)
+    ```
+
+
+
 Fichier des mots français : [gutemberg.txt](data/gutemberg.txt)
     
      
-    
