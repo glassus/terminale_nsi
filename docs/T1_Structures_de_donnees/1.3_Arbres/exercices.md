@@ -653,10 +653,10 @@
 Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
 
 ??? tip "Correction Q1.a."
-    ```'Bonjour Alan'```
+    ```'Bonjour Alan !'```
 
 ??? tip "Correction Q1.b."
-    Ce sont des booléens.
+    Ce sont des booléens. ```x``` vaut ```False```, ```y``` vaut ```True```.    
 
 ??? tip "Correction Q1.c."
     ```python linenums='1'
