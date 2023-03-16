@@ -679,6 +679,6 @@ Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/term
 
 
 
-Fichier des mots français : [gutemberg.txt](data/gutemberg.txt)
+Fichier des mots français : [gutemberg.txt](./data/gutenberg.txt)
     
      
