@@ -667,6 +667,8 @@ Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/term
                 nb += 1
         return nb
     ```
+
+Fichier des mots français : [gutemberg.txt](data.gutemberg.txt)
     
      
     
