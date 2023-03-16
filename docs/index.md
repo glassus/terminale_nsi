@@ -14,7 +14,7 @@
     - Programmation dynamique : exercice 5 du sujet [Métropole J2 2022](T6_Annales/data/2022/2022_Metropole_J2.pdf) :arrow_right: [correction](T3_Algorithmique/3.2_Programmation_dynamique/exercices/){. target="_blank"}
     - Piles/Files : exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/#exercice-7){. target="_blank"}
     - Récursivité : exercice 4 du sujet [Amérique du Nord J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"} :arrow_right: [correction](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/#exercice){. target="_blank"}
-    - Arbres : exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.3_Arbres/exercices/#exercice){. target="_blank"}
+    - Arbres : exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.3_Arbres/exercices/#exercice){. target="_blank"}
 
 
 ### *Thèmes déjà traités*

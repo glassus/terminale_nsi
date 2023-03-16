@@ -649,5 +649,24 @@
         ```
 
 ## Exercice
-!!! example "{{ exercice() }}"
-    Exercice 3
+
+Exercice 3 su sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
+
+??? tip "Correction Q1.a."
+    ```'Bonjour Alan'```
+
+??? tip "Correction Q1.b."
+    Ce sont des booléens.
+
+??? tip "Correction Q1.c."
+    ```python linenums='1'
+    def occurences_lettre(une_chaine, une_lettre):
+        nb = 0
+        for lettre in une_chaine:
+            if lettre == une_lettre:
+                nb += 1
+        return nb
+    ```
+    
+     
+    
