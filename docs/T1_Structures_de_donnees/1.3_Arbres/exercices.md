@@ -650,7 +650,7 @@
 
 ## Exercice
 
-Exercice 3 su sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
+Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
 
 ??? tip "Correction Q1.a."
     ```'Bonjour Alan'```
