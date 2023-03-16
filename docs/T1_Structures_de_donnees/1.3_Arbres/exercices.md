@@ -647,3 +647,7 @@
             Afficher(A.valeur)
             Parcours(A.fils_droit)
         ```
+
+## Exercice
+!!! example "{{ exercice() }}"
+    Exercice 3

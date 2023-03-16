@@ -428,7 +428,7 @@
 
 ### Exercice 7
 !!! example "Exercice 7"
-    Exercice 3 du sujet [Madagascar J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Madagascar_J1.pdf){. target="blank"}
+    Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
 
     [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
 

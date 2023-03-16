@@ -1,8 +1,11 @@
 # Annales des Épreuves Écrites
 
 ## 2023
+
+- [Centres Étrangers J2](data/2023/2023_Centres_Etrangers_J2.pdf)
+- [Centres Étrangers J1](data/2023/2023_Centres_Etrangers_J1.pdf)
+- [Polynésie J2](data/2023/2023_Polynesie_J2.pdf)
 - [Polynésie J1](data/2023/2023_Polynesie_J1.pdf)
-- [Madagascar J1](data/2023/2023_Madagascar_J1.pdf)
 - [Sujet 0 - version A](data/2023/2023-sujet_0-a.pdf)
 - [Sujet 0 - version B](data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](../corrections/2023/corr_sujet0_B/){. target="_blank"}
 
