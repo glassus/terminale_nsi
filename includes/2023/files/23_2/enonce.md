@@ -1,5 +1,5 @@
 On considère des tableaux de nombres dont tous les éléments sont présents exactement
-trois fois et à suivre, sauf un élément qui est présent une unique fois et que l'on appelle «
+trois fois à la suite, sauf un élément qui est présent une unique fois et que l'on appelle «
 l'intrus ». Voici quelques exemples :
 
 ```python
