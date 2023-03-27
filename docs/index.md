@@ -3,18 +3,11 @@
 !!! abstract "Actualités"
     - :star: :star: :star: les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
-    - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
+    
 
 
-!!! note ":star: Révisions épreuve écrite :star: "
-    - sujet : [Amérique du Sud J2](T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf)  :arrow_right: [correction](T6_Annales/corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
-    - sujet : [Sujet 0 - version B](T6_Annales/data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_B/){. target="_blank"}
-    - sujet : [Sujet 0 - version A](T6_Annales/data/2023/2023-sujet_0-a.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_A/){. target="_blank"}
-    - Dictionnaires : exercice 2 du sujet [Centres Etrangers J1 2021](T6_Annales/data/2021/21_Centres_Etrangers_1.pdf) :arrow_right: [correction](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
-    - Programmation dynamique : exercice 5 du sujet [Métropole J2 2022](T6_Annales/data/2022/2022_Metropole_J2.pdf) :arrow_right: [correction](T3_Algorithmique/3.2_Programmation_dynamique/exercices/){. target="_blank"}
-    - Piles/Files : exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/#exercice-7){. target="_blank"}
-    - Récursivité : exercice 4 du sujet [Amérique du Nord J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"} :arrow_right: [correction](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/#exercice){. target="_blank"}
-    - Arbres : exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.3_Arbres/exercices/#exercice){. target="_blank"}
+!!! note ":star: Thème en cours d'étude :star: "
+    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
 
 
 ### *Thèmes déjà traités*
@@ -75,5 +68,17 @@
     - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
+
+- sujet : [Amérique du Sud J2](T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf)  :arrow_right: [correction](T6_Annales/corrections/2022/corr_AmSudJ2_2022/){. target="_blank"}
+    - sujet : [Sujet 0 - version B](T6_Annales/data/2023/2023-sujet_0-b.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_B/){. target="_blank"}
+    - sujet : [Sujet 0 - version A](T6_Annales/data/2023/2023-sujet_0-a.pdf) :arrow_right: [correction](T6_Annales/corrections/2023/corr_sujet0_A/){. target="_blank"}
+    - Dictionnaires : exercice 2 du sujet [Centres Etrangers J1 2021](T6_Annales/data/2021/21_Centres_Etrangers_1.pdf) :arrow_right: [correction](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
+    - Programmation dynamique : exercice 5 du sujet [Métropole J2 2022](T6_Annales/data/2022/2022_Metropole_J2.pdf) :arrow_right: [correction](T3_Algorithmique/3.2_Programmation_dynamique/exercices/){. target="_blank"}
+    - Piles/Files : exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/#exercice-7){. target="_blank"}
+    - Récursivité : exercice 4 du sujet [Amérique du Nord J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"} :arrow_right: [correction](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/#exercice){. target="_blank"}
+    - Arbres : exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"} :arrow_right: [correction](T1_Structures_de_donnees/1.3_Arbres/exercices/#exercice){. target="_blank"}
+
+
+- [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
 
 -->
