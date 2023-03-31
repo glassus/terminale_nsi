@@ -23,7 +23,7 @@
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
 - [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
-
+- [https://www.youtube.com/watch?v=PvpeSYVNVrE](https://www.youtube.com/watch?v=PvpeSYVNVrE)
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
