@@ -7,7 +7,7 @@ Documentation : [https://docs.sympy.org/latest/modules/crypto.html](https://docs
 
 Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
-{#
+
 ??? tip "correction"
     ```python linenums='1'
     from sympy.crypto.crypto import decipher_shift
@@ -18,7 +18,7 @@ Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sac
         phrase = decipher_shift(msg, cle)
         print(phrase)
     ```
-#}
+
 
 ### Exercice 2
 **Chiffrage affine**
@@ -33,7 +33,7 @@ où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec
 
 **Q1.** Codez votre fonction ```affine(msg, a, b)```
 
-{#
+
 ??? tip "correction"
     ```python linenums='1'
     def rang(lettre):
@@ -48,16 +48,16 @@ où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec
             sol += nv_lettre
         return sol
     ```
-#}
+
 
 **Q2.** Comparez vos résultats avec ceux obtenus par la fonction ```encipher_affine()``` de ```sympy```.
 
 **Q3.** Décodez la phrase ```UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC```, sachant qu'elle contient le mot ```TRAVAIL``` et que $a$ et $b$ sont inférieurs à 20.
 
-{#
+
 ??? tip "correction"
     ```python linenums='1'
-    from sympy.crypto.crypto import encipher_affine, decipher_affine
+    from sympy.crypto.crypto import decipher_affine
     from math import gcd
 
     for a in range(1,20):
@@ -67,7 +67,7 @@ où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec
                 if 'TRAVAIL' in p:
                     print(p)
     ```
-#}
+
 
 ### Exercice 3
 **Cryptographie RSA** presque à la main
