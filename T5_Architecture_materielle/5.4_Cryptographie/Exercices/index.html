@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.4_Cryptographie/Exercices/">
       
       
-        <link rel="prev" href="../../5.3_Protocoles_de_routage/Exercices/">
+        <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../cours/">
+        <link rel="next" href="../../../T6_5_algos_coeur/cours/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
@@ -1765,6 +1765,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1841,20 +1855,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
-        Cryptographie
-      </a>
     </li>
   
 
@@ -2629,24 +2629,7 @@
 <h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
 <p><strong>Utilisation des biblitohèques cryptographiques du module <code>sympy</code>.</strong></p>
 <p>Documentation : <a href="https://docs.sympy.org/latest/modules/crypto.html" target="_blank">https://docs.sympy.org/latest/modules/crypto.html</a></p>
-<p>Décoder la phrase <code>RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV</code>, sachant qu'elle a été chiffrée par décalage.</p>
-<details class="tip">
-<summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="n">encipher_affine</span>
-
-<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV&#39;</span>
-
-<span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
-    <span class="n">phrase</span> <span class="o">=</span> <span class="n">decipher_shift</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
+<p>Décoder la phrase <code>RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV</code>, sachant qu'elle a été chiffrée par décalage (<em>shift</em> en anglais...)</p>
 <h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h3>
 <p><strong>Chiffrage affine</strong></p>
 <p>Principe du chiffrage affine :</p>
@@ -2657,54 +2640,8 @@
 </ul>
 <p>où <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont deux nombres entiers. Attention, <em>a</em> doit être premier avec 26.</p>
 <p><strong>Q1.</strong> Codez votre fonction <code>affine(msg, a, b)</code></p>
-<details class="tip">
-<summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
-
-<span class="k">def</span> <span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
-        <span class="n">rg</span> <span class="o">=</span> <span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
-        <span class="n">nv_rg</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">rg</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="c1">#chiffrement affine</span>
-        <span class="n">nv_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">nv_rg</span> <span class="o">+</span> <span class="mi">65</span><span class="p">)</span>
-        <span class="n">sol</span> <span class="o">+=</span> <span class="n">nv_lettre</span>
-    <span class="k">return</span> <span class="n">sol</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q2.</strong> Comparez vos résultats avec ceux obtenus par la fonction <code>encipher_affine()</code> de <code>sympy</code>.</p>
 <p><strong>Q3.</strong> Décodez la phrase <code>UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC</code>, sachant qu'elle contient le mot <code>TRAVAIL</code> et que <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont inférieurs à 20.</p>
-<details class="tip">
-<summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="n">encipher_affine</span><span class="p">,</span> <span class="n">decipher_affine</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
-
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">decipher_affine</span><span class="p">(</span><span class="s1">&#39;UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
-            <span class="k">if</span> <span class="s1">&#39;TRAVAIL&#39;</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <h3 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h3>
 <p><strong>Cryptographie RSA</strong> presque à la main</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2758,75 +2695,12 @@
 <li>Exécutez le programme et regardez en console le contenu des différentes variables.</li>
 <li>Observez les deux lignes qui contiennent les opérations de chiffrement et de déchiffrement : que faut-il changer pour chiffrer avec la clé privée et déchiffrer avec la clé publique ?</li>
 </ol>
-<details class="tip">
-<summary>correction</summary>
-<p>Q3. Il suffit d'inverser <code>e</code> et <code>d</code>  dans les lignes 20 et 21.</p>
-</details>
 <h3 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h3>
 <p>En vous servant du code précédent, déchiffrez le message <code>58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182</code>  sachant que :</p>
 <ul>
 <li><span class="arithmatex">\(e\)</span> vaut 65537.</li>
 <li><span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> sont respectivement les 13èmes et 14èmes nombres de Mersenne.</li>
 </ul>
-<details class="tip">
-<summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">Crypto</span>
-<span class="kn">import</span> <span class="nn">libnum</span>
-<span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
-<span class="kn">from</span> <span class="nn">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span> 
-
-<span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;en NSI on fait de la crypto&quot;</span>
-
-<span class="c1"># p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</span>
-<span class="c1"># q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">521</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="n">q</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">607</span> <span class="o">-</span> <span class="mi">1</span>
-
-
-<span class="n">n</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
-<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
-
-<span class="c1"># M = bytes_to_long(msg.encode(&#39;utf-8&#39;))</span>
-<span class="c1"># </span>
-<span class="c1"># c = pow(M, e, n) # M puissance e modulo n</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="mi">58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182</span>
-<span class="n">res</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
 <p><strong>module RSA</strong> dans les règles de l'art</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Crypto.PublicKey</span> <span class="kn">import</span> <span class="n">RSA</span>
@@ -2858,7 +2732,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 avril 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 avril 2023</span>
       
     
   </small>
