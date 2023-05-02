@@ -7,10 +7,11 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 
 
 ### *Thèmes déjà traités*
+- [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
 - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
 - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
 - [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
