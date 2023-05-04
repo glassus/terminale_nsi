@@ -2,7 +2,7 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
-    - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
+    - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
     
 
 
