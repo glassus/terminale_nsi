@@ -58,7 +58,7 @@ Dans un graphe **orienté**, les *arcs* ne peuvent être empruntés que dans le 
 
 Les sommets C et D sont *adjacents* au sommet B (mais pas A !), ce sont les *voisins* de B.
 
-**Exemple de graphe non-orienté** : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.
+**Exemple de graphe orienté** : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.
 
 #### 1.2.3 Graphe pondéré
 
@@ -153,7 +153,7 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
         
         
 !!! example "{{ exercice() }}"
-    Construire les graphes correspondants aux matrices d'adjacences suivantes:
+    Construire les graphes correspondants aux matrices d'adjacence suivantes:
 
     **Q1.** $M_1 =\pmatrix{
         0&1&1&1&1\\
@@ -208,10 +208,11 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
     sera représentée par la variable ```G``` suivante :
 
     ```python
-    G = [[0, 1, 1, 0, 0],
-          [1, 0, 1, 1, 0],
-          [1, 1, 0, 1, 1],
-          [0, 1, 1, 0, 1],
+    G = [[0, 1, 1, 1, 1],
+          [1, 0, 1, 0, 0],
+          [1, 1, 0, 1, 0],
+          [1, 0, 1, 0, 1],
+          [1, 0, 0, 1, 0]]
     ```
 
 **Complexité en mémoire et temps d'accès :**
@@ -251,7 +252,8 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
 #### 2.2.1 Exercices
 
 !!! example "{{ exercice() }}"
-    Construire les graphes correspondants aux listes d'adjacences suivantes.
+    Construire les graphes correspondants aux listes d'adjacence suivantes.
+
     **Q1.** 
     ```python
     G1 = {
