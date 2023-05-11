@@ -2677,7 +2677,7 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
 <p><img alt="" class="center" src="../data/exemple_graphe_oriente.png" width="480" /> </p>
 <p>Dans un graphe <strong>orienté</strong>, les <em>arcs</em> ne peuvent être empruntés que dans le sens de la flèche, et un <em>chemin</em> est une suite de sommets reliés par des arcs, comme B → C → D → E par exemple.</p>
 <p>Les sommets C et D sont <em>adjacents</em> au sommet B (mais pas A !), ce sont les <em>voisins</em> de B.</p>
-<p><strong>Exemple de graphe non-orienté</strong> : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.</p>
+<p><strong>Exemple de graphe orienté</strong> : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.</p>
 <h4 id="123-graphe-pondere">1.2.3 Graphe pondéré<a class="headerlink" href="#123-graphe-pondere" title="Permanent link">⚓︎</a></h4>
 <p><img alt="" class="center" src="../data/exemple_graphe_pondere.png" width="480" /> </p>
 <p>Un graphe est <strong>pondéré</strong> (ou valué) si on attribue à chaque arête une valeur numérique (la plupart du temps positive), qu'on appelle <em>mesure</em>, <em>poids</em>, <em>coût</em> ou <em>valuation</em>.</p>
@@ -2749,7 +2749,7 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<p>Construire les graphes correspondants aux matrices d'adjacences suivantes:</p>
+<p>Construire les graphes correspondants aux matrices d'adjacence suivantes:</p>
 <p><strong>Q1.</strong> <span class="arithmatex">\(M_1 =\pmatrix{
     0&amp;1&amp;1&amp;1&amp;1\\
     1&amp;0&amp;1&amp;0&amp;0\\
@@ -2797,10 +2797,11 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
     1&amp;0&amp;0&amp;1&amp;0\\
     }\)</span>, associée au graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
 <p>sera représentée par la variable <code>G</code> suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<div class="highlight"><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
 </code></pre></div>
 </div>
 <p><strong>Complexité en mémoire et temps d'accès :</strong></p>
@@ -2850,8 +2851,8 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <h4 id="221-exercices">2.2.1 Exercices<a class="headerlink" href="#221-exercices" title="Permanent link">⚓︎</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<p>Construire les graphes correspondants aux listes d'adjacences suivantes.
-<strong>Q1.</strong> 
+<p>Construire les graphes correspondants aux listes d'adjacence suivantes.</p>
+<p><strong>Q1.</strong> 
 <div class="highlight"><pre><span></span><code><span class="n">G1</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
 <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
