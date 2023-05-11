@@ -17,7 +17,7 @@
         <link rel="next" href="../../../T2_Programmation/sommaire/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
@@ -738,9 +738,87 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Cours
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-notion-de-graphe-et-vocabulaire" class="md-nav__link">
+    1. Notion de graphe et vocabulaire
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Notion de graphe et vocabulaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-exemples-de-situations" class="md-nav__link">
+    1.1 Exemples de situations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-vocabulaire" class="md-nav__link">
+    1.2 Vocabulaire
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modelisations-dun-graphe" class="md-nav__link">
+    2. Modélisations d'un graphe
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modélisations d'un graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-representation-par-matrice-dadjacence" class="md-nav__link">
+    2.1 Représentation par matrice d'adjacence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-representation-par-listes-dadjacence" class="md-nav__link">
+    2.2 Représentation par listes d'adjacence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2570,15 +2648,244 @@
 
 
 <h1 id="graphes">Graphes<a class="headerlink" href="#graphes" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../data/memestart.jpg" width="40%" /></p>
 <p><img alt="image" class="center" src="../data/BO1.png" /></p>
 <p><img alt="image" class="center" src="../data/BO2.png" /></p>
+<p><em>Ce cours est intégralement inspiré du <a class="" href="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/T1.5_Graphes/T1.5.1_Graphes/" target="_blank">cours de Cédric Gouygou</a> , du lycée Marguerite de Valois d'Angoulême (16)</em></p>
+<h2 id="1-notion-de-graphe-et-vocabulaire">1. Notion de graphe et vocabulaire<a class="headerlink" href="#1-notion-de-graphe-et-vocabulaire" title="Permanent link">⚓︎</a></h2>
+<p>Le concept de graphe permet de résoudre de nombreux problèmes en mathématiques comme en informatique. C'est un outil de représentation très courant, et nous l'avons déjà rencontré à plusieurs reprises, en particulier lors de l'étude de réseaux.</p>
+<h3 id="11-exemples-de-situations">1.1 Exemples de situations<a class="headerlink" href="#11-exemples-de-situations" title="Permanent link">⚓︎</a></h3>
+<h4 id="111-reseau-informatique">1.1.1 Réseau informatique<a class="headerlink" href="#111-reseau-informatique" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/22J2AS1_ex2.png" width="40%" /> </p>
+<h4 id="112-reseau-de-transport">1.1.2 Réseau de transport<a class="headerlink" href="#112-reseau-de-transport" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/carte-metro-parisien-768x890.jpg" width="40%" /> </p>
+<h4 id="113-reseau-social">1.1.3 Réseau social<a class="headerlink" href="#113-reseau-social" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/graphe_RS.png" width="40%" /> </p>
+<h4 id="114-generalisation">1.1.4 Généralisation<a class="headerlink" href="#114-generalisation" title="Permanent link">⚓︎</a></h4>
+<p>Une multitude de problèmes concrets d'origines très diverses peuvent donner lieu à des modélisations par des graphes : c'est donc une structure essentielle en sciences, qui requiert un formalisme mathématique particulier que nous allons découvrir. 
+<img alt="" class="center" src="../data/graph_math.png" /> </p>
+<p>L'étude de la théorie des graphes est un champ très vaste des mathématiques : nous allons surtout nous intéresser à l'implémentation en Python d'un graphe et à différents problèmes algorithmiques qui se posent dans les graphes.</p>
+<h3 id="12-vocabulaire">1.2 Vocabulaire<a class="headerlink" href="#12-vocabulaire" title="Permanent link">⚓︎</a></h3>
+<p>En général, un graphe est un ensemble d'objets, appelés <em>sommets</em> ou parfois <em>nœuds</em> (<em>vertex</em> or <em>nodes</em> en anglais) reliés par des <em>arêtes</em> ou <em>arcs</em> ((<em>edges</em> en anglais)).
+Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> .</p>
+<h4 id="121-graphe-non-oriente">1.2.1 Graphe non-orienté<a class="headerlink" href="#121-graphe-non-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe.png" width="480" /> </p>
+<p>Dans un graphe <strong>non-orienté</strong>, les <em>arêtes</em> peuvent être empruntées dans les deux sens, et une <em>chaîne</em> est une suite de sommets reliés par des arêtes, comme C - B - A - E par exemple. La <em>longueur</em> de cette chaîne est alors 3, soit le nombre d'arêtes.</p>
+<p>Les sommets B et E sont <em>adjacents</em> au sommet A, ce sont les <em>voisins</em> de A.</p>
+<p><strong>Exemple de graphe non-orienté</strong> : le graphe des relations d'un individu sur Facebook est non-orienté, car si on est «ami» avec quelqu'un la réciproque est vraie.</p>
+<h4 id="122-graphe-oriente">1.2.2 Graphe orienté<a class="headerlink" href="#122-graphe-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe_oriente.png" width="480" /> </p>
+<p>Dans un graphe <strong>orienté</strong>, les <em>arcs</em> ne peuvent être empruntés que dans le sens de la flèche, et un <em>chemin</em> est une suite de sommets reliés par des arcs, comme B → C → D → E par exemple.</p>
+<p>Les sommets C et D sont <em>adjacents</em> au sommet B (mais pas A !), ce sont les <em>voisins</em> de B.</p>
+<p><strong>Exemple de graphe non-orienté</strong> : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.</p>
+<h4 id="123-graphe-pondere">1.2.3 Graphe pondéré<a class="headerlink" href="#123-graphe-pondere" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/exemple_graphe_pondere.png" width="480" /> </p>
+<p>Un graphe est <strong>pondéré</strong> (ou valué) si on attribue à chaque arête une valeur numérique (la plupart du temps positive), qu'on appelle <em>mesure</em>, <em>poids</em>, <em>coût</em> ou <em>valuation</em>.</p>
+<p>Par exemple:</p>
+<ul>
+<li>dans le protocole OSPF, on pondère les liaisons entre routeurs par le coût;</li>
+<li>dans un réseau routier entre plusieurs villes, on pondère par les distances.</li>
+</ul>
+<h4 id="124-connexite">1.2.4 Connexité<a class="headerlink" href="#124-connexite" title="Permanent link">⚓︎</a></h4>
+<p>Un graphe est <strong>connexe</strong> s'il est d'un seul tenant: c'est-à-dire si n'importe quelle paire de sommets peut toujours être reliée par une chaîne. Autrement un graphe est connexe s'il est «en un seul morceau».</p>
+<p>Par exemple, le graphe précédent est connexe. Mais le suivant ne l'est pas: il n'existe pas de chaîne entre les sommets A et F par exemple.</p>
+<p><img alt="" class="center" src="../data/exemple_graphe_non_connexe.png" width="480" /> </p>
+<p>Il possède cependant deux <strong>composantes connexes</strong> : le sous-graphe composé des sommets A, B, C, D et E d'une part et le sous-graphe composé des sommets F, G et H.</p>
+<h2 id="2-modelisations-dun-graphe">2. Modélisations d'un graphe<a class="headerlink" href="#2-modelisations-dun-graphe" title="Permanent link">⚓︎</a></h2>
+<p>Pour modéliser un graphe, il faut établir par convention une manière de donner les renseignements suivants :</p>
+<ul>
+<li>qui sont les sommets ?</li>
+<li>pour chaque sommet, quels sont ses voisins ? (et éventuellement quel poids porte l'arête qui les relie)</li>
+</ul>
+<h3 id="21-representation-par-matrice-dadjacence">2.1 Représentation par matrice d'adjacence<a class="headerlink" href="#21-representation-par-matrice-dadjacence" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principe</p>
+<ul>
+<li>On classe les sommets (en les numérotant, ou par ordre alphabétique).</li>
+<li>on représente les arêtes (ou les arcs) dans une matrice, c'est-à-dire un tableau à deux dimensions où on inscrit un 1 en ligne <code>i</code> et colonne <code>j</code> si les sommets de rang <code>i</code> et de rang <code>j</code> sont <strong>voisins</strong> (dits aussi <em>adjacents</em>).</li>
+</ul>
+<p>Ce tableau s'appelle une <strong>matrice d'adjacence</strong> (on aurait très bien pu l'appeler aussi <em>matrice de voisinage</em>).</p>
+</div>
+<h4 id="211-graphe-non-oriente">2.1.1 Graphe non orienté<a class="headerlink" href="#211-graphe-non-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_1.png" width="70%" /></p>
+<p>Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, ce qui signifie que l'arête qui relie B et C va donner lieu à deux "1" dans la matrice, situé de part et d'autre de la diagonale descendante (un mathématicien parlera de matrice <em>symétrique</em>).</p>
+<h4 id="212-graphe-oriente">2.1.2 Graphe orienté<a class="headerlink" href="#212-graphe-oriente" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_2.png" width="70%" /></p>
+<h4 id="213-graphe-pondere">2.1.3 Graphe pondéré<a class="headerlink" href="#213-graphe-pondere" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/matgraph_3.png" width="75%" /></p>
+<h4 id="214-exercices">2.1.4 Exercices<a class="headerlink" href="#214-exercices" title="Permanent link">⚓︎</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Soit un ensemble d'amis connectés sur un réseau social quelconque. Voici les interactions qu'on a recensées :</p>
+<ul>
+<li>André est ami avec Béa, Charles, Estelle et Fabrice,</li>
+<li>Béa est amie avec André, Charles, Denise et Héloïse,</li>
+<li>Charles est ami avec André, Béa, Denise, Estelle, Fabrice et Gilbert,</li>
+<li>Denise est amie avec Béa, Charles et Estelle,</li>
+<li>Estelle est amie avec André, Charles et Denise,</li>
+<li>Fabrice est ami avec André, Charles et Gilbert,</li>
+<li>Gilbert est ami avec Charles et Fabrice,</li>
+<li>Héloïse est amie avec Béa.</li>
+</ul>
+<p><strong>Q1.</strong> Représenter le graphe des relations dans ce réseau social (on désignera chaque individu par l'initiale de son prénom). Il est possible de faire en sorte que les arêtes ne se croisent pas !</p>
+<details class="tip">
+<summary>Correction Q1</summary>
+<p><img alt="image" class="center" src="../data/grapheRS.png" /></p>
+</details>
+<p><strong>Q2.</strong> Donner la matrice d'adjacence de ce graphe.</p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<p><span class="arithmatex">\(\pmatrix{
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+}\)</span></p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Construire les graphes correspondants aux matrices d'adjacences suivantes:</p>
+<p><strong>Q1.</strong> <span class="arithmatex">\(M_1 =\pmatrix{
+    0&amp;1&amp;1&amp;1&amp;1\\
+    1&amp;0&amp;1&amp;0&amp;0\\
+    1&amp;1&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;1&amp;0&amp;1\\
+    1&amp;0&amp;0&amp;1&amp;0\\
+    }\)</span></p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
+</details>
+<p><strong>Q2.</strong> <span class="arithmatex">\(M_2=\pmatrix{
+    0&amp;1&amp;1&amp;0&amp;1\\
+    0&amp;0&amp;1&amp;0&amp;0\\
+    0&amp;0&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;0&amp;0&amp;1\\
+    0&amp;0&amp;0&amp;0&amp;0\\
+    }\)</span></p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q2.png" /></p>
+</details>
+<p><strong>Q3.</strong> <span class="arithmatex">\(M_3=\pmatrix{
+    0&amp;5&amp;10&amp;50&amp;12\\
+    5&amp;0&amp;10&amp;0&amp;0\\
+    10&amp;10&amp;0&amp;8&amp;0\\
+    50&amp;0&amp;8&amp;0&amp;100\\
+    12&amp;0&amp;0&amp;100&amp;0\\
+    }\)</span>    </p>
+<details class="tip">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/ex2_Q3.png" /></p>
+</details>
+</div>
+<h4 id="215-implementation-python-des-matrices-dadjacence">2.1.5 Implémentation Python des matrices d'adjacence<a class="headerlink" href="#215-implementation-python-des-matrices-dadjacence" title="Permanent link">⚓︎</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Matrices d'adjacence en Python</p>
+<p>Une matrice se représente naturellement par une liste de listes.</p>
+<p><strong>Exemple:</strong>
+La matrice <span class="arithmatex">\(M_1 =\pmatrix{
+    0&amp;1&amp;1&amp;1&amp;1\\
+    1&amp;0&amp;1&amp;0&amp;0\\
+    1&amp;1&amp;0&amp;1&amp;0\\
+    1&amp;0&amp;1&amp;0&amp;1\\
+    1&amp;0&amp;0&amp;1&amp;0\\
+    }\)</span>, associée au graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
+<p>sera représentée par la variable <code>G</code> suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</code></pre></div>
+</div>
+<p><strong>Complexité en mémoire et temps d'accès :</strong></p>
+<ul>
+<li>
+<p>Pour un graphe à <span class="arithmatex">\(n\)</span> sommets, la complexité en mémoire (appelée aussi <em>complexité spatiale</em>) de la représentation matricielle est en <span class="arithmatex">\(O(n^2)\)</span>.</p>
+</li>
+<li>
+<p>Tester si un sommet est isolé (ou connaître ses voisins) est en <span class="arithmatex">\(O(n)\)</span> puisqu'il faut parcourir une ligne, mais tester si deux sommets sont adjacents (voisins) est en <span class="arithmatex">\(O(1)\)</span>, c'est un simple accès au tableau.</p>
+</li>
+</ul>
+<p>La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seule manière de représenter un graphe : nous allons voir une autre modélisation, par <strong>liste d'adjacence</strong>.</p>
+<h3 id="22-representation-par-listes-dadjacence">2.2 Représentation par listes d'adjacence<a class="headerlink" href="#22-representation-par-listes-dadjacence" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principe</p>
+<ul>
+<li>
+<p>On associe à chaque sommet sa liste des voisins (c'est-à-dire les sommets adjacents). On utilise pour cela un dictionnaire dont les clés sont les sommets et les valeurs les listes des voisins.</p>
+</li>
+<li>
+<p>Dans le cas d'un graphe orienté on associe à chaque sommet la liste des <em>successeurs</em> (ou bien des <em>prédécesseurs</em>, au choix).</p>
+</li>
+</ul>
+<p>Par exemple, le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> sera représenté par le dictionnaire :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">G</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+     <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Complexité en mémoire et temps d'accès :</strong></p>
+<ul>
+<li>
+<p>Pour un graphe à <span class="arithmatex">\(n\)</span> sommets et <span class="arithmatex">\(m\)</span> arêtes, la complexité spatiale de la représentation en liste d'adjacence est en <span class="arithmatex">\(O(n+m)\)</span>. C'est beaucoup mieux qu'une matrice d'adjacence lorsque le graphe comporte peu d'arêtes (i.e. beaucoup de 0 dans la matrice, non stockés avec des listes).</p>
+</li>
+<li>
+<p>Tester si un sommet est isolé (ou connaître ses voisins) est en <span class="arithmatex">\(O(1)\)</span> puisqu'on y accède immédiatement, mais tester si deux sommets sont adjacents (voisins) est en <span class="arithmatex">\(O(n)\)</span> car il faut parcourir la liste.</p>
+</li>
+</ul>
+<h4 id="221-exercices">2.2.1 Exercices<a class="headerlink" href="#221-exercices" title="Permanent link">⚓︎</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>Construire les graphes correspondants aux listes d'adjacences suivantes.
+<strong>Q1.</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">G1</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+<span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
+     <span class="p">}</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction Q1</summary>
+<p><img alt="image" class="center" src="../data/ex3_Q1.png" /></p>
+</details>
+<p><strong>Q2.</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">],</span>
+<span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+     <span class="p">}</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<p><img alt="image" class="center" src="../data/ex3_Q2.png" /></p>
+</details>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 juillet 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 mai 2023</span>
       
     
   </small>
