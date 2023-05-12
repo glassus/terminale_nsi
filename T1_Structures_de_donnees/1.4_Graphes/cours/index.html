@@ -17,7 +17,7 @@
         <link rel="next" href="../../../T2_Programmation/sommaire/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -807,6 +807,40 @@
           <li class="md-nav__item">
   <a href="#22-representation-par-listes-dadjacence" class="md-nav__link">
     2.2 Représentation par listes d'adjacence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creation-dune-classe-graphe" class="md-nav__link">
+    3. Création d'une classe Graphe
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Création d'une classe Graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-interface-souhaitee" class="md-nav__link">
+    3.1 Interface souhaitée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-conseils-dimplementation" class="md-nav__link">
+    3.2 Conseils d'implémentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implementation" class="md-nav__link">
+    3.3 Implémentation
   </a>
   
 </li>
@@ -2658,7 +2692,7 @@
 <h4 id="111-reseau-informatique">1.1.1 Réseau informatique<a class="headerlink" href="#111-reseau-informatique" title="Permanent link">⚓︎</a></h4>
 <p><img alt="" class="center" src="../data/22J2AS1_ex2.png" width="40%" /> </p>
 <h4 id="112-reseau-de-transport">1.1.2 Réseau de transport<a class="headerlink" href="#112-reseau-de-transport" title="Permanent link">⚓︎</a></h4>
-<p><img alt="" class="center" src="../data/carte-metro-parisien-768x890.jpg" width="40%" /> </p>
+<p><img alt="" class="center" src="../data/carte-metro-parisien-768x890.jpg" width="60%" /> </p>
 <h4 id="113-reseau-social">1.1.3 Réseau social<a class="headerlink" href="#113-reseau-social" title="Permanent link">⚓︎</a></h4>
 <p><img alt="" class="center" src="../data/graphe_RS.png" width="40%" /> </p>
 <h4 id="114-generalisation">1.1.4 Généralisation<a class="headerlink" href="#114-generalisation" title="Permanent link">⚓︎</a></h4>
@@ -2880,7 +2914,69 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <p><img alt="image" class="center" src="../data/ex3_Q2.png" /></p>
 </details>
 </div>
-<p>test</p>
+<h2 id="3-creation-dune-classe-graphe">3. Création d'une classe <code>Graphe</code><a class="headerlink" href="#3-creation-dune-classe-graphe" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
+<p>Nous voulons que le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> puisse être créé grâce aux instructions suivantes :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode <code>sont_voisins</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<p>Enfin, nous voulons pouvoir obtenir facilement la liste de tous les voisins d'un sommet avec la méthode <code>voisins</code>:
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="32-conseils-dimplementation">3.2 Conseils d'implémentation<a class="headerlink" href="#32-conseils-dimplementation" title="Permanent link">⚓︎</a></h3>
+<p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
+<p>L'objet de type <code>Graphe</code> aura comme attributs :</p>
+<ul>
+<li>une liste <code>liste_sommets</code> (donnée en paramètre dans la liste <code>liste_sommets</code>) </li>
+<li>un dictionnaire <code>adjacents</code>, où chaque sommet se verra attribuer une liste vide <code>[]</code>.</li>
+</ul>
+<h3 id="33-implementation">3.3 Implémentation<a class="headerlink" href="#33-implementation" title="Permanent link">⚓︎</a></h3>
+<details class="abstract">
+<summary>Implémentation d'une classe <code>Graphe</code> </summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sommetA</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="ow">and</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
   <hr>
 <div class="md-source-file">
@@ -2973,7 +3069,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
