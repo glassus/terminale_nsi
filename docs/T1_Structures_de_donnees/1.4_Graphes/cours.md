@@ -22,7 +22,7 @@ Le concept de graphe permet de résoudre de nombreux problèmes en mathématique
 ![](data/22J2AS1_ex2.png){: .center width=40%} 
 
 #### 1.1.2 Réseau de transport
-![](data/carte-metro-parisien-768x890.jpg){: .center width=40%} 
+![](data/carte-metro-parisien-768x890.jpg){: .center width=60%} 
 
 #### 1.1.3 Réseau social
 ![](data/graphe_RS.png){: .center width=40%} 
@@ -284,14 +284,75 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
         ![image](data/ex3_Q2.png){: .center}
 
 
-test
+
+
+
+
+
+## 3. Création d'une classe ```Graphe```
+
+### 3.1 Interface souhaitée
+
+Nous voulons que le graphe ![image](data/ex2_Q1.png){: .center} puisse être créé grâce aux instructions suivantes :
+
+```python
+>>> g = Graphe(['A', 'B', 'C', 'D', 'E'])
+>>> g.ajoute_arete('A', 'B')
+>>> g.ajoute_arete('A', 'C')
+>>> g.ajoute_arete('A', 'D')
+>>> g.ajoute_arete('A', 'E')
+>>> g.ajoute_arete('B', 'C')
+>>> g.ajoute_arete('C', 'D')
+>>> g.ajoute_arete('D', 'E')
+```
+
+Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode ```sont_voisins``` :
+
+```python
+>>> g.sont_voisins('E', 'A')
+True
+>>> g.sont_voisins('E', 'B')
+False
+```
+
+Enfin, nous voulons pouvoir obtenir facilement la liste de tous les voisins d'un sommet avec la méthode ```voisins```:
+```python
+>>> g.voisins('C')
+['A', 'B', 'D']
+``` 
+
+### 3.2 Conseils d'implémentation
+
+Dans cette partie, nous ne traiterons que des graphes **non-orientés**.
+
+L'objet de type ```Graphe``` aura comme attributs :
+
+- une liste ```liste_sommets``` (donnée en paramètre dans la liste ```liste_sommets```) 
+- un dictionnaire ```adjacents```, où chaque sommet se verra attribuer une liste vide ```[]```.
+
+
+### 3.3 Implémentation
+
+??? abstract "Implémentation d'une classe ```Graphe``` "
+    ```python linenums='1'
+    class Graphe:
+        def __init__(self, liste_sommets):
+            self.liste_sommets = liste_sommets
+            self.adjacents = {sommet : [] for sommet in liste_sommets}
+
+        def ajoute_arete(self, sommetA, sommetB):
+            if sommetA in self.liste_sommets and sommetB in self.liste_sommets:
+                self.adjacents[sommetA].append(sommetB)
+                self.adjacents[sommetB].append(sommetA)
+            
+        def voisins(self, sommet):
+            return self.adjacents[sommet]
+
+        def sont_voisins(self, sommetA, sommetB):
+            return sommetB in self.adjacents[sommetA]
+    ```
 
 {#
-
-
-## 3. Graphes en POO
-
-
 !!! code "Classe `#!py Graphe`"
     Il s'agit maintenant d'écrire une classe `Graphe` dont l'implémentation sera faite par listes d'adjacence (plus pratique pour ce qu'on veut faire, à savoir récupérer les voisins d'un sommet) et le constructeur prendra en paramètre la liste des sommets et construit un dictionnaire dont les valeurs sont des listes vides.
 
@@ -338,6 +399,9 @@ test
                 self.adj[s2].append(s1)
     ```
     Et pour une classe représentant un graphe orienté... c'est la même sauf pour la méthode `#!py ajoute_arete` à renommer en `#!py ajoute_arc` et où il suffit d'enlever les deux dernières instructions !
+
+
+{#
 
 ## 4. Exercices
 

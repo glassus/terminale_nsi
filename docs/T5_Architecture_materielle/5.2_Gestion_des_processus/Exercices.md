@@ -281,6 +281,6 @@ Exercice 2 du sujet [Amérique du Nord J2 2022](https://glassus.github.io/termin
 
 ??? tip "correction Q4.b."
     En inversant la demande de R3 et R1 pour le processus P3, le risque d'interblocage disparaît.
-    [fichier](ANJ2_last.svg){. target="_blank"}
+    [Fichier svg d'explication](data/ANJ2_last.svg){. target="_blank"}
 
     
