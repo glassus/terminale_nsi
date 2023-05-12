@@ -284,6 +284,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
         ![image](data/ex3_Q2.png){: .center}
 
 
+test
 
 {#
 
