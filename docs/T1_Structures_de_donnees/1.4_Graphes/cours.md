@@ -469,10 +469,21 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     g.ajoute_arete('G', 'H')
     ```
     
-    Donner son parcours en largeur grâce à l'algorithme BFS, si le sommet de départ est B.
+    **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
-    ??? tip "correction"
+    ??? tip "correction Q1"
         ```python
         >>> BFS(g, 'B')
         ['B', 'A', 'D', 'E', 'C', 'F', 'G', 'H']
         ```
+
+    **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
+
+    ??? tip "Correction Q2"
+        ```python
+        >>> BFS(g, 'D')
+        ['D', 'B', 'C', 'E', 'A', 'F', 'G', 'H']
+        >>> BFS(g, 'G')
+        ['G', 'E', 'F', 'H', 'B', 'D', 'A', 'C']
+        ```
+        
