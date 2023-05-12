@@ -2938,14 +2938,14 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
 <h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
 <p>Nous voulons que le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> puisse être créé grâce aux instructions suivantes :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">])</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode <code>sont_voisins</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="o">.</span><span class="n">sont_voisins</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
@@ -3033,8 +3033,106 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 </ul>
 <p><img alt="" class="center" src="../data/dfs_or_bfs_meme.jpg" width="30%" /> </p>
 <h3 id="41-le-parcours-en-largeur-bfs-breadth-first-search">4.1 Le parcours en largeur (BFS, Breadth First Search)<a class="headerlink" href="#41-le-parcours-en-largeur-bfs-breadth-first-search" title="Permanent link">⚓︎</a></h3>
+<h4 id="411-principe">4.1.1 Principe<a class="headerlink" href="#411-principe" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exemple de parcours en largeur, avec B comme sommet de départ:</strong></p>
-<p><gif-player src="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/images/bfs.gif" speed="1" play></gif-player></p>
+<p><center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/bfs.gif" speed="1" play></gif-player>
+</center></p>
+<p><strong>Codes couleur :</strong></p>
+<ul>
+<li><strong>vert</strong> : les sommets non encore traités.</li>
+<li><strong>rouge</strong> : le sommet en cours de traitement.</li>
+<li><strong>orange</strong> : la file d'attente des sommets qui seront bientôt traités. On n'y rajoute à chaque fois les voisins du sommet en cours de traitement, <strong>si ils n'ont pas encore été découverts</strong>.</li>
+<li><strong>noir</strong> : les sommets traités.</li>
+</ul>
+<h4 id="412-algorithme-bfs">4.1.2 Algorithme BFS<a class="headerlink" href="#412-algorithme-bfs" title="Permanent link">⚓︎</a></h4>
+<p>On utilise :</p>
+<ul>
+<li>une liste <code class="highlight"><span class="n">traites</span></code> qui recueille les sommets visités (c'est-à-dire qu'on a fini de traiter, après avoir ajouté ses voisins dans la file d'attente) et qui sera renvoyée à la fin de l'algorithme;</li>
+<li>une liste <code class="highlight"><span class="n">decouverts</span></code> qui contient les sommets découverts au fur et à mesure du parcours;</li>
+<li>une <strong>file</strong> <code class="highlight"><span class="n">en_attente</span></code> qui contient les sommets découverts mais non encore visités. On utilisera au choix une classe <code>File</code> écrite plus tôt dans l'année ou tout simplement une <code class="highlight"><span class="nb">list</span></code> en utilisant <code class="highlight"><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code> (pour défiler) et <code class="highlight"><span class="n">append</span><span class="p">()</span></code> (pour enfiler).</li>
+</ul>
+<p>En début d'algorithme, seul le sommet de départ <code class="highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parcours en largeur - BFS <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Effectue un parcours en largeur du graphe g en partant du sommet depart,</span>
+<span class="sd">    et renvoie la liste des sommets visités dans l&#39;ordre du parcours.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
+                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Intérêt de la liste <code>decouverts</code></p>
+<p>La liste <code>decouverts</code> contient tous les sommets qui ont été :</p>
+<ul>
+<li>soit traités (auquel cas ils sont dans la liste <code>traites</code>)</li>
+<li>soit en attente (auquel cas ils sont dans la liste <code>en_attente</code>)</li>
+</ul>
+<p>Le test de la ligne 13  <code class="highlight"><span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span></code> permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p><img alt="image" class="center" src="../data/BFS_ex1.png" /></p>
+<p>Grâce à la classe <code>Graphe</code> du 3.3, ce graphe s'implémente par :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">])</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Donner son parcours en largeur grâce à l'algorithme BFS, si le sommet de départ est B.</p>
+<details class="tip">
+<summary>correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+</div>
 
   <hr>
 <div class="md-source-file">
