@@ -298,14 +298,14 @@ Dans cette partie, nous ne traiterons que des graphes **non-orientés**.
 Nous voulons que le graphe ![image](data/ex2_Q1.png){: .center} puisse être créé grâce aux instructions suivantes :
 
 ```python
->>> g = Graphe(['A', 'B', 'C', 'D', 'E'])
->>> g.ajoute_arete('A', 'B')
->>> g.ajoute_arete('A', 'C')
->>> g.ajoute_arete('A', 'D')
->>> g.ajoute_arete('A', 'E')
->>> g.ajoute_arete('B', 'C')
->>> g.ajoute_arete('C', 'D')
->>> g.ajoute_arete('D', 'E')
+g = Graphe(['A', 'B', 'C', 'D', 'E'])
+g.ajoute_arete('A', 'B')
+g.ajoute_arete('A', 'C')
+g.ajoute_arete('A', 'D')
+g.ajoute_arete('A', 'E')
+g.ajoute_arete('B', 'C')
+g.ajoute_arete('C', 'D')
+g.ajoute_arete('D', 'E')
 ```
 
 Nous souhaitons aussi pouvoir tester si deux sommets sont voisins avec la méthode ```sont_voisins``` :
@@ -394,7 +394,85 @@ Le choix de la structure de l'ensemble ```S``` est prépondérant:
 
 ### 4.1 Le parcours en largeur (BFS, Breadth First Search)
 
+#### 4.1.1 Principe
+
 **Exemple de parcours en largeur, avec B comme sommet de départ:**
 
-<gif-player src="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/images/bfs.gif" speed="1" play></gif-player>
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/bfs.gif" speed="1" play></gif-player>
+</center>
 
+**Codes couleur :**
+
+- **vert** : les sommets non encore traités.
+- **rouge** : le sommet en cours de traitement.
+- **orange** : la file d'attente des sommets qui seront bientôt traités. On n'y rajoute à chaque fois les voisins du sommet en cours de traitement, **si ils n'ont pas encore été découverts**.
+- **noir** : les sommets traités.
+
+#### 4.1.2 Algorithme BFS
+
+On utilise :
+
+- une liste `#!py traites` qui recueille les sommets visités (c'est-à-dire qu'on a fini de traiter, après avoir ajouté ses voisins dans la file d'attente) et qui sera renvoyée à la fin de l'algorithme;
+- une liste `#!py decouverts` qui contient les sommets découverts au fur et à mesure du parcours;
+- une **file** `#!py en_attente` qui contient les sommets découverts mais non encore visités. On utilisera au choix une classe `File` écrite plus tôt dans l'année ou tout simplement une `#!py list` en utilisant `#!py pop(0)` (pour défiler) et `#!py append()` (pour enfiler).
+
+En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
+
+!!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
+    ```python linenums='1'
+    def BFS(g, depart):
+        '''
+        Effectue un parcours en largeur du graphe g en partant du sommet depart,
+        et renvoie la liste des sommets visités dans l'ordre du parcours.
+        '''
+        traites = []
+        decouverts = [depart]
+        en_attente = [depart]
+        while en_attente != [] :
+            sommet = en_attente.pop(0)
+            voisins = g.voisins(sommet)
+            for voisin in voisins:
+                if voisin not in decouverts:
+                    decouverts.append(voisin)
+                    en_attente.append(voisin)
+            traites.append(sommet)
+        return traites
+
+    ```
+
+!!! warning "Intérêt de la liste ```decouverts```"
+    La liste ```decouverts``` contient tous les sommets qui ont été :
+
+    - soit traités (auquel cas ils sont dans la liste ```traites```)
+    - soit en attente (auquel cas ils sont dans la liste ```en_attente```)
+
+    Le test de la ligne 13  `#!py if voisin not in decouverts:` permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. 
+
+
+!!! example "{{ exercice() }}"
+    ![image](data/BFS_ex1.png){: .center}
+
+    Grâce à la classe ```Graphe``` du 3.3, ce graphe s'implémente par :
+
+    ```python linenums='1'
+    g = Graphe(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'])
+    g.ajoute_arete('A', 'B')
+    g.ajoute_arete('A', 'C')
+    g.ajoute_arete('B', 'D')
+    g.ajoute_arete('D', 'C')
+    g.ajoute_arete('B', 'E')
+    g.ajoute_arete('D', 'E')
+    g.ajoute_arete('E', 'F')
+    g.ajoute_arete('E', 'G')
+    g.ajoute_arete('F', 'G')
+    g.ajoute_arete('G', 'H')
+    ```
+    
+    Donner son parcours en largeur grâce à l'algorithme BFS, si le sommet de départ est B.
+
+    ??? tip "correction"
+        ```python
+        >>> BFS(g, 'B')
+        ['B', 'A', 'D', 'E', 'C', 'F', 'G', 'H']
+        ```
