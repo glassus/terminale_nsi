@@ -850,6 +850,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-parcours-de-graphes" class="md-nav__link">
+    4. Parcours de graphes
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Parcours de graphes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-le-parcours-en-largeur-bfs-breadth-first-search" class="md-nav__link">
+    4.1 Le parcours en largeur (BFS, Breadth First Search)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2915,6 +2935,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 </details>
 </div>
 <h2 id="3-creation-dune-classe-graphe">3. Création d'une classe <code>Graphe</code><a class="headerlink" href="#3-creation-dune-classe-graphe" title="Permanent link">⚓︎</a></h2>
+<p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
 <h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
 <p>Nous voulons que le graphe <img alt="image" class="center" src="../data/ex2_Q1.png" /> puisse être créé grâce aux instructions suivantes :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">])</span>
@@ -2937,7 +2958,6 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
 </code></pre></div></p>
 <h3 id="32-conseils-dimplementation">3.2 Conseils d'implémentation<a class="headerlink" href="#32-conseils-dimplementation" title="Permanent link">⚓︎</a></h3>
-<p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
 <p>L'objet de type <code>Graphe</code> aura comme attributs :</p>
 <ul>
 <li>une liste <code>liste_sommets</code> (donnée en paramètre dans la liste <code>liste_sommets</code>) </li>
@@ -2977,6 +2997,44 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
         <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<h2 id="4-parcours-de-graphes">4. Parcours de graphes<a class="headerlink" href="#4-parcours-de-graphes" title="Permanent link">⚓︎</a></h2>
+<p><img alt="" class="center" src="../data/toutgraphe.jpeg" width="40%" /> </p>
+<div class="admonition gear">
+<p class="admonition-title">Algorithme de parcours</p>
+<p>Un parcours de graphe est un algorithme consistant à explorer <strong>tous</strong> les sommets d'un graphe de proche
+en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> Parcourir simplement le dictionnaire ou la matrice d’un
+graphe n’est pas considéré comme un
+parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /></p>
+<p>Tous les parcours suivent plus ou moins le même algorithme de base :</p>
+<ul>
+<li>
+<p>On visite un sommet <code>A</code> . On crée une structure <code>S</code>  qui contiendra au départ l’<em>ensemble</em> des voisins de <code>A</code> .</p>
+</li>
+<li>
+<p>Tant que <code>S</code> n’est pas vide :</p>
+<ul>
+<li>on choisit un sommet <code>s</code>  de <code>S</code></li>
+<li>on visite <code>s</code></li>
+<li>on ajoute à <code>S</code> tous les voisins de <code>s</code> <strong>pas encore visités</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Sommets visités</p>
+<p>Contrairement à un parcours d'arbre, où les fils d'un nœud ne peuvent pas avoir été visités avant le nœud, un voisin d'un sommet peut avoir déjà été visité en tant que voisin d'un sommet précédent...</p>
+<p>Il est donc nécessaire de mémoriser les sommets déja visités ou découverts (on dira qu'un sommet est découvert lorsqu'on l'ajoute à <code>S</code>).</p>
+</div>
+<p>Le choix de la structure de l'ensemble <code>S</code> est prépondérant:</p>
+<ul>
+<li>Si on choisit une <strong>file</strong> (FIFO): on visitera les sommets dans l'ordre d'arrivée, donc les plus proches du sommet précédent. On obtient donc un <em>parcours en largeur</em> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>BFS</strong>.</li>
+<li>Si on choisit une <strong>pile</strong> (LIFO): on visitera d'abord les derniers sommets arrivés, donc on parcourt le graphe en visitant à chaque étape un voisin du précédent. On obtient donc un <em>parcours en profondeur</em> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>DFS</strong>.</li>
+</ul>
+<p><img alt="" class="center" src="../data/dfs_or_bfs_meme.jpg" width="30%" /> </p>
+<h3 id="41-le-parcours-en-largeur-bfs-breadth-first-search">4.1 Le parcours en largeur (BFS, Breadth First Search)<a class="headerlink" href="#41-le-parcours-en-largeur-bfs-breadth-first-search" title="Permanent link">⚓︎</a></h3>
+<p><strong>Exemple de parcours en largeur, avec B comme sommet de départ:</strong></p>
+<p><gif-player src="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/images/bfs.gif" speed="1" play></gif-player></p>
 
   <hr>
 <div class="md-source-file">
