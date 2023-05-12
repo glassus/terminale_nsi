@@ -291,6 +291,8 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
 
 ## 3. Création d'une classe ```Graphe```
 
+Dans cette partie, nous ne traiterons que des graphes **non-orientés**.
+
 ### 3.1 Interface souhaitée
 
 Nous voulons que le graphe ![image](data/ex2_Q1.png){: .center} puisse être créé grâce aux instructions suivantes :
@@ -323,7 +325,7 @@ Enfin, nous voulons pouvoir obtenir facilement la liste de tous les voisins d'un
 
 ### 3.2 Conseils d'implémentation
 
-Dans cette partie, nous ne traiterons que des graphes **non-orientés**.
+
 
 L'objet de type ```Graphe``` aura comme attributs :
 
@@ -352,309 +354,47 @@ L'objet de type ```Graphe``` aura comme attributs :
             return sommetB in self.adjacents[sommetA]
     ```
 
-{#
-!!! code "Classe `#!py Graphe`"
-    Il s'agit maintenant d'écrire une classe `Graphe` dont l'implémentation sera faite par listes d'adjacence (plus pratique pour ce qu'on veut faire, à savoir récupérer les voisins d'un sommet) et le constructeur prendra en paramètre la liste des sommets et construit un dictionnaire dont les valeurs sont des listes vides.
 
-    L'interface doit comporter les méthodes suivantes:
+## 4. Parcours de graphes 
 
-    - `#!py ajouter_sommets` : ajoute un sommet donné en paramètre;
-    - `#!py ajouter_arete` : ajoute une arête entre deux sommets donnés en paramètres;
-    - `#!py sommets` : renvoie la liste des sommets;
-    - `#!py voisins` : renvoie la liste des voisins d'un sommet donné en paramètre;
-    - `#!py ordre` : renvoie l'ordre du graphe (c'est-à-dire son nombre de sommets);
-    - `#!py est_voisin` : renvoie un booléen déterminant si deux sommets donnés en paramètres sont voisins ou non.
+![](data/toutgraphe.jpeg){: .center width=40%} 
 
-??? check "Proposition de correction"
-    ```python linenums='1'
-    class Graphe:
-        def __init__(self, liste_sommets):
-            self.adj = {sommet: [] for sommet in liste_sommets}
+!!! gear "Algorithme de parcours"
+    Un parcours de graphe est un algorithme consistant à explorer **tous** les sommets d'un graphe de proche
+    en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...
 
-        def sommets(self):
-            return [s for s in self.adj.keys()]
-
-        def ordre(self):
-            return len(self.sommets())
-
-        def voisins(self, s):
-            return self.adj[s]
-
-        def est_voisin(self, s1, s2):
-            '''
-            verifie s2 est un voisin de s1
-            '''
-            return s2 in self.adj[s1]
-
-        def ajoute_sommet(self, sommet):
-            if sommet not in self.adj:
-                self.adj[sommet] = []
-
-        def ajoute_arete(self, s1, s2):
-            self.ajoute_sommet(s1)
-            self.ajoute_sommet(s2)
-            if not self.est_voisin(s1, s2):
-                self.adj[s1].append(s2)
-            if not self.est_voisin(s2, s1):
-                self.adj[s2].append(s1)
-    ```
-    Et pour une classe représentant un graphe orienté... c'est la même sauf pour la méthode `#!py ajoute_arete` à renommer en `#!py ajoute_arc` et où il suffit d'enlever les deux dernières instructions !
+    :warning: Parcourir simplement le dictionnaire ou la matrice d’un
+    graphe n’est pas considéré comme un
+    parcours de graphe. :warning:
 
 
-{#
+    Tous les parcours suivent plus ou moins le même algorithme de base :
 
-## 4. Exercices
+    - On visite un sommet ```A``` . On crée une structure ```S```  qui contiendra au départ l’*ensemble* des voisins de ```A``` .
 
-!!! example "{{ exercice() }}"
-    === "Énoncé" 
-        Construire les représentations des graphes suivants:
-
-        1. Par matrice d'adjacence.
-        2. Par listes d'adjacence.
-
-        ![](data/exemple_graphe.png){: .center width=240} 
-
-        ![](data/exemple_graphe_oriente.png){: .center width=240} 
-
-        ![](data/exemple_graphe_pondere.png){: .center width=240} 
-    === "Correction" 
-        {{ correction(False, 
-        "
-        "
-        ) }}
-
-!!! example "{{ exercice() }}"
-    === "Énoncé" 
-        1. Construire les graphes correspondants aux matrices d'adjacences suivantes:
-
-            $M_1 =\pmatrix{
-                0&1&1&1&1\\
-                1&0&1&0&0\\
-                1&1&0&1&0\\
-                1&0&1&0&1\\
-                1&0&0&1&0\\
-                }$
-            $M_2=\pmatrix{
-                0&1&1&0&1\\
-                0&0&1&0&0\\
-                0&0&0&1&0\\
-                1&0&0&0&1\\
-                0&0&0&0&0\\
-                }$
-            $M_3=\pmatrix{
-                0&5&10&50&12\\
-                5&0&10&0&0\\
-                10&10&0&8&0\\
-                50&0&8&0&100\\
-                12&0&0&100&0\\
-                }$
-
-        2. Donner les listes d'adjacence correspondant aux matrices d'adjacence précédentes.
-    === "Correction" 
-        {{ correction(False, 
-        "
-        "
-        ) }}
+    - Tant que ```S``` n’est pas vide :
+    
+        - on choisit un sommet ```s```  de ```S```
+        - on visite ```s```
+        - on ajoute à ```S``` tous les voisins de ```s``` **pas encore visités**
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé" 
+!!! warning "Sommets visités"
+    Contrairement à un parcours d'arbre, où les fils d'un nœud ne peuvent pas avoir été visités avant le nœud, un voisin d'un sommet peut avoir déjà été visité en tant que voisin d'un sommet précédent...
 
-        1. Construire les graphes correspondants aux listes d'adjacences suivantes. Déterminer s'il s'agit d'un graphe orienté, non orienté, pondéré.
-
-            ```python linenums='1'
-            G1 = {
-                'A': ['B', 'C'],
-                'B': ['A', 'C', 'E', 'F'],
-                'C': ['A', 'B', 'D'],
-                'D': ['C', 'E'],
-                'E': ['B', 'D', 'F'],
-                'F': ['B', 'E']
-                }
-
-            G2 = {
-                'A': ['B'],
-                'B': ['C', 'E'],
-                'C': ['B', 'D'],
-                'D': [],
-                'E': ['A']
-                }
-
-            G3 = {
-                'A': ['B', 'C'],
-                'B': ['A', 'B', 'D'],
-                'C': ['A', 'F'],
-                'D': ['B', 'C', 'F'],
-                'E': ['G'],
-                'F': ['C', 'F'],
-                'G': ['E']
-                }
-
-            G4 = {
-                'A': {'B' : 300, 'C' : 310, 'D' : 280},
-                'B': {'A' : 300, 'C' : 80},
-                'C': {'A' : 310, 'B' : 80, 'E' : 150},
-                'D': {'A' : 280, 'F' : 110},
-                'E': {'C' : 150, 'F' : 60, 'G' : 90, 'H' : 190},
-                'F': {'D' : 110, 'E' : 60, 'G' : 70, 'H' : 260},
-                'G': {'E' : 90, 'F' : 70, 'H' : 50, 'I' : 100},
-                'H': {'E' : 190, 'F' : 260, 'G' : 50, 'I' : 40},
-                'I': {'G' : 100, 'H' : 40}
-                }
-            ```
-        2. Donner les matrices d'adjacence correspondant aux listes d'adjacence précédentes.
-
-    === "Correction" 
-        {{ correction(False, 
-        "
-        ```python linenums='1'
-        class GrapheP:
-            def __init__(self, liste_sommets):
-                self.adj = {sommet: {} for sommet in liste_sommets}
-
-            def sommets(self):
-                return [s for s in self.adj.keys()]
-
-            def ordre(self):
-                return len(self.sommets())
-
-            def voisins(self, s):
-                return self.adj[s].keys()
-
-            def est_voisin(self, s1, s2):
-                '''
-                verifie s2 est un voisin de s1
-                '''
-                return s2 in self.voisins(s1)
-
-            def ajoute_sommet(self, sommet):
-                if sommet not in self.adj:
-                    self.adj[sommet] = {}
-
-            def ajoute_arete(self, s1, s2, poids):
-                self.ajoute_sommet(s1)
-                self.ajoute_sommet(s2)
-                if not self.est_voisin(s1, s2):
-                    self.adj[s1][s2] = poids
-                    self.adj[s2][s1] = poids
-        ```
-        
-        "
-        ) }}
+    Il est donc nécessaire de mémoriser les sommets déja visités ou découverts (on dira qu'un sommet est découvert lorsqu'on l'ajoute à ```S```).
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé" 
-        Adapter la classe `#!py Graphe` pour écrire une classe `#!py GrapheP` qui représente un graphe pondéré.
-    === "Correction" 
-        {{ correction(True,
-        "
-        ```python linenums='1'
-        class GrapheP:
-            def __init__(self, liste_sommets):
-                self.adj = {sommet: {} for sommet in liste_sommets}
+Le choix de la structure de l'ensemble ```S``` est prépondérant:
 
-            def sommets(self):
-                return [s for s in self.adj.keys()]
+- Si on choisit une **file** (FIFO): on visitera les sommets dans l'ordre d'arrivée, donc les plus proches du sommet précédent. On obtient donc un *parcours en largeur* :arrow_right: **BFS**.
+- Si on choisit une **pile** (LIFO): on visitera d'abord les derniers sommets arrivés, donc on parcourt le graphe en visitant à chaque étape un voisin du précédent. On obtient donc un *parcours en profondeur* :arrow_right: **DFS**.
 
-            def ordre(self):
-                return len(self.sommets())
+![](data/dfs_or_bfs_meme.jpg){: .center width=30%} 
 
-            def voisins(self, s):
-                return list(self.adj[s].keys())
+### 4.1 Le parcours en largeur (BFS, Breadth First Search)
 
-            def est_voisin(self, s1, s2):
-                '''
-                verifie si s2 est un successeur de s1
-                '''
-                return s2 in self.voisins(s1)
+**Exemple de parcours en largeur, avec B comme sommet de départ:**
 
-            def ajoute_sommet(self, sommet):
-                if sommet not in self.adj:
-                    self.adj[sommet] = {}
+<gif-player src="https://cgouygou.github.io/TNSI/T01_StructuresDonnees/images/bfs.gif" speed="1" play></gif-player>
 
-            def ajoute_arete(self, s1, s2, poids):
-                '''
-                ajoute une arete de s1 vers s2 avec une valuation poids
-                '''
-                self.ajoute_sommet(s1)
-                self.ajoute_sommet(s2)
-                if not self.est_voisin(s1, s2):
-                    self.adj[s1][s2] = poids
-                    self.adj[s2][s1] = poids
-        ```
-        "
-        ) }}
-!!! example "{{ exercice() }}: C0d1ng UP 2023 !"
-    === "Énoncé" 
-        Lors de l'édition 2023 de c0d1ng UP, un défi avait pour but de trouver pour le Docteur Who un ordre de parcours de différentes années (le Docteur Who peut voyager dans le temps grâce au Tardis...)
-        
-        ![](data/tardis_640.png){: .center width=320} 
-
-        Seulement il y a certaines contraintes, données dans [ce fichier](../data/input_ordrevisites.txt){:target="_blank"}. En voici un extrait:
-
-            Visiter 1037 avant 1182
-            Visiter 1037 avant 3017
-            Visiter 1037 avant 3497
-            Visiter 1053 avant 1773
-            Visiter 1053 avant 2523
-            Visiter 1053 avant 3297
-            Visiter 1053 avant 3714
-            Visiter 1053 avant 4051
-            Visiter 1053 avant 4820
-            Visiter 1079 avant 1267
-            Visiter 1079 avant 1371
-            Visiter 1079 avant 1492
-            Visiter 1079 avant 1706
-            Visiter 1079 avant 1745
-            Visiter 1079 avant 1789
-            ...
-
-        Cela signifie par exemple que le Docteur doit impérativement visiter l'année 1037 avant les années 1182, 3017 et 3497...
-
-        On pense alors naturellement (?) à un graphe orienté, où chaque année est un sommet et chaque contrainte un arc entre deux sommets.
-
-        **Consigne:** construire le graphe à l'aide de la classe `#!py Graphe`. Combien de sommets comporte ce graphe?
-
-    === "Indication"
-        Le code suivant permet de lire le fichier texte et d'obtenir une liste dont chaque élément est une ligne du fichier au format `#!py str`;
-        ```python linenums='1'
-        data = open('input_ordrevisites.txt').read().splitlines()
-        ```
-
-        La méthode `#!py split` permet de séparer une chaîne de caractères sur les espaces (par défaut):
-        ```python
-        >>> data[0]
-        'Visiter 1037 avant 1182'
-        >>> data[0].split()
-        ['Visiter',  '1037', 'avant', '1182']
-        >>> data[0].split()[1]
-        '1037'
-        ```
-
-    === "Correction" 
-        {{ correction(False, 
-        "
-        "
-        ) }}
-
-
-!!! example "{{ exercice() }}: tri topologique"
-    === "Énoncé" 
-        Pour résoudre le défi précédent, il faut réussir à trier les sommets du graphe dans un ordre qui respecte toutes les contraintes représentées par les arcs. Un tel tri n'est pas toujours possible: par exemple si le graphe orienté possède un cycle. Lorsque c'est possible, ce tri s'appelle un [tri topologique](https://fr.wikipedia.org/wiki/Tri_topologique){:target="_blank"}.
-
-        Pour réaliser ce tri, il existe deux principaux algorithmes. Le premier repose sur un parcours en profondeur (DFS) du graphe. On en parle en [T1.5.2](https://cgouygou.github.io/TNSI/T01_StructuresDonnees/T1.5_Graphes/T1.5_Parcours_graphes/){:target="_blank"}.
-
-        Le deuxième consiste à choisir un sommet qui ne possède aucun prédécesseur dans le graphe. Puis on le supprime du graphe. Et on recommence ... jusqu'à ce que le graphe soit vide.
-
-        1. Pour que le choix des sommets sans prédécesseur soit simple, on va plutôt modéliser le graphe orienté par des listes de prédécesseurs. Modifier la classe GrapheO en conséquence;
-        2. Écrire une méthode `#!py supprime_sommet` qui ... supprime un sommet (c'est-à-dire non seulement la clé, mais aussi ses occurences dans les listes de prédécesseurs) s'il n'y en a aucun.
-        3. Écrire une méthode `#!py sommet_initial` qui parcourt les sommets du graphe et qui renvoie le premier sommet sans prédécesseur, ou `#!py None`.
-        4. Écrire une **fonction** qui prend en paramètre un graphe et qui renvoie le tri topologique du graphe (sous la forme d'une liste) ou bien `#!py None` s'il n'en existe pas.
-    === "Correction" 
-        {{ correction(False, 
-        "
-        "
-        ) }}
-
-#}
