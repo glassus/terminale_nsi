@@ -509,6 +509,19 @@ Nous allons pour cela nous servir d'une structure de dictionnaire pour associer 
 Il faudra ensuite une fonction pour recréer le chemin.
 
 
+!!! warning "Pourquoi le plus court chemin ?"
+
+    - Comment est-on sûr qu'un chemin va être trouvé entre deux sommets A et B ?
+
+    Si le graphe est connexe, tout parcours BFS au départ de A va parcourir l'intégralité du graphe, et donc passera par B à un moment. Un chemin sera donc forcément trouvé entre A et B.
+
+    - Comment est-on sûr que ce chemin trouvé est **le plus court** ?
+
+    La découverte des sommets par cercles concentriques entre A et B nous assure qu'on ne peut pas rater le point B : s'il est à la distance ```k``` de A, il sera forcément visité puisque tous les sommets à la distance ```k``` vont passer par la liste d'attente, après les sommets de distance ```k-1``` et avant les sommets de distance ```k+1```.
+    
+    Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur ```k```, il sera donc minimal. 
+
+
 !!! abstract "Recherche du plus court chemin :heart: :heart: :heart:"
 
     ```python linenums='1'
@@ -543,3 +556,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = sommet + chemin
         return chemin
     ```
+
+!!! example "{{ exercice() }}"
+    ![image](data/BFS_ex1.png){: .center}
+    Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...
