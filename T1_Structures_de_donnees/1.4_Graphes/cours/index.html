@@ -865,6 +865,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#413-application-du-bfs-recherche-du-plus-court-chemin" class="md-nav__link">
+    4.1.3 Application du BFS : recherche du plus court chemin
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3099,6 +3106,11 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 </ul>
 <p>Le test de la ligne 13  <code class="highlight"><span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span></code> permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. </p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Que contient la file <code>en_attente</code> ?</p>
+<p>À chaque instant, la file <code>en_attente</code> contient des sommets à la distance <code>k+1</code> et à la distance <code>k</code> du point de départ :</p>
+<p><img alt="image" class="center" src="../data/en_attente.png" /></p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p><img alt="image" class="center" src="../data/BFS_ex1.png" /></p>
@@ -3142,13 +3154,82 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 </code></pre></div>
 </details>
 </div>
+<h3 id="413-application-du-bfs-recherche-du-plus-court-chemin">4.1.3 Application du BFS : recherche du plus court chemin<a class="headerlink" href="#413-application-du-bfs-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h3>
+<p>L'algorithme BFS découvre les sommets «par cercles concentriques» autour du point de départ (ainsi que le montre la structure de la file d'attente). On découvre d'abord tous les sommets à la distance 1 du point de départ, puis à la distance 2, puis 3, etc.</p>
+<p>Un sommet situé à la distance 5 sera découvert en tant que voisin d'un sommet à la distance 4, qui lui-même aura été découvert grâce à un sommet à la distance 3, qui lui-même...</p>
+<p>On comprend donc que si on arrive à se souvenir du sommet «parent» de chaque sommet (celui qui lui a permis d'être découvert), on pourra alors reconstituer un chemin permettant de remonter au point de départ.</p>
+<p>Nous allons pour cela nous servir d'une structure de dictionnaire pour associer à chaque sommet son sommet-parent.</p>
+<p>Il faudra ensuite une fonction pour recréer le chemin.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Recherche du plus court chemin <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
+<span class="sd">    qui s&#39;arrête dès que le sommet arrivee est attient</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
+                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="n">sommet</span>
+                <span class="k">if</span> <span class="n">voisin</span> <span class="o">==</span> <span class="n">arrivee</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>  
+
+
+<span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+    <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
+    <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
+    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
+    <span class="k">return</span> <span class="n">chemin</span>
+</code></pre></div></td></tr></table></div>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mai 2023</span>
       
     
   </small>
