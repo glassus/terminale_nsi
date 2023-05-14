@@ -449,6 +449,14 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
 
     Le test de la ligne 13  `#!py if voisin not in decouverts:` permet donc de ne pas mettre en file d'attente un voisin qui est (ou a été) déjà en file d'attente. 
 
+!!! warning "Que contient la file ```en_attente``` ?"
+    À chaque instant, la file ```en_attente``` contient des sommets à la distance ```k+1``` et à la distance ```k``` du point de départ :
+
+    ![image](data/en_attente.png){: .center}
+     
+
+
+
 
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center}
@@ -486,4 +494,52 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         >>> BFS(g, 'G')
         ['G', 'E', 'F', 'H', 'B', 'D', 'A', 'C']
         ```
-        
+    
+
+### 4.1.3 Application du BFS : recherche du plus court chemin
+
+L'algorithme BFS découvre les sommets «par cercles concentriques» autour du point de départ (ainsi que le montre la structure de la file d'attente). On découvre d'abord tous les sommets à la distance 1 du point de départ, puis à la distance 2, puis 3, etc.
+
+Un sommet situé à la distance 5 sera découvert en tant que voisin d'un sommet à la distance 4, qui lui-même aura été découvert grâce à un sommet à la distance 3, qui lui-même...
+
+On comprend donc que si on arrive à se souvenir du sommet «parent» de chaque sommet (celui qui lui a permis d'être découvert), on pourra alors reconstituer un chemin permettant de remonter au point de départ.
+
+Nous allons pour cela nous servir d'une structure de dictionnaire pour associer à chaque sommet son sommet-parent.
+
+Il faudra ensuite une fonction pour recréer le chemin.
+
+
+!!! abstract "Recherche du plus court chemin :heart: :heart: :heart:"
+
+    ```python linenums='1'
+    def recherche_chemin(g, depart, arrivee):
+        '''
+        Parcours en largeur du graphe g en partant du sommet depart,
+        qui s'arrête dès que le sommet arrivee est attient
+        '''
+        traites = []
+        decouverts = [depart]
+        en_attente = [depart]
+        parent = {}
+        while en_attente != [] :
+            sommet = en_attente.pop(0)
+            voisins = g.voisins(sommet)
+            for voisin in voisins:
+                if voisin not in decouverts:
+                    decouverts.append(voisin)
+                    en_attente.append(voisin)
+                    parent[voisin] = sommet
+                    if voisin == arrivee:
+                        return remonte_chemin(depart, arrivee, parent)
+            traites.append(sommet)
+        return "non trouvé"  
+
+
+    def remonte_chemin(depart, arrivee, parent):
+        sommet = arrivee
+        chemin = arrivee
+        while sommet != depart:
+            sommet = parent[sommet]
+            chemin = sommet + chemin
+        return chemin
+    ```
