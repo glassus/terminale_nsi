@@ -14,7 +14,7 @@
         <link rel="prev" href="../../1.3_Arbres/exercices/">
       
       
-        <link rel="next" href="../../../T2_Programmation/sommaire/">
+        <link rel="next" href="../TP_Labyrinthe/">
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
@@ -881,6 +881,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_Labyrinthe/" class="md-nav__link">
+        TP Labyrinthe
+      </a>
     </li>
   
 
@@ -3160,6 +3174,18 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <p>On comprend donc que si on arrive à se souvenir du sommet «parent» de chaque sommet (celui qui lui a permis d'être découvert), on pourra alors reconstituer un chemin permettant de remonter au point de départ.</p>
 <p>Nous allons pour cela nous servir d'une structure de dictionnaire pour associer à chaque sommet son sommet-parent.</p>
 <p>Il faudra ensuite une fonction pour recréer le chemin.</p>
+<div class="admonition warning">
+<p class="admonition-title">Pourquoi le plus court chemin ?</p>
+<ul>
+<li>Comment est-on sûr qu'un chemin va être trouvé entre deux sommets A et B ?</li>
+</ul>
+<p>Si le graphe est connexe, tout parcours BFS au départ de A va parcourir l'intégralité du graphe, et donc passera par B à un moment. Un chemin sera donc forcément trouvé entre A et B.</p>
+<ul>
+<li>Comment est-on sûr que ce chemin trouvé est <strong>le plus court</strong> ?</li>
+</ul>
+<p>La découverte des sommets par cercles concentriques entre A et B nous assure qu'on ne peut pas rater le point B : s'il est à la distance <code>k</code> de A, il sera forcément visité puisque tous les sommets à la distance <code>k</code> vont passer par la liste d'attente, après les sommets de distance <code>k-1</code> et avant les sommets de distance <code>k+1</code>.</p>
+<p>Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur <code>k</code>, il sera donc minimal. </p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Recherche du plus court chemin <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -3222,6 +3248,11 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
         <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
     <span class="k">return</span> <span class="n">chemin</span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p><img alt="image" class="center" src="../data/BFS_ex1.png" />
+Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...</p>
 </div>
 
   <hr>
