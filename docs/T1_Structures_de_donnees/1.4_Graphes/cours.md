@@ -335,7 +335,27 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-??? abstract "Implémentation d'une classe ```Graphe``` "
+!!! abstract "Implémentation d'une classe ```Graphe``` "
+    ```python linenums='1'
+    class Graphe:
+        def __init__(self, liste_sommets):
+            self.liste_sommets = ...
+            self.adjacents = ...
+
+        def ajoute_arete(self, sommetA, sommetB):
+            ...
+            ...
+            
+        def voisins(self, sommet):
+            return ...
+
+        def sont_voisins(self, sommetA, sommetB):
+            return ...
+    ```
+
+
+{#
+!!! abstract "Implémentation d'une classe ```Graphe``` "
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
@@ -343,9 +363,8 @@ L'objet de type ```Graphe``` aura comme attributs :
             self.adjacents = {sommet : [] for sommet in liste_sommets}
 
         def ajoute_arete(self, sommetA, sommetB):
-            if sommetA in self.liste_sommets and sommetB in self.liste_sommets:
-                self.adjacents[sommetA].append(sommetB)
-                self.adjacents[sommetB].append(sommetA)
+            self.adjacents[sommetA].append(sommetB)
+            self.adjacents[sommetB].append(sommetA)
             
         def voisins(self, sommet):
             return self.adjacents[sommet]
@@ -353,7 +372,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return sommetB in self.adjacents[sommetA]
     ```
-
+#}
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
@@ -419,6 +438,32 @@ On utilise :
 
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
+
+
+!!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
+    ```python linenums='1'
+    def BFS(g, depart):
+        '''
+        Effectue un parcours en largeur du graphe g en partant du sommet depart,
+        et renvoie la liste des sommets visités dans l'ordre du parcours.
+        '''
+        traites = []
+        decouverts = [...]
+        en_attente = [...]
+        while ... != [] :
+            sommet = ....pop(0)
+            voisins = g.voisins(...)
+            for voisin in ...:
+                if voisin not in decouverts:
+                    decouverts.append(voisin)
+                    en_attente.append(voisin)
+            traites.append(...)
+        return traites
+
+    ```
+
+
+{#
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
     def BFS(g, depart):
@@ -440,6 +485,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return traites
 
     ```
+#}
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
@@ -528,7 +574,43 @@ Il faudra ensuite une fonction pour recréer le chemin.
     def recherche_chemin(g, depart, arrivee):
         '''
         Parcours en largeur du graphe g en partant du sommet depart,
-        qui s'arrête dès que le sommet arrivee est attient
+        qui s'arrête dès que le sommet arrivee est atteint.
+        Renvoie alors le chemin du depart vers arrivee.
+        '''
+        traites = []
+        decouverts = [depart]
+        en_attente = [depart]
+        parent = {}
+        while en_attente != [] :
+            sommet = en_attente.pop(0)
+            voisins = g.voisins(sommet)
+            for voisin in voisins:
+                if voisin not in decouverts:
+                    decouverts.append(voisin)
+                    en_attente.append(voisin)
+                    parent[voisin] = sommet
+                    if voisin == arrivee:
+                        return remonte_chemin(depart, arrivee, parent)
+            traites.append(sommet)
+        return "non trouvé"  
+
+
+    def remonte_chemin(depart, arrivee, parent):
+        sommet = arrivee
+        chemin = arrivee
+        while sommet != ...:
+            sommet = parent[...]
+            chemin = ... + chemin
+        return chemin
+    ```
+{#
+
+    ```python linenums='1'
+    def recherche_chemin(g, depart, arrivee):
+        '''
+        Parcours en largeur du graphe g en partant du sommet depart,
+        qui s'arrête dès que le sommet arrivee est atteint.
+        Renvoie alors le chemin du depart vers arrivee.
         '''
         traites = []
         decouverts = [depart]
@@ -556,6 +638,8 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = sommet + chemin
         return chemin
     ```
+#}
+
 
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center}
