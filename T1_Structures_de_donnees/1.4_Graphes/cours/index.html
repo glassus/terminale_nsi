@@ -3243,9 +3243,9 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
     <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
-    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="o">...</span><span class="p">:</span>
-        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
-        <span class="n">chemin</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">chemin</span>
+    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
     <span class="k">return</span> <span class="n">chemin</span>
 </code></pre></div></td></tr></table></div>
 </div>
