@@ -353,7 +353,7 @@
     La **vraie** chaîne contient 50000 caractères : 
 
 <!--
-    --8<-- "includes/files/chaine.md"
+    ici anciennement inclusion du fichier chaine.md mais plantage ?
 -->
 
 
