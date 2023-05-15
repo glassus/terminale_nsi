@@ -352,8 +352,9 @@
     Par contre, la chaîne ```'dabAcCaCBAcCcaDA'``` sur laquellle nous avons travaillé n'est qu'un exemple...
     La **vraie** chaîne contient 50000 caractères : 
 
+<!--
     --8<-- "includes/files/chaine.md"
-
+-->
 
 
     Anecdotique ? Pas vraiment...
