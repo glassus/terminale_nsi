@@ -7,7 +7,9 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/) 
+
+- :arrow_right: [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+- :arrow_right: [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/) 
     
 
 
