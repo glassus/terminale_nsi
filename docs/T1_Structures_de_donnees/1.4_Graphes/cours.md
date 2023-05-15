@@ -355,7 +355,7 @@ L'objet de type ```Graphe``` aura comme attributs :
     ```
 
 
-## 4. Parcours de graphes 
+## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
 ![](data/toutgraphe.jpeg){: .center width=40%} 
 
@@ -406,7 +406,7 @@ Le choix de la structure de l'ensemble ```S``` est prépondérant:
 
 - **vert** : les sommets non encore traités.
 - **rouge** : le sommet en cours de traitement.
-- **orange** : la file d'attente des sommets qui seront bientôt traités. On n'y rajoute à chaque fois les voisins du sommet en cours de traitement, **si ils n'ont pas encore été découverts**.
+- **orange** : la file d'attente des sommets qui seront bientôt traités. On y rajoute à chaque fois les voisins du sommet en cours de traitement, uniquement **si ils n'ont pas encore été découverts**.
 - **noir** : les sommets traités.
 
 #### 4.1.2 Algorithme BFS
