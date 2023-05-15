@@ -752,9 +752,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TP Labyrinthe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         TP Labyrinthe
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-presentation-du-probleme" class="md-nav__link">
+    1. Présentation du problème
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modelisation-par-un-graphe" class="md-nav__link">
+    2. Modélisation par un graphe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementation-du-graphe-en-python" class="md-nav__link">
+    3. Implémentation du graphe en Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recherche-du-plus-court-chemin" class="md-nav__link">
+    4. Recherche du plus court chemin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusion" class="md-nav__link">
+    5. Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2584,13 +2643,32 @@
 
 
 <h1 id="resolution-dun-labyrinthe">Résolution d'un labyrinthe<a class="headerlink" href="#resolution-dun-labyrinthe" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-presentation-du-probleme">1. Présentation du problème<a class="headerlink" href="#1-presentation-du-probleme" title="Permanent link">⚓︎</a></h2>
+<p>Considérons le labyrinthe suivant :
+<img alt="image" class="center" src="../data/laby1.png" width="35%" /></p>
+<p>Affectons une lettre à chaque case de ce labyrinthe.</p>
+<p><img alt="image" class="center" src="../data/laby2.png" width="35%" /></p>
+<p>Notre objectif est de trouver comment aller <strong>de A en P</strong>.</p>
+<h2 id="2-modelisation-par-un-graphe">2. Modélisation par un graphe<a class="headerlink" href="#2-modelisation-par-un-graphe" title="Permanent link">⚓︎</a></h2>
+<p>Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrinthe.</p>
+<p>Proposer deux «formes» possibles pour ce graphe.</p>
+<h2 id="3-implementation-du-graphe-en-python">3. Implémentation du graphe en Python<a class="headerlink" href="#3-implementation-du-graphe-en-python" title="Permanent link">⚓︎</a></h2>
+<p>En utilisant la classe <code>Graphe</code> créée en cours, implémenter le graphe de ce labyrinthe.</p>
+<h2 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h2>
+<p>En utilisant la fonction <code>recherche_chemin</code> du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.</p>
+<h2 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">⚓︎</a></h2>
+<p>Cette méthode est utilisée pour trouver la solution de labyrinthe bien plus imposants, comme celui-ci :</p>
+<p><img alt="image" class="center" src="../data/chemin_labyrinthe4.png" width="40%" /></p>
+<p>Et on peut voir souvent ce genre d'animation :</p>
+<p><img alt="image" class="center" src="../data/chemin_laby.gif" width="40%" /></p>
+<p>Si cette animation est assez satisfaisante à observer, elle n'est pas du tout fidèle à la méthode de résolution qui a permis de la trouver. Comprenez-vous pourquoi ?</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
       
     
   </small>
