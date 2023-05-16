@@ -125,3 +125,7 @@ Et on peut voir souvent ce genre d'animation :
 ![image](data/chemin_laby.gif){: .center width=40%}
 
 Si cette animation est assez satisfaisante à observer, elle n'est pas du tout fidèle à la méthode de résolution qui a permis de la trouver. Comprenez-vous pourquoi ?
+
+jlk
+![image](data/sol_laby.gif){: .center}
+

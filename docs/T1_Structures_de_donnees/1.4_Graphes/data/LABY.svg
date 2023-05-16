@@ -26,7 +26,7 @@
      showgrid="true"
      inkscape:zoom="0.5946522"
      inkscape:cx="108.46676"
-     inkscape:cy="-500.29244"
+     inkscape:cy="575.96693"
      inkscape:window-width="1880"
      inkscape:window-height="1141"
      inkscape:window-x="40"
@@ -106,7 +106,10 @@
        height="105.17519"
        x="0.57490122"
        y="0.42873016"
-       ry="0.31117839" />
+       ry="0.31117839"
+       inkscape:export-filename="laby2.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.529166, 1.05833;stroke-dashoffset:0;stroke-opacity:1"
        d="M 52.926503,0.34806443 52.940732,105.60175"
@@ -349,7 +352,10 @@
        sodipodi:nodetypes="cc" />
     <g
        id="g3934"
-       transform="translate(-0.85677124,-4.2526229)">
+       transform="translate(-0.85677124,-4.2526229)"
+       inkscape:export-filename="laby3.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <text
          xml:space="preserve"
          style="font-size:11.8864px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';letter-spacing:0px;word-spacing:0px;fill:#de8787;stroke-width:0.557174"
@@ -813,7 +819,10 @@
        inkscape:connection-end="#g3959" />
     <g
        id="g3934-2"
-       transform="translate(179.50192,-96.34512)">
+       transform="translate(179.50192,-96.34512)"
+       inkscape:export-filename="laby4.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
       <text
          xml:space="preserve"
          style="font-size:11.8864px;line-height:1.25;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';letter-spacing:0px;word-spacing:0px;fill:#de8787;stroke-width:0.557174"
@@ -1282,7 +1291,10 @@
        height="105.17519"
        x="-146.97319"
        y="-49.44141"
-       ry="0.31117839" />
+       ry="0.31117839"
+       inkscape:export-filename="laby1.png"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.652;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m -94.604791,-23.26843 -0.237326,52.656488"
