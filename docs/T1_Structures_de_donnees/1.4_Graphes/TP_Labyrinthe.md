@@ -17,14 +17,14 @@ Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrin
 
 Proposer deux «formes» possibles pour ce graphe.
 
-{#
+
 ??? tip "Correction"
     
     ![image](data/laby3.png){: .center width=35%}
 
 
     ![image](data/laby4.png){: .center width=35%}
-#}
+
 
 ## 3. Implémentation du graphe en Python
 
