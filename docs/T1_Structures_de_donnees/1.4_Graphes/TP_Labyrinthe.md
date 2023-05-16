@@ -116,16 +116,14 @@ En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court
 
 ## 5. Conclusion
 
-Cette méthode est utilisée pour trouver la solution de labyrinthe bien plus imposants, comme celui-ci :
+Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode de résolution :
 
-![image](data/chemin_labyrinthe4.png){: .center width=40%}
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/sol_laby.gif" speed="1" play></gif-player>
+</center>
 
-Et on peut voir souvent ce genre d'animation :
 
-![image](data/chemin_laby.gif){: .center width=40%}
-
-Si cette animation est assez satisfaisante à observer, elle n'est pas du tout fidèle à la méthode de résolution qui a permis de la trouver. Comprenez-vous pourquoi ?
-
-jlk
-![image](data/sol_laby.gif){: .center}
-
+- le parcours en largeur part découvrir les cases dans toutes les directions.
+- lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire ```parent```, et ainsi le chemin de sortie du labyrinthe est généré. 
+ 
+[Code de cette animation](data/anim_laby.py){. target="_blank"} (en Pygame)
