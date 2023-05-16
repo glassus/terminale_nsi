@@ -2657,13 +2657,15 @@
 <h2 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h2>
 <p>En utilisant la fonction <code>recherche_chemin</code> du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.</p>
 <h2 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">⚓︎</a></h2>
-<p>Cette méthode est utilisée pour trouver la solution de labyrinthe bien plus imposants, comme celui-ci :</p>
-<p><img alt="image" class="center" src="../data/chemin_labyrinthe4.png" width="40%" /></p>
-<p>Et on peut voir souvent ce genre d'animation :</p>
-<p><img alt="image" class="center" src="../data/chemin_laby.gif" width="40%" /></p>
-<p>Si cette animation est assez satisfaisante à observer, elle n'est pas du tout fidèle à la méthode de résolution qui a permis de la trouver. Comprenez-vous pourquoi ?</p>
-<p>jlk
-<img alt="image" class="center" src="../data/sol_laby.gif" /></p>
+<p>Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode de résolution :</p>
+<p><center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/sol_laby.gif" speed="1" play></gif-player>
+</center></p>
+<ul>
+<li>le parcours en largeur part découvrir les cases dans toutes les directions.</li>
+<li>lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire <code>parent</code>, et ainsi le chemin de sortie du labyrinthe est généré. </li>
+</ul>
+<p><a class="" href="../data/anim_laby.py" target="_blank">Code de cette animation</a> (en Pygame)</p>
 
   <hr>
 <div class="md-source-file">
