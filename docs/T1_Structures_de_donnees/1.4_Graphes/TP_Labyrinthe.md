@@ -30,7 +30,7 @@ Proposer deux «formes» possibles pour ce graphe.
 
 En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de ce labyrinthe.
 
-{#
+
 ??? tip "Correction"
     ```python linenums='1'
     class Graphe:
@@ -66,13 +66,13 @@ En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de 
     g.ajoute_arete('K', 'L')
     g.ajoute_arete('L', 'P')
     ```
-#}
+
 
 ## 4. Recherche du plus court chemin
 
 En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.
 
-{#
+
 ??? tip "Correction"
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
@@ -112,7 +112,7 @@ En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court
     >>> recherche_chemin(g, 'A', 'P')
     'AEFBCGKLP'
     ```
-#}
+
 
 ## 5. Conclusion
 
