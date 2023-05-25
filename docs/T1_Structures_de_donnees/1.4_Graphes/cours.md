@@ -647,3 +647,102 @@ Il faudra ensuite une fonction pour recréer le chemin.
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center}
     Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...
+
+
+### 4.2 Le parcours en profondeur (DFS, Depth First Search)
+
+#### 4.2.1 Principe du parcours récursif
+
+
+Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.
+
+Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemins sur la droite jusqu'à rencontrer un mur, auquel cas on revient au dernier embranchement et on prend un autre chemin, puis on repart à droite, etc.
+
+
+
+C'est un parcours qui s'écrit naturellement de manière **récursive** :
+
+!!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
+    ```python linenums='1'
+    def DFSrec(g, traites, actuel):
+        traites.append(actuel)
+        for voisin in g.voisins(actuel):
+            if voisin not in traites:
+                DFSrec(g, traites, voisin)
+        return traites
+    ```
+
+
+!!! example "{{ exercice() }}"
+    ![image](data/BFS_ex1.png){: .center}
+    
+    **Q1.** Donner (de tête) le parcours DFS de ce graphe en partant de A.  
+    Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de A est donc B.
+
+    **Q2.** Vérifier avec le code précédent. 
+    ??? tip "Correction Q2"
+        ```python linenums='1'
+        class Graphe:
+            def __init__(self, liste_sommets):
+                self.liste_sommets = liste_sommets
+                self.adjacents = {sommet : [] for sommet in liste_sommets}
+
+            def ajoute_arete(self, sommetA, sommetB):
+                self.adjacents[sommetA].append(sommetB)
+                self.adjacents[sommetB].append(sommetA)
+
+            def voisins(self, sommet):
+                return self.adjacents[sommet]
+
+            def sont_voisins(self, sommetA, sommetB):
+                return sommetB in self.adjacents[sommetA]
+
+
+        g = Graphe(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'])
+        g.ajoute_arete('A', 'B')
+        g.ajoute_arete('A', 'C')
+        g.ajoute_arete('B', 'D')
+        g.ajoute_arete('D', 'C')
+        g.ajoute_arete('B', 'E')
+        g.ajoute_arete('D', 'E')
+        g.ajoute_arete('E', 'F')
+        g.ajoute_arete('E', 'G')
+        g.ajoute_arete('F', 'G')
+        g.ajoute_arete('G', 'H')
+
+
+        def DFSrec(g, traites, actuel):
+            traites.append(actuel)
+            for voisin in g.voisins(actuel):
+                if voisin not in traites:
+                    DFSrec(g, traites, voisin)
+            return traites
+
+        ```
+    
+        ```python
+        >>> DFSrec(g, [], 'A')
+        ['A', 'B', 'D', 'C', 'E', 'F', 'G', 'H']
+        ```
+
+    **Q3.** Reprendre les questions précédentes en changeant le sommet de départ.
+
+
+
+{#
+
+**Exemple de parcours en profondeur, avec G comme sommet de départ:**
+
+<center>
+<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/dfs.gif" speed="1" play></gif-player>
+</center>
+
+**Codes couleur :**
+
+- **vert** : les sommets non encore traités.
+- **rouge** : le sommet en cours de traitement.
+- **orange** : la **pile** d'attente des sommets qui seront bientôt traités. On y rajoute à chaque fois les voisins du sommet en cours de traitement, uniquement **si ils n'ont pas encore été découverts**.
+- **noir** : les sommets traités.
+
+#### 4.2.1 Algorithme DFS récursif
+#}
