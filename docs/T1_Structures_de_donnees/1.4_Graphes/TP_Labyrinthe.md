@@ -127,3 +127,36 @@ Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode d
 - lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire ```parent```, et ainsi le chemin de sortie du labyrinthe est généré. 
  
 [Code de cette animation](data/anim_laby.py){. target="_blank"} (en Pygame)
+
+
+## 6. Annexe : et pourquoi pas en DFS ?
+
+Les parcours BFS et DFS ont tous deux la propriété de parcourir **la totalité** du graphe (ils sont même conçus pour cela). Cela a permis au parcours BFS de nous fournir une solution au labyrinthe (dont on a démontré qu'elle était la plus courte).
+
+Que penser de solution qui sera donnée par le DFS ?
+
+### 6.1 Dans un labyrinthe parfait
+
+Voici un code où la solution est d'abord recherchée par BFS (cases explorées en bleu clair, chemin trouvé marqué en bleu), puis en DFS (cases explorées en rose, chemin trouvé marqué en rouge).
+
+[anim_laby_DFSvsBFS_laby_parfait.py](data/anim_laby_DFSvsBFS_laby_parfait.py) :arrow_down:
+
+Que remarquez-vous ???
+
+
+### 6.2 Dans un labyrinthe non parfait
+
+Changeons de code pour un labyrinthe *dégénéré* :
+
+[anim_laby_DFSvsBFS_laby_degenere.py](data/anim_laby_DFSvsBFS_laby_degenere.py) :arrow_down:
+
+Que remarquez-vous ???
+
+
+??? tip "Explications"
+    Notre labyrinthe conçu de manière aléatoire possède une propriété remarquable (dû son algorithme de construction) : chaque case peut être reliée à une autre par **un chemin unique**. On dit de ces labyrinthes qu'ils sont **parfaits**.
+
+    Donc, dans notre code du 6.1 (labyrinthe parfait), le DFS va lui aussi trouver le chemin le plus court... puisqu'il y en a qu'un seul ! De plus, la méthode d'exploration en profondeur va de plus rendre le DFS plus rapide que le BFS, quasiment tout le temps. Ce qui fait que pour un labyrinthe parfait, le DFS est plus intéressant que le BFS.
+
+
+    Mais si le labyrinthe n'est plus parfait (code du 6.2), le DFS va trouver une solution qui ne sera pas obligatoirement la meilleure... S'il y a plusieurs solutions possibles, absolument rien ne garantit que la première solution trouvée par le DFS (sur laquelle il s'arrêtera) sera la meilleure !

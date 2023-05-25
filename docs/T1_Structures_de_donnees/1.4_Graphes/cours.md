@@ -651,10 +651,10 @@ Il faudra ensuite une fonction pour recréer le chemin.
 
 ### 4.2 Le parcours en profondeur (DFS, Depth First Search)
 
-#### 4.2.1 Principe du parcours récursif
+#### 4.2.1 Parcours DFS récursif
 
 
-Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.
+Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins non traités, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.
 
 Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemins sur la droite jusqu'à rencontrer un mur, auquel cas on revient au dernier embranchement et on prend un autre chemin, puis on repart à droite, etc.
 
@@ -665,12 +665,27 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
+        traites.append(...)
+        for voisin in ...:
+            if voisin not in ...:
+                ...
+        return traites
+    ```
+
+
+
+
+{#
+!!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
+    ```python linenums='1'
+    def DFSrec(g, traites, actuel):
         traites.append(actuel)
         for voisin in g.voisins(actuel):
             if voisin not in traites:
                 DFSrec(g, traites, voisin)
         return traites
     ```
+#}
 
 
 !!! example "{{ exercice() }}"
@@ -729,20 +744,28 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 
 
-{#
+#### 4.2.2 Parcours DFS itératif
 
-**Exemple de parcours en profondeur, avec G comme sommet de départ:**
+Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant mal son nom, puisque c'est devenu une pile).
 
-<center>
-<gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/dfs.gif" speed="1" play></gif-player>
-</center>
+!!! abstract "Parcours en profondeur itératif - DFS "
+    ```python linenums='1'
+    def DFS_iteratif(graphe, start):
+        traites = []
+        en_attente = [start]
+        while en_attente != []:
+            actuel = en_attente.pop()
+            if actuel not in traites:
+                voisins = g.voisins(actuel)[::-1]
+                for voisin in voisins:
+                    if voisin not in traites:
+                        en_attente.append(voisin)
+                traites.append(actuel)
+        return traites
+    ```
 
-**Codes couleur :**
+**Remarques :**
 
-- **vert** : les sommets non encore traités.
-- **rouge** : le sommet en cours de traitement.
-- **orange** : la **pile** d'attente des sommets qui seront bientôt traités. On y rajoute à chaque fois les voisins du sommet en cours de traitement, uniquement **si ils n'ont pas encore été découverts**.
-- **noir** : les sommets traités.
+- À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours quele parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la **méthode de découverte**, plus que l'implémentation proprement dite.
 
-#### 4.2.1 Algorithme DFS récursif
-#}
+- Contrairement au BFS, il est possible d'empiler un sommet déjà découvert (on vérifie juste qu'il n'ait pas déjà été traité). Vous pouvez vous en apercevoir en écrivant l'état de la pile lors du parcours DFS itératif du graphe de l'exercice 6.
