@@ -811,6 +811,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-annexe-et-pourquoi-pas-en-dfs" class="md-nav__link">
+    6. Annexe : et pourquoi pas en DFS ?
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Annexe : et pourquoi pas en DFS ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-dans-un-labyrinthe-parfait" class="md-nav__link">
+    6.1 Dans un labyrinthe parfait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-dans-un-labyrinthe-non-parfait" class="md-nav__link">
+    6.2 Dans un labyrinthe non parfait
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2806,13 +2833,30 @@
 <li>lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire <code>parent</code>, et ainsi le chemin de sortie du labyrinthe est généré. </li>
 </ul>
 <p><a class="" href="../data/anim_laby.py" target="_blank">Code de cette animation</a> (en Pygame)</p>
+<h2 id="6-annexe-et-pourquoi-pas-en-dfs">6. Annexe : et pourquoi pas en DFS ?<a class="headerlink" href="#6-annexe-et-pourquoi-pas-en-dfs" title="Permanent link">⚓︎</a></h2>
+<p>Les parcours BFS et DFS ont tous deux la propriété de parcourir <strong>la totalité</strong> du graphe (ils sont même conçus pour cela). Cela a permis au parcours BFS de nous fournir une solution au labyrinthe (dont on a démontré qu'elle était la plus courte).</p>
+<p>Que penser de solution qui sera donnée par le DFS ?</p>
+<h3 id="61-dans-un-labyrinthe-parfait">6.1 Dans un labyrinthe parfait<a class="headerlink" href="#61-dans-un-labyrinthe-parfait" title="Permanent link">⚓︎</a></h3>
+<p>Voici un code où la solution est d'abord recherchée par BFS (cases explorées en bleu clair, chemin trouvé marqué en bleu), puis en DFS (cases explorées en rose, chemin trouvé marqué en rouge).</p>
+<p><a href="../data/anim_laby_DFSvsBFS_laby_parfait.py">anim_laby_DFSvsBFS_laby_parfait.py</a> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b07.svg" title=":arrow_down:" /></p>
+<p>Que remarquez-vous ???</p>
+<h3 id="62-dans-un-labyrinthe-non-parfait">6.2 Dans un labyrinthe non parfait<a class="headerlink" href="#62-dans-un-labyrinthe-non-parfait" title="Permanent link">⚓︎</a></h3>
+<p>Changeons de code pour un labyrinthe <em>dégénéré</em> :</p>
+<p><a href="../data/anim_laby_DFSvsBFS_laby_degenere.py">anim_laby_DFSvsBFS_laby_degenere.py</a> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b07.svg" title=":arrow_down:" /></p>
+<p>Que remarquez-vous ???</p>
+<details class="tip">
+<summary>Explications</summary>
+<p>Notre labyrinthe conçu de manière aléatoire possède une propriété remarquable (dû son algorithme de construction) : chaque case peut être reliée à une autre par <strong>un chemin unique</strong>. On dit de ces labyrinthes qu'ils sont <strong>parfaits</strong>.</p>
+<p>Donc, dans notre code du 6.1 (labyrinthe parfait), le DFS va lui aussi trouver le chemin le plus court... puisqu'il y en a qu'un seul ! De plus, la méthode d'exploration en profondeur va de plus rendre le DFS plus rapide que le BFS, quasiment tout le temps. Ce qui fait que pour un labyrinthe parfait, le DFS est plus intéressant que le BFS.</p>
+<p>Mais si le labyrinthe n'est plus parfait (code du 6.2), le DFS va trouver une solution qui ne sera pas obligatoirement la meilleure... S'il y a plusieurs solutions possibles, absolument rien ne garantit que la première solution trouvée par le DFS (sur laquelle il s'arrêtera) sera la meilleure !</p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mai 2023</span>
       
     
   </small>

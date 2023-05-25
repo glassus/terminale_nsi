@@ -3262,8 +3262,8 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...</p>
 </div>
 <h3 id="42-le-parcours-en-profondeur-dfs-depth-first-search">4.2 Le parcours en profondeur (DFS, Depth First Search)<a class="headerlink" href="#42-le-parcours-en-profondeur-dfs-depth-first-search" title="Permanent link">⚓︎</a></h3>
-<h4 id="421-principe-du-parcours-recursif">4.2.1 Principe du parcours récursif<a class="headerlink" href="#421-principe-du-parcours-recursif" title="Permanent link">⚓︎</a></h4>
-<p>Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.</p>
+<h4 id="421-parcours-dfs-recursif">4.2.1 Parcours DFS récursif<a class="headerlink" href="#421-parcours-dfs-recursif" title="Permanent link">⚓︎</a></h4>
+<p>Le parcours en profondeur est un parcours où on va aller «le plus loin possible» sans se préoccuper des autres voisins non visités : on va visiter le premier de ses voisins non traités, qui va faire de même, etc. Lorsqu'il n'y a plus de voisin, on revient en arrière pour aller voir le dernier voisin non visité.</p>
 <p>Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemins sur la droite jusqu'à rencontrer un mur, auquel cas on revient au dernier embranchement et on prend un autre chemin, puis on repart à droite, etc.</p>
 <p>C'est un parcours qui s'écrit naturellement de manière <strong>récursive</strong> :</p>
 <div class="admonition abstract">
@@ -3274,10 +3274,10 @@ Tester le code précédent pour trouver le plus court chemin entre A et G, entre
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
-    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
-            <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
+    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">...</span>
     <span class="k">return</span> <span class="n">traites</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -3365,6 +3365,44 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
 </details>
 <p><strong>Q3.</strong> Reprendre les questions précédentes en changeant le sommet de départ.</p>
 </div>
+<h4 id="422-parcours-dfs-iteratif">4.2.2 Parcours DFS itératif<a class="headerlink" href="#422-parcours-dfs-iteratif" title="Permanent link">⚓︎</a></h4>
+<p>Il «suffit» de remplacer la file du parcours BFS par une <strong>pile</strong>. Ainsi, on partira visiter le voisin tout juste ajouté à la <em>file d'attente</em> (qui porte maintenant mal son nom, puisque c'est devenu une pile).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Parcours en profondeur itératif - DFS </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFS_iteratif</span><span class="p">(</span><span class="n">graphe</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">actuel</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">actuel</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+            <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+                    <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+            <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">traites</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Remarques :</strong></p>
+<ul>
+<li>
+<p>À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours quele parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la <strong>méthode de découverte</strong>, plus que l'implémentation proprement dite.</p>
+</li>
+<li>
+<p>Contrairement au BFS, il est possible d'empiler un sommet déjà découvert (on vérifie juste qu'il n'ait pas déjà été traité). Vous pouvez vous en apercevoir en écrivant l'état de la pile lors du parcours DFS itératif du graphe de l'exercice 6.</p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
