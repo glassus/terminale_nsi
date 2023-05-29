@@ -356,7 +356,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 #}
 
 
-!!! abstract "Implémentation d'une classe ```Graphe``` "
+!!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
@@ -465,7 +465,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
 #}
 
 
-!!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
+!!! abstract "Parcours en largeur - BFS "
     ```python linenums='1'
     def BFS(g, depart):
         '''
@@ -569,7 +569,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
     Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur ```k```, il sera donc minimal. 
 
 
-!!! abstract "Recherche du plus court chemin :heart: :heart: :heart:"
+!!! abstract "Recherche du plus court chemin "
 
     {#
     ```python linenums='1'
@@ -662,6 +662,7 @@ Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemin
 
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
+{#
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -671,11 +672,11 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 ...
         return traites
     ```
+#}
 
 
 
 
-{#
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -685,7 +686,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 DFSrec(g, traites, voisin)
         return traites
     ```
-#}
+
 
 
 !!! example "{{ exercice() }}"
