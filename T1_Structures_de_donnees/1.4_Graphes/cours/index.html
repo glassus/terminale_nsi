@@ -2993,7 +2993,7 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 </ul>
 <h3 id="33-implementation">3.3 Implémentation<a class="headerlink" href="#33-implementation" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
-<p class="admonition-title">Implémentation d'une classe <code>Graphe</code> </p>
+<p class="admonition-title">Implémentation d'une classe <code>Graphe</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3080,7 +3080,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 </ul>
 <p>En début d'algorithme, seul le sommet de départ <code class="highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Parcours en largeur - BFS <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Parcours en largeur - BFS </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3192,7 +3192,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <p>Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur <code>k</code>, il sera donc minimal. </p>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title">Recherche du plus court chemin <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Recherche du plus court chemin </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3274,10 +3274,10 @@ Tester le code précédent pour trouver le plus court chemin entre A et G, entre
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
-    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">...</span>
+    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
+            <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">traites</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -3409,7 +3409,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 mai 2023</span>
       
     
   </small>
