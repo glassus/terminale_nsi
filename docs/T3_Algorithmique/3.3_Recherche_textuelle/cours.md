@@ -135,7 +135,7 @@ with open("Les_Miserables.txt") as f:
 
     
 
-{#
+
 ## 2. Vers l'algorithme de Boyer-Moore : et si on partait en l'envers ?
 
 !!! example "Exercice 3"
@@ -160,7 +160,7 @@ with open("Les_Miserables.txt") as f:
             return indices
         ```
 
-
+{#
 ## 3. Algorithme de Boyer-Moore-Horspool
 
 ### 2.1 Principe
