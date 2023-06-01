@@ -2700,26 +2700,34 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        renvoie la liste des indices (éventuellement vide) des occurrences de</span>
-<span class="sd">        de la chaîne motif dans la chaîne texte.</span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
-            <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
-                <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
-                <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie la liste des indices (éventuellement vide) des occurrences de</span>
+<span class="sd">    de la chaîne motif dans la chaîne texte.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 
-        <span class="k">return</span> <span class="n">indices</span>
+    <span class="k">return</span> <span class="n">indices</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<p>Exemple d'utilisation :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_naive</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;maison&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">15</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_naive</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;nsi&quot;</span><span class="p">)</span>
+<span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_naive</span><span class="p">(</span><span class="s2">&quot;une magnifique maison bleue&quot;</span><span class="p">,</span> <span class="s2">&quot;ma&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+</code></pre></div></p>
 <h3 id="12-modification-de-lalgorithme">1.2 Modification de l'algorithme<a class="headerlink" href="#12-modification-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
@@ -2766,25 +2774,45 @@
 </div>
 <h3 id="13-application-a-la-recherche-dun-motif-dans-un-roman">1.3 Application à la recherche d'un motif dans un roman<a class="headerlink" href="#13-application-a-la-recherche-dun-motif-dans-un-roman" title="Permanent link">⚓︎</a></h3>
 <p>Le <a class="" href="https://www.gutenberg.org/browse/languages/fr" target="_blank">Projet Gutenberg</a> permet de télécharger légalement des ouvrages libres de droits dans différents formats.</p>
-<p>Nous allons travailler avec le Tome 1 du roman <em>Les Misérables</em> de Victor Hugo, à télécharger <a class="" href="../data/Les_Miserables.txt" target="_blank">ici</a> au format <code>txt</code>. </p>
+<p>Nous allons travailler avec le Tome 1 du roman <em>Les Misérables</em> de Victor Hugo, à télécharger <a class="" href="../data/Les_Miserables.txt" target="_blank">ici</a> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b07.svg" title=":arrow_down:" /> au format <code>txt</code>. </p>
 <h4 id="131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres">1.3.1 Récupération du texte dans une seule chaîne de caractères<a class="headerlink" href="#131-recuperation-du-texte-dans-une-seule-chaine-de-caracteres" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Les_Miserables.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">texte</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">roman</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="132-verification-et-mesure-du-temps-de-recherche">1.3.2 Vérification et mesure du temps de recherche<a class="headerlink" href="#132-verification-et-mesure-du-temps-de-recherche" title="Permanent link">⚓︎</a></h4>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ol>
-<li>Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité <code>Ctrl-F</code> proposée par votre navigateur</li>
-<li>Mesurez le temps d'exécution de votre algorithme à l'aide du module <code>time</code>.  </li>
-</ol>
+<p>À l'aide du module <code>time</code>, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  </p>
 </div>
 <div class="tabbed-block">
-<p><em>à faire</em></p>
+<div class="highlight"><pre><span></span><code><span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s2">&quot;maison&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s2">&quot;La chandelle était sur la cheminée et ne donnait que peu de clarté.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s2">&quot;parcoursup&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+</code></pre></div>
+<p>retour console :</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">7264</span><span class="p">,</span> <span class="mi">9090</span><span class="p">,</span> <span class="mi">9547</span><span class="p">,</span> <span class="mi">9745</span><span class="p">,</span> <span class="mi">10936</span><span class="p">,</span> <span class="mi">17820</span><span class="p">,</span> <span class="mi">23978</span><span class="p">,</span> <span class="mi">38192</span><span class="p">,</span> <span class="mi">41639</span><span class="p">,</span> <span class="mi">41651</span><span class="p">,</span> <span class="mi">41840</span><span class="p">,</span> <span class="mi">42493</span><span class="p">,</span> <span class="mi">48028</span><span class="p">,</span> <span class="mi">48393</span><span class="p">,</span> <span class="mi">51448</span><span class="p">,</span> <span class="mi">53353</span><span class="p">,</span> <span class="mi">70867</span><span class="p">,</span> <span class="mi">72692</span><span class="p">,</span> <span class="mi">72768</span><span class="p">,</span> <span class="mi">75608</span><span class="p">,</span> <span class="mi">77855</span><span class="p">,</span> <span class="mi">108489</span><span class="p">,</span> <span class="mi">115739</span><span class="p">,</span> <span class="mi">130629</span><span class="p">,</span> <span class="mi">132983</span><span class="p">,</span> <span class="mi">138870</span><span class="p">,</span> <span class="mi">143681</span><span class="p">,</span> <span class="mi">144600</span><span class="p">,</span> <span class="mi">153114</span><span class="p">,</span> <span class="mi">155973</span><span class="p">,</span> <span class="mi">158709</span><span class="p">,</span> <span class="mi">160700</span><span class="p">,</span> <span class="mi">163649</span><span class="p">,</span> <span class="mi">169164</span><span class="p">,</span> <span class="mi">169181</span><span class="p">,</span> <span class="mi">171761</span><span class="p">,</span> <span class="mi">171967</span><span class="p">,</span> <span class="mi">182642</span><span class="p">,</span> <span class="mi">186413</span><span class="p">,</span> <span class="mi">190534</span><span class="p">,</span> <span class="mi">219378</span><span class="p">,</span> <span class="mi">220314</span><span class="p">,</span> <span class="mi">224518</span><span class="p">,</span> <span class="mi">225098</span><span class="p">,</span> <span class="mi">227579</span><span class="p">,</span> <span class="mi">296302</span><span class="p">,</span> <span class="mi">345108</span><span class="p">,</span> <span class="mi">345893</span><span class="p">,</span> <span class="mi">346740</span><span class="p">,</span> <span class="mi">349677</span><span class="p">,</span> <span class="mi">359727</span><span class="p">,</span> <span class="mi">362025</span><span class="p">,</span> <span class="mi">389945</span><span class="p">,</span> <span class="mi">395690</span><span class="p">,</span> <span class="mi">434118</span><span class="p">,</span> <span class="mi">438068</span><span class="p">,</span> <span class="mi">457795</span><span class="p">,</span> <span class="mi">457886</span><span class="p">,</span> <span class="mi">464696</span><span class="p">,</span> <span class="mi">469403</span><span class="p">,</span> <span class="mi">501768</span><span class="p">,</span> <span class="mi">514980</span><span class="p">,</span> <span class="mi">520667</span><span class="p">,</span> <span class="mi">520878</span><span class="p">,</span> <span class="mi">520926</span><span class="p">,</span> <span class="mi">520968</span><span class="p">,</span> <span class="mi">522707</span><span class="p">,</span> <span class="mi">529329</span><span class="p">,</span> <span class="mi">598128</span><span class="p">,</span> <span class="mi">601390</span><span class="p">,</span> <span class="mi">645915</span><span class="p">]</span>
+<span class="mf">0.21963715553283691</span>
+<span class="p">[</span><span class="mi">651731</span><span class="p">]</span>
+<span class="mf">0.21761441230773926</span>
+<span class="p">[]</span>
+<span class="mf">0.22150230407714844</span>
+</code></pre></div>
+<p>On remarque que le temps de recherche est semblable, quel que soit le motif cherché. </p>
 </div>
 </div>
 </div>
@@ -2803,7 +2831,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 août 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 juin 2023</span>
       
     
   </small>
