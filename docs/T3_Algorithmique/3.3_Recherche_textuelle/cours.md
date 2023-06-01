@@ -41,6 +41,8 @@
 
     ```
 
+#}
+
 Exemple d'utilisation :
 ```python
 >>> recherche_naive("une magnifique maison bleue", "maison")
@@ -51,6 +53,7 @@ Exemple d'utilisation :
 [4, 15]
 ```
 
+{#
 
 ### 1.2 Modification de l'algorithme
 
