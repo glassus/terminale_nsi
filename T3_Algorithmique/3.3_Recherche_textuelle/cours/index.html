@@ -1325,6 +1325,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-algorithme-de-boyer-moore-horspool" class="md-nav__link">
+    3. Algorithme de Boyer-Moore-Horspool
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Algorithme de Boyer-Moore-Horspool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-principe" class="md-nav__link">
+    2.1 Principe
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2834,6 +2854,19 @@ Certes, c'est pour l'instant très artificiel, mais :
 </div>
 </div>
 </div>
+<h2 id="3-algorithme-de-boyer-moore-horspool">3. Algorithme de Boyer-Moore-Horspool<a class="headerlink" href="#3-algorithme-de-boyer-moore-horspool" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-principe">2.1 Principe<a class="headerlink" href="#21-principe" title="Permanent link">⚓︎</a></h3>
+<p>L'idée est d'améliorer le code précédent (celui on parcourt le motif à l'envers) en <strong>sautant</strong> directement au prochain endroit potentiellement valide. </p>
+<p>Pour cela on regarde le caractère <code>X</code>  du texte sur lequel on s'est arrêté (car <code>X</code> n'était pas égal au caractère de rang équivalent dans le motif):</p>
+<ul>
+<li>si <code>X</code> n'est pas dans le motif, il est inutile de se déplacer "de 1" : on retomberait tout de suite sur <code>X</code>, c'est du temps perdu. On se décale donc juste assez pour dépasser <code>X</code>, donc de la longueur du motif cherché.</li>
+<li>si <code>X</code> est dans le motif (sauf à la dernière place du motif !), on va regarder la place de la dernière occurence de <code>X</code> dans le motif et de déplacer de ce nombre, afin de faire coïncider le <code>X</code> du motif et le <code>X</code> du texte.</li>
+</ul>
+<details class="tip" open="open">
+<summary>Illustration de l'algorithme</summary>
+<p><gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player></p>
+<p><em>Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris.</em></p>
+</details>
 
   <hr>
 <div class="md-source-file">
