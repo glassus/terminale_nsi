@@ -1318,6 +1318,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-vers-lalgorithme-de-boyer-moore-et-si-on-partait-en-lenvers" class="md-nav__link">
+    2. Vers l'algorithme de Boyer-Moore : et si on partait en l'envers ?
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2786,6 +2793,43 @@
 <span class="mf">0.22150230407714844</span>
 </code></pre></div>
 <p>On remarque que le temps de recherche est semblable, quel que soit le motif cherché. </p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="2-vers-lalgorithme-de-boyer-moore-et-si-on-partait-en-lenvers">2. Vers l'algorithme de Boyer-Moore : et si on partait en l'envers ?<a class="headerlink" href="#2-vers-lalgorithme-de-boyer-moore-et-si-on-partait-en-lenvers" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Re-écrire l'algorithme de recherche naïve mais en démarrant de la fin du <strong>motif</strong> et non du début. 
+Certes, c'est pour l'instant très artificiel, mais :
+<img alt="image" class="center" src="../data/mickey.jpg" width="40%" /></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">presqueBMH</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">motif</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">]:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">indices</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
