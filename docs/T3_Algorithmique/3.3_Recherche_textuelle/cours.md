@@ -101,7 +101,7 @@ with open("Les_Miserables.txt") as f:
 !!! example "Exercice 2"
     === "Énoncé"
         À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
-    {#
+    
     === "Correction"
         ```python
         t0 = time.time()
@@ -133,7 +133,7 @@ with open("Les_Miserables.txt") as f:
 
         On remarque que le temps de recherche est semblable, quel que soit le motif cherché. 
 
-    #}
+    
 
 {#
 ## 2. Vers l'algorithme de Boyer-Moore : et si on partait en l'envers ?
