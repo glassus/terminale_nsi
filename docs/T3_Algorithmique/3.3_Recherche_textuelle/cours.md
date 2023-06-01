@@ -160,7 +160,7 @@ with open("Les_Miserables.txt") as f:
             return indices
         ```
 
-{#
+
 ## 3. Algorithme de Boyer-Moore-Horspool
 
 ### 2.1 Principe
@@ -177,7 +177,7 @@ Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêt�
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
 
-
+{#
 ### 2.2 Implémentation
 
 On va d'abord coder une fonction ```dico_lettres``` qui renvoie un dictionnaire associant à chaque lettre de ```mot``` (paramètre d'entrée) son dernier rang dans le ```mot```. On exclut la dernière lettre, qui poserait un problème lors du décalage (on décalerait de 0...) 
