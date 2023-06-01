@@ -7,8 +7,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-
-- :arrow_right: [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
+    - :arrow_right: [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
 
 ### *Thèmes déjà traités*
 - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
