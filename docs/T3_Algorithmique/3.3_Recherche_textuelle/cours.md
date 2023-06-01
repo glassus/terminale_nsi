@@ -16,6 +16,8 @@
 
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
+{#
+
 ### 1.1 Premier algorithme
 
 !!! note "Algorithme de recherche naïve :heart:"
@@ -128,13 +130,126 @@ with open("Les_Miserables.txt") as f:
         On remarque que le temps de recherche est semblable, quel que soit le motif cherché. 
 
 
-## 2. Algorithme de Boyer-Moore-Horspool
+## 2. Vers l'algorithme de Boyer-Moore : et si on partait en l'envers ?
+
+!!! example "Exercice 3"
+    === "Énoncé"
+        Re-écrire l'algorithme de recherche naïve mais en démarrant de la fin du **motif** et non du début. 
+        Certes, c'est pour l'instant très artificiel, mais :
+        ![image](data/mickey.jpg){: .center width=40%}
+        
+
+    === "Correction"
+        ```python linenums='1'
+        def presqueBMH(texte, motif):
+            indices = []
+            i = len(motif) -1
+            while i < len(texte):
+                k = 0
+                while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
+                    k += 1
+                if k == len(motif):
+                    indices.append(i-len(motif)+1)
+                i += 1
+            return indices
+        ```
+
+
+## 3. Algorithme de Boyer-Moore-Horspool
+
+### 2.1 Principe
+L'idée est d'améliorer le code précédent (celui on parcourt le motif à l'envers) en **sautant** directement au prochain endroit potentiellement valide. 
+
+Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêté (car ```X``` n'était pas égal au caractère de rang équivalent dans le motif):
+
+- si ```X``` n'est pas dans le motif, il est inutile de se déplacer "de 1" : on retomberait tout de suite sur ```X```, c'est du temps perdu. On se décale donc juste assez pour dépasser ```X```, donc de la longueur du motif cherché.
+- si ```X``` est dans le motif (sauf à la dernière place du motif !), on va regarder la place de la dernière occurence de ```X``` dans le motif et de déplacer de ce nombre, afin de faire coïncider le ```X``` du motif et le ```X``` du texte.
 
 ???+ tip "Illustration de l'algorithme"
     <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
 
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
-### 2.1 Principe
+
 
 ### 2.2 Implémentation
+
+On va d'abord coder une fonction ```dico_lettres``` qui renvoie un dictionnaire associant à chaque lettre de ```mot``` (paramètre d'entrée) son dernier rang dans le ```mot```. On exclut la dernière lettre, qui poserait un problème lors du décalage (on décalerait de 0...) 
+
+!!! note "Algorithme de Boyer-Moore-Horspool :heart:"
+    ```python linenums='1'
+    def dico_lettres(mot):
+        d = {}
+        for i in range(len(mot)-1):
+            d[mot[i]] = i
+        return d
+
+    def BMH(texte, motif):
+        dico = dico_lettres(motif)
+        indices = []
+        i = len(motif) -1
+        while i < len(texte):
+            k = 0
+            while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
+                k += 1
+            if k == len(motif):
+                indices.append(i-len(motif)+1)
+                i += len(motif)
+            else:
+                if texte[i-k] in dico:
+                    i += len(motif)-dico[texte[i-k]]-1
+                else:
+                    i += len(motif)
+
+        return indices
+
+    ```
+
+Exemple d'utilisation :
+```python
+>>> BMH("une magnifique maison bleue", "maison")
+[15]
+>>> BMH("une magnifique maison bleue", "nsi")
+[]
+>>> BMH("une magnifique maison bleue", "ma")
+[4, 15]
+```
+
+!!! example "Exercice 4"
+    === "Énoncé"
+        Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMS. Que remarquez-vous ?  
+    === "Correction"
+        ```python
+        t0 = time.time()
+        motif = "maison"
+        print(BMH(roman, motif))
+        print(time.time()-t0)
+
+        t0 = time.time()
+        motif = "La chandelle était sur la cheminée et ne donnait que peu de clarté."
+        print(BMH(roman, motif))
+        print(time.time()-t0)
+
+        t0 = time.time()
+        motif = "parcoursup"
+        print(BMH(roman, motif))
+        print(time.time()-t0)
+        ```
+
+        retour console :
+
+        ```python
+        [7264, 9090, 9547, 9745, 10936, 17820, 23978, 38192, 41639, 41651, 41840, 42493, 48028, 48393, 51448, 53353, 70867, 72692, 72768, 75608, 77855, 108489, 115739, 130629, 132983, 138870, 143681, 144600, 153114, 155973, 158709, 160700, 163649, 169164, 169181, 171761, 171967, 182642, 186413, 190534, 219378, 220314, 224518, 225098, 227579, 296302, 345108, 345893, 346740, 349677, 359727, 362025, 389945, 395690, 434118, 438068, 457795, 457886, 464696, 469403, 501768, 514980, 520667, 520878, 520926, 520968, 522707, 529329, 598128, 601390, 645915]
+        0.06359553337097168
+        [651731]
+        0.01853322982788086
+        []
+        0.037064313888549805
+        ```
+
+        On constate quelque chose de remarquable (et qui peut être à première vue contre-intuitif) : 
+
+        **Plus le motif recherché est long, plus la recherche est rapide**.
+
+
+#}

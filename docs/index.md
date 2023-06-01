@@ -8,13 +8,11 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
 
-- :arrow_right: [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-
-
-
+- :arrow_right: [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
 
 ### *Thèmes déjà traités*
--  [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+- [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
+- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
 - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/) 
 - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
