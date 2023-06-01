@@ -20,29 +20,39 @@
 
 !!! note "Algorithme de recherche naïve :heart:"
     ```python linenums='1'
-        def recherche_naive(texte, motif):
-            '''
-            renvoie la liste des indices (éventuellement vide) des occurrences de
-            de la chaîne motif dans la chaîne texte.
-            '''
-            indices = []
-            i = 0
-            while i <= len(texte) - len(motif):
-                k = 0
-                while k < len(motif) and texte[i+k] == motif[k]:
-                    k += 1
-                if k == len(motif):
-                    indices.append(i)
-                i += 1
+    def recherche_naive(texte, motif):
+        '''
+        renvoie la liste des indices (éventuellement vide) des occurrences de
+        de la chaîne motif dans la chaîne texte.
+        '''
+        indices = []
+        i = 0
+        while i <= len(texte) - len(motif):
+            k = 0
+            while k < len(motif) and texte[i+k] == motif[k]:
+                k += 1
+            if k == len(motif):
+                indices.append(i)
+            i += 1
 
-            return indices
+        return indices
 
     ```
+
+Exemple d'utilisation :
+```python
+>>> recherche_naive("une magnifique maison bleue", "maison")
+[15]
+>>> recherche_naive("une magnifique maison bleue", "nsi")
+[]
+>>> recherche_naive("une magnifique maison bleue", "ma")
+[4, 15]
+```
 
 
 ### 1.2 Modification de l'algorithme
 
-!!! abstract "Exercice 1"
+!!! example "Exercice 1"
     === "Énoncé"
         Re-écrire l'algorithme précédent en s'arrêtant dès qu'une occurrence de ```motif``` est trouvée dans ```texte```.
 
@@ -72,24 +82,50 @@
 
 Le [Projet Gutenberg](https://www.gutenberg.org/browse/languages/fr){. target="_blank"} permet de télécharger légalement des ouvrages libres de droits dans différents formats.
 
-Nous allons travailler avec le Tome 1 du roman _Les Misérables_ de Victor Hugo, à télécharger [ici](data/Les_Miserables.txt){. target="_blank"} au format ```txt```. 
+Nous allons travailler avec le Tome 1 du roman _Les Misérables_ de Victor Hugo, à télécharger [ici](data/Les_Miserables.txt){. target="_blank"} :arrow_down: au format ```txt```. 
 
 #### 1.3.1 Récupération du texte dans une seule chaîne de caractères
 
 ```python linenums='1'
 with open("Les_Miserables.txt") as f:
-    texte = f.read().replace('\n', ' ')
+    roman = f.read().replace('\n', ' ')
 ```
 
 #### 1.3.2 Vérification et mesure du temps de recherche
 
-!!! abstract "Exercice 2"
+!!! example "Exercice 2"
     === "Énoncé"
-        1. Testez la validité de vos réponses en comparant avec les résultats donnés par la fonctionnalité ```Ctrl-F``` proposée par votre navigateur
-        2. Mesurez le temps d'exécution de votre algorithme à l'aide du module ```time```.  
+        À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     === "Correction"
-        *à faire*
-         
+        ```python
+        t0 = time.time()
+        motif = "maison"
+        print(recherche_naive(roman, motif))
+        print(time.time()-t0)
+
+        t0 = time.time()
+        motif = "La chandelle était sur la cheminée et ne donnait que peu de clarté."
+        print(recherche_naive(roman, motif))
+        print(time.time()-t0)
+
+        t0 = time.time()
+        motif = "parcoursup"
+        print(recherche_naive(roman, motif))
+        print(time.time()-t0)
+        ```
+        
+        retour console :
+
+        ```python
+        [7264, 9090, 9547, 9745, 10936, 17820, 23978, 38192, 41639, 41651, 41840, 42493, 48028, 48393, 51448, 53353, 70867, 72692, 72768, 75608, 77855, 108489, 115739, 130629, 132983, 138870, 143681, 144600, 153114, 155973, 158709, 160700, 163649, 169164, 169181, 171761, 171967, 182642, 186413, 190534, 219378, 220314, 224518, 225098, 227579, 296302, 345108, 345893, 346740, 349677, 359727, 362025, 389945, 395690, 434118, 438068, 457795, 457886, 464696, 469403, 501768, 514980, 520667, 520878, 520926, 520968, 522707, 529329, 598128, 601390, 645915]
+        0.21963715553283691
+        [651731]
+        0.21761441230773926
+        []
+        0.22150230407714844
+        ```
+
+        On remarque que le temps de recherche est semblable, quel que soit le motif cherché. 
 
 
 ## 2. Algorithme de Boyer-Moore-Horspool
