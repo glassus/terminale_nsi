@@ -183,7 +183,7 @@ Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêt�
 On va d'abord coder une fonction ```dico_lettres``` qui renvoie un dictionnaire associant à chaque lettre de ```mot``` (paramètre d'entrée) son dernier rang dans le ```mot```. On exclut la dernière lettre, qui poserait un problème lors du décalage (on décalerait de 0...) 
 
 
-
+{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     ```python linenums='1'
     def dico_lettres(mot):
@@ -222,10 +222,10 @@ Exemple d'utilisation :
 >>> BMH("une magnifique maison bleue", "ma")
 [4, 15]
 ```
+#}
 
 
 
-{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     ```python linenums='1'
     def dico_lettres(mot):
@@ -268,6 +268,8 @@ Exemple d'utilisation :
 !!! example "Exercice 4"
     === "Énoncé"
         Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMS. Que remarquez-vous ?  
+
+    {#
     === "Correction"
         ```python
         t0 = time.time()
@@ -302,4 +304,4 @@ Exemple d'utilisation :
         **Plus le motif recherché est long, plus la recherche est rapide**.
 
 
-#}
+        #}
