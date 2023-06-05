@@ -182,6 +182,50 @@ Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêt�
 
 On va d'abord coder une fonction ```dico_lettres``` qui renvoie un dictionnaire associant à chaque lettre de ```mot``` (paramètre d'entrée) son dernier rang dans le ```mot```. On exclut la dernière lettre, qui poserait un problème lors du décalage (on décalerait de 0...) 
 
+
+
+!!! note "Algorithme de Boyer-Moore-Horspool :heart:"
+    ```python linenums='1'
+    def dico_lettres(mot):
+        d = {}
+        for i in range(len(mot)-1):
+            d[mot[i]] = i
+        return d
+
+    def BMH(texte, motif):
+        dico = dico_lettres(motif)
+        indices = []
+        i = len(motif) -1
+        while i < len(texte):
+            k = 0
+            while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
+                k += 1
+            if k == ...:
+                indices.append(i-len(motif)+1)
+                i += ...
+            else:
+                if texte[i-k] in ...:
+                    i += len(motif)-dico[texte[i-k]]-1
+                else:
+                    i += ...
+
+        return indices
+
+    ```
+
+Exemple d'utilisation :
+```python
+>>> BMH("une magnifique maison bleue", "maison")
+[15]
+>>> BMH("une magnifique maison bleue", "nsi")
+[]
+>>> BMH("une magnifique maison bleue", "ma")
+[4, 15]
+```
+
+
+
+{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     ```python linenums='1'
     def dico_lettres(mot):
@@ -258,3 +302,4 @@ Exemple d'utilisation :
         **Plus le motif recherché est long, plus la recherche est rapide**.
 
 
+#}
