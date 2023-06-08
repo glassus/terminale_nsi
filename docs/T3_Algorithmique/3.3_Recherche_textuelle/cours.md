@@ -275,7 +275,7 @@ Exemple d'utilisation :
 
 !!! example "Exercice 4"
     === "Énoncé"
-        Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMS. Que remarquez-vous ?  
+        Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMH. Que remarquez-vous ?  
 
     
     === "Correction"
