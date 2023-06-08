@@ -240,20 +240,28 @@ Exemple d'utilisation :
         i = len(motif) -1
         while i < len(texte):
             k = 0
-            while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
+            while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]: #(1)
                 k += 1
-            if k == len(motif):
+            if k == len(motif): #(2)
                 indices.append(i-len(motif)+1)
-                i += len(motif)
+                i += 1 #(3)
             else:
-                if texte[i-k] in dico:
-                    i = max(i - k  + len(motif) - dico[texte[i-k]] - 1, i+1)
+                if texte[i-k] in dico: (#4)
+                    i = max(i - k  + len(motif) - dico[texte[i-k]] - 1, i+1) #(5)
                 else:
-                    i = i - k + len(motif)
+                    i = i - k + len(motif) #(6)
 
         return indices
 
     ```
+
+    1. On remonte le motif à l'envers, tant qu'il y a correspondance et qu'on n'est pas arrivés au début du motif
+    2. Si on est arrivés au début du motif, c'est qu'on a trouvé le mot.
+    3. On a trouvé le motif, mais attention, il ne faut pas trop se décaler sinon on pourrait rater d'autres occurences du motif (pensez à la recherche du motif «mama» dans le mot «mamamamama»). On se décale donc de 1.
+    4. On s'est arrêté avant la fin, sur une lettre présente dans le mot : il va falloir faire un décalage intelligent.
+    5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres, en évitant le retour en arrière (d'où le max pour se décaler au moins de 1) 
+    6. La lettre n'est pas dans le motif : on se positionne juste après elle. 
+
 
 Exemple d'utilisation :
 ```python
