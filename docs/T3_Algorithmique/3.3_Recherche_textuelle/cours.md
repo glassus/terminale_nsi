@@ -247,9 +247,9 @@ Exemple d'utilisation :
                 i += len(motif)
             else:
                 if texte[i-k] in dico:
-                    i += len(motif)-dico[texte[i-k]]-1
+                    i = max(i - k  + len(motif) - dico[texte[i-k]] - 1, i+1)
                 else:
-                    i += len(motif)
+                    i = i - k + len(motif)
 
         return indices
 
@@ -269,7 +269,7 @@ Exemple d'utilisation :
     === "Énoncé"
         Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMS. Que remarquez-vous ?  
 
-    {#
+    
     === "Correction"
         ```python
         t0 = time.time()
@@ -304,4 +304,4 @@ Exemple d'utilisation :
         **Plus le motif recherché est long, plus la recherche est rapide**.
 
 
-        #}
+        
