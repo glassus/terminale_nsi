@@ -7,7 +7,7 @@
         - Complexité
         - Tris par sélection et insertion
         - Dichotomie
-        - algorithmes glouton
+        - Algorithmes gloutons
 
 
 {#
