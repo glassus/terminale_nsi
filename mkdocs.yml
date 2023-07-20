@@ -78,6 +78,7 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
       toc_depth: 3
+  - md_in_html 
 
 
 plugins:
