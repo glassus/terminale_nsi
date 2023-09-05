@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
@@ -3429,25 +3429,28 @@
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
-
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
 <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">dx</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
-<span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleur</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleur</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
 
     <span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
     <span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span>
@@ -3459,7 +3462,6 @@
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
             <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -3505,42 +3507,35 @@
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
 <span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
-<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">40</span>
-
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">dx</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
-<span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleur</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">RAYON</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleur</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
 
     <span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
     <span class="n">y</span> <span class="o">+=</span> <span class="n">dy</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
-       <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="n">dy</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="n">dy</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dx</span> <span class="o">=</span> <span class="o">-</span><span class="n">dx</span>
-
-
 
     <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
@@ -3549,7 +3544,6 @@
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
             <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -3562,33 +3556,34 @@
     import time
     from pygame.locals import *
 
-    largeur = 64
-    hauteur = 480
-    taille = 20
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
+
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
+
+
     dxA = 7
     dyA = 4
     dxB = -5
     dyB = 3
 
 
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
-
-    xA = largeur // 2
-    yA = hauteur // 2
-    xB = largeur // 2
-    yB = hauteur // 2
+    xA = LARGEUR // 3
+    yA = HAUTEUR // 2
+    xB = LARGEUR // 2
+    yB = HAUTEUR // 2
 
 
-    couleurA = (45,170,250)
-    couleurB = (155,17,250)
+    couleurA = (45, 170, 250)
+    couleurB = (155, 17, 250)
 
-    while True :
-        fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-        pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
+    while True:
+        fenetre.fill([0, 0, 0])
+        pygame.draw.circle(fenetre, couleurA, (xA, yA), RAYON)
+        pygame.draw.circle(fenetre, couleurB, (xB, yB), RAYON)
 
         xA += dxA
         yA += dyA
@@ -3596,22 +3591,21 @@
         xB += dxB
         yB += dyB
 
-
         # rebond en haut ou en bas
-        if yA < taille or yA > hauteur - taille:
+        if (yA < RAYON) or (yA > HAUTEUR - RAYON):
             dyA = -dyA
 
         # rebond à gauche ou à droite
-        if xA < taille or xA > largeur - taille:
+        if (xA < RAYON) or (xA > LARGEUR - RAYON):
             dxA = -dxA
 
         # rebond en haut ou en bas
-        if yB < taille or yB > hauteur - taille:
+        if (yB < RAYON) or (yB > HAUTEUR - RAYON):
             dyB = -dyB
 
         # rebond à gauche ou à droite
-        if xB < taille or xB > largeur - taille:
-            dxB = -dxB   
+        if (xB < RAYON) or (xB > LARGEUR - RAYON):
+            dxB = -dxB
 
         pygame.display.update()
 
@@ -3621,8 +3615,9 @@
                 pygame.display.quit()
                 sys.exit()
 
-
         time.sleep(0.03)
+
+
     ``` -->
 
 <h3 id="13-gestion-de-la-collision-entre-les-deux-balles">1.3 Gestion de la collision entre les deux balles<a class="headerlink" href="#13-gestion-de-la-collision-entre-les-deux-balles" title="Permanent link">⚓︎</a></h3>
@@ -3703,43 +3698,43 @@
 <span class="normal">69</span>
 <span class="normal">70</span>
 <span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">320</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">480</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+
 <span class="n">dxA</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">dyA</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
 <span class="n">dyB</span> <span class="o">=</span> <span class="mi">3</span>
 
 
-
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="n">xA</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">yA</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">xB</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">yB</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xA</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">yA</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xB</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">yB</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
 
 
-<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
-<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">((</span><span class="n">xA</span><span class="o">-</span><span class="n">xB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">yA</span><span class="o">-</span><span class="n">yB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
 
 
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurA</span><span class="p">,(</span><span class="n">xA</span><span class="p">,</span><span class="n">yA</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurB</span><span class="p">,(</span><span class="n">xB</span><span class="p">,</span><span class="n">yB</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurA</span><span class="p">,</span> <span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurB</span><span class="p">,</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
 
     <span class="n">xA</span> <span class="o">+=</span> <span class="n">dxA</span>
     <span class="n">yA</span> <span class="o">+=</span> <span class="n">dyA</span>
@@ -3747,24 +3742,23 @@
     <span class="n">xB</span> <span class="o">+=</span> <span class="n">dxB</span>
     <span class="n">yB</span> <span class="o">+=</span> <span class="n">dyB</span>
 
-
     <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yA</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dyA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyA</span>
 
     <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xA</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dxA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxA</span>
 
     <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yB</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dyB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyB</span>
 
     <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xB</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxB</span>
 
-    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">RAYON</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;collision&quot;</span><span class="p">)</span>
 
     <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -3774,7 +3768,6 @@
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
             <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -3855,43 +3848,43 @@
 <span class="normal">70</span>
 <span class="normal">71</span>
 <span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+
 <span class="n">dxA</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">dyA</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
 <span class="n">dyB</span> <span class="o">=</span> <span class="mi">3</span>
 
 
-
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="n">xA</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">3</span>
-<span class="n">yA</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">3</span>
-<span class="n">xB</span> <span class="o">=</span> <span class="n">largeur</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">yB</span> <span class="o">=</span> <span class="n">hauteur</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xA</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">yA</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xB</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">yB</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
 
 
-<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">170</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
-<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">((</span><span class="n">xA</span><span class="o">-</span><span class="n">xB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">yA</span><span class="o">-</span><span class="n">yB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
 
 
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurA</span><span class="p">,(</span><span class="n">xA</span><span class="p">,</span><span class="n">yA</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="n">couleurB</span><span class="p">,(</span><span class="n">xB</span><span class="p">,</span><span class="n">yB</span><span class="p">),</span><span class="n">taille</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurA</span><span class="p">,</span> <span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurB</span><span class="p">,</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
 
     <span class="n">xA</span> <span class="o">+=</span> <span class="n">dxA</span>
     <span class="n">yA</span> <span class="o">+=</span> <span class="n">dyA</span>
@@ -3899,24 +3892,23 @@
     <span class="n">xB</span> <span class="o">+=</span> <span class="n">dxB</span>
     <span class="n">yB</span> <span class="o">+=</span> <span class="n">dyB</span>
 
-
     <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yA</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dyA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyA</span>
 
     <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xA</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xA</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dxA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxA</span>
 
     <span class="c1"># rebond en haut ou en bas</span>
-    <span class="k">if</span> <span class="n">yB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">yB</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dyB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyB</span>
 
     <span class="c1"># rebond à gauche ou à droite</span>
-    <span class="k">if</span> <span class="n">xB</span> <span class="o">&lt;</span> <span class="n">taille</span> <span class="ow">or</span> <span class="n">xB</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
         <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxB</span>
 
-    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">taille</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">RAYON</span><span class="p">:</span>
         <span class="n">dxA</span><span class="p">,</span> <span class="n">dxB</span> <span class="o">=</span> <span class="n">dxB</span><span class="p">,</span> <span class="n">dxA</span>
         <span class="n">dyA</span><span class="p">,</span> <span class="n">dyB</span> <span class="o">=</span> <span class="n">dyB</span><span class="p">,</span> <span class="n">dyA</span>
 
@@ -3927,7 +3919,6 @@
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
             <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -3947,38 +3938,39 @@ Créez cette classe et instanciez une balle.</p>
     import time
     from pygame.locals import *
     from random import randint
+
     # randint(0,10) -> nb aléatoire entre 0 et 10
 
-    largeur = 400
-    hauteur = 400
-    taille = 20
-
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
 
 
     class Balle:
         def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
 
         def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
 
         def bouge(self):
             self.x += self.dx
             self.y += self.dy
 
-    ma_balle = Balle()     
 
-    while True :
-        fenetre.fill([0,0,0])
+    ma_balle = Balle()
+
+    while True:
+        fenetre.fill([0, 0, 0])
 
         ma_balle.dessine()
         ma_balle.bouge()
@@ -3988,7 +3980,6 @@ Créez cette classe et instanciez une balle.</p>
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 sys.exit()
-
 
         time.sleep(0.05)
 
@@ -4064,77 +4055,67 @@ Créez cette classe et instanciez une balle.</p>
 <span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
+<span class="c1"># randint(0,10) -&gt; nb aléatoire entre 0 et 10</span>
 
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">800</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">nb_balles</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">NB_BALLES</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">largeur</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
 
 <span class="k">class</span> <span class="nc">Balle</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">largeur</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>        
-        <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="n">taille</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">LARGEUR</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="n">RAYON</span>
 
     <span class="k">def</span> <span class="nf">dessine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">),</span><span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">)</span>    
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">bouge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
 
         <span class="c1"># 1. rebond sur les parois</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">hauteur</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">largeur</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
-
 
         <span class="c1"># 4. gérer la collision de toutes les balles</span>
         <span class="c1"># je teste la collision de self avec chacune des autres balles</span>
         <span class="k">for</span> <span class="n">balle</span> <span class="ow">in</span> <span class="n">mon_sac_a_balles</span><span class="p">:</span>
             <span class="c1"># collision entre self et balle</span>
-            <span class="k">if</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">-</span><span class="n">balle</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">+</span> <span class="n">balle</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">balle</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">+</span> <span class="n">balle</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">dx</span><span class="p">,</span> <span class="n">balle</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">dx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">dy</span><span class="p">,</span> <span class="n">balle</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">dy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
 
 
-
-<span class="c1"># 2. Créer 10 balles  (par ex)     </span>
-
 <span class="n">mon_sac_a_balles</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_balles</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NB_BALLES</span><span class="p">):</span>
     <span class="n">new_ball</span> <span class="o">=</span> <span class="n">Balle</span><span class="p">()</span>
     <span class="n">mon_sac_a_balles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_ball</span><span class="p">)</span>
 
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="c1">#3. Animer toutes les balles</span>
     <span class="k">for</span> <span class="n">balle</span> <span class="ow">in</span> <span class="n">mon_sac_a_balles</span><span class="p">:</span>
         <span class="n">balle</span><span class="o">.</span><span class="n">dessine</span><span class="p">()</span>
         <span class="n">balle</span><span class="o">.</span><span class="n">bouge</span><span class="p">()</span>
-
 
     <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
@@ -4159,7 +4140,7 @@ Je pourrai ainsi le consulter au fur et à mesure de votre progression.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 septembre 2023</span>
       
     
   </small>
@@ -4246,7 +4227,7 @@ Je pourrai ainsi le consulter au fur et à mesure de votre progression.</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
