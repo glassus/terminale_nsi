@@ -9,35 +9,38 @@ import pygame, sys
 import time
 from pygame.locals import *
 
-
+LARGEUR = 640
+HAUTEUR = 480
+RAYON = 20
 
 pygame.display.init()
-fenetre = pygame.display.set_mode((640, 480))
+fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
 fenetre.fill([0,0,0])
 
 x = 300
 y = 200
 dx = 4
 dy = -3
-couleur = (45,170,250)
+couleur = (45, 170, 250)
 
-while True :
-    fenetre.fill([0,0,0])
-    pygame.draw.circle(fenetre,couleur,(x,y),10)
-    
+while True:
+    fenetre.fill([0, 0, 0])
+    pygame.draw.circle(fenetre, couleur, (x, y), RAYON)
+
     x += dx
     y += dy
-    
+
     pygame.display.update()
-    
+
     # routine pour pouvoir fermer «proprement» la fenêtre Pygame
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.display.quit()
             sys.exit()
-    
-    
+
     time.sleep(0.1)
+
+
 ```
 
 ### 1.1  Rajout d'un rebond sur les parois
@@ -51,32 +54,29 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 
     LARGEUR = 640
     HAUTEUR = 480
-    RAYON = 40
-
+    RAYON = 20
 
     pygame.display.init()
     fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
-    fenetre.fill([0,0,0])
+    fenetre.fill([0, 0, 0])
 
     x = 300
     y = 200
     dx = 4
     dy = -3
-    couleur = (45,170,250)
+    couleur = (45, 170, 250)
 
-    while True :
-        fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleur,(x,y),RAYON)
+    while True:
+        fenetre.fill([0, 0, 0])
+        pygame.draw.circle(fenetre, couleur, (x, y), RAYON)
 
         x += dx
         y += dy
 
         if (y <= RAYON) or (y >= HAUTEUR - RAYON):
-           dy = -dy
+            dy = -dy
         if (x <= RAYON) or (x >= LARGEUR - RAYON):
             dx = -dx
-
-
 
         pygame.display.update()
 
@@ -86,8 +86,8 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
                 pygame.display.quit()
                 sys.exit()
 
-
         time.sleep(0.02)
+
 
     ```
 
@@ -100,56 +100,56 @@ Attention au nommage des variables...
     import time
     from pygame.locals import *
 
-    largeur = 64
-    hauteur = 480
-    taille = 20
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
+
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
+
+
     dxA = 7
     dyA = 4
     dxB = -5
     dyB = 3
 
 
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
-
-    xA = largeur // 2
-    yA = hauteur // 2
-    xB = largeur // 2
-    yB = hauteur // 2
+    xA = LARGEUR // 3
+    yA = HAUTEUR // 2
+    xB = LARGEUR // 2
+    yB = HAUTEUR // 2
 
 
-    couleurA = (45,170,250)
-    couleurB = (155,17,250)
+    couleurA = (45, 170, 250)
+    couleurB = (155, 17, 250)
 
-    while True :
-        fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-        pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
-        
+    while True:
+        fenetre.fill([0, 0, 0])
+        pygame.draw.circle(fenetre, couleurA, (xA, yA), RAYON)
+        pygame.draw.circle(fenetre, couleurB, (xB, yB), RAYON)
+
         xA += dxA
         yA += dyA
-    
+
         xB += dxB
         yB += dyB
-    
-    
+
         # rebond en haut ou en bas
-        if yA < taille or yA > hauteur - taille:
+        if (yA < RAYON) or (yA > HAUTEUR - RAYON):
             dyA = -dyA
 
         # rebond à gauche ou à droite
-        if xA < taille or xA > largeur - taille:
+        if (xA < RAYON) or (xA > LARGEUR - RAYON):
             dxA = -dxA
 
         # rebond en haut ou en bas
-        if yB < taille or yB > hauteur - taille:
+        if (yB < RAYON) or (yB > HAUTEUR - RAYON):
             dyB = -dyB
 
         # rebond à gauche ou à droite
-        if xB < taille or xB > largeur - taille:
-            dxB = -dxB   
+        if (xB < RAYON) or (xB > LARGEUR - RAYON):
+            dxB = -dxB
 
         pygame.display.update()
 
@@ -159,8 +159,9 @@ Attention au nommage des variables...
                 pygame.display.quit()
                 sys.exit()
 
-
         time.sleep(0.03)
+
+
     ``` -->
 
 ### 1.3 Gestion de la collision entre les deux balles
@@ -173,38 +174,39 @@ Attention au nommage des variables...
         import time
         from pygame.locals import *
 
-        largeur = 320
-        hauteur = 480
-        taille = 20
+        LARGEUR = 640
+        HAUTEUR = 480
+        RAYON = 20
+
+        pygame.display.init()
+        fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+        fenetre.fill([0, 0, 0])
+
+
         dxA = 7
         dyA = 4
         dxB = -5
         dyB = 3
 
 
-
-        pygame.display.init()
-        fenetre = pygame.display.set_mode((largeur, hauteur))
-        fenetre.fill([0,0,0])
-
-        xA = largeur // 2
-        yA = hauteur // 2
-        xB = largeur // 2
-        yB = hauteur // 2
+        xA = LARGEUR // 3
+        yA = HAUTEUR // 2
+        xB = LARGEUR // 2
+        yB = HAUTEUR // 2
 
 
-        couleurA = (45,170,250)
-        couleurB = (155,17,250)
+        couleurA = (45, 170, 250)
+        couleurB = (155, 17, 250)
+
 
         def distanceAB(xA, yA, xB, yB):
             return ((xA-xB)**2 + (yA-yB)**2)**0.5
 
 
-
-        while True :
-            fenetre.fill([0,0,0])
-            pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-            pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
+        while True:
+            fenetre.fill([0, 0, 0])
+            pygame.draw.circle(fenetre, couleurA, (xA, yA), RAYON)
+            pygame.draw.circle(fenetre, couleurB, (xB, yB), RAYON)
 
             xA += dxA
             yA += dyA
@@ -212,24 +214,23 @@ Attention au nommage des variables...
             xB += dxB
             yB += dyB
 
-
             # rebond en haut ou en bas
-            if yA < taille or yA > hauteur - taille:
+            if (yA < RAYON) or (yA > HAUTEUR - RAYON):
                 dyA = -dyA
 
             # rebond à gauche ou à droite
-            if xA < taille or xA > largeur - taille:
+            if (xA < RAYON) or (xA > LARGEUR - RAYON):
                 dxA = -dxA
 
             # rebond en haut ou en bas
-            if yB < taille or yB > hauteur - taille:
+            if (yB < RAYON) or (yB > HAUTEUR - RAYON):
                 dyB = -dyB
 
             # rebond à gauche ou à droite
-            if xB < taille or xB > largeur - taille:
+            if (xB < RAYON) or (xB > LARGEUR - RAYON):
                 dxB = -dxB
-                
-            if distanceAB(xA, yA, xB, yB) < 2*taille:
+
+            if distanceAB(xA, yA, xB, yB) < 2 * RAYON:
                 print("collision")
 
             pygame.display.update()
@@ -240,8 +241,9 @@ Attention au nommage des variables...
                     pygame.display.quit()
                     sys.exit()
 
-
             time.sleep(0.03)
+
+
 
         ```
  -->
@@ -254,38 +256,39 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
         import time
         from pygame.locals import *
 
-        largeur = 200
-        hauteur = 200
-        taille = 20
+        LARGEUR = 640
+        HAUTEUR = 480
+        RAYON = 20
+
+        pygame.display.init()
+        fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+        fenetre.fill([0, 0, 0])
+
+
         dxA = 7
         dyA = 4
         dxB = -5
         dyB = 3
 
 
-
-        pygame.display.init()
-        fenetre = pygame.display.set_mode((largeur, hauteur))
-        fenetre.fill([0,0,0])
-
-        xA = largeur // 3
-        yA = hauteur // 3
-        xB = largeur // 2
-        yB = hauteur // 2
+        xA = LARGEUR // 3
+        yA = HAUTEUR // 2
+        xB = LARGEUR // 2
+        yB = HAUTEUR // 2
 
 
-        couleurA = (45,170,250)
-        couleurB = (155,17,250)
+        couleurA = (45, 170, 250)
+        couleurB = (155, 17, 250)
+
 
         def distanceAB(xA, yA, xB, yB):
             return ((xA-xB)**2 + (yA-yB)**2)**0.5
 
 
-
-        while True :
-            fenetre.fill([0,0,0])
-            pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-            pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
+        while True:
+            fenetre.fill([0, 0, 0])
+            pygame.draw.circle(fenetre, couleurA, (xA, yA), RAYON)
+            pygame.draw.circle(fenetre, couleurB, (xB, yB), RAYON)
 
             xA += dxA
             yA += dyA
@@ -293,24 +296,23 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
             xB += dxB
             yB += dyB
 
-
             # rebond en haut ou en bas
-            if yA < taille or yA > hauteur - taille:
+            if (yA < RAYON) or (yA > HAUTEUR - RAYON):
                 dyA = -dyA
 
             # rebond à gauche ou à droite
-            if xA < taille or xA > largeur - taille:
+            if (xA < RAYON) or (xA > LARGEUR - RAYON):
                 dxA = -dxA
 
             # rebond en haut ou en bas
-            if yB < taille or yB > hauteur - taille:
+            if (yB < RAYON) or (yB > HAUTEUR - RAYON):
                 dyB = -dyB
 
             # rebond à gauche ou à droite
-            if xB < taille or xB > largeur - taille:
+            if (xB < RAYON) or (xB > LARGEUR - RAYON):
                 dxB = -dxB
 
-            if distanceAB(xA, yA, xB, yB) < 2*taille:
+            if distanceAB(xA, yA, xB, yB) < 2 * RAYON:
                 dxA, dxB = dxB, dxA
                 dyA, dyB = dyB, dyA
 
@@ -322,8 +324,9 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
                     pygame.display.quit()
                     sys.exit()
 
-
             time.sleep(0.03)
+
+
 
         ```
 
@@ -347,48 +350,48 @@ Créez cette classe et instanciez une balle.
     import time
     from pygame.locals import *
     from random import randint
+
     # randint(0,10) -> nb aléatoire entre 0 et 10
 
-    largeur = 400
-    hauteur = 400
-    taille = 20
-
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
 
 
     class Balle:
         def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
-            
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
+
         def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
-            
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
+
         def bouge(self):
             self.x += self.dx
             self.y += self.dy
-            
-    ma_balle = Balle()     
-            
-    while True :
-        fenetre.fill([0,0,0])
-        
+
+
+    ma_balle = Balle()
+
+    while True:
+        fenetre.fill([0, 0, 0])
+
         ma_balle.dessine()
         ma_balle.bouge()
-        
+
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 sys.exit()
-
 
         time.sleep(0.05)
 
@@ -405,75 +408,72 @@ Puis plusieurs balles ! (qui se collisionnent...)
     from pygame.locals import *
     from random import randint
 
+    # randint(0,10) -> nb aléatoire entre 0 et 10
 
-    largeur = 800
-    hauteur = 600
-    taille = 20
-    nb_balles = 100
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
+    NB_BALLES = 10
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
 
 
     class Balle:
         def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
 
         def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
 
         def bouge(self):
             self.x += self.dx
             self.y += self.dy
-            
+
             # 1. rebond sur les parois
-            if self.y < self.taille or self.y > hauteur - self.taille:
+            if self.y < self.taille or self.y > HAUTEUR - self.taille:
                 self.dy = -self.dy
-            if self.x < self.taille or self.x > largeur - self.taille:
+            if self.x < self.taille or self.x > LARGEUR - self.taille:
                 self.dx = -self.dx
 
-            
             # 4. gérer la collision de toutes les balles
             # je teste la collision de self avec chacune des autres balles
             for balle in mon_sac_a_balles:
                 # collision entre self et balle
-                if ((self.x-balle.x)**2 + (self.y-balle.y)**2)**0.5 < self.taille + balle.taille:
+                if (
+                    (self.x - balle.x) ** 2 + (self.y - balle.y) ** 2
+                ) ** 0.5 < self.taille + balle.taille:
                     self.dx, balle.dx = balle.dx, self.dx
                     self.dy, balle.dy = balle.dy, self.dy
-       
-            
-            
-    # 2. Créer 10 balles  (par ex)     
+
 
     mon_sac_a_balles = []
-    for k in range(nb_balles):
+    for k in range(NB_BALLES):
         new_ball = Balle()
         mon_sac_a_balles.append(new_ball)
 
+    while True:
+        fenetre.fill([0, 0, 0])
 
-
-    while True :
-        fenetre.fill([0,0,0])
-        
-        #3. Animer toutes les balles
         for balle in mon_sac_a_balles:
             balle.dessine()
             balle.bouge()
-
 
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 sys.exit()
-            
+
         time.sleep(0.05)
+
+
     ```
 
  -->

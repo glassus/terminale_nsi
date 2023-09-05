@@ -1,25 +1,18 @@
 
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
 
-    - Les listes et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-        - Algorithmes gloutons
-
-
-{#
 !!! abstract "Actualités"
-    - :star: :star: :star: les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
-    - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
+    - Préparez-vous à l'Épreuve Pratique : les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
+    - Préparez-vous à l'Épreuve Écrite : les annales des années précédentes sont disponibles [ici](T6_Annales/liste_sujets/) 
+
+    - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
     
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :arrow_right: [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
+    - :arrow_right: [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
+
+{#
 ### *Thèmes déjà traités*
 - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
 - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
@@ -97,5 +90,23 @@
 
 
 - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf).
+
+
+
+
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+
+    - Les listes et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+        - Algorithmes gloutons
+
+
+
+
+
 
 -->
