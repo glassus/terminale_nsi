@@ -97,7 +97,7 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
 
-<!-- ??? info "Correction"
+??? info "Correction"
     ```python linenums='1'
     import pygame, sys
     import time
@@ -165,7 +165,7 @@ Attention au nommage des variables...
         time.sleep(0.03)
 
 
-    ``` -->
+    ```
 
 ### 1.3 Gestion de la collision entre les deux balles
 1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
