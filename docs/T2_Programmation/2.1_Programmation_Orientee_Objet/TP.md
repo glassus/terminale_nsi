@@ -46,6 +46,7 @@ while True:
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
+{#
 ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
@@ -90,6 +91,8 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
 
 
     ```
+#}
+
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
