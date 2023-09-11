@@ -168,8 +168,13 @@ Attention au nommage des variables...
     ```
 
 ### 1.3 Gestion de la collision entre les deux balles
-1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
-2. Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.
+**Q1.** À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
+
+??? tip "indice"
+    ![image](data/TP_dist.png){: .center}
+    
+
+**Q2.** Implémentez ce test (en créant pour cela une fonction ```distance``` )  et affichez "collision" en console lorsque les deux balles se touchent.
 <!-- 
     ??? info "Correction"
         ```python linenums='1'
@@ -251,7 +256,7 @@ Attention au nommage des variables...
         ```
  -->
 
-Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
+**Q3.** Pour donner l'illusion physique du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
 <!-- 
     ??? info "Correction"
         ```python linenums='1'
@@ -340,6 +345,9 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
 
 ### 1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.
 ... vraiment ? Peut-on continuer comme précédemment ?
+
+![image](data/meme_doubt.png){: .center width=30%}
+
 
 ## 2. La POO à la rescousse : création d'une classe Balle
 

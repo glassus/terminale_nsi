@@ -227,7 +227,7 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
         Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
         
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
             ```python
             >>> A = Point(3,5)
             >>> A.x
@@ -237,12 +237,14 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
             ```
 
     === "Correction"
+        {#
         ```python linenums='1'
         class Point :
             def __init__(self,x,y):
                 self.x = x
                 self.y = y
         ```
+        #}
 
 #### 2.2.4 Créer une méthode pour notre objet
 
@@ -352,6 +354,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
             ```
 
     === "Correction"
+        {#
         ```python linenums='1'
         class Point:
             def __init__(self,x,y):
@@ -361,6 +364,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
             def distance(self) :
                 return (self.x**2+self.y**2)**0.5
         ```
+        #}
 
 ### 3. Compléments
 
@@ -516,9 +520,9 @@ Ce type de méthode s'appelle un ```getter```.
 ??? Abstract "Sources et bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 
-
+{#
 [DS01](/data/DS01_POO.pdf)
-
+#}
 
 
 
