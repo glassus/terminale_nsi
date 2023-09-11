@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -3521,7 +3521,7 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="mi">11</span>
 </code></pre></div>
 <p>Observons les différentes étapes grâce à PythonTutor :</p>
-<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202021%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202023%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 <p>Bien sûr, on peut créer une autre voiture en suivant le même principe :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">&quot;noire&quot;</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
@@ -3572,10 +3572,10 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2021</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2023</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
     <span class="k">def</span> <span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
              <span class="s2">&quot;, vitesse maximale&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">&quot;km/h.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Remarque : le symbole <code>\</code> est utilisé ici pour couper une ligne trop longue.</p>
@@ -3589,7 +3589,7 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2021</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2023</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
     <span class="k">def</span> <span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Rédige automatiquement une petite annonce concernant le véhicule&quot;&quot;&quot;</span>
@@ -3642,13 +3642,13 @@ Pour créer une instance de cette classe, on écrit :</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Reprendre la classe de l'exercice précédent et rajouter une méthode <code>distance()</code> qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).</p>
-<details class="info">
-<summary>Exemple d'utilisation de la classe</summary>
+<div class="admonition info">
+<p class="admonition-title">Exemple d'utilisation de la classe</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">distance</span><span class="p">()</span>
 <span class="mf">5.830951894845301</span>
 </code></pre></div>
-</details>
+</div>
 </div>
 <div class="tabbed-block"></div>
 </div>
