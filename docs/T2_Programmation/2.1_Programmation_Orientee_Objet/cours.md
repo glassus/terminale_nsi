@@ -237,14 +237,14 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
             ```
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         class Point :
             def __init__(self,x,y):
                 self.x = x
                 self.y = y
         ```
-        #}
+        
 
 #### 2.2.4 Créer une méthode pour notre objet
 
