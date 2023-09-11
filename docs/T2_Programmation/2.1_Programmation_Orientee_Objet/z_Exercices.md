@@ -11,7 +11,7 @@
         2. Instancier trois élèves de cette classe.
         3. Écrire une fonction ```compare(eleve1, eleve2)``` qui renvoie le nom de l'élève ayant la meilleure note.
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
             ```python
             >>> riri = Eleve("Henri", "TG2", 12)
             >>> fifi = Eleve("Philippe", "TG6", 15)
@@ -22,7 +22,7 @@
 
     === "Correction"
 
-   
+        {#
         ```python linenums='1'
         class Eleve:
             def __init__(self, nom, classe, note):
@@ -36,6 +36,7 @@
             else:
                 return eleve2.nom
         ```
+        #}
 
 
 !!! example "Exercice 2"
@@ -44,7 +45,7 @@
 
         La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypotenuse``` se calculera automatiquement.
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
 
             ```python
             >>> mon_triangle = TriangleRect(3,4)
@@ -58,15 +59,16 @@
 
 
 
-<!--     === "Correction"
-
+    === "Correction"
+        {#
         ```python linenums='1'
         class TriangleRect:
             def __init__(self, a, b):
                 self.cote1 = a
                 self.cote2 = b
                 self.hypotenuse = (self.cote1**2 + self.cote2**2)**0.5
-        ```  -->
+        ```
+        #}
 
 !!! example "Exercice 3"
     === "Énoncé"
@@ -74,7 +76,7 @@
         2. Doter la classe d'une méthode ```affiche()``` qui fera affichera le temps ```t```.
         3. Doter la classe d'une méthode ```avance(s)``` qui fera avancer le temps ```t``` de ```s``` secondes.
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
 
             ```python
             >>> t = Chrono(17,25,38)
@@ -91,6 +93,7 @@
             'Il est 17 heures, 26 minutes et 5 secondes'
             ```
     === "Correction"
+        {#
         ```python linenums='1'
         class Chrono:
             def __init__(self, h, m, s):
@@ -99,8 +102,8 @@
                 self.secondes = s
                 
             def affiche(self):
-                return "Il est {} heures, {} minutes \
-        et {} secondes".format(self.heures, self.minutes, self.secondes)
+                print("Il est {} heures, {} minutes \
+                et {} secondes".format(self.heures, self.minutes, self.secondes))
 
             def avance(self, s):
                 self.secondes += s
@@ -117,6 +120,7 @@
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
         ```
+        #}
   
 
 !!! example "Exercice 4"
@@ -130,7 +134,7 @@
         - fournira à chaque objet une méthode ```soin()``` qui augmente l'attribut ```energie``` de 1.
         - si l'attribut ```energie``` passe à 0, l'attribut ```alive``` doit passer à ```False``` et ne doit plus pouvoir évoluer.
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
 
             ```python
             >>> mario = Player()
@@ -153,7 +157,9 @@
             >>> mario.energie
             0
             ```
+
     === "Correction"
+        {#
         ```python linenums='1'
         class Player:
             def __init__(self):
@@ -169,7 +175,7 @@
                 if self.energie > 0:
                     self.energie += 1
         ```
-
+        #}
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc){. target="_blank"}"
     !!! example "Exercice 5"
@@ -195,6 +201,7 @@
                 ```
                 
         === "Correction"
+            {#
             ```python linenums='1'
             class CompteBancaire:
                 def __init__(self, titulaire, solde):
@@ -214,6 +221,7 @@
                     print("Vous avez déposé {} euros".format(somme))
                     print("Solde actuel du compte : {} euros".format(self.solde))
             ```
+            #}
 
 
 
@@ -276,6 +284,7 @@
         ```
 
     === "Correction"
+        {#
         ```python linenums='1'
         class Carte:
             """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
@@ -316,7 +325,9 @@
                     return self.contenu[pos]
 
         ```
+        #}
 
+{#
 !!! abstract "DS02"
     === "Sujet"
         ## Gestion d'une bibliothèque
@@ -327,11 +338,13 @@
 
         ### ▸ classe `Livre` 
         Elle comporte 3 attributs :
+
         - `titre` : le titre du livre
         - `auteur` : le nom de l'auteur
         - `etat` : un nombre entier entre 0 et 5. Si l'état vaut 0, le livre est trop abîmé et doit être retiré de la bibliothèque. L'état d'un livre ne peut pas être négatif.
 
         Elle comporte 2 méthodes :
+
         - `degrade` : enlève 1 à l'état du livre.
         - `description` : affiche les renseignements sur le livre
 
@@ -339,9 +352,11 @@
         ### ▸ classe `Bibliotheque`
 
         Elle comporte 1 attribut :
+
         - `livres` : une liste (vide à la création de l'objet)
 
         Elle comporte 3 méthodes :
+
         - `ajoute` : prend un livre en paramètre et l'ajoute à la bibliothèque.
         - `supprime_livres_abimes` : enlève de la bibliothèque les livres trop abîmés.
         - `inventaire` : affiche le contenu de la bibliothèque
@@ -442,3 +457,4 @@
 
 
         ```
+#}

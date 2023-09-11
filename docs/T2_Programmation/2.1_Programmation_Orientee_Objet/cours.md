@@ -209,7 +209,7 @@ __main__.Voiture
 ```
 
 Observons les différentes étapes grâce à PythonTutor :
-<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202021%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202023%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 Bien sûr, on peut créer une autre voiture en suivant le même principe :
@@ -255,10 +255,10 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2021 - self.annee
+        self.age = 2023 - self.annee
     
     def petite_annonce(self) :
-        "À vendre voiture", self.couleur, "de", self.annee,\
+        print("À vendre voiture", self.couleur, "de", self.annee,\
              ", vitesse maximale", self.vitesse_max, "km/h.")
 ```
 
@@ -279,7 +279,7 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2021 - self.annee
+        self.age = 2023 - self.annee
     
     def petite_annonce(self) :
         """ Rédige automatiquement une petite annonce concernant le véhicule"""
@@ -346,7 +346,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
     === "Énoncé"
         Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
 
-        ??? info "Exemple d'utilisation de la classe"
+        !!! info "Exemple d'utilisation de la classe"
             ```python
             >>> A = Point(3,5)
             >>> A.distance()
