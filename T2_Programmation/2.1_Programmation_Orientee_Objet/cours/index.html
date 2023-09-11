@@ -3493,7 +3493,7 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2021</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2023</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>le mot-clé <code>self</code>, omniprésent en POO (d'autres langages utilisent <code>this</code>), fait référence à l'objet lui-même, qui est en train d'être construit.</li>
@@ -3518,7 +3518,7 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">vitesse_max</span>
 <span class="mi">190</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">age</span>
-<span class="mi">9</span>
+<span class="mi">11</span>
 </code></pre></div>
 <p>Observons les différentes étapes grâce à PythonTutor :</p>
 <iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202021%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
