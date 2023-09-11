@@ -168,7 +168,7 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2021 - self.annee
+        self.age = 2023 - self.annee
 ```
 
 - le mot-clé ```self```, omniprésent en POO (d'autres langages utilisent ```this```), fait référence à l'objet lui-même, qui est en train d'être construit.
@@ -205,7 +205,7 @@ __main__.Voiture
 >>> mon_bolide.vitesse_max
 190
 >>> mon_bolide.age
-9
+11
 ```
 
 Observons les différentes étapes grâce à PythonTutor :
