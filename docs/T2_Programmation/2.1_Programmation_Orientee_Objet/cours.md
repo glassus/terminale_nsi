@@ -354,7 +354,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
             ```
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         class Point:
             def __init__(self,x,y):
@@ -364,7 +364,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
             def distance(self) :
                 return (self.x**2+self.y**2)**0.5
         ```
-        #}
+        
 
 ### 3. Compléments
 
