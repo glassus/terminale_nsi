@@ -10,6 +10,8 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :arrow_right: [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+    - [POO : cours](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+    - [POO : exercices](T2_Programmation/2.1_Programmation_Orientee_Objet/z_Exercices/) 
 
 
 {#
