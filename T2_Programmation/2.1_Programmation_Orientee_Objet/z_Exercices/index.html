@@ -3312,7 +3312,7 @@
 <ol>
 <li>Écrire une classe <code>Eleve</code> qui contiendra les attributs <code>nom</code>, <code>classe</code> et <code>note</code>.</li>
 <li>Instancier trois élèves de cette classe.</li>
-<li>Écrire une fonction <code>compare(eleve1, eleve2)</code> qui renvoie le nom de l'élève ayant la meilleure note.</li>
+<li>Écrire une fonction <code>compare(eleve1, eleve2)</code> qui renvoie le nom de l'élève ayant la meilleure note (on ne traitera pas le cas d'égalité).</li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Exemple d'utilisation de la classe</p>
@@ -3324,7 +3324,30 @@
 </code></pre></div>
 </div>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Eleve</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">classe</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classe</span> <span class="o">=</span> <span class="n">classe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
+
+<span class="k">def</span> <span class="nf">compare</span><span class="p">(</span><span class="n">eleve1</span><span class="p">,</span> <span class="n">eleve2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">eleve1</span><span class="o">.</span><span class="n">note</span> <span class="o">&gt;</span> <span class="n">eleve2</span><span class="o">.</span><span class="n">note</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">eleve1</span><span class="o">.</span><span class="n">nom</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">eleve2</span><span class="o">.</span><span class="n">nom</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3556,7 +3579,7 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 septembre 2023</span>
       
     
   </small>
