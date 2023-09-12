@@ -9,7 +9,7 @@
     === "Énoncé"
         1. Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
         2. Instancier trois élèves de cette classe.
-        3. Écrire une fonction ```compare(eleve1, eleve2)``` qui renvoie le nom de l'élève ayant la meilleure note (on ne traitera pas le cas d'égalité).
+        3. Écrire une fonction ```compare(eleve1, eleve2)``` qui renvoie le nom de l'élève ayant la meilleure note (on ne traitera pas à part le cas d'égalité).
 
         !!! info "Exemple d'utilisation de la classe"
             ```python
