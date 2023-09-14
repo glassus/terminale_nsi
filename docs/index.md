@@ -5,7 +5,9 @@
     - Préparez-vous à l'Épreuve Écrite : les annales des années précédentes sont disponibles [ici](T6_Annales/liste_sujets/) 
 
     - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
-    
+
+
+- [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
 
 
 !!! note ":star: Thème en cours d'étude :star: "
