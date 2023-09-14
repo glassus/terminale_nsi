@@ -159,7 +159,7 @@
             ```
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         class Player:
             def __init__(self):
@@ -168,14 +168,14 @@
             
             def blessure(self):
                 self.energie -= 1
-                if self.energie <= 0:
+                if self.energie == 0:
                     self.alive = False
                 
             def soin(self):
                 if self.energie > 0:
                     self.energie += 1
         ```
-        #}
+        
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc){. target="_blank"}"
     !!! example "Exercice 5"
