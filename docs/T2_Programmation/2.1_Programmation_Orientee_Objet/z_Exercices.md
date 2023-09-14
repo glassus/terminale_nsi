@@ -92,6 +92,13 @@
             >>> t.affiche()
             'Il est 17 heures, 26 minutes et 5 secondes'
             ```
+
+        ??? tip "Aide"
+            On pourra utiliser les opérateurs :
+            
+            - ```%```, qui calcule le reste d'une division euclidienne.
+            - ```//```, qui calcule le quotient d'une division euclidienne.
+              
     === "Correction"
         {#
         ```python linenums='1'
