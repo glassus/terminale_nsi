@@ -100,7 +100,7 @@
             - ```//```, qui calcule le quotient d'une division euclidienne.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         class Chrono:
             def __init__(self, h, m, s):
@@ -126,12 +126,12 @@
                 # il faut ajouter les heures supplémentaires si les minutes
                 # dépassent 60
                 self.heures += self.minutes // 60
-                
+
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
         ```
-        #}
+        
   
 
 !!! example "Exercice 4"
