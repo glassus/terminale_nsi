@@ -98,7 +98,7 @@
             
             - ```%```, qui calcule le reste d'une division euclidienne.
             - ```//```, qui calcule le quotient d'une division euclidienne.
-              
+
     === "Correction"
         {#
         ```python linenums='1'
@@ -114,15 +114,19 @@
 
             def avance(self, s):
                 self.secondes += s
+
                 # il faut ajouter les minutes supplémentaires si les secondes
                 # dépassent 60
                 self.minutes += self.secondes // 60
+
                 # il ne faut garder des secondes que ce qui n'a pas servi
                 # à fabriquer des minutes supplémentaires
                 self.secondes = self.secondes % 60
+
                 # il faut ajouter les heures supplémentaires si les minutes
                 # dépassent 60
                 self.heures += self.minutes // 60
+                
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
