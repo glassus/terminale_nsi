@@ -60,15 +60,15 @@
 
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         class TriangleRect:
-            def __init__(self, a, b):
-                self.cote1 = a
-                self.cote2 = b
+            def __init__(self, c1, c2):
+                self.cote1 = c1
+                self.cote2 = c2
                 self.hypotenuse = (self.cote1**2 + self.cote2**2)**0.5
         ```
-        #}
+        
 
 !!! example "Exercice 3"
     === "Énoncé"
