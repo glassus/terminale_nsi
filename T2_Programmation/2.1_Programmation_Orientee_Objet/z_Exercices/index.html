@@ -3577,7 +3577,42 @@
 </code></pre></div>
 </div>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">CompteBancaire</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulaire</span><span class="p">,</span> <span class="n">solde</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">titulaire</span> <span class="o">=</span> <span class="n">titulaire</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">=</span> <span class="n">solde</span>
+
+    <span class="k">def</span> <span class="nf">retrait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">somme</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrait impossible&quot;</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">-=</span> <span class="n">somme</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez retiré </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solde actuel du compte : </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">depot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">+=</span> <span class="n">somme</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous avez déposé </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solde actuel du compte : </span><span class="si">{}</span><span class="s2"> euros&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">solde</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3676,13 +3711,44 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 </div>
 </div>
 </div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice 7</p>
+<p>Exercice 2 Partie A du sujet <a class="" href="../../../T6_Annales/data/2022/2022_Metropole_Septembre.pdf" target="_blank">Métropole Septembre 2022</a></p>
+<details class="tip">
+<summary>Correction Q1.a</summary>
+<p>La liste <code>v</code> contient 5 éléments.</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b</summary>
+<p><code>v[1].nom</code> renvoie <code>Les goélands</code>.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> la classe <code>Villa</code> possède un attribut ET une méthode s'appelant <code>nom</code>, ce qui est affreux et provoquerait une erreur lors de l'appel à la méthode.</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.c</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">surface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sejour</span><span class="o">.</span><span class="n">sup</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">sup</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">sup</span>
+</code></pre></div>
+</details>
+<details class="tip">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">villa</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">villa</span><span class="o">.</span><span class="n">eqCuis</span> <span class="o">==</span> <span class="s2">&quot;eq&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">villa</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
+<p>ou bien</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">villa</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">villa</span><span class="o">.</span><span class="n">equip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;eq&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">villa</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
+</details>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 septembre 2023</span>
       
     
   </small>
