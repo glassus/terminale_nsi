@@ -212,7 +212,7 @@
                 ```
                 
         === "Correction"
-            {#
+            
             ```python linenums='1'
             class CompteBancaire:
                 def __init__(self, titulaire, solde):
@@ -232,7 +232,7 @@
                     print("Vous avez déposé {} euros".format(somme))
                     print("Solde actuel du compte : {} euros".format(self.solde))
             ```
-            #}
+            
 
 
 
@@ -337,6 +337,51 @@
 
         ```
         #}
+
+
+
+!!! abstract "Exercice 7"
+    Exercice 2 Partie A du sujet [Métropole Septembre 2022](../../T6_Annales/data/2022/2022_Metropole_Septembre.pdf){. target="_blank"}
+
+    ??? tip "Correction Q1.a"
+        La liste ```v``` contient 5 éléments.
+
+    ??? tip "Correction Q1.b"
+        ```v[1].nom``` renvoie ```Les goélands```.
+
+        :warning: la classe ```Villa``` possède un attribut ET une méthode s'appelant ```nom```, ce qui est affreux et provoquerait une erreur lors de l'appel à la méthode.
+
+    ??? tip "Correction Q1.c"
+        ```python
+        def surface(self):
+            return self.sejour.sup + self.ch1.sup + self.ch2.sup
+        ```
+    
+    ??? tip "Correction Q2"
+        ```python
+        for villa in v:
+            if villa.eqCuis == "eq":
+                print(villa.nom)
+        ```
+
+        ou bien
+
+        ```python
+        for villa in v:
+            if villa.equip() == "eq":
+                print(villa.nom)
+        ```
+
+
+
+
+
+
+
+
+
+
+
 
 {#
 !!! abstract "DS02"
