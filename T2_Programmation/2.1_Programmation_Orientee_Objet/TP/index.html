@@ -1130,6 +1130,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#22-plusieurs-balles" class="md-nav__link">
+    2.2 Plusieurs balles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-collision-de-toutes-les-balles" class="md-nav__link">
+    2.3 Collision de toutes les balles
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3688,9 +3702,9 @@
 <p><img alt="image" class="center" src="../data/TP_dist.png" /></p>
 </details>
 <p><strong>Q2.</strong> Implémentez ce test (en créant pour cela une fonction <code>distance</code> )  et affichez "collision" en console lorsque les deux balles se touchent.</p>
-<!-- 
-    ??? info "Correction"
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<details class="info">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3834,12 +3848,11 @@
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
- -->
-
+</details>
 <p><strong>Q3.</strong> Pour donner l'illusion physique du rebond, échangez les valeurs respectives de <code>dx</code> et <code>dy</code> pour les deux balles.</p>
-<!-- 
-    ??? info "Correction"
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<details class="info">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3985,226 +3998,43 @@
 
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-
-
- -->
-
+</details>
 <h3 id="14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres">1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.<a class="headerlink" href="#14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres" title="Permanent link">⚓︎</a></h3>
 <p>... vraiment ? Peut-on continuer comme précédemment ?</p>
 <p><img alt="image" class="center" src="../data/meme_doubt.png" width="30%" /></p>
 <h2 id="2-la-poo-a-la-rescousse-creation-dune-classe-balle">2. La POO à la rescousse : création d'une classe Balle<a class="headerlink" href="#2-la-poo-a-la-rescousse-creation-dune-classe-balle" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-la-classe-balle">2.1 la classe Balle<a class="headerlink" href="#21-la-classe-balle" title="Permanent link">⚓︎</a></h3>
-<p>L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...<br />
-Créez cette classe et instanciez une balle.</p>
-<!-- ??? info "Correction"
-    ```python linenums='1'
-    import pygame, sys
-    import time
-    from pygame.locals import *
-    from random import randint
-
-    # randint(0,10) -> nb aléatoire entre 0 et 10
-
-    LARGEUR = 640
-    HAUTEUR = 480
-    RAYON = 20
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
-    fenetre.fill([0, 0, 0])
-
-
-    class Balle:
-        def __init__(self):
-            self.x = randint(0, LARGEUR)
-            self.y = randint(0, HAUTEUR)
-            self.dx = randint(2, 5)
-            self.dy = randint(2, 5)
-            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
-            self.taille = RAYON
-
-        def dessine(self):
-            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
-
-        def bouge(self):
-            self.x += self.dx
-            self.y += self.dy
-
-
-    ma_balle = Balle()
-
-    while True:
-        fenetre.fill([0, 0, 0])
-
-        ma_balle.dessine()
-        ma_balle.bouge()
-
-        pygame.display.update()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-
-        time.sleep(0.05)
-
-    ``` -->
-
-<p>Puis plusieurs balles ! (qui se collisionnent...)</p>
-<!-- ??? info "Correction"
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="c1"># randint(0,10) -&gt; nb aléatoire entre 0 et 10</span>
-
-<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
-<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
-<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">NB_BALLES</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-
-
-<span class="k">class</span> <span class="nc">Balle</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">LARGEUR</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">=</span> <span class="n">RAYON</span>
-
-    <span class="k">def</span> <span class="nf">dessine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">bouge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
-
-        <span class="c1"># 1. rebond sur les parois</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
-
-        <span class="c1"># 4. gérer la collision de toutes les balles</span>
-        <span class="c1"># je teste la collision de self avec chacune des autres balles</span>
-        <span class="k">for</span> <span class="n">balle</span> <span class="ow">in</span> <span class="n">mon_sac_a_balles</span><span class="p">:</span>
-            <span class="c1"># collision entre self et balle</span>
-            <span class="k">if</span> <span class="p">(</span>
-                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">balle</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">balle</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-            <span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span> <span class="o">+</span> <span class="n">balle</span><span class="o">.</span><span class="n">taille</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">dx</span><span class="p">,</span> <span class="n">balle</span><span class="o">.</span><span class="n">dx</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">dx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dx</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">dy</span><span class="p">,</span> <span class="n">balle</span><span class="o">.</span><span class="n">dy</span> <span class="o">=</span> <span class="n">balle</span><span class="o">.</span><span class="n">dy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dy</span>
-
-
-<span class="n">mon_sac_a_balles</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NB_BALLES</span><span class="p">):</span>
-    <span class="n">new_ball</span> <span class="o">=</span> <span class="n">Balle</span><span class="p">()</span>
-    <span class="n">mon_sac_a_balles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_ball</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-
-    <span class="k">for</span> <span class="n">balle</span> <span class="ow">in</span> <span class="n">mon_sac_a_balles</span><span class="p">:</span>
-        <span class="n">balle</span><span class="o">.</span><span class="n">dessine</span><span class="p">()</span>
-        <span class="n">balle</span><span class="o">.</span><span class="n">bouge</span><span class="p">()</span>
-
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-
- -->
-<div class="admonition capytale">
-<p class="admonition-title">Dépôt de projet sur Capytale : <a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906">fd7c-59906</a></p>
-<p>Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
-Je pourrai ainsi le consulter au fur et à mesure de votre progression.</p>
-<p>Ce que je ne veux pas voir :
-<img alt="" class="center" src="../data/paste.jpg" width="40%" /> </p>
-</div>
+<p>L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...  </p>
+<ul>
+<li>
+<p>Pour l'aléatoire, on pourra utiliser <code>randint(a, b)</code> qui renvoie un nombre pseudo-aléatoire entre <code>a</code> et <code>b</code>.
+Il faut pour cela importer la fonction, par <code>from random import randint</code> </p>
+</li>
+<li>
+<p>Vous pouvez aussi doter votre classe <code>Balle</code> d'une méthode <code>dessine</code> (qui affiche la balle), ainsi qu'une méthode <code>bouge</code> qui la fait bouger. </p>
+</li>
+</ul>
+<p>Créez cette classe et instanciez une balle.</p>
+<details class="info">
+<summary>Correction</summary>
+</details>
+<h3 id="22-plusieurs-balles">2.2 Plusieurs balles<a class="headerlink" href="#22-plusieurs-balles" title="Permanent link">⚓︎</a></h3>
+<p>L'idée est de stocker dans une liste <code>sac_a_balles</code> un nombre déterminé de balles... </p>
+<details class="info">
+<summary>Correction</summary>
+</details>
+<h3 id="23-collision-de-toutes-les-balles">2.3 Collision de toutes les balles<a class="headerlink" href="#23-collision-de-toutes-les-balles" title="Permanent link">⚓︎</a></h3>
+<p>Il «suffit» , dans la méthode constructeur, de tester la collision de la balle <code>self</code> à chacune des balles de notre <code>sac_a_balles</code>. </p>
+<details class="info">
+<summary>Correction</summary>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 septembre 2023</span>
       
     
   </small>
