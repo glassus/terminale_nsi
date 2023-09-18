@@ -7,8 +7,6 @@
     - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
 
 
-- [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
-
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :arrow_right: [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
