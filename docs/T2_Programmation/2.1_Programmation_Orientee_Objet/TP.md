@@ -491,10 +491,10 @@ L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé d
 
 ### 2.3 Collision de toutes les balles
 
-Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` à chacune des balles de notre ```sac_a_balles```. 
+Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
 ??? info "Correction"
-    {#
+    
     ```python linenums='1'
     import pygame, sys
     import time
@@ -567,7 +567,7 @@ Il «suffit» , dans la méthode constructeur, de tester la collision de la ball
 
 
     ```
-    #}
+    
 
 {#
 !!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
