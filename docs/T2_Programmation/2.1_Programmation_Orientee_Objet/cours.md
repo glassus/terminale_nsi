@@ -370,7 +370,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
 
 
 #### 3.1 Hors-Programme : la méthode ```__repr__()``` 
-La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```, ou simplement lorsqu'on demande sa valeur en console.
+La méthode ```__repr__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```, ou simplement lorsqu'on demande sa valeur en console.
 
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
 
