@@ -427,7 +427,7 @@ Créez cette classe et instanciez une balle.
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 
 ??? info "Correction"
-    {#
+    
     ```python linenums='1'
     import pygame, sys
     import time
@@ -468,10 +468,7 @@ L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé d
                 self.dx = -self.dx
 
 
-    mon_sac_a_balles = []
-    for _ in range(NB_BALLES):
-        new_ball = Balle()
-        mon_sac_a_balles.append(new_ball)
+    mon_sac_a_balles = [Balle() for _ in range(NB_BALLES)]
 
     while True:
         fenetre.fill([0, 0, 0])
@@ -490,7 +487,7 @@ L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé d
 
 
     ```
-    #}
+    
 
 ### 2.3 Collision de toutes les balles
 
