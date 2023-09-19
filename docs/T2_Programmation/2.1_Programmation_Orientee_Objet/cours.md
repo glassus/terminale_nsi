@@ -369,15 +369,15 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
 ### 3. Compléments
 
 
-#### 3.1 Hors-Programme : la méthode ```__str__()``` 
-La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```.
+#### 3.1 Hors-Programme : la méthode ```__repr__()``` 
+La méthode ```__str__()``` (les doubles underscores traduisent le fait que la méthode est *privée*) peut redéfinir la manière dont l'objet doit s'afficher lors qu'on le passe en paramètre à la fonction ```print()```, ou simplement lorsqu'on demande sa valeur en console.
 
 Observons comment s'affiche un objet de type ```Fraction``` lorsque rien n'a été spécifié sur son affichage.
 
 
 ```python linenums='1'
-class Fraction :
-    def __init__(self, num, den) :
+class Fraction:
+    def __init__(self, num, den):
         self.numerateur = num
         self.denominateur = den
         
@@ -390,17 +390,17 @@ class Fraction :
  <__main__.Fraction object at 0x7f470445c828>
 ```
 
-C'est un peu décevant. Rajoutons donc une méthode ```__str__()``` .
+C'est un peu décevant. Rajoutons donc une méthode ```__repr__()``` .
 
 
 ```python linenums='1'
-class Fraction :
-    def __init__(self, num, den) :
+class Fraction:
+    def __init__(self, num, den):
         self.numerateur = num
         self.denominateur = den
     
-    def __str__(self):
-        return str(self.numerateur)+ "/" +str(self.denominateur)
+    def __repr__(self):
+        return str(self.numerateur) + "/" + str(self.denominateur)
 ```
 
 
@@ -408,24 +408,26 @@ class Fraction :
 >>> a = Fraction(3,4)
 >>> print(a)
   3/4
+>>> a
+  3/4
 ```
 Ce qui est nettement plus agréable !
 
 
 !!! example "Exercice 3"
     === "Énoncé"
-        Modifier la méthode ```__str__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
+        Modifier la méthode ```__repr__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
     === "Correction"
         ```python linenums='1'
-        class Fraction :
-            def __init__(self, num, den) :
+        class Fraction:
+            def __init__(self, num, den):
                 self.numerateur = num
                 self.denominateur = den
             
-            def __str__(self):
+            def __repr__(self):
                 if self.denominateur == 1:
                     return str(self.numerateur)
-                return str(self.numerateur)+"/"+str(self.denominateur)
+                return str(self.numerateur) + "/" + str(self.denominateur)
         ```
 
 #### 3.2 L'encapsulation poussée à bout : les ```getters``` et les ```setters```
