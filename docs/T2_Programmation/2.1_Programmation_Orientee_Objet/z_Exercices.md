@@ -248,9 +248,9 @@
         La liste ```v``` contient 5 éléments.
 
     ??? tip "Correction Q1.b"
-        ```v[1].nom``` renvoie ```Les goélands```.
+        ```v[1].nom()``` renvoie ```Les goélands```.
 
-        :warning: la classe ```Villa``` possède un attribut ET une méthode s'appelant ```nom```, ce qui est affreux et provoquerait une erreur lors de l'appel à la méthode.
+        :warning: la classe ```Villa``` possède un attribut ```nom```  ET une méthode ```nom()```. Ceci est affreux et provoquerait une erreur lors de l'appel à la méthode ```nom()```. 
 
     ??? tip "Correction Q1.c"
         ```python
