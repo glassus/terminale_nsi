@@ -237,7 +237,7 @@
 
 
 !!! example "{{ exercice() }}"
-    [Exercice 32.2](http://127.0.0.1:8000/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-322){. target="_blank"} de la BNS 2023.
+    [Exercice 32.2](../../T6_6_Epreuve_pratique/BNS_2023/#exercice-322){. target="_blank"} de la BNS 2023.
 
 
 
