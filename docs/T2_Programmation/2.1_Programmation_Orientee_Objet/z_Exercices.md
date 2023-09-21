@@ -2,10 +2,10 @@
 
 
          
+{{ initexo(0) }}
 
 
-
-!!! example "Exercice 1"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         1. Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
         2. Instancier trois élèves de cette classe.
@@ -39,7 +39,7 @@
         
 
 
-!!! example "Exercice 2"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Écrire une classe ```TriangleRect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
 
@@ -70,7 +70,7 @@
         ```
         
 
-!!! example "Exercice 3"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         1. Écrire une classe ```Chrono``` qui contiendra les attributs ```heures```, ```minutes``` et ```secondes```.
         2. Doter la classe d'une méthode ```affiche()``` qui fera affichera le temps ```t```.
@@ -134,7 +134,7 @@
         
   
 
-!!! example "Exercice 4"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Écrire une classe ```Player``` qui :
 
@@ -189,7 +189,7 @@
         
 
 !!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc){. target="_blank"}"
-    !!! example "Exercice 5"
+    !!! example "{{ exercice() }}"
         === "Énoncé"
             Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
 
@@ -236,111 +236,12 @@
 
 
 
-!!! abstract "Exercice 6"
-    === "Énoncé"
-        **Cet exercice est l'exercice 5.2 de la BNS (version 2022)**.
-
-        On dispose d’un programme permettant de créer un objet de type `PaquetDeCarte`,
-        selon les éléments indiqués dans le code ci-dessous.
-        Compléter ce code aux endroits indiqués par `#A compléter`, puis ajouter des
-        assertions dans l’initialiseur de `Carte`, ainsi que dans la méthode `getCarteAt()`.
-
-        ```python linenums='1'
-        class Carte:
-            """Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)"""
-            def __init__(self, c, v):
-                self.Couleur = c
-                self.Valeur = v
-
-            """Renvoie le nom de la Carte As, 2, ... 10, 
-               Valet, Dame, Roi"""
-            def getNom(self):
-                if ( self.Valeur > 1 and self.Valeur < 11):
-                    return str( self.Valeur)
-                elif self.Valeur == 11:
-                    return "Valet"
-                elif self.Valeur == 12:
-                    return "Dame"
-                elif self.Valeur == 13:
-                    return "Roi"
-                else:
-                    return "As"
-
-            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def getCouleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle' ][self.Couleur - 1]
-
-        class PaquetDeCarte:
-            def __init__(self):
-                self.contenu = []
-
-            """Remplit le paquet de cartes"""
-            def remplir(self):
-                ??? = [ ??? for couleur in range(1, ???) for valeur in range( 1, ???)]
-
-            """Renvoie la Carte qui se trouve a  la position donnee"""
-            def getCarteAt(self, pos):
-                if 0 <= pos < ??? :
-                    return ???
-        ```
-
-        Exemple :
-
-        ```python
-        >>> unPaquet = PaquetDeCarte()
-        >>> unPaquet.remplir()
-        >>> uneCarte = unPaquet.getCarteAt(20)
-        >>> print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
-        8 de coeur
-        ```
-
-    === "Correction"
-        {#
-        ```python linenums='1'
-        class Carte:
-            """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
-            def __init__(self, c, v):
-                assert c in range(1,5)
-                assert v in range(1,14)
-                self.Couleur = c
-                self.Valeur = v
-
-            """Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi"""
-            def getNom(self):
-                if (self.Valeur > 1 and self.Valeur < 11):
-                    return str( self.Valeur)
-                elif self.Valeur == 11:
-                    return "Valet"
-                elif self.Valeur == 12:
-                    return "Dame"
-                elif self.Valeur == 13:
-                    return "Roi"
-                else:
-                    return "As"
-
-            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def getCouleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur - 1]
-
-        class PaquetDeCarte:
-            def __init__(self):
-                self.contenu = []
-
-            """Remplit le paquet de cartes"""
-            def remplir(self):
-                self.contenu = [Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range(1, 14)]
-
-            """Renvoie la Carte qui se trouve à la position donnée"""
-            def getCarteAt(self, pos):
-                if 0 <= pos < len(self.contenu) :
-                    return self.contenu[pos]
-
-        ```
-        #}
+!!! example "{{ exercice() }}"
+    [Exercice 32.2](http://127.0.0.1:8000/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-322){. target="_blank"} de la BNS 2023.
 
 
 
-!!! abstract "Exercice 7"
+!!! example "{{ exercice() }}"
     Exercice 2 Partie A du sujet [Métropole Septembre 2022](../../T6_Annales/data/2022/2022_Metropole_Septembre.pdf){. target="_blank"}
 
     ??? tip "Correction Q1.a"
@@ -373,15 +274,95 @@
         ```
 
 
+!!! example "{{ exercice() }}"
+    Exercice 5 du sujet [Métropole J1 2022](../../T6_Annales/data/2022/2022_Metropole_J1.pdf){. target="_blank"}
 
+    ??? tip "Correction Q1"
+        Instruction 3 : ```joueur1 = Joueur("Sniper", 319, "A")``` 
 
+    ??? tip "Correction Q2.a"
+        ```python linenums='1'
+        def redevenir_actif(self):
+            if self.est_actif == False:
+                self.est_actif = True
+        ```         
+        ou mieux : 
+        ```python linenums='1'
+        def redevenir_actif(self):
+            if not self.est_actif:
+                self.est_actif = True
+        ``` 
+    
+    ??? tip "Correction Q2.b"
+        ```python linenums='1'
+        def nb_tirs_recus(self):
+            return len(self.liste_id_tirs_recus)
+        ```
 
+    ??? tip "Correction Q3.a"
+        Le test est le **test 1**.
 
+    ??? tip "Correction Q3.b"
+        Si un joueur a été touché par un tir allié, son score diminue de 20 points.
 
+    ??? tip "Correction Q4"
+        ```python linenums='1'
+        if participant.est_determine() == True:
+            self.incremente_score(40)
+        ```
+        ou mieux :
+        ```python linenums='1'
+        if participant.est_determine():
+            self.incremente_score(40)
+        ```       
+        
+        
+!!! example "{{ exercice() }}"
+    Exercice 2 du sujet [La Réunion J1 2022](../../T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
+    ??? tip "Correction Q1.a"
+        ```python linenums='1'
+        i = 0
+        while i < len(Mousse) and Mousse[i] != None:
+            i += 1
+        return i
+        ```       
 
-
-
+    ??? tip "Correction Q1.b"
+        ```python linenums='1'
+        def placeBulle(B):
+            i = donnePremierIndiceLibre(Mousse)
+            if i != 6:
+                Mousse[i] = B 
+        ```
+    
+    ??? tip "Correction Q2"
+        ```python linenums='1'
+        def bullesEnContact(B1,B2):
+            return distanceEntreBulles(B1, B2) <= B1.rayon + B2.rayon
+        ```
+        
+    ??? tip "Correction Q3"
+        ```python linenums='1' hl_lines='10 14 15 18'
+        def collision(indPetite, indGrosse, Mousse) :
+            """
+            Absorption de la plus petite bulle d’indice indPetite
+            par la plus grosse bulle d’indice indGrosse. Aucun test
+            n’est réalisé sur les positions.
+            """
+            # calcul du nouveau rayon de la grosse bulle
+            surfPetite = pi * Mousse[indPetite].rayon**2
+            surfGrosse = pi * Mousse[indGrosse].rayon**2
+            surfGrosseApresCollision = surfPetite + surfGrosse = pi
+            rayonGrosseApresCollision = sqrt(surfGrosseApresCollision/pi)
+            
+            #réduction de 50% de la vitesse de la grosse bulle
+            Mousse[indGrosse].dirx = 0.5 * Mousse[indGrosse].dirx
+            Mousse[indGrosse].diry = 0.5 * Mousse [indGrosse].diry
+            
+            #suppression de la petite bulle dans Mousse
+            Mousse[indPetite] = None
+        ```
 
 {#
 !!! abstract "DS02"
