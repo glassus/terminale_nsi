@@ -5,9 +5,9 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
+        Écrire une fonction récursive ```puissance(x, n)``` qui calcule le nombre $x^n$.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def puissance(x, n):
@@ -31,7 +31,7 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def pgcd(a, b):
@@ -55,7 +55,7 @@
         2. On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         1.
         ```python linenums='1'
@@ -93,7 +93,7 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         from turtle import *
@@ -123,30 +123,30 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Proposer une nouvelle fonction récursive ```puissance_mod(x,n)``` qui calcule le nombre $x^n$. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :
+        Proposer une nouvelle fonction récursive ```puissance_mod(x, n)``` qui calcule le nombre $x^n$. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :
 
         - si $n$ est pair, $a^n=(a \times a)^{n/2}$
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
-        def puissance_mod(x,n):
+        def puissance_mod(x, n):
             if n == 0 :
                 return 1
             else :
                 if n % 2 == 0:
-                    return puissance_mod(x*x,n//2)
+                    return puissance_mod(x*x, n//2)
                 else :
-                    return x*puissance_mod(x*x,(n-1)//2)
+                    return x*puissance_mod(x*x, (n-1)//2)
         ```
         "
         ) }}       
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire un algorithme récursif ```recherche(lst,m)``` qui recherche la présence de la valeur ```m``` dans une liste **triée** (par ordre croissant) ```lst```. 
+        Écrire un algorithme récursif ```recherche(lst, m)``` qui recherche la présence de la valeur ```m``` dans une liste **triée** (par ordre croissant) ```lst```. 
         
         Cette fonction doit renvoyer un booléen.
 
@@ -162,21 +162,21 @@
         ``` 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
-        def recherche(lst,m):
+        def recherche(lst, m):
             print(lst) # pour voir la taille de la liste diminuer
-            if len(lst) == 1 :  #cas de base
-                if lst[0] == m :
+            if len(lst) == 1:  #cas de base
+                if lst[0] == m:
                     return True
-                else :
+                else:
                     return False
             else :              #cas récursif
                 mid = len(lst)//2
-                if lst[mid] > m :
+                if lst[mid] > m:
                     return recherche(lst[:mid],m)
-                else :
+                else:
                     return recherche(lst[mid:],m)
         ```
         "
@@ -202,6 +202,7 @@
         Écrire une fonction récursive ```hanoi(n, A, B, C)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.
 
     === "Correction"
+        {#
         ```python linenums='1'
         def hanoi(n, depart, inter, arrivee):
             """ n : nombre d'assiettes dans la pile
@@ -218,6 +219,7 @@
 
         hanoi(5, "A", "B", "C")
         ```
+        #}
 
 
 !!! example "{{ exercice() }}"
@@ -232,16 +234,17 @@
 
 
 
-        1) Créer une fonction récursive ```floc(n,l)``` qui trace à une «profondeur» ```n``` un segment de longueur ```l```.
+        1) Créer une fonction récursive ```floc(n, l)``` qui trace à une «profondeur» ```n``` un segment de longueur ```l```.
         ![](data/ex3b.png){: .center width=60%}
         **Indications**
 
         - l'instruction de tracé n'a lieu que quand ```n``` vaut 0.
         - l'étape ```n``` fait 4 appels sucessifs à l'étape ```n-1```.
 
-        2) Créer une fonction ```triangle(n,l)``` qui trace le flocon complet.
+        2) Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     === "Correction"
+        {#
         ```python linenums='1'
         from turtle import *
 
@@ -268,6 +271,7 @@
         triangle(5,400)
 
         ```
+        #}
 
 
 
@@ -277,8 +281,8 @@
 
         ![image](data/diffusion.png){: .center}
         
-
-<!--     === "Correction"
+    === "Correction"
+        {#
         ```python linenums='1'
         def propager(grid, i, j, color):
             if grid[i,j].green == 0:
@@ -306,7 +310,8 @@
         grid = initgrid()
         propager(grid,0,3,0)
         grid.show()
-        ``` -->
+        ```
+        #}
 
 
 ## Exercice 
@@ -372,13 +377,13 @@ Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_n
 
 
 
-{#
+
 ??? info "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
 
 
-
+{#
 <!-- - [lien](data/DS02.pdf) vers le DS
 - [lien](data/DS02_correction.pdf) vers sa correction -->
 

@@ -161,6 +161,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     === "Énoncé"
         Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
     === "Correction"
+        {#
         ```python linenums='1'
         def prix(etage):
             if etage == 0:
@@ -168,6 +169,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
             else:
                 return 2 * prix(etage - 1)
         ```
+        #}
 
 
 !!! example "{{ exercice() }}"
@@ -185,6 +187,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
         Quelle paradigme de programmation vous a semblé le plus naturel ?
     === "Correction"
+        {#
         ```python linenums='1'
         def fact_imp(n):
             p = 1
@@ -198,6 +201,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
             else:
                 return n * fact_rec(n - 1)
         ```
+        #}
 
 <!--
 
@@ -276,6 +280,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
     === "Énoncé"
         Implémenter de façon récursive la suite de Fibonnaci.
     === "Correction"
+        {#
         ```python linenums='1'
         def fibo(n):
             if n == 0 :
@@ -285,6 +290,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
             else :
                 return fibo(n-1) + fibo(n-2)
         ```
+        #}
 
 
 
@@ -321,6 +327,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
     === "Énoncé"
         Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
     === "Correction"
+        {#
         ```python linenums='1'
         def fibo_imperatif(n):
             a = 0
@@ -331,6 +338,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
                 a = t
             return b
         ```
+        #}
 
 
 
