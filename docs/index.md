@@ -12,12 +12,12 @@
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
     - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 
-2_Exercices_recursivite/
+
 
 ### *Thèmes déjà traités*
-    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
-    - [POO : cours](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
-    - [POO : exercices](T2_Programmation/2.1_Programmation_Orientee_Objet/z_Exercices/) 
+- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+- [POO : cours](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+- [POO : exercices](T2_Programmation/2.1_Programmation_Orientee_Objet/z_Exercices/) 
 
 
 {#
