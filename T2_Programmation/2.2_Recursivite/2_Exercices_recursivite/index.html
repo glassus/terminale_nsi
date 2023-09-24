@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.1">
     
     
       
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.72749a73.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a5377069.min.css">
       
       
   
@@ -3346,20 +3346,9 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Écrire une fonction récursive <code>puissance(x,n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>.</p>
+<p>Écrire une fonction récursive <code>puissance(x, n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3373,18 +3362,7 @@
 <p>Exemple : <span class="arithmatex">\(pgcd(24,18)=pgcd(18,6)=pgcd(6,0)\)</span>, donc <span class="arithmatex">\(pgcd(24,18)=6\)</span></p>
 <p>Écrire un algorithme récursif <code>pgcd(a,b)</code>.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">a</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3400,46 +3378,7 @@
 <li>On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre <code>n</code>.</li>
 </ol>
 </div>
-<div class="tabbed-block">
-<p>1.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">syracuse</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">syracuse</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-2.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;temps de vol :&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">syracuse</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">syracuse</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3452,48 +3391,7 @@
 <p><code>turtle</code> est un hommage au langage LOGO inventé par <a href="https://fr.wikipedia.org/wiki/Seymour_Papert">Seymour Papert</a> au MIT à la fin des années 60.</p>
 <p><img alt="" class="center" src="../data/carres_turtle.png" width="40%" /></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-        <span class="n">forward</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">base</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="n">carre</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-    <span class="n">forward</span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="n">base</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">trace</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">trace</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3502,30 +3400,13 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Proposer une nouvelle fonction récursive <code>puissance_mod(x,n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :</p>
+<p>Proposer une nouvelle fonction récursive <code>puissance_mod(x, n)</code> qui calcule le nombre <span class="arithmatex">\(x^n\)</span>. Pour optimiser la fonction déjà construite à l'exercice 1, utiliser le fait que :</p>
 <ul>
 <li>si <span class="arithmatex">\(n\)</span> est pair, <span class="arithmatex">\(a^n=(a \times a)^{n/2}\)</span></li>
 <li>sinon <span class="arithmatex">\(a^n=a \times (a \times a)^{(n-1)/2}\)</span></li>
 </ul>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">puissance_mod</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">,(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3534,7 +3415,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Écrire un algorithme récursif <code>recherche(lst,m)</code> qui recherche la présence de la valeur <code>m</code> dans une liste <strong>triée</strong> (par ordre croissant) <code>lst</code>. </p>
+<p>Écrire un algorithme récursif <code>recherche(lst, m)</code> qui recherche la présence de la valeur <code>m</code> dans une liste <strong>triée</strong> (par ordre croissant) <code>lst</code>. </p>
 <p>Cette fonction doit renvoyer un booléen.</p>
 <p><em>Aide :</em></p>
 <p>Les techniques de <em>slicing</em> (hors-programme) permettent de couper une liste en deux : 
@@ -3545,34 +3426,7 @@
 <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="c1"># pour voir la taille de la liste diminuer</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>  <span class="c1">#cas de base</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">else</span> <span class="p">:</span>              <span class="c1">#cas récursif</span>
-        <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">m</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">mid</span><span class="p">],</span><span class="n">m</span><span class="p">)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">:],</span><span class="n">m</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3595,36 +3449,7 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </ol>
 <p>Écrire une fonction récursive <code>hanoi(n, A, B, C)</code> qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; n : nombre d&#39;assiettes dans la pile</span>
-<span class="sd">    # depart : la pile de départ(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
-<span class="sd">    # inter : la pile intermédaire(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
-<span class="sd">    # arrivee : la pile d&#39;arrivée (&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;) &quot;&quot;&quot;</span>
-
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">inter</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
-        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
-
-<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3637,107 +3462,31 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 <img alt="" class="center" src="../data/floc.png" width="60%" /></p>
 <p>L'idée est de répéter de manière récursive la transformation ci-dessous : chaque segment de longueur <code>l</code> donne naissance à 4 segments de longueur <code>l/3</code>, en construisant une pointe de triangle équilatéral sur le deuxième tiers du segment.</p>
 <p><img alt="" class="center" src="../data/ex2.png" width="60%" /></p>
-<p>1) Créer une fonction récursive <code>floc(n,l)</code> qui trace à une «profondeur» <code>n</code> un segment de longueur <code>l</code>.
+<p>1) Créer une fonction récursive <code>floc(n, l)</code> qui trace à une «profondeur» <code>n</code> un segment de longueur <code>l</code>.
 <img alt="" class="center" src="../data/ex3b.png" width="60%" />
 <strong>Indications</strong></p>
 <ul>
 <li>l'instruction de tracé n'a lieu que quand <code>n</code> vaut 0.</li>
 <li>l'étape <code>n</code> fait 4 appels sucessifs à l'étape <code>n-1</code>.</li>
 </ul>
-<p>2) Créer une fonction <code>triangle(n,l)</code> qui trace le flocon complet.</p>
+<p>2) Créer une fonction <code>triangle(n, l)</code> qui trace le flocon complet.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="k">def</span> <span class="nf">floc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">l</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
-
-
-<span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">triangle</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">floc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
-        <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-
-<span class="n">triangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Énoncé</label><label for="__tabbed_9_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Exercice de diffusion récursive sur Capytale à retrouver <a class="" href="https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc" target="_blank">ici</a></p>
 <p><img alt="image" class="center" src="../data/diffusion.png" /></p>
 </div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
-<!--     === "Correction"
-        ```python linenums='1'
-        def propager(grid, i, j, color):
-            if grid[i,j].green == 0:
-                return None # 
-
-            grid[i,j].green = color
-
-            # l'élément en haut fait partie de la composante
-            if ((i-1) >= 0 and grid[i-1,j].green == 180):
-                propager(grid, i-1, j, color)
-
-            # l'élément en bas fait partie de la composante
-            if ((i+1) < n and grid[i+1,j].green == 180):
-                propager(grid, i+1, j, color)
-
-            # l'élément à gauche fait partie de la composante
-            if ((j-1) >= 0 and grid[i,j-1].green == 180):
-                propager(grid, i, j-1, color)
-
-            # l'élément à droite fait partie de la composante
-            if ((j+1) < n and grid[i,j+1].green == 180): # 
-                propager(grid, i, j+1, color)
-
-
-        grid = initgrid()
-        propager(grid,0,3,0)
-        grid.show()
-        ``` -->
-
 <h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf" target="_blank">Amérique du Nord J1</a></p>
 <details class="tip">
@@ -3813,13 +3562,20 @@ On teste les deux cas possibles.</p>
     <span class="k">return</span> <span class="n">palindrome</span><span class="p">(</span><span class="n">txt_total</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<details class="info">
+<summary>Bibliographie</summary>
+<ul>
+<li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
+<li>Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.</li>
+</ul>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 septembre 2023</span>
       
     
   </small>
@@ -3903,10 +3659,10 @@ On teste les deux cas possibles.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
