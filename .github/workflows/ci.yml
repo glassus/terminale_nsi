@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material==9.1.19
-      - run: pip install mkdocs-macros-plugin
-      - run: pip install mkdocs-awesome-pages-plugin
-      - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-macros-plugin==1.0.2
+      - run: pip install mkdocs-awesome-pages-plugin==2.9.1
+      - run: pip install mkdocs-git-revision-date-localized-plugin==1.2.0
       - run: mkdocs gh-deploy --force
