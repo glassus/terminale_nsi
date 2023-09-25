@@ -161,7 +161,6 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     === "Énoncé"
         Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
     === "Correction"
-        {#
         ```python linenums='1'
         def prix(etage):
             if etage == 0:
@@ -169,7 +168,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
             else:
                 return 2 * prix(etage - 1)
         ```
-        #}
+
 
 
 !!! example "{{ exercice() }}"
