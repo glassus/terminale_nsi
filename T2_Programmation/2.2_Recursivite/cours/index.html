@@ -2938,12 +2938,35 @@ Il venait pour cela d'inventer la formule :
 <p>Exemple : <span class="arithmatex">\(5!=5\times4\times3\times2\times1=120\)</span></p>
 <p>Par convention, <span class="arithmatex">\(1!=1\)</span></p>
 <ol>
-<li>Programmer de manière impérative (manière <em>classique</em>) la fonction factorielle. On l'appelera <code>fact_imp()</code>. </li>
-<li>Programmer de façon récursive la fonction factorielle. On l'appelera <code>fact_rec()</code>.</li>
+<li>Programmer de manière impérative (dite aussi manière <em>itérative</em> ou manière <em>classique</em>) la fonction factorielle. On l'appelera <code>fact_imp</code>. </li>
+<li>Programmer de façon récursive la fonction factorielle. On l'appelera <code>fact_rec</code>.</li>
 </ol>
 <p>Quelle paradigme de programmation vous a semblé le plus naturel ?</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fact_imp</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">k</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+<span class="k">def</span> <span class="nf">fact_rec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact_rec</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3118,7 +3141,7 @@ RecursionError: maximum recursion depth exceeded in comparison
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2023</span>
       
     
   </small>
