@@ -7,7 +7,7 @@
     === "Énoncé"
         Écrire une fonction récursive ```puissance(x, n)``` qui calcule le nombre $x^n$.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def puissance(x, n):
