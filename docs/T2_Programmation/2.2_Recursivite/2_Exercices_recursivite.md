@@ -55,9 +55,25 @@
         2. On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
+
+        ```python linenums='1'
+        def syracuse(n):
+            print(n)
+            if n == 1:
+                return None
+            if n % 2 == 0:
+                return syracuse(n // 2)
+            else:
+                return syracuse(3*n + 1)
+        ```
+
+        Remarque : comme notre fonction ```syracuse``` ne renvoie pas de valeur numérique (elle ne fait qu'afficher une valeur), le ```return``` du test de parité est en fait inutile.
+
+        Mais le ```return``` du cas de base est lui primordial pour que le code s'arrête !  
+
         ```python linenums='1'
         def syracuse(n):
             print(n)
