@@ -181,12 +181,12 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
         Par convention, $1!=1$
 
-        1. Programmer de manière impérative (manière *classique*) la fonction factorielle. On l'appelera ```fact_imp()```. 
-        2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec()```.
+        1. Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
+        2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
 
         Quelle paradigme de programmation vous a semblé le plus naturel ?
     === "Correction"
-        {#
+        
         ```python linenums='1'
         def fact_imp(n):
             p = 1
@@ -200,7 +200,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
             else:
                 return n * fact_rec(n - 1)
         ```
-        #}
+        
 
 <!--
 
