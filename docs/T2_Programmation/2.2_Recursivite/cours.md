@@ -308,11 +308,13 @@ Appelons ```F(n)``` la fonction calculant de manière récursive le n-ième term
 
 On s'aperçoit notamment que :
 
-- les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe théoriquement pas en informatique). On pourrait s'imaginer que la relation $F_4=F_3+F_2$ allait déclencher deux «fils» récursifs calculant respectivement $F_3$ et $F_2$. Il n'en est rien, on va jusqu'au bout du calcul de $F_3$ avant de s'intéresser à $F_2$.
+- les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe pas en informatique). On pourrait s'imaginer que la relation $F_4=F_3+F_2$ allait déclencher deux «fils» récursifs calculant respectivement $F_3$ et $F_2$. Il n'en est rien, on va jusqu'au bout du calcul de $F_3$ avant de s'intéresser à $F_2$.
 - conséquence de la remarque précédente : le calcul de $F_2$ s'effectue 2 fois. Une amélioration future (appelée **mémoïsation**, voir le cours de programmation dynamique) sera de conserver cette valeur de $F_2$ afin d'améliorer les calculs.
 
 
-Observation sur [Capytale](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2692-90916) avec ```rcviz```  
+Le module ```rcviz``` permet d'observer l'arbre des appels récursifs :
+voir cette activité [Capytale](https://capytale2.ac-paris.fr/web/c/a3ec-1938492){. target="_blank"}
+  
 
 On peut y construire par exemple l'arbre d'appel de ```fibo(6)``` :
 
@@ -377,15 +379,14 @@ from turtle import *
 ang = 40
 
 def trace(n,l):
-    
     if n == 0 :
         return None
     else :
         forward(l)
         left(ang)
-        trace(n-1,0.7*l)
+        trace(n-1, 0.7*l)
         right(2*ang)
-        trace(n-1,0.7*l)
+        trace(n-1, 0.7*l)
         left(ang)
         forward(-l)
 
