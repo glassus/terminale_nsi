@@ -129,7 +129,7 @@
             else :
                 base(c)
                 c = c/(2**0.5)
-                return trace(c, n-1)
+                trace(c, n-1)
             
         trace(200, 5)
         ```
