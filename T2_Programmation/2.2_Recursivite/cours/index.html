@@ -3048,10 +3048,11 @@ RecursionError: maximum recursion depth exceeded in comparison
 </div>
 <p>On s'aperçoit notamment que :</p>
 <ul>
-<li>les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe théoriquement pas en informatique). On pourrait s'imaginer que la relation <span class="arithmatex">\(F_4=F_3+F_2\)</span> allait déclencher deux «fils» récursifs calculant respectivement <span class="arithmatex">\(F_3\)</span> et <span class="arithmatex">\(F_2\)</span>. Il n'en est rien, on va jusqu'au bout du calcul de <span class="arithmatex">\(F_3\)</span> avant de s'intéresser à <span class="arithmatex">\(F_2\)</span>.</li>
+<li>les appels récursifs ne sont PAS simultanés (rappelons que la simultanéité n'existe pas en informatique). On pourrait s'imaginer que la relation <span class="arithmatex">\(F_4=F_3+F_2\)</span> allait déclencher deux «fils» récursifs calculant respectivement <span class="arithmatex">\(F_3\)</span> et <span class="arithmatex">\(F_2\)</span>. Il n'en est rien, on va jusqu'au bout du calcul de <span class="arithmatex">\(F_3\)</span> avant de s'intéresser à <span class="arithmatex">\(F_2\)</span>.</li>
 <li>conséquence de la remarque précédente : le calcul de <span class="arithmatex">\(F_2\)</span> s'effectue 2 fois. Une amélioration future (appelée <strong>mémoïsation</strong>, voir le cours de programmation dynamique) sera de conserver cette valeur de <span class="arithmatex">\(F_2\)</span> afin d'améliorer les calculs.</li>
 </ul>
-<p>Observation sur <a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2692-90916">Capytale</a> avec <code>rcviz</code>  </p>
+<p>Le module <code>rcviz</code> permet d'observer l'arbre des appels récursifs :
+voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-1938492" target="_blank">Capytale</a></p>
 <p>On peut y construire par exemple l'arbre d'appel de <code>fibo(6)</code> :</p>
 <p><img alt="image" class="center" src="../data/arbre.png" width="100%" /></p>
 <p>On y remarque (par exemple) que <code>fibo(2)</code> est calculé 5 fois... </p>
@@ -3105,21 +3106,19 @@ RecursionError: maximum recursion depth exceeded in comparison
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">ang</span> <span class="o">=</span> <span class="mi">40</span>
 
 <span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
-
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="n">forward</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="n">ang</span><span class="p">)</span>
-        <span class="n">trace</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.7</span><span class="o">*</span><span class="n">l</span><span class="p">)</span>
+        <span class="n">trace</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="o">*</span><span class="n">l</span><span class="p">)</span>
         <span class="n">right</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ang</span><span class="p">)</span>
-        <span class="n">trace</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.7</span><span class="o">*</span><span class="n">l</span><span class="p">)</span>
+        <span class="n">trace</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="o">*</span><span class="n">l</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="n">ang</span><span class="p">)</span>
         <span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="n">l</span><span class="p">)</span>
 
@@ -3141,7 +3140,7 @@ RecursionError: maximum recursion depth exceeded in comparison
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 septembre 2023</span>
       
     
   </small>
