@@ -255,12 +255,12 @@
         **Indications**
 
         - l'instruction de tracé n'a lieu que quand ```n``` vaut 0.
-        - l'étape ```n``` fait 4 appels sucessifs à l'étape ```n-1```.
+        - l'étape ```n``` fait 4 appels successifs à l'étape ```n-1```.
 
         2) Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         from turtle import *
 
@@ -287,7 +287,7 @@
         triangle(5,400)
 
         ```
-        #}
+        
 
 
 
