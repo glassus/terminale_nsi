@@ -326,44 +326,79 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci.
+        Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
     === "Correction"
         {#
         ```python linenums='1'
         def fibo_imperatif(n):
-            a = 0
-            b = 1
-            for k in range(n-1):
-                t = b
-                b = a + b
-                a = t
-            return b
+            f = {}
+            f[0] = 0
+            f[1] = 1
+            for k in range(2, n+1):
+                f[k] = f[k-1] + f[k-2]
+            return f[n]
         ```
         #}
 
 
 
-Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)$ avec les deux fonctions ```fibo_imperatif()``` et ```fibo_recursif()```.
+Construisons une fonction ```comparaison``` qui affichera le temps de calcul pour chacune des deux fonctions ```fibo_imperatif``` et ```fibo_recursif``` :
 
+{#
+```python linenums='1'
+import time
+
+def fibo_imperatif(n):
+    f = {}
+    f[0] = 0
+    f[1] = 1
+    for k in range(2, n+1):
+        f[k] = f[k-1] + f[k-2]
+    return f[n]
+
+def fibo_recursif(n):
+    if n == 0 :
+        return 0   
+    elif n == 1 :
+        return 1
+    else :
+        return fibo_recursif(n-1) + fibo_recursif(n-2)
+
+
+def comparaison(n):
+    t0 = time.time()
+    fibo_imperatif(n)
+    print("algo impératif : ", time.time() - t0)
+    t0 = time.time()
+    fibo_recursif(n)
+    print("algo récursif : ", time.time() - t0)
+
+
+
+```
+#}
+
+:arrow_right: **Résultats**
 
 ```python
-%timeit fibo_imperatif(20)
+>>> comparaison(10)
+algo impératif :  6.9141387939453125e-06
+algo récursif :  1.7642974853515625e-05
+>>> comparaison(20)
+algo impératif :  7.62939453125e-06
+algo récursif :  0.0021445751190185547
+>>> comparaison(30)
+algo impératif :  1.8596649169921875e-05
+algo récursif :  0.25478553771972656
+>>> comparaison(40)
+algo impératif :  1.1920928955078125e-05
+algo récursif :  31.332343339920044
 ```
 
-    1.02 µs ± 14 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
+La fonction récursive apparait donc **beaucoup**, beaucoup plus lente que l'impérative (ici d'un facteur 100 pour toute augmentation de 10 du paramètre ```n```.)
 
-
-```python
-%timeit fibo_recursif(20)
-```
-
-    2.35 ms ± 10.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
-
-
-La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.
-
-:warning: **Attention :** cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même _complexité_. Nous étudierons la complexité au moment des algorithmes de tri. 
+:warning: **Attention :** cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même _complexité_. Nous étudierons la complexité au moment des algorithmes de tri. La complexité des fonctions récursives n'est pas au programme de NSI.
 
 
 

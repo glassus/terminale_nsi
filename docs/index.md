@@ -1,9 +1,9 @@
 
 
 !!! abstract "Actualités"
-    - Préparez-vous à l'Épreuve Pratique : les sujets de la BNS 2023 sont disponibles [ici](T6_6_Epreuve_pratique/BNS_2023/) :star: :star: :star:
-    - Préparez-vous à l'Épreuve Écrite : les annales des années précédentes sont disponibles [ici](T6_Annales/liste_sujets/) 
-
+    - :new: Informations sur les épreuves de Juin 2024:
+        - La **totalité** du programme pourra être évaluée.
+        - Changement de coefficients : 15 points pour l'épreuve écrite, 5 points pour l'épreuve pratique. 
     - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
 
 
