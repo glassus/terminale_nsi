@@ -31,12 +31,12 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def pgcd(a, b):
-            if b == 0:
-                return a
+            if a%b == 0:
+                return b
             else:
                 return pgcd(b, a%b)
         ```
@@ -109,7 +109,7 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         from turtle import *
