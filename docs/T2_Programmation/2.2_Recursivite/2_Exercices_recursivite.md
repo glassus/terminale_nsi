@@ -31,12 +31,12 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def pgcd(a, b):
-            if b == 0:
-                return a
+            if a%b == 0:
+                return b
             else:
                 return pgcd(b, a%b)
         ```
@@ -109,7 +109,7 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         from turtle import *
@@ -255,12 +255,12 @@
         **Indications**
 
         - l'instruction de tracé n'a lieu que quand ```n``` vaut 0.
-        - l'étape ```n``` fait 4 appels sucessifs à l'étape ```n-1```.
+        - l'étape ```n``` fait 4 appels successifs à l'étape ```n-1```.
 
         2) Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         from turtle import *
 
@@ -287,7 +287,7 @@
         triangle(5,400)
 
         ```
-        #}
+        
 
 
 
