@@ -3736,23 +3736,29 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Écrire une fonction <code>fibo_imperatif(n)</code> qui calcule de façon directe (<em>impérative</em>) le n-ième terme de la suite de Fibonacci.</p>
+<p>Écrire une fonction <code>fibo_imperatif(n)</code> qui calcule de façon directe (<em>impérative</em>) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.</p>
 </div>
 <div class="tabbed-block"></div>
 </div>
 </div>
 </div>
-<p>Observons grâce au module <code>timeit</code> le temps moyen pris pour calculer <span class="arithmatex">\(F(20)\)</span> avec les deux fonctions <code>fibo_imperatif()</code> et <code>fibo_recursif()</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_imperatif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<p>Construisons une fonction <code>comparaison</code> qui affichera le temps de calcul pour chacune des deux fonctions <code>fibo_imperatif</code> et <code>fibo_recursif</code> :</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Résultats</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">comparaison</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">algo</span> <span class="n">impératif</span> <span class="p">:</span>  <span class="mf">6.9141387939453125e-06</span>
+<span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">1.7642974853515625e-05</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">comparaison</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">algo</span> <span class="n">impératif</span> <span class="p">:</span>  <span class="mf">7.62939453125e-06</span>
+<span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">0.0021445751190185547</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">comparaison</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">algo</span> <span class="n">impératif</span> <span class="p">:</span>  <span class="mf">1.8596649169921875e-05</span>
+<span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">0.25478553771972656</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">comparaison</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">algo</span> <span class="n">impératif</span> <span class="p">:</span>  <span class="mf">1.1920928955078125e-05</span>
+<span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">31.332343339920044</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>1.02 µs ± 14 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">fibo_recursif</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>2.35 ms ± 10.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
-</code></pre></div>
-<p>La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même <em>complexité</em>. Nous étudierons la complexité au moment des algorithmes de tri. </p>
+<p>La fonction récursive apparait donc <strong>beaucoup</strong>, beaucoup plus lente que l'impérative (ici d'un facteur 100 pour toute augmentation de 10 du paramètre <code>n</code>.)</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même <em>complexité</em>. Nous étudierons la complexité au moment des algorithmes de tri. La complexité des fonctions récursives n'est pas au programme de NSI.</p>
 <p><img alt="image" class="center" src="../data/prod.jpg" width="40%" /></p>
 <p>Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est <em>aussi</em> avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)</p>
 <h2 id="5-annexe-dessins-recursifs-grace-au-module-turtle">5. Annexe : dessins récursifs grâce au module <code>turtle</code><a class="headerlink" href="#5-annexe-dessins-recursifs-grace-au-module-turtle" title="Permanent link">⚓︎</a></h2>
@@ -3814,7 +3820,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 octobre 2023</span>
       
     
   </small>
