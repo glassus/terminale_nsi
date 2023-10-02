@@ -344,7 +344,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
 
 Construisons une fonction ```comparaison``` qui affichera le temps de calcul pour chacune des deux fonctions ```fibo_imperatif``` et ```fibo_recursif``` :
 
-{#
+
 ```python linenums='1'
 import time
 
@@ -376,7 +376,7 @@ def comparaison(n):
 
 
 ```
-#}
+
 
 :arrow_right: **Résultats**
 
