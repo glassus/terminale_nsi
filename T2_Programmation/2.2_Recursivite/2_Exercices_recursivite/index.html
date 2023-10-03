@@ -3569,7 +3569,36 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </ol>
 <p>Écrire une fonction récursive <code>hanoi(n, depart, inter, arrivee)</code> qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de <code>depart</code>  vers <code>arrivee</code>  en prenant <code>inter</code>  comme intermédiaire.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; n : nombre d&#39;assiettes dans la pile</span>
+<span class="sd">    # depart : la pile de départ(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
+<span class="sd">    # inter : la pile intermédaire(&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;)</span>
+<span class="sd">    # arrivee : la pile d&#39;arrivée (&quot;A&quot;, &quot;B&quot; ou &quot;C&quot;) &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">inter</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s2">&quot; vers &quot;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
+
+<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
