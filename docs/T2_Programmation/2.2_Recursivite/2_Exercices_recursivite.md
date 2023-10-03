@@ -155,7 +155,7 @@
                 if n % 2 == 0:
                     return puissance_mod(x*x, n//2)
                 else :
-                    return x*puissance_mod(x*x, (n-1)//2)
+                    return x * puissance_mod(x*x, (n-1)//2)
         ```
         "
         ) }}       
