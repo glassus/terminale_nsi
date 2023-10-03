@@ -215,7 +215,7 @@
         ![](data/hanoi4.png){: .center width=60%}
 
 
-        Écrire une fonction récursive ```hanoi(n, depart, inter, arrivee)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de ```depart```  vers ```arrivee```  en prenant ```inter```  comme intermédiaire.
+        Écrire une fonction récursive ```hanoi(n, A, B, C)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.
 
     === "Correction"
         {#
@@ -293,7 +293,8 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Exercice de diffusion récursive sur Capytale à retrouver [ici](https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc){. target="_blank"}
+        1. [Exercice 04.2 de la BNS 2022](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2022/#exercice-042){. target="_blank"}
+        2. Application sur Capytale à retrouver [ici](https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc){. target="_blank"} 
 
         ![image](data/diffusion.png){: .center}
         
