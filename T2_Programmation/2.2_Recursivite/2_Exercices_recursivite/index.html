@@ -1142,17 +1142,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Exercices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1162,32 +1151,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice" class="md-nav__link">
-    Exercice
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3703,7 +3666,8 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 </div>
 </div>
 </div>
-<h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice  10</p>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf" target="_blank">Amérique du Nord J1</a></p>
 <details class="tip">
 <summary>correction Q1.a.</summary>
@@ -3778,6 +3742,57 @@ On teste les deux cas possibles.</p>
     <span class="k">return</span> <span class="n">palindrome</span><span class="p">(</span><span class="n">txt_total</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  11</p>
+<p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf" target="_blank">Centres Étrangers J2 2022</a></p>
+<details class="tip">
+<summary>correction Q1.a.</summary>
+<p><code>f(5)</code> affichera 5 fois "Partez !"</p>
+</details>
+<details class="tip">
+<summary>Correction Q1.b.</summary>
+<p>On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="tip">
+<summary>Correction Q2.b.</summary>
+<p>La commande renvoie :
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;ba&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;bc&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Correction Q2.c.</summary>
+<p>La commande renvoie :
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Correction Q3.a.</summary>
+<p>Comme <code>n</code> vaut 0, on est dans le cas de base et donc la commande renvoie <code>[""]</code>.</p>
+<p><code>[""]</code> <strong>n'est pas</strong> une liste vide, car elle contient un élément (une chaine de caractères vide). La liste vide est <code>[]</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.b.</summary>
+<p><code>produit("ab", 1)</code> renvoie  <code>['a', 'b']</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.c.</summary>
+<p><code>produit("ab", 2)</code> renvoie  <code>['aa', 'ab', 'ba', 'bb']</code>.    </p>
+</details>
+</div>
 <details class="info">
 <summary>Bibliographie</summary>
 <ul>
@@ -3791,7 +3806,7 @@ On teste les deux cas possibles.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 octobre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 octobre 2023</span>
       
     
   </small>
