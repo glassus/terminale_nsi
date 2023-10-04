@@ -331,65 +331,104 @@
         #}
 
 
-## Exercice 
-Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+!!! example "{{ exercice() }}"
+    Exercice 4 du sujet [Amérique du Nord J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
-??? tip "correction Q1.a."
-    Proposition 3
+    ??? tip "correction Q1.a."
+        Proposition 3
 
-??? tip "correction Q1.b."
-    ```txt[0]``` vaut 'b'  
-    ```txt[taille-1]``` vaut 'r'  
-    ```interieur``` vaut 'onjou'  
+    ??? tip "correction Q1.b."
+        ```txt[0]``` vaut 'b'  
+        ```txt[taille-1]``` vaut 'r'  
+        ```interieur``` vaut 'onjou'  
 
 
-??? tip "correction Q2."
-    ```python linenums='1'
-    def test_palindrome():
-        assert palindrome("kayak") == True
-        assert palindrome("canoe") == False   
-    ```
-    On teste les deux cas possibles.
+    ??? tip "correction Q2."
+        ```python linenums='1'
+        def test_palindrome():
+            assert palindrome("kayak") == True
+            assert palindrome("canoe") == False   
+        ```
+        On teste les deux cas possibles.
 
-??? tip "correction Q3."
-    ```python linenums='1'
-    def palindrome_imperatif(txt):
-        if len(txt) < 2:
+    ??? tip "correction Q3."
+        ```python linenums='1'
+        def palindrome_imperatif(txt):
+            if len(txt) < 2:
+                return True
+            i = 0
+            j = len(txt)-1
+            while i<j:
+                if txt[i] != txt[j]:
+                    return False
+                i += 1
+                j -= 1
             return True
-        i = 0
-        j = len(txt)-1
-        while i<j:
-            if txt[i] != txt[j]:
-                return False
-            i += 1
-            j -= 1
-        return True
-    ```
+        ```
 
-??? tip "correction Q4.a."
-    ```python linenums='1'
-    def complementaire(txt):
-        comp = {"A":"T", "T":"A", "G":"C", "C":"G"}
-        sol = ""
-        for c in txt:
-            sol += comp[c]
-        return sol
-    ``` 
+    ??? tip "correction Q4.a."
+        ```python linenums='1'
+        def complementaire(txt):
+            comp = {"A":"T", "T":"A", "G":"C", "C":"G"}
+            sol = ""
+            for c in txt:
+                sol += comp[c]
+            return sol
+        ``` 
 
-??? tip "correction Q4.b"
-    "GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palindromique.
+    ??? tip "correction Q4.b"
+        "GATCGTCTAGCA" n'est pas un palindrome donc "GATCGT" n'est pas palindromique.
 
-??? tip "correction Q4.c"
-    ```python linenums='1'
-    def est_palindromique(txt):
-        txt_total = txt + complementaire(txt)
-        return palindrome(txt_total)
-    ```
+    ??? tip "correction Q4.c"
+        ```python linenums='1'
+        def est_palindromique(txt):
+            txt_total = txt + complementaire(txt)
+            return palindrome(txt_total)
+        ```
 
 
 
+!!! example "{{ exercice() }}"
+    Exercice 1 du sujet [Centres Étrangers J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf){. target="_blank"}
 
+    ??? tip "correction Q1.a."
+        ```f(5)``` affichera 5 fois "Partez !"
 
+    ??? tip "Correction Q1.b."
+        On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.
+
+    ??? tip "Correction Q2.a."
+        ```python linenums='1'
+        def ajouter(s, liste):
+            res = []
+            for m in liste:
+                res.append(s + m)
+            return res
+        ```
+    ??? tip "Correction Q2.b."
+        La commande renvoie :
+        ```python
+        ['ba', 'bb', 'bc']
+        ```
+    
+    ??? tip "Correction Q2.c."
+        La commande renvoie :
+        ```python
+        ['a']
+        ```
+         
+    ??? tip "Correction Q3.a."
+        Comme ```n``` vaut 0, on est dans le cas de base et donc la commande renvoie ```[""]```.
+
+        ```[""]``` **n'est pas** une liste vide, car elle contient un élément (une chaine de caractères vide). La liste vide est ```[]```.
+
+    ??? tip "Correction Q3.b."
+        ```produit("ab", 1) ``` renvoie  ```['a', 'b']```.
+
+    ??? tip "Correction Q3.c."
+        ```produit("ab", 2) ``` renvoie  ```['aa', 'ab', 'ba', 'bb']```.    
+
+        
 
 
 
