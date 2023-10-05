@@ -198,22 +198,22 @@
         ``` 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
-        def recherche(lst, m):
+        def recherche(lst, val):
             print(lst) # pour voir la taille de la liste diminuer
             if len(lst) == 1:  #cas de base
-                if lst[0] == m:
+                if lst[0] == val:
                     return True
                 else:
                     return False
             else :              #cas récursif
-                mid = len(lst)//2
-                if lst[mid] > m:
-                    return recherche(lst[:mid],m)
+                ind_milieu = len(lst)//2
+                if lst[ind_milieu] > val:
+                    return recherche(lst[:ind_milieu], val)
                 else:
-                    return recherche(lst[mid:],m)
+                    return recherche(lst[ind_milieu:], val)
         ```
         "
         ) }}       
