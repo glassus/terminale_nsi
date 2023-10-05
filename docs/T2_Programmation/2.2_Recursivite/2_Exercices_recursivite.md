@@ -162,9 +162,29 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire un algorithme récursif ```recherche(lst, m)``` qui recherche la présence de la valeur ```m``` dans une liste **triée** (par ordre croissant) ```lst```. 
+        Écrire un algorithme récursif ```recherche(lst, val)``` qui recherche la présence de la valeur ```val``` dans une liste **triée** (par ordre croissant) ```lst```. 
         
         Cette fonction doit renvoyer un booléen.
+
+        *Exemple d'utilisation :*
+
+        ```python
+        >>> lst = [2,4,5,5,7,9,11,15,16,18,19]
+        >>> recherche(lst, 16)
+        [2, 4, 5, 5, 7, 9, 11, 15, 16, 18, 19]
+        [9, 11, 15, 16, 18, 19]
+        [16, 18, 19]
+        [16]
+        True
+        >>> recherche(lst, 6)
+        [2, 4, 5, 5, 7, 9, 11, 15, 16, 18, 19]
+        [2, 4, 5, 5, 7]
+        [5, 5, 7]
+        [5, 7]
+        [5]
+        False
+        
+        ```
 
         _Aide :_
         
