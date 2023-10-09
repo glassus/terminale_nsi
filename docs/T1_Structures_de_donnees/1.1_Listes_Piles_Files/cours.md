@@ -334,7 +334,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
     === "Correction :heart:"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         class Pile:
