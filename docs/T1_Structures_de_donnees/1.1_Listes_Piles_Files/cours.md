@@ -294,7 +294,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         10. p.est_vide() 
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         1. p = Pile()  # p = None
