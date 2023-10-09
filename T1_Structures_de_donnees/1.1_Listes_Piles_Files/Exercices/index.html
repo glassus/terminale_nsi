@@ -104,11 +104,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#exercice-7" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -637,17 +632,6 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Exercices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -657,30 +641,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-7" class="md-nav__link">
-    Exercice 7
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3792,82 +3752,108 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <p>Dans cette énigme n°5, la réponse à donner est le nombre de caractères de la chaîne une fois simplifiée. Ce qui ne devrait pas nous poser de problème.</p>
 <p>Par contre, la chaîne <code>'dabAcCaCBAcCcaDA'</code> sur laquellle nous avons travaillé n'est qu'un exemple...
 La <strong>vraie</strong> chaîne contient 50000 caractères : </p>
+<p>Anecdotique ? Pas vraiment...</p>
+<p>Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?</p>
+<details class="aide">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;</span>
+
+<span class="k">def</span> <span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+<span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="k">def</span> <span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">fini</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">fini</span><span class="p">:</span>
+        <span class="n">s_temp</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_temp</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="n">fini</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span>
+</code></pre></div></td></tr></table></div>
+<p>Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)</p>
 </details>
-<!--
-    ici anciennement inclusion du fichier chaine.md mais plantage ?
--->
+<h4 id="5-sauve-par-une-pile">5. Sauvé par une pile<a class="headerlink" href="#5-sauve-par-une-pile" title="Permanent link">⚓︎</a></h4>
+<p>Cet exercice peut être résolu <strong>beaucoup</strong> plus efficacement grâce à l'utilisation d'une pile... mais comment ?</p>
+<p>Vous pouvez utiliser l'implémentation de pile disponible <a class="" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python" target="_blank">ici</a>.</p>
+<details class="aide">
+<summary>Aide à la construction de l'algorithme</summary>
+<p>Pour chaque lettre de la chaîne :</p>
+<ul>
+<li>si la pile est vide, on empile cette lettre</li>
+<li>sinon, on regarde si la lettre est simplifiable avec la lettre du haut de la pile :<ul>
+<li>si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne</li>
+<li>si non, on empile cette lettre sur la pile, et on passe à la suivante.</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="aide">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;</span>
 
-<div class="highlight"><pre><span></span><code>Anecdotique ? Pas vraiment...
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span> <span class="c1"># ne pas oublier de récupérer une implémentation de la classe Pile()...</span>
 
-Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?
+<span class="k">def</span> <span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
 
-??? aide &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    s = &#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;
+<span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">sommet</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
 
-    def simplifiable(l1, l2):
-        return abs(ord(l1) - ord(l2)) == 32
-
-    def simplifie(s):
-        for i in range(len(s) - 1):
-            if simplifiable(s[i+1], s[i]):
-                return s[:i] + s[i+2:]
-        return s
-
-    def reduction(s):
-        fini = False
-        while not fini:
-            s_temp = s
-            s = simplifie(s)
-            if len(s_temp) == len(s):
-                fini = True
-        return s
-
-    print(len(reduction(s)))
-    ```
-
-    Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)
-
-
-#### 5. Sauvé par une pile
-
-Cet exercice peut être résolu **beaucoup** plus efficacement grâce à l&#39;utilisation d&#39;une pile... mais comment ?
-
-Vous pouvez utiliser l&#39;implémentation de pile disponible [ici](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python){. target=&quot;_blank&quot;}.
-
-
-??? aide &quot;Aide à la construction de l&#39;algorithme&quot;
-    Pour chaque lettre de la chaîne :
-
-    - si la pile est vide, on empile cette lettre
-    - sinon, on regarde si la lettre est simplifiable avec la lettre du haut de la pile :
-        - si oui, on supprime cette lettre du haut de la pile et on passe à la lettre suivante de la chaîne
-        - si non, on empile cette lettre sur la pile, et on passe à la suivante.
-
-??? aide &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    s = &#39;YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...&#39;
-
-    p = Pile() # ne pas oublier de récupérer une implémentation de la classe Pile()...
-
-    def simplifiable(l1, l2):
-        return abs(ord(l1) - ord(l2)) == 32
-
-    for lettre in s:
-        if p.est_vide():
-            p.empile(lettre)
-        else:
-            sommet = p.depile()
-            if not simplifiable(sommet, lettre):
-                p.empile(sommet)
-                p.empile(lettre)
-
-    print(p.taille())     
-    ```
-
-    Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
-</code></pre></div>
-<h3 id="exercice-7">Exercice 7<a class="headerlink" href="#exercice-7" title="Permanent link">⚓︎</a></h3>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">taille</span><span class="p">())</span>     
+</code></pre></div></td></tr></table></div>
+<p>Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.</p>
+</details>
+</details>
 <div class="admonition example">
 <p class="admonition-title">Exercice 7</p>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf" target="blank">Centres Etrangers J1 - 2023</a></p>
@@ -4012,7 +3998,7 @@ Vous pouvez utiliser l&#39;implémentation de pile disponible [ici](https://glas
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 octobre 2023</span>
       
     
   </small>
