@@ -3718,7 +3718,20 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :</p>
 <span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> 
 </code></pre></div>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>  <span class="c1"># p = None</span>
+<span class="mf">2.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># p = 3</span>
+<span class="mf">3.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># p = 3 5 par convention</span>
+<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>  <span class="c1">#  False</span>
+<span class="mf">4.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># p = 3 5 1</span>
+<span class="mf">5.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3 5    valeur renvoyée : 1</span>
+<span class="mf">6.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3      valeur renvoyée : 5</span>
+<span class="mf">7.</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>  <span class="c1"># p = 3 9</span>
+<span class="mf">8.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p = 3       valeur renvoyée :9</span>
+<span class="mf">9.</span> <span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>  <span class="c1"># p est vide      valeur renvoyée : 3</span>
+<span class="mf">10.</span> <span class="n">p</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="c1"># True</span>
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
