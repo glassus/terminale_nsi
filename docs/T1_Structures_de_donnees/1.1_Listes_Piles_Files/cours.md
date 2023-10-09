@@ -170,7 +170,7 @@ Mais plus précisément, on a :
     === "Énoncé"
         Retrouvez comment accéder aux éléments 3, 5 et 1.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         >>> lst.contenu
@@ -218,7 +218,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
 - ```Liste()``` : crée une liste vide.
 - ```est_vide``` : indique si la liste est vide. (renvoie un booléen)
 - ```ajoute_tete``` : insère un élément (passé en paramètre) en tête de liste. (ne renvoie rien)
-- ```renvoie_tete()``` : renvoie la valeur de l'élément en tête de liste ET le supprime de la liste.
+- ```renvoie_tete``` : renvoie la valeur de l'élément en tête de liste ET le supprime de la liste.
 
 
 !!! example "{{ exercice() }}"
@@ -238,17 +238,17 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         11. lst.est_vide()    
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         1. lst = Liste()      # lst = None
         2. lst.ajoute_tete(3) # lst = 3
-        3. lst.ajoute_tete(5) # lst = 5 3 
-        4. lst.ajoute_tete(1) # lst = 1 5 3
-        5. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 1
+        3. lst.ajoute_tete(5) # lst = 3 5 
+        4. lst.ajoute_tete(1) # lst = 3 5 1
+        5. lst.renvoie_tete() # lst = 3 5 valeur renvoyée : 1
         6. lst.est_vide()     # valeur renvoyée : False
-        7. lst.ajoute_tete(2) # lst = 2 5 3
-        8. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 2
+        7. lst.ajoute_tete(2) # lst = 3 5 2
+        8. lst.renvoie_tete() # lst = 3 5 valeur renvoyée : 2
         9. lst.renvoie_tete() # lst = 3 valeur renvoyée : 5
         10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
         11. lst.est_vide()    #  valeur renvoyée : True
