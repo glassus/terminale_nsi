@@ -9,12 +9,15 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
-    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
+    - :arrow_right: [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Exercices sur Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
+
 
 
 
 ### *Thèmes déjà traités*
+- [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
+- [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 - [POO : cours](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
 - [POO : exercices](T2_Programmation/2.1_Programmation_Orientee_Objet/z_Exercices/) 

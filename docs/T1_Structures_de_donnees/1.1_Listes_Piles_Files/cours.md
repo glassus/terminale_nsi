@@ -170,7 +170,7 @@ Mais plus précisément, on a :
     === "Énoncé"
         Retrouvez comment accéder aux éléments 3, 5 et 1.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         >>> lst.contenu
@@ -216,8 +216,8 @@ Nous nous servirons parfois du type ```list``` de Python dans la suite de ce cou
 Imaginons que nous possédons une interface offrant les fonctionnalités suivantes :
 
 - ```Liste()``` : crée une liste vide.
-- ```est_vide()``` : indique si la liste est vide.
-- ```ajoute_tete()``` : insère un élément en tête de liste.
+- ```est_vide``` : indique si la liste est vide. (renvoie un booléen)
+- ```ajoute_tete``` : insère un élément (passé en paramètre) en tête de liste. (ne renvoie rien)
 - ```renvoie_tete()``` : renvoie la valeur de l'élément en tête de liste ET le supprime de la liste.
 
 
@@ -238,7 +238,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         11. lst.est_vide()    
         ```
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. lst = Liste()      # lst = None
@@ -294,7 +294,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         10. p.est_vide() 
         ```
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. p = Pile()  # p = None
@@ -317,10 +317,13 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 
 L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  créera une pile vide. Chaque objet ```Pile``` disposera des méthodes suivantes :
 
-- ```est_vide()``` : indique si la pile est vide.
-- ```empile()``` : insère un élément en haut de la pile.
-- ```depile()``` : renvoie la valeur de l'élément en haut de la pile ET le supprime de la pile.
-- ```__str__()``` : permet d'afficher la pile sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
+- ```est_vide``` : indique si la pile est vide (renvoie un booléen)
+- ```empile``` : insère un élément (passé en paramètre) en haut de la pile. Ne renvoie rien.
+- ```depile``` : renvoie la valeur de l'élément en haut de la pile ET le supprime de la pile.
+
+Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaque interface. Nous y ajouterons, uniquement par commodité, la méthode suivante :
+
+- ```__repr__``` : permet d'afficher la pile sous forme agréable (par ex : ```|3|6|2|5|```)
 
 #### 3.2.1 À l'aide du type ```list``` de Python 
 
@@ -331,7 +334,7 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Pile:
@@ -351,12 +354,6 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
                     return None
                 else :
                     return self.data.pop() 
-
-            def __str__(self):       # Hors-Programme : pour afficher 
-                s = '|'              # convenablement la pile avec print(p)
-                for k in self.data :
-                    s = s + str(k) + '|'
-                return s
 
             def __repr__(self):       # Hors-Programme : pour afficher 
                 s = '|'              # convenablement la pile avec p
@@ -398,7 +395,7 @@ class Cellule :
         À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Pile:
@@ -450,7 +447,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Simulez une gestion de l'historique de navigation internet, en créant une classe ```Nav``` qui utilisera une pile.
-        Attention, il ne faut pas réinventer la classe ```Pile```, mais s'en servir !
+        Attention, il ne faut pas réinventer la classe ```Pile```, mais uniquement s'en servir !
         
         Exemple d'utilisation :
         ```python 
@@ -468,7 +465,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         ```
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Nav:
@@ -526,7 +523,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         11. f.est_vide() 
         ```
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. f est vide
@@ -549,11 +546,13 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
 ### 4.2 Implémentation d'une file
 L'objectif est de créer une classe ```File```, disposant des méthodes suivantes :
 
-- ```File()``` : crée une file vide.
-- ```est_vide()``` : indique si la file est vide.
-- ```enfile()``` : insère un élément en queue de file.
-- ```defile()``` : renvoie la valeur de l'élément en tête de la file ET le supprime de la file.
-- ```__str__()``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
+- ```est_vide``` : indique si la file est vide. (renvoie un booléen)
+- ```enfile``` : insère un élément (passé en paramètre) en queue de file. (ne renvoie rien)
+- ```defile``` : renvoie la valeur de l'élément en tête de la file ET le supprime de la file.
+
+Nous y ajouterons comme précédemment la méthode facultative suivante :
+
+- ```__repr__``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```)
 
 
 !!! example "Exercice"
@@ -563,7 +562,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
         Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class File:

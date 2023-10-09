@@ -352,11 +352,6 @@
     Par contre, la chaîne ```'dabAcCaCBAcCcaDA'``` sur laquellle nous avons travaillé n'est qu'un exemple...
     La **vraie** chaîne contient 50000 caractères : 
 
-<!--
-    ici anciennement inclusion du fichier chaine.md mais plantage ?
--->
-
-
     Anecdotique ? Pas vraiment...
 
     Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?
@@ -427,7 +422,6 @@
 
         Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
 
-### Exercice 7
 !!! example "Exercice 7"
     Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
 
