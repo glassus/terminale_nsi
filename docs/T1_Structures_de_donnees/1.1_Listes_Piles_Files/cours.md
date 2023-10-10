@@ -394,10 +394,15 @@ class Cellule :
     === "Énoncé"
         À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
-    === "Correction :heart:"
-        {{ correction(False,
+    === "Correction"
+        {{ correction(True,
         "
         ```python linenums='1'
+        class Cellule :
+        def __init__(self, contenu, suivante):
+            self.contenu = contenu
+            self.suivante = suivante
+
         class Pile:
             def __init__(self):
                 self.data = None
@@ -413,7 +418,7 @@ class Cellule :
                 self.data = self.data.suivante  # on supprime la 1ère cellule  
                 return v
             
-            def __str__(self):
+            def __repr__(self):
                 s = '|'
                 c = self.data
                 while c != None :
