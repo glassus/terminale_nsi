@@ -470,7 +470,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         ```
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         class Nav:
