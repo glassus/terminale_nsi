@@ -9,8 +9,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :arrow_right: [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-    - [Exercices sur Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
+    - :books: [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - :gear: [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 
 
 

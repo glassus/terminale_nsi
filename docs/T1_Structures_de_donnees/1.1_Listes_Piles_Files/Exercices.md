@@ -5,12 +5,17 @@
         Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
 
     === "Corr. Q1"
+        {#
         ![image](data/ex1Q1.png){: .center width=50%}
+        #}
 
     === "Corr. Q2"
+        {#
         ![image](data/ex1Q2.png){: .center width=50%}
+        #}
 
     === "Corr. Q3"
+        {#
         ```python linenums='1'
         def maximum(P):
             if est_vide(P):
@@ -41,8 +46,10 @@
                 empile(P, depile(Q))
             return m
         ``` 
+        #}
 
     === "Corr. Q4"
+        {#
         **Q4a.** On va vider la pile ```p``` dans une pile ```q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
         On redonne ensuite à ```p``` son état initial en vidant ```q``` dans ```p```.
 
@@ -61,28 +68,38 @@
                 empile(P, depile(Q))
             return t
         ```
+        #}
 
 !!! example "Exercice 2"
     === "Énoncé"
         Exercice 1 du sujet [La Réunion J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
 
     === "Corr. Q1"
+        {#
         ![image](data/ex2Q1.png){: .center width=70%}
+        #}
 
     === "Corr. Q2a"
+        {#
         La variable ```temp``` contient la valeur 25.
+        #}
 
     === "Corr. Q2b"
+        {#
         ```p1``` est identique, elle contient toujours les valeurs 25, 3 et 7. 
+        #}
 
     === "Corr. Q3"
+        {#
         ```python linenums='1'
         def addition(p):
             nb1 = depiler(p)
             nb2 = depiler(p)
             empiler(p, nb1 + nb2)
         ``` 
+        #}
     === "Corr. Q4"
+        {#
         ```python linenums='1'
         p = pile_vide()
         empiler(p, 3)
@@ -91,6 +108,7 @@
         empiler(p, 7)
         multiplication(p)
         ```
+        #}
 
 !!! example "Exercice 3"
     === "Énoncé"
