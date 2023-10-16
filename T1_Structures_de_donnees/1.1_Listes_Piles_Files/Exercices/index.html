@@ -3406,8 +3406,30 @@ On redonne ensuite à <code>p</code> son état initial en vidant <code>q</code> 
 <div class="tabbed-block">
 <p><code>p1</code> est identique, elle contient toujours les valeurs 25, 3 et 7. </p>
 </div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">nb1</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">nb2</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">nb1</span> <span class="o">+</span> <span class="n">nb2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="n">pile_vide</span><span class="p">()</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">addition</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">multiplication</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
