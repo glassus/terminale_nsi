@@ -90,16 +90,16 @@
         
 
     === "Corr. Q3"
-        {#
+        
         ```python linenums='1'
         def addition(p):
             nb1 = depiler(p)
             nb2 = depiler(p)
             empiler(p, nb1 + nb2)
         ``` 
-        #}
+        
     === "Corr. Q4"
-        {#
+        
         ```python linenums='1'
         p = pile_vide()
         empiler(p, 3)
@@ -108,7 +108,7 @@
         empiler(p, 7)
         multiplication(p)
         ```
-        #}
+        
 
 !!! example "Exercice 3"
     === "Énoncé"
