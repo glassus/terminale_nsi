@@ -75,19 +75,19 @@
         Exercice 1 du sujet [La Réunion J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
 
     === "Corr. Q1"
-        {#
+        
         ![image](data/ex2Q1.png){: .center width=70%}
-        #}
+        
 
     === "Corr. Q2a"
-        {#
+        
         La variable ```temp``` contient la valeur 25.
-        #}
+        
 
     === "Corr. Q2b"
-        {#
+        
         ```p1``` est identique, elle contient toujours les valeurs 25, 3 et 7. 
-        #}
+        
 
     === "Corr. Q3"
         {#
