@@ -15,7 +15,7 @@
         
 
     === "Corr. Q3"
-        {#
+        
         ```python linenums='1'
         def maximum(P):
             if est_vide(P):
@@ -46,10 +46,10 @@
                 empile(P, depile(Q))
             return m
         ``` 
-        #}
+        
 
     === "Corr. Q4"
-        {#
+        
         **Q4a.** On va vider la pile ```p``` dans une pile ```q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
         On redonne ensuite à ```p``` son état initial en vidant ```q``` dans ```p```.
 
@@ -68,7 +68,7 @@
                 empile(P, depile(Q))
             return t
         ```
-        #}
+        
 
 !!! example "Exercice 2"
     === "Énoncé"
