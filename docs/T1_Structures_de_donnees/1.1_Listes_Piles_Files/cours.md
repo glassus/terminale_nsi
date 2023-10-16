@@ -333,7 +333,31 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
         Créer la classe ```Pile```   ci-dessus. 
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
-    === "Correction :heart:"
+
+        **Correction :heart: :heart: :heart:** 
+
+        ```python linenums='1'
+        class Pile:
+            def __init__(self):
+                self.data = []
+            
+            def est_vide(self):
+                return len(self.data) == 0       
+        
+            def empile(self,x):
+                self.data.append(x)
+
+            def depile(self):
+                if self.est_vide():
+                    print('Vous avez essayé de dépiler une pile vide !')
+                    return None
+                else :
+                    return self.data.pop() 
+        ```
+
+
+       
+    === "Correction"
         {{ correction(True,
         "
         ```python linenums='1'
