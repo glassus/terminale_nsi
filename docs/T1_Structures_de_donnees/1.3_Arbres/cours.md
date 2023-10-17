@@ -154,7 +154,7 @@ Il existe plusieurs manières de parcourir un arbre.
 
 L'ordre des lettres parcourues est donc T-Y-O-P-H-N.
 
-Les trois parcours que nous allons voir maintenant sont des parcours en **profondeur d'abord**, ou **DPS** (*Depth First Search*). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. 
+Les trois parcours que nous allons voir maintenant sont des parcours en **profondeur d'abord**, ou **DFS** (*Depth First Search*). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. 
 
 ### 2.2 Parcours préfixe
 Le parcours **préfixe** est un parcours **en profondeur d'abord**. 
