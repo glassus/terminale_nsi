@@ -458,7 +458,7 @@ class Cellule :
         >>> p.empile(5)
         >>> p.empile(3)
         >>> p.empile(7)
-        >>> print(p)
+        >>> p
         |7|3|5|
         ```
         "
@@ -611,8 +611,8 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
                 else :
                     return self.data.pop() 
 
-            def __str__(self):       # Hors-Programme : pour afficher 
-                s = '|'              # convenablement la file avec print(p)
+            def __repr__(self):       # Hors-Programme : pour afficher 
+                s = '|'              # convenablement la file
                 for k in self.data:
                     s = s + str(k) + '|'
                 return s
@@ -622,7 +622,7 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
         >>> f = File()
         >>> f.enfile(5)
         >>> f.enfile(8)
-        >>> print(f)
+        >>> f
         |8|5|
         >>> f.defile()
         5
