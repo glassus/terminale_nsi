@@ -17,7 +17,7 @@
 
 ### *Thèmes déjà traités*
 - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/
+- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
 - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
