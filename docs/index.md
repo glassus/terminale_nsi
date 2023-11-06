@@ -1,7 +1,8 @@
 
 
 !!! abstract "Actualités"
-    - :new: Informations sur les épreuves de Juin 2024:
+
+    - :new: [plateforme d'entraînement](https://www.codepuzzle.io/defis-banque){. target="_blank"} l'épreuve pratique (par L.Abbal, du Lycée Français de Tokyo)
         - La **totalité** du programme pourra être évaluée.
         - Changement de coefficients : 15 points pour l'épreuve écrite, 5 points pour l'épreuve pratique. 
     - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
@@ -11,6 +12,10 @@
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
     - :gear: [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+    - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+    - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+    - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
 
 
 
