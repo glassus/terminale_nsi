@@ -35,7 +35,7 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
         7. Quelle est la clé étrangère de la relation ```Voitures ``` ?
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         1. 6
         2. 3
@@ -130,7 +130,7 @@ Reprenons la base Tour de France 2020 vue en cours :
         2. À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         1. Temps de Guillaume Martin (dossard 121): 04:07:47
         2. Aucun des deux, ils sont arrivés dans le même temps (04:21:22)

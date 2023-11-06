@@ -9,13 +9,15 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :books: [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-    - :gear: [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
+    - :books: [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
+    - :gear: [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
 
 
 
 
 ### *Thèmes déjà traités*
+- [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
 - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
