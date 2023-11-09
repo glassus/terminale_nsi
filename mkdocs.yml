@@ -88,11 +88,9 @@ plugins:
       locale: fr
   - awesome-pages:
       collapse_single_pages: false
+  - sqlite-console
   - macros
-  #- page-to-pdf
- 
- 
- # - mkdocs-jupyter
+
 
 extra:
   analytics: 

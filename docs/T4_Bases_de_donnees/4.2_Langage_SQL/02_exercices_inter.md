@@ -372,10 +372,144 @@ sur des bases de données réelles
     La base de données [locations.db](data/locations.db) contient les tables ```Agences```,```Locations```, ```Vehicules```.
     ![](data/diag_locations.png)
 
-    1. Répondez aux [9 questions](https://colbert.bzh/sql/tp.html?html=locations_1&db=locations){. target="_blank"} sur la relation Agence. (Travail sur SELECT)
-    2. Répondez aux [11 questions](https://colbert.bzh/sql/tp.html?html=locations_2&db=locations){. target="_blank"} sur la relation Véhicules. (Travail sur SELECT plus des fonctions d'agrégation)
-    3. Répondez aux [12 questions](https://colbert.bzh/sql/tp.html?html=locations_3&db=locations){. target="_blank"} sur la relation Locations. (Travail sur des jointures)
-    4. Répondez aux [17 questions](https://colbert.bzh/sql/tp.html?html=locations_4&db=locations){. target="_blank"} sur la relation Véhicules. (Travail sur UPDATE, INSERT, DELETE)
+    {!{ sqlide titre="**Requête :**"  base="/data/locations.db" }!}
+
+    ??? note "Questions sur la relation ```Agences```"
+
+        **Q1**. Visualisez toute la relation ```Agences```
+
+        ??? tip "Correction"
+            ```sql
+            SELECT * FROM Agences
+            ```
+
+        **Q2**. Listez uniquement les noms des agences et de leur ville.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT nom, ville FROM Agences
+            ```
+
+        **Q3**. Listez les noms des agences de la ville de Lorient
+
+        ??? tip "Correction"
+            ```sql
+            SELECT nom FROM Agences
+            WHERE ville='Lorient'
+            ```
+
+        **Q4**. Listez les noms des agences du département du Morbihan (code postal 56***) ainsi que les codes postaux en utilisant par exemple un ```WHERE LIKE```.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT nom FROM Agences
+            WHERE code LIKE '56%'
+            ```
+
+    ??? note "Questions sur la relation ```Vehicules```"
+
+        **Q5**. Déterminez le nombre de voitures que vous possédez. 
+
+        ??? tip "Correction"
+            ```sql
+            SELECT COUNT(*) FROM Vehicules
+            ```
+
+        **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT MAX(age), MIN(age) FROM Vehicules
+            ```
+
+        **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
+
+        ??? tip "Correction"
+            ```sql
+            SELECT nom FROM Vehicules
+            WHERE age=3
+            ```
+
+        **Q8**.  Quel est le kilométrage maximum des véhicules ?
+
+        ??? tip "Correction"
+            ```sql
+            SELECT MAX(kilometrage) FROM Vehicules
+            ```
+
+        **Q9**.  Quel est le kilométrage moyen des véhicules ?
+
+        ??? tip "Correction"
+            ```sql
+            SELECT AVG(kilometrage) FROM Vehicules
+            ```
+
+        **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT * FROM Vehicules
+            ORDER BY kilometrage DESC
+            ```
+
+    ??? note "Questions sur la relation ```Locations```"
+
+        **Q11**. Visualisez toute la relation Locations. 
+
+        ??? tip "Correction"
+            ```sql
+            SELECT * FROM Locations
+            ```
+
+        **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
+
+        ??? tip "Correction"
+            ```sql
+            SELECT COUNT(*) FROM Locations
+            WHERE depart != retour
+            ```
+
+        **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
+
+        ??? tip "Correction"
+            ```sql
+            SELECT SUM(distance) FROM Locations
+            ```
+
+        **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
+
+        ??? tip "Correction"
+            ```sql
+            SELECT * FROM Locations
+            JOIN Vehicules ON Locations.vehicule=Vehicules.immatriculation
+            ```
+
+        **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisée pour chacune des locations
+
+        ??? tip "Correction"
+            ```sql
+            SELECT nom, immatriculation, date, distance FROM Locations
+            JOIN Vehicules ON Locations.vehicule=Vehicules.immatriculation
+            ```
+
+        **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT DISTINCT nom, immatriculation FROM Locations
+            JOIN Vehicules ON Locations.vehicule=Vehicules.immatriculation
+            ```
+
+        **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
+
+        ??? tip "Correction"
+            ```sql
+            SELECT Agences.nom, Agences.ville, Locations.* FROM Locations
+            JOIN Agences ON Locations.depart=Agences.id
+            WHERE vehicule='AB-224-BA'
+            ORDER BY Locations.date
+            ```
+
 
 !!! abstract "{{ exercice() }}"
     Championnat de France de Football 2015-2016
