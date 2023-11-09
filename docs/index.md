@@ -10,17 +10,17 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :books: [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - :gear: [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
-    - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
-    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
-    - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
+    - :books: [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+    - :gear: [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+    - :gear: [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+    - :gear: [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
 
 
 
 
 ### *Thèmes déjà traités*
+- [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+- [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
