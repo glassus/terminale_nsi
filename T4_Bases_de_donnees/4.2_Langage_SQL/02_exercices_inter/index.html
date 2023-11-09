@@ -23,6 +23,11 @@
     
       
         <title>Exercices SQL interactifs - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+<script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css"><link rel="stylesheet" href="https://glassus.github.io/terminale_nsi//css/sqlite_ide.css"><script>path="https://glassus.github.io/terminale_nsi/"</script>
       
     
     
@@ -3668,12 +3673,143 @@
 <em>D'après le travail de J. Le Coupanec (Académie de Rennes)</em></p>
 <p>La base de données <a href="../data/locations.db">locations.db</a> contient les tables <code>Agences</code>,<code>Locations</code>, <code>Vehicules</code>.
 <img alt="" src="../data/diag_locations.png" /></p>
-<ol>
-<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_1&amp;db=locations" target="_blank">9 questions</a> sur la relation Agence. (Travail sur SELECT)</li>
-<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_2&amp;db=locations" target="_blank">11 questions</a> sur la relation Véhicules. (Travail sur SELECT plus des fonctions d'agrégation)</li>
-<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_3&amp;db=locations" target="_blank">12 questions</a> sur la relation Locations. (Travail sur des jointures)</li>
-<li>Répondez aux <a class="" href="https://colbert.bzh/sql/tp.html?html=locations_4&amp;db=locations" target="_blank">17 questions</a> sur la relation Véhicules. (Travail sur UPDATE, INSERT, DELETE)</li>
-</ol>
+
+<div id="ide1" >
+<label for='sqlcommands'><strong>Requête :</strong></label>
+<br>
+<textarea id="sqlcommands" class="sqlcommands"></textarea>
+<button id="execute" class="sqlbutton execute">Exécuter</button>
+<div id="error" class="sqlerror"></div>
+<pre id="output" class="sqloutput"></pre>
+</div>
+<script>
+  onElementLoaded("div#ide1").then(() => {
+    const ide = document.querySelector("div#ide1");
+    load(ide, '/', '', '', );
+}).catch(() => {});
+</script>
+<details class="note">
+<summary>Questions sur la relation <code>Agences</code></summary>
+<p><strong>Q1</strong>. Visualisez toute la relation <code>Agences</code></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
+<p><strong>Q2</strong>. Listez uniquement les noms des agences et de leur ville.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
+<p><strong>Q3</strong>. Listez les noms des agences de la ville de Lorient</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="o">=</span><span class="s1">&#39;Lorient&#39;</span>
+</code></pre></div>
+</details>
+<p><strong>Q4</strong>. Listez les noms des agences du département du Morbihan (code postal 56***) ainsi que les codes postaux en utilisant par exemple un <code>WHERE LIKE</code>.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;56%&#39;</span>
+</code></pre></div>
+</details>
+</details>
+<details class="note">
+<summary>Questions sur la relation <code>Vehicules</code></summary>
+<p><strong>Q5</strong>. Déterminez le nombre de voitures que vous possédez. </p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
+<p><strong>Q6</strong>. Déterminez l'âge minimum et maximum de vos véhicules.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">age</span><span class="p">),</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
+<p><strong>Q7</strong>. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="o">=</span><span class="mi">3</span>
+</code></pre></div>
+</details>
+<p><strong>Q8</strong>.  Quel est le kilométrage maximum des véhicules ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">kilometrage</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
+<p><strong>Q9</strong>.  Quel est le kilométrage moyen des véhicules ?</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">kilometrage</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
+<p><strong>Q10</strong>. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">kilometrage</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+</details>
+</details>
+<details class="note">
+<summary>Questions sur la relation <code>Locations</code></summary>
+<p><strong>Q11</strong>. Visualisez toute la relation Locations. </p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+</code></pre></div>
+</details>
+<p><strong>Q12</strong>. Déterminez le nombre de locations effectuées avec changement d'agence</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">depart</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">retour</span>
+</code></pre></div>
+</details>
+<p><strong>Q13</strong>. Déterminez le nombre total de kilomètres effectués durant les locations</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+</code></pre></div>
+</details>
+<p><strong>Q14</strong>. Listez toutes les locations en y associant les caractéristiques du véhicule</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vehicules</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">vehicule</span><span class="o">=</span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span>
+</code></pre></div>
+</details>
+<p><strong>Q15</strong>. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisée pour chacune des locations</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">immatriculation</span><span class="p">,</span><span class="w"> </span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vehicules</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">vehicule</span><span class="o">=</span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span>
+</code></pre></div>
+</details>
+<p><strong>Q16</strong>. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">immatriculation</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vehicules</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">vehicule</span><span class="o">=</span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span>
+</code></pre></div>
+</details>
+<p><strong>Q17</strong>. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Agences</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">Agences</span><span class="p">.</span><span class="n">ville</span><span class="p">,</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Agences</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">depart</span><span class="o">=</span><span class="n">Agences</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">vehicule</span><span class="o">=</span><span class="s1">&#39;AB-224-BA&#39;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="nb">date</span>
+</code></pre></div>
+</details>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  3</p>
@@ -3692,7 +3828,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 novembre 2023</span>
       
     
   </small>

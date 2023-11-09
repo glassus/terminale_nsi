@@ -1,0 +1,68 @@
+
+
+.sqlbutton {
+	color: #333;
+	background: linear-gradient(#eee, #ddd);
+	border: 1px solid #222;
+	border-radius: 3px;
+	padding: 7px;
+	margin-right: 5px;
+	transition: .3s;
+	font-family: ubuntu, sans-serif;
+	font-size: 1em;
+}
+
+.sqlbutton:active {
+	background: linear-gradient(#ddd, #eee);
+}
+
+.sqlbutton:hover, button:focus {
+	box-shadow: 0 0 2px #222;
+}
+
+.sqlexecute {
+	margin-top: 5px;;
+	width: 10%;
+	min-width:100px;
+}
+
+.CodeMirror {
+  border: 1px solid #222;
+  height: auto;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: inherit;
+}
+.CodeMirror-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.sqlerror {
+	color:red;
+	transition:.5s;
+	overflow:hidden;
+	margin: 15px;
+}
+
+.sqloutput {
+	overflow: auto;
+}
+
+.sqltable {
+	width:auto;
+	margin:auto;
+	border:1px solid black;
+ 	border-collapse:collapse;
+ 	margin-bottom:10px;
+}
+
+.sqltable th, .sqltable td {
+	border:1px solid #777;
+}
+
+div.sqlhidden > div.CodeMirror,
+div.sqlhidden > label,
+div.sqlhidden > br,
+div.sqlhidden > button {
+	display: none;
+}
