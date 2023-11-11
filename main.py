@@ -13,7 +13,7 @@ def define_env(env):
             return ""
         else:
             return texte
-
+        
 
 
     @env.macro

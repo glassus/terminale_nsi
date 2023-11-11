@@ -73,7 +73,8 @@ Voici le diagramme relationnel de cette base :
 !!! note "Requête basique : SELECT, FROM :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre FROM livre ;
+    SELECT titre
+    FROM livre ;
     ``` 
     - **Traduction :** 
 
@@ -98,7 +99,9 @@ Voici le diagramme relationnel de cette base :
 !!! note "Requête filtrée : SELECT, FROM, WHERE :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre FROM livre WHERE annee >= 1990;
+    SELECT titre 
+    FROM livre 
+    WHERE annee >= 1990;
     ``` 
     - **Traduction :** 
 
@@ -115,7 +118,9 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Requête avec plusieurs possibilités : WHERE ... IN... :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre FROM livre WHERE annee IN (1990, 1991, 1992);
+    SELECT titre 
+    FROM livre 
+    WHERE annee IN (1990, 1991, 1992);
     ``` 
     - **Traduction :** 
 
@@ -131,9 +136,11 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Requête avec booléens : AND - OR :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre FROM livre WHERE   annee >= 1970 AND
-                                    annee <= 1980 AND
-                                    editeur = 'Dargaud';
+    SELECT titre 
+    FROM livre 
+    WHERE annee >= 1970
+    AND annee <= 1980
+    AND editeur = 'Dargaud';
     ``` 
     - **Traduction :** 
 
@@ -149,7 +156,9 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Requête approchée : LIKE :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre FROM livre WHERE titre LIKE '%Astérix%';
+    SELECT titre 
+    FROM livre 
+    WHERE titre LIKE '%Astérix%';
     ``` 
     - **Traduction :** 
 
@@ -165,7 +174,9 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Plusieurs colonnes :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre, isbn FROM livre WHERE annee >= 1990;
+    SELECT titre, isbn 
+    FROM livre 
+    WHERE annee >= 1990;
     ``` 
     - **Traduction :** 
 
@@ -180,7 +191,9 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Toutes les colonnes : * :heart:"
     - **Commande :** 
     ```sql
-    SELECT * FROM livre WHERE annee >= 1990;
+    SELECT * 
+    FROM livre 
+    WHERE annee >= 1990;
     ``` 
     - **Traduction :** 
 
@@ -196,7 +209,9 @@ Le mot-clé WHERE doit être suivi d'un booléen. Les opérateurs classiques ```
 !!! note "Renommer les colonnes : AS :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre AS titre_du_livre FROM livre WHERE annee >= 1990;
+    SELECT titre AS titre_du_livre 
+    FROM livre 
+    WHERE annee >= 1990;
     ``` 
     - **Traduction :** 
 
@@ -219,8 +234,9 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Compter : COUNT :heart:"
     - **Commande :** 
     ```sql
-    SELECT COUNT(*) AS total FROM livre
-                                WHERE titre LIKE "%Astérix%";
+    SELECT COUNT(*) AS total 
+    FROM livre
+    WHERE titre LIKE "%Astérix%";
     ``` 
     - **Traduction :** 
 
@@ -235,8 +251,9 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Additionner : SUM :heart:"
     - **Commande :** 
     ```sql
-    SELECT SUM(annee) AS somme FROM livre
-                                WHERE titre LIKE "%Astérix%";
+    SELECT SUM(annee) AS somme
+    FROM livre
+    WHERE titre LIKE "%Astérix%";
     ``` 
     - **Traduction :** 
 
@@ -252,8 +269,9 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Faire une moyenne : AVG :heart:"
     - **Commande :** 
     ```sql
-    SELECT AVG(annee) AS moyenne FROM livre
-                                WHERE titre LIKE "%Astérix%";
+    SELECT AVG(annee) AS moyenne
+    FROM livre
+    WHERE titre LIKE "%Astérix%";
     ``` 
     - **Traduction :** 
 
@@ -270,8 +288,9 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Trouver les extremums : MIN, MAX :heart:"
     - **Commande :** 
     ```sql
-    SELECT MIN(annee) AS minimum FROM livre
-                                WHERE titre LIKE "%Astérix%";
+    SELECT MIN(annee) AS minimum
+    FROM livre
+    WHERE titre LIKE "%Astérix%";
     ``` 
     - **Traduction :** 
 
@@ -286,9 +305,10 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Classer des valeurs : ORDER BY, ASC, DESC, LIMIT :heart:"
     - **Commande :** 
     ```sql
-    SELECT titre, annee FROM livre
-                    WHERE titre LIKE "%Astérix%"
-                    ORDER BY annee DESC;
+    SELECT titre, annee 
+    FROM livre
+    WHERE titre LIKE "%Astérix%"
+    ORDER BY annee DESC;
     ``` 
 
     - **Traduction :** 
@@ -304,10 +324,11 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
     - **Utilisation de LIMIT :** Le mot-clé LIMIT (suivi d'un nombre) permet de limiter le nombre de résultats affichés.  
     Ainsi la requête  
     ```sql
-    SELECT titre, annee FROM livre
-                    WHERE titre LIKE "%Astérix%"
-                    ORDER BY annee DESC
-                    LIMIT 1;
+    SELECT titre, annee 
+    FROM livre
+    WHERE titre LIKE "%Astérix%"
+    ORDER BY annee DESC
+    LIMIT 1;
     ``` 
     permet d'obtenir les renseignements sur l'Astérix le plus récent.                    
        
@@ -317,7 +338,8 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 !!! note "Suppression des doublons : DISTINCT :heart:"
     - **Commande :** 
     ```sql
-    SELECT DISTINCT editeur FROM livre;
+    SELECT DISTINCT editeur 
+    FROM livre;
     ``` 
     - **Traduction :** 
 
@@ -332,7 +354,8 @@ Nous allons maintenant effectuer des opérations à partir des données sélecti
 Observons le contenu de la table «emprunt» :
 
 ```sql
-SELECT * FROM emprunt;
+SELECT * 
+FROM emprunt;
 ``` 
 ![](data/noex1.png)
 
@@ -348,8 +371,9 @@ Souvenons-nous du diagramme de la base de données.
 !!! note "Jointure de 2 tables : JOIN :heart:"
     - **Commande :** 
     ```sql
-    SELECT livre.titre, emprunt.code_barre, emprunt.retour FROM emprunt
-            JOIN livre ON emprunt.isbn = livre.isbn;
+    SELECT livre.titre, emprunt.code_barre, emprunt.retour 
+    FROM emprunt
+    JOIN livre ON emprunt.isbn = livre.isbn;
     ``` 
     - **Traduction :** 
     Comme plusieurs tables sont appelées, nous préfixons chaque colonne avec le nom de la table. Nous demandons ici l'affichage de la table «emprunt», mais où on aura remplacé l'ISBN (peu lisible) par le titre du livre.
@@ -376,9 +400,10 @@ Le résultat précédent a permis d'améliorer la visibilité de la table «empr
 !!! note "Jointure de 3 tables : JOIN :heart:"
     - **Commande :** 
     ```sql
-    SELECT u.nom, u.prenom, l.titre, e.retour FROM emprunt AS e
-            JOIN livre AS l ON e.isbn = l.isbn
-            JOIN usager AS u ON e.code_barre = u.code_barre;
+    SELECT u.nom, u.prenom, l.titre, e.retour 
+    FROM emprunt AS e
+    JOIN livre AS l ON e.isbn = l.isbn
+    JOIN usager AS u ON e.code_barre = u.code_barre;
     ``` 
     - **Traduction :** 
     Il faut bien comprendre que la table principale qui nous intéresse ici est «emprunts», mais qu'on modifie les valeurs affichées en allant chercher des correspondances dans deux autres tables. 
@@ -446,9 +471,10 @@ L'objectif est de créer la table suivante :
 !!! note "Insertion de valeurs : INSERT INTO, VALUES :heart:"
     - **Commande :** 
     ```sql
-    INSERT INTO Table_notes VALUES  (1, 'Alice', 16, 11, 17),
-                            (2, 'Bob', 12, 15, 10),
-                            (3, 'Charles', 9, 11, 18);
+    INSERT INTO Table_notes 
+    VALUES (1, 'Alice', 16, 11, 17),
+           (2, 'Bob', 12, 15, 10),
+           (3, 'Charles', 9, 11, 18);
     ``` 
 
     - **Résultat :**  
@@ -460,7 +486,8 @@ Essayons d'insérer un 4ème enregistrement ayant le même ```id``` qu'un autre 
 
 - **Commande :** 
 ```sql
-INSERT INTO Table_notes VALUES  (3, 'Denis', 18, 10, 12);
+INSERT INTO Table_notes 
+VALUES  (3, 'Denis', 18, 10, 12);
 ``` 
 
 - **Résultat :**  
@@ -479,7 +506,8 @@ CREATE TABLE Table_notes (
         NSI INTEGER
         );
 
-INSERT INTO Table_notes (Nom, Maths, Anglais, NSI) VALUES
+INSERT INTO Table_notes (Nom, Maths, Anglais, NSI) 
+VALUES
 	('Alice', 16, 11, 17),
 	('Bob', 12, 15, 10),
 	('Charles', 9, 11, 18);
@@ -498,7 +526,9 @@ L'attribut ```id``` est donc géré automatiquement par le SGBD.
 
     - **Commande :** 
     ```sql
-    UPDATE Table_notes SET Maths = 18 WHERE Nom = 'Alice';
+    UPDATE Table_notes 
+    SET Maths = 18 
+    WHERE Nom = 'Alice';
     ``` 
 
 #### 2.5 Exemple 19 
@@ -508,7 +538,8 @@ L'attribut ```id``` est donc géré automatiquement par le SGBD.
 
     - **Commande :** 
     ```sql
-    DELETE FROM Table_notes WHERE Nom = 'Charles';
+    DELETE FROM Table_notes 
+    WHERE Nom = 'Charles';
     ``` 
 
 Si une autre table contient par exemple l'attribut ```id```  comme clé étrangère, et si l'```id```  de Charles fait partie de cette table, le SGBD refusera de supprimer cette ligne, afin de ne pas violer la contrainte de référence.
