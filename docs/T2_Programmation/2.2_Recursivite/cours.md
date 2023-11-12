@@ -441,3 +441,14 @@ trace(5,100)
 </center>
 
 
+{#
+Astuce pour dessin instantanné dans Turtle
+wn = Screen()
+wn.tracer(0)
+
+code
+
+wn.update()
+
+#}
+
