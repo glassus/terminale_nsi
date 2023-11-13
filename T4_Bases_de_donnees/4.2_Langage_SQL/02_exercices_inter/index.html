@@ -3761,7 +3761,8 @@
 <p><strong>Q10</strong>. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">kilometrage</span><span class="w"> </span><span class="k">DESC</span>
 </code></pre></div>
 </details>
@@ -3769,8 +3770,27 @@
 <details class="note">
 <summary>Questions sur la relation <code>Locations</code></summary>
 <p><strong>Q11</strong>. Visualisez toute la relation Locations. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+</code></pre></div>
+</details>
 <p><strong>Q12</strong>. Déterminez le nombre de locations effectuées avec changement d'agence</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">depart</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">retour</span>
+</code></pre></div>
+</details>
 <p><strong>Q13</strong>. Déterminez le nombre total de kilomètres effectués durant les locations</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+</code></pre></div>
+</details>
 <p><strong>Q14</strong>. Listez toutes les locations en y associant les caractéristiques du véhicule</p>
 <p><strong>Q15</strong>. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations</p>
 <p><strong>Q16</strong>. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.</p>
