@@ -379,7 +379,7 @@
         **Q1**. Visualisez toute la relation ```Agences```
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -394,7 +394,7 @@
         **Q2**. Listez uniquement les noms des agences et de leur ville.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -410,13 +410,13 @@
 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
             SELECT nom 
             FROM Agences
-            WHERE ville='Lorient'
+            WHERE ville = 'Lorient'
             ```            
         """
         )
@@ -428,7 +428,7 @@
 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -447,7 +447,7 @@
         **Q5**. Déterminez le nombre de voitures que vous possédez. 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -462,7 +462,7 @@
 
         **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -477,7 +477,7 @@
 
         **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -492,7 +492,7 @@
 
         **Q8**.  Quel est le kilométrage maximum des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -506,7 +506,7 @@
 
         **Q9**.  Quel est le kilométrage moyen des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -522,7 +522,7 @@
         **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
