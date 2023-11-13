@@ -3690,18 +3690,81 @@
 <details class="note">
 <summary>Questions sur la relation <code>Agences</code></summary>
 <p><strong>Q1</strong>. Visualisez toute la relation <code>Agences</code></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
 <p><strong>Q2</strong>. Listez uniquement les noms des agences et de leur ville.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
 <p><strong>Q3</strong>. Listez les noms des agences de la ville de Lorient</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Lorient&#39;</span>
+</code></pre></div>
+</details>
 <p><strong>Q4</strong>. Listez les noms des agences du département du Morbihan (code postal 56***) ainsi que les codes postaux en utilisant par exemple un <code>WHERE LIKE</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;56%&#39;</span>
+</code></pre></div>
+</details>
 </details>
 <details class="note">
 <summary>Questions sur la relation <code>Vehicules</code></summary>
 <p><strong>Q5</strong>. Déterminez le nombre de voitures que vous possédez. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
 <p><strong>Q6</strong>. Déterminez l'âge minimum et maximum de vos véhicules.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">age</span><span class="p">),</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
 <p><strong>Q7</strong>. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+</details>
 <p><strong>Q8</strong>.  Quel est le kilométrage maximum des véhicules ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">kilometrage</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
 <p><strong>Q9</strong>.  Quel est le kilométrage moyen des véhicules ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">kilometrage</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+</code></pre></div>
+</details>
 <p><strong>Q10</strong>. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vehicules</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">kilometrage</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+</details>
 </details>
 <details class="note">
 <summary>Questions sur la relation <code>Locations</code></summary>
@@ -3803,7 +3866,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 novembre 2023</span>
       
     
   </small>
