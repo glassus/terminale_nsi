@@ -587,7 +587,7 @@
 
         **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -603,7 +603,7 @@
 
         **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -619,7 +619,7 @@
 
         **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -635,7 +635,7 @@
 
         **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
