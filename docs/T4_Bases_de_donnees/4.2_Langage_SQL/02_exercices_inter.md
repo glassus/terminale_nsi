@@ -526,7 +526,8 @@
         """
         ??? success \"Correction\" 
             ```sql
-            SELECT * FROM Vehicules
+            SELECT * 
+            FROM Vehicules
             ORDER BY kilometrage DESC
             ```   
         """
@@ -539,7 +540,7 @@
 
         **Q11**. Visualisez toute la relation Locations. 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -554,7 +555,7 @@
 
         **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -571,7 +572,7 @@
 
         **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -703,7 +704,7 @@
         ```sql
         SELECT COUNT(*) 
         FROM Event
-        WHERE type='penalty
+        WHERE type='penalty'
         ```            
     """
     )
