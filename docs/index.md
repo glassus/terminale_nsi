@@ -9,7 +9,7 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D83WJ](https://www.codepuzzle.io/D83WJ){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/DTVEZ](https://www.codepuzzle.io/DTVEZ){. target="_blank"}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
