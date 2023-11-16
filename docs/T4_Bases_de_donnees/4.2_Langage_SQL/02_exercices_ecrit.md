@@ -191,7 +191,7 @@
 
 
 !!! abstract "{{exercice()}}"
-    Exercice 1 du sujet [Amérique du Sud J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+    Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     ??? note "Correction"
  
