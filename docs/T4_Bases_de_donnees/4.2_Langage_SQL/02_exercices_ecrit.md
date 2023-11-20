@@ -42,14 +42,14 @@
     
     **Q0.** Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.
 
-    {#
+    
     ??? note "Correction"
         Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))
-    #}
+    
 
     **Q1.** (HP) Donner les commandes SQL permettant de créer ces tables.
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         CREATE TABLE Patients(
@@ -78,17 +78,17 @@
         );
 
         ```
-    #}
+    
 
 
     **Q2.** Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         INSERT INTO Patients VALUES (1, "Wizeunit", "Anne", "F", 2000);
         ```
-    #}
+    
 
     **Q3.** Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.
 
