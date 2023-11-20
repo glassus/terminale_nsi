@@ -118,10 +118,12 @@
      
     ??? note "Correction"
         ```SQL
-        SELECT p.nom, p.prenom FROM Patients AS p
+        SELECT p.nom, p.prenom
+        FROM Patients AS p
         JOIN Ordonnances AS o ON p.id = o.id_patient
         JOIN Medecins AS m ON o.matricule_medecin = m.matricule
-        WHERE m.specialite = "psychiatrie" AND o.date_ord LIKE "%04-2020%"
+        WHERE m.specialite = "psychiatrie"
+              AND o.date_ord LIKE "%-04-2020"
 
         ```
     
@@ -135,34 +137,34 @@
 
     **Q1**. Quelle requête SQL donne le prix d'achat du produit dont le ```nom_court``` est «Liq_Vaiss_1L» ?
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' 
         ```
-    #}
+    
 
     **Q2**. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
         ``` 
 
-    #}
+    
 
 
     **Q3**. Quelle requête donne les produits étant en rupture de stock ?
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         SELECT Produits.nom FROM Produits
         JOIN Stocks ON Produits.id = Stocks.produit
         WHERE Stocks.quantite = 0;
         ```
-    #}
+    
 
     **Q4**. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
 
