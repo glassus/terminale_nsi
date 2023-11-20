@@ -9,9 +9,10 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/DTVEZ](https://www.codepuzzle.io/DTVEZ){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/D7GD3](https://www.codepuzzle.io/D7GD3){. target="_blank"}
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - :books: [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - :books: [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
     - :gear: [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
     - :gear: [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
