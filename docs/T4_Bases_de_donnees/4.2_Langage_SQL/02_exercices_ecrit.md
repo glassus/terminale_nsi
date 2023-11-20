@@ -168,46 +168,54 @@
 
     **Q4**. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
 
-    {#
+    
     ??? note "Correction"
         ```SQL
-        SELECT nom FROM Produits WHERE nom LIKE "%ampoule%";
+        SELECT nom 
+        FROM Produits 
+        WHERE nom LIKE "%ampoule%";
         ```
-    #}
+    
 
     **Q5**. Quelle requête permet d'avoir le prix moyen de ces ampoules ?
 
-    {#
+    
     ??? note "Correction"
         ```SQL
-        SELECT AVG(prix_vente) FROM Produits WHERE nom LIKE "%ampoule%";
+        SELECT AVG(prix_vente) 
+        FROM Produits 
+        WHERE nom LIKE "%ampoule%";
         ```
-    #}
+    
 
     **Q6**. Quelle requête permet d'identifier le produit le plus cher du magasin ?
 
-    {#
+    
     ??? note "Correction"
         ```SQL
-        SELECT nom_court FROM Produits ORDER BY prix_vente DESC LIMIT 1;
+        SELECT nom_court 
+        FROM Produits 
+        ORDER BY prix_vente DESC LIMIT 1;
         ```
         ou
 
         ```SQL
-        SELECT nom FROM Produits WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
+        SELECT nom 
+        FROM Produits 
+        WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
         ``` 
-    #}
+    
 
     **Q7**. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? _(on pourra utiliser la fonction SQL ```NOW()``` qui renvoie la date actuelle )_
 
-    {#
+    
     ??? note "Correction"
         ```SQL
         SELECT p.nom FROM Produits AS p
         JOIN Stocks AS s ON s.produits = p.id
         WHERE s.date_peremption < NOW();
         ```
-    #}
+    
 
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
