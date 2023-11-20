@@ -3405,7 +3405,7 @@
 <p><strong>Q0.</strong> Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.</p>
 <details class="note">
 <summary>Correction</summary>
-<p>Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))</p>
+<p>Ordonnances ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))</p>
 </details>
 <p><strong>Q1.</strong> (HP) Donner les commandes SQL permettant de créer ces tables.</p>
 <details class="note">
@@ -3439,11 +3439,25 @@
 <p><strong>Q2.</strong> Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <p><strong>Q3.</strong> Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.</p>
+<details class="note">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Patients</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</details>
 <p><strong>Q4.</strong> Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.</p>
+<details class="note">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">specialite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;épidémiologie&quot;</span><span class="p">;</span>
+</code></pre></div>
+</details>
 <p><strong>Q5.</strong>  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.</p>
 </div>
 <div class="admonition abstract">
