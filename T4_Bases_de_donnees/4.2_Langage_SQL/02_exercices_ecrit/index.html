@@ -3403,66 +3403,11 @@
 <p>On donne le diagramme relationnel de cette base :
 <img alt="image" class="center" src="../data/deb_ex1.png" /></p>
 <p><strong>Q0.</strong> Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.</p>
-<details class="note">
-<summary>Correction</summary>
-<p>Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))</p>
-</details>
 <p><strong>Q1.</strong> (HP) Donner les commandes SQL permettant de créer ces tables.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span>
-<span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">genre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">annee_naissance</span><span class="w"> </span><span class="nb">INTEGER</span>
-<span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Ordonnances</span><span class="p">(</span>
-<span class="n">code</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="n">id_patient</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
-<span class="n">matricule_medecin</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
-<span class="n">date_ord</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">medicaments</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">id_patient</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Patients</span><span class="p">(</span><span class="n">Id</span><span class="p">),</span>
-<span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">matricule_medecin</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span><span class="n">matricule</span><span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Medecins</span><span class="p">(</span>
-<span class="n">matricule</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="n">nom_prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">specialite</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
-<span class="n">telephone</span><span class="w"> </span><span class="nb">TEXT</span>
-<span class="p">);</span>
-</code></pre></div>
-</details>
 <p><strong>Q2.</strong> Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Wizeunit&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Anne&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span>
-</code></pre></div>
-</details>
 <p><strong>Q3.</strong> Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q4.</strong> Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">specialite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;épidémiologie&quot;</span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q5.</strong>  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Patients</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">p</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Ordonnances</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">id_patient</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Medecins</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">matricule_medecin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">matricule</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">specialite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;psychiatrie&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">date_ord</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%04-2020%&quot;</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  2</p>
@@ -3470,54 +3415,12 @@
 <p>On considère ci-dessous le schéma de la base de données du stock d'un supermarché :</p>
 <p><img alt="" src="../data/exo3_schema.png" /></p>
 <p><strong>Q1</strong>. Quelle requête SQL donne le prix d'achat du produit dont le <code>nom_court</code> est «Liq_Vaiss_1L» ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prix_achat</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom_court</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Liq_Vaiss_1L&#39;</span><span class="w"> </span>
-</code></pre></div>
-</details>
 <p><strong>Q2</strong>. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">adresse</span><span class="p">,</span><span class="w"> </span><span class="n">cp</span><span class="p">,</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Fournisseurs</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Avenir_confiseur&#39;</span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q3</strong>. Quelle requête donne les produits étant en rupture de stock ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Produits</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Stocks</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Produits</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stocks</span><span class="p">.</span><span class="n">produit</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Stocks</span><span class="p">.</span><span class="n">quantite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q4</strong>. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ampoule%&quot;</span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q5</strong>. Quelle requête permet d'avoir le prix moyen de ces ampoules ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">prix_vente</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%ampoule%&quot;</span><span class="p">;</span>
-</code></pre></div>
-</details>
 <p><strong>Q6</strong>. Quelle requête permet d'identifier le produit le plus cher du magasin ?</p>
-<details class="note">
-<summary>Correction</summary>
-<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_court</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">prix_vente</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</code></pre></div>
-ou</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">prix_vente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">prix_vente</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="p">);</span>
-</code></pre></div>
-</details>
 <p><strong>Q7</strong>. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? <em>(on pourra utiliser la fonction SQL <code>NOW()</code> qui renvoie la date actuelle )</em></p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">p</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Stocks</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">produits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">id</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">date_peremption</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">();</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  3</p>
@@ -3766,7 +3669,7 @@ Smells Like Teen Spirit, 1991
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2023</span>
       
     
   </small>
