@@ -44,7 +44,7 @@
 
     
     ??? note "Correction"
-        Ordonnaces ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))
+        Ordonnances ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))
     
 
     **Q1.** (HP) Donner les commandes SQL permettant de créer ces tables.
@@ -86,28 +86,32 @@
     
     ??? note "Correction"
         ```SQL
-        INSERT INTO Patients VALUES (1, "Wizeunit", "Anne", "F", 2000);
+        INSERT INTO Patients
+        VALUES (1, "Wizeunit", "Anne", "F", 2000);
         ```
     
 
     **Q3.** Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.
 
 
-    {#
+    
     ??? note "Correction"
         ```SQL
-        UPDATE Patients SET prenom = 'Alice' WHERE id = 100 ;
+        UPDATE Patients
+        SET prenom = 'Alice' 
+        WHERE id = 100 ;
         ```
-    #}
+    
 
     **Q4.** Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.
     
-    {#
+    
     ??? note "Correction"
         ```SQL
-        DELETE FROM Medecins WHERE specialite = "épidémiologie";
+        DELETE FROM Medecins 
+        WHERE specialite = "épidémiologie";
         ```
-    #}
+    
 
     **Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
 
