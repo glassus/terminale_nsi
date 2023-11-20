@@ -115,7 +115,7 @@
 
     **Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
 
-    {#  
+     
     ??? note "Correction"
         ```SQL
         SELECT p.nom, p.prenom FROM Patients AS p
@@ -124,7 +124,7 @@
         WHERE m.specialite = "psychiatrie" AND o.date_ord LIKE "%04-2020%"
 
         ```
-    #}
+    
 
 !!! abstract "{{exercice()}}"
     _basé sur le travail de G.Viateau (Bayonne)_
