@@ -9,7 +9,7 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D7GD3](https://www.codepuzzle.io/D7GD3){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
