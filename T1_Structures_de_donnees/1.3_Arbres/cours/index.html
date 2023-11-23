@@ -4097,6 +4097,18 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <p>Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_2.png" /></p>
@@ -4124,6 +4136,13 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h4 id="412-parcours-infixe">4.1.2 Parcours infixe<a class="headerlink" href="#412-parcours-infixe" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
@@ -4131,6 +4150,13 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h4 id="413-parcours-postfixe">4.1.3 Parcours postfixe<a class="headerlink" href="#413-parcours-postfixe" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">6</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span>
