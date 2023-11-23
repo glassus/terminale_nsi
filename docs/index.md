@@ -2,26 +2,26 @@
 
 !!! abstract "Actualités"
 
-    - :new: [plateforme d'entraînement](https://www.codepuzzle.io/defis-banque){. target="_blank"} l'épreuve pratique (par L.Abbal, du Lycée Français de Tokyo)
-        - La **totalité** du programme pourra être évaluée.
-        - Changement de coefficients : 15 points pour l'épreuve écrite, 5 points pour l'épreuve pratique. 
-    - Page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/). 
-
+    - :new: Deux sujets zéro viennent d'être publiés :
+        - [sujet 0-A](T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
+        - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
 !!! question "Code Puzzle du jour"
     :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
-    - :books: [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - :gear: [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
-    - :gear: [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
-    - :gear: [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
+    - :gear: [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
 
 
 
 
 ### *Thèmes déjà traités*
+
+- [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+- [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+- [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
 - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
 - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
