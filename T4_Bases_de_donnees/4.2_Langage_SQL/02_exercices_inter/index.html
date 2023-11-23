@@ -2752,7 +2752,7 @@
         
   
   <span class="md-ellipsis">
-    Les algorithmes d'appariement
+    Gale-Shapley et l'algorithme de Parcoursup
   </span>
   
 
@@ -3913,13 +3913,68 @@
 }).catch(() => {});
 </script>
 <p><strong>Q1</strong>. Combien d'équipes ont participé à ce championnat ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Team</span>
+</code></pre></div>
+</details>
 <p><strong>Q2</strong>. Listez les noms des clubs ainsi que leur date de création dans l'ordre chronologique de leur création.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">birthday</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Team</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">birthday</span>
+</code></pre></div>
+</details>
 <p><strong>Q3</strong>. Combien de pénaltys ont été marqués ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Event</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="o">=</span><span class="s1">&#39;penalty&#39;</span>
+</code></pre></div>
+</details>
 <p><strong>Q4</strong>. Combien de pénaltys ont été sifflés ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Event</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;penalty&#39;</span><span class="p">,</span><span class="s1">&#39;miss&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p><strong>Q5</strong>. Combien de cartons ont été distribués ? </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Event</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;yellow2&#39;</span><span class="p">,</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p><strong>Q6</strong>. Combien de buts ont été marqués ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Event</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;goal&#39;</span><span class="p">,</span><span class="s1">&#39;own&#39;</span><span class="p">,</span><span class="s1">&#39;penalty&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p><strong>Q7</strong>. Affichez tous les renseignements sur les 10 cartons rouges obtenus le plus rapidement pendant un match.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Event</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">time</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span>
+</code></pre></div>
+</details>
 <p><strong>Q8</strong>.  Donnez le nom du joueur qui a obtenu le carton rouge le plus rapidement.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">Player</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="mi">392</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  4</p>
@@ -3985,7 +4040,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 novembre 2023</span>
       
     
   </small>

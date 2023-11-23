@@ -22,7 +22,7 @@
     
     
       
-        <title>Les algorithmes d'appariement - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>Gale-Shapley et l'algorithme de Parcoursup - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-algorithmes-dappariement" class="md-skip">
+        <a href="#gale-shapley-et-lalgorithme-de-parcoursup" class="md-skip">
           Aller au contenu
         </a>
       
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les algorithmes d'appariement
+              Gale-Shapley et l'algorithme de Parcoursup
             
           </span>
         </div>
@@ -2753,7 +2753,7 @@
           
   
   <span class="md-ellipsis">
-    Les algorithmes d'appariement
+    Gale-Shapley et l'algorithme de Parcoursup
   </span>
   
 
@@ -2764,7 +2764,7 @@
         
   
   <span class="md-ellipsis">
-    Les algorithmes d'appariement
+    Gale-Shapley et l'algorithme de Parcoursup
   </span>
   
 
@@ -2786,22 +2786,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lalgorithme-de-gale-shapley" class="md-nav__link">
-    L'algorithme de Gale-Shapley
+  <a href="#1-algorithmes-dappariement" class="md-nav__link">
+    1. Algorithmes d'appariement
   </a>
   
-    <nav class="md-nav" aria-label="L'algorithme de Gale-Shapley">
+    <nav class="md-nav" aria-label="1. Algorithmes d'appariement">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#notion-de-mariage-stable" class="md-nav__link">
-    Notion de «mariage stable»
+  <a href="#11-notion-de-mariages-instables" class="md-nav__link">
+    1.1 Notion de mariages instables
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algorithme-de-gale-shapley" class="md-nav__link">
+    2. Algorithme de Gale-Shapley
+  </a>
   
 </li>
       
@@ -3424,27 +3431,80 @@
   
 
 
-<h1 id="les-algorithmes-dappariement">Les algorithmes d'appariement<a class="headerlink" href="#les-algorithmes-dappariement" title="Permanent link">⚓︎</a></h1>
+<h1 id="gale-shapley-et-lalgorithme-de-parcoursup">Gale-Shapley et l'algorithme de Parcoursup<a class="headerlink" href="#gale-shapley-et-lalgorithme-de-parcoursup" title="Permanent link">⚓︎</a></h1>
+<p>L'affectation des élèves dans l'enseignement supérieur (par l'algorithme APB jusqu'en 2020, par l'algorithme Parcoursup depuis) fait intervenir un algorithme <em>d'appariement</em>. Il s'agit d'associer, de la meilleure manière possible, les élèves à leur formation préférée.</p>
 <div class="admonition quote">
 <p class="admonition-title">Appariement</p>
 <p><em>Action d'apparier, d'unir par couple, d'assortir par paire.</em></p>
 </div>
-<p>L'affectation des élèves dans l'enseignement supérieur (par l'algorithme APB jusqu'en 2020, par l'algorithme Parcoursup depuis) fait intervenir un algorithme <em>d'appariement</em>. Il s'agit d'associer, de la meilleure manière possible, les élèves à leur formation préférée.</p>
 <p>Considérons que les élèves aient fait un classement de leurs formations préférées (<strong>ce n'est pas le cas dans Parcoursup</strong>, nous y reviendrons). Considérons aussi que ces formations aient classé ces élèves au vu de leur dossier. L'algorithme d'appariement va avoir pour but d'associer chaque élève à une formation, sans qu'un élève ait pris la place d'un autre tout en étant moins bien classé que lui.</p>
-<p>L'algorithme de Gale-Shapley permet de résoudre ce problème.</p>
-<h2 id="lalgorithme-de-gale-shapley">L'algorithme de Gale-Shapley<a class="headerlink" href="#lalgorithme-de-gale-shapley" title="Permanent link">⚓︎</a></h2>
-<p>La présentation classique de cet algorithme fait intervenir non pas des élèves et des formations, mais des couples garçons-filles à associer.</p>
-<p>Cet algorithme est appelé «algorithme des mariages stables».</p>
-<p>Mais qu'est-ce qu'un mariage stable ?</p>
-<h3 id="notion-de-mariage-stable">Notion de «mariage stable»<a class="headerlink" href="#notion-de-mariage-stable" title="Permanent link">⚓︎</a></h3>
+<h2 id="1-algorithmes-dappariement">1. Algorithmes d'appariement<a class="headerlink" href="#1-algorithmes-dappariement" title="Permanent link">⚓︎</a></h2>
+<p><em>TODO</em></p>
+<h3 id="11-notion-de-mariages-instables">1.1 Notion de mariages instables<a class="headerlink" href="#11-notion-de-mariages-instables" title="Permanent link">⚓︎</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Mariages instables</p>
+<p>Deux mariages sont dits <strong>instables</strong> si, dans chacun des deux couples, il existe la possibilité de quitter son conjoint actuel pour quelqu'un mieux classé dans ses préférences.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Exemple de mariage instable</p>
+<p>Considérons 4 personnes : 2 hommes (Bryce, Gregory) et 2 femmes (Trinity et Riley).</p>
+<p>On leur a demandé de classer les deux personnes du sexe opposé par ordre de préférence. Voilà le résultat :</p>
+<p><img alt="image" class="center" src="../data/class.png" width="60%" /></p>
+<p>Bryce préfère Riley à Trinity, Gregory préfère Riley à Trinity, Trinity préfère Bryce à Gregory, Riley préfère Bryce à Gregory.</p>
+<p>Considérons maintenant qu'un algorithme d'appariement a formé les couples suivants : Bryce-Trinity et Gregory-Riley.</p>
+<p><img alt="image" class="center" src="../data/unst1.png" width="40%" /></p>
+<p>Mais alors :</p>
+<ul>
+<li>Bryce est avec Trinity alors qu'il préfère Riley.</li>
+<li>Riley est avec Gregory alors qu'elle préfère Byrce.</li>
+</ul>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> le couple Bryce-Riley crée donc deux mariages <strong>instables</strong>, car leur intérêt est de briser leur couple actuel et de partir ensemble.</p>
+<p>Par abus de langage, on pourra dire que le couple Bryce-Riley est un couple instable (car leurs mariages respectifs sont instables).</p>
+<p><img alt="image" class="center" src="../data/cass.png" width="40%" /></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice 1</p>
+<p>La configuration ci-dessous contient-elle des mariages instables ?</p>
 <p><img alt="image" class="center" src="../data/stable.png" /></p>
+<details class="success">
+<summary>Correction</summary>
+<p>Le couple Christopher-Evelyn est un couple instable.</p>
+</details>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice 2</p>
+<p>À l'adresse <a class="" href="https://uw-cse442-wi20.github.io/FP-cs-algorithm/" target="_blank">https://uw-cse442-wi20.github.io/FP-cs-algorithm/</a>, allez jusqu'à la zone «Identify Unstable Pairs» et entraînez-vous à repérer les mariages instables.</p>
+</div>
+<p>1.2 Notion de mariage stable</p>
+<div class="admonition tip">
+<p class="admonition-title">Mariages stables</p>
+<p>Un ensemble de mariages sera dit <strong>stable</strong> s'il n'existe aucun couple instable parmi tous les mariages.</p>
+<p><img alt="image" class="center" src="../data/stable4.png" /></p>
+<p>La situation ci-dessus est stable, car aucun couple n'est instable.</p>
+</div>
+<p>Le travail des algorithmes d'appariement va être d'essayerd d'arriver à une situation stable.</p>
+<p>L'algorithme le plus connu est l'algorithme de Gale-Shapley</p>
+<h2 id="2-algorithme-de-gale-shapley">2. Algorithme de Gale-Shapley<a class="headerlink" href="#2-algorithme-de-gale-shapley" title="Permanent link">⚓︎</a></h2>
+<p><img alt="image" class="center" src="../data/GS.png" width="40%" /></p>
+<p>David Gale (1921-2008) et Lloyd Shapley (1923-2016), deux universitaires américains, ont présenté en 1962 un algorithme d'appariement qui porte leur nom. (<a class="" href="https://www.eecs.harvard.edu/cs286r/courses/fall09/papers/galeshapley.pdf" target="_blank">lien vers la publication originale</a>)</p>
+<div class="admonition tip">
+<p class="admonition-title">Algorithme de Gale-Shapley <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li>Tant qu'il existe un homme n'ayant pas trouvé de femme :<ul>
+<li>chaque homme libre se propose à la femme de son classement la mieux classée parmi celles à qui il n'a pas encore proposé.</li>
+<li>si la femme est libre, elle accepte.</li>
+<li>si elle n'est pas libre mais que l'homme qui vient de lui faire une proposition est mieux classé que son mari actuel, elle brise son couple actuel et accepte la proposition qui vient de lui être faite.</li>
+</ul>
+</li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 novembre 2023</span>
       
     
   </small>
