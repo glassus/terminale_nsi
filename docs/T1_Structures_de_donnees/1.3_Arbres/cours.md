@@ -528,7 +528,7 @@ class Arbre:
 #### 4.1.1 Parcours préfixe
 
 !!! note "Parcours préfixe :heart:"
-{#
+
     ```python linenums='1'
     def prefixe(arbre):
         if arbre is None :
@@ -538,7 +538,7 @@ class Arbre:
         prefixe(arbre.right)
 
     ```
-#}
+
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center}
@@ -565,7 +565,7 @@ a.right.right.right = Arbre(3)
 #### 4.1.2 Parcours infixe
 
 !!! note "Parcours infixe :heart:"
-{#
+
     ```python
     def infixe(arbre):
         if arbre is None :
@@ -574,7 +574,7 @@ a.right.right.right = Arbre(3)
         print(arbre.data, end = '-')
         infixe(arbre.right)
     ```
-#}
+
 
 
 ```python
@@ -585,7 +585,7 @@ a.right.right.right = Arbre(3)
 #### 4.1.3 Parcours postfixe
 
 !!! note "Parcours postfixe :heart:"
-{#
+
     ```python
     def postfixe(arbre):
         if arbre is None :
@@ -594,7 +594,7 @@ a.right.right.right = Arbre(3)
         postfixe(arbre.right)
         print(arbre.data, end = '-')
     ```
-#}
+
 
 
 ```python
