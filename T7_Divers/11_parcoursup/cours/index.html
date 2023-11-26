@@ -2786,11 +2786,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-algorithmes-dappariement" class="md-nav__link">
-    1. Algorithmes d'appariement
+  <a href="#1-etudes-des-appariements-possibles" class="md-nav__link">
+    1. Études des appariements possibles
   </a>
   
-    <nav class="md-nav" aria-label="1. Algorithmes d'appariement">
+    <nav class="md-nav" aria-label="1. Études des appariements possibles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2809,6 +2809,33 @@
   <a href="#2-algorithme-de-gale-shapley" class="md-nav__link">
     2. Algorithme de Gale-Shapley
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementation-en-python" class="md-nav__link">
+    3. Implémentation en Python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-qualite-de-la-solution-proposee-par-lalgorithme-de-gale-shapley" class="md-nav__link">
+    4. Qualité de la solution proposée par l'algorithme de Gale-Shapley
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Qualité de la solution proposée par l'algorithme de Gale-Shapley">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-le-lien-avec-parcoursup" class="md-nav__link">
+    5. Le lien avec Parcoursup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3432,21 +3459,35 @@
 
 
 <h1 id="gale-shapley-et-lalgorithme-de-parcoursup">Gale-Shapley et l'algorithme de Parcoursup<a class="headerlink" href="#gale-shapley-et-lalgorithme-de-parcoursup" title="Permanent link">⚓︎</a></h1>
-<p>L'affectation des élèves dans l'enseignement supérieur (par l'algorithme APB jusqu'en 2020, par l'algorithme Parcoursup depuis) fait intervenir un algorithme <em>d'appariement</em>. Il s'agit d'associer, de la meilleure manière possible, les élèves à leur formation préférée.</p>
+<p><img alt="image" class="center" src="../data/banniere.png" /></p>
+<p>L'affectation des lycéens dans l'enseignement supérieur (par l'algorithme APB jusqu'en 2018, par l'algorithme Parcoursup depuis) fait intervenir un algorithme <em>d'appariement</em>. </p>
 <div class="admonition quote">
 <p class="admonition-title">Appariement</p>
 <p><em>Action d'apparier, d'unir par couple, d'assortir par paire.</em></p>
 </div>
-<p>Considérons que les élèves aient fait un classement de leurs formations préférées (<strong>ce n'est pas le cas dans Parcoursup</strong>, nous y reviendrons). Considérons aussi que ces formations aient classé ces élèves au vu de leur dossier. L'algorithme d'appariement va avoir pour but d'associer chaque élève à une formation, sans qu'un élève ait pris la place d'un autre tout en étant moins bien classé que lui.</p>
-<h2 id="1-algorithmes-dappariement">1. Algorithmes d'appariement<a class="headerlink" href="#1-algorithmes-dappariement" title="Permanent link">⚓︎</a></h2>
-<p><em>TODO</em></p>
+<p>Considérons que les élèves aient fait un classement de leurs formations préférées (<strong>ce n'est pas le cas dans Parcoursup</strong>, nous y reviendrons).<br />
+Considérons aussi que ces formations aient classé ces élèves au vu de leur dossier.<br />
+L'algorithme d'appariement va avoir pour but d'associer chaque élève à une formation, avec les contraintes suivantes :</p>
+<ul>
+<li>chaque formation veut recevoir les élèves les mieux placés dans leur classement.</li>
+<li>chaque élève veut intégrer la formation la mieux placée dans son classement.</li>
+</ul>
+<h2 id="1-etudes-des-appariements-possibles">1. Études des appariements possibles<a class="headerlink" href="#1-etudes-des-appariements-possibles" title="Permanent link">⚓︎</a></h2>
+<p>Pour illustrer les problématiques liées à l'appariement, nous allons nous placer dans la situation suivante : au lieu de parler d'élèves et d'établissements d'enseignement supérieur, nous allons parler d'hommes et de femmes.</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Situation d'étude</strong></p>
+<ul>
+<li>On dispose d'une liste de <span class="arithmatex">\(n\)</span> hommes et de <span class="arithmatex">\(n\)</span> femmes.</li>
+<li>Chaque homme a classé les <span class="arithmatex">\(n\)</span> femmes par ordre de préférence.</li>
+<li>Chaque femme a classé les <span class="arithmatex">\(n\)</span> hommes par ordre de préférence.</li>
+<li>L'appariement consiste à créer <span class="arithmatex">\(n\)</span> mariages entre un homme et une femme.</li>
+</ul>
 <h3 id="11-notion-de-mariages-instables">1.1 Notion de mariages instables<a class="headerlink" href="#11-notion-de-mariages-instables" title="Permanent link">⚓︎</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Mariages instables</p>
 <p>Deux mariages sont dits <strong>instables</strong> si, dans chacun des deux couples, il existe la possibilité de quitter son conjoint actuel pour quelqu'un mieux classé dans ses préférences.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Exemple de mariage instable</p>
+<p class="admonition-title">Exemple de mariages instables</p>
 <p>Considérons 4 personnes : 2 hommes (Bryce, Gregory) et 2 femmes (Trinity et Riley).</p>
 <p>On leur a demandé de classer les deux personnes du sexe opposé par ordre de préférence. Voilà le résultat :</p>
 <p><img alt="image" class="center" src="../data/class.png" width="60%" /></p>
@@ -3456,7 +3497,7 @@
 <p>Mais alors :</p>
 <ul>
 <li>Bryce est avec Trinity alors qu'il préfère Riley.</li>
-<li>Riley est avec Gregory alors qu'elle préfère Byrce.</li>
+<li>Riley est avec Gregory alors qu'elle préfère Bryce.</li>
 </ul>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> le couple Bryce-Riley crée donc deux mariages <strong>instables</strong>, car leur intérêt est de briser leur couple actuel et de partir ensemble.</p>
 <p>Par abus de langage, on pourra dire que le couple Bryce-Riley est un couple instable (car leurs mariages respectifs sont instables).</p>
@@ -3482,11 +3523,17 @@
 <p><img alt="image" class="center" src="../data/stable4.png" /></p>
 <p>La situation ci-dessus est stable, car aucun couple n'est instable.</p>
 </div>
-<p>Le travail des algorithmes d'appariement va être d'essayerd d'arriver à une situation stable.</p>
-<p>L'algorithme le plus connu est l'algorithme de Gale-Shapley</p>
+<p>Le travail des algorithmes d'appariement va être d'essayer d'arriver à une situation stable.</p>
 <h2 id="2-algorithme-de-gale-shapley">2. Algorithme de Gale-Shapley<a class="headerlink" href="#2-algorithme-de-gale-shapley" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/GS.png" width="40%" /></p>
-<p>David Gale (1921-2008) et Lloyd Shapley (1923-2016), deux universitaires américains, ont présenté en 1962 un algorithme d'appariement qui porte leur nom. (<a class="" href="https://www.eecs.harvard.edu/cs286r/courses/fall09/papers/galeshapley.pdf" target="_blank">lien vers la publication originale</a>)</p>
+<p>David Gale (1921-2008) et Lloyd Shapley (1923-2016), deux universitaires américains, ont présenté en 1962 un algorithme d'appariement qui porte leur nom. (<a class="" href="https://www.eecs.harvard.edu/cs286r/courses/fall09/papers/galeshapley.pdf" target="_blank">lien vers la publication originale</a>).</p>
+<p>Cette publication vaudra le prix Nobel d'économie à Lloyd Shapley en 2012 (conjointement avec Alvin Roth), David Gale étant décédé en 2008. 
+Leur algorithme est aujourd'hui utilisé quotidiennement pour tous les problèmes d'appariemment : dans le milieu universitaire (comme nous le voyons), mais aussi dans le milieu médical. Son application a ainsi permis une très forte augmentation des greffes d'organes, en optimisant l'adéquation donneur-receveur.</p>
+<div class="admonition success">
+<p class="admonition-title">Résultat démontré par Gale-Shapley</p>
+<p>Si les deux ensembles à associer sont de même taille (ici : s'il y a autant d'hommes que de femmes), alors il existe toujours <strong>au moins un appariement stable</strong>.</p>
+</div>
+<p>Gale et Shapley ont détaillé l'algorithme permettant de fabriquer un de ces appariements stables :</p>
 <div class="admonition tip">
 <p class="admonition-title">Algorithme de Gale-Shapley <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
@@ -3498,13 +3545,377 @@
 </li>
 </ul>
 </div>
+<p>À noter qu'il n'y a pas, en règle générale, un seul appariement stable, mais plusieurs. L'algorithme de Gale-Shapley permet d'en trouver un en particulier.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Illustration</p>
+<p>Vous pouvez voir le déroulement de l'algorithme sur le site <a class="" href="https://uw-cse442-wi20.github.io/FP-cs-algorithm/" target="_blank">https://uw-cse442-wi20.github.io/FP-cs-algorithm/</a>, dans la partie <strong>The solution</strong>.</p>
+</div>
+<h2 id="3-implementation-en-python">3. Implémentation en Python<a class="headerlink" href="#3-implementation-en-python" title="Permanent link">⚓︎</a></h2>
+<p>Nous allons partir de la situation suivante :</p>
+<p><img alt="image" class="center" src="../data/ex_python.png" /></p>
+<details class="abstract">
+<summary>Exercice 3</summary>
+<p>Compléter le code ci-dessous.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">hommes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">]</span>
+<span class="n">femmes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+
+<span class="n">prefs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;J&#39;</span><span class="p">:[</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;O&#39;</span><span class="p">:[</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;L&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;M&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;K&#39;</span><span class="p">:[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">]}</span>
+
+<span class="n">refus</span> <span class="o">=</span> <span class="p">{</span><span class="n">h</span><span class="p">:[]</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">}</span>
+
+<span class="n">couple</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="p">:</span><span class="kc">None</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">hommes</span> <span class="o">+</span> <span class="n">femmes</span><span class="p">}</span>
+
+<span class="n">hommes_maries</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">hommes_maries</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">hommes</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;--------------------&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Affectation de&#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;déjà en couple&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="o">...</span> <span class="p">:</span>
+</span>                <span class="k">if</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;propose à&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">refus</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;a déjà refusé, stop&#39;</span><span class="p">)</span>
+
+                <span class="k">elif</span> <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;est libre, go&#39;</span><span class="p">)</span>
+<span class="hll">                    <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</span><span class="hll">                    <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</span><span class="hll">                    <span class="n">hommes_maries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>          
+</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;est prise, étude...&#39;</span><span class="p">)</span>
+                    <span class="n">h_actuel</span> <span class="o">=</span> <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+                    <span class="n">liste_prefs</span> <span class="o">=</span> <span class="n">prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">liste_prefs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">liste_prefs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">h_actuel</span><span class="p">):</span>
+
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est mieux classé que&quot;</span><span class="p">,</span> <span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;dans les prefs de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;est viré&quot;</span><span class="p">)</span>
+                        <span class="n">hommes_maries</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="hll">                        <span class="n">couple</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span class="hll">                        <span class="n">refus</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est le nouveau mari de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+                        <span class="n">hommes_maries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+                        <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span>
+                        <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est moins bien classé que&quot;</span><span class="p">,</span> <span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;dans les prefs de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="s2">&quot;il reste celibataire&quot;</span><span class="p">)</span>
+<span class="hll">                        <span class="n">refus</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span>                        <span class="k">break</span>                
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;--------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tout le monde est marié, fin de l&#39;algo&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">hommes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">]</span>
+<span class="n">femmes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
+
+<span class="n">prefs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;J&#39;</span><span class="p">:[</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;O&#39;</span><span class="p">:[</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;L&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;M&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;K&#39;</span><span class="p">:[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">]}</span>
+
+<span class="n">refus</span> <span class="o">=</span> <span class="p">{</span><span class="n">h</span><span class="p">:[]</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">}</span>
+
+<span class="n">couple</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="p">:</span><span class="kc">None</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">hommes</span> <span class="o">+</span> <span class="n">femmes</span><span class="p">}</span>
+
+<span class="n">hommes_maries</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">hommes_maries</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">hommes</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;--------------------&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Affectation de&#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;déjà en couple&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">prefs</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span>
+</span>                <span class="k">if</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;propose à&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">refus</span><span class="p">[</span><span class="n">h</span><span class="p">]:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;a déjà refusé, stop&#39;</span><span class="p">)</span>
+
+                <span class="k">elif</span> <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;est libre, go&#39;</span><span class="p">)</span>
+<span class="hll">                    <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span>
+</span><span class="hll">                    <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+</span><span class="hll">                    <span class="n">hommes_maries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>          
+</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;est prise, étude...&#39;</span><span class="p">)</span>
+                    <span class="n">h_actuel</span> <span class="o">=</span> <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+                    <span class="n">liste_prefs</span> <span class="o">=</span> <span class="n">prefs</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">liste_prefs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">liste_prefs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">h_actuel</span><span class="p">):</span>
+
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est mieux classé que&quot;</span><span class="p">,</span> <span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;dans les prefs de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;est viré&quot;</span><span class="p">)</span>
+                        <span class="n">hommes_maries</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">h_actuel</span><span class="p">)</span>
+<span class="hll">                        <span class="n">couple</span><span class="p">[</span><span class="n">h_actuel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span class="hll">                        <span class="n">refus</span><span class="p">[</span><span class="n">h_actuel</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est le nouveau mari de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+                        <span class="n">hommes_maries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+                        <span class="n">couple</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span>
+                        <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s2">&quot;est moins bien classé que&quot;</span><span class="p">,</span> <span class="n">h_actuel</span><span class="p">,</span> <span class="s2">&quot;dans les prefs de&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="s2">&quot;il reste celibataire&quot;</span><span class="p">)</span>
+<span class="hll">                        <span class="n">refus</span><span class="p">[</span><span class="n">h</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span>                        <span class="k">break</span>                
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;--------------------&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tout le monde est marié, fin de l&#39;algo&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">hommes</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">couple</span><span class="p">[</span><span class="n">h</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="image" class="center" src="../data/ex_python_sol.png" /></p>
+</details>
+</details>
+<h2 id="4-qualite-de-la-solution-proposee-par-lalgorithme-de-gale-shapley">4. Qualité de la solution proposée par l'algorithme de Gale-Shapley<a class="headerlink" href="#4-qualite-de-la-solution-proposee-par-lalgorithme-de-gale-shapley" title="Permanent link">⚓︎</a></h2>
+<p>La situation initiale est parfaitement symétrique : les hommes ont établi un classement, les femmes également. </p>
+<p>Mais l'algorithme de Gale-Shapley n'est <strong>pas</strong> symétrique : ce sont les hommes qui proposent, dans l'ordre décroissant de leur choix. 
+La conséquence est importante :</p>
+<div class="admonition note">
+<p class="admonition-title"><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /> Optimalité de la solution trouvée <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b50.svg" title=":star:" /></p>
+<p>L'algorithme de Gale-Shapley donne :</p>
+<ul>
+<li>pour les hommes : la <strong>meilleure solution possible</strong> parmi tous les mariages stables.</li>
+<li>pour les femmes : la <strong>pire solution possible</strong> parmi tous les mariages stables.</li>
+</ul>
+<p>Le choix de «qui va faire ses propositions» parmi les deux groupes est donc crucial avant de lancer l'algorithme, car le groupe qui propose est plus avantagé dans le résultat final.</p>
+</div>
+<p>Nous allons l'illustrer à partir une situation initiale identique, et les deux configurations que donne l'algorithme suivant si ce sont les hommes qui proposent (exemple 1) ou bien les femmes (exemple 2)</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Exemple 1 : si les hommes proposent</strong></p>
+<p><img alt="image" class="center" src="../data/match1.png" /></p>
+<p>Analyse de la solution :</p>
+<ul>
+<li>Les hommes ont tous leur premier choix.</li>
+<li>Les femmes ont respectivement leur choix n°3, 3, 2 et 2.</li>
+</ul>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Exemple 2 : si les femmes proposent</strong></p>
+<p><img alt="image" class="center" src="../data/match2.png" /></p>
+<p>Analyse de la solution :</p>
+<ul>
+<li>Les hommes ont respectivement leur choix n°4, 4, 2 et 2.</li>
+<li>Les femmes ont respectivement leur choix n°1, 2, 1 et 1.</li>
+</ul>
+<h3 id="5-le-lien-avec-parcoursup">5. Le lien avec Parcoursup<a class="headerlink" href="#5-le-lien-avec-parcoursup" title="Permanent link">⚓︎</a></h3>
+<p>L'algorithme de Parcoursup est basé sur l'algorithme de Gale-Shapley. Mais il faut apporter quelques précisions importantes.</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Rappel : l'algorithme de Parcoursup n'est que l'algorithme global</strong></p>
+<p>Il récupère les classements effectués en interne par tous les établissements de l'enseignement supérieur. </p>
+<p>L'algorithme global de Parcoursup est public (vous pouvez le trouver <a class="" href="https://gitlab.mim-libre.fr/parcoursup/algorithmes-de-parcoursup" target="_blank">ici</a>). Les algorithmes de classement internes à chaque établissement ne le sont pas forcément.</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Dans Parcoursup, les vœux ne sont pas classés</strong></p>
+<p>Mais alors, comment peut-on appliquer Gale-Shapley, qui repose sur le classement des deux parties ?</p>
+<p>Le classement des vœux de chaque candidat se fait au moment de l'acceptation ou du refus des vœux acceptés. À chaque tour de Parcoursup, le candidat donne une indication sur ses préférences, et l'algorithme converge donc vers sa solution définitive.</p>
+<p>Si on obligeait les candidats à classer leur vœux, on serait dans le cas d'un Gale-Shapley «pur» : les résultats serait immédiats. C'était le cas avec l'algorithme qui précédait Parcoursup, l'algorithme APB.</p>
+<p>De plus, l'algorithme de Parcoursup doit obéir à des contraintes supplémentaires qui ne figurent pas dans Gale-Shapley:</p>
+<ul>
+<li>Certaines formations se doivent de proposer à un taux minimum de boursiers (fixé par les Rectorat). Les dossiers des boursiers sont donc éventuellement remontés artificiellement sur la liste d'appel pour parvenir au taux minimum.</li>
+<li>Certaines formations se doivent de proposer à un taux maximum d'élèves hors-académie (fixé les Rectorat). Là encore, la liste d'appel initiale est modifiée pour respecter ce taux maximum.</li>
+</ul>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Dans Parcoursup, les établissements jouent le rôle des hommes, les candidats jouent le rôle des femmes</strong></p>
+<p>Ce sont les établissements qui proposent (en appelant le 1er de leur liste, puis le 2ème, ...).<br />
+La conséquence est importante : la solution donnée par l'algorithme est donc <strong>optimale</strong> pour les établissements et non pour les candidats.</p>
+<p>Que se passerait-il si on inversait, afin de rendre la solution optimale pour les candidats ?</p>
+<p>Il faut se souvenir des situations rencontrées plus haut, lorsqu'on a apparié des hommes (qui proposaient) à des femmes : il arrivait que des couples établis soient cassés lorsqu'un homme mieux classé se proposait à une femme pourtant déjà mariée.</p>
+<p>Comme Parcoursup fonctionne sur plusieurs mois (à cause de la non-hiérachisation des vœux), cela reviendrait à ce qu'un candidat ait une réponse positive d'un établissement, mais que cette réponse soit annulée quelques jours plus tard parce qu'un meilleur candidat aura fait une proposition à cet établissement... Ceci est difficilement envisageable d'un point de vue psychologique.</p>
+<p>Dans le cas de l'affectation des étudiants à l'issue de la première année de PASS, les vœux sont hiérarchisés et Gale-Shapley fonctionne donc de manière immédiate : ce sont donc les étudiants qui proposent, et l'algorithme aboutit donc à une solution optimale pour les étudiants. (<a class="" href="https://fr.wikipedia.org/wiki/Algorithme_d%27affectation_de_candidats_apr%C3%A8s_concours_multiples" target="_blank">source</a>)</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Finalement, pourquoi les vœux Parcoursup des candidats ne sont-ils pas hiérarchisés ?</strong></p>
+<ul>
+<li>
+<p>Les avantages :</p>
+<ul>
+<li>On pourrait placer les élèves en situation de «proposeurs» dans l'algorithme de Gale-Shapley et donc leur garantir une solution optimale.</li>
+<li>Les résultats seraient immédiats et génèreraient donc moins de stress pour les candidats.</li>
+<li>On pourrait faire des statistiques sur la satisfaction des lycéens. (avantage côté citoyens)</li>
+</ul>
+</li>
+<li>
+<p>Les inconvénients :</p>
+<ul>
+<li>Les lycéens devraient faire leurs choix définitifs très tôt dans l'année en hiérarchisant leurs vœux.</li>
+<li>On pourrait faire des statistiques sur la satisfaction des lycéens. (inconvénient côté politique...)</li>
+</ul>
+</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">bibliographie</p>
+<ul>
+<li><a class="" href="https://www.youtube.com/watch?v=dO1pLi2Dedw" target="_blank">Vidéo de David Louapre (Science étonnante)</a></li>
+<li><a class="" href="https://scienceetonnante.com/2020/01/09/parcoursup/" target="_blank">Note de blog au sujet de cette vidéo</a></li>
+<li><a class="" href="https://interstices.info/dapb-a-parcoursup-quelles-methodes-daffectation-post-bac/" target="_blank">Article d'Interstices</a></li>
+<li><a class="" href="https://fr.wikipedia.org/wiki/Algorithme_de_Gale_et_Shapley" target="_blank">Wikipedia</a></li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 novembre 2023</span>
       
     
   </small>
