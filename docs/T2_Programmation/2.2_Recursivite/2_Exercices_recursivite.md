@@ -412,7 +412,13 @@
     Exercice 1 du sujet [Centres Étrangers J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf){. target="_blank"}
 
     ??? tip "correction Q1.a."
-        ```f(5)``` affichera 5 fois "Partez !"
+        ```f(5)``` affichera :
+        ```5
+        4
+        3
+        2
+        1
+        Partez!``
 
     ??? tip "Correction Q1.b."
         On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.
