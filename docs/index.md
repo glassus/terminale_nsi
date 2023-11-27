@@ -1,13 +1,17 @@
 
 
 !!! abstract "Actualités"
-
+    -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
     - :new: Deux sujets zéro viennent d'être publiés :
         - [sujet 0-A](T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
         - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
+
+{#
 !!! question "Code Puzzle du jour"
     :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
+#}
+
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
