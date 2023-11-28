@@ -5,7 +5,7 @@
     Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 1.\" 
         C'est un arbre binaire car chaque nœud possède au maximum deux fils.
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.a\" 
         ```V``` est un dictionnaire. 
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.b\" 
         ```python
@@ -34,7 +34,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.c\" 
         ```python linenums='1'
@@ -50,7 +50,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.d\" 
         ```python linenums='1'
@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 3.\" 
         Cet algorithme calcule le nombre total de nœuds de l'arbre, donc sa taille de l'arbre.
@@ -77,7 +77,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.a\" 
         Le parcours est ```A-B-C-E-D-F-G-I-H-J```         
@@ -86,7 +86,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.b\" 
         C'est un parcours préfixe.           
