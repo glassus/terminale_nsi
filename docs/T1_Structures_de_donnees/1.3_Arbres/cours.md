@@ -665,7 +665,7 @@ a.right.right.right = Arbre(3)
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
 !!! note "Hauteur d'un arbre :heart:"
-{#
+
     ```python
     def hauteur(arbre):
         if arbre is None:
@@ -673,7 +673,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
         else:
             return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
     ```
-#}
+
 
 
 ```python
