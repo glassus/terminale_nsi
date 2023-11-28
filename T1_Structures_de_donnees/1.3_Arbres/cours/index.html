@@ -4207,6 +4207,12 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <p>Rappel : la taille d'un arbre est le nombre de ses nœuds.</p>
 <div class="admonition note">
 <p class="admonition-title">Taille d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_2.png" /></p>
@@ -4472,7 +4478,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">27 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 novembre 2023</span>
       
     
   </small>
