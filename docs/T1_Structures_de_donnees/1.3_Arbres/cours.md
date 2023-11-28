@@ -629,7 +629,7 @@ a.right.right.right = Arbre(3)
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
 !!! note "Taille d'un arbre :heart:"
-{#
+
     ```python
     def taille(arbre):
         if arbre is None:
@@ -637,7 +637,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
         else:
             return 1 + taille(arbre.left) + taille(arbre.right)
     ```
-#}
+
 
 
 Exemple avec l'arbre 
