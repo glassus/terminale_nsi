@@ -4241,6 +4241,12 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <p>Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.</p>
 <div class="admonition note">
 <p class="admonition-title">Hauteur d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+</code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">4</span>
