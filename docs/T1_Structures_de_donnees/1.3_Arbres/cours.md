@@ -686,7 +686,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
 
 !!! note "Nombre de feuilles d'un arbre :heart:"
-{#
+
     ```python
     def nb_feuilles(arbre):
         if arbre is None:
@@ -695,7 +695,7 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
             return 1
         return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
     ```
-#}
+
 
 ```python
 >>> nb_feuilles(a)
