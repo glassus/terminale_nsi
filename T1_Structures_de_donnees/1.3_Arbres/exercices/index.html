@@ -4051,9 +4051,22 @@ l'arbre :</p>
 <p><strong>Q3.a.</strong> Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.</p>
 <p><strong>Q3.b.</strong> Choisir le type de parcours d'arbres binaires de recherche réalisé parmi les
 propositions suivantes : Préfixe, Suffixe ou Infixe.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>On reconnait un parcours préfixe.        </p>
+</details>
 <p><strong>Q4.</strong> En vous inspirant de l’algorithme précédent, écrire un algorithme Parcours2
 permettant de parcourir et d'afficher les valeurs de l'arbre A dans l'ordre
 croissant.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Parcours2</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># A est un arbre binaire de recherche</span>
+    <span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_gauche</span><span class="p">)</span>
+    <span class="n">Afficher</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+    <span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 <h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf" target="blank">Centres Etrangers J2 - 2023</a></p>
