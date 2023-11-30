@@ -4407,16 +4407,6 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-</code></pre></div>
 </div>
 <p><strong>Exemple</strong> </p>
 <p>L'arbre <code>a</code> contient la valeur 8, mais l'arbre <code>b</code> ne la contient pas :</p>
@@ -4491,7 +4481,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 novembre 2023</span>
       
     
   </small>
