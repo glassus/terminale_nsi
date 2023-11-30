@@ -745,6 +745,7 @@
 
 Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
 
+{#
 ??? tip "Correction Q1.a."
     ```'Bonjour Alan !'```
 
@@ -770,7 +771,7 @@ Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/term
             return 1 + max(hauteur(un_abr.sous_arbre_gauche, hauteur(un_abr.sous_arbre_droit)
     ```
 
-
+#}
 
 Fichier des mots français : [gutemberg.txt](./data/gutenberg.txt)
     
