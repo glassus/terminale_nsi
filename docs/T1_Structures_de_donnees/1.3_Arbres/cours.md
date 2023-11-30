@@ -708,17 +708,16 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
 
 !!! note "Recherche d'une valeur dans un arbre :heart:"
-    {#
+    
     ```python
     def recherche(arbre, valeur):
         if arbre is None:
             return False
         if arbre.data ==  valeur:
             return True
-        else :
-            return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
+        return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
     ```
-    #}
+    
 
 
 ```python
