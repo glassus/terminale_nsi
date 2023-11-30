@@ -730,9 +730,9 @@
 
         ```python
         Parcours2(A)  # A est un arbre binaire de recherche
-            Parcours(A.fils_gauche)
+            Parcours2(A.fils_gauche)
             Afficher(A.valeur)
-            Parcours(A.fils_droit)
+            Parcours2(A.fils_droit)
         ```   
     """
     )
