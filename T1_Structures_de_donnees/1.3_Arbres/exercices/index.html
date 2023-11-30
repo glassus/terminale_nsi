@@ -4070,42 +4070,6 @@ croissant.</p>
 </div>
 <h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf" target="blank">Centres Etrangers J2 - 2023</a></p>
-<details class="tip">
-<summary>Correction Q1.a.</summary>
-<p><code>'Bonjour Alan !'</code></p>
-</details>
-<details class="tip">
-<summary>Correction Q1.b.</summary>
-<p>Ce sont des booléens. <code>x</code> vaut <code>False</code>, <code>y</code> vaut <code>True</code>.    </p>
-</details>
-<details class="tip">
-<summary>Correction Q1.c.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
-    <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">une_chaine</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">une_lettre</span><span class="p">:</span>
-            <span class="n">nb</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="tip">
-<summary>Correction Q3.b..</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p>Fichier des mots français : <a href="../data/gutenberg.txt">gutemberg.txt</a></p>
 
   <hr>
