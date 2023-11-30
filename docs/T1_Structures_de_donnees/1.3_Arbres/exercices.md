@@ -709,7 +709,7 @@
     propositions suivantes : Préfixe, Suffixe ou Infixe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On reconnait un parcours préfixe.        
@@ -723,7 +723,7 @@
     croissant.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:
