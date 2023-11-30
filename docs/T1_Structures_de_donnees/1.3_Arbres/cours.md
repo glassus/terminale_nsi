@@ -868,6 +868,7 @@ Un arbre binaire de taille $n$ contient $n$ clés (pas forcément différentes).
 Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.
 
 !!! note "Recherche d'une clé dans un ABR :heart:"
+    {#
     ```python
     def contient_valeur(arbre, valeur):
         if arbre is None :
@@ -880,6 +881,7 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
             return contient_valeur(arbre.right, valeur)
 
     ```
+    #}
 
 **Exemple** 
 

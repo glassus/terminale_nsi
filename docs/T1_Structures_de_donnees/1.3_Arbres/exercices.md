@@ -50,7 +50,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 2.d\" 
         ```python linenums='1'
@@ -67,17 +67,17 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 3.\" 
-        Cet algorithme calcule le nombre total de nœuds de l'arbre, donc sa taille de l'arbre.
+        Cet algorithme calcule le nombre total de nœuds de l'arbre, donc la taille de l'arbre.
         C'est un algorithme récursif qui va renvoyer, si on n'est pas positionné sur un arbre vide, la valeur 1 (correspond au nœud racine sur lequel on est positionné), plus la taille des deux sous-arbres gauche et droits.         
     """
     )
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 4.a\" 
         Le parcours est ```A-B-C-E-D-F-G-I-H-J```         
@@ -86,7 +86,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 4.b\" 
         C'est un parcours préfixe.           
@@ -649,20 +649,38 @@
     Préciser sous quel nœud la valeur 25 sera insérée et si elle est insérée en fils
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
-    ??? tip "corrigé" 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ![image](data/ex6_1.png){: .center width=50%}
         
         25 étant plus petit que 26, on part dans son sous-arbre gauche.  
         25 étant plus grand que 3, on part dans son sous-arbre droit.  
         25 étant plus grand que 15, on part dans son sous-arbre droit.  
         25 étant plus grand que 19, on insère 25 en tant que fils droit de 19. 
+    
+    """
+    )
+    }}
+
+
 
 
     **Q2.** Préciser toutes les valeurs entières que l’on peut stocker dans le nœud fils
     gauche du nœud04 (vide pour l'instant), en respectant les règles sur les arbres
     binaires de recherche.
-    ??? tip "corrigé" 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
+    """
+    )
+    }}
+
+
 
     **Q3.** Voici un algorithme récursif permettant de parcourir et d'afficher les valeurs de
     l'arbre :
@@ -675,20 +693,39 @@
     ```
 
     **Q3.a.** Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.
-    ??? tip "corrigé" 
-        Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37        
+    """
+    )
+    }}
+
 
 
 
     **Q3.b.** Choisir le type de parcours d'arbres binaires de recherche réalisé parmi les
     propositions suivantes : Préfixe, Suffixe ou Infixe.
-    ??? tip "corrigé" 
-        On reconnait un parcours préfixe.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        On reconnait un parcours préfixe.        
+    """
+    )
+    }}
+
 
     **Q4.** En vous inspirant de l’algorithme précédent, écrire un algorithme Parcours2
     permettant de parcourir et d'afficher les valeurs de l'arbre A dans l'ordre
     croissant.
-    ??? tip "corrigé" 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:
 
         ```python
@@ -696,7 +733,13 @@
             Parcours(A.fils_gauche)
             Afficher(A.valeur)
             Parcours(A.fils_droit)
-        ```
+        ```   
+    """
+    )
+    }}
+
+
+
 
 ## Exercice
 
