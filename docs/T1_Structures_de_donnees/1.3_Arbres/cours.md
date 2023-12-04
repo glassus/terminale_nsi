@@ -889,9 +889,9 @@ L'arbre ```a``` contient la valeur 8, mais l'arbre ```b``` ne la contient pas :
 
 
 ```python
->>> contient_valeur(a,8)
+>>> contient_valeur(a, 8)
 True
->>> contient_valeur(b,8)
+>>> contient_valeur(b, 8)
 False
 ```
 
@@ -929,18 +929,20 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
     - on renvoie le nouvel arbre ainsi créé.
 
 !!! note "Insertion dans un ABR :heart:"
+    {#
     ```python
-    def insertion(arbre, valeur):
+    def insertion(arbre, cle):
         if arbre is None :
-            return Arbre(valeur)
+            return Arbre(cle)
         else :
-            v = arbre.data
-            if valeur <= v :
-                arbre.left = insertion(arbre.left, valeur)
+            val = arbre.data
+            if cle <= val :
+                arbre.left = insertion(arbre.left, cle)
             else:
-                arbre.right = insertion(arbre.right, valeur)
+                arbre.right = insertion(arbre.right, cle)
             return arbre
     ```
+    #}
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 
