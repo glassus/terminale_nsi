@@ -4417,9 +4417,9 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </div>
 <p><strong>Exemple</strong> </p>
 <p>L'arbre <code>a</code> contient la valeur 8, mais l'arbre <code>b</code> ne la contient pas :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div>
 <h3 id="53-cout-de-la-recherche-dans-un-abr-equilibre">5.3  Coût de la recherche dans un ABR équilibré<a class="headerlink" href="#53-cout-de-la-recherche-dans-un-abr-equilibre" title="Permanent link">⚓︎</a></h3>
@@ -4447,17 +4447,6 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Insertion dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;=</span> <span class="n">v</span> <span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">arbre</span>
-</code></pre></div>
 </div>
 <p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
 <p><img alt="" class="center" src="../data/insertionABR.png" /></p>
@@ -4488,7 +4477,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 décembre 2023</span>
       
     
   </small>
