@@ -963,7 +963,7 @@ a.right.right = Arbre(8)
 ```python
 >>> infixe(a)
 0-2-3-5-6-7-8-
->>> insertion(a,4)
+>>> a = insertion(a,4)
 <__main__.Arbre at 0x7f46f0507e80>
 >>> infixe(a)
 0-2-3-4-5-6-7-8-
