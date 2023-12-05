@@ -924,7 +924,7 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
 
 - Si l'arbre est vide, on renvoie un nouvel objet Arbre contenant la clé.
 - Sinon, on compare la clé à la valeur du nœud sur lequel on est positionné :
-    - Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injecté, par un appel récursif.
+    - Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injectée, par un appel récursif.
     - Si la clé est supérieure, on fait la même chose avec l'arbre de droite.
     - on renvoie le nouvel arbre ainsi créé.
 
