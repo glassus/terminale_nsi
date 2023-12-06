@@ -969,6 +969,37 @@ correction(True,
 )
 }}
 
+{{
+correction(True,
+"""
+??? success \"Correction Q2.a\" 
+    ![image](data/23-NSIJ2G11_1.png){: .center}
+    
+"""
+)
+}}
+
+{{
+correction(True,
+"""
+??? success \"Correction Q2.b\" 
+    ![image](data/23-NSIJ2G11_2.png){: .center}
+"""
+)
+}}
+
+
+{{
+correction(True,
+"""
+??? success \"Correction Q3.a\" 
+    L'exécution de ```mystere(abr_mots_francais)``` va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste ```liste_mots_francais```, et donc dans l'arbre ``` abr_mots_francais```. 
+"""
+)
+}}
+
+
+
 
 {{
 correction(True,
@@ -985,6 +1016,54 @@ correction(True,
 )
 }}
 
-Fichier des mots français : [gutemberg.txt](./data/gutenberg.txt)
+
+{{
+correction(True,
+"""
+??? success \"Correction 4.a.\" 
+    ```python linenums='1'
+    def chercher_mots(liste_mots, longueur, lettre, position):
+        res = []
+        for i in range(len(liste_mots)):
+            if len(liste_mots[i]) == longueur and liste_mots[i][position] == lettre:
+                res.append(liste_mots[i])
+        return res
+    ```
+"""
+)
+}}
+
+
+{{
+correction(True,
+"""
+??? success \"Correction 4.b.\" 
+    Cette commande va **d'abord** chercher dans la liste tous les mots de 3 lettres qui comportent un ```x``` en dernière position (indice 2).
+
+    Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un ```a``` en deuxième position (indice 1).
+
+    Donc on cherche les mots de 3 lettres finissant par ```ax```. 
+"""
+)
+}}
+
+
+{{
+correction(True,
+"""
+??? success \"Correction 4.c.\" 
+    ```python
+    chercher_mots(chercher_mots(chercher_mots(liste_mots_francais,5,'r',4),5,'e',3),5,'t',2)
+    ```
+"""
+)
+}}
+
+- Fichier des mots français : [gutenberg.txt](./data/gutenberg.txt)
+- Instruction pour créer une liste à partir du fichier :
+```python
+liste_mots_francais = open('gutenberg.txt').read().splitlines()
+```
+
     
      
