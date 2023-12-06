@@ -3879,6 +3879,18 @@ croissant.</p>
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="success">
+<summary>Correction Q2.a</summary>
+<p><img alt="image" class="center" src="../data/23-NSIJ2G11_1.png" /></p>
+</details>
+<details class="success">
+<summary>Correction Q2.b</summary>
+<p><img alt="image" class="center" src="../data/23-NSIJ2G11_2.png" /></p>
+</details>
+<details class="success">
+<summary>Correction Q3.a</summary>
+<p>L'exécution de <code>mystere(abr_mots_francais)</code> va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste <code>liste_mots_francais</code>, et donc dans l'arbre <code>abr_mots_francais</code>. </p>
+</details>
+<details class="success">
 <summary>Correction Q3.b.</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -3891,14 +3903,45 @@ croissant.</p>
         <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<p>Fichier des mots français : <a href="../data/gutenberg.txt">gutemberg.txt</a></p>
+<details class="success">
+<summary>Correction 4.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">longueur</span> <span class="ow">and</span> <span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">lettre</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction 4.b.</summary>
+<p>Cette commande va <strong>d'abord</strong> chercher dans la liste tous les mots de 3 lettres qui comportent un <code>x</code> en dernière position (indice 2).</p>
+<p>Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un <code>a</code> en deuxième position (indice 1).</p>
+<p>Donc on cherche les mots de 3 lettres finissant par <code>ax</code>. </p>
+</details>
+<details class="success">
+<summary>Correction 4.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<ul>
+<li>Fichier des mots français : <a href="../data/gutenberg.txt">gutenberg.txt</a></li>
+<li>Instruction pour créer une liste à partir du fichier :
+<div class="highlight"><pre><span></span><code><span class="n">liste_mots_francais</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gutenberg.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</code></pre></div></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 décembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 décembre 2023</span>
       
     
   </small>
