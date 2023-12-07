@@ -3556,9 +3556,21 @@ parcours suffixe sur le sous-arbre droit, avant d’afficher le nœud.</p>
 </details>
 <p><strong>b.</strong> Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
 le nombre <code>val</code> est égal à 16.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>3.b.</strong> <br />
+<div class="highlight"><pre><span></span><code><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insere</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
+</code></pre></div>
+(d'autres solutions sont possibles)        </p>
+</details>
 <p><strong>c.</strong> On considère l’arbre tel qu’il est présenté sur la figure 1. Déterminer l’ordre d’exécution des
 blocs (repérés de 1 à 3) suite à l’application de la méthode <code>insere(19)</code> au nœud racine
 de cet arbre.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>3.c.</strong> Bloc 3 - Bloc 2 - Bloc 1  </p>
+</details>
 <p><strong>4.</strong> Écrire une méthode <code>recherche(self, v)</code> qui prend en argument un entier <code>v</code> et renvoie la
 valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>False</code> sinon.</p>
 </div>
