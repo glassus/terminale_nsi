@@ -194,7 +194,7 @@
 
     **1.a** Donner le nombre de feuilles de cet arbre et préciser leur valeur (étiquette).  
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 32. 
@@ -204,7 +204,7 @@
 
     **1.b** Donner le sous arbre-gauche du nœud 23.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.b.** Le sous-arbre gauche du nœud 23 est 19-21. 
@@ -214,7 +214,7 @@
 
     **1.c** Donner la hauteur et la taille de l’arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.c.** La hauteur de l'arbre est 4. Sa taille est 9.
@@ -223,7 +223,7 @@
     }}
     **1.d** Donner les valeurs entières possibles de `val` pour cet arbre binaire de recherche.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.
@@ -935,7 +935,7 @@ Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://glassus.github.io/term
 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q1.a.\" 
     ```'Bonjour Alan !'```    
@@ -945,7 +945,7 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q1.b.\" 
     Ce sont des booléens. ```x``` vaut ```False```, ```y``` vaut ```True```.        
@@ -954,7 +954,7 @@ correction(True,
 }}
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q1.c.\" 
     ```python linenums='1'
@@ -970,7 +970,7 @@ correction(True,
 }}
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q2.a\" 
     ![image](data/23-NSIJ2G11_1.png){: .center}
@@ -980,7 +980,7 @@ correction(True,
 }}
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q2.b\" 
     ![image](data/23-NSIJ2G11_2.png){: .center}
@@ -990,7 +990,7 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q3.a\" 
     L'exécution de ```mystere(abr_mots_francais)``` va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste ```liste_mots_francais```, et donc dans l'arbre ``` abr_mots_francais```. 
@@ -1002,7 +1002,7 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction Q3.b.\" 
     ```python linenums='1'
@@ -1018,9 +1018,9 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
-??? success \"Correction 4.a.\" 
+??? success \"Correction Q4.a.\" 
     ```python linenums='1'
     def chercher_mots(liste_mots, longueur, lettre, position):
         res = []
@@ -1035,9 +1035,9 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
-??? success \"Correction 4.b.\" 
+??? success \"Correction Q4.b.\" 
     Cette commande va **d'abord** chercher dans la liste tous les mots de 3 lettres qui comportent un ```x``` en dernière position (indice 2).
 
     Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un ```a``` en deuxième position (indice 1).
@@ -1049,9 +1049,9 @@ correction(True,
 
 
 {{
-correction(True,
+correction(False,
 """
-??? success \"Correction 4.c.\" 
+??? success \"Correction Q4.c.\" 
     ```python
     chercher_mots(chercher_mots(chercher_mots(liste_mots_francais,5,'r',4),5,'e',3),5,'t',2)
     ```
