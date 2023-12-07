@@ -3573,6 +3573,100 @@ de cet arbre.</p>
 </details>
 <p><strong>4.</strong> Écrire une méthode <code>recherche(self, v)</code> qui prend en argument un entier <code>v</code> et renvoie la
 valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>False</code> sinon.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>4.</strong>  </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">est_insere</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+                <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">insere_tout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="n">arbre</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span> <span class="o">==</span> <span class="n">v</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
+                <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">ag</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">ad</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">racine</span><span class="o">.</span><span class="n">insere_tout</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">racine</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="mi">149</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">racine</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -3856,6 +3950,80 @@ croissant.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf" target="blank">Centres Etrangers J2 - 2023</a></p>
+<details class="success">
+<summary>Correction Q1.a.</summary>
+<p><code>'Bonjour Alan !'</code>    </p>
+</details>
+<details class="success">
+<summary>Correction Q1.b.</summary>
+<p>Ce sont des booléens. <code>x</code> vaut <code>False</code>, <code>y</code> vaut <code>True</code>.        </p>
+</details>
+<details class="success">
+<summary>Correction Q1.c.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
+    <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">une_chaine</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">une_lettre</span><span class="p">:</span>
+            <span class="n">nb</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">nb</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q2.a</summary>
+<p><img alt="image" class="center" src="../data/23-NSIJ2G11_1.png" /></p>
+</details>
+<details class="success">
+<summary>Correction Q2.b</summary>
+<p><img alt="image" class="center" src="../data/23-NSIJ2G11_2.png" /></p>
+</details>
+<details class="success">
+<summary>Correction Q3.a</summary>
+<p>L'exécution de <code>mystere(abr_mots_francais)</code> va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste <code>liste_mots_francais</code>, et donc dans l'arbre <code>abr_mots_francais</code>. </p>
+</details>
+<details class="success">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">longueur</span> <span class="ow">and</span> <span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">lettre</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.b.</summary>
+<p>Cette commande va <strong>d'abord</strong> chercher dans la liste tous les mots de 3 lettres qui comportent un <code>x</code> en dernière position (indice 2).</p>
+<p>Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un <code>a</code> en deuxième position (indice 1).</p>
+<p>Donc on cherche les mots de 3 lettres finissant par <code>ax</code>. </p>
+</details>
+<details class="success">
+<summary>Correction Q4.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <ul>
 <li>Fichier des mots français : <a href="../data/gutenberg.txt">gutenberg.txt</a></li>
 <li>Instruction pour créer une liste à partir du fichier :
