@@ -3549,9 +3549,25 @@ même clé. De plus, un arbre binaire de recherche limité à un nœud a une hau
 On considère l’arbre binaire de recherche représenté ci-dessous (figure 1), où <code>val</code> représente un entier :</p>
 <p><img alt="image" class="center" src="../data/ex2a.png" /></p>
 <p><strong>1.a</strong> Donner le nombre de feuilles de cet arbre et préciser leur valeur (étiquette).  </p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>1.a.</strong> Il y a 4 feuilles, d'étiquette 12, <code>val</code>, 21 et 32. </p>
+</details>
 <p><strong>1.b</strong> Donner le sous arbre-gauche du nœud 23.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>1.b.</strong> Le sous-arbre gauche du nœud 23 est 19-21. </p>
+</details>
 <p><strong>1.c</strong> Donner la hauteur et la taille de l’arbre.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>1.c.</strong> La hauteur de l'arbre est 4. Sa taille est 9.</p>
+</details>
 <p><strong>1.d</strong> Donner les valeurs entières possibles de <code>val</code> pour cet arbre binaire de recherche.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>1.d.</strong> Les valeurs possibles de <code>val</code> sont 16 et 17.</p>
+</details>
 <p>On suppose, pour la suite de cet exercice, que <code>val</code> est égal à 16.</p>
 <p><strong>2.</strong> On rappelle qu’un parcours infixe depuis un nœud consiste, dans l’ordre, à faire un parcours
 infixe sur le sous arbre-gauche, afficher le nœud puis faire un parcours infixe sur le sous-arbre
@@ -3855,80 +3871,6 @@ croissant.</p>
 </div>
 <h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf" target="blank">Centres Etrangers J2 - 2023</a></p>
-<details class="success">
-<summary>Correction Q1.a.</summary>
-<p><code>'Bonjour Alan !'</code>    </p>
-</details>
-<details class="success">
-<summary>Correction Q1.b.</summary>
-<p>Ce sont des booléens. <code>x</code> vaut <code>False</code>, <code>y</code> vaut <code>True</code>.        </p>
-</details>
-<details class="success">
-<summary>Correction Q1.c.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
-    <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">une_chaine</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">une_lettre</span><span class="p">:</span>
-            <span class="n">nb</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q2.a</summary>
-<p><img alt="image" class="center" src="../data/23-NSIJ2G11_1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q2.b</summary>
-<p><img alt="image" class="center" src="../data/23-NSIJ2G11_2.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q3.a</summary>
-<p>L'exécution de <code>mystere(abr_mots_francais)</code> va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste <code>liste_mots_francais</code>, et donc dans l'arbre <code>abr_mots_francais</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q3.b.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction 4.a.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">longueur</span> <span class="ow">and</span> <span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">lettre</span><span class="p">:</span>
-            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">res</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction 4.b.</summary>
-<p>Cette commande va <strong>d'abord</strong> chercher dans la liste tous les mots de 3 lettres qui comportent un <code>x</code> en dernière position (indice 2).</p>
-<p>Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un <code>a</code> en deuxième position (indice 1).</p>
-<p>Donc on cherche les mots de 3 lettres finissant par <code>ax</code>. </p>
-</details>
-<details class="success">
-<summary>Correction 4.c.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-</details>
 <ul>
 <li>Fichier des mots français : <a href="../data/gutenberg.txt">gutenberg.txt</a></li>
 <li>Instruction pour créer une liste à partir du fichier :
@@ -3941,7 +3883,7 @@ croissant.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">6 décembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 décembre 2023</span>
       
     
   </small>
