@@ -279,7 +279,7 @@
     **b.** Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
     le nombre `val` est égal à 16.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.b.**   
@@ -295,7 +295,7 @@
     blocs (repérés de 1 à 3) suite à l’application de la méthode `insere(19)` au nœud racine
     de cet arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.c.** Bloc 3 - Bloc 2 - Bloc 1  
