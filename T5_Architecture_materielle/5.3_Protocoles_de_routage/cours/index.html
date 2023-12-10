@@ -3486,9 +3486,9 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <p>Les tables de routage sont des informations stockées dans le routeur permettant d'aiguiller intelligemment les données qui lui sont transmises.</p>
 <p>Dans le réseau ci-dessus, si l'ordinateur d'adresse <code>192.168.0.5</code> veut interroger le serveur <code>10.7.3.8</code> :</p>
 <ul>
-<li>l'adresse <code>10.7.3.8</code> n'étant pas dans le sous-réseau F (d'adresse <code>192.168.0.0 / 24</code>), la requête est confiée au routeur via son adresse passerelle dans le réseau F (ici <code>192.168.0.254</code>).</li>
-<li>le routeur observe si l'IP recherchée appartient à un autre des sous-réseaux auquel il est connecté. Ici, l'IP recherchée <code>10.7.3.8</code> n'appartient ni au sous-réseau A ou E. </li>
-<li>le routeur va donc regarder dans sa table de routage l'adresse passerelle d'un autre routeur vers qui elle doit rediriger les données. Si le sous-réseau C fait partie de sa table de routage, le routeur R1 saura alors que le meilleur chemin est (par exemple) de confier les données au routeur R3.</li>
+<li>l'adresse <code>10.7.3.8</code> n'étant pas dans le sous-réseau F (d'adresse <code>192.168.0.0 / 24</code>), la requête est confiée au routeur R1 via son adresse passerelle dans le réseau F (ici <code>192.168.0.254</code>).</li>
+<li>le routeur R1 observe si l'IP recherchée appartient à un autre des sous-réseaux auquel il est connecté. Ici, l'IP recherchée <code>10.7.3.8</code> n'appartient ni au sous-réseau A, ni au sous-réseau E. </li>
+<li>le routeur R1 va donc regarder dans sa table de routage l'adresse passerelle d'un autre routeur vers qui elle doit rediriger les données. Si le sous-réseau C fait partie de sa table de routage, le routeur R1 saura alors que le meilleur chemin est (par exemple) de confier les données au routeur R3.</li>
 <li>si le sous-réseau C ne fait pas partie de la table de routage, le routeur R1 va alors le rediriger vers une route «par défaut» (que l'on peut assimiler au panneau «toutes directions» sur les panneaux de signalisation).</li>
 </ul>
 <div class="admonition note">
@@ -3505,6 +3505,7 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 </div>
 <p><strong>Exemple: table de routage du routeur R1</strong></p>
 <p><img alt="" class="center" src="../data/reseau_total2.png" width="70%" /></p>
+<p><strong>Table de routage du routeur R1 :</strong></p>
 <table>
 <thead>
 <tr>
@@ -3815,7 +3816,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 décembre 2023</span>
       
     
   </small>
