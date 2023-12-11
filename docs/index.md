@@ -14,14 +14,14 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :books: [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
-    - :gear: [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
-
+    - :books: [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+    - :gear: [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 
 
 
 ### *Thèmes déjà traités*
-
+- [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+- [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
 - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
