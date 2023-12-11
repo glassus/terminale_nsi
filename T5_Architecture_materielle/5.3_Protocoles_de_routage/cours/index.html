@@ -14,7 +14,7 @@
         <link rel="prev" href="../../5.2_Gestion_des_processus/Exercices/">
       
       
-        <link rel="next" href="../../5.4_Cryptographie/cours/">
+        <link rel="next" href="../exercices/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -2266,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Exercices.md" class="md-nav__link">
+      <a href="../exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3578,6 +3578,11 @@ Ensuite, chaque routeur va recevoir périodiquement (toutes les 30 secondes) la 
 </li>
 </ul>
 </div>
+<div class="admonition question">
+<p class="admonition-title">Qu'est-ce que le protocole RIP optimise ? <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le protocole RIP cherche à minimiser <strong>le nombre de sauts</strong>, donc le nombre de routeurs traversés. </p>
+<p>En extrapolant un peu, on peut dire que RIP minimise <strong>la distance parcourue</strong>.</p>
+</div>
 <p><strong>Remarques et inconvénients:</strong> </p>
 <ul>
 <li>
@@ -3687,6 +3692,15 @@ En gris, le chemin RIP. En bleu, l'OSPF.
 <p>Le graphe pondéré est donc :</p>
 <p><img alt="image" class="center" src="../data/ospf2.png" width="60%" /></p>
 <p>Le chemin le plus rapide pour aller de l'ordinateur au serveur est donc R1-R2-R4, et non plus R1-R3 comme l'aurait indiqué le protocole RIP.</p>
+<div class="admonition question">
+<p class="admonition-title">Qu'est-ce que le protocole OSPF optimise ? <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le protocole OSPF cherche à minimiser <strong>le temps de parcours</strong>, en choisissant les lignes les plus rapides.</p>
+</div>
+<p>On peut donc retenir la différence fondamentale :</p>
+<ul>
+<li>RIP cherche le chemin le plus court.</li>
+<li>OSPF cherche le chemin le plus rapide.</li>
+</ul>
 <h3 id="33-trouver-le-plus-court-chemin-dans-un-graphe-pondere">3.3 Trouver le plus court chemin dans un graphe pondéré<a class="headerlink" href="#33-trouver-le-plus-court-chemin-dans-un-graphe-pondere" title="Permanent link">⚓︎</a></h3>
 <p>L'exemple précédent était très simple et de solution intuitive. Dans le cas d'un graphe pondéré complexe, existe-t-il un algorithme de détermination du plus court chemin d'un point à un autre ?</p>
 <p>La réponse est <strong>oui</strong>, depuis la découverte en 1959 par Edsger Dijkstra de l'algorithme qui porte son nom, <strong>l'algorithme de Dijkstra</strong>.</p>
@@ -3816,7 +3830,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 décembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 décembre 2023</span>
       
     
   </small>
