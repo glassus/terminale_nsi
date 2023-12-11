@@ -96,6 +96,13 @@ _voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.co
 
     - si un routeur ne reçoit pas pendant 3 minutes d'information de la part d'un routeur qui lui avait auparavant communiqué sa table de routage, ce routeur est considéré comme en panne, et toutes les routes passant par lui sont affectées de la distance infinie : 16.
 
+
+!!! question "Qu'est-ce que le protocole RIP optimise ? :heart: :heart: :heart:"
+    Le protocole RIP cherche à minimiser **le nombre de sauts**, donc le nombre de routeurs traversés. 
+
+    En extrapolant un peu, on peut dire que RIP minimise **la distance parcourue**.
+
+
 **Remarques et inconvénients:** 
 
 - Le protocole RIP n'admet qu'une distance maximale égale à 15 (ceci explique que 16 soit considéré comme la distance infinie), ce qui le limite aux réseaux de petite taille.
@@ -194,6 +201,17 @@ Le graphe pondéré est donc :
 
 
 Le chemin le plus rapide pour aller de l'ordinateur au serveur est donc R1-R2-R4, et non plus R1-R3 comme l'aurait indiqué le protocole RIP.
+
+
+!!! question "Qu'est-ce que le protocole OSPF optimise ? :heart: :heart: :heart:"
+    Le protocole OSPF cherche à minimiser **le temps de parcours**, en choisissant les lignes les plus rapides.
+
+
+On peut donc retenir la différence fondamentale :
+ 
+- RIP cherche le chemin le plus court.
+- OSPF cherche le chemin le plus rapide.
+
 
 ### 3.3 Trouver le plus court chemin dans un graphe pondéré
 L'exemple précédent était très simple et de solution intuitive. Dans le cas d'un graphe pondéré complexe, existe-t-il un algorithme de détermination du plus court chemin d'un point à un autre ?
