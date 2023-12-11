@@ -7,7 +7,7 @@
     Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         Une adresse IPv4 se code à l'aide de 4 octets.
@@ -19,7 +19,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
@@ -29,7 +29,7 @@
 
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ![image](data/ex5LR2022.png){: .center}
