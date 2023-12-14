@@ -3424,10 +3424,100 @@
 <p><strong>Question 1</strong></p>
 <p>1.1 Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
 sauts. Déterminer le trajet parcouru.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>Q1.1.</strong> Le trajet parcouru de A à G est A-C-F-G  </p>
+</details>
 <p>1.2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>Q1.2.</strong> 
+Table de routage de G :  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Destination</th>
+<th style="text-align: center;">Routeur suivant</th>
+<th style="text-align: center;">Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</details>
 <p><strong>Question 2</strong></p>
 <p>Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en suivant le
 protocole RIP.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Nouvelle table de routage de A :  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Destination</th>
+<th style="text-align: center;">Routeur suivant</th>
+<th style="text-align: center;">Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  3</p>
@@ -3667,7 +3757,7 @@ Recopier sur la copie le schéma ci-dessous : </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 décembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 décembre 2023</span>
       
     
   </small>
