@@ -192,7 +192,7 @@
 
     1.a. En utilisant l’extrait de la table de routage de R1, vers quel routeur R1 envoie-t-il ce paquet : R2 ou R3 ? Justifier.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2. 
@@ -202,7 +202,7 @@
 
     1.b. A l’aide des extraits de tables de routage ci-dessus, nommer les routeurs traversés par ce paquet, lorsqu’il va du réseau L1 au réseau L2.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2. 
