@@ -7,10 +7,10 @@
         - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
 
-{#
+
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
-#}
+    :arrow_right: [https://www.codepuzzle.io/D8HZN](https://www.codepuzzle.io/D8HZN){. target="_blank"}
+
 
 
 !!! note ":star: Thème en cours d'étude :star: "
