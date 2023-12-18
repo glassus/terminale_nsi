@@ -529,7 +529,7 @@
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
 
-        (le câble «Internet» n'existe, les câbles VGA et HDMI servent à relier un ordinateur à un écran).
+        (le câble «Internet» n'existe pas, les câbles VGA et HDMI servent à relier un ordinateur à un écran).
     """
     )
     }}
