@@ -9,7 +9,7 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D8HZN](https://www.codepuzzle.io/D8HZN){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/D9RYC](https://www.codepuzzle.io/D9RYC){. target="_blank"}
 
 
 
