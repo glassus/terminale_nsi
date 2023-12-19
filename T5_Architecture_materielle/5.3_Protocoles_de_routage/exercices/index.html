@@ -3691,6 +3691,23 @@ Recopier sur la copie le schéma ci-dessous : </p>
 <li>côté S3 : <code>199.160.1.1</code></li>
 </ul>
 </details>
+<details class="success">
+<summary>Correction Q3.a.</summary>
+<p>Parcours possibles :  </p>
+<ul>
+<li>S1-R1-R2-S2</li>
+<li>S1-R1-R4-R2-S2</li>
+<li>S1-R1-R4-R3-R2-S2</li>
+</ul>
+</details>
+<details class="success">
+<summary>Correction Q3.b.</summary>
+<p>Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. </p>
+</details>
+<details class="success">
+<summary>Correction Q3.c</summary>
+<p>Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.</p>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  7</p>
