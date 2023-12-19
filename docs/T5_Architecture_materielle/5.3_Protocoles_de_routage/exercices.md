@@ -456,7 +456,7 @@
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```195.168.1.0/24```
@@ -465,7 +465,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         ```195.168.1.17/24```
@@ -473,7 +473,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c\" 
         Le réseau T2 a pour adresse ```172.162.1.0/24```. Sur ce réseau, 254 adresses sont initialement disponibles (de ```172.162.1.1```  à ```172.162.1.254```, puisque l'adresse ```172.162.1.255``` est réservée pour le *broadcast* sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.
@@ -482,7 +482,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         - côté R4 : ```200.158.4.1```
