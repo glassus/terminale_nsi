@@ -3671,6 +3671,26 @@ Recopier sur la copie le schéma ci-dessous : </p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  6</p>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf" target="_blank">Nouvelle-Calédonie J2 2022</a>.</p>
+<details class="success">
+<summary>Correction Q1.a.</summary>
+<p><code>195.168.1.0/24</code></p>
+</details>
+<details class="success">
+<summary>Correction Q1.b.</summary>
+<p><code>195.168.1.17/24</code></p>
+</details>
+<details class="success">
+<summary>Correction Q1.c</summary>
+<p>Le réseau T2 a pour adresse <code>172.162.1.0/24</code>. Sur ce réseau, 254 adresses sont initialement disponibles (de <code>172.162.1.1</code>  à <code>172.162.1.254</code>, puisque l'adresse <code>172.162.1.255</code> est réservée pour le <em>broadcast</em> sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.</p>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<ul>
+<li>côté R4 : <code>200.158.4.1</code></li>
+<li>côté R2 : <code>198.164.3.2</code> (car la <code>198.164.3.1</code> est déjà prise par R2)</li>
+<li>côté S3 : <code>199.160.1.1</code></li>
+</ul>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  7</p>
@@ -3796,7 +3816,7 @@ Recopier sur la copie le schéma ci-dessous : </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 décembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 décembre 2023</span>
       
     
   </small>
