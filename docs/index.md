@@ -9,11 +9,12 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D9RYC](https://www.codepuzzle.io/D9RYC){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - :heart: [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
     - :books: [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - :gear: [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 
