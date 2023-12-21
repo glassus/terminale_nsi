@@ -386,7 +386,7 @@
     ??? success \"Correction\" 
         On veut que le chemin soit le plus court en nombre de sauts, donc il faut que le chemin soit R1-R2-R5-R6.
         ![image](data/ex3_1_corr3.png){: .center width=70%}
-        Dans la table R5, il manque les lignes
+        Dans la table R5, il manque les lignes :
 
         | IP destination | Passerelle | Interface|
         |:--:|:--:|:--:|
