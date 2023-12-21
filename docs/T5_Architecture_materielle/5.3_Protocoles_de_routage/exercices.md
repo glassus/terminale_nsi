@@ -311,7 +311,7 @@
     1/ 
     1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16. 
@@ -320,7 +320,7 @@
     }}
     1.b. Donner la plus petite et la plus grande adresse IP valides pouvant être attribuées à un ordinateur portable ou un serveur sur chacun des réseaux L1 et L2 sachant que l’adresse du réseau et l’adresse de diffusion ne peuvent pas être attribuées à une machine.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
@@ -331,7 +331,7 @@
     1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
     et L2 ? 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)  
