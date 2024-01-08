@@ -3561,12 +3561,12 @@
 </div>
 <h3 id="12-principe-du-chiffrement-symetrique">1.2 Principe du chiffrement symétrique<a class="headerlink" href="#12-principe-du-chiffrement-symetrique" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Chiffrement symétrique <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Chiffrement symétrique <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Dans un chiffrement symétrique, c'est <strong>la même clé</strong> qui va servir au chiffrement et au déchiffrement.</p>
 </div>
 <p><em>Illustration :</em>
 <img alt="image" class="center" src="../data/sym.png" /></p>
-<h4 id="quappelle-t-on-une-cle"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Qu'appelle-t-on une clé ?<a class="headerlink" href="#quappelle-t-on-une-cle" title="Permanent link">⚓︎</a></h4>
+<h4 id="quappelle-t-on-une-cle"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Qu'appelle-t-on une clé ?<a class="headerlink" href="#quappelle-t-on-une-cle" title="Permanent link">⚓︎</a></h4>
 <p>La clé est un renseignement permettant de chiffrer ou déchiffrer un message. Cela peut être :</p>
 <ul>
 <li>un nombre (dans un simple décalage des lettres de l'alphabet, comme <a href="https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage">le chiffre de César</a>)</li>
@@ -3574,13 +3574,13 @@
 <li>une image (imaginez un chiffrement où on effectue un XOR par les pixels d'une image, comme dans <a href="https://github.com/glassus/nsi/blob/master/Premiere/DM/DM1/enonce.md">cette énigme</a>)</li>
 </ul>
 <p>Un chiffrement est dit symétrique lorsque la connaissance de la clé ayant servi au chiffrement permet de déchiffrer le message. Par exemple, Alice chiffre son message en décalant les lettres de 3 rangs vers la droite dans l'alphabet, Bob saura qu'il doit les décaler de 3 rangs vers la gauche pour retrouver le message initial.</p>
-<h4 id="quel-est-lavantage-dun-chiffrement-symetrique"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Quel est l'avantage d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-lavantage-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
+<h4 id="quel-est-lavantage-dun-chiffrement-symetrique"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Quel est l'avantage d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-lavantage-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
 <p>Les chiffrements symétriques sont souvent rapides, consommant peu de ressources et donc adaptés au chiffrement de flux important d'informations.</p>
 <p>Comme nous le verrons, la sécurisation des données transitant par le protocole <code>https</code> est basée sur un chiffrement symétrique.</p>
-<h4 id="quel-est-linconvenient-dun-chiffrement-symetrique"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Quel est l'inconvénient d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-linconvenient-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
+<h4 id="quel-est-linconvenient-dun-chiffrement-symetrique"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Quel est l'inconvénient d'un chiffrement symétrique ?<a class="headerlink" href="#quel-est-linconvenient-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h4>
 <p>La clé ! Si Alice et Bob ont besoin d'utiliser un chiffrement pour se parler, comment peuvent-ils échanger leurs clés  puisque leur canal de transmission n'est pas sûr ?</p>
 <p>Le chiffrement symétrique impose qu'Alice et Bob aient pu se rencontrer physiquement au préalable pour convenir d'une clé secrète, ou bien qu'ils aient réussi à établir une connexion sécurisée pour s'échanger cette clé.</p>
-<h4 id="un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Un chiffrement symétrique est-il un chiffrement de mauvaise qualité ?<a class="headerlink" href="#un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite" title="Permanent link">⚓︎</a></h4>
+<h4 id="un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Un chiffrement symétrique est-il un chiffrement de mauvaise qualité ?<a class="headerlink" href="#un-chiffrement-symetrique-est-il-un-chiffrement-de-mauvaise-qualite" title="Permanent link">⚓︎</a></h4>
 <p>Pas du tout ! S'il est associé naturellement à des chiffrements simples et faibles (comme le décalage de César), un chiffrement symétrique peut être très robuste... voire inviolable.</p>
 <p>C'est le cas du masque jetable. Si le masque avec lequel on effectue le XOR sur le message est aussi long que le message, alors il est <strong>impossible</strong> de retrouver le message initial. Pourquoi ?</p>
 <p>Imaginons qu'Alice veuille transmettre le message clair "LUNDI".
@@ -3593,7 +3593,7 @@ Si Marc a intercepté le message "KHZOK", <em>même s'il sait que la méthode de
 <p>Ce qui lui donne <span class="arithmatex">\(26^5\)</span> possibilités (plus de 11 millions) pour le masque, et par conséquent (propriété de bijectivité du XOR) <span class="arithmatex">\(26^5\)</span> possibilités pour le message «déchiffré»...</p>
 <p>Cela signifie que Marc verra apparaître, dans sa tentative de déchiffrage, les mots "MARDI", "JEUDI", "JOUDI", "STYLO", "FSDJK", "LUNDI", "LUNDA"... 
 Il n'a aucune possibilité de savoir où est le bon message original parmi toutes les propositions (on parle de <em>sécurité sémantique</em>).</p>
-<h4 id="quels-sont-les-chiffrements-symetriques-modernes"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> Quels sont les chiffrements symétriques modernes ?<a class="headerlink" href="#quels-sont-les-chiffrements-symetriques-modernes" title="Permanent link">⚓︎</a></h4>
+<h4 id="quels-sont-les-chiffrements-symetriques-modernes"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Quels sont les chiffrements symétriques modernes ?<a class="headerlink" href="#quels-sont-les-chiffrements-symetriques-modernes" title="Permanent link">⚓︎</a></h4>
 <p>L'algorithme de chiffrement symétrique le plus utilisé actuellement est le chiffrement <a href="https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>, pour Advanced Encryption Standard.</p>
 <ul>
 <li>chiffrement par bloc de 128 bits, répartis dans une matrice de 16 octets (matrice carrée de taille 4).</li>

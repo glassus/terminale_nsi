@@ -3518,80 +3518,19 @@
 <p>En Python, le <strong>dictionnaire</strong> est une structure native de tableau associatif.</p>
 <h2 id="1-dictionnaire-et-temps-dacces-aux-donnees">1. Dictionnaire et temps d'accès aux données<a class="headerlink" href="#1-dictionnaire-et-temps-dacces-aux-donnees" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-protocole-de-mesure">1.1 Protocole de mesure<a class="headerlink" href="#11-protocole-de-mesure" title="Permanent link">⚓︎</a></h3>
-<p>Observons le code suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">lst</span>
-
-<span class="k">def</span> <span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">dct</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-        <span class="n">dct</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
-    <span class="k">return</span> <span class="n">dct</span>
-
-<span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-
-    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
-        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
-    <span class="n">tps_moyen_lst</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
-
-    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
-        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
-    <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour une liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2">       : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>La fonction <code>mesures</code> prend en paramètre un nombre <code>nb</code> qui sera la taille de la liste ou du dictionnaire.<br />
-Dans le corps de cette fonction, la liste <code>lst</code> et le dictionnaire <code>d</code> sont fabriqués <em>avant le commencement de la mesure du temps</em>.<br />
-La liste <code>lst</code> contient des nombres (de <code>1</code> à <code>nb</code>), et le dictionnaire <code>d</code> associe à un nombre (de <code>1</code> à <code>nb</code>) sa propre valeur.</p>
-<p>Dans ces deux structures, nous allons partir à la recherche d'une valeur qui n'a aucune chance de s'y trouver : la chaine de caractères <code>'a'</code>.</p>
-<p>10 fois de suite (pour avoir un temps moyen le plus juste possible), on va donc mesurer le temps mis pour chercher la chaine <code>'a'</code>, qui n'est présente ni dans la liste <code>lst</code> ni dans le dictionnaire <code>d</code>. On mesure donc une recherche dans <strong>le pire des cas</strong>.</p>
+<p>Le but est de créer une liste et un dictionnaire de même taille (arbitraire), et de comparer ensuite le temps de recherche d'un élément n'appartenant pas à ces deux structures.</p>
+<p><strong>Q1.</strong> Créer une fonction <code>fabrique_liste</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie une liste composée de tous les entiers de <code>0</code> à <code>nb-1</code>.</p>
+<p><strong>Q2.</strong> Créer une fonction <code>fabrique_dict</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie dictionnaire composé de paires qui associent à toutes les clés <code>k</code>  de <code>0</code> à <code>nb-1</code> leur propre valeur <code>k</code>. </p>
+<p><strong>Q3.</strong> Créer une fonction <code>mesures</code> qui prend en paramètre un entier <code>nb</code> et qui :</p>
+<ul>
+<li>Créé une liste et un dictionnaire de taille <code>nb</code> à l'aide des fonctions précédentes.</li>
+<li>Mesure la recherche d'une valeur inexistante dans la liste, et affiche le temps de recherche.</li>
+<li>Mesure la recherche d'une valeur inexistante dans le dictionnaire, et affiche le temps de recherche.</li>
+</ul>
+<p>Cette recherche d'une valeur inexistante s'appelle recherche <em>dans le pire des cas</em>.</p>
+<p>Pour davantage de précision, on pourra dans un second temps effectuer plusieurs mesures et faire une moyenne des temps obtenus.</p>
+<p>Pour rappel, l'import du module <code>time</code> permet d'appeler la fonction <code>time.time()</code>. </p>
+<p><strong>Q4.</strong> Effectuer des mesures avec différentes valeurs de <code>nb</code>.</p>
 <h3 id="12-mesures">1.2 Mesures<a class="headerlink" href="#12-mesures" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons effectuer 3 mesures, avec une taille de liste et de dictionnaire augmentant d'un facteur 10 à chaque fois.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
@@ -3612,7 +3551,7 @@ La liste <code>lst</code> contient des nombres (de <code>1</code> à <code>nb</c
 Il ne dépend pas du nombre d'éléments du dictionnaire dans lequel on cherche. On dit qu'il est en <span class="arithmatex">\(O(1)\)</span>.</p>
 <h3 id="13-conclusion">1.3 Conclusion<a class="headerlink" href="#13-conclusion" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Temps de recherche <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Temps de recherche <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Il y a donc une différence fondamentale à connaître entre les temps de recherche d'un élément à l'intérieur :</p>
 <ul>
 <li>d'une <strong>liste</strong> : temps <strong>proportionnel</strong> à la taille de la liste (ordre de complexité linéaire, <span class="arithmatex">\(O(n)\)</span>)</li>
@@ -3791,7 +3730,7 @@ TypeError: unhashable type: &#39;list&#39;
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 janvier 2024</span>
       
     
   </small>
