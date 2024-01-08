@@ -7,13 +7,14 @@
         - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
 
-
+{#
 !!! question "Code Puzzle du jour"
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
-
+#}
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - :books: [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
     - :heart: [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
     - :books: [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - :gear: [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)

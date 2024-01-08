@@ -26,53 +26,96 @@ En Python, le **dictionnaire** est une structure native de tableau associatif.
 
 ### 1.1 Protocole de mesure
 
-Observons le code suivant :
+Le but est de créer une liste et un dictionnaire de même taille (arbitraire), et de comparer ensuite le temps de recherche d'un élément n'appartenant pas à ces deux structures.
 
-```python linenums='1'
-import time
+**Q1.** Créer une fonction ```fabrique_liste``` qui prend en paramètre un entier ```nb``` et qui renvoie une liste composée de tous les entiers de ```0``` à ```nb-1```.
 
-def fabrique_liste(nb):
-    lst = [k for k in range(nb)]
-    return lst
+{{
+correction(False,
+"""
+??? success \"Correction\" 
+    ```python
+    def fabrique_liste(nb):
+        lst = [k for k in range(nb)]
+        return lst
+    ```
 
-def fabrique_dict(nb):
-    dct = {}
-    for k in fabrique_liste(nb):
-        dct[k] = k
-    return dct
+"""
+)
+}}
 
-def mesures(nb):
-    lst = fabrique_liste(nb)
-    d = fabrique_dict(nb)
-    
-    tps_total = 0
-    for _ in range(10):
-        t0 = time.time()
-        test = 'a' in lst # on cherche une donnée inexistante
-        delta_t = time.time() - t0
-        tps_total += delta_t
-    tps_moyen_lst = tps_total / 10
+**Q2.** Créer une fonction ```fabrique_dict``` qui prend en paramètre un entier ```nb``` et qui renvoie dictionnaire composé de paires qui associent à toutes les clés ```k```  de ```0``` à ```nb-1``` leur propre valeur ```k```. 
 
-    tps_total = 0
-    for _ in range(10):
-        t0 = time.time()
-        test = 'a' in d # on cherche une donnée inexistante
-        delta_t = time.time() - t0
-        tps_total += delta_t
-    tps_moyen_d = tps_total / 10
-    
-    print(f"temps pour une liste de taille {nb}       : {tps_moyen_lst}")
-    print(f"temps pour un dictionnaire de taille {nb} : {tps_moyen_d}")
-```
+{{
+correction(False,
+"""
+??? success \"Correction\" 
+    ```python
+    def fabrique_dict(nb):
+        dct = {k:k for k in range(nb)}
+        return dct
+    ```
 
-La fonction ```mesures``` prend en paramètre un nombre ```nb``` qui sera la taille de la liste ou du dictionnaire.  
-Dans le corps de cette fonction, la liste ```lst``` et le dictionnaire ```d``` sont fabriqués *avant le commencement de la mesure du temps*.  
-La liste ```lst``` contient des nombres (de `1` à ```nb```), et le dictionnaire ```d``` associe à un nombre (de `1` à ```nb```) sa propre valeur.
+"""
+)
+}}
 
-Dans ces deux structures, nous allons partir à la recherche d'une valeur qui n'a aucune chance de s'y trouver : la chaine de caractères ```'a'```.
+**Q3.** Créer une fonction ```mesures``` qui prend en paramètre un entier ```nb``` et qui :
 
+- Créé une liste et un dictionnaire de taille ```nb``` à l'aide des fonctions précédentes.
+- Mesure la recherche d'une valeur inexistante dans la liste, et affiche le temps de recherche.
+- Mesure la recherche d'une valeur inexistante dans le dictionnaire, et affiche le temps de recherche.
 
-10 fois de suite (pour avoir un temps moyen le plus juste possible), on va donc mesurer le temps mis pour chercher la chaine ```'a'```, qui n'est présente ni dans la liste ```lst``` ni dans le dictionnaire ```d```. On mesure donc une recherche dans **le pire des cas**.
+Cette recherche d'une valeur inexistante s'appelle recherche *dans le pire des cas*.
+
+Pour davantage de précision, on pourra dans un second temps effectuer plusieurs mesures et faire une moyenne des temps obtenus.
+
+Pour rappel, l'import du module ```time``` permet d'appeler la fonction ```time.time()```. 
+
+{{
+correction(False,
+"""
+??? success \"Correction\" 
+    ```python linenums='1'
+    import time
+
+    def fabrique_liste(nb):
+        lst = [k for k in range(nb)]
+        return lst
+
+    def fabrique_dict(nb):
+        dct = {k:k for k in range(nb)}
+        return dct
+
+    def mesures(nb):
+        lst = fabrique_liste(nb)
+        d = fabrique_dict(nb)
+        
+        tps_total = 0
+        for _ in range(10):
+            t0 = time.time()
+            test = 'a' in lst # on cherche une donnée inexistante
+            delta_t = time.time() - t0
+            tps_total += delta_t
+        tps_moyen_lst = tps_total / 10
+
+        tps_total = 0
+        for _ in range(10):
+            t0 = time.time()
+            test = 'a' in d # on cherche une donnée inexistante
+            delta_t = time.time() - t0
+            tps_total += delta_t
+        tps_moyen_d = tps_total / 10
+        
+        print(f'temps pour une liste de taille {nb}       : {tps_moyen_lst}')
+        print(f'temps pour un dictionnaire de taille {nb} : {tps_moyen_d}')
+    ``` 
+"""
+)
+}}
+
+**Q4.** Effectuer des mesures avec différentes valeurs de ```nb```.
+
 
 
 
