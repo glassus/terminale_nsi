@@ -4,6 +4,8 @@ Quelles études pour poursuivre dans l'informatique ?
 
 ## 1. Les cursus ingénieurs publics post-bac
 
+:new: Une très bonne page récapitulative :  [https://www.cours-thales.fr/post-bac-ingenieur/concours](https://www.cours-thales.fr/post-bac-ingenieur/concours){. target="_blank"}
+
 ### 1.1 Écoles du réseau Geipi-Polytech
 
 - [https://www.geipi-polytech.org/les-ecoles-du-concours-geipi-polytech#Informatique](https://www.geipi-polytech.org/les-ecoles-du-concours-geipi-polytech#Informatique){. target="_blank"}

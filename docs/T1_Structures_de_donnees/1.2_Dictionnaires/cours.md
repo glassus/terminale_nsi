@@ -31,7 +31,7 @@ Le but est de créer une liste et un dictionnaire de même taille (arbitraire), 
 **Q1.** Créer une fonction ```fabrique_liste``` qui prend en paramètre un entier ```nb``` et qui renvoie une liste composée de tous les entiers de ```0``` à ```nb-1```.
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python
@@ -47,7 +47,7 @@ correction(False,
 **Q2.** Créer une fonction ```fabrique_dict``` qui prend en paramètre un entier ```nb``` et qui renvoie dictionnaire composé de paires qui associent à toutes les clés ```k```  de ```0``` à ```nb-1``` leur propre valeur ```k```. 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python
@@ -67,6 +67,14 @@ correction(False,
 - Mesure la recherche d'une valeur inexistante dans le dictionnaire, et affiche le temps de recherche.
 
 Cette recherche d'une valeur inexistante s'appelle recherche *dans le pire des cas*.
+
+!!! note "Comment faire la recherche ?"
+    Il est impératif d'utiliser le mot-clé ```in``` propre à Python afin de bénéficier des avantages (ou inconvénients) de chacune des deux structures.
+
+    Si on cherche notre élément en parcourant «à la main» la totalité de la structure, on aura forcément un temps de recherche proportionnel au nombre d'éléments de la structure (et donc une complexité linéaire).
+
+    En utilisant le mot-clé ```in```, on va laisser Python gérer tout seul la recherche.
+
 
 Pour davantage de précision, on pourra dans un second temps effectuer plusieurs mesures et faire une moyenne des temps obtenus.
 
@@ -262,6 +270,8 @@ En effet, les simples chaînes de caractères peuvent aussi être transformées 
 
 
 ![](data/md5.png){: .center}
+
+*(on pourra aussi jouer avec le fabuleux site [https://gchq.github.io/CyberChef](https://gchq.github.io/CyberChef){. target="_blank"} du [GHCQ](https://www.gchq.gov.uk/){. target="_blank"})*
 
 Quel est l'intérêt de hacher une chaîne de caractère ? La conservation des mots de passe !!!
 

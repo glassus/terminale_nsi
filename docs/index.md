@@ -1,10 +1,13 @@
 
 
 !!! abstract "Actualités"
+    - [Page sur l'orientation post-Bac](T7_Divers/10_orientation/cours/){. target="_blank"}
+    {#
     -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
     - :new: Deux sujets zéro viennent d'être publiés :
         - [sujet 0-A](T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
         - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
+    #}
 
 
 {#
@@ -14,14 +17,16 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :books: [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-    - :heart: [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
-    - :books: [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - :gear: [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
+    - :books: [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+    - :gear: [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
+
 
 
 
 ### *Thèmes déjà traités*
+- [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
+- [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+-  [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
