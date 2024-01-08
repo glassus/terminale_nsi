@@ -22,7 +22,7 @@
     
     
       
-        <title>Exercice - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>Exercices - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice
+              Exercices
             
           </span>
         </div>
@@ -728,59 +728,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Exercice
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Exercice
+    Exercices
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-1-creation-dune-rainbow-table" class="md-nav__link">
-    Exercice 1 : création d'une rainbow table
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3417,10 +3373,11 @@
 
 
 <h1 id="exercices-sur-les-dictionnaires">Exercices sur les dictionnaires<a class="headerlink" href="#exercices-sur-les-dictionnaires" title="Permanent link">⚓︎</a></h1>
-<h2 id="exercice-1-creation-dune-rainbow-table">Exercice 1 : création d'une rainbow table <img alt="🌈" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f308.svg" title=":rainbow:" /><a class="headerlink" href="#exercice-1-creation-dune-rainbow-table" title="Permanent link">⚓︎</a></h2>
-<p><strong>Objectif</strong> :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  1 : création d'une rainbow table <img alt="🌈" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f308.svg" title=":rainbow:" /></p>
 <p>Créer une fonction <code>inverse_md5()</code> qui va chercher dans un dictionnaire (construit préalablement) le mot correspondant au hash donné en paramètre.</p>
-<p>Exemple : 
+<p>À quel mot de passe correspond le hash <code>33da7a40473c1637f1a2e142f4925194</code> ?</p>
+<p><strong>Exemple :</strong> 
 <div class="highlight"><pre><span></span><code>&gt;&gt;&gt; inverse_md5(&#39;0571749e2ac330a7455809c6b0e7af90&#39;)
 &gt;&gt;&gt; &#39;sunshine&#39;
 </code></pre></div></p>
@@ -3436,71 +3393,18 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
 </code></pre></div></li>
 </ul>
-<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  2</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf" target="_blank">Centres Etrangers J1 2021</a></p>
-<details class="tip">
-<summary>Correction Q1.a.</summary>
-<p><code>flotte[26]</code> renvoie  <code>{"type : "classique", "etat" : 1, "station" : "Coliseum"}</code></p>
-</details>
-<details class="tip">
-<summary>Correction Q1.b.</summary>
-<p><code>flotte[80]["etat"]</code> renvoie la valeur <code>0</code>.</p>
-</details>
-<details class="tip">
-<summary>Correction Q1.c.</summary>
-<p><code>flotte[99]["etat"]</code> renverra une erreur car la clé 99 n'existe pas.</p>
-</details>
-<details class="tip">
-<summary>Correction Q2.a.</summary>
-<p>Les valeurs possibles pour <code>choix</code> sont <code>electrique</code> ou <code>classique</code>.</p>
-</details>
-<details class="tip">
-<summary>Correction Q2.b.</summary>
-<p>En fonction du choix (<code>electrique</code> ou <code>classique</code>), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'<code>etat</code> 1).<br />
-Seule la première station sera renvoyée, à cause du <code>return</code>. Si aucun vélo n'est disponible, la fonction ne renverra rien.</p>
-</details>
-<details class="tip">
-<summary>Correction Q3.a.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Citadelle&quot;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="tip">
-<summary>Correction Q3.b.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;electrique&quot;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">,</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="tip">
-<summary>Correction Q4.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
-    <span class="n">velo_dispo</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">,</span> <span class="n">stations</span><span class="p">[</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">]])</span>
-        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">800</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;etat&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">velo_dispo</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s2">&quot;station&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">,</span> <span class="n">id_velo</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">velo_dispo</span>
-</code></pre></div></td></tr></table></div>
-</details>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 janvier 2024</span>
       
     
   </small>
