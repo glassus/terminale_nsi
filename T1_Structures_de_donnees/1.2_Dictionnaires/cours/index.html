@@ -3550,6 +3550,73 @@
 </div>
 <p>Pour davantage de précision, on pourra dans un second temps effectuer plusieurs mesures et faire une moyenne des temps obtenus.</p>
 <p>Pour rappel, l'import du module <code>time</code> permet d'appeler la fonction <code>time.time()</code>. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">lst</span>
+
+<span class="k">def</span> <span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="n">dct</span>
+
+<span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+
+    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
+    <span class="n">tps_moyen_lst</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
+
+    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
+    <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour une liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1">       : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q4.</strong> Effectuer des mesures avec différentes valeurs de <code>nb</code>.</p>
 <h3 id="12-mesures">1.2 Mesures<a class="headerlink" href="#12-mesures" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons effectuer 3 mesures, avec une taille de liste et de dictionnaire augmentant d'un facteur 10 à chaque fois.</p>
@@ -3751,7 +3818,7 @@ TypeError: unhashable type: &#39;list&#39;
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 janvier 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 janvier 2024</span>
       
     
   </small>
