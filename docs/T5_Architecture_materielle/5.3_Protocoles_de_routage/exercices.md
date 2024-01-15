@@ -1,5 +1,22 @@
 {{initexo(0)}}
 
+!!! abstract "{{ exercice() }}"
+
+    Dans un réseau quelconque, le coût de chaque liaison se calcule par la formule :
+
+    $$ \text{coût} = \frac{10^8}{d} $$
+
+    où le débit $d$ est exprimé en bits/s.
+
+    Calculer le coût si la liaison a un débit de :
+
+    **A.** 10 Mb/s
+
+    **B.** 1 Gb/s
+
+    **C.** 1 Mb/s
+
+    **D.** 50 Mb/s
 
 
 !!! abstract "{{ exercice() }}"

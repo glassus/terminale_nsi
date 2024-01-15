@@ -17,6 +17,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - :books: [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+    - :gear: [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
     - :books: [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
     - :gear: [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
 
