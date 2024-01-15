@@ -55,7 +55,7 @@
     Exercice 2 du sujet [Centres Etrangers J1 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a. \" 
         ```flotte[26]``` renvoie  ```{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}```
@@ -64,7 +64,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b. \" 
         ```flotte[80]['etat']``` renvoie la valeur ```0```. 
@@ -73,7 +73,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c. \" 
         ```flotte[99]['etat']``` renverra une erreur car la clé 99 n'existe pas. 
