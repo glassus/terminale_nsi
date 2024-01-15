@@ -3418,6 +3418,41 @@
 <p>En fonction du choix (<code>electrique</code> ou <code>classique</code>), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'<code>etat</code> 1).<br />
 Seule la première station sera renvoyée, à cause du <code>return</code>. Si aucun vélo n'est disponible, la fonction ne renverra rien. </p>
 </details>
+<details class="success">
+<summary>Correction Q3.a. </summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Citadelle&#39;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q3.b. </summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;electrique&#39;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">,</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4. </summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
+    <span class="n">velo_dispo</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">,</span> <span class="n">stations</span><span class="p">[</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">]])</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">800</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">velo_dispo</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">],</span> <span class="n">d</span><span class="p">,</span> <span class="n">id_velo</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">velo_dispo</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
   <hr>
