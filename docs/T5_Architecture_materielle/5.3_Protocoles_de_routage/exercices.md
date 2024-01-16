@@ -1,5 +1,6 @@
 {{initexo(0)}}
 
+{#
 !!! abstract "{{ exercice() }}"
 
     Dans un réseau quelconque, le coût de chaque liaison se calcule par la formule :
@@ -17,7 +18,7 @@
     **C.** 1 Mb/s
 
     **D.** 50 Mb/s
-
+#}
 
 !!! abstract "{{ exercice() }}"
 
