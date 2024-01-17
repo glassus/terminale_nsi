@@ -57,15 +57,24 @@ BTS Services informatiques aux organisations (SIO)
 - via Parcoursup
 
 
-## 7. Les écoles d'ingénieurs privées post-bac à Bordeaux
+## 7. Les écoles privées post-bac à Bordeaux
 
-### 7.1 Ynov
-- [https://www.ynov.com/](https://www.ynov.com/){. target="_blank"}
+### 7.1 École d'ingénieurs
 
-### 7.2 Epitech
-- [https://www.epitech.eu/](https://www.epitech.eu/){. target="_blank"}
+- [EFREI](https://www.efrei.fr/){. target="_blank"}
 
-### 7.3 Epsi
-- [https://www.epsi.fr/](https://www.epsi.fr/){. target="_blank"}
+### 7.2 Écoles d'ingénierie
+Ces écoles ne délivrent pas de diplôme d'ingénieur mais un RNCP de niveau 7.
 
 
+- [YNOV](https://www.ynov.com/){. target="_blank"}
+
+
+- [EPITECH](https://www.epitech.eu/){. target="_blank"}
+
+- [EPSI](https://www.epsi.fr/){. target="_blank"}
+
+
+## 8. Les métiers du Jeu Vidéo
+
+Vous pouvez consulter [cette brochure](data/metiers_JV.pdf){. target="_blank"}
