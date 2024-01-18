@@ -158,7 +158,7 @@
     ![image](data/ex4_frise.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex4_frise_corr.png){: .center} 
