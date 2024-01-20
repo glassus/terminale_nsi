@@ -21,10 +21,7 @@ Quelles études pour poursuivre dans l'informatique ?
 - [https://www.bordeaux-inp.fr/fr/la-prepa-des-inp-0](https://www.bordeaux-inp.fr/fr/la-prepa-des-inp-0){. target="_blank"}
 -  sur dossier (inscription via Parcoursup)
 
-### 1.4 Le cursus CMI de l'Université de Bordeaux
 
-- [https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/cmi](https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/cmi){. target="_blank"}
--  via Parcoursup
 
 ## 2. La classe préparatoire MP2I au lycée Montaigne
 
@@ -32,10 +29,17 @@ Quelles études pour poursuivre dans l'informatique ?
 - [https://prepas-mp2i.fr/mp2i/](https://prepas-mp2i.fr/mp2i/){. target="_blank"}
 - via Parcoursup
 
-## 3. La licence Informatique du l'Université de Bordeaux
+## 3. La licence Informatique de l'Université de Bordeaux
 
 - [https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/licences/licence-informatique](https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/licences/licence-informatique){. target="_blank"}
 - via Parcoursup
+
+## 4. Le cursus CMI de l'Université de Bordeaux
+Le cursus CMI délivre un Master d'Ingénierie, qui donne accès à des emplois d'ingénieurs.
+
+- [https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/cmi](https://jechoisis.u-bordeaux.fr/choisir/sciences-et-technologies/cmi){. target="_blank"}
+-  via Parcoursup
+
 
 ## 5. Le BUT informatique de l'Université de Bordeaux
 
