@@ -3574,6 +3574,12 @@ nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.</p
 <p>On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3</p>
 <p><strong>Q1.</strong> Les processus s'exécutent de manière concurrente.
 Justifier qu'une situation d'interblocage peut se produire.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
+<img alt="image" class="center" src="../data/2021_2.png" />
+On voit apparaître un cycle d'interdépendance : il peut donc y avoir une situation d'interblocage. </p>
+</details>
 <p><strong>Q2</strong>. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</p>
 <ol>
 <li>Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
