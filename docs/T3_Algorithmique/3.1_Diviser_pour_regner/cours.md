@@ -78,6 +78,7 @@ On comprend que  :
 #### 1.2.2 Dichotomie récursive avec slicing
 
 !!! note "Dichotomie version récursive avec slicing :heart:"
+    {#
     ```python linenums='1'
     def dichotomie_rec(tab, val):
         if len(tab) == 0:
@@ -93,6 +94,7 @@ On comprend que  :
 
     1. On prend la partie droite de liste, juste après l'indice central.
     2. On prend la partie gauche de liste, juste avant l'indice central.
+    #}
 
 
 Exemple d'utilisation :
@@ -198,6 +200,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
 
 !!! note "Exponentiation rapide :heart:"
+    {#
     ```python linenums='1'
     def puissance_mod(a, n):
         if n == 0:
@@ -207,6 +210,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
         else:
             return a * puissance_mod(a*a, (n-1)//2)
     ```
+    #}
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
@@ -214,28 +218,30 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 ![image](data/puiss.png){: .center}
 
 !!! example "Exercice"
-    === "Énoncé"
-        Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
+    Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
 
-        **Aide pour Matplotlib :** le code ci-dessous
+    **Aide pour Matplotlib :** le code ci-dessous
 
-        ```python linenums='1'
-        import matplotlib.pyplot as plt
+    ```python linenums='1'
+    import matplotlib.pyplot as plt
 
-        def carre(x):
-            return x*x
+    def carre(x):
+        return x*x
 
-        x = list(range(10))
-        y = [carre(k) for k in x]
-        plt.plot(x, y)
-        plt.show()
-        ```
+    x = list(range(10))
+    y = [carre(k) for k in x]
+    plt.plot(x, y)
+    plt.show()
+    ```
 
-        donne le graphique suivant :
+    donne le graphique suivant :
 
-        ![image](data/carre.png){: .center width=50%}
+    ![image](data/carre.png){: .center width=50%}
 
-    === "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         import matplotlib.pyplot as plt
         import time
@@ -266,6 +272,11 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
             p = puissance_mod(3,n)
             return time.time()-t0
         ```
+    """
+    )
+    }}
+    
+
         
 ## 4. Le tri-fusion
 En anglais le *merge sort*.
@@ -288,11 +299,12 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
 
 
 !!! example "Exercice"
-    === "Énoncé"
-        Coder la fonction ```interclassement```. 
-    === "Correction"
-        {{ correction(True,
-        "
+    Coder la fonction ```interclassement```. 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         def interclassement(lst1, lst2):
             i1 = 0
@@ -306,9 +318,11 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
                     lst_totale.append(lst2[i2])
                     i2 += 1
             return lst_totale + lst1[i1:] + lst2[i2:]
-        ```
-        "
-        ) }}
+        ```  
+    """
+    )
+    }}
+
 
 
 ### 4.2 La fusion
@@ -330,6 +344,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
+    {#
     ```python
     def interclassement(lst1, lst2):
         lst_totale = []
@@ -351,6 +366,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             m = len(lst) // 2
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
+    #}
 
 
 

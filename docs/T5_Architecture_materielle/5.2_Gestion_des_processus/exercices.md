@@ -439,3 +439,92 @@
     """
     )
     }}
+
+
+
+
+!!! abstract "{{ exercice() }}"        
+
+
+    Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\" 
+        11, 20, 32, 11, 20, 32, 11, 32, 11
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\" 
+        11, 11, 20, 20, 32, 32, 11, 11, 32
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a.\" 
+        ```python
+        liste_attente = [Processus(11, 4), Processus(20, 2), Processus(32, 3)]
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b.\" 
+        ```python
+        def execute_un_cycle(self):
+            self.reste_a_faire = self.reste_a_faire - 1
+        
+        def change_etat(self, nouvel_etat):
+            self.etat = nouvel_etat
+        
+        def est_termine(self):
+            return self.reste_a_faire <= 0
+        ```
+    """
+    )
+    }}
+
+
+
+
+
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.c.\" 
+        ```python linenums='1'
+        def tourniquet(liste_attente, quantum):
+            ordre_execution = []
+            while liste_attente != []:
+                processus = liste_attente.pop(0)
+                processus.change_etat(\"En cours d'exécution\")
+                compteur_tourniquet = 0
+                while compteur_tourniquet < quantum and not processus.est_termine():
+                    ordre_execution.append(processus.pid)
+                    processus.execute_un_cycle()
+                    compteur_tourniquet = compteur_tourniquet + 1
+                if not processus.est_termine():
+                    processus.change_etat(\"Suspendu\")
+                    liste_attente.append(processus)
+                else:
+                    processus.change_etat(\"Terminé\")
+            return ordre_execution
+        ```
+
+    """
+    )
+    }}
