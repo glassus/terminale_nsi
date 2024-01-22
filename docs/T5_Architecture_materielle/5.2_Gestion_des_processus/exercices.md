@@ -269,7 +269,7 @@
         - d. terminé
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Il sera à l'état bloqué.
@@ -310,7 +310,7 @@
     **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1.** b.
