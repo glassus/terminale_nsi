@@ -3582,30 +3582,6 @@ Notre fonction renverra donc un booléen.</p>
 <h4 id="122-dichotomie-recursive-avec-slicing">1.2.2 Dichotomie récursive avec slicing<a class="headerlink" href="#122-dichotomie-recursive-avec-slicing" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Dichotomie version récursive avec slicing <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="n">i_centre</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:],</span> <span class="n">val</span><span class="p">)</span> <span class="c1"># (1)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">[:</span><span class="n">i_centre</span><span class="p">],</span> <span class="n">val</span><span class="p">)</span>  <span class="c1"># (2)</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On prend la partie droite de liste, juste après l'indice central.</li>
-<li>On prend la partie gauche de liste, juste avant l'indice central.</li>
-</ol>
 </div>
 <p>Exemple d'utilisation :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
@@ -3717,28 +3693,11 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p>Ainsi, dans le cas où <span class="arithmatex">\(n\)</span> est pair, il suffit d'élever <span class="arithmatex">\(a\)</span> au carré (une seule opération) pour que l'exposant diminue de <strong>moitié</strong>. On peut donc programmer la fonction <code>puissance</code>  en utilisant le paradigme <em>diviser pour régner</em> : </p>
 <div class="admonition note">
 <p class="admonition-title">Exponentiation rapide <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
 </div>
 <h3 id="33-comparaison-de-la-vitesse-dexecution-des-deux-algorithmes">3.3 Comparaison de la vitesse d'exécution des deux algorithmes<a class="headerlink" href="#33-comparaison-de-la-vitesse-dexecution-des-deux-algorithmes" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/puiss.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions <code>puissance</code> et <code>puissance_mod</code>.</p>
 <p><strong>Aide pour Matplotlib :</strong> le code ci-dessous</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -3762,67 +3721,6 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p>donne le graphique suivant :</p>
 <p><img alt="image" class="center" src="../data/carre.png" width="50%" /></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">mesure_puissance</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span>
-
-<span class="k">def</span> <span class="nf">mesure_puissance_mod</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 <h2 id="4-le-tri-fusion">4. Le tri-fusion<a class="headerlink" href="#4-le-tri-fusion" title="Permanent link">⚓︎</a></h2>
 <p>En anglais le <em>merge sort</em>.</p>
 <p><img alt="image" class="center" src="../data/merge_yoda.jpg" width="60%" /></p>
@@ -3837,28 +3735,7 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Coder la fonction <code>interclassement</code>. </p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
-    <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">i1</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
-            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
-            <span class="n">i1</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
-            <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 </div>
 <h3 id="42-la-fusion">4.2 La fusion<a class="headerlink" href="#42-la-fusion" title="Permanent link">⚓︎</a></h3>
 <h4 id="421-principe">4.2.1 Principe<a class="headerlink" href="#421-principe" title="Permanent link">⚓︎</a></h4>
@@ -3873,26 +3750,6 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p>La grande force de ce tri va être qu'il se programme simplement de manière <strong>récursive</strong>, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».</p>
 <div class="admonition abstract">
 <p class="admonition-title">Algorithme de tri fusion (<em>merge sort</em>) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
-    <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
-    <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
-            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
-            <span class="n">i1</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
-            <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
-
-<span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">lst</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">return</span> <span class="n">interclassement</span><span class="p">(</span><span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">m</span><span class="p">]),</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">m</span><span class="p">:]))</span>
-</code></pre></div>
 </div>
 <h4 id="423-visualisation">4.2.3 Visualisation<a class="headerlink" href="#423-visualisation" title="Permanent link">⚓︎</a></h4>
 <p>Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
@@ -3921,7 +3778,7 @@ L'animation suivante montre la progression du tri :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 janvier 2024</span>
       
     
   </small>
