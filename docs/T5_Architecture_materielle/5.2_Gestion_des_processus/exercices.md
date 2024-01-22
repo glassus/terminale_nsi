@@ -234,7 +234,7 @@
     Justifier qu'une situation d'interblocage peut se produire.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
