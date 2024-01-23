@@ -490,7 +490,7 @@
             self.etat = nouvel_etat
         
         def est_termine(self):
-            return self.reste_a_faire <= 0
+            return self.reste_a_faire == 0
         ```
     """
     )
