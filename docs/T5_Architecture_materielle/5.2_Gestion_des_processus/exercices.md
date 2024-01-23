@@ -431,7 +431,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\" 
         En inversant la demande de R3 et R1 pour le processus P3, le risque d'interblocage disparaît.
