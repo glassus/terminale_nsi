@@ -511,17 +511,17 @@
             ordre_execution = []
             while liste_attente != []:
                 processus = liste_attente.pop(0)
-                processus.change_etat(\"En cours d'exécution\")
+                processus.change_etat('En cours d exécution')
                 compteur_tourniquet = 0
                 while compteur_tourniquet < quantum and not processus.est_termine():
                     ordre_execution.append(processus.pid)
                     processus.execute_un_cycle()
                     compteur_tourniquet = compteur_tourniquet + 1
                 if not processus.est_termine():
-                    processus.change_etat(\"Suspendu\")
+                    processus.change_etat('Suspendu')
                     liste_attente.append(processus)
                 else:
-                    processus.change_etat(\"Terminé\")
+                    processus.change_etat('Terminé')
             return ordre_execution
         ```
 
