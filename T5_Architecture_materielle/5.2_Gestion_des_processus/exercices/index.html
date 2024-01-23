@@ -3688,6 +3688,18 @@ navigateur Web (chromium-browser) ?</p>
 <summary>Correction Q1.b.</summary>
 <p>11, 11, 20, 20, 32, 32, 11, 11, 32</p>
 </details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">change_etat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouvel_etat</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">=</span> <span class="n">nouvel_etat</span>
+
+<span class="k">def</span> <span class="nf">est_termine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+</code></pre></div>
+</details>
 </div>
 
   <hr>
