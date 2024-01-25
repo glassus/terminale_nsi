@@ -78,7 +78,7 @@ On comprend que  :
 #### 1.2.2 Dichotomie récursive avec slicing
 
 !!! note "Dichotomie version récursive avec slicing :heart:"
-    {#
+    
     ```python linenums='1'
     def dichotomie_rec(tab, val):
         if len(tab) == 0:
@@ -94,7 +94,7 @@ On comprend que  :
 
     1. On prend la partie droite de liste, juste après l'indice central.
     2. On prend la partie gauche de liste, juste avant l'indice central.
-    #}
+    
 
 
 Exemple d'utilisation :
