@@ -3582,6 +3582,30 @@ Notre fonction renverra donc un booléen.</p>
 <h4 id="122-dichotomie-recursive-avec-slicing">1.2.2 Dichotomie récursive avec slicing<a class="headerlink" href="#122-dichotomie-recursive-avec-slicing" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Dichotomie version récursive avec slicing <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">i_centre</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i_centre</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:],</span> <span class="n">val</span><span class="p">)</span> <span class="c1"># (1)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dichotomie_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">[:</span><span class="n">i_centre</span><span class="p">],</span> <span class="n">val</span><span class="p">)</span>  <span class="c1"># (2)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On prend la partie droite de liste, juste après l'indice central.</li>
+<li>On prend la partie gauche de liste, juste avant l'indice central.</li>
+</ol>
 </div>
 <p>Exemple d'utilisation :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
@@ -3778,7 +3802,7 @@ L'animation suivante montre la progression du tri :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 janvier 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 janvier 2024</span>
       
     
   </small>
