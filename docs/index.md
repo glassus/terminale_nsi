@@ -15,18 +15,25 @@
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 #}
 
+**Exercices sur la dichotomie:**
+
+- [BNS 26.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-262){. target="_blank"}
+- [BNS 28.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-282){. target="_blank"}
+- [BNS 09.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-092){. target="_blank"}
+
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - :books: [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
-    - :gear: [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
-    - :books: [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-    - :gear: [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
+
 
 
 
 
 ### *Thèmes déjà traités*
+- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
+- [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+- [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
 - [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 -  [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)

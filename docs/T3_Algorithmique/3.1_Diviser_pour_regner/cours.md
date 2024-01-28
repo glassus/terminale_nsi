@@ -287,13 +287,16 @@ En anglais le *merge sort*.
 
 Le mécanisme principal du tri fusion est la **fusion** de deux listes triées en une nouvelle liste elle aussi triée.
 
+
+
 On appelera ce mécanisme l'**interclassement**.
 
-Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
+!!! tip "Principe de l'interclassement"
+    Pour interclasser deux listes ```lst1``` et ```lst2```.
 
-- on part d'une liste vide ```lst_totale```
-- on y ajoute alternativement les éléments de ```lst1``` et ```lst2```. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
-- quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
+    - on part d'une liste vide ```lst_totale```
+    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
+    - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
 
