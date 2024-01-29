@@ -200,7 +200,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
 
 !!! note "Exponentiation rapide :heart:"
-    {#
+    
     ```python linenums='1'
     def puissance_mod(a, n):
         if n == 0:
@@ -210,7 +210,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
         else:
             return a * puissance_mod(a*a, (n-1)//2)
     ```
-    #}
+    
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
