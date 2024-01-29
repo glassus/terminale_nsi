@@ -3717,6 +3717,20 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p>Ainsi, dans le cas où <span class="arithmatex">\(n\)</span> est pair, il suffit d'élever <span class="arithmatex">\(a\)</span> au carré (une seule opération) pour que l'exposant diminue de <strong>moitié</strong>. On peut donc programmer la fonction <code>puissance</code>  en utilisant le paradigme <em>diviser pour régner</em> : </p>
 <div class="admonition note">
 <p class="admonition-title">Exponentiation rapide <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">puissance_mod</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <h3 id="33-comparaison-de-la-vitesse-dexecution-des-deux-algorithmes">3.3 Comparaison de la vitesse d'exécution des deux algorithmes<a class="headerlink" href="#33-comparaison-de-la-vitesse-dexecution-des-deux-algorithmes" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/puiss.png" /></p>
@@ -3805,7 +3819,7 @@ L'animation suivante montre la progression du tri :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 janvier 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 janvier 2024</span>
       
     
   </small>
