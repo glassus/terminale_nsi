@@ -15,12 +15,6 @@
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 #}
 
-**Exercices sur la dichotomie:**
-
-- [BNS 26.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-262){. target="_blank"}
-- [BNS 28.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-282){. target="_blank"}
-- [BNS 09.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-092){. target="_blank"}
-
 
 !!! note ":star: Thème en cours d'étude :star: "
     - :books: [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)

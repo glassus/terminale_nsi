@@ -299,10 +299,10 @@ On appelera ce mécanisme l'**interclassement**.
     - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
-
-
 !!! example "Exercice"
     Coder la fonction ```interclassement```. 
+
+    :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
 
     {{
     correction(False,
@@ -326,7 +326,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
 
-
+**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"} 
 
 ### 4.2 La fusion
 
@@ -391,7 +391,7 @@ Il est aussi conseillé d'observer l'évolution de l'algorithme grâce à Python
 
 La division par 2 de la taille de la liste pourrait nous amener à penser que le tri fusion est de complexité logarithmique, comme l'algorithme de dichotomie. Il n'en est rien.
 
-En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certe des données d'entrée deux fois plus petites).
+En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certes des données d'entrée deux fois plus petites).
 
 On peut montrer que :
 
