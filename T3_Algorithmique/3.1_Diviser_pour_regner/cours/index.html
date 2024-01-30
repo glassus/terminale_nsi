@@ -3837,6 +3837,22 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 <p class="admonition-title">Exercice</p>
 <p>Coder la fonction <code>interclassement</code>. </p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_interclassement/" target="_blank">Aide avec des codes à trous</a></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+    <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
+            <span class="n">i1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
+            <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
+</code></pre></div>
+</details>
 </div>
 <p><strong>Remarque :</strong> cette fonction fait l'objet d'un <a class="" href="https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242" target="_blank">exercice de la BNS</a> </p>
 <h3 id="42-la-fusion">4.2 La fusion<a class="headerlink" href="#42-la-fusion" title="Permanent link">⚓︎</a></h3>
@@ -3880,7 +3896,7 @@ L'animation suivante montre la progression du tri :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 janvier 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 janvier 2024</span>
       
     
   </small>
