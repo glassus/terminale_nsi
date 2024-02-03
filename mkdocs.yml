@@ -21,7 +21,7 @@ theme:
     - navigation.instant
     - navigation.tabs
     - navigation.expand
-    - navigation.top
+    #- navigation.top
     - toc.integrate
     - header.autohide
     - content.code.annotate 
