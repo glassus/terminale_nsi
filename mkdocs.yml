@@ -127,3 +127,7 @@ copyright:  CC BY-SA / G.Lassus
 repo_url: https://github.com/glassus/terminale_nsi
 
 repo_name: glassus/terminale_nsi
+
+validation:
+  absolute_links: ignore
+  unrecognized_links: ignore

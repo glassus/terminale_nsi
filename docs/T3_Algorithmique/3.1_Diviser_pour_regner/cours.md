@@ -405,7 +405,7 @@ Une complexité quasi-linéaire (en $O(n \log n)$) se situe «entre» une comple
 ![image](data/comparaison.png){: .center}
 
 
-Une jolie animation permettant de comparer les tris :
+Pour finir, une jolie animation permettant de comparer les tris :
 
 ![image](data/comparaisons.gif){: .center}
 
