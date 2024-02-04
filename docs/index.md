@@ -17,7 +17,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - :books: [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - :books: [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - :gear: [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
 
 
 
