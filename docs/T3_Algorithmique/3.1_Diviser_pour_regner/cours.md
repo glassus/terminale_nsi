@@ -326,7 +326,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
 
-**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"} 
+**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"}, qui n'utilise pas le slicing (ce qui rend le code plus efficace).
 
 ### 4.2 La fusion
 
@@ -347,7 +347,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
-    {#
+    
     ```python
     def interclassement(lst1, lst2):
         lst_totale = []
@@ -369,7 +369,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             m = len(lst) // 2
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
-    #}
+    
 
 
 
