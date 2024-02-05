@@ -3657,6 +3657,35 @@
 <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
 </code></pre></div>
 </div>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+    <span class="n">deb</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">dmax</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice_max</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<span class="hll">        <span class="n">p</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</span>        <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">deb</span><span class="p">,</span> <span class="n">fin</span><span class="p">)</span>
+<span class="hll">        <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="n">dmax</span><span class="p">:</span>
+</span><span class="hll">            <span class="n">dmax</span> <span class="o">=</span> <span class="n">d</span>
+</span><span class="hll">            <span class="n">indice_max</span> <span class="o">=</span> <span class="n">idx</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">(</span><span class="n">indice_max</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
 <div class="admonition note">
 <p class="admonition-title">Q4 : tester son code</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">extrait</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
