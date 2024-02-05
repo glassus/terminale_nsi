@@ -38,19 +38,25 @@
         'A'
         ```
 
-      
-
-    === "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
+        masque = 'CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES'
 
         def chiffre(message, masque):
-            message_chiffre = ""
+            message_chiffre = ''
             for i in range(len(message)):
                 lettre_chiffree = chr(ord(message[i]) ^ ord(masque[i]))
                 message_chiffre += lettre_chiffree
             return message_chiffre
-        ```
+        ``` 
+    """
+    )
+    }}
+
+
 
 
 ### 1.2 Principe du chiffrement symétrique

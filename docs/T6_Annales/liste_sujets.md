@@ -1,5 +1,9 @@
 # Annales des Épreuves Écrites
 
+## 2024
+- [Sujet 0 - version A](data/2024/bac_nsi_2024_sujet0a.pdf)
+- [Sujet 0 - version B](data/2024/bac_nsi_2024_sujet0b.pdf)
+
 ## 2023
 - [Liban J2](data/2023/2023_Liban_J2.pdf)
 - [Liban J1](data/2023/2023_Liban_J1.pdf)
