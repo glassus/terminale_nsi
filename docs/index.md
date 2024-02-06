@@ -17,6 +17,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - :books:  [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - :gear: [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
     - :books: [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - :gear: [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
 
