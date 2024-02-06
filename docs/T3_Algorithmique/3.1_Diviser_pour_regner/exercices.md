@@ -111,7 +111,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -120,7 +120,22 @@
             for k in range(i, j+1):
                 ext.append(tab[k])
             return ext
-        ```        
+        ``` 
+
+        ou 
+
+        ```python linenums='1'
+        def extrait(tab, i, j):
+            return [tab[k] for k in range(i, j+1)]
+        ```     
+
+        ou 
+
+        ```python linenums='1'
+        def extrait(tab, i, j):
+            return tab[i:j+1]
+        ``` 
+
     """
     )
     }}
@@ -135,7 +150,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1' hl_lines='4 8 10-11'
