@@ -10,7 +10,7 @@
     Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -51,7 +51,7 @@
     **Q1.** Codez votre fonction ```affine(msg, a, b)```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -81,7 +81,7 @@
         L'instruction ```gcd``` du module ```math``` permet de calculer le PGCD de deux nombres.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -89,9 +89,9 @@
         from math import gcd
 
         for a in range(1,20):
-            for b in range(1,20):
-                if gcd(a,26) == 1:
-                    p = decipher_affine('UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC', (a,b))
+            if gcd(a,26) == 1:
+                for b in range(1,20):
+                    p = decipher_affine('UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC', (a, b))
                     if 'TRAVAIL' in p:
                         print(p)
         ```        
@@ -117,34 +117,60 @@
     bits = 256
     msg = "en NSI on fait de la crypto"
 
-    p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
-    q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+    p = ...
+    q = ...
 
-    n = p * q
-    phi = (p - 1) * (q - 1)
+    n = ...
+    phi = ...
 
-    e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
-    d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
+    e = 65537  
+    d = ...  # on calcule l'inverse de e modulo phi
 
-    M = bytes_to_long(msg.encode('utf-8'))
+    M = bytes_to_long(msg.encode('utf-8')) # on convertit le message msg en un nombre
 
-    c = pow(M, e, n) # M puissance e modulo n
-    res = pow(c, d, n)
-
-    print(long_to_bytes(res))
+    chiffre = ...  # message chiffré (sous forme de nombre)
+    
+    clair = ...   # message déchiffré (sous forme de nombre) 
+    print(long_to_bytes(res)) # message déchiffré (sous forme de texte)
 
 
     ```
 
-    1. Analysez le programme ci-dessous pour y retrouver chaque étape du chiffrement RSA.
-    2. Exécutez le programme et regardez en console le contenu des différentes variables.
-    3. Observez les deux lignes qui contiennent les opérations de chiffrement et de déchiffrement : que faut-il changer pour chiffrer avec la clé privée et déchiffrer avec la clé publique ?
+    - Pour générer un grand nombre premier, on utilise la fonction ```Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)```.
+    - Pour inverser un nombre $x$ modulo $n$, on utilise la fonction    ```libnum.invmod(x, n)```.
+    - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
     correction(False,
     """
     ??? success \"Correction\" 
-        Q3. Il suffit d'inverser ```e``` et ```d```  dans les lignes 20 et 21.  
+        ```python linenums='1'
+        import Crypto
+        import libnum
+        from Crypto.Util.number import bytes_to_long, long_to_bytes
+        from Crypto.Random import get_random_bytes 
+
+        bits = 256
+        msg = 'en NSI on fait de la crypto'
+
+        p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+        q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+
+        n = p * q
+        phi = (p - 1) * (q - 1)
+
+        e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
+        d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
+
+        M = bytes_to_long(msg.encode('utf-8'))
+
+        c = pow(M, e, n) # M puissance e modulo n
+        res = pow(c, d, n)
+
+        print(long_to_bytes(res))
+
+
+        ```        
     """
     )
     }}
