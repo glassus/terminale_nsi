@@ -60,6 +60,10 @@ BTS Services informatiques aux organisations (SIO)
 - [https://www.eiffel-bordeaux.org/bts-services-informatiques-aux-organisations-sio.html](https://www.eiffel-bordeaux.org/bts-services-informatiques-aux-organisations-sio.html){. target="_blank"}
 - via Parcoursup
 
+### 6.3 Le BTS Cyberdéfense de Saint-Cyr
+- [BTS Cyber-Défense](https://rh-terre.defense.gouv.fr/actualites/item/518-bts-cyber-defense-l-armee-de-terre-fait-face-a-la-5e-dimension){. target="_blank"}
+- [Fiche Parcoursup](https://dossier.parcoursup.fr/Candidats/public/fiches/afficherFicheFormation?g_ta_cod=19449){. target="_blank"}
+
 
 ## 7. Les écoles privées post-bac à Bordeaux
 
