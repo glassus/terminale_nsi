@@ -3754,6 +3754,55 @@
 <li>Pour inverser un nombre <span class="arithmatex">\(x\)</span> modulo <span class="arithmatex">\(n\)</span>, on utilise la fonction    <code>libnum.invmod(x, n)</code>.</li>
 <li>Pour calculer <code>a</code> à la puissance <code>b</code> modulo <code>n</code>, on utilise <code>pow(a, b, n)</code>.</li>
 </ul>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">Crypto</span>
+<span class="kn">import</span> <span class="nn">libnum</span>
+<span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+<span class="kn">from</span> <span class="nn">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span> 
+
+<span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;en NSI on fait de la crypto&#39;</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Crypto</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">number</span><span class="o">.</span><span class="n">getPrime</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">randfunc</span><span class="o">=</span><span class="n">get_random_bytes</span><span class="p">)</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">Crypto</span><span class="o">.</span><span class="n">Util</span><span class="o">.</span><span class="n">number</span><span class="o">.</span><span class="n">getPrime</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">randfunc</span><span class="o">=</span><span class="n">get_random_bytes</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">libnum</span><span class="o">.</span><span class="n">invmod</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+
+<span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># M puissance e modulo n</span>
+<span class="n">res</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  4</p>
@@ -3810,7 +3859,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 février 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 février 2024</span>
   </span>
 
     
