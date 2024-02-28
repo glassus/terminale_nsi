@@ -14,11 +14,11 @@
         <link rel="prev" href="../../3.1_Diviser_pour_regner/exercices/">
       
       
-        <link rel="next" href="../exercices/">
+        <link rel="next" href="../TP_pyramides/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1563,6 +1563,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cours
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1572,6 +1583,118 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-retour-sur-la-suite-de-fibonacci" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Retour sur la suite de Fibonacci
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Retour sur la suite de Fibonacci">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-simple-et-inefficace" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Simple et inefficace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-se-souvenir-des-calculs-la-memoisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Se souvenir des calculs : la mémoïsation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quelques-remarques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Quelques remarques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-de-bas-en-haut" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 De bas en haut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-bilan-des-methodes-employees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Bilan des méthodes employées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programmation-dynamique-et-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Programmation dynamique et optimisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Programmation dynamique et optimisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-optimisation-dune-somme-dans-une-pyramide" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Optimisation d'une somme dans une pyramide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-optimisation-du-rendu-de-monnaie" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Optimisation du rendu de monnaie
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1585,11 +1708,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../exercices/" class="md-nav__link">
+      <a href="../TP_pyramides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercices
+    TP Pyramides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TP_rendu_monnaie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP Rendu de monnaie
   </span>
   
 
@@ -3611,6 +3755,253 @@
 
 <h1 id="programmation-dynamique">Programmation dynamique<a class="headerlink" href="#programmation-dynamique" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
+<p><img alt="image" class="center" src="../data/meme.webp" width="50%" /></p>
+<h2 id="1-retour-sur-la-suite-de-fibonacci">1. Retour sur la suite de Fibonacci<a class="headerlink" href="#1-retour-sur-la-suite-de-fibonacci" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-simple-et-inefficace">1.1 Simple et inefficace<a class="headerlink" href="#11-simple-et-inefficace" title="Permanent link">⚓︎</a></h3>
+<p>Comme nous l'avons déjà vu <a class="" href="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/cours/#4-exemples-de-recursivite-double" target="_blank">ici</a>,
+la suite de Fibonacci définie par :</p>
+<ul>
+<li><span class="arithmatex">\(F_0 = 0\)</span></li>
+<li><span class="arithmatex">\(F_1 = 1\)</span></li>
+<li><span class="arithmatex">\(\forall n \in \mathbb{N}, F_{n+2} = F_{n+1}+F_n\)</span></li>
+</ul>
+<p>se programme récursivement par :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>   
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Ce code, d'une grande simplicité, est malheureusement très inefficace.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Mesurer le temps de calcul de <code>fibo(40)</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>   
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">fibo</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Le temps de calcul est de plusieurs dizaines de secondes, sur une machine récente. C'est très mauvais !</p>
+</details>
+</div>
+<p>En cause : la multitude des appels récursifs nous conduit à refaire des calculs déjà effectués.</p>
+<p>Observons l'arbre d'appels de <code>fibo(6)</code> :</p>
+<p><img alt="image" class="center" src="../data/arbre.png" /></p>
+<p>Le calcul de <code>fibo(2)</code> se retrouve ainsi 5 fois dans l'arbre.</p>
+<p>Pour résoudre notre problème, nous l'avons divisé en problèmes plus petits, mais malheureusement pas indépendants : on dit que les problèmes se <strong>recouvrent</strong>, ce qui nous amène à refaire des choses déjà faites. </p>
+<p>Dans l'algorithme de dichotomie, ou du tri-fusion, les problèmes étaient indépendants et ne se recouvraient pas : on ne refaisait jamais deux fois la même chose. Ce n'est pas le cas ici.</p>
+<h3 id="12-se-souvenir-des-calculs-la-memoisation">1.2 Se souvenir des calculs : la mémoïsation<a class="headerlink" href="#12-se-souvenir-des-calculs-la-memoisation" title="Permanent link">⚓︎</a></h3>
+<p>Comment éviter de recalculer (par exemple) 5 fois <code>fibo(2)</code> ?</p>
+<p>L'idée générale est de stocker le résultat de chaque calcul, par exemple dans un dictionnaire. Ainsi, à chaque demande de calcul :</p>
+<ul>
+<li>Soit le calcul a déjà été effectué : on a donc juste à le lire dans le dictionnaire.</li>
+<li>Soit le calcul n'a jamais été effectué : on l'effectue, et <strong>on stocke le résultat dans le dictionnaire</strong>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Compléter le code suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dict_fibo</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dict_fibo</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dict_fibo</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dict_fibo</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>Mesurer le temps de calcul de <code>fibo(40)</code> et comparer avec la mesure de l'exercice 1.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Le temps de calcul est maintenant de l'ordre de <span class="arithmatex">\(10^{-5}\)</span> secondes. C'est un million (!!!) de fois plus rapide qu'à l'exercice 1.</p>
+</details>
+</div>
+<h3 id="13-quelques-remarques">1.3 Quelques remarques<a class="headerlink" href="#13-quelques-remarques" title="Permanent link">⚓︎</a></h3>
+<h4 id="131-juste-une-brute-force-plus-efficace">1.3.1 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Juste une brute-force plus efficace ?</strong><a class="headerlink" href="#131-juste-une-brute-force-plus-efficace" title="Permanent link">⚓︎</a></h4>
+<p>Notre technique de mémoïsation ne change pas vraiment la structure du programme : on continue de calculer toutes les valeurs intermédiaires, <strong>mais on ne les calcule qu'une seule fois.</strong></p>
+<p><img alt="image" class="center" src="../data/bf_vs_dp.jpg" width="40%" /></p>
+<h4 id="132-suppression-de-la-variable-globale">1.3.2 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Suppression de la variable globale</strong><a class="headerlink" href="#132-suppression-de-la-variable-globale" title="Permanent link">⚓︎</a></h4>
+<p>Dans le code précédent, le dictionnaire <code>dict_fibo</code> est à l'extérieur de la fonction. Un dictionnaire étant un type mutable, sa modification à l'intérieur de la fonction ne pose pas de problème. Toutefois, ce genre de pratique est déconseillé : si par exemple on appelle 2 fois la fonction <code>fibo</code>, le dictionnaire n'est pas réinitialisé entre-temps (ce qui dans notre cas n'est pas problématique, mais cela pourrait l'être). Comment éviter cela ?</p>
+<p>On peut utiliser une fonction <em>englobante</em> (appelée ici <code>fibonacci</code> ) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">dict_fibo</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+    <span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">dict_fibo</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="mi">12586269025</span>
+</code></pre></div>
+<p>Remarquez la définition d'une fonction <em>à l'intérieur</em> d'une autre. Cela ne pose aucun problème, mais attention, cette fonction n'existe pas à l'extérieur de sa fonction englobante.</p>
+<h4 id="133-memoisation-automatique-en-python">1.3.3 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Mémoïsation automatique en Python</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#133-memoisation-automatique-en-python" title="Permanent link">⚓︎</a></h4>
+<p>La fonction <code>lru_cache</code> du module <code>functools</code> permet de mémoïser automatiquement une fonction récursive. Il suffit, juste avant d'écrire la fonction, de mettre la ligne <code>@lru_cache</code> (appelée <em>décorateur</em>). </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="nd">@lru_cache</span>  <span class="c1">#(1)</span>
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1">#(2)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>   
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">fibo</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>«décorateur» de la fonction</li>
+<li>Ceci est notre VIEILLE fonction <code>fibo</code>, extrêmement lente...</li>
+</ol>
+<p>Essayez en commentant / décommentant la ligne 4... c'est magique !</p>
+<h3 id="14-de-bas-en-haut">1.4 De bas en haut<a class="headerlink" href="#14-de-bas-en-haut" title="Permanent link">⚓︎</a></h3>
+<p>La structure récursive naturelle de la suite de Fibonacci nous a conduit vers un programme qui calcule (ou plutôt <em>appelle</em>) les valeurs <em>de haut en bas</em>. (méthode <em>top-down</em>)</p>
+<p>Et si on commençait par le bas ?</p>
+<p>Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on commencerait par calculer le 3ème, puis le 4ème, puis le 5ème et enfin le 6ème.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p>Compléter le code ci-dessous :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">dict_fibo</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="n">dict_fibo</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">+</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">dict_fibo</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">dict_fibo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">dict_fibo</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p>Cette méthode itérative part du bas pour aller vers le haut. On parle de méthode <em>bottom-up</em>. 
+De manière plus générale, cette méthode est basée sur le fait de résoudre des problèmes de petite taille, puis de plus en plus gros, jusqu'au problème final.</p>
+<h3 id="15-bilan-des-methodes-employees">1.5 Bilan des méthodes employées<a class="headerlink" href="#15-bilan-des-methodes-employees" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Principes de programmation dynamique <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li>
+<p>Lors d'un calcul effectué de manière récursive, il peut arriver que de multiples appels récursifs soient identiques. Pour éviter de recalculer plusieurs fois la même chose, on peut stocker les résultats intermédiaires. On appelle cette technique la <strong>mémoïsation</strong>.<br />
+Cette technique minimise le nombre d'opérations et accélère grandement l'exécution du programme. Le prix à payer est l'utilisation d'une structure de stockage des valeurs intermédiaires, et donc une augmentation de la mémoire utilisée par le programme.</p>
+</li>
+<li>
+<p>Lors d'un calcul effectué de manière itérative, il est parfois plus simple de commencer par une «petite» version du problème pour progressivement remonter vers la solution du problème global.</p>
+</li>
+</ul>
+</div>
+<h2 id="2-programmation-dynamique-et-optimisation">2. Programmation dynamique et optimisation<a class="headerlink" href="#2-programmation-dynamique-et-optimisation" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-optimisation-dune-somme-dans-une-pyramide">2.1 Optimisation d'une somme dans une pyramide<a class="headerlink" href="#21-optimisation-dune-somme-dans-une-pyramide" title="Permanent link">⚓︎</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Problème</p>
+<p>Considérons la pyramide ci-dessous :</p>
+<p><img alt="image" class="center" src="../data/pyrvide.png" width="20%" /></p>
+<p>En partant du sommet et en descendant soit à gauche soit à droite, quel chemin donne la somme maximale en arrivant en bas ?</p>
+<p><img alt="image" class="center" src="../data/pyrexsommes.png" width="75%" /></p>
+</div>
+<p>La suite : <a class="md-button" href="../TP_pyramides/" target="_blank">TP Pyramides</a></p>
+<h2 id="22-optimisation-du-rendu-de-monnaie">2.2 Optimisation du rendu de monnaie<a class="headerlink" href="#22-optimisation-du-rendu-de-monnaie" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Problème</p>
+<p><img alt="image" class="center" src="../data/francs.png" width="75%" /></p>
+<p>Étant donnés une liste de pièces <code>pieces</code> et une somme à rendre <code>somme</code>, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?</p>
+</div>
+<p>La suite : <a class="md-button" href="../TP_rendu_monnaie/" target="_blank">TP Rendu de monnaie</a></p>
 
 
 
@@ -3631,7 +4022,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 juillet 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 février 2024</span>
   </span>
 
     
