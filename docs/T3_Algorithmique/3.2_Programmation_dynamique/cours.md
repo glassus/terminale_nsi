@@ -70,7 +70,7 @@ Pour résoudre notre problème, nous l'avons divisé en problèmes plus petits, 
 
 Dans l'algorithme de dichotomie, ou du tri-fusion, les problèmes étaient indépendants et ne se recouvraient pas : on ne refaisait jamais deux fois la même chose. Ce n'est pas le cas ici.
 
-### 1.2 Se souvenir des calculs : la mémoïsation
+### 1.2 Se souvenir <strike>des belles choses</strike> des calculs : la mémoïsation
 
 Comment éviter de recalculer (par exemple) 5 fois ```fibo(2)``` ?
 
