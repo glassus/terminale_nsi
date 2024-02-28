@@ -3720,7 +3720,7 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Compléter la fonction <code>rendu_glouton</code> qui prend en paramètres une liste de pièces <code>pieces</code> (classées dans l'ordre croissant) et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3740,7 +3740,9 @@
             <span class="n">i</span> <span class="o">-=</span> <span class="o">...</span>   
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
-1. Attention, les pièces sont classées dans l'ordre <strong>croissant</strong>.</p>
+<ol>
+<li>Attention, les pièces sont classées dans l'ordre <strong>croissant</strong>.</li>
+</ol>
 <p><em>Exemple d'utilisation :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
 <span class="mi">3</span>
@@ -3841,13 +3843,13 @@
 </code></pre></div>
 <p><img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f622.svg" title=":cry:" /></p>
 <p>Le nombre d'appels récursifs de notre algorithme augmente exponentiellement avec la valeur de la somme à rendre : on se retrouve très rapidement avec des milliards d'appels récursifs, ce qui n'est pas gérable.</p>
-<p>Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. </p>
+<p>Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura beaucoup (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. </p>
 <p>On peut donc légitimement penser à <strong>mémoïser</strong> notre algorithme, en stockant les valeurs pour éviter de les recalculer.</p>
 <h2 id="3-algorithme-recursif-memoise">3. Algorithme récursif memoïsé<a class="headerlink" href="#3-algorithme-recursif-memoise" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
 <p>Compléter la fonction <code>rendu_recursif_memoise</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
-<p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à somme <code>somme</code> son nombre de pièces minimal. </p>
+<p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à chaque somme <code>somme</code> son nombre de pièces minimal. </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3907,7 +3909,7 @@
 <p class="admonition-title">Exercice  4</p>
 <p>Compléter la fonction <code>rendu_bottom_up</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.    </p>
 <p>Nous stockerons chaque rendu dans un dictionnaire <code>rendu</code>, initialisé à la valeur 0 pour la clé 0.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3923,8 +3925,10 @@
                 <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">...</span>   
 </code></pre></div></td></tr></table></div>
-1. Attention, il faut aller jusqu'à la valeur <code>somme</code>. 
-2. Nombre de pièces dans le pire des cas.</p>
+<ol>
+<li>Attention, il faut aller jusqu'à la valeur <code>somme</code>. </li>
+<li>Nombre de pièces dans le pire des cas.</li>
+</ol>
 <details class="success">
 <summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>

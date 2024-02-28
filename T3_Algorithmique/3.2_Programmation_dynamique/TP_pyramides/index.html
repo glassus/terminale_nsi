@@ -3968,7 +3968,7 @@
 <details class="success">
 <summary>Correction</summary>
 <p>Notre algorithme renvoie 25 au lieu de 30. Il ne nous donne donc pas le meilleur résultat.</p>
-<p>Cela ne nous pas nous étonner, car la succession de meilleurs choix locaux ne donne pas forcément le meilleur choix global.</p>
+<p>Cela ne doit pas nous étonner, car la succession de meilleurs choix locaux ne donne pas forcément le meilleur choix global.</p>
 </details>
 </div>
 <h2 id="4-recherche-par-methode-recursive">4. Recherche par méthode récursive<a class="headerlink" href="#4-recherche-par-methode-recursive" title="Permanent link">⚓︎</a></h2>
@@ -4123,7 +4123,10 @@
 <p>Dans la figure ci-dessus, le chemin surligné est le chemin de longueur minimale entre A et C. </p>
 <p>Ce chemin passe par B. </p>
 <p>On peut donc en déduire que la portion de ce chemin entre B et C (portion rouge) est le chemin minimal entre B et C.</p>
+<blockquote>
 <p>On peut le démontrer facilement <em>par l'absurde</em> : si le chemin rouge n'est pas le chemin minimal entre B et C, alors il en existe un autre qui est minimal (par exemple le violet). En emprutant ce chemin à partir de B, on pourrait donc construire entre A et C un chemin plus court que le chemin surligné, ce qui est impossible.</p>
+</blockquote>
+<p>De manière analogue, on peut affirmer ceci : si le chemin minimal passe par B, alors la portion de ce chemin minimal entre B et C est forcément le chemin rouge.</p>
 </div>
 <p>Nous allons exploiter une idée similaire pour maximiser le parcours dans notre pyramide.</p>
 <p><img alt="image" class="center" src="../data/bup.png" width="25%" /></p>
