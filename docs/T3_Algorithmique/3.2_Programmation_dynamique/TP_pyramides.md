@@ -222,7 +222,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     ??? success \"Correction\" 
         Notre algorithme renvoie 25 au lieu de 30. Il ne nous donne donc pas le meilleur résultat.
 
-        Cela ne nous pas nous étonner, car la succession de meilleurs choix locaux ne donne pas forcément le meilleur choix global.
+        Cela ne doit pas nous étonner, car la succession de meilleurs choix locaux ne donne pas forcément le meilleur choix global.
     """
     )
     }} 
@@ -374,7 +374,9 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
 
     On peut donc en déduire que la portion de ce chemin entre B et C (portion rouge) est le chemin minimal entre B et C.
 
-    On peut le démontrer facilement *par l'absurde* : si le chemin rouge n'est pas le chemin minimal entre B et C, alors il en existe un autre qui est minimal (par exemple le violet). En emprutant ce chemin à partir de B, on pourrait donc construire entre A et C un chemin plus court que le chemin surligné, ce qui est impossible.
+    > On peut le démontrer facilement *par l'absurde* : si le chemin rouge n'est pas le chemin minimal entre B et C, alors il en existe un autre qui est minimal (par exemple le violet). En emprutant ce chemin à partir de B, on pourrait donc construire entre A et C un chemin plus court que le chemin surligné, ce qui est impossible.
+
+    De manière analogue, on peut affirmer ceci : si le chemin minimal passe par B, alors la portion de ce chemin minimal entre B et C est forcément le chemin rouge.
 
 Nous allons exploiter une idée similaire pour maximiser le parcours dans notre pyramide.
 

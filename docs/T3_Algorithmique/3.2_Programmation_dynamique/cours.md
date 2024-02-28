@@ -248,7 +248,7 @@ De manière plus générale, cette méthode est basée sur le fait de résoudre 
 
 La suite : [TP Pyramides](./TP_pyramides.md){. target="_blank" .md-button }
 
-## 2.2 Optimisation du rendu de monnaie
+### 2.2 Optimisation du rendu de monnaie
 
 !!! question "Problème"
 

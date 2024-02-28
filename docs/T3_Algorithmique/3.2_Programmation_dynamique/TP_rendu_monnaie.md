@@ -35,6 +35,7 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaq
                 i -= ...   
         return ...
     ```
+
     1. Attention, les pièces sont classées dans l'ordre **croissant**.
 
     *Exemple d'utilisation :*
@@ -150,7 +151,7 @@ RecursionError: maximum recursion depth exceeded in comparison
 
 Le nombre d'appels récursifs de notre algorithme augmente exponentiellement avec la valeur de la somme à rendre : on se retrouve très rapidement avec des milliards d'appels récursifs, ce qui n'est pas gérable.
 
-Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. 
+Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura beaucoup (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. 
 
 On peut donc légitimement penser à **mémoïser** notre algorithme, en stockant les valeurs pour éviter de les recalculer.
 
@@ -160,7 +161,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
 !!! example "{{ exercice() }}"
     Compléter la fonction ```rendu_recursif_memoise``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
 
-    On utilisera le dictionnaire ```memo_rendu``` dans lequel on associera à somme ```somme``` son nombre de pièces minimal. 
+    On utilisera le dictionnaire ```memo_rendu``` dans lequel on associera à chaque somme ```somme``` son nombre de pièces minimal. 
     
     ```python linenums='1'
     memo_rendu = {}
@@ -232,6 +233,7 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
                     rendu[s] = min(..., ... + ...)
         return ...   
     ```
+    
     1. Attention, il faut aller jusqu'à la valeur ```somme```. 
     2. Nombre de pièces dans le pire des cas.
 
