@@ -145,6 +145,11 @@ with open("Les_Miserables.txt") as f:
         ![image](data/mickey.jpg){: .center width=40%}
         
 
+        ???+ tip "Illustration de l'algorithme"
+            <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/naive_envers.gif" speed="1" play></gif-player>
+
+            _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
+
     === "Correction"
         ```python linenums='1'
         def presqueBMH(texte, motif):
