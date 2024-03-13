@@ -1,36 +1,28 @@
 Écrire une fonction `ecriture_binaire_entier_positif` qui prend en paramètre un
-entier positif `n` et renvoie une liste d'entiers correspondant à l‘écriture binaire de `n`.
+entier positif `n` et renvoie une une chaine de caractère correspondant à l‘écriture binaire de `n`.
 
 
-Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.
+On rappelle que :
+
+- l’écriture binaire de 25 est 11001 car $25 = 1 \times 24 + 1 \times 23 + 0 \times 22 + 0 \times 21 + 1 \times 20$ ;
+- `n % 2` vaut 0 ou 1 selon que `n` est pair ou impair ;
+- `n // 2`  donne le quotient de la division euclidienne de `n` par 2.
+
+
+Il est interdit dans cet exercice d’utiliser la fonction `bin` de Python.
 
 
 Exemples :
 
 ```python
+>>> 5 % 2
+1
+>>> 5 // 2
+2
 >>> ecriture_binaire_entier_positif(0)
-[0]
+'0'
 >>> ecriture_binaire_entier_positif(2)
-[1, 0]
+'10'
 >>> ecriture_binaire_entier_positif(105)
-[1, 1, 0, 1, 0, 0, 1]
+'1101001'
 ```
-
-Aide :
-
-- l'opérateur `//` donne le quotient de la division euclidienne : `5//2` donne `2` ;
-- l'opérateur `%` donne le reste de la division euclidienne :` 5%2` donne `1` ;
-- `append` est une méthode qui ajoute un élément à une liste existante :
-Soit `T=[5,2,4]`, alors `T.append(10)` ajoute `10` à la liste `T`. Ainsi, `T` devient
-`[5,2,4,10]`.
-- `reverse` est une méthode qui renverse les éléments d'une liste.
-Soit `T=[5,2,4,10]`. Après `T.reverse()`, la liste devient `[10,4,2,5]`.
-
-On remarquera qu’on récupère la représentation binaire d’un entier `n` en partant de la gauche en appliquant successivement les instructions :
-
-`b = n%2`
-
-`n = n//2`
-
-répétées autant que nécessaire.

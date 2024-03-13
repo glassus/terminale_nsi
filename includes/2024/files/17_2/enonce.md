@@ -6,16 +6,22 @@ des divisions successives comme illustré ici :
 Voici une fonction Python basée sur la méthode des divisions successives permettant de
 convertir un nombre entier positif en binaire :
 
+Compléter la fonction ```binaire```
+
 ```python linenums='1'
 def binaire(a):
-    bin_a = str(...)
-    a = a // 2
-    while a ... :
-        bin_a = ...(a%2) + ...
-        a = ...
+    '''convertit un nombre entier a en sa representation 
+    binaire sous forme de chaine de caractères.'''
+    if a == 0:
+        return '0'
+    bin_a = ... 
+    while ...: 
+        bin_a = ... + bin_a 
+        a = ... 
     return bin_a
+
 ```
-Compléter la fonction ```binaire```.
+.
 
 Exemples :
 

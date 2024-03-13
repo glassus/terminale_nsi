@@ -1,6 +1,5 @@
 Écrire une fonction Python appelée `nb_repetitions` qui prend en paramètres un
-élément `elt` et une liste `tab` et renvoie le nombre de fois où l’élément apparaît dans la
-liste.
+élément `elt` et un tableau `tab` (type `list`) et renvoie le nombre de fois où l’élément apparaît dans le tableau.
 
 Exemples :
 ```python

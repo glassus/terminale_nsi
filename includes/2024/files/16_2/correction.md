@@ -1,16 +1,18 @@
-```python linenums='1' hl_lines='6 8-10'
-def tri_bulles(T):
-    '''
-    Renvoie le tableau T trié par ordre croissant
-    '''
-    n = len(T)
-    for i in range(n-1,-1,-1):
-        for j in range(i):
-            if T[j] > T[j+1]:
-                temp = T[j]
-                T[j] = T[j+1]
-                T[j+1] = temp
-    return T
+```python linenums='1' hl_lines='3-5 11-14'
+def echange(tab, i, j):
+    '''Echange les éléments d'indice i et j dans le tableau tab.'''
+    temp = tab[i] 
+    tab[i] = tab[j] 
+    tab[j] = temp 
+
+def tri_bulles(tab):
+    '''Trie le tableau tab dans l'ordre croissant
+    par la méthode du tri à bulles.'''
+    n = len(tab)
+    for i in range(n-1, -1, -1): 
+        for j in range(i): 
+            if tab[j] > tab[j+1]: 
+                echange(tab, j, j+1) 
 
 
 ```
