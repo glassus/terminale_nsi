@@ -4056,16 +4056,16 @@ qu’on ne « retombe » pas sur l’expéditeur initial,</li>
 <span class="sd">    D, E, F).</span>
 <span class="sd">    Renvoie True si le plan d&#39;envoi de messages est cyclique et </span>
 <span class="sd">    False sinon.&#39;&#39;&#39;</span>
-<span class="hll">    <span class="n">expediteur</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
-</span><span class="hll">    <span class="n">destinataire</span> <span class="o">=</span> <span class="n">plan</span><span class="p">[</span><span class="n">expediteur</span><span class="p">]</span>
+    <span class="n">expediteur</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
+<span class="hll">    <span class="n">destinataire</span> <span class="o">=</span> <span class="n">plan</span><span class="p">[</span><span class="n">expediteur</span><span class="p">]</span>
 </span>    <span class="n">nb_destinaires</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="hll">
-</span><span class="hll">    <span class="k">while</span> <span class="n">destinataire</span> <span class="o">!=</span> <span class="n">expediteur</span><span class="p">:</span>
-</span><span class="hll">        <span class="n">destinataire</span> <span class="o">=</span> <span class="n">plan</span><span class="p">[</span><span class="n">destinataire</span><span class="p">]</span>
-</span>        <span class="n">nb_destinaires</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="hll">
-</span>    <span class="k">return</span> <span class="n">nb_destinaires</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 
+    <span class="k">while</span> <span class="n">destinataire</span> <span class="o">!=</span> <span class="n">expediteur</span><span class="p">:</span>
+<span class="hll">        <span class="n">destinataire</span> <span class="o">=</span> <span class="n">plan</span><span class="p">[</span><span class="n">destinataire</span><span class="p">]</span>
+</span><span class="hll">        <span class="n">nb_destinaires</span> <span class="o">+=</span> <span class="mi">1</span>
+</span>
+<span class="hll">    <span class="k">return</span> <span class="n">nb_destinaires</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+</span>
 <span class="c1">#tests</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">}))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">}))</span>
@@ -6072,11 +6072,13 @@ donnée. Chaque note est associée à un coefficient qui la pondère.</p>
 <p>Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coeffi-
 cient 2, sa moyenne pondérée sera donnée par</p>
 <div class="arithmatex">\[\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... \]</div>
-<p>Écrire une fonction <code>moyenne</code> :
-- qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
-de la forme <code>(note, coefficient)</code> (<code>int</code> ou <code>float</code>) positifs ou nuls ;
-- et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
-somme des coefficients est non nulle, <code>None</code> sinon.</p>
+<p>Écrire une fonction <code>moyenne</code> :</p>
+<ul>
+<li>qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
+de la forme <code>(note, coefficient)</code> (<code>int</code> ou <code>float</code>) positifs ou nuls ;</li>
+<li>et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
+somme des coefficients est non nulle, <code>None</code> sinon.</li>
+</ul>
 <p>Exemple :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)])</span>
 <span class="mf">9.142857142857142</span>
@@ -6114,6 +6116,7 @@ cient 2, sa moyenne pondérée sera donnée par
 $$\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... $$
 
 Écrire une fonction `moyenne` :
+
 - qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
 de la forme `(note, coefficient)` (`int` ou `float`) positifs ou nuls ;
 - et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
@@ -6479,16 +6482,16 @@ def dessin_zoom(grille,k):
 <div class="tabbed-set tabbed-alternate" data-tabs="21:3"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><input id="__tabbed_21_3" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Énoncé</label><label for="__tabbed_21_2">Correction</label><label for="__tabbed_21_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Pour cet exercice :</p>
+<p>Dans cet exercice, on considère des phrases composées de mots.</p>
 <ul>
 <li>
 <p>On appelle « mot » une chaîne de caractères composée avec des caractères choisis
 parmi les 26 lettres minuscules ou majuscules de l'alphabet,</p>
 </li>
 <li>
-<p>On appelle « phrase » une chaîne de caractères :</p>
+<p>On appelle <em>phrase</em> une chaîne de caractères :</p>
 <ul>
-<li>composée avec un ou plusieurs « mots » séparés entre eux par un seul
+<li>composée avec un ou plusieurs <em>mots</em> séparés entre eux par un seul
 caractère espace <code>' '</code>,</li>
 <li>se finissant :<ul>
 <li>soit par un point <code>'.'</code> qui est alors collé au dernier mot,</li>
@@ -6499,7 +6502,7 @@ séparé du dernier mot par un seul caractère espace <code>' '</code>.</li>
 </ul>
 </li>
 </ul>
-<p><em>Exemples :</em></p>
+<p>Voici deux exemples de phrases :</p>
 <ul>
 <li>'Cet exercice est simple.'</li>
 <li>'Le point d exclamation est separe !'</li>
@@ -6507,10 +6510,10 @@ séparé du dernier mot par un seul caractère espace <code>' '</code>.</li>
 <p>Après avoir remarqué le lien entre le nombre de mots et le nombres de caractères espace
 dans une phrase, programmer une fonction <code>nombre_de_mots</code> qui prend en paramètre une
 phrase et renvoie le nombre de mots présents dans cette phrase.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Le point d exclamation est separe !&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Cet exercice est simple.&#39;</span><span class="p">)</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Le point d exclamation est séparé !&#39;</span><span class="p">)</span>
 <span class="mi">6</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Il y a un seul espace entre les mots !&#39;</span><span class="p">)</span>
-<span class="mi">9</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Combien de mots y a t il dans cette phrase ?&#39;</span><span class="p">)</span>
 <span class="mi">10</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_de_mots</span><span class="p">(</span><span class="s1">&#39;Fin.&#39;</span><span class="p">)</span>
@@ -6532,20 +6535,20 @@ phrase et renvoie le nombre de mots présents dans cette phrase.</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Pour cet exercice :
+<div class="highlight"><pre><span></span><code>Dans cet exercice, on considère des phrases composées de mots.
 
 - On appelle « mot » une chaîne de caractères composée avec des caractères choisis
 parmi les 26 lettres minuscules ou majuscules de l&#39;alphabet,
 
-- On appelle « phrase » une chaîne de caractères :
-    - composée avec un ou plusieurs « mots » séparés entre eux par un seul
+- On appelle *phrase* une chaîne de caractères :
+    - composée avec un ou plusieurs *mots* séparés entre eux par un seul
 caractère espace `&#39; &#39;`,
     - se finissant :
         - soit par un point `&#39;.&#39;` qui est alors collé au dernier mot,
         - soit par un point d&#39;exclamation `&#39;!&#39;` ou d&#39;interrogation `&#39;?&#39;` qui est alors
 séparé du dernier mot par un seul caractère espace `&#39; &#39;`.
 
-*Exemples :*
+Voici deux exemples de phrases :
 
 - &#39;Cet exercice est simple.&#39;
 - &#39;Le point d exclamation est separe !&#39;
@@ -6555,10 +6558,10 @@ dans une phrase, programmer une fonction `nombre_de_mots` qui prend en paramètr
 phrase et renvoie le nombre de mots présents dans cette phrase.
 
 ```python
-&gt;&gt;&gt; nombre_de_mots(&#39;Le point d exclamation est separe !&#39;)
+&gt;&gt;&gt; nombre_de_mots(&#39;Cet exercice est simple.&#39;)
+4
+&gt;&gt;&gt; nombre_de_mots(&#39;Le point d exclamation est séparé !&#39;)
 6
-&gt;&gt;&gt; nombre_de_mots(&#39;Il y a un seul espace entre les mots !&#39;)
-9
 &gt;&gt;&gt; nombre_de_mots(&#39;Combien de mots y a t il dans cette phrase ?&#39;)
 10
 &gt;&gt;&gt; nombre_de_mots(&#39;Fin.&#39;)
@@ -6576,7 +6579,11 @@ phrase et renvoie le nombre de mots présents dans cette phrase.
 <div class="tabbed-set tabbed-alternate" data-tabs="22:3"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><input id="__tabbed_22_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Énoncé</label><label for="__tabbed_22_2">Correction</label><label for="__tabbed_22_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>La classe ABR ci-dessous permet d'implémenter une structure d'arbre binaire de recherche.</p>
+<p>Un arbre binaire de recherche est soit vide, représenté en Python par la valeur None, soit
+un nœud, contenant une étiquette et deux sous-arbres gauche et droit et représenté par
+une instance de la classe Noeud donnée ci-dessous.</p>
+<p>On considère ici que les étiquettes des nœuds sont des entiers et que les arbres binaires de
+recherche considérés ne contiennent pas de doublons.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -6597,83 +6604,41 @@ phrase et renvoie le nombre de mots présents dans cette phrase.
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etiquette</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode constructeur pour la classe Noeud.</span>
-<span class="sd">        Paramètre d&#39;entrée : valeur (str)&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+<span class="sd">        Crée une feuille d&#39;étiquette donnée.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etiquette</span> <span class="o">=</span> <span class="n">etiquette</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">getValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode accesseur pour obtenir la valeur du noeud</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
-
-    <span class="k">def</span> <span class="nf">droitExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant droit existe</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">gaucheExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant gauche existe</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
-
     <span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode d&#39;insertion de clé dans un arbre binaire de recherche</span>
-<span class="sd">        Paramètre d&#39;entrée : cle (int)&#39;&#39;&#39;</span>
-        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>
-            <span class="c1"># on insère à gauche</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaucheExiste</span><span class="p">():</span>
-                <span class="c1"># on descend à gauche et on retente l&#39;insertion de la clé</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Insère la clé dans l&#39;arbre binaire de recherche</span>
+<span class="sd">        en préservant sa structure.&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">etiquette</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="o">...</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># on crée un fils gauche</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="k">elif</span> <span class="n">cle</span> <span class="o">&gt;</span> <span class="o">...</span> <span class="p">:</span>
-            <span class="c1"># on insère à droite</span>
-            <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
-                <span class="c1"># on descend à droite et on retente l&#39;insertion de la clé</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="o">...</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="o">...</span>
                 <span class="o">...</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># on crée un fils droit</span>
-                <span class="o">...</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+                <span class="o">...</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> 
 </code></pre></div></td></tr></table></div>
-<p>Compléter la fonction récursive <code>inserer</code> afin qu'elle permette d’insérer un nœud
-dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
+<p>Compléter la méthode récursive <code>inserer</code> afin qu’elle permette d’insérer une clé dans
+l’arbre binaire de recherche non vide sur lequel on l’appelle.</p>
 <p>Voici un exemple d'utilisation :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
         <span class="n">arbre</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">9</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">6</span>
 </code></pre></div>
 </div>
@@ -6698,131 +6663,73 @@ dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etiquette</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode constructeur pour la classe Noeud.</span>
-<span class="sd">        Paramètre d&#39;entrée : valeur (str)&#39;&#39;&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+<span class="sd">        Crée une feuille d&#39;étiquette donnée.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">etiquette</span> <span class="o">=</span> <span class="n">etiquette</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">getValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode accesseur pour obtenir la valeur du noeud</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
-
-    <span class="k">def</span> <span class="nf">droitExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant droit existe</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">gaucheExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant gauche existe</span>
-<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
-
     <span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode d&#39;insertion de clé dans un arbre binaire de recherche</span>
-<span class="sd">        Paramètre d&#39;entrée : cle (int)&#39;&#39;&#39;</span>
-<span class="hll">        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">:</span>
-</span>            <span class="c1"># on insère à gauche</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaucheExiste</span><span class="p">():</span>
-                <span class="c1"># on descend à gauche et on retente l&#39;insertion de la clé</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Insère la clé dans l&#39;arbre binaire de recherche</span>
+<span class="sd">        en préservant sa structure.&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">etiquette</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
 <span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 </span>            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># on crée un fils gauche</span>
-<span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-</span><span class="hll">        <span class="k">elif</span> <span class="n">cle</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">:</span>
-</span>            <span class="c1"># on insère à droite</span>
-<span class="hll">            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droitExiste</span><span class="p">():</span>
-</span>                <span class="c1"># on descend à droite et on retente l&#39;insertion de la clé</span>
-<span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+<span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> 
+</span>        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+</span><span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 </span>            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># on crée un fils droit</span>
-<span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+<span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> 
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>La classe ABR ci-dessous permet d&#39;implémenter une structure d&#39;arbre binaire de recherche.
+<div class="highlight"><pre><span></span><code>Un arbre binaire de recherche est soit vide, représenté en Python par la valeur None, soit
+un nœud, contenant une étiquette et deux sous-arbres gauche et droit et représenté par
+une instance de la classe Noeud donnée ci-dessous.
+
+On considère ici que les étiquettes des nœuds sont des entiers et que les arbres binaires de
+recherche considérés ne contiennent pas de doublons.
 
 ```python linenums=&#39;1&#39;
 class Noeud:
-    def <span class="gs">__init__</span>(self, valeur):
+    def <span class="gs">__init__</span>(self, etiquette):
         &#39;&#39;&#39;Méthode constructeur pour la classe Noeud.
-        Paramètre d&#39;entrée : valeur (str)&#39;&#39;&#39;
-        self.valeur = valeur
+        Crée une feuille d&#39;étiquette donnée.&#39;&#39;&#39;
+        self.etiquette = etiquette
         self.gauche = None
         self.droit = None
 
-    def getValeur(self):
-        &#39;&#39;&#39;Méthode accesseur pour obtenir la valeur du noeud
-        Aucun paramètre en entrée&#39;&#39;&#39;
-        return self.valeur
-
-    def droitExiste(self):
-        &#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant droit existe
-        Aucun paramètre en entrée&#39;&#39;&#39;
-        return (self.droit is not None)
-
-    def gaucheExiste(self):
-        &#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant gauche existe
-        Aucun paramètre en entrée&#39;&#39;&#39;
-        return (self.gauche is not None)
-
     def inserer(self, cle):
-        &#39;&#39;&#39;Méthode d&#39;insertion de clé dans un arbre binaire de recherche
-        Paramètre d&#39;entrée : cle (int)&#39;&#39;&#39;
-        if cle &lt; ...:
-            # on insère à gauche
-            if self.gaucheExiste():
-                # on descend à gauche et on retente l&#39;insertion de la clé
+        &#39;&#39;&#39;Insère la clé dans l&#39;arbre binaire de recherche
+        en préservant sa structure.&#39;&#39;&#39;
+        if cle &lt; self.etiquette:
+            if self.gauche != None:
                 ...
             else:
-                # on crée un fils gauche
-                self.gauche = ...
-        elif cle &gt; ... :
-            # on insère à droite
-            if ... :
-                # on descend à droite et on retente l&#39;insertion de la clé
+                self.gauche = ... 
+        else:
+            ...
                 ...
             else:
-                # on crée un fils droit
-                ... = Noeud(cle)
+                ... = Noeud(cle) 
 </code></pre></div>
-<p>Compléter la fonction récursive <code>inserer</code> afin qu'elle permette d’insérer un nœud
-dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
+<p>Compléter la méthode récursive <code>inserer</code> afin qu’elle permette d’insérer une clé dans
+l’arbre binaire de recherche non vide sur lequel on l’appelle.</p>
 <p>Voici un exemple d'utilisation :</p>
 <p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
         <span class="n">arbre</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">9</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">etiquette</span>
 <span class="mi">6</span>
 </code></pre></div>
 ```             </p>
@@ -6839,19 +6746,20 @@ dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="23:3"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><input id="__tabbed_23_3" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Énoncé</label><label for="__tabbed_23_2">Correction</label><label for="__tabbed_23_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Écrire une fonction <code>tri_selection</code> qui prend en paramètre une liste <code>tab</code> de nombres
-entiers et qui renvoie la liste triée par ordre croissant. Il est demandé de ne pas créer de
-nouvelle liste mais de modifier celle fournie.</p>
+<p>Écrire une fonction <code>tri_selection</code> qui prend en paramètre un tableau <code>tab</code> de nombres
+entiers (type <code>list</code>) et qui le modifie afin qu’il soit trié par ordre croissant.</p>
 <p>On utilisera l’algorithme suivant :</p>
 <ul>
-<li>on recherche le plus petit élément de la liste, en la parcourant du rang 0 au dernier
-rang, et on l'échange avec l'élément d'indice 0 ;</li>
-<li>on recherche ensuite le plus petit élément de la liste restreinte du rang 1 au dernier
-rang, et on l'échange avec l'élément d'indice 1 ;</li>
-<li>on continue de cette façon jusqu'à ce que la liste soit entièrement triée.</li>
+<li>on recherche le plus petit élément du tableau, en la parcourant du rang 0 au dernier
+rang, et on l’échange avec l’élément d’indice 0 ;</li>
+<li>on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier
+rang, et on l’échange avec l’élément d’indice 1 ;</li>
+<li>on continue de cette façon jusqu’à ce que le tableau soit entièrement trié.</li>
 </ul>
 <p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_selection</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_selection</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span>
 <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
@@ -6874,21 +6782,22 @@ rang, et on l'échange avec l'élément d'indice 1 ;</li>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Écrire une fonction `tri_selection` qui prend en paramètre une liste `tab` de nombres
-entiers et qui renvoie la liste triée par ordre croissant. Il est demandé de ne pas créer de
-nouvelle liste mais de modifier celle fournie.
+<div class="highlight"><pre><span></span><code>Écrire une fonction `tri_selection` qui prend en paramètre un tableau `tab` de nombres
+entiers (type `list`) et qui le modifie afin qu’il soit trié par ordre croissant.
 
 On utilisera l’algorithme suivant :
 
-- on recherche le plus petit élément de la liste, en la parcourant du rang 0 au dernier
-rang, et on l&#39;échange avec l&#39;élément d&#39;indice 0 ;
-- on recherche ensuite le plus petit élément de la liste restreinte du rang 1 au dernier
-rang, et on l&#39;échange avec l&#39;élément d&#39;indice 1 ;
-- on continue de cette façon jusqu&#39;à ce que la liste soit entièrement triée.
+- on recherche le plus petit élément du tableau, en la parcourant du rang 0 au dernier
+rang, et on l’échange avec l’élément d’indice 0 ;
+- on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier
+rang, et on l’échange avec l’élément d’indice 1 ;
+- on continue de cette façon jusqu’à ce que le tableau soit entièrement trié.
 
 Exemple :
 ```python
-&gt;&gt;&gt; tri_selection([1, 52, 6, -9, 12])
+&gt;&gt;&gt; tab = [1, 52, 6, -9, 12]
+&gt;&gt;&gt; tri_selection(tab)
+&gt;&gt;&gt; tab
 [-9, 1, 6, 12, 52]
 ```
 </code></pre></div>
@@ -6904,15 +6813,15 @@ Exemple :
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.</p>
-<p>Un élève de NSI décide de le coder en langage Python de la manière suivante :</p>
+<p>Une élève de NSI décide de le coder en langage Python de la manière suivante :</p>
 <ul>
 <li>le programme génère un nombre entier aléatoire compris entre 1 et 99 ;</li>
-<li>si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;</li>
-<li>si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;</li>
-<li>si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ;</li>
-<li>si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd.</li>
+<li>si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;</li>
+<li>si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;</li>
+<li>si l’utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;</li>
+<li>si l’utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.</li>
 </ul>
 <p>La fonction <code>randint</code> est utilisée.<br />
 Si a et b sont des entiers tels que <code>a &lt;= b</code>, <code>randint(a,b)</code> renvoie un
@@ -7000,15 +6909,15 @@ nombre entier compris entre <code>a</code> et <code>b</code>.</p>
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code>Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.
 
-Un élève de NSI décide de le coder en langage Python de la manière suivante :
+Une élève de NSI décide de le coder en langage Python de la manière suivante :
 
 <span class="k">-</span><span class="w"> </span>le programme génère un nombre entier aléatoire compris entre 1 et 99 ;
-<span class="k">-</span><span class="w"> </span>si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;
-<span class="k">-</span><span class="w"> </span>si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;
-<span class="k">-</span><span class="w"> </span>si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ;
-<span class="k">-</span><span class="w"> </span>si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd.
+<span class="k">-</span><span class="w"> </span>si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;
+<span class="k">-</span><span class="w"> </span>si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;
+<span class="k">-</span><span class="w"> </span>si l’utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;
+<span class="k">-</span><span class="w"> </span>si l’utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.
 
 La fonction <span class="sb">`randint`</span> est utilisée.  
 Si a et b sont des entiers tels que <span class="sb">`a &lt;= b`</span>, <span class="sb">`randint(a,b)`</span> renvoie un
@@ -7053,13 +6962,11 @@ def plus_ou_moins():
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une fonction <code>recherche</code> qui prend en paramètres <code>elt</code> un nombre entier et <code>tab</code>
-un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de <code>elt</code>
-dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1</code> sinon.</p>
-<p>Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.</p>
+un tableau de nombres entiers (type <code>list</code>), et qui renvoie l’indice de la première occurrence de <code>elt</code> dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>None</code> sinon.</p>
+<p>L’objectif de cet exercice est de parcourir un tableau, il est interdit d’utiliser la méthode
+<code>index</code> des listes Python.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-<span class="o">-</span><span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> <span class="c1"># renvoie None</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">56</span><span class="p">])</span>
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -7069,39 +6976,27 @@ assertions pour vérifier les pré-conditions.</p>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie l’indice de la première occurrence de</span>
-<span class="sd">    elt dans tab si elt est dans tab et -1 sinon. </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">assert</span> <span class="n">tab</span> <span class="o">!=</span> <span class="p">[],</span> <span class="s2">&quot;le tableau est vide&quot;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">i</span>        
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>         
+    <span class="k">return</span> <span class="kc">None</span>         
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Écrire une fonction `recherche` qui prend en paramètres `elt` un nombre entier et `tab`
-un tableau de nombres entiers, et qui renvoie l’indice de la première occurrence de `elt`
-dans `tab` si `elt` est dans `tab` et `-1` sinon.
+un tableau de nombres entiers (type `list`), et qui renvoie l’indice de la première occurrence de `elt` dans `tab` si `elt` est dans `tab` et `None` sinon.
 
-Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.
+L’objectif de cet exercice est de parcourir un tableau, il est interdit d’utiliser la méthode
+`index` des listes Python.
 
 Exemples :
 ```python
-&gt;&gt;&gt; recherche(1, [2, 3, 4])
--1
+&gt;&gt;&gt; recherche(1, [2, 3, 4]) # renvoie None
 &gt;&gt;&gt; recherche(1, [10, 12, 1, 56])
 2
 &gt;&gt;&gt; recherche(50, [1, 50, 1])
@@ -7121,11 +7016,12 @@ Exemples :
 <div class="tabbed-set tabbed-alternate" data-tabs="26:3"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><input id="__tabbed_26_3" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">Énoncé</label><label for="__tabbed_26_2">Correction</label><label for="__tabbed_26_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère la fonction <code>insere</code> ci-dessous qui prend en argument un entier <code>a</code> et un
-tableau <code>tab</code> d'entiers triés par ordre croissant. Cette fonction crée et renvoie un nouveau
-tableau à partir de celui fourni en paramètre en y insérant la valeur <code>a</code> de sorte que le
-tableau renvoyé soit encore trié par ordre croissant. Les tableaux seront représentés sous
-la forme de listes Python.</p>
+<p>On considère la fonction <code>insere</code> ci-dessous qui prend en argument un tableau <code>tab</code> d’en-
+tiers triés par ordre croissant et un entier <code>a</code>. Cette fonction crée et renvoie un nouveau
+tableau <code>tab</code> d’entiers triés par ordre croissant.</p>
+<p>Cette fonction crée et renvoie un nouveau tableau à partir de celui fourni en paramètre en y
+insérant la valeur <code>a</code> de sorte que le tableau renvoyé soit encore trié par ordre croissant. Les
+tableaux seront représentés sous la forme de listes Python.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7139,30 +7035,30 @@ la forme de listes Python.</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Insère l&#39;élément a (int) dans le tableau tab (list)</span>
 <span class="sd">    trié par ordre croissant à sa place et renvoie le</span>
 <span class="sd">    nouveau tableau.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="c1">#l contient les mêmes éléments que tab</span>
-    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="n">l</span>
+    <span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span> <span class="n">a</span> <span class="p">]</span> <span class="o">+</span> <span class="n">tab</span> <span class="c1"># nouveau tableau contenant a </span>
+                        <span class="c1"># suivi des éléments de tab</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span> 
+        <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+        <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">return</span> <span class="n">tab_a</span>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>insere</code> ci-dessus.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="mi">30</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([],</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
@@ -7180,55 +7076,57 @@ la forme de listes Python.</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Insère l&#39;élément a (int) dans le tableau tab (list)</span>
 <span class="sd">    trié par ordre croissant à sa place et renvoie le</span>
 <span class="sd">    nouveau tableau.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="c1">#l contient les mêmes éléments que tab</span>
-    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="hll">    <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
-</span><span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class="hll">        <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span class="hll">        <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
-</span><span class="hll">        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
-</span>    <span class="k">return</span> <span class="n">l</span>
+    <span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span> <span class="n">a</span> <span class="p">]</span> <span class="o">+</span> <span class="n">tab</span> <span class="c1"># nouveau tableau contenant a </span>
+                        <span class="c1"># suivi des éléments de tab</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="hll">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab_a</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> 
+</span><span class="hll">        <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> 
+</span>        <span class="n">tab_a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+<span class="hll">        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+</span>    <span class="k">return</span> <span class="n">tab_a</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`insere`</span> ci-dessous qui prend en argument un entier <span class="sb">`a`</span> et un
-tableau <span class="sb">`tab`</span> d&#39;entiers triés par ordre croissant. Cette fonction crée et renvoie un nouveau
-tableau à partir de celui fourni en paramètre en y insérant la valeur <span class="sb">`a`</span> de sorte que le
-tableau renvoyé soit encore trié par ordre croissant. Les tableaux seront représentés sous
-la forme de listes Python.
+<div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`insere`</span> ci-dessous qui prend en argument un tableau <span class="sb">`tab`</span> d’en-
+tiers triés par ordre croissant et un entier <span class="sb">`a`</span>. Cette fonction crée et renvoie un nouveau
+tableau <span class="sb">`tab`</span> d’entiers triés par ordre croissant.
 
+
+Cette fonction crée et renvoie un nouveau tableau à partir de celui fourni en paramètre en y
+insérant la valeur <span class="sb">`a`</span> de sorte que le tableau renvoyé soit encore trié par ordre croissant. Les
+tableaux seront représentés sous la forme de listes Python.
 
 ```python linenums=&#39;1&#39;
-def insere(a, tab):
+def insere(tab, a):
     &quot;&quot;&quot;
     Insère l&#39;élément a (int) dans le tableau tab (list)
     trié par ordre croissant à sa place et renvoie le
     nouveau tableau.
     &quot;&quot;&quot;
-    l = list(tab) <span class="ni">#l</span> contient les mêmes éléments que tab
-    l.append(a)
-    i = ...
-    while a &lt; ... and i &gt;= 0:
-        l[i+1] = ...
-        l[i] = a
-        i = ...
-    return l
+    tab_a = [ a ] + tab # nouveau tableau contenant a 
+                        # suivi des éléments de tab
+    i = 0
+    while i &lt; ... and a &gt; ...: 
+        tab_a[i] = ... 
+        tab_a[i+1] = a
+        i = ... 
+    return tab_a
 </code></pre></div>
 <p>Compléter la fonction <code>insere</code> ci-dessus.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="mi">30</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insere</span><span class="p">([],</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 ```             </p>
@@ -7324,8 +7222,13 @@ Exemples :
 jouer.</p>
 <p>Compléter la classe <code>Paquet_de_cartes</code> suivante en respectant les spécifications
 données dans les chaînes de documentation.</p>
-<p>Ajouter une assertion dans la méthode <code>get_carte</code> afin de vérifier que le paramètre <code>pos</code>
+<p>Ajouter une assertion dans la méthode <code>recuperer_carte</code> afin de vérifier que le paramètre <code>pos</code>
 est correct.</p>
+<p>On rappelle que l’instruction</p>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">condition</span><span class="p">,</span> <span class="n">message</span>
+</code></pre></div>
+<p>permet de vérifier que la condition est vraie. Si ce n’est pas le cas, le programme s’arrête et
+affiche le message d’erreur fourni.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7351,18 +7254,22 @@ est correct.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
 
-    <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">recuperer_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
         <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">valeurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">get_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">recuperer_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
         <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trèfle&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">couleurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
@@ -7372,22 +7279,25 @@ est correct.</p>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles</span>
 <span class="sd">            rangés par valeurs croissantes en commençant par pique, puis coeur,</span>
 <span class="sd">            carreau et tréfle. &quot;&quot;&quot;</span>
-        <span class="c1"># A compléter</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
+            <span class="o">...</span>
+                <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">get_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">recuperer_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
-        <span class="c1"># A compléter</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="n">Exemple</span> <span class="p">:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">jeu</span> <span class="o">=</span> <span class="n">Paquet_de_cartes</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte1</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
-<span class="mi">8</span> <span class="n">de</span> <span class="n">coeur</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte2</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
-<span class="n">As</span> <span class="n">de</span> <span class="n">pique</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte3</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">jeu</span> <span class="o">=</span> <span class="n">Paquet_de_cartes</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span><span class="o">.</span><span class="n">recuperer_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">recuperer_couleur</span><span class="p">()</span>
+<span class="s2">&quot;8 de coeur&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span><span class="o">.</span><span class="n">recuperer_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">recuperer_couleur</span><span class="p">()</span>
+<span class="s2">&quot;As de pique&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte3</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
 <span class="ne">AssertionError</span> <span class="p">:</span> <span class="n">paramètre</span> <span class="n">pos</span> <span class="n">invalide</span>
 </code></pre></div>
 </div>
@@ -7418,31 +7328,47 @@ est correct.</p>
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialise les attributs couleur (entre 1 et 4), </span>
+<span class="sd">        et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
 
-    <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
-        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">recuperer_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : </span>
+<span class="sd">        As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> 
+                   <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">valeurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">get_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">recuperer_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte </span>
+<span class="sd">        (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
         <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trèfle&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">couleurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">Paquet_de_cartes</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles</span>
-<span class="sd">            rangés par valeurs croissantes en commençant par pique, puis coeur,</span>
-<span class="sd">            carreau et tréfle. &quot;&quot;&quot;</span>
-<span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[</span><span class="n">Carte</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>  
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52</span>
+<span class="sd">        objets Carte possibles rangés par valeurs croissantes en</span>
+<span class="sd">        commençant par pique, puis cœur, carreau et trèfle. &quot;&quot;&quot;</span>
+<span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class="hll">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+</span><span class="hll">            <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">):</span>
+</span><span class="hll">                <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
 </span>
-    <span class="k">def</span> <span class="nf">get_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">recuperer_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos </span>
+<span class="sd">        (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
 <span class="hll">        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">51</span><span class="p">,</span>  <span class="s1">&#39;paramètre pos invalide&#39;</span>
 </span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
 </span></code></pre></div></td></tr></table></div>
@@ -7454,47 +7380,85 @@ jouer.
 Compléter la classe <span class="sb">`Paquet_de_cartes`</span> suivante en respectant les spécifications
 données dans les chaînes de documentation.
 
-Ajouter une assertion dans la méthode <span class="sb">`get_carte`</span> afin de vérifier que le paramètre <span class="sb">`pos`</span>
+Ajouter une assertion dans la méthode <span class="sb">`recuperer_carte`</span> afin de vérifier que le paramètre <span class="sb">`pos`</span>
 est correct.
 
-```python linenums=&#39;1&#39;
-class Carte:
-    def <span class="gs">__init__</span>(self, c, v):
-        &quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;
-        self.couleur = c
-        self.valeur = v
+On rappelle que l’instruction
 
-    def get_valeur(self):
-        &quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;
-        valeurs = [&#39;As&#39;,&#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;Valet&#39;, &#39;Dame&#39;, &#39;Roi&#39;]
-        return valeurs[self.valeur - 1]
-
-    def get_couleur(self):
-        &quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;
-        couleurs = [&#39;pique&#39;, &#39;coeur&#39;, &#39;carreau&#39;, &#39;trèfle&#39;]
-        return couleurs[self.couleur - 1]
-
-class Paquet_de_cartes:
-    def <span class="gs">__init__</span>(self):
-        &quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles
-            rangés par valeurs croissantes en commençant par pique, puis coeur,
-            carreau et tréfle. &quot;&quot;&quot;
-        # A compléter
-
-    def get_carte(self, pos):
-        &quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;
-        # A compléter
+```python
+assert condition, message
 </code></pre></div>
+<p>permet de vérifier que la condition est vraie. Si ce n’est pas le cas, le programme s’arrête et
+affiche le message d’erreur fourni.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">c</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="k">def</span> <span class="nf">recuperer_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">valeurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">recuperer_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
+        <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trèfle&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">couleurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">Paquet_de_cartes</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles</span>
+<span class="sd">            rangés par valeurs croissantes en commençant par pique, puis coeur,</span>
+<span class="sd">            carreau et tréfle. &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
+            <span class="o">...</span>
+                <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">recuperer_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+        <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
 <p>Exemple :</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">Exemple</span> <span class="p">:</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">jeu</span> <span class="o">=</span> <span class="n">Paquet_de_cartes</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte1</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
-<span class="mi">8</span> <span class="n">de</span> <span class="n">coeur</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte2</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
-<span class="n">As</span> <span class="n">de</span> <span class="n">pique</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">carte3</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">jeu</span> <span class="o">=</span> <span class="n">Paquet_de_cartes</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span><span class="o">.</span><span class="n">recuperer_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">recuperer_couleur</span><span class="p">()</span>
+<span class="s2">&quot;8 de coeur&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span><span class="o">.</span><span class="n">recuperer_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">recuperer_couleur</span><span class="p">()</span>
+<span class="s2">&quot;As de pique&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">carte3</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">recuperer_carte</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
 <span class="ne">AssertionError</span> <span class="p">:</span> <span class="n">paramètre</span> <span class="n">pos</span> <span class="n">invalide</span>
 </code></pre></div>
 ```             </p>
@@ -7586,17 +7550,23 @@ Compléter le code de la fonction <code>binaire</code>.</p>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-<span class="hll">    <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
-</span>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
-</span><span class="hll">        <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_a</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;convertit un nombre entier a en sa representation </span>
+<span class="sd">    binaire sous forme de chaine de caractères.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="s1">&#39;0&#39;</span> 
+</span><span class="hll">    <span class="n">bin_a</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+</span><span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> 
+</span><span class="hll">        <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_a</span> 
 </span><span class="hll">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
 </span>    <span class="k">return</span> <span class="n">bin_a</span>
 </code></pre></div></td></tr></table></div>
