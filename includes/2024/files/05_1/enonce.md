@@ -1,11 +1,8 @@
-Écrire une fonction `max_et_indice` qui prend en paramètre une liste non vide `tab` de
-nombres entiers et qui renvoie la valeur du plus grand élément de cette liste ainsi que
-l’indice de sa première apparition dans cette liste.
+Écrire une fonction `max_et_indice` qui prend en paramètre un tableau non vide `tab` de
+nombres entiers et qui renvoie la valeur du plus grand élément de ce tableau ainsi que
+l’indice de sa première apparition dans ce tableau.
 
 L’utilisation de la fonction native `max` n’est pas autorisée.
-
-Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.
 
 Exemples :
 

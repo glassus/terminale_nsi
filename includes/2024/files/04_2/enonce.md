@@ -4,41 +4,41 @@ Les points sont donnés sous la forme d'un tuple de deux entiers.
 La liste des points à traiter est donc un tableau de tuples.
 
 On rappelle que la distance entre deux points du plan de coordonnées $(x;y)$ et $(x';y')$
-est donnée par la formule :
+vérifie la formule :
 
-$$d=\sqrt{(x-x')^2+(y-y')^2}$$
-
-On importe pour cela la fonction racine carrée (`sqrt`) du module `math` de Python.
+$$d^2=(x-x')^2+(y-y')^2$$
 
 
-Compléter le code des fonctions `distance` et `plus_courte_distance` fournies ci-dessous pour qu’elles répondent à leurs spécifications.
+
+Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu’elles répondent à leurs spécifications.
 
 ```python linenums='1'
-from math import sqrt     # import de la fonction racine carrée
+def distance_carre(point1, point2):
+    """ Calcule et renvoie la distance au carre entre 
+    deux points."""
+    return (...)**2 + (...)**2 
 
-def distance(point1, point2):
-    """ Calcule et renvoie la distance entre deux points. """
-    return sqrt((...)**2 + (...)**2)
+def point_le_plus_proche(depart, tab):
+    """ Renvoie les coordonnées du premier point du tableau tab se 
+    trouvant à la plus courte distance du point depart."""
+    min_point = tab[0]
+    min_dist = ... 
+    for i in range(1, len(tab)):
+        if distance_carre(tab[i], depart) < ...: 
+            min_point = ... 
+            min_dist = ... 
+    return min_point
 
-def plus_courte_distance(tab, depart):
-    """ Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart."""
-    point = tab[0]
-    min_dist = ...
-    for i in range (1, ...):
-        if distance(tab[i], depart)...:
-            point = ...
-            min_dist = ...
-    return point
 
 ```
 
 Exemples :
 
 ```python
->>> distance((1, 0), (5, 3))
-5.0
->>> distance((1, 0), (0, 1))
-1.4142135623730951
+>>> distance_carre((1, 0), (5, 3))
+25
+>>> distance_carre((1, 0), (0, 1))
+2
 >>> plus_courte_distance([(7, 9), (2, 5), (5, 2)], (0, 0))
 (2, 5)
 >>> plus_courte_distance([(7, 9), (2, 5), (5, 2)], (5, 2))

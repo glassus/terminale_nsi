@@ -1,39 +1,29 @@
-```python linenums='1' hl_lines='31 33-36'
-class Noeud:
-    '''
-    classe implémentant un noeud d'arbre binaire
-    '''
+```python linenums='1' hl_lines='21 23-26'
+class Expr:
+    """Classe implémentant un arbre d'expression."""
 
     def __init__(self, g, v, d):
-        '''
-        un objet Noeud possède 3 attributs :
-        - gauche : le sous-arbre gauche,
-        - valeur : la valeur de l'étiquette,
-        - droit : le sous-arbre droit.
-        '''
+        """un objet Expr possède 3 attributs :
+        - gauche : la sous-expression gauche ;
+        - valeur : la valeur de l'étiquette, opérande ou nombre ;
+        - droite : la sous-expression droite."""
         self.gauche = g
         self.valeur = v
-        self.droit = d
-
-    def __str__(self):
-        '''
-        renvoie la représentation du noeud en chaine de caractères
-        '''
-        return str(self.valeur)
+        self.droite = d
 
     def est_une_feuille(self):
-        '''
-        renvoie True si et seulement si le noeud est une feuille
-        '''
-        return self.gauche is None and self.droit is None
+        """renvoie True si et seulement 
+        si le noeud est une feuille"""
+        return self.gauche is None and self.droite is None
 
-
-def expression_infixe(e):
-    s = ''
-    if e.gauche is not None:
-        s = '(' + s + expression_infixe(e.gauche)
-    s = s + str(e.valeur)
-    if e.droit is not None:
-        s = s + expression_infixe(e.droit) + ')'
-    return s
+    def infixe(self):
+        """renvoie la représentation infixe de l'expression en
+        chaine de caractères"""
+        s = '' 
+        if self.gauche is not None:
+            s = '(' + s + self.gauche.infixe() 
+        s = s + str(self.valeur) 
+        if self.droite is not None: 
+            s = s + self.droite.infixe() + ')' 
+        return s
 ```

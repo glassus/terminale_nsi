@@ -12,63 +12,55 @@ retrouve l’expression notée habituellement :
 $$(3 \times (8 + 7)) − (2 + 1)$$
 
 
-La classe `Noeud` ci-après permet d’implémenter une structure
-d’arbre binaire.
+La classe `Expr` ci-après permet d’implémenter une structure
+d’arbre binaire pour représenter de telles expressions.
 
-Compléter la fonction récursive `expression_infixe` qui prend
-en paramètre un objet de la classe `Noeud` et qui renvoie
-l’expression arithmétique représentée par l’arbre binaire passé
-en paramètre, sous forme d’une chaîne de caractères contenant
-des parenthèses.  
+Compléter la méthode récursive `infixe` qui renvoie une chaîne de caractères contenant
+des parenthèses représentant l’expression arithmétique sur laquelle on l’applique.
 
-Résultat attendu avec l’arbre ci-dessus :
-
-```python
->>> e = Noeud(Noeud(Noeud(None, 3, None), '*', Noeud(Noeud(None, 8, None),
-'+', Noeud(None, 7, None))), '-', Noeud(Noeud(None, 2, None), '+',
-Noeud(None, 1, None)))
-
->>> expression_infixe(e)
-'((3*(8+7))-(2+1))'
-```
 
 ```python linenums='1'
-class Noeud:
-    '''
-    classe implémentant un noeud d'arbre binaire
-    '''
+class Expr:
+    """Classe implémentant un arbre d'expression."""
 
     def __init__(self, g, v, d):
-        '''
-        un objet Noeud possède 3 attributs :
-        - gauche : le sous-arbre gauche,
-        - valeur : la valeur de l'étiquette,
-        - droit : le sous-arbre droit.
-        '''
+        """un objet Expr possède 3 attributs :
+        - gauche : la sous-expression gauche ;
+        - valeur : la valeur de l'étiquette, opérande ou nombre ;
+        - droite : la sous-expression droite."""
         self.gauche = g
         self.valeur = v
-        self.droit = d
-
-    def __str__(self):
-        '''
-        renvoie la représentation du noeud en chaine de caractères
-        '''
-        return str(self.valeur)
+        self.droite = d
 
     def est_une_feuille(self):
-        '''
-        renvoie True si et seulement si le noeud est une feuille
-        '''
-        return self.gauche is None and self.droit is None
+        """renvoie True si et seulement 
+        si le noeud est une feuille"""
+        return self.gauche is None and self.droite is None
 
+    def infixe(self):
+        """renvoie la représentation infixe de l'expression en
+        chaine de caractères"""
+        s = ... 
+        if self.gauche is not None:
+            s = '(' + s + ... .infixe() 
+        s = s + ... 
+        if ... is not None: 
+            s = s + ... + ... 
+        return s
 
-def expression_infixe(e):
-    s = ...
-    if e.gauche is not None:
-        s = '(' + s + expression_infixe(...)
-    s = s + ...
-    if ... is not None:
-        s = s + ... + ...
-    return s
+```
 
+Exemples :
+
+```python
+>>> a = Expr(Expr(None, 1, None), '+', Expr(None, 2, None))
+>>> a.infixe()
+'(1+2)'
+>>> b = Expr(Expr(Expr(None, 1, None), '+', Expr(None, 2, None)), '*', Expr(Expr(None, 3, None), '+', Expr(None, 4, None)))
+>>> b.infixe()
+'((1+2)*(3+4))'
+>>> e = Expr(Expr(Expr(None, 3, None), '*', Expr(Expr(None, 8, None), '+', Expr(None, 7, None))),
+'-', Expr(Expr(None, 2, None), '+', Expr(None, 1, None)))
+>>> e.infixe()
+'((3*(8+7))-(2+1))'
 ```

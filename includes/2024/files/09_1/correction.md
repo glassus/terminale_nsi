@@ -1,16 +1,15 @@
 ```python linenums='1'
-def rangement_valeurs(notes_eval):
-    lst = [0]*11
+def effectif_notes(notes_eval):
+    tab = [0]*11
     for note in notes_eval:
-        lst[note] += 1
-    return lst
+        tab[note] += 1
+    return tab
 
-def notes_triees(effectifs_notes):
+def notes_triees(eff):
     triees = []
     for i in range(11):
-        if effectifs_notes[i] != 0:
-            for _ in range(effectifs_notes[i]):
+        if eff[i] != 0:
+            for _ in range(eff[i]):
                 triees.append(i)
     return triees
-
 ```

@@ -1,5 +1,7 @@
-On considère des mots à trous : ce sont des chaînes de caractères contenant uniquement
-des majuscules et des caractères `*`. Par exemple `INFO*MA*IQUE`, `***I***E**` et
+On considère des chaînes de caractères contenant uniquement des majuscules et des carac-
+tères `*` appelées *mots à trous*. 
+
+Par exemple `INFO*MA*IQUE`, `***I***E**` et
 `*S*` sont des mots à trous.  
 
 Programmer une fonction `correspond` qui :

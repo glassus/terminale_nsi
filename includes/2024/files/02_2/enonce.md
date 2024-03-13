@@ -47,24 +47,29 @@ qu’on ne « retombe » pas sur l’expéditeur initial,
 
 Compléter la fonction `est_cyclique` en respectant la spécification.
 
-*Remarque :* la fonction python `len` permet d'obtenir la longueur d'un dictionnaire.
+On rappelle que la fonction Python `len` permet d'obtenir la longueur d'un dictionnaire.
 
 
 ```python linenums='1'
 def est_cyclique(plan):
-    '''
-    Prend en paramètre un dictionnaire `plan` correspondant à un plan d'envoi de messages (ici entre les personnes A, B, C, D, E, F).
-    Renvoie True si le plan d'envoi de messages est cyclique et False sinon.
-    '''
+    '''Prend en paramètre un dictionnaire `plan` correspondant à 
+    un plan d'envoi de messages (ici entre les personnes A, B, C,
+    D, E, F).
+    Renvoie True si le plan d'envoi de messages est cyclique et 
+    False sinon.'''
     expediteur = 'A'
-    destinataire = plan[ ... ]
-    nb_destinaires = 1
-    
-    while destinataire != ...:
-        destinataire = plan[ ... ]
-        nb_destinaires += ...
+    destinataire = plan[...] 
+    nb_destinataires = 1
 
-    return nb_destinaires == ...
+    while destinataire != expediteur:
+        destinataire = ... 
+        nb_destinataires = ... 
+
+    return nb_destinataires == ... 
+
+
+
+
 ```
 
 *Exemples :*

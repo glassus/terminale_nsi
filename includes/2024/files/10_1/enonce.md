@@ -1,21 +1,25 @@
-Dans cet exercice, les nombres sont des entiers ou des flottants.
+Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève dans une matière
+donnée. Chaque note est associée à un coefficient qui la pondère.
 
 
-Écrire une fonction `moyenne` renvoyant la moyenne pondérée d’une liste non vide,
-passée en paramètre, de tuples à deux éléments de la forme (`valeur`,
-`coefficient`) où `valeur` et `coefficient` sont des nombres positifs ou nuls.
-Si la somme des coefficients est nulle, la fonction renvoie `None`, si la somme des
-coefficients est non nulle, la fonction renvoie, sous forme de flottant, la moyenne des
-valeurs affectées de leur coefficient.
+Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coeffi-
+cient 2, sa moyenne pondérée sera donnée par
+
+$$\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... $$
+
+
+Écrire une fonction `moyenne` :
+- qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
+de la forme `(note, coefficient)` (`int` ou `float`) positifs ou nuls ;
+- et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
+somme des coefficients est non nulle, `None` sinon.
+
 
 Exemple :
+
 ```python
 >>> moyenne([(8, 2), (12, 0), (13.5, 1), (5, 0.5)])
 9.142857142857142
 >>> moyenne([(3, 0), (5, 0)])
 None
 ```
-
-Dans le premier exemple la moyenne est calculée par la formule :
-
-$\dfrac{8 \times 2 + 12 \times 0 + 13,5 \times 1 + 5 \times 0,5}{2+0+1+0,5}$

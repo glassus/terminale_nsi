@@ -8,102 +8,102 @@ Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Le
 (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par
 deux espaces.
 
-La fonction `zoomListe` prend en argument une liste `liste_depart` et un entier `k`. Elle
+La fonction `liste_zoom` prend en argument une liste `liste_depart` et un entier `k`. Elle
 renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
 
-La fonction `zoomDessin` prend en argument la grille `dessin` et renvoie une grille où
+La fonction `dessin_zoom` prend en argument la grille `dessin` et renvoie une grille où
 toutes les lignes de `dessin` sont zoomées `k` fois et répétées `k` fois.
 
-Soit le code ci-dessous :
+Compléter les fonctions `liste_zoom` et `dessin_zoom` du code suivant :
 
 ```python linenums='1'
-coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \
-        [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], \
-        [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], \
-        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], \
-        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], \
-        [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], \
-        [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], \
-        [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], \
-        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], \
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
 def affiche(dessin):
     ''' affichage d'une grille : les 1 sont représentés par 
-        des " *" , les 0 par deux espaces "  " '''
+        des "*" , les 0 par un espace " " '''
     for ligne in dessin:
+        affichage = ''
         for col in ligne:
             if col == 1:
-                print(" *", end="")
+                affichage = affichage + "*"
             else:
-                print("  ", end="")
-        print()
+                affichage = affichage + " "
+        print(affichage)
 
 
-def zoomListe(liste_depart,k):
-    '''renvoie une liste contenant k fois chaque 
-    élément de liste_depart'''
-    liste_zoom = ...
-    for elt in ... :
+def liste_zoom(liste_depart,k):
+    '''renvoie une liste contenant k fois chaque élément de
+       liste_depart'''
+    liste_zoomee = ... 
+    for elt in ... : 
         for i in range(k):
             ...
-    return liste_zoom
+    return liste_zoomee
 
-def zoomDessin(grille,k):
+def dessin_zoom(grille,k):
     '''renvoie une grille où les lignes sont zoomées k fois 
-    ET répétées k fois'''
-    grille_zoom=[]
-    for elt in grille:
-        liste_zoom = ...
+       ET répétées k fois'''
+    grille_zoomee=[]
+    for ligne in grille:
+        ligne_zoomee = ... 
         for i in range(k):
-            ... .append(...)
-    return grille_zoom
+            ... .append(...) 
+    return grille_zoomee
 ```
 
-Résultats à obtenir :
+Exemples :
 
 ```python
+>>> coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], 
+        [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], 
+        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 
+        [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], 
+        [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 >>> affiche(coeur)
+                          
+       * *       * *      
+     *     *   *     *    
+   *         *         *  
+   *                   *  
+   *                   *  
+     *               *    
+       *           *      
+         *       *        
+           *   *          
+             *            
+                          
+>>> affiche(dessin_zoom(coeur,2))
+                                                    
+                                                    
+             * * * *             * * * *            
+             * * * *             * * * *            
+         * *         * *     * *         * *        
+         * *         * *     * *         * *        
+     * *                 * *                 * *    
+     * *                 * *                 * *    
+     * *                                     * *    
+     * *                                     * *    
+     * *                                     * *    
+     * *                                     * *    
+         * *                             * *        
+         * *                             * *        
+             * *                     * *            
+             * *                     * *            
+                 * *             * *                
+                 * *             * *                
+                     * *     * *                    
+                     * *     * *                    
+                         * *                        
+                         * *                        
+                                                    
+                                                    
+>>> liste_zoom([1,2,3],3)
+[1, 1, 1, 2, 2, 2, 3, 3, 3]
+
 ```
-![image](data/272b.png){: .left}
-
-```python
->>> affiche(zoomDessin(coeur,3))
-```
-
-
-
-                * * * * * *                   * * * * * *                  
-                * * * * * *                   * * * * * *                  
-                * * * * * *                   * * * * * *                  
-          * * *             * * *       * * *             * * *            
-          * * *             * * *       * * *             * * *            
-          * * *             * * *       * * *             * * *            
-    * * *                         * * *                         * * *      
-    * * *                         * * *                         * * *      
-    * * *                         * * *                         * * *      
-    * * *                                                       * * *      
-    * * *                                                       * * *      
-    * * *                                                       * * *      
-    * * *                                                       * * *      
-    * * *                                                       * * *      
-    * * *                                                       * * *      
-          * * *                                           * * *            
-          * * *                                           * * *            
-          * * *                                           * * *            
-                * * *                               * * *                  
-                * * *                               * * *                  
-                * * *                               * * *                  
-                      * * *                   * * *                        
-                      * * *                   * * *                        
-                      * * *                   * * *                        
-                            * * *       * * *                              
-                            * * *       * * *                              
-                            * * *       * * *                              
-                                  * * *                                    
-                                  * * *                                    
-                                  * * *                                    
-
-

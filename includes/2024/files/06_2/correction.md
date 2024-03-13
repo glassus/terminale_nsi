@@ -1,7 +1,7 @@
-```python linenums='1' hl_lines='4 6 9 16 17 19 20'
-urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
-
+```python linenums='1' hl_lines='4 6 9 17-20'
 def depouille(urne):
+    '''prend en paramètre une liste de suffrages et renvoie un 
+    dictionnaire avec le nombre de voix pour chaque candidat'''
     resultat = {}
     for bulletin in urne:
         if bulletin in resultat:
@@ -10,16 +10,14 @@ def depouille(urne):
             resultat[bulletin] = 1
     return resultat
 
-def vainqueur(election):
-    vainqueur = '' #(1)
+def vainqueurs(election):
+    '''prend en paramètre un dictionnaire non vide avec le nombre de voix
+    pour chaque candidat et renvoie la liste des vainqueurs'''
     nmax = 0
     for candidat in election:
-        if election[candidat] > nmax :
-            nmax = election[candidat]
-            vainqueur = candidat #(2)
-    liste_finale = [nom for nom in election if election[nom] == nmax]
+        if election[candidat] > nmax: 
+            nmax = election[candidat] 
+    liste_finale = [ nom for nom in election if election[nom] == nmax ]
     return liste_finale
-```
 
-1. Il est pourtant très déconseillé de nommer une variable avec le même nom que la fonction qui la contient...
-2. Cette variable `vainqueur` est inutile, on ne s'en sert pas dans l'élaboration de la liste finale.
+```

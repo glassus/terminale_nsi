@@ -1,47 +1,49 @@
-```python linenums='1' hl_lines='29 30 32 40 42'
-coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \
-        [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], \
-        [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], \
-        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], \
-        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], \
-        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], \
-        [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], \
-        [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], \
-        [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], \
-        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], \
+```python linenums='1'
+coeur = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], 
+        [0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0], 
+        [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
+        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], 
+        [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], 
+        [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0], 
+        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], 
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
 def affiche(dessin):
     ''' affichage d'une grille : les 1 sont représentés par 
     des " *" , les 0 par deux espaces "  " '''
     for ligne in dessin:
+        affichage = ''
         for col in ligne:
             if col == 1:
-                print(' *',end='')
+                affichage = affichage + "*"
             else:
-                print('  ',end='')
-        print()
+                affichage = affichage + " "
+        print(affichage)
 
 
-def zoomListe(liste_depart, k):
+def liste_zoom(liste_depart, k):
     '''renvoie une liste contenant k fois chaque 
     élément de liste_depart'''
-    liste_zoom = []
+    liste_zoomee = []
     for elt in liste_depart:
         for i in range(k):
-            liste_zoom.append(elt)
-    return liste_zoom
+            liste_zoomee.append(elt)
+    return liste_zoomee
 
-def zoomDessin(grille, k):
+def dessin_zoom(grille, k):
     '''renvoie une grille où les lignes sont zoomées k fois 
     ET répétées k fois'''
-    grille_zoom = []
-    for elt in grille:
-        liste_zoom = zoomListe(elt, k)
+    grille_zoomee = []
+    for ligne in grille:
+        liste_zoomee = liste_zoom(ligne, k)
         for i in range(k):
-            grille_zoom.append(liste_zoom)
-    return grille_zoom
+            grille_zoomee.append(liste_zoomee)
+    return grille_zoomee
+
 
 
 ```

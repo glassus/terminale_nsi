@@ -1,11 +1,9 @@
 ```python linenums='1'
 def max_et_indice(tab):
     '''
-    renvoie la valeur du plus grand élément de cette liste ainsi
-    que l’indice de sa première apparition dans cette liste.
+    renvoie la valeur du plus grand élément de ce tableau ainsi
+    que l’indice de sa première apparition dans ce tableau.
     '''
-    assert tab != [], 'le tableau est vide'
-
     val_max = tab[0]
     ind_max = 0
     for i in range(len(tab)):

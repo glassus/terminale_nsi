@@ -7,24 +7,36 @@ Exemple avec le tableau : ```t = [41, 55, 21, 18, 12, 6, 25]```
 - Étape 1 : on parcourt tous les éléments du tableau, on permute le plus petit élément avec
 le premier. Le tableau devient `t = [6, 55, 21, 18, 12, 41, 25]`
 
-- Étape 2 : on parcourt tous les éléments sauf le premier, on permute le plus petit élément
-trouvé avec le second. Le tableau devient : ```t = [6, 12, 21, 18, 55, 41, 25]``` 
+- Étape 2 : on parcourt tous les éléments **sauf le premier**, on permute le plus petit élément
+trouvé avec le second.  
+Le tableau devient : ```t = [6, 12, 21, 18, 55, 41, 25]``` 
 
 Et ainsi de suite. 
 
-La code de la fonction `tri_selection` qui implémente cet algorithme est donné ci-
-dessous.
+Le programme ci-dessous implémente cet algorithme.
 
 
 ```python linenums='1'
+def echange(tab, i, j):
+    '''Echange les éléments d'indice i et j dans le tableau tab.'''
+    temp = ... 
+    tab[i] = ... 
+    tab[j] = ... 
+
 def tri_selection(tab):
+    '''Trie le tableau tab dans l'ordre croissant
+    par la méthode du tri par sélection.'''
     N = len(tab)
-    for k in range(...):
-        imin = ...
-        for i in range(... , N):
-            if tab[i] < ... :
+    for k in range(...): 
+        imin = ... 
+        for i in range(..., N): 
+            if tab[i] < ...: 
                 imin = i
-        ... , tab[imin] = tab[imin] , ...
+        echange(tab, ..., ...) 
+
+
+
+
 ```
 
 Compléter le code de cette fonction de façon à obtenir :
@@ -35,5 +47,3 @@ Compléter le code de cette fonction de façon à obtenir :
 >>> liste
 [6, 12, 18, 21, 25, 41, 55]
 ``` 
-
-On rappelle que l'instruction ```a, b = b, a``` échange les contenus de ```a``` et de ```b```.

@@ -1,24 +1,31 @@
-On modélise la représentation binaire d'un entier non signé par un tableau d'entiers dont
-les éléments sont 0 ou 1. Par exemple, le tableau `[1, 0, 1, 0, 0, 1, 1]` représente
-l'écriture binaire de l'entier dont l'écriture décimale est
-`2**6 + 2**4 + 2**1 + 2**0 = 83`.
 
-À l'aide d'un parcours séquentiel, écrire la fonction `convertir` répondant aux
-spécifications suivantes :
+On considère dans cet exercice une représentation binaire d’un entier non signé en tant que
+tableau de booléens.
+Si
+
 
 ```python
-def convertir(tab):
-    """
-    tab est un tableau d'entiers, dont les éléments sont 0 ou 1 et
-    représentant un entier écrit en binaire. Renvoie l'écriture
-    décimale de l'entier positif dont la représentation binaire
-    est donnée par le tableau tab
-    """
+tab = [True, False, True, False, False, True, True]
 ```
+
+est un tel tableau, alors l’entier qu’il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représen-
+tation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
+est dite *big-endian* ou grand-boutiste.
+
+
+Écrire une fonction `gb_vers_entier` qui prend en paramètre un tel tableau et renvoie
+l’entier qu’il représente.
+
+
 Exemple :
+
 ```python
->>> convertir([1, 0, 1, 0, 0, 1, 1])
+>>> gb_vers_entier([])
+0
+>>> gb_vers_entier([True])
+1
+>>> gb_vers_entier([True, False, True, False, False, True, True])
 83
->>> convertir([1, 0, 0, 0, 0, 0, 1, 0])
+>>> gb_vers_entier([True, False, False, False, False, False, True, False])
 130
 ```

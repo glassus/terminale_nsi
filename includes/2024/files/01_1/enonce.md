@@ -2,6 +2,8 @@ Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d�
 dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.
 
+On utilise la valeur `''` pour représenter un fils vide.
+
 Par exemple, l’arbre
 
 ![image](data2023/33_arbre.png){: .center}
@@ -14,7 +16,7 @@ a = {'F':['B','G'], 'B':['A','D'], 'A':['',''], 'D':['C','E'], \
 'H':['','']}
 ```
 
-Écrire une fonction récursive `taille` prenant en paramètres un arbre binaire `arbre`
+Écrire une fonction récursive `taille` prenant en paramètres un arbre binaire `arbre` non vide
 sous la forme d’un dictionnaire et un caractère `lettre` qui est la valeur du sommet de
 l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de nœuds.  
 
@@ -26,4 +28,8 @@ Exemple :
 ```python
 >>> taille(a, ’F’)
 9
+>>> taille(a, 'B')
+5
+>>> taille(a, 'I')
+2
 ``` 
