@@ -1,14 +1,14 @@
 Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.
 
-Un élève de NSI décide de le coder en langage Python de la manière suivante :
+Une élève de NSI décide de le coder en langage Python de la manière suivante :
 
 - le programme génère un nombre entier aléatoire compris entre 1 et 99 ;
-- si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;
-- si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en
-est averti. Il peut alors en tester un autre ;
-- si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ;
-- si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd.
+- si la proposition de l’utilisatrice est plus petite que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;
+- si la proposition de l’utilisatrice est plus grande que le nombre cherché, l’utilisatrice en
+est avertie. Elle peut alors en tester un autre ;
+- si l’utilisatrice trouve le bon nombre en 10 essais ou moins, elle gagne ;
+- si l’utilisatrice a fait plus de 10 essais sans trouver le bon nombre, elle perd.
 
 La fonction `randint` est utilisée.  
 Si a et b sont des entiers tels que `a <= b`, `randint(a,b)` renvoie un

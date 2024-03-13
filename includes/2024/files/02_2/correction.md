@@ -1,4 +1,4 @@
-```python linenums='1' hl_lines='7 8 10-12 14'
+```python linenums='1' hl_lines='8 12 13 15'
 def est_cyclique(plan):
     '''Prend en paramètre un dictionnaire `plan` correspondant à 
     un plan d'envoi de messages (ici entre les personnes A, B, C,
