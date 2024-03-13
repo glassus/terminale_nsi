@@ -7614,91 +7614,71 @@ Compléter le code de la fonction <code>binaire</code>.</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une fonction <code>ecriture_binaire_entier_positif</code> qui prend en paramètre un
-entier positif <code>n</code> et renvoie une liste d'entiers correspondant à l‘écriture binaire de <code>n</code>.</p>
-<p>Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.</p>
-<p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-<p>Aide :</p>
+entier positif <code>n</code> et renvoie une une chaine de caractère correspondant à l‘écriture binaire de <code>n</code>.</p>
+<p>On rappelle que :</p>
 <ul>
-<li>l'opérateur <code>//</code> donne le quotient de la division euclidienne : <code>5//2</code> donne <code>2</code> ;</li>
-<li>l'opérateur <code>%</code> donne le reste de la division euclidienne :<code>5%2</code> donne <code>1</code> ;</li>
-<li><code>append</code> est une méthode qui ajoute un élément à une liste existante :
-Soit <code>T=[5,2,4]</code>, alors <code>T.append(10)</code> ajoute <code>10</code> à la liste <code>T</code>. Ainsi, <code>T</code> devient
-<code>[5,2,4,10]</code>.</li>
-<li><code>reverse</code> est une méthode qui renverse les éléments d'une liste.
-Soit <code>T=[5,2,4,10]</code>. Après <code>T.reverse()</code>, la liste devient <code>[10,4,2,5]</code>.</li>
+<li>l’écriture binaire de 25 est 11001 car <span class="arithmatex">\(25 = 1 \times 24 + 1 \times 23 + 0 \times 22 + 0 \times 21 + 1 \times 20\)</span> ;</li>
+<li><code>n % 2</code> vaut 0 ou 1 selon que <code>n</code> est pair ou impair ;</li>
+<li><code>n // 2</code>  donne le quotient de la division euclidienne de <code>n</code> par 2.</li>
 </ul>
-<p>On remarquera qu’on récupère la représentation binaire d’un entier <code>n</code> en partant de la gauche en appliquant successivement les instructions :</p>
-<p><code>b = n%2</code></p>
-<p><code>n = n//2</code></p>
-<p>répétées autant que nécessaire.</p>
+<p>Il est interdit dans cet exercice d’utiliser la fonction <code>bin</code> de Python.</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="s1">&#39;0&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="s1">&#39;10&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
+<span class="s1">&#39;1101001&#39;</span>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1"># cas particulier pour n = 0</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ecriture_binaire_entier_positif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="c1"># cas général</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;0&#39;</span> 
+    <span class="n">bin_n</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> 
+        <span class="n">bin_n</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_n</span> 
         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="n">b</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">bin_n</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Écrire une fonction `ecriture_binaire_entier_positif` qui prend en paramètre un
-entier positif `n` et renvoie une liste d&#39;entiers correspondant à l‘écriture binaire de `n`.
+entier positif `n` et renvoie une une chaine de caractère correspondant à l‘écriture binaire de `n`.
 
-Ne pas oublier d’ajouter au corps de la fonction une documentation et une ou plusieurs
-assertions pour vérifier les pré-conditions.
+On rappelle que :
+
+- l’écriture binaire de 25 est 11001 car $25 = 1 \times 24 + 1 \times 23 + 0 \times 22 + 0 \times 21 + 1 \times 20$ ;
+- `n % 2` vaut 0 ou 1 selon que `n` est pair ou impair ;
+- `n // 2`  donne le quotient de la division euclidienne de `n` par 2.
+
+Il est interdit dans cet exercice d’utiliser la fonction `bin` de Python.
 
 Exemples :
 
 ```python
+&gt;&gt;&gt; 5 % 2
+1
+&gt;&gt;&gt; 5 // 2
+2
 &gt;&gt;&gt; ecriture_binaire_entier_positif(0)
-[0]
+&#39;0&#39;
 &gt;&gt;&gt; ecriture_binaire_entier_positif(2)
-[1, 0]
+&#39;10&#39;
 &gt;&gt;&gt; ecriture_binaire_entier_positif(105)
-[1, 1, 0, 1, 0, 0, 1]
+&#39;1101001&#39;
 ```
-
-Aide :
-
-- l&#39;opérateur `//` donne le quotient de la division euclidienne : `5//2` donne `2` ;
-- l&#39;opérateur `%` donne le reste de la division euclidienne :` 5%2` donne `1` ;
-- `append` est une méthode qui ajoute un élément à une liste existante :
-Soit `T=[5,2,4]`, alors `T.append(10)` ajoute `10` à la liste `T`. Ainsi, `T` devient
-`[5,2,4,10]`.
-- `reverse` est une méthode qui renverse les éléments d&#39;une liste.
-Soit `T=[5,2,4,10]`. Après `T.reverse()`, la liste devient `[10,4,2,5]`.
-
-On remarquera qu’on récupère la représentation binaire d’un entier `n` en partant de la gauche en appliquant successivement les instructions :
-
-`b = n%2`
-
-`n = n//2`
-
-répétées autant que nécessaire.
 </code></pre></div>
 </div>
 </div>
@@ -7711,22 +7691,21 @@ répétées autant que nécessaire.
 <div class="tabbed-set tabbed-alternate" data-tabs="32:3"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><input id="__tabbed_32_3" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">Énoncé</label><label for="__tabbed_32_2">Correction</label><label for="__tabbed_32_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>La fonction <code>tri_bulles</code> prend en paramètre une liste <code>T</code> d’entiers non triés et renvoie la
-liste triée par ordre croissant.</p>
+<p>La fonction <code>tri_bulles</code> prend en paramètre une liste <code>tab</code> d’entiers (type <code>list</code>) et le modifie pour le trier par ordre croissant.</p>
 <p>Le tri à bulles est un tri en place qui commence par placer le plus grand élément en
-dernière position en parcourant la liste de gauche à droite et en échangeant au passage
+dernière position en parcourant le tableau de gauche à droite et en échangeant au passage
 les éléments voisins mal ordonnés (si la valeur de l’élément d’indice <code>i</code> a une valeur
 strictement supérieure à celle de l’indice <code>i + 1</code>, ils sont échangés). Le tri place ensuite
-en avant-dernière position le plus grand élément de la liste privée de son dernier élément
+en avant-dernière position le plus grand élément du tableau privé de son dernier élément
 en procédant encore à des échanges d’éléments voisins. Ce principe est répété jusqu’à
 placer le minimum en première position.</p>
-<p>Exemple : pour trier la liste <code>[7, 9, 4, 3]</code> :</p>
+<p>Exemple : pour trier le tableau <code>[7, 9, 4, 3]</code> :</p>
 <ul>
 <li>première étape : 7 et 9 ne sont pas échangés, puis 9 et 4 sont échangés, puis 9 et
-3 sont échangés, la liste est alors <code>[7, 4, 3, 9]</code></li>
-<li>deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, la liste est
+3 sont échangés, le tableau est alors <code>[7, 4, 3, 9]</code></li>
+<li>deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, le tableau est
 alors <code>[4, 3, 7, 9]</code></li>
-<li>troisième étape : 4 et 3 sont échangés, la liste est alors <code>[3, 4, 7, 9]</code></li>
+<li>troisième étape : 4 et 3 sont échangés, le tableau est alors <code>[3, 4, 7, 9]</code></li>
 </ul>
 <p>Compléter le code Python ci-dessous qui implémente la fonction tri_bulles.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7740,27 +7719,35 @@ alors <code>[4, 3, 7, 9]</code></li>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Renvoie le tableau T trié par ordre croissant</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">[</span><span class="o">...</span><span class="p">]:</span>
-                <span class="o">...</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-                <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
-                <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
-    <span class="k">return</span> <span class="n">T</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Echange les éléments d&#39;indice i et j dans le tableau tab.&#39;&#39;&#39;</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+
+<span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Trie le tableau tab dans l&#39;ordre croissant</span>
+<span class="sd">    par la méthode du tri à bulles.&#39;&#39;&#39;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> 
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> 
+            <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span> 
+                <span class="n">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> 
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([])</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span>
 <span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">7</span><span class="p">])</span>
-<span class="p">[</span><span class="mi">7</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab2</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab3</span>
 <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
@@ -7776,67 +7763,76 @@ alors <code>[4, 3, 7, 9]</code></li>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Renvoie le tableau T trié par ordre croissant</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-<span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-<span class="hll">            <span class="k">if</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-</span><span class="hll">                <span class="n">temp</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span><span class="hll">                <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-</span>                <span class="n">T</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
-    <span class="k">return</span> <span class="n">T</span>
-</code></pre></div></td></tr></table></div>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Echange les éléments d&#39;indice i et j dans le tableau tab.&#39;&#39;&#39;</span>
+<span class="hll">    <span class="n">temp</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+</span><span class="hll">    <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> 
+</span><span class="hll">    <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span> 
+</span>
+<span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Trie le tableau tab dans l&#39;ordre croissant</span>
+<span class="sd">    par la méthode du tri à bulles.&#39;&#39;&#39;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+</span><span class="hll">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> 
+</span><span class="hll">            <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> 
+</span><span class="hll">                <span class="n">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> 
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>La fonction <span class="sb">`tri_bulles`</span> prend en paramètre une liste <span class="sb">`T`</span> d’entiers non triés et renvoie la
-liste triée par ordre croissant.
+<div class="highlight"><pre><span></span><code>La fonction <span class="sb">`tri_bulles`</span> prend en paramètre une liste <span class="sb">`tab`</span> d’entiers (type <span class="sb">`list`</span>) et le modifie pour le trier par ordre croissant.
 
 
 Le tri à bulles est un tri en place qui commence par placer le plus grand élément en
-dernière position en parcourant la liste de gauche à droite et en échangeant au passage
+dernière position en parcourant le tableau de gauche à droite et en échangeant au passage
 les éléments voisins mal ordonnés (si la valeur de l’élément d’indice <span class="sb">`i`</span> a une valeur
 strictement supérieure à celle de l’indice <span class="sb">`i + 1`</span>, ils sont échangés). Le tri place ensuite
-en avant-dernière position le plus grand élément de la liste privée de son dernier élément
+en avant-dernière position le plus grand élément du tableau privé de son dernier élément
 en procédant encore à des échanges d’éléments voisins. Ce principe est répété jusqu’à
 placer le minimum en première position.
 
 
-Exemple : pour trier la liste <span class="sb">`[7, 9, 4, 3]`</span> :
+Exemple : pour trier le tableau <span class="sb">`[7, 9, 4, 3]`</span> :
 
 <span class="k">-</span><span class="w"> </span>première étape : 7 et 9 ne sont pas échangés, puis 9 et 4 sont échangés, puis 9 et
-3 sont échangés, la liste est alors <span class="sb">`[7, 4, 3, 9]`</span>
-<span class="k">-</span><span class="w"> </span>deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, la liste est
+3 sont échangés, le tableau est alors <span class="sb">`[7, 4, 3, 9]`</span>
+<span class="k">-</span><span class="w"> </span>deuxième étape : 7 et 4 sont échangés, puis 7 et 3 sont échangés, le tableau est
 alors <span class="sb">`[4, 3, 7, 9]`</span>
-<span class="k">-</span><span class="w"> </span>troisième étape : 4 et 3 sont échangés, la liste est alors <span class="sb">`[3, 4, 7, 9]`</span>
+<span class="k">-</span><span class="w"> </span>troisième étape : 4 et 3 sont échangés, le tableau est alors <span class="sb">`[3, 4, 7, 9]`</span>
 
 
 Compléter le code Python ci-dessous qui implémente la fonction tri_bulles.
 
 ```python linenums=&#39;1&#39;
-def tri_bulles(T):
-    &#39;&#39;&#39;
-    Renvoie le tableau T trié par ordre croissant
-    &#39;&#39;&#39;
-    n = len(T)
-    for i in range(...,...,-1):
-        for j in range(i):
-            if T[j] &gt; T[...]:
-                ... = T[j]
-                T[j] = T[...]
-                T[j+1] = temp
-    return T
+def echange(tab, i, j):
+    &#39;&#39;&#39;Echange les éléments d&#39;indice i et j dans le tableau tab.&#39;&#39;&#39;
+    temp = ... 
+    tab[i] = ... 
+    tab[j] = ... 
+
+def tri_bulles(tab):
+    &#39;&#39;&#39;Trie le tableau tab dans l&#39;ordre croissant
+    par la méthode du tri à bulles.&#39;&#39;&#39;
+    n = len(tab)
+    for i in range(...): 
+        for j in range(...): 
+            if ... &gt; ...: 
+                echange(tab, j, ...) 
 </code></pre></div>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([])</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span>
 <span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">7</span><span class="p">])</span>
-<span class="p">[</span><span class="mi">7</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab2</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_bulles</span><span class="p">(</span><span class="n">tab3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tab3</span>
 <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </code></pre></div>
 ```             </p>
@@ -7854,8 +7850,7 @@ def tri_bulles(T):
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une fonction Python appelée <code>nb_repetitions</code> qui prend en paramètres un
-élément <code>elt</code> et une liste <code>tab</code> et renvoie le nombre de fois où l’élément apparaît dans la
-liste.</p>
+élément <code>elt</code> et un tableau <code>tab</code> (type <code>list</code>) et renvoie le nombre de fois où l’élément apparaît dans le tableau.</p>
 <p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="mi">3</span>
@@ -7881,8 +7876,7 @@ liste.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Écrire une fonction Python appelée `nb_repetitions` qui prend en paramètres un
-élément `elt` et une liste `tab` et renvoie le nombre de fois où l’élément apparaît dans la
-liste.
+élément `elt` et un tableau `tab` (type `list`) et renvoie le nombre de fois où l’élément apparaît dans le tableau.
 
 Exemples :
 ```python
@@ -7910,21 +7904,28 @@ des divisions successives comme illustré ici :</p>
 <p><img alt="image" class="center" src="../data2023/31_divisions.png" /></p>
 <p>Voici une fonction Python basée sur la méthode des divisions successives permettant de
 convertir un nombre entier positif en binaire :</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">while</span> <span class="n">a</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="o">...</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="o">...</span>
+<p>Compléter la fonction <code>binaire</code></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;convertit un nombre entier a en sa representation </span>
+<span class="sd">    binaire sous forme de chaine de caractères.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;0&#39;</span>
+    <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">while</span> <span class="o">...</span><span class="p">:</span> 
+        <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">bin_a</span> 
+        <span class="n">a</span> <span class="o">=</span> <span class="o">...</span> 
     <span class="k">return</span> <span class="n">bin_a</span>
 </code></pre></div></td></tr></table></div>
-Compléter la fonction <code>binaire</code>.</p>
+.</p>
 <p>Exemples :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="s1">&#39;0&#39;</span>
@@ -7933,17 +7934,23 @@ Compléter la fonction <code>binaire</code>.</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-<span class="hll">    <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
-</span>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
-</span><span class="hll">        <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_a</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;convertit un nombre entier a en sa representation </span>
+<span class="sd">    binaire sous forme de chaine de caractères.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;0&#39;</span> 
+<span class="hll">    <span class="n">bin_a</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+</span><span class="hll">    <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span> 
+</span><span class="hll">        <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">bin_a</span> 
 </span><span class="hll">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
 </span>    <span class="k">return</span> <span class="n">bin_a</span>
 </code></pre></div></td></tr></table></div>
@@ -7957,16 +7964,21 @@ des divisions successives comme illustré ici :
 Voici une fonction Python basée sur la méthode des divisions successives permettant de
 convertir un nombre entier positif en binaire :
 
+Compléter la fonction ```binaire```
+
 ```python linenums=&#39;1&#39;
 def binaire(a):
-    bin_a = str(...)
-    a = a // 2
-    while a ... :
-        bin_a = ...(a%2) + ...
-        a = ...
+    &#39;&#39;&#39;convertit un nombre entier a en sa representation 
+    binaire sous forme de chaine de caractères.&#39;&#39;&#39;
+    if a == 0:
+        return &#39;0&#39;
+    bin_a = ... 
+    while ...: 
+        bin_a = ... + bin_a 
+        a = ... 
     return bin_a
 </code></pre></div>
-Compléter la fonction <code>binaire</code>.</p>
+.</p>
 <p>Exemples :</p>
 <p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="s1">&#39;0&#39;</span>
@@ -7987,9 +7999,9 @@ Compléter la fonction <code>binaire</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="35:3"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><input id="__tabbed_35_3" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">Énoncé</label><label for="__tabbed_35_2">Correction</label><label for="__tabbed_35_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Programmer la fonction <code>multiplication</code>, prenant en paramètres deux nombres entiers
-<code>n1</code> et <code>n2</code>, et qui renvoie le produit de ces deux nombres.
-Les seules opérations autorisées sont l’addition et la soustraction. </p>
+<p>Programmer la fonction <code>multiplication</code>, prenant en paramètres deux nombres entiers relatifs
+<code>n1</code> et <code>n2</code>, et qui renvoie le produit de ces deux nombres.</p>
+<p>Les seules opérations arithmétiques autorisées sont l’addition et la soustraction. </p>
 <p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">multiplication</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="mi">15</span>
@@ -8022,9 +8034,10 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers
+<div class="highlight"><pre><span></span><code>Programmer la fonction `multiplication`, prenant en paramètres deux nombres entiers relatifs
 `n1` et `n2`, et qui renvoie le produit de ces deux nombres.
-Les seules opérations autorisées sont l’addition et la soustraction.
+
+Les seules opérations arithmétiques autorisées sont l’addition et la soustraction.
 
 Exemples :
 ```python
@@ -8055,7 +8068,7 @@ apparaît dans <code>tab</code> si cette valeur y figure et <code>None</code> si
 <p>Les paramètres de la fonction sont :</p>
 <ul>
 <li><code>tab</code>, le tableau dans lequel s'effectue la recherche ;</li>
-<li><code>n</code>, l'entier à chercher dans le tableau ;</li>
+<li><code>x</code>, l'entier à chercher dans le tableau ;</li>
 <li><code>i</code>, l'indice de début de la partie du tableau où s'effectue la recherche ;</li>
 <li><code>j</code>, l'indice de fin de la partie du tableau où s'effectue la recherche.</li>
 </ul>
@@ -8072,20 +8085,22 @@ apparaît dans <code>tab</code> si cette valeur y figure et <code>None</code> si
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;indice de x dans tab, si x est dans tab, </span>
+<span class="sd">    None sinon.</span>
+<span class="sd">    On suppose que tab est trié dans l&#39;ordre croissant.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="o">...</span>
-    <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span> <span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="o">...</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="o">...</span> 
+    <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span><span class="p">)</span> 
+    <span class="k">elif</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span> 
 </code></pre></div></td></tr></table></div>
-<p>L'exécution du code doit donner :
+<p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -8108,18 +8123,20 @@ apparaît dans <code>tab</code> si cette valeur y figure et <code>None</code> si
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;indice de x dans tab, si x est dans tab, </span>
+<span class="sd">    None sinon.</span>
+<span class="sd">    On suppose que tab est trié dans l&#39;ordre croissant.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-<span class="hll">    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-</span><span class="hll">    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">:</span>
-</span><span class="hll">        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span> <span class="p">,</span> <span class="n">j</span><span class="p">)</span>
-</span><span class="hll">    <span class="k">elif</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="p">:</span>
-</span><span class="hll">        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span> <span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
-</span>    <span class="k">else</span> <span class="p">:</span>
-<span class="hll">        <span class="k">return</span> <span class="n">m</span>
+<span class="hll">    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+</span><span class="hll">    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span> 
+</span><span class="hll">        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span> <span class="p">,</span> <span class="n">j</span><span class="p">)</span> 
+</span>    <span class="k">elif</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="n">chercher</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span> <span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+</span>    <span class="k">else</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="n">m</span> 
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -8131,7 +8148,7 @@ apparaît dans <span class="sb">`tab`</span> si cette valeur y figure et <span c
 Les paramètres de la fonction sont :
 
 <span class="k">-</span><span class="w"> </span><span class="sb">`tab`</span>, le tableau dans lequel s&#39;effectue la recherche ;
-<span class="k">-</span><span class="w"> </span><span class="sb">`n`</span>, l&#39;entier à chercher dans le tableau ;
+<span class="k">-</span><span class="w"> </span><span class="sb">`x`</span>, l&#39;entier à chercher dans le tableau ;
 <span class="k">-</span><span class="w"> </span><span class="sb">`i`</span>, l&#39;indice de début de la partie du tableau où s&#39;effectue la recherche ;
 <span class="k">-</span><span class="w"> </span><span class="sb">`j`</span>, l&#39;indice de fin de la partie du tableau où s&#39;effectue la recherche.
 
@@ -8140,20 +8157,21 @@ L’algorithme demandé est une recherche dichotomique récursive.
 Recopier et compléter le code de la fonction <span class="sb">`chercher`</span> suivante :
 
 ```python linenums=&#39;1&#39;
-def chercher(tab, n, i, j):
-    if i &lt; 0 or j &gt; len(tab) :
+def chercher(tab, x, i, j):
+    &#39;&#39;&#39;Renvoie l&#39;indice de x dans tab, si x est dans tab, 
+    None sinon.
+    On suppose que tab est trié dans l&#39;ordre croissant.&#39;&#39;&#39;
+    if i &gt; j:
         return None
-    if i &gt; j :
-        return None
-    m = (i + j) // ...
-    if ... &lt; n :
-        return chercher(tab, n, ... , ...)
-    elif ... &gt; n :
-        return chercher(tab, n, ... , ... )
-    else :
-        return ...
+    m = (i + j) // ... 
+    if ... &lt; x: 
+        return chercher(tab, x, ... , ...) 
+    elif tab[m] &gt; x:
+        return chercher(tab, x, ... , ...) 
+    else:
+        return ... 
 </code></pre></div>
-<p>L'exécution du code doit donner :
+<p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">chercher</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
