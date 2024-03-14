@@ -204,7 +204,7 @@ Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
