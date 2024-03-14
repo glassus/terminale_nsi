@@ -1,7 +1,9 @@
 
 
 !!! abstract "Actualités"
-    - [Page sur l'orientation post-Bac](T7_Divers/10_orientation/cours/){. target="_blank"}
+    - :new: Les sujets de l'Épreuve Pratique 2024 sont arrivés : [BNS_2024](./data/BNS2024_total.pdf){. target="_blank"}.
+
+    Et bientôt sur ce site... (je retape, je retape...)
     {#
     -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
     - :new: Deux sujets zéro viennent d'être publiés :
