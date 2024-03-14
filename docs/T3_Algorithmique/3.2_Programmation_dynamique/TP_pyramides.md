@@ -44,7 +44,7 @@ def affiche(pyr):
     Créer puis afficher une pyramide de hauteur 10.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -100,7 +100,7 @@ def liste_parcours(pyr):
     3. Pour une pyramide de hauteur 41, que pensez-vous du nombre de trajets différents ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le nombre de trajets pour une hauteur $n$ est $2^{n-1}$.
@@ -117,7 +117,7 @@ def liste_parcours(pyr):
     Écrire une fonction ```val_trajet``` qui prend en paramètres un trajet ```trajet``` et une pyramide ```pyr``` et qui renvoie la somme finale à l'issue de ce trajet.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -137,7 +137,7 @@ def liste_parcours(pyr):
     **Q1.** Écrire une fonction ```max_force_brute``` qui prend en paramètre une pyramide ```pyr``` et qui renvoie la somme maximale parmi tous les trajets possibles.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -157,7 +157,7 @@ def liste_parcours(pyr):
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Notre algorithme donne bien la bonne solution pour ```pyr_exemple```, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.
@@ -193,7 +193,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     ```
   
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -217,7 +217,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Observer et analyser le résultat donné par notre algorithme sur ```pyr_exemple```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Notre algorithme renvoie 25 au lieu de 30. Il ne nous donne donc pas le meilleur résultat.
@@ -251,7 +251,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     ```
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -268,7 +268,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Dès que la hauteur de la pyramide dépasse 25 (environ) le programme devient extrêmement lent et inutilisable. On retrouve le problème rencontré avec l'algorithme de force brute.
@@ -323,7 +323,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -354,7 +354,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour faire trouver le maximum d'une pyramide de taille 500.
@@ -401,7 +401,7 @@ En procédant de même pour les lignes supérieures, on trouve la valeur maximal
     Effectuer des tests pour apprécier l'efficacité de cette fonction.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
