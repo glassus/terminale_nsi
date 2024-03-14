@@ -1,10 +1,10 @@
 ```python linenums='1'
-def ajoute(cle, a): 
+def insertion_abr(a, cle): 
     if a is None:
-        a = ABR(None, cle, None)
-    elif cle > a.cle:
-        a.droit = ajoute(cle, a.droit)
-    elif cle < a.cle:
-        a.gauche = ajoute(cle, a.gauche)
+        return (None, cle, None)
+    elif cle > a[1]:
+        return (a[0], a[1], insertion_abr(a[2], cle))
+    elif cle < a[1]:
+        return (insertion_abr(a[0], cle), a[1], a[2])
     return a
 ```

@@ -1,10 +1,10 @@
 Écrire une fonction `recherche_indices_classement` qui prend en paramètres un
-entier `elt` et une liste d’entiers `tab`, et qui renvoie trois listes :
+entier `elt` et un tableau d’entiers `tab`, et qui renvoie trois listes :
 
-- la première liste contient les indices des valeurs de la liste `tab` strictement
+- la première liste contient les indices des valeurs du tableau `tab` strictement
 inférieures à `elt` ;
-- la deuxième liste contient les indices des valeurs de la liste `tab` égales à `elt` ;
-- la troisième liste contient les indices des valeurs de la liste `tab` strictement
+- la deuxième liste contient les indices des valeurs du tableau `tab` égales à `elt` ;
+- la troisième liste contient les indices des valeurs du tableau `tab` strictement
 supérieures à `elt`.
 
 Exemples :

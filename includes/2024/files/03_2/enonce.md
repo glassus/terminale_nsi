@@ -74,10 +74,6 @@ def bon_parenthesage(ch):
     return ... 
 ```
 
-
-
-Compléter le code de la fonction `parenthesage`.
-
 Exemples :
 
 ```python

@@ -9,6 +9,16 @@ On affecte à chaque lettre de l'alphabet un code selon le tableau ci-dessous :
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 
 
+Cette table de correspondance est stockée dans un dictionnaire `dico` où les clés sont les
+lettres de l’alphabet et les valeurs les codes correspondants.
+
+```python
+dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
+        "G": 7, "H": 8, "I": 9, "J": 10, "K": 11, "L": 12,
+        "M": 13, "N": 14, "O": 15, "P": 16, "Q": 17,
+        "R": 18, "S": 19, "T": 20, "U": 21, "V": 22,
+        "W": 23, "X": 24, "Y": 25, "Z": 26}
+```
 
 
 Pour un mot donné, on détermine d’une part son *code alphabétique concaténé*, obtenu
@@ -28,32 +38,32 @@ parfait.
 1 121 914. Le code additionné est l’entier 37 car 1 + 12 + 1 + 9 + 14 = 37.
 37 divise l’entier 1 121 914 ; par conséquent, le mot `"ALAIN"` est parfait.
 
+Compléter la fonction `codes_parfait` située à la page suivante et qui prend en paramètre
+un mot en majuscule et renvoie un triplet constitué du code additionné, du code concaténé
+et d’un booléen indiquant si le mot est parfait ou non.
 
-Compléter la fonction `est_parfait` ci-dessous qui prend comme argument une chaîne
-de caractères `mot` (en lettres majuscules) et qui renvoie le code alphabétique concaténé,
-le code additionné de `mot`, ainsi qu’un booléen qui indique si `mot` est parfait ou pas.
+
+On rappelle que pour tester si un entier `a` divise un entier `b`, on utilise l’opérateur modulo
+`b % a` qui renvoie le reste de la division euclidienne de `b` par `a`. Si` b % a` vaut `0`, alors `a` divise `b`.
+
 
 ```python linenums='1'
-dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
-        "G": 7, "H": 8, "I": 9, "J": 10, "K": 11, "L": 12,
-        "M": 13, "N": 14, "O": 15, "P": 16, "Q": 17,
-        "R": 18, "S": 19, "T": 20, "U": 21, "V": 22,
-        "W": 23, "X": 24, "Y": 25, "Z": 26}
-
-
-def est_parfait(mot):
-    # mot est une chaîne de caractères (en lettres majuscules)
+def codes_parfait(mot):
+    """Renvoie un triplet 
+    (code_additionne, code_concatene, mot_est_parfait) où :
+    - code_additionne est la somme des codes des lettres du mot ;
+    - code_concatene est le code des lettres du mot concaténées ;
+    - mot_est_parfait est un booléen indiquant si le mot est parfait."""
     code_concatene = ""
-    code_additionne = ...
+    code_additionne = ... 
     for c in mot:
-        code_concatene = code_concatene + ...
-        code_additionne = ...
+        code_concatene = code_concatene + ... 
+        code_additionne = code_additionne + ... 
     code_concatene = int(code_concatene)
-    if ... :
-        mot_est_parfait = True
-    else:
-        mot_est_parfait = False
+    mot_est_parfait = ... 
     return code_additionne, code_concatene, mot_est_parfait
+
+
 ```
 
 Exemples :

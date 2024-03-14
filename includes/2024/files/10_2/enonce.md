@@ -8,7 +8,7 @@ Dans le code ci-dessous, la fonction `affiche` permet d’afficher le dessin. Le
 (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par
 deux espaces.
 
-La fonction `liste_zoom` prend en argument une liste `liste_depart` et un entier `k`. Elle
+La fonction `liste_zoom` prend en arguments une liste `liste_depart` et un entier `k`. Elle
 renvoie une liste où chaque élément de `liste_depart` est dupliqué `k` fois.
 
 La fonction `dessin_zoom` prend en argument la grille `dessin` et renvoie une grille où

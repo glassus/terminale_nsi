@@ -1,7 +1,5 @@
 On considère la fonction `insere` ci-dessous qui prend en argument un tableau `tab` d’en-
-tiers triés par ordre croissant et un entier `a`. Cette fonction crée et renvoie un nouveau
-tableau `tab` d’entiers triés par ordre croissant.
-
+tiers triés par ordre croissant et un entier `a`. 
 
 Cette fonction crée et renvoie un nouveau tableau à partir de celui fourni en paramètre en y
 insérant la valeur `a` de sorte que le tableau renvoyé soit encore trié par ordre croissant. Les

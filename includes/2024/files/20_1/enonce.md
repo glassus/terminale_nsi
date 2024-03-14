@@ -1,17 +1,19 @@
+Dans cet exercice les tableaux sont représentés par des listes Python (type `list`).
+
 Écrire en python deux fonctions :
 
-- `lancer` de paramètre `n`, un entier positif, qui renvoie un tableau de type `list` de
-`n` entiers obtenus aléatoirement entre 1 et 6 (1 et 6 inclus) ;
-
-- `paire_6` de paramètre `tab`, un tableau de type `list` de `n` entiers entre 1 et
-6 obtenus aléatoirement, qui renvoie un booléen égal à `True` si le nombre de 6
-est supérieur ou égal à 2, `False` sinon.
+- `lancer` de paramètre `n`, un entier positif, qui renvoie un tableau de `n` entiers obtenus
+aléatoirement entre 1 et 6 (1 et 6 inclus) ;
+- `paire_6` de paramètre `tab`, un tableau de n entiers compris entre 1 et 6 et qui
+renvoie un booléen égal à `True` si le nombre de 6 est supérieur ou égal à 2, `False`
+sinon.
 
 
 On pourra utiliser la fonction `randint(a,b)` du module `random` pour laquelle la
 documentation officielle est la suivante :
 
-`Renvoie un entier aléatoire N tel que a <=N <= b.`
+`random.randint(a, b)`
+`      Renvoie un entier aléatoire N tel que a <=N <= b.`
 
 Exemples :
 
