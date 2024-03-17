@@ -8,8 +8,7 @@ Si
 tab = [True, False, True, False, False, True, True]
 ```
 
-est un tel tableau, alors l’entier qu’il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représen-
-tation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
+est un tel tableau, alors l’entier qu’il représente est $2^6 +2^4 + 2^1 + 2^0 = 83$. Cette représentation consistant à placer en premier le booléen indiquant la puissance la plus élevée de 2
 est dite *big-endian* ou grand-boutiste.
 
 
