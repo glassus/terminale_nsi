@@ -29,7 +29,7 @@ marquées par des caractères ^ :
  0        3        6        9        12       15       18       21
 ```
 
-Dans des listes comme celles ci-dessus, un algorithme récursif pour trouver l'intrus consiste
+Dans des listes comme ceux ci-dessus, un algorithme récursif pour trouver l'intrus consiste
 alors à choisir un indice `i` multiple de 3 situé approximativement au milieu des indices parmi
 lesquels se trouve l'intrus. 
 

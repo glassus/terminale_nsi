@@ -4,7 +4,7 @@ la façon suivante :
 
 - Les clés de `d` sont celles de `d1` et celles de `d2` réunies.
 - Si une clé est présente dans les deux dictionnaires `d1` et `d2`, sa valeur associée
-dans le dictionnaire d est la somme de ses valeurs dans les dictionnaires `d1` et `d2`.
+dans le dictionnaire `d` est la somme de ses valeurs dans les dictionnaires `d1` et `d2`.
 - Si une clé n’est présente que dans un des deux dictionnaires, sa valeur associée
 dans le dictionnaire `d` est la même que sa valeur dans le dictionnaire où elle est
 présente.

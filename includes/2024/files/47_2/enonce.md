@@ -3,11 +3,11 @@ par exemple : (2 + 3) × 5.
 
 Il existe une autre notation utilisée par certaines calculatrices, appelée notation postfixe, qui n’utilise pas de parenthèses. L’expression arithmétique précédente est alors obtenue en
 saisissant successivement 2, puis 3, puis l’opérateur +, puis 5, et enfin l’opérateur ×. On
-modélise cette saisie par le tableau [2, 3, '+', 5, '*']. 
+modélise cette saisie par le tableau `[2, 3, '+', 5, '*']`. 
 
 Autre exemple, la notation postfixe de 3 × 2 + 5 est modélisée par le tableau : 
 
-[3, 2, '*', 5, '+']. 
+`[3, 2, '*', 5, '+']`. 
 
 
 D’une manière plus générale, la valeur associée à une expression arithmétique en notation
@@ -49,10 +49,10 @@ class Pile:
     def depiler(self):
         """
         Retire et renvoie l’élément placé au sommet de la pile,
-        si la pile n’est pas vide.
+        si la pile n’est pas vide. Produit une erreur sinon.
         """
-        if not self.est_vide():
-            return self.contenu.pop()
+        assert not self.est_vide()
+        return self.contenu.pop()
 
 
 def eval_expression(tab):
@@ -62,7 +62,7 @@ def eval_expression(tab):
             p.empiler(...)
         else:
             if element == ...:
-                resultat = p.depiler() + ...
+                resultat = ... + ...
             else:
                 resultat = ...
             p.empiler(...)
@@ -71,9 +71,13 @@ def eval_expression(tab):
 
 ```
 
-Exemple :
+Exemples :
 
 ```python
 >>> eval_expression([2, 3, '+', 5, '*'])
 25
+>>> eval_expression([1, 2, '+', 3, '*'])
+9
+>>> eval_expression([1, 2, 3, '+', '*'])
+5
 ```

@@ -1,9 +1,13 @@
 Programmer une fonction `renverse`, prenant en paramètre une chaîne de caractères non vide
-`mot` et renvoie une chaîne de caractères en inversant ceux de la chaîne `mot`.
+`mot` et renvoie cette chaîne de caractères en ordre inverse.
 
 Exemple :
 
 ```python
+>>> renverse("")
+""
+>>> renverse("abc")
+"cba"
 >>> renverse("informatique")
 "euqitamrofni"
 ```

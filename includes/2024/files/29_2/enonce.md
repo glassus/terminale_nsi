@@ -6,30 +6,38 @@ obtenir la valeur qui se situe sous la deuxième valeur.
 
 ![image](data2023/17_triangle.png){: .center width=60%}
 
-Compléter la fonction `pascal` ci-après prenant en paramètre un entier `n` supérieur ou
-égal à 2. Cette fonction doit renvoyer une liste correspondant au triangle de Pascal de la
-ligne 0 à la ligne `n`. Le tableau représentant le triangle de Pascal sera contenu dans la
-variable `triangle`.
+Compléter les fonctions `ligne_suivante` et `pascal` ci-dessous. La fonction
+`ligne_suivante` prend en paramètre une liste d’entiers `ligne` correspondant à une
+ligne du triangle de Pascal et renvoie la liste correspondant à la ligne suivante du triangle
+de Pascal. La fonction `pascal` prend en paramètre un entier n et l’utilise pour construire
+le triangle de Pascal ayant `n+1` lignes sous la forme d’une liste de listes.
 
 ```python linenums='1'
+def ligne_suivante(ligne):
+    '''Renvoie la ligne suivant ligne du triangle de Pascal'''
+    ligne_suiv = [...] 
+    for i in range(...): 
+        ligne_suiv.append(...) 
+    ligne_suiv.append(...) 
+    return ligne_suiv
+
 def pascal(n):
-    triangle = [[1]]
-    for k in range(1,...):
-        ligne_k = [...]
-        for i in range(1,k):
-            ligne_k.append(triangle[...][i-1]+triangle[...][...])
-        ligne_k.append(...)
+    '''Renvoie le triangle de Pascal de hauteur n'''
+    triangle = [ [1] ]
+    for k in range(...): 
+        ligne_k = ... 
         triangle.append(ligne_k)
     return triangle
+
+
 ```
 
-Pour `n = 4`, voici ce qu'on devra obtenir :
+Exemples:
 ```python
->>> pascal(4)
-[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-``` 
-Pour `n = 5`, voici ce qu'on devra obtenir :
-```python
->>> pascal(5)
-[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+>>> ligne_suivante([1, 3, 3, 1])
+[1, 4, 6, 4, 1]
+>>> pascal(2)
+[[1], [1, 1], [1, 2, 1]]
+>>> pascal(3)
+[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 ```

@@ -1,5 +1,4 @@
-Programmer la fonction ```moyenne```   prenant en paramètre un tableau d'entiers ```tab``` (de type
-`list`) qui renvoie la moyenne de ses éléments si le tableau est non vide. Proposer une
+Programmer la fonction ```moyenne```   prenant en paramètre un tableau d'entiers ```tab``` (de type `list`) qui renvoie la moyenne de ses éléments si le tableau est non vide. Proposer une
 façon de traiter le cas où le tableau passé en paramètre est vide.
 
 Dans cet exercice, on s’interdira d’utiliser la fonction Python `sum`.

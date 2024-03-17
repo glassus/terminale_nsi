@@ -3,12 +3,11 @@ entiers triés par ordre croissant et un nombre entier `n`, et qui effectue une 
 dichotomique du nombre entier `n` dans le tableau non vide `tab`.
 
 Cette fonction doit renvoyer un indice correspondant au nombre cherché s’il est dans le
-tableau, `-1` sinon.
+tableau, `None` sinon.
 
 Exemples :
 ```python
 >>> recherche([2, 3, 4, 5, 6], 5)
 3
->>> recherche([2, 3, 4, 6, 7], 5)
--1
+>>> recherche([2, 3, 4, 6, 7], 5) # renvoie None
 ```

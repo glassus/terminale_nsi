@@ -25,8 +25,12 @@ L'exemple ci-contre sera donc codé par la liste :
 ```
 
 Compléter le code suivant afin de générer des grilles de démineur, on pourra vérifier que
-l’instruction `genere_grille([(1, 1), (2, 4), (3, 1), (3, 3), (4, 4)])`
-produit bien la liste donnée en exemple.
+l'appel
+
+ `genere_grille([(1, 1), (2, 4), (3, 1), (3, 3), (4, 4)])`
+
+
+renvoie bien la liste donnée en exemple.
 
 ```python linenums='1'
 def voisinage(n, ligne, colonne):

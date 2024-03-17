@@ -1,14 +1,14 @@
 On s’intéresse à la suite d’entiers définie par :
 
-- les deux premiers termes sont égaux à 1,
-- ensuite, chaque terme est obtenu en faisant la somme des deux termes qui le
-précèdent.
+- les deux premières valeurs sont égales à 1 ;
+- ensuite, chaque valeur est obtenue en faisant la somme des deux valeurs qui le précè-
+dent.
 
-En mathématiques, on le formule ainsi :
+La troisième valeur est donc $1+1 = 2$, la quatrième est $1+2 = 3$, la cinquième est $2+3 = 5$,
+la sixième est $3 + 5 = 8$, et ainsi de suite.
 
-$U_1 = 1$, $U_2 = 1$ et, pour tout entier naturel non nul $n$, par $U_{n+2} = U_{n+1} + U_n$.
+Cette suite d’entiers est connue sous le nom de suite de Fibonacci.
 
-Cette suite est connue sous le nom de suite de Fibonacci.  
 Écrire en Python une fonction `fibonacci` qui prend en paramètre un entier `n` supposé
 strictement positif et qui renvoie le terme d’indice `n` de cette suite.
 
@@ -21,6 +21,4 @@ Exemples :
 1
 >>> fibonacci(25)
 75025
->>> fibonacci(45)
-1134903170
 ```

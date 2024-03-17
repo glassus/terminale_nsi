@@ -1,5 +1,5 @@
 ```python linenums='1' hl_lines='3 5-7 9 10'
-def pantheon(eleves, notes):
+def eleves_du_mois(eleves, notes):
     note_maxi = 0
     meilleurs_eleves =  []
 

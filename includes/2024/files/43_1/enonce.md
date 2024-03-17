@@ -1,7 +1,8 @@
-Écrire une fonction `a_doublon` qui prend en paramètre une liste **triée** de nombres et
-renvoie `True` si la liste contient au moins deux nombres identiques, `False` sinon.
+Écrire une fonction `a_doublon` qui prend en paramètre un tableau **trié** de nombres dans
+l’ordre croissant et renvoie `True` si ce tableau contient au moins deux nombres identiques,
+`False` sinon.
 
-Par exemple :
+Exemple :
 
 ```python
 >>> a_doublon([])

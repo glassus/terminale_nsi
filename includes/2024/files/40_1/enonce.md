@@ -1,6 +1,9 @@
-On considère des tables (des tableaux de dictionnaires) qui contiennent des enregistrements
-relatifs à des animaux hébergés dans un refuge. Les attributs des enregistrements sont
-`'nom'`, `'espece'`, `'age'`, `'enclos'`. Voici un exemple d'une telle table :
+On considère des tables, c’est-à-dire des tableaux de dictionnaires ayant tous les mêmes
+clés, qui contiennent des enregistrements relatifs à des animaux hébergés dans un refuge.
+Les attributs des enregistrements sont `'nom'`, `'espece'`, `'age'`, `'enclos'`.
+
+
+ Voici un exemple d'une telle table :
 
 ```python
 animaux = [ {'nom':'Medor', 'espece':'chien', 'age':5, 'enclos':2},
@@ -13,10 +16,10 @@ animaux = [ {'nom':'Medor', 'espece':'chien', 'age':5, 'enclos':2},
 Programmer une fonction `selection_enclos` qui :
 
 - prend en paramètres :
-    - une table `table_animaux` contenant des enregistrements relatifs à des
+    - une table `animaux` contenant des enregistrements relatifs à des
 animaux (comme dans l'exemple ci-dessus),
     - un numéro d'enclos `num_enclos` ;
-- renvoie une table contenant les enregistrements de `table_animaux` dont l'attribut
+- renvoie une table contenant les enregistrements de `animaux` dont l'attribut
 `'enclos'` est `num_enclos`.
 
 Exemples avec la table `animaux` ci-dessus :

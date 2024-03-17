@@ -1,24 +1,26 @@
-Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
-ne recopiera pas les commentaires.
+On s’intéresse dans cet exercice à la recherche dichotomique dans un tableau trié d’en-
+tiers.
+Compléter la fonction suivante en respectant la spécification.
 
 ```python linenums='1'
 def dichotomie(tab, x):
     """
-    tab : tableau d’entiers trié dans l’ordre croissant
+    tab : tableau d'entiers trié dans l'ordre croissant
     x : nombre entier
     La fonction renvoie True si tab contient x et False sinon
     """
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:
-        m = ...
+        m = ... 
         if x == tab[m]:
-            return ...
+            return ... 
         if x > tab[m]:
             debut = m + 1
         else:
-            fin = ...
-    return ...
+            fin = ... 
+    return ... 
+
 ```
 
 Exemples :

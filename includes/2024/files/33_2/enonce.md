@@ -23,21 +23,28 @@ petits que `n`.
 
 ```python linenums='1'
 def crible(n):
-    """
-    Renvoie un tableau contenant tous les nombres premiers plus petits que N
-    """
+    """Renvoie un tableau contenant tous les nombres premiers
+    plus petits que n."""
     premiers = []
     tab = [True] * n
     tab[0], tab[1] = False, False
-    for i in range(..., n):
-        if tab[i] == ...:
-            premiers.append(...)
-            for multiple in range(2*i, n, ...):
-                tab[multiple] = ...
+    for i in range(n):
+        if tab[i]:
+            premiers.... 
+            multiple = ... 
+            while multiple < n:
+                tab[multiple] = ... 
+                multiple = ... 
     return premiers
 
-assert crible(40) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
 ```
 
-Compléter le code de cette fonction.
+Exemples :
+
+```python
+>>> crible(40)
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+>> crible(5)
+[2, 3]
+```
 

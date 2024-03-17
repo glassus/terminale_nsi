@@ -1,5 +1,7 @@
 On considère un tableau d'entiers `tab` (de type `list`) dont les éléments sont des `0` ou des `1`). On se propose de trier ce tableau selon l'algorithme suivant : à chaque étape du tri, le tableau est constitué de trois zones consécutives, la première ne contenant que des `0`,
 la seconde n'étant pas triée et la dernière ne contenant que des `1`.
+Au départ, les zones ne contenant que des `0` et des `1` sont vides.
+
 
 <table>
 <tr>
@@ -17,28 +19,29 @@ considère alors qu’il appartient à la zone ne contenant que des 1.
 
 Dans tous les cas, la longueur de la zone non triée diminue de 1.
 
-Recopier sous Python en la complétant la fonction `tri` suivante :
+Compléter la fonction `tri` suivante :
 
 ```python linenums='1'
 def tri(tab):
-    # i est le premier indice de la zone non triée,
-    # j est le dernier indice de cette zone non triée.
-    # Au début, la zone non triée est le tableau complet.
-    i = ...
-    j = ...
-    while i != j:
-        if tab[i]== 0:
-            i = ...
+    '''tab est un tableau d'entiers contenant des 0 et des 1.
+    La fonction trie ce tableau en plaçant tous les 0 à gauche'''
+    i = ... # premier indice de la zone non triée 
+    j = ... # dernier indice de la zone non triée 
+    while i < j:
+        if tab[i] == 0:
+            i = ... 
         else:
-            valeur = tab[j]
-            tab[j] = ...
+            valeur = ... 
+            tab[j] = ... 
             ...
-            j = ...
-    ...
+            j = ... 
+
 ```
 
 Exemple :
 ```python
->>> tri([0,1,0,1,0,1,0,1,0])
-[0, 0, 0, 0, 0, 1, 1, 1, 1]       
+>>> tab = [0,1,0,1,0,1,0,1,0]
+>>> tri(tab)
+>>> tab
+[0, 0, 0, 0, 0, 1, 1, 1, 1]    
 ```

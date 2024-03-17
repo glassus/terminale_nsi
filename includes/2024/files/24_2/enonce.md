@@ -7,8 +7,7 @@ somme est 18 obtenue en additionnant les éléments 3, 10, -4, 7, 2.
 
 
 Pour cela, on va résoudre le problème par programmation dynamique. Si on note `tab` le
-tableau considéré et `i` un indice dans ce tableau, on se ramène à un problème plus simple
-: déterminer la plus grande somme possible de ses éléments consécutifs se terminant à
+tableau considéré et `i` un indice dans ce tableau, on se ramène à un problème plus simple : déterminer la plus grande somme possible de ses éléments consécutifs se terminant à
 l’indice `i`.
 
 

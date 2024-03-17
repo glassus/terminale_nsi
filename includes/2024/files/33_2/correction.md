@@ -1,19 +1,18 @@
-```python linenums='1' hl_lines='8-12'
-def crible(n):
-    """
-    Renvoie un tableau contenant tous les nombres premiers plus petits que N
-    """
+```python linenums='1' hl_lines='9 10 12 13'
+ddef crible(n):
+    """Renvoie un tableau contenant tous les nombres premiers
+    plus petits que n."""
     premiers = []
     tab = [True] * n
     tab[0], tab[1] = False, False
-    for i in range(2, n):
-        if tab[i] == True:
+    for i in range(n):
+        if tab[i]:
             premiers.append(i)
-            for multiple in range(2*i, n, i):
-                tab[multiple] = False
+            multiple = i 
+            while multiple < n:
+                tab[multiple] = False 
+                multiple = multiple + i 
     return premiers
-
-assert crible(40) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
 
 
 ```

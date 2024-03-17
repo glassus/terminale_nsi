@@ -22,8 +22,8 @@ La classe `Carre` ci-après contient des méthodes qui permettent de manipuler d
 Exemple :
 
 ```python
->>> liste = (3, 4, 5, 4, 4, 4, 5, 4, 3)
->>> c3 = Carre(liste, 3)
+>>> lst_c3 = [3, 4, 5, 4, 4, 4, 5, 4, 3]
+>>> c3 = Carre(lst_c3, 3)
 >>> c3.affiche()
 [3, 4, 5]
 [4, 4, 4]
@@ -31,7 +31,7 @@ Exemple :
 ```
 
 Compléter la méthode `est_semimagique` qui renvoie `True` si le carré est semimagique,
-`False` sinon. Puis tester la fonction `est_semimagique` sur les carrés c2, c3 et c3bis.
+`False` sinon. 
 
 ```python linenums='1'
 class Carre:
@@ -74,10 +74,4 @@ class Carre:
         return ...
 ```
 
-Listes permettant de générer les carrés c2, c3 et c3bis :
-
-```python linenums='1'
-lst_c2 = [1, 7, 7, 1]
-lst_c3 = [3, 4, 5, 4, 4, 4, 5, 4, 3]
-lst_c3bis = [2, 9, 4, 7, 0, 3, 6, 1, 8]
-```
+Tester la méthode `est_semimagique` sur les carrés c2, c3 et c3bis.

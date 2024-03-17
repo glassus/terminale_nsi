@@ -1,43 +1,44 @@
-Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à
-gauche : *bob*, *radar*, et *non* sont des mots palindromes.
+Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à gauche :
+*kayak*, *radar*, et *non* sont des mots palindromes.
 
-De même certains nombres sont eux aussi des palindromes : 33, 121, 345543.
+De même certains nombres ont des écritures décimales qui sont des palindromes : 33, 121,
+345543.
+
 
 L’objectif de cet exercice est d’obtenir un programme Python permettant de tester si un
 nombre est un nombre palindrome.
 
 Pour remplir cette tâche, on vous demande de compléter le code des trois fonctions ci-
-dessous sachant que la fonction `est_nbre_palindrome` s’appuiera sur la fonction
-`est_palindrome` qui elle-même s’appuiera sur la fonction `inverse_chaine`.
+dessous qui s’appuient les unes sur les autres :
 
-La fonction `inverse_chaine` inverse l'ordre des caractères d'une chaîne de caractères
-`chaine` et renvoie la chaîne inversée.
+- `inverse_chaine` : qui renvoie une chaîne de caractères inversée ;
+- `est_palindrome` : qui teste si une chaîne de caractères est un palindrome ;
+- `est_nbre_palindrome` : qui teste si un nombre est un palindrome.
 
-La fonction `est_palindrome` teste si une chaine de caractères `chaine` est un
-palindrome. Elle renvoie `True` si c’est le cas et `False` sinon. Cette fonction s’appuie sur
-la fonction précédente.
-
-La fonction `est_nbre_palindrome` teste si un nombre `nbre` est un palindrome. Elle
-renvoie `True` si c’est le cas et `False` sinon. Cette fonction s’appuie sur la fonction
-précédente.
 
 Compléter le code des trois fonctions ci-dessous.
-
 ```python linenums='1'
 def inverse_chaine(chaine):
-    result = ...
+    '''Retourne la chaine inversée'''
+    resultat = ... 
     for caractere in chaine:
-        result = ...
-    return result
+        resultat = ... 
+    return resultat
 
 def est_palindrome(chaine):
+    '''Renvoie un booléen indiquant si la chaine ch
+    est un palindrome'''
     inverse = inverse_chaine(chaine)
-    return ...
+    return ... 
 
 def est_nbre_palindrome(nbre):
-    chaine = ...
+    '''Renvoie un booléen indiquant si le nombre nbre 
+    est un palindrome'''
+    chaine = ... 
     return est_palindrome(chaine)
 ```
+
+
 Exemples :
 
 ```python

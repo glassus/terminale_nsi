@@ -1,13 +1,21 @@
-```python linenums='1' hl_lines='2 3 5 6 8 10'
-def positif(pile):
-    pile_1 = list(pile)
-    pile_2 = []
-    while pile_1 != []:
-        x = pile_1.pop()
-        if x >= 0:
-            pile_2.append(x)
-    while pile_2 != []:
-        x = pile_2.pop()
-        pile_1.append(x)
-    return pile_1
+```python linenums='1' hl_lines='5 7 8 14 16-19'
+def renverse(pile):
+    '''renvoie une pile contenant les mêmes éléments que pile,
+    mais dans l'ordre inverse.
+    Cette fonction détruit pile.'''
+    pile_inverse = [] 
+    while pile != []:
+        pile_inverse.append(pile.pop()) 
+    return pile_inverse 
+
+
+def positifs(pile):
+    '''renvoie une pile contenant les éléments positifs de pile,
+    dans le même ordre. Cette fonction détruit pile.'''
+    pile_positifs = [] 
+    while pile != []:
+        elt = pile.pop() 
+        if elt >= 0: 
+            pile_positifs.append(elt)
+    return renverse(pile_positifs) 
 ```

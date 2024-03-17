@@ -10,7 +10,7 @@ def recherche(tab, n):
             ind_debut = ind_milieu + 1
         else:
             ind_fin = ind_milieu - 1
-    return -1
+    return None
 
 
 ```

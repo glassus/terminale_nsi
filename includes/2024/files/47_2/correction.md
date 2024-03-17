@@ -1,4 +1,4 @@
-```python linenums='1' hl_lines='25 26 27 29 30 32 33 34'
+```python linenums='1' hl_lines='24 25 26 28 29 31-33'
 class Pile:
     """Classe définissant une structure de pile."""
     def __init__(self):

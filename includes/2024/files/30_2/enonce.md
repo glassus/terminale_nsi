@@ -53,8 +53,6 @@ def traduire_romain(nombre):
         return ...
 ```
 
-Compléter le code de la fonction `traduire_romain` et le tester.
-
 Exemples :
 
 ```python
@@ -62,6 +60,6 @@ Exemples :
 14
 >>> traduire_romain("CXLII")
 142
->>> traduire_romain("MMXXIII")
-2023
+>>> traduire_romain("MMXXIV")
+2024
 ```

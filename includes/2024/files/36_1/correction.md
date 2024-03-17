@@ -1,5 +1,5 @@
 ```python linenums='1'
-def recherche(caractere, chaine):
+def occurrences(caractere, chaine):
     somme = 0
     for lettre in chaine:
         if lettre == caractere:

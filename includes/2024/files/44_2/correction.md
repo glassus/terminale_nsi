@@ -1,33 +1,31 @@
-```python linenums='1' hl_lines='5 6 11'
+```python linenums='1' hl_lines='8 11'
 def insere(arbre, cle):
-""" arbre est une instance de la classe Arbre qui implémente
-    un arbre binaire de recherche.
-"""
-    if cle < arbre.v:
-        if arbre.fg is not None:
-            insere(arbre.fg, cle)
-        else:
-            arbre.fg = Arbre(cle)
+    """insere la cle dans l'arbre binaire de recherche
+    représenté par arbre.
+    Retourne l'arbre modifié."""
+    if arbre == None:
+        return Noeud(cle, None, None) # creation d'une feuille
     else:
-        if arbre.fd is not None:
-            insere(arbre.fd, cle)
+        if cle < arbre.etiquette: 
+            arbre.gauche = insere(arbre.gauche, cle)
         else:
-            arbre.fd = Arbre(cle)
+            arbre.droit = insere(arbre.droit, cle) 
+        return arbre
 ```
 
 Tests :
 
 ```python
->>> a = Arbre(5)
->>> insere(a, 2)
->>> insere(a, 7)
->>> insere(a, 3)
+>>> a = Noeud(5, None, None)
+>>> a = insere(a, 2)
+>>> a = insere(a, 3)
+>>> a = insere(a, 7)
 >>> parcours(a, [])
 [2, 3, 5, 7]
->>> insere(a, 1)
->>> insere(a, 4)
->>> insere(a, 6)
->>> insere(a, 8)
+>>> a = insere(a, 1)
+>>> a = insere(a, 4)
+>>> a = insere(a, 6)
+>>> a = insere(a, 8)
 >>> parcours(a, [])
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```

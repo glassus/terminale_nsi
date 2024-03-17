@@ -1,6 +1,5 @@
-Écrire une fonction `couples_consecutifs` qui prend en paramètre une liste de
-nombres entiers `tab` non vide, et qui renvoie la liste (éventuellement vide) des couples d'entiers consécutifs
-successifs qu'il peut y avoir dans `tab`.
+Écrire une fonction `couples_consecutifs` qui prend en paramètre un tableau de
+nombres entiers `tab` non vide (type `list`), et qui renvoie la liste Python (éventuellement vide) des couples d'entiers consécutifs successifs qu'il peut y avoir dans `tab`.
 
 Exemples :
 ```python

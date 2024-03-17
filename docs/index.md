@@ -1,9 +1,7 @@
 
 
 !!! abstract "Actualités"
-    - :new: Les sujets de l'Épreuve Pratique 2024 sont arrivés : [BNS_2024](./data/BNS2024_total.pdf){. target="_blank"}.
-
-    Et bientôt sur ce site... (je retape, je retape...)
+    - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
     {#
     -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
     - :new: Deux sujets zéro viennent d'être publiés :

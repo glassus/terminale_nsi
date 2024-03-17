@@ -1,10 +1,10 @@
 ```python linenums='1'
-def enumere(L):
+def enumere(tab):
     d = {}
-    for i in range(len(L)):
-        if L[i] in d:
-            d[L[i]].append(i)
+    for i in range(len(tab)):
+        if tab[i] in d:
+            d[tab[i]].append(i)
         else:
-            d[L[i]] = [i]
+            d[tab[i]] = [i]
     return d
 ```
