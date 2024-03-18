@@ -44,7 +44,7 @@ def affiche(pyr):
     Créer puis afficher une pyramide de hauteur 10.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -115,6 +115,12 @@ def liste_parcours(pyr):
 
 !!! example "{{ exercice() }}"
     Écrire une fonction ```val_trajet``` qui prend en paramètres un trajet ```trajet``` et une pyramide ```pyr``` et qui renvoie la somme finale à l'issue de ce trajet.
+
+    Exemple :
+    ```python
+    >>> val_trajet([0, 1, 1, 2, 2], pyr_exemple)
+    23
+    ```
 
     {{
     correction(False,

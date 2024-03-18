@@ -17,7 +17,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Programmation dynamique](T3_Algorithmique/3.2_Programmation_dynamique/cours/){. target="_blank"}
+    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
+    - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
 
