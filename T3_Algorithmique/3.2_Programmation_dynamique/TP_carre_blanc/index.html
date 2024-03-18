@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/exercices/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/">
       
       
         <link rel="prev" href="../TP_rendu_monnaie/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Exercices - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>TP Le plus grand carré blanc - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 
@@ -106,6 +106,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#a-la-recherche-du-plus-grand-carre-blanc" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercices
+              TP Le plus grand carré blanc
             
           </span>
         </div>
@@ -1618,16 +1623,75 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TP Le plus grand carré blanc
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Exercices
+    TP Le plus grand carré blanc
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prise-en-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prise en main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-recherche-manuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Recherche manuelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-fonction-pgcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La fonction pgcb
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3665,11 +3729,88 @@
   
 
 
-  <h1>Exercices</h1>
-
-<div class="admonition abstract">
+<h1 id="a-la-recherche-du-plus-grand-carre-blanc">À la recherche du plus grand carré blanc<a class="headerlink" href="#a-la-recherche-du-plus-grand-carre-blanc" title="Permanent link">⚓︎</a></h1>
+<p>L'objectif est de trouver la taille du plus grand carré intégralement blanc que l'on peut dessiner dans l'image ci-dessous :
+<img alt="image" class="center" src="../data/pgcb.bmp" /></p>
+<h3 id="1-prise-en-main">1. Prise en main<a class="headerlink" href="#1-prise-en-main" title="Permanent link">⚓︎</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Préambule</p>
+<p>Télécharger l'image, puis creér une variable <code>img</code> grâce au package <code>PIL</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;pgcb.bmp&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>On peut dès lors avoir accès à quelques informations :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+<span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+</code></pre></div>
+L'image est donc de taille 600x600.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">358</span><span class="p">))</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>Le pixel de coordonnées (0, 0) est donc blanc, et le pixel (0, 358) est noir. </p>
+</div>
+<div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
-<p>cdv</p>
+<p>Écrire une fonction <code>est_noir</code> qui prend en paramètre les coordonnées d'un pixel <code>x</code> et <code>y</code>   et qui renvoie <code>True</code> si ce pixel est noir, <code>False</code> sinon.</p>
+<p>Exemple :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_noir</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_noir</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">358</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;pgcb.bmp&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">est_noir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="12-recherche-manuelle">1.2 Recherche manuelle<a class="headerlink" href="#12-recherche-manuelle" title="Permanent link">⚓︎</a></h3>
+<p>Considérons le damier ci-dessous :</p>
+<p><img alt="image" class="center" src="../data/man1.png" /></p>
+<p>Pour chaque case, on va inscrire à l'intérieur la taille du plus grand carré blanc possible <strong>dont la case est le coin inférieur droit</strong>.</p>
+<p>Par exemple :</p>
+<p><img alt="image" class="center" src="../data/man2.png" /></p>
+<p>Sur une case noire, on écrira le nombre 0.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Recopier le damier et compléter toutes les cases, <strong>en commençant en haut à gauche</strong>.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><img alt="image" class="center" src="../data/man3.png" /></p>
+</details>
+</div>
+<p>Imaginons maintenant la situation suivante, sur un autre damier que vous ne pouvez pas voir en intégralité :</p>
+<p><img alt="image" class="center" src="../data/man4.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>Quelle est la valeur qu'il faut écrire à la place du point d'interrogation ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Il faut écrire la valeur 3, qui est égale à 1 + le minimum des trois cases situées au Nord, Ouest et Nord-Ouest.</p>
+</details>
+</div>
+<h2 id="2-la-fonction-pgcb">2. La fonction <code>pgcb</code><a class="headerlink" href="#2-la-fonction-pgcb" title="Permanent link">⚓︎</a></h2>
+<p>On va écrire la fonction récursive <code>pgcb</code>, qui prend en paramètre un tuple <code>(x,y)</code> et qui renvoie la taille du plus grand carré blanc dont le pixel de coordonnées <code>(x,y)</code> est le coin inférieur droit.</p>
+<p>Les cas de base seront :</p>
+<ul>
+<li>le pixel est noir : on renvoie 0</li>
+<li>le pixel est sur la ligne du haut ou la colonne de gauche : on renvoie 1</li>
+</ul>
+<p>Pour le cas général, on s'inspirera de la partie précédente...</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p>Écrire le code de la fonction <code>pgcb</code>. </p>
 </div>
 
 
