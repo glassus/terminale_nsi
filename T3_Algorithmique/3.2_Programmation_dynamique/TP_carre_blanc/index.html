@@ -1687,6 +1687,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. La fonction pgcb">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-premiere-ecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Première écriture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-amelioration-de-la-fonction-pgcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Amélioration de la fonction pgcb
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-recherche-du-plus-grand-carre" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Recherche du plus grand carré
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3755,7 +3788,7 @@ L'image est donc de taille 600x600.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Écrire une fonction <code>est_noir</code> qui prend en paramètre les coordonnées d'un pixel <code>x</code> et <code>y</code>   et qui renvoie <code>True</code> si ce pixel est noir, <code>False</code> sinon.</p>
-<p>Exemple :
+<p><em>Exemple :</em>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_noir</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_noir</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">358</span><span class="p">)</span>
@@ -3801,6 +3834,8 @@ L'image est donc de taille 600x600.</p>
 </details>
 </div>
 <h2 id="2-la-fonction-pgcb">2. La fonction <code>pgcb</code><a class="headerlink" href="#2-la-fonction-pgcb" title="Permanent link">⚓︎</a></h2>
+<p><em>pgcb -&gt; plus grand carré blanc</em></p>
+<h3 id="21-premiere-ecriture">2.1 Première écriture<a class="headerlink" href="#21-premiere-ecriture" title="Permanent link">⚓︎</a></h3>
 <p>On va écrire la fonction récursive <code>pgcb</code>, qui prend en paramètre un tuple <code>(x,y)</code> et qui renvoie la taille du plus grand carré blanc dont le pixel de coordonnées <code>(x,y)</code> est le coin inférieur droit.</p>
 <p>Les cas de base seront :</p>
 <ul>
@@ -3811,6 +3846,127 @@ L'image est donc de taille 600x600.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>Écrire le code de la fonction <code>pgcb</code>. </p>
+<p><em>Exemples d'utilisation :</em>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pgcb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pgcb</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pgcb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">358</span><span class="p">)</span>
+<span class="mi">0</span>
+</code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">est_noir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="22-amelioration-de-la-fonction-pgcb">2.2 Amélioration de la fonction <code>pgcb</code><a class="headerlink" href="#22-amelioration-de-la-fonction-pgcb" title="Permanent link">⚓︎</a></h3>
+<p>Si on teste la fonction avec le pixel de coordonnées <code>(300, 300)</code>, le code ne renvoie aucun résultat et semble parti dans des calculs interminables.</p>
+<p>La structure récursive du code doit nous pousser à la méfiance : ne saurions-nous pas en train de lui demander de calculer plusieurs fois la même chose ?</p>
+<p>La réponse est oui : si on ne regarde par exemple que les pixels diagonaux, l'appel  <code>pgcb(1, 1)</code> aura lieu pour  <code>pgcb(2, 2)</code>, mais aussi pour <code>pgcb(3, 3)</code>, pour <code>pgcb(4, 4)</code>, pour <code>pgcb(5, 5)</code>... entre autres !</p>
+<p>Pour éviter de refaire ces calculs, on va donc faire appel à la technique de <code>mémoïsation</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p>Écrire la fonction <code>pgcb_memo</code>, identique à la fonction <code>pgcb</code> mais qui mémoïse ses résultats. On pourra se servir d'une <a class="" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/cours/#132-suppression-de-la-variable-globale" target="_blank">fonction englobante</a> comme dans le cours sur Fibonacci.</p>
+<p><em>Exemple :</em>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pgcb_memo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+<span class="mi">21</span>
+</code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcb_memo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">dict_memo</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">def</span> <span class="nf">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">est_noir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict_memo</span><span class="p">:</span>
+            <span class="n">dict_memo</span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">dict_memo</span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h2 id="3-recherche-du-plus-grand-carre">3. Recherche du plus grand carré<a class="headerlink" href="#3-recherche-du-plus-grand-carre" title="Permanent link">⚓︎</a></h2>
+<p>Maintenant que notre fonction est efficace, nous pouvons partir à la recherche du pixel de l'image d'où peut se construire le plus grand carré blanc.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  6</p>
+<p>Écrire une fonction <code>total_pgcb</code> qui va parcourir tous les pixels de l'image et renvoyer la taille du plus grand carré blanc qu'on puisse y inscrire, ainsi que les coordonnées du pixel inférieur droit de ce carré.</p>
+<p><em>Exemple :</em>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">total_pgcb</span><span class="p">()</span>
+<span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="p">(</span><span class="mi">370</span><span class="p">,</span> <span class="mi">461</span><span class="p">))</span>
+</code></pre></div></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> dans la structure de votre code, penser à réutiliser le dictionnaire de mémoïsation...</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">total_pgcb</span><span class="p">():</span>
+    <span class="n">dict_memo</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">def</span> <span class="nf">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">est_noir</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict_memo</span><span class="p">:</span>
+            <span class="n">dict_memo</span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">dict_memo</span><span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span>
+
+    <span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">600</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">600</span><span class="p">):</span>
+            <span class="n">taille_pgcb</span> <span class="o">=</span> <span class="n">pgcb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">taille_pgcb</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
+                <span class="n">maxi</span> <span class="o">=</span> <span class="n">taille_pgcb</span>
+                <span class="n">best_pixel</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">maxi</span><span class="p">,</span> <span class="n">best_pixel</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
