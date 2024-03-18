@@ -6,9 +6,9 @@ Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on
 - on écrit donc en nombre *1 1, 1 2, 2 1* ;
 - puis on concatène *111221*.
 
-Compléter la fonction n`ombre_suivant qui prend en entrée un nombre sous forme de
-chaine de caractère et qui renvoie le nombre suivant par ce procédé, encore sous forme de
-chaîne de caractère.
+Compléter la fonction `nombre_suivant` qui prend en entrée un nombre sous forme de
+chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
+chaîne de caractères.
 
 ```python linenums='1'
 def nombre_suivant(s):
