@@ -44,7 +44,7 @@ L'objectif est de trouver la taille du plus grand carré intégralement blanc qu
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -78,7 +78,7 @@ Sur une case noire, on écrira le nombre 0.
     Recopier le damier et compléter toutes les cases, **en commençant en haut à gauche**.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/man3.png){: .center}
@@ -95,7 +95,7 @@ Imaginons maintenant la situation suivante, sur un autre damier que vous ne pouv
     Quelle est la valeur qu'il faut écrire à la place du point d'interrogation ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il faut écrire la valeur 3, qui est égale à 1 + le minimum des trois cases situées au Nord, Ouest et Nord-Ouest.
@@ -131,7 +131,7 @@ Pour le cas général, on s'inspirera de la partie précédente...
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -167,7 +167,7 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -201,10 +201,10 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
     (51, (370, 461))
     ``` 
 
-    :warning: dans la structure de votre code, penser à réutiliser le dictionnaire de mémoïsation...
+    :warning: Dans la structure de votre code, penser à réutiliser le dictionnaire de mémoïsation...
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -229,6 +229,48 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
                         maxi = taille_pgcb
                         best_pixel = (x, y)
             return maxi, best_pixel
+        ```
+        On trouve donc :
+        ```python
+        >>> total_pgcb()
+        (51, (370, 461))
+        ``` 
+        Voici la position de ce carré :
+
+        ![image](data/sol.png){: .center}
+        
+
+
+    """
+    )
+    }}
+
+
+## 4. Bonus : méthode bottom-up
+
+!!! example "{{ exercice() }}"
+    En s'inspirant de la manière dont on a rempli manuellement les cases au [1.2](http://127.0.0.1:8000/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/#12-recherche-manuelle), écrire une fonction ```pgcb_bottom_up```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def pgcb_bottom_up():
+            memo = {}
+            maxi = 0
+            for x in range(600):
+                for y in range(600):
+                    if est_noir(x, y):
+                        memo[(x,y)] = 0
+                    elif x == 0 or y == 0:
+                        memo[(x,y)] = 1
+                    else:
+                        memo[(x,y)] = 1 + min(memo[(x-1, y)] , memo[(x-1, y-1)] , memo[(x, y-1)])
+                    if memo[(x,y)] > maxi:
+                        maxi = memo[(x,y)]
+                        best = (x,y)
+            return maxi, best
         ```
     """
     )
