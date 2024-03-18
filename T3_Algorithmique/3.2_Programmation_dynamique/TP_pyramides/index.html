@@ -3927,7 +3927,30 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p><strong>Q1.</strong> Écrire une fonction <code>max_force_brute</code> qui prend en paramètre une pyramide <code>pyr</code> et qui renvoie la somme maximale parmi tous les trajets possibles.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_force_brute</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="n">trajets</span> <span class="o">=</span> <span class="n">liste_parcours</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">trajets</span><span class="p">:</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">val_trajet</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">pyr</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="k">return</span> <span class="n">m</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Notre algorithme donne bien la bonne solution pour <code>pyr_exemple</code>, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.</p>
+</details>
 </div>
 <h2 id="3-recherche-par-methode-gloutonne">3. Recherche par méthode gloutonne<a class="headerlink" href="#3-recherche-par-methode-gloutonne" title="Permanent link">⚓︎</a></h2>
 <p>Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d'être plus efficace. Pourquoi ne pas chercher une méthode <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" target="_blank">gloutonne</a> ?</p>
@@ -3960,6 +3983,33 @@
             <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_glouton</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)):</span>
+        <span class="n">v1</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">v2</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">v1</span> <span class="o">&gt;</span> <span class="n">v2</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">v1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">v2</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Observer et analyser le résultat donné par notre algorithme sur <code>pyr_exemple</code>.</p>
 </div>
 <h2 id="4-recherche-par-methode-recursive">4. Recherche par méthode récursive<a class="headerlink" href="#4-recherche-par-methode-recursive" title="Permanent link">⚓︎</a></h2>
