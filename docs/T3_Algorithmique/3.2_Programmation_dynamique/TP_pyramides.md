@@ -442,7 +442,7 @@ En procédant de même pour les lignes supérieures, on trouve la valeur maximal
     Effectuer des tests pour apprécier l'efficacité de cette fonction.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
