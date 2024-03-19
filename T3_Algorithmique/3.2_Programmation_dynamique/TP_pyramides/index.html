@@ -4112,6 +4112,43 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  8</p>
+<p>Mieux ! Il faut simplement mémoïser le <code>(i, j)</code>...</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
+    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">dict_max</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+    <span class="k">else</span><span class="p">:</span>   
+        <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
+        <span class="k">return</span> <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<p>def max_rec_dynamique(pyr, pos=(0,0)):
+    i, j = pos
+    if i == len(pyr) - 1:
+        return pyr[i][j]</p>
+<div class="highlight"><pre><span></span><code>if (i, j) in dict_max:
+    return dict_max[(i, j)]
+else:   
+    dict_max[(i, j)] = pyr[i][j] + max(max_rec_dynamique(pyr, (i+1, j)), max_rec_dynamique(pyr, (i+1, j+1)))
+    return dict_max[(i, j)]
+</code></pre></div>
+</details>
+</div>
 <h2 id="6-methode-bottom-up">6. Méthode bottom-up<a class="headerlink" href="#6-methode-bottom-up" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Plus court chemin</p>
@@ -4133,7 +4170,7 @@
 <p>En procédant de même pour les lignes supérieures, on trouve la valeur maximale de 30 :</p>
 <p><img alt="image" class="center" src="../data/bup3.png" width="25%" /></p>
 <div class="admonition example">
-<p class="admonition-title">Exercice  8</p>
+<p class="admonition-title">Exercice  9</p>
 <p>En s'inspirant de la méthode précédente, écrire une fonction <code>max_iteratif</code> qui prend une pyramide <code>pyr</code> en paramètre et qui renvoie la somme maximale des parcours de cette pyramide.</p>
 <p>Effectuer des tests pour apprécier l'efficacité de cette fonction.</p>
 </div>
