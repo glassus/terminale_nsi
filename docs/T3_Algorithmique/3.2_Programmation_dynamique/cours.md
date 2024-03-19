@@ -246,9 +246,22 @@ De manière plus générale, cette méthode est basée sur le fait de résoudre 
 
     ![image](data/pyrexsommes.png){: .center width=75%}
 
-La suite : [TP Pyramides](./TP_pyramides.md){. target="_blank" .md-button }
+La suite : [TP Pyramides](./TP_pyramides.md){.md-button }
 
-### 2.2 Optimisation du rendu de monnaie
+### 2.2 Problème du plus grand carré blanc
+
+!!! question "Problème"
+    Considérons l'image ci-dessous :
+
+    ![image](data/pgcb_ex.png){: .center width=20%}
+
+    Quel est la taille du plus grand carré entièrement blanc qu'on puisse dessiner à l'intérieur de cette image ?
+
+
+La suite : [TP Plus Grand Carré Blanc](./TP_carre_blanc.md){.md-button }
+
+
+### 2.3 Optimisation du rendu de monnaie
 
 !!! question "Problème"
 
@@ -256,4 +269,4 @@ La suite : [TP Pyramides](./TP_pyramides.md){. target="_blank" .md-button }
 
     Étant donnés une liste de pièces ```pieces``` et une somme à rendre ```somme```, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?
 
-La suite : [TP Rendu de monnaie](./TP_rendu_monnaie.md){. target="_blank" .md-button }
+La suite : [TP Rendu de monnaie](./TP_rendu_monnaie.md){.md-button }
