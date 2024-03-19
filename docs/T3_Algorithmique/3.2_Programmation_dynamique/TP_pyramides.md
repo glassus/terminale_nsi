@@ -296,7 +296,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
 !!! example "{{ exercice() }}"
     Dans le code récursif suivant, chaque pyramide est identifiée par les coordonnées de son sommet, stockées dans le tuple ```pos``` .
 
-    Pour chaque sommet de coordonnées ```(i, j)```, il y a aura donc un appel récursif pour calculer la somme maximale de la pyramide de sommet ```(i+1, j)``` et celle de sommet ```(i, j+1)```.
+    Pour chaque sommet de coordonnées ```(i, j)```, il y a aura donc un appel récursif pour calculer la somme maximale de la pyramide de sommet ```(i+1, j)``` et celle de sommet ```(i+1, j+1)```.
 
     Ce sont ces calculs que l'on doit stocker pour éviter d'avoir à les refaire (principe de **mémoïsation**).
 
