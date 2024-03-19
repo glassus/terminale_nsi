@@ -4037,7 +4037,24 @@
         <span class="n">right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst_right</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_recursif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">pyr_left</span><span class="p">,</span> <span class="n">pyr_right</span> <span class="o">=</span> <span class="n">extract_sub_left_right</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_left</span><span class="p">),</span> <span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_right</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Dès que la hauteur de la pyramide dépasse 25 (environ) le programme devient extrêmement lent et inutilisable. On retrouve le problème rencontré avec l'algorithme de force brute.</p>
+</details>
 </div>
 <h2 id="5-optimisation-de-la-methode-recursive-par-programmation-dynamique">5. Optimisation de la méthode récursive par programmation dynamique<a class="headerlink" href="#5-optimisation-de-la-methode-recursive-par-programmation-dynamique" title="Permanent link">⚓︎</a></h2>
 <p>La lenteur de l'algorithme précédent vient du fait que certains calculs sont redondants. </p>
