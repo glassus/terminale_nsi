@@ -1,5 +1,5 @@
 # Optimisation d'une somme dans une pyramide
-
+ 
 !!! question "Problème"
 
     Considérons la pyramide ci-dessous :
