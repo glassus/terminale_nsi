@@ -295,89 +295,23 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
 
 !!! example "{{ exercice() }}"
     Dans le code récursif suivant, chaque pyramide est identifiée par les coordonnées de son sommet, stockées dans le tuple ```pos``` .
+    On va utiliser un dictionnaire ```dict_max``` qui associera à chaque sommet ```(i, j)``` la somme maximale de sa pyramide.
 
-    Pour chaque sommet de coordonnées ```(i, j)```, il y a aura donc un appel récursif pour calculer la somme maximale de la pyramide de sommet ```(i+1, j)``` et celle de sommet ```(i+1, j+1)```.
-
-    Ce sont ces calculs que l'on doit stocker pour éviter d'avoir à les refaire (principe de **mémoïsation**).
-
-    On va donc utiliser un dictionnaire ```dict_max``` qui associera à chaque sommet ```(i, j)``` la somme maximale de sa pyramide.
+    Pour chaque sommet de coordonnées ```(i, j)``` :
+    
+    - si on est tout en bas de la pyramide, on renvoie la valeur du sommet de cette pyramide (réduite à une valeur).
+    - sinon :
+        - on interroge notre dictionnaire de stockage ```dict_max``` : est-ce qu'il contient parmi ses clés notre tuple ```(i, j)``` ? Si oui, on renvoie juste la valeur associée.
+        - sinon, on calcule cette valeur par deux appels récursifs (sur les deux sous-pyramides), et on la stocke dans ```dict_max```, associée au tuple  ```(i, j)```, avant de la renvoyer.
+    
 
     **Q1.** Compléter le code suivant :
 
     ```python linenums='1'
-    dict_max = {}
     def max_rec_dynamique(pyr, pos=(0,0)):
         i, j = pos
         if i == len(pyr) - 1:
-            return pyr[...][...]
-        
-        # calcul du max de la sous-pyramide gauche
-        if (..., ...) in dict_max:
-            val_gauche = ...
-        else:
-            val_gauche = ...
-            dict_max[...] = ...
-            
-        # calcul du max de la sous-pyramide droite
-        ...
-        ...
-        ...
-        ...
-        ...
-            
-        return ... + ...
-    ```
-
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        ```python linenums='1'
-        dict_max = {}
-        def max_rec_dynamique(pyr, pos=(0,0)):
-            i, j = pos
-            if i == len(pyr) - 1:
-                return pyr[i][j]
-            
-            if (i+1, j) in dict_max:
-                val_gauche = dict_max[(i+1, j)]
-            else:
-                val_gauche = max_rec_dynamique(pyr, (i+1, j))
-                dict_max[(i+1, j)] = val_gauche
-                
-            if (i+1, j+1) in dict_max:
-                val_droit = dict_max[(i+1, j+1)]
-            else:
-                val_droit = max_rec_dynamique(pyr, (i+1, j+1))
-                dict_max[(i+1, j+1)] = val_droit
-                
-            return pyr[i][j] + max(val_gauche, val_droit)
-        ```
-    """
-    )
-    }}
-
-    **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
-
-    {{
-    correction(False,
-    """
-    ??? success \"Correction\" 
-        On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour faire trouver le maximum d'une pyramide de taille 500.
-    """
-    )
-    }}
-
-
-
-!!! example "{{ exercice() }}"
-    Mieux ! Il faut simplement mémoïser le ```(i, j)```...
-
-    ```python linenums='1'
-    def max_rec_dynamique(pyr, pos=(0,0)):
-        i, j = pos
-        if i == len(pyr) - 1:
-            return pyr[i][j]
+            return ...
 
         if ... in dict_max:
             return ...
@@ -390,6 +324,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     correction(True,
     """
     ??? success \"Correction\" 
+        ```python linenums='1'
         def max_rec_dynamique(pyr, pos=(0,0)):
             i, j = pos
             if i == len(pyr) - 1:
@@ -399,10 +334,27 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
                 return dict_max[(i, j)]
             else:   
                 dict_max[(i, j)] = pyr[i][j] + max(max_rec_dynamique(pyr, (i+1, j)), max_rec_dynamique(pyr, (i+1, j+1)))
-                return dict_max[(i, j)]
+                return dict_max[(i, j)]        
+        ```
+
     """
     )
     }}
+
+    **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour faire trouver le maximum d'une pyramide de taille 500.
+    """
+    )
+    }}
+
+
+
+
 
 ## 6. Méthode bottom-up
 
