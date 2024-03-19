@@ -369,6 +369,41 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     }}
 
 
+
+!!! example "{{ exercice() }}"
+    Mieux ! Il faut simplement mémoïser le ```(i, j)```...
+
+    ```python linenums='1'
+    def max_rec_dynamique(pyr, pos=(0,0)):
+        i, j = pos
+        if i == len(pyr) - 1:
+            return pyr[i][j]
+
+        if ... in dict_max:
+            return ...
+        else:   
+            dict_max[(i, j)] = ... + max(max_rec_dynamique(pyr, ...), max_rec_dynamique(pyr, ...))
+            return ...
+    ``` 
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        def max_rec_dynamique(pyr, pos=(0,0)):
+            i, j = pos
+            if i == len(pyr) - 1:
+                return pyr[i][j]
+
+            if (i, j) in dict_max:
+                return dict_max[(i, j)]
+            else:   
+                dict_max[(i, j)] = pyr[i][j] + max(max_rec_dynamique(pyr, (i+1, j)), max_rec_dynamique(pyr, (i+1, j+1)))
+                return dict_max[(i, j)]
+    """
+    )
+    }}
+
 ## 6. Méthode bottom-up
 
 !!! note "Plus court chemin"
