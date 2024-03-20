@@ -48,10 +48,9 @@ Le cursus CMI délivre un Master d'Ingénierie, qui donne accès à des emplois 
 
 ## 6. Les BTS 
 
-### 6.1 Le BTS SN-IR au lycée Kastler (Talence)
-BTS Systèmes numériques option A informatique et réseaux
-
-- [http://www.lyceekastler.fr/formations/superieur/bts/sn-ir/](http://www.lyceekastler.fr/formations/superieur/bts/sn-ir/){. target="_blank"}
+### 6.1 Le BTS CIEL au lycée Kastler (Talence)
+BTS CYBERSÉCURITÉ, INFORMATIQUE ET RÉSEAUX ELECTRONIQUE Option Informatique et Réseaux (IR)
+- [https://www.lyceekastler.fr/formations/superieur/bts/ciel-ir/](https://www.lyceekastler.fr/formations/superieur/bts/ciel-ir/){. target="_blank"}
 - via Parcoursup
 
 ### 6.2 Le BTS SIO au lycée Gustave Eiffel (Bordeaux)
