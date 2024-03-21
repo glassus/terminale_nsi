@@ -5289,7 +5289,7 @@
 <h1 id="epreuve-pratique-bns-2024">Épreuve Pratique BNS 2024<a class="headerlink" href="#epreuve-pratique-bns-2024" title="Permanent link">⚓︎</a></h1>
 <p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>21/03/2024</strong>.  <br />
 Pour signaler des erreurs éventuelles : <code>gilles.lassus@ac-bordeaux.fr</code>  </p>
-<p><img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>  </p>
+<p><img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>   </p>
 <ul>
 <li>Une archive contenant les 48 dossiers (contenant chacun le sujet en <code>.pdf</code> et le script en <code>.py</code>) : <a class="" href="../data2024/BNS_2024.zip" target="_blank">BNS_2024.zip</a> (1,6 Mo)</li>
 <li>Un pdf unique de tous les sujets : <a class="" href="../data2024/BNS_2024_pdf_unique.pdf" target="_blank">BNS_2024_pdf_unique.pdf</a> (2,1 Mo) </li>
@@ -7167,9 +7167,11 @@ def tri_insertion(tab):
 <div class="tabbed-set tabbed-alternate" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Énoncé</label><label for="__tabbed_15_2">Correction</label><label for="__tabbed_15_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Le codage par différence (<em>delta encoding</em> en anglais) permet de compresser un tableau de
-données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt que la
-donnée elle-même). On se retrouve alors avec un tableau de données plus petit, nécessitant
+<p>Le codage par différence (<em>delta encoding</em> en anglais) permet de compresser un tableau
+d’entiers dont les valeurs sont proches les unes des autres. Le principe est de stocker la
+première donnée en indiquant pour chaque autre donnée sa différence avec la précédente
+plutôt que la donnée elle-même.</p>
+<p>On se retrouve alors avec un tableau de données plus petit, nécessitant
 moins de place en mémoire. Cette méthode se révèle efficace lorsque les valeurs consécutives
 sont proches. </p>
 <p>Programmer la fonction <code>delta(liste)</code> qui prend en paramètre un tableau non vide de nombres entiers
@@ -7194,9 +7196,12 @@ et qui renvoie un tableau contenant les valeurs entières compressées à l’ai
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau de
-données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt que la
-donnée elle-même). On se retrouve alors avec un tableau de données plus petit, nécessitant
+<div class="highlight"><pre><span></span><code>Le codage par différence (*delta encoding* en anglais) permet de compresser un tableau
+d’entiers dont les valeurs sont proches les unes des autres. Le principe est de stocker la
+première donnée en indiquant pour chaque autre donnée sa différence avec la précédente
+plutôt que la donnée elle-même.
+
+On se retrouve alors avec un tableau de données plus petit, nécessitant
 moins de place en mémoire. Cette méthode se révèle efficace lorsque les valeurs consécutives
 sont proches.
 
@@ -7522,14 +7527,14 @@ Exemple :
 entier vers son écriture en binaire et, réciproquement, la conversion de l’écriture en
 binaire d’un nombre vers son écriture décimale.</p>
 <p>Dans cet exercice, on s’interdit l’usage des fonctions Python <code>bin</code> et <code>int</code>.</p>
-<p>On rappelle sur l’exemple ci-dessous une façon d’obtenir l’écriture en binaire du
+<p>L'exemple suivant montre comment obtenir l’écriture en binaire du
 nombre 25 :</p>
-<p><span class="arithmatex">\(25 = 1 + 2 \times 12\)</span><br />
-<span class="arithmatex">\(\phantom{25} = 1 + 2 \times 12\)</span><br />
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 \times 6)\)</span><br />
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 \times 3))\)</span>   <br />
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 (1 + 2 \times 1)))\)</span> <br />
-<span class="arithmatex">\(\phantom{25} = 1 \times 2^0 + 0 \times 2^1 + 0 \times 2^2 + 1 \times 2^3 + 1 \times 2^4\)</span>   </p>
+<p><span class="arithmatex">\(25 =  2 \times 12 + 1\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 2 \times (2 \times 6 + 0) + 1\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1\)</span>   <br />
+<span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1\)</span> <br />
+<span class="arithmatex">\(\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0\)</span>   </p>
 <p>L'écriture binaire de 25 est donc <code>11001</code>.</p>
 <p>0n rappelle également que :</p>
 <ul>
@@ -7643,15 +7648,15 @@ binaire d’un nombre vers son écriture décimale.
 
 Dans cet exercice, on s’interdit l’usage des fonctions Python <span class="sb">`bin`</span> et <span class="sb">`int`</span>.
 
-On rappelle sur l’exemple ci-dessous une façon d’obtenir l’écriture en binaire du
+L&#39;exemple suivant montre comment obtenir l’écriture en binaire du
 nombre 25 :
 
-$25 = 1 + 2 \times 12$  
-$\phantom{25} = 1 + 2 \times 12$  
-$\phantom{25} = 1 + 2 (0 + 2 \times 6)$  
-$\phantom{25} = 1 + 2 (0 + 2 (0 + 2 \times 3))$     
-$\phantom{25} = 1 + 2 (0 + 2 (0 + 2 (1 + 2 \times 1)))$   
-$\phantom{25} = 1 \times 2^0 + 0 \times 2^1 + 0 \times 2^2 + 1 \times 2^3 + 1 \times 2^4$   
+$25 =  2 \times 12 + 1$  
+$\phantom{25} = 2 \times (2 \times 6 + 0) + 1$  
+$\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1$  
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$     
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$   
+$\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$   
 
 L&#39;écriture binaire de 25 est donc ```11001```.
 
@@ -9521,7 +9526,7 @@ def tri_bulles(tab):
 <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">])</span>
 <span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">44</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nb_repetitions</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">44</span><span class="p">])</span>
 <span class="mi">0</span>
 </code></pre></div></p>
 </div>
@@ -9549,7 +9554,7 @@ Exemples :
 3
 &gt;&gt;&gt; nb_repetitions(&#39;A&#39;, [&#39;B&#39;, &#39;A&#39;, &#39;B&#39;, &#39;A&#39;, &#39;R&#39;])
 2
-&gt;&gt;&gt; nb_repetitions(12, [1, &#39;!&#39;, 7, 21, 36, 44])
+&gt;&gt;&gt; nb_repetitions(12, [1, 3, 7, 21, 36, 44])
 0
 ```
 </code></pre></div>
@@ -11389,7 +11394,7 @@ Exemples :
 <div class="tabbed-set tabbed-alternate" data-tabs="48:3"><input checked="checked" id="__tabbed_48_1" name="__tabbed_48" type="radio" /><input id="__tabbed_48_2" name="__tabbed_48" type="radio" /><input id="__tabbed_48_3" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="__tabbed_48_1">Énoncé</label><label for="__tabbed_48_2">Correction</label><label for="__tabbed_48_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère un tableau de nombre entiers, positifs ou négatifs, et on souhaite déterminer
+<p>On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer
 la plus grande somme possible de ses éléments consécutifs.</p>
 <p>Par exemple, dans le tableau <code>[1, -2, 3, 10, -4, 7, 2, -5]</code>, la plus grande
 somme est 18 obtenue en additionnant les éléments 3, 10, -4, 7, 2.</p>
@@ -11403,6 +11408,7 @@ se terminant à l’indice <code>i</code> :</p>
 <li>soit on obtient une plus grande somme en ajoutant <code>tab[i]</code> à cette somme précédente ;</li>
 <li>soit on commence une nouvelle somme à partir de <code>tab[i]</code>.</li>
 </ul>
+<p><em>Remarque :</em> les sommes considérées contiennent toujours au moins un terme.</p>
 <p>Compléter la fonction <code>somme_max</code> ci-dessous qui réalise cet algorithme.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -11484,7 +11490,7 @@ se terminant à l’indice <code>i</code> :</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>On considère un tableau de nombre entiers, positifs ou négatifs, et on souhaite déterminer
+<div class="highlight"><pre><span></span><code>On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer
 la plus grande somme possible de ses éléments consécutifs.
 
 
@@ -11503,6 +11509,8 @@ se terminant à l’indice <span class="sb">`i`</span> :
 
 <span class="k">-</span><span class="w"> </span>soit on obtient une plus grande somme en ajoutant <span class="sb">`tab[i]`</span> à cette somme précédente ;
 <span class="k">-</span><span class="w"> </span>soit on commence une nouvelle somme à partir de <span class="sb">`tab[i]`</span>.
+
+<span class="ge">*Remarque :*</span> les sommes considérées contiennent toujours au moins un terme.
 
 
 Compléter la fonction <span class="sb">`somme_max`</span> ci-dessous qui réalise cet algorithme.
@@ -13485,8 +13493,7 @@ Exemple :
 <div class="tabbed-set tabbed-alternate" data-tabs="65:3"><input checked="checked" id="__tabbed_65_1" name="__tabbed_65" type="radio" /><input id="__tabbed_65_2" name="__tabbed_65" type="radio" /><input id="__tabbed_65_3" name="__tabbed_65" type="radio" /><div class="tabbed-labels"><label for="__tabbed_65_1">Énoncé</label><label for="__tabbed_65_2">Correction</label><label for="__tabbed_65_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Programmer une fonction <code>renverse</code>, prenant en paramètre une chaîne de caractères non vide
-<code>mot</code> et renvoie cette chaîne de caractères en ordre inverse.</p>
+<p>Programmer une fonction <code>renverse</code>, prenant en paramètre une chaîne de caractères <code>mot</code> et renvoie cette chaîne de caractères en ordre inverse.</p>
 <p>Exemple :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">renverse</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="s2">&quot;&quot;</span>
@@ -13509,8 +13516,7 @@ Exemple :
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Programmer une fonction `renverse`, prenant en paramètre une chaîne de caractères non vide
-`mot` et renvoie cette chaîne de caractères en ordre inverse.
+<div class="highlight"><pre><span></span><code>Programmer une fonction `renverse`, prenant en paramètre une chaîne de caractères `mot` et renvoie cette chaîne de caractères en ordre inverse.
 
 Exemple :
 
@@ -13691,7 +13697,7 @@ d’apparitions de ce caractère dans la chaîne.</p>
 </ul>
 <p>On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
 occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
-les valeurs l’occurrence de ces caractères.</p>
+les valeurs le nombre d’occurrences de ces caractères.</p>
 <p>Par exemple : avec la phrase <code>'Hello world !'</code> le dictionnaire est le suivant :</p>
 <p><code>{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}</code></p>
 <p><em>L’ordre des clefs n’a pas d’importance.</em></p>
@@ -13730,7 +13736,7 @@ Exemples :
 
 On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
 occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
-les valeurs l’occurrence de ces caractères.
+les valeurs le nombre d’occurrences de ces caractères.
 
 Par exemple : avec la phrase `&#39;Hello world !&#39;` le dictionnaire est le suivant :
 
@@ -16396,9 +16402,9 @@ de suite jusqu’à ce que la somme restante à rendre soit nulle.</p>
 <li>un entier <code>somme_due</code> représentant la somme à payer ;</li>
 <li>un entier <code>somme_versee</code> représentant la somme versée qui est supérieure ou égale
 à <code>somme_due</code> ;</li>
-<li>et qui renvoie un tableau de type <code>list</code> contenant les pièces qui composent le rendu
-de la monnaie restante, c’est-à-dire de <code>somme_versee - somme_due</code>.</li>
 </ul>
+<p>et qui renvoie un tableau de type <code>list</code> contenant les pièces qui composent le rendu
+de la monnaie restante, c’est-à-dire de <code>somme_versee - somme_due</code>.</p>
 <p>Ainsi, l’instruction <code>rendu_monnaie(452, 500)</code> renvoie le tableau <code>[20, 20, 5, 2, 1]</code>.</p>
 <p>En effet, la somme à rendre est de <code>48</code> euros soit <code>20 + 20 + 5 + 2 + 1</code>.</p>
 <p>Le code de la fonction <code>rendu_monnaie</code> est donné ci-dessous :</p>
@@ -16477,7 +16483,8 @@ On souhaite écrire une fonction <span class="sb">`rendu_monnaie`</span> qui pre
 <span class="k">-</span><span class="w"> </span>un entier <span class="sb">`somme_due`</span> représentant la somme à payer ;
 <span class="k">-</span><span class="w"> </span>un entier <span class="sb">`somme_versee`</span> représentant la somme versée qui est supérieure ou égale
 à <span class="sb">`somme_due`</span> ;
-<span class="k">-</span><span class="w"> </span>et qui renvoie un tableau de type <span class="sb">`list`</span> contenant les pièces qui composent le rendu
+
+et qui renvoie un tableau de type <span class="sb">`list`</span> contenant les pièces qui composent le rendu
 de la monnaie restante, c’est-à-dire de <span class="sb">`somme_versee - somme_due`</span>.
 
 
@@ -16734,9 +16741,8 @@ correspondantes sont les nombres de « like » comme ci-dessous :</p>
 <li>Prend en paramètre un dictionnaire <code>dico</code> non vide dont les clés sont des chaînes de
 caractères et les valeurs associées sont des entiers ;</li>
 <li>Renvoie un tuple dont :<ul>
-<li>La première valeur est la clé du dictionnaire associée à la valeur maximale ;</li>
-<li>La seconde valeur est la première valeur maximale présente dans le
-dictionnaire.</li>
+<li>La première valeur est une clé du dictionnaire associée à la valeur maximale ;</li>
+<li>la seconde valeur est cette valeur maximale.</li>
 </ul>
 </li>
 </ul>
@@ -16777,9 +16783,8 @@ correspondantes sont les nombres de « like » comme ci-dessous :
 - Prend en paramètre un dictionnaire `dico` non vide dont les clés sont des chaînes de
 caractères et les valeurs associées sont des entiers ;
 - Renvoie un tuple dont :
-    - La première valeur est la clé du dictionnaire associée à la valeur maximale ;
-    - La seconde valeur est la première valeur maximale présente dans le
-dictionnaire.
+    - La première valeur est une clé du dictionnaire associée à la valeur maximale ;
+    - la seconde valeur est cette valeur maximale.
 
 Exemples :
 
