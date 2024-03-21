@@ -17,13 +17,14 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
+    - [Programmation dynamique : TP Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
 
 
 ### *Thèmes déjà traités*
+- [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
 - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
 - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
 - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
