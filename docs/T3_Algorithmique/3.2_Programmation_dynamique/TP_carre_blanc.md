@@ -131,7 +131,7 @@ Pour le cas général, on s'inspirera de la partie précédente...
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -167,7 +167,7 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
