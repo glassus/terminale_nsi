@@ -252,7 +252,7 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
     En s'inspirant de la manière dont on a rempli manuellement les cases au [1.2](http://127.0.0.1:8000/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/#12-recherche-manuelle), écrire une fonction ```pgcb_bottom_up```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
