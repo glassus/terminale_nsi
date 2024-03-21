@@ -10,7 +10,7 @@ Exemples :
 
 On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
 occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
-les valeurs l’occurrence de ces caractères.
+les valeurs le nombre d’occurrences de ces caractères.
 
 
 Par exemple : avec la phrase `'Hello world !'` le dictionnaire est le suivant :

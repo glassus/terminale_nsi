@@ -1,4 +1,4 @@
-On considère un tableau de nombre entiers, positifs ou négatifs, et on souhaite déterminer
+On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer
 la plus grande somme possible de ses éléments consécutifs.
 
 
@@ -17,6 +17,8 @@ se terminant à l’indice `i` :
 
 - soit on obtient une plus grande somme en ajoutant `tab[i]` à cette somme précédente ;
 - soit on commence une nouvelle somme à partir de `tab[i]`.
+
+*Remarque :* les sommes considérées contiennent toujours au moins un terme.
 
 
 Compléter la fonction `somme_max` ci-dessous qui réalise cet algorithme.

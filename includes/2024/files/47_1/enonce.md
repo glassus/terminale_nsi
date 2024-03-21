@@ -11,9 +11,8 @@ correspondantes sont les nombres de « like » comme ci-dessous :
 - Prend en paramètre un dictionnaire `dico` non vide dont les clés sont des chaînes de
 caractères et les valeurs associées sont des entiers ;
 - Renvoie un tuple dont :
-    - La première valeur est la clé du dictionnaire associée à la valeur maximale ;
-    - La seconde valeur est la première valeur maximale présente dans le
-dictionnaire.
+    - La première valeur est une clé du dictionnaire associée à la valeur maximale ;
+    - la seconde valeur est cette valeur maximale.
 
 Exemples :
 

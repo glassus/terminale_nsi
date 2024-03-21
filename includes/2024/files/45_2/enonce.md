@@ -11,7 +11,8 @@ On souhaite écrire une fonction `rendu_monnaie` qui prend en paramètres
 - un entier `somme_due` représentant la somme à payer ;
 - un entier `somme_versee` représentant la somme versée qui est supérieure ou égale
 à `somme_due` ;
-- et qui renvoie un tableau de type `list` contenant les pièces qui composent le rendu
+
+et qui renvoie un tableau de type `list` contenant les pièces qui composent le rendu
 de la monnaie restante, c’est-à-dire de `somme_versee - somme_due`.
 
 

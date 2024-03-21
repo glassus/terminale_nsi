@@ -5,15 +5,15 @@ binaire d’un nombre vers son écriture décimale.
 
 Dans cet exercice, on s’interdit l’usage des fonctions Python `bin` et `int`.
 
-On rappelle sur l’exemple ci-dessous une façon d’obtenir l’écriture en binaire du
+L'exemple suivant montre comment obtenir l’écriture en binaire du
 nombre 25 :
 
-$25 = 1 + 2 \times 12$  
-$\phantom{25} = 1 + 2 \times 12$  
-$\phantom{25} = 1 + 2 (0 + 2 \times 6)$  
-$\phantom{25} = 1 + 2 (0 + 2 (0 + 2 \times 3))$     
-$\phantom{25} = 1 + 2 (0 + 2 (0 + 2 (1 + 2 \times 1)))$   
-$\phantom{25} = 1 \times 2^0 + 0 \times 2^1 + 0 \times 2^2 + 1 \times 2^3 + 1 \times 2^4$   
+$25 =  2 \times 12 + 1$  
+$\phantom{25} = 2 \times (2 \times 6 + 0) + 1$  
+$\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1$  
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$     
+$\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$   
+$\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$   
 
 L'écriture binaire de 25 est donc ```11001```.
 

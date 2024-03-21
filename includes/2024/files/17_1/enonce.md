@@ -7,6 +7,6 @@ Exemples :
 3
 >>> nb_repetitions('A', ['B', 'A', 'B', 'A', 'R'])
 2
->>> nb_repetitions(12, [1, '!', 7, 21, 36, 44])
+>>> nb_repetitions(12, [1, 3, 7, 21, 36, 44])
 0
 ```
