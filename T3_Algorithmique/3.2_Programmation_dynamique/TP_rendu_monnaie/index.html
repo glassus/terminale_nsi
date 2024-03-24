@@ -3754,8 +3754,11 @@
 <p>Nous allons nous intéresser au problème suivant :</p>
 <p>Étant donnés une liste de pièces <code>pieces</code> et une somme à rendre <code>somme</code>, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?</p>
 </div>
-<p><strong>Remarque importante :</strong></p>
-<p>Dans toute la suite, on considérera que la somme à rendre est un nombre entier positif, et que dans la liste de pièces se trouve la pièce de valeur 1. Ainsi, il est <strong>toujours possible</strong> de rendre la monnaie.</p>
+<p><strong>Remarques importantes :</strong></p>
+<ul>
+<li>Dans toute la suite, on considérera que la somme à rendre est un nombre entier positif, et que dans la liste de pièces se trouve la pièce de valeur 1. Ainsi, il est <strong>toujours possible</strong> de rendre la monnaie.</li>
+<li>Notez bien que tous nos futurs algorithmes vont chercher à donner <strong>le nombre de pièces rendues</strong> et pas la composition de celles-ci.</li>
+</ul>
 <h2 id="1-retour-sur-lalgorithme-glouton">1. Retour sur l'algorithme glouton<a class="headerlink" href="#1-retour-sur-lalgorithme-glouton" title="Permanent link">⚓︎</a></h2>
 <p>Nous avons vu <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#2-le-probleme-du-rendu-de-monnaie" target="_blank">en Première</a> un algorithme capable de donner une combinaison de pièces pour rendre la somme <code>somme</code>.</p>
 <p>Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaque fois la plus grosse pièce possible.</p>
@@ -3850,6 +3853,11 @@
 <p class="admonition-title">Exercice  3</p>
 <p>Compléter la fonction <code>rendu_recursif_memoise</code> qui prend en paramètres une liste de pièces <code>pieces</code> et la somme à rendre <code>somme</code> et qui renvoie <strong>le nombre minimal</strong> de pièces qu'il faut rendre.</p>
 <p>On utilisera le dictionnaire <code>memo_rendu</code> dans lequel on associera à chaque somme <code>somme</code> son nombre de pièces minimal. </p>
+<p>On procèdera de manière classique :</p>
+<ul>
+<li>Soit la <code>somme</code> est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.</li>
+<li>Soit on la calcule (comme dans l'algorithme classique), on stocke le résultat dans le dictionnaire avant de le renvoyer.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3860,22 +3868,24 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">memo_rendu</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">memo_rendu</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">def</span> <span class="nf">rendu_recursif_memoise</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
     <span class="n">nb_pieces</span> <span class="o">=</span> <span class="n">somme</span>
     <span class="k">if</span> <span class="n">somme</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
-            <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">memo_rendu</span><span class="p">:</span>
-                <span class="n">memo_rendu</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
             <span class="n">nb_pieces</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="n">nb_pieces</span>        
+    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <p>Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif_memoise</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
-<span class="mi">16</span>
+<span class="mi">12</span>
 </code></pre></div>
 <h2 id="4-algorithme-bottom-up">4. Algorithme <em>bottom-up</em><a class="headerlink" href="#4-algorithme-bottom-up" title="Permanent link">⚓︎</a></h2>
 <p>Nous avions calculé le <span class="arithmatex">\(F_n\)</span>, n-ième terme de la suite de Fibonacci en calculant d'abord <span class="arithmatex">\(F_0\)</span>, <span class="arithmatex">\(F_1\)</span>, <span class="arithmatex">\(F_2\)</span>, ..., jusqu'à <span class="arithmatex">\(F_{n-1}\)</span> puis <span class="arithmatex">\(F_n\)</span>.</p>
@@ -3974,7 +3984,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 mars 2024</span>
   </span>
 
     
