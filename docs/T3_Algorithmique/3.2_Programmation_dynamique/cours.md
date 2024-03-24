@@ -1,5 +1,5 @@
 # Programmation dynamique
-
+ 
 ![image](data/BO.png){: .center}
 
 ![image](data/meme.webp){: .center width=50%}
