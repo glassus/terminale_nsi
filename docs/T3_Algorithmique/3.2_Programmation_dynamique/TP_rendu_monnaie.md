@@ -7,9 +7,12 @@
 
     Étant donnés une liste de pièces ```pieces``` et une somme à rendre ```somme```, peut-on calculer le nombre minimal de pièces pour réaliser cette somme ?
 
-**Remarque importante :**
+**Remarques importantes :**
 
-Dans toute la suite, on considérera que la somme à rendre est un nombre entier positif, et que dans la liste de pièces se trouve la pièce de valeur 1. Ainsi, il est **toujours possible** de rendre la monnaie.
+- Dans toute la suite, on considérera que la somme à rendre est un nombre entier positif, et que dans la liste de pièces se trouve la pièce de valeur 1. Ainsi, il est **toujours possible** de rendre la monnaie.
+- Notez bien que tous nos futurs algorithmes vont chercher à donner **le nombre de pièces rendues** et pas la composition de celles-ci.
+
+
 
 ## 1. Retour sur l'algorithme glouton
 
@@ -162,6 +165,11 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
     Compléter la fonction ```rendu_recursif_memoise``` qui prend en paramètres une liste de pièces ```pieces``` et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
 
     On utilisera le dictionnaire ```memo_rendu``` dans lequel on associera à chaque somme ```somme``` son nombre de pièces minimal. 
+
+    On procèdera de manière classique :
+
+    - Soit la ```somme``` est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.
+    - Soit on la calcule (comme dans l'algorithme classique), on stocke le résultat dans le dictionnaire avant de le renvoyer.
     
     ```python linenums='1'
     memo_rendu = {}
@@ -169,12 +177,13 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
         nb_pieces = somme
         if somme == 0:
             return 0
+        if ... in ...:
+            return ...
         for p in pieces:
             if p <= somme:
-                if ... not in memo_rendu:
-                    memo_rendu[...] = ...
                 nb_pieces = ...
-        return nb_pieces        
+        ... = ...
+        return ...
     ```
 
 
@@ -189,12 +198,13 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
             nb_pieces = somme
             if somme == 0:
                 return 0
+            if somme in memo_rendu:
+                return memo_rendu[somme]
             for p in pieces:
                 if p <= somme:
-                    if somme-p not in memo_rendu:
-                        memo_rendu[somme-p] = rendu_recursif_memoise(pieces, somme-p)
-                    nb_pieces = min(nb_pieces, 1 + memo_rendu[somme-p])
-            return nb_pieces        
+                    nb_pieces = min(nb_pieces, 1 + rendu_recursif_memoise(pieces, somme-p))
+            memo_rendu[somme] = nb_pieces
+            return memo_rendu[somme]       
         ```
 
     """
@@ -206,7 +216,7 @@ Notre algorithme est maintenant beaucoup (beaucoup) plus efficace :
 
 ```python
 >>> rendu_recursif_memoise([1, 6, 10], 107)
-16
+12
 ```
 
 
