@@ -4004,6 +4004,25 @@
 <li>Attention, il faut aller jusqu'à la valeur <code>somme</code>. </li>
 <li>Nombre de pièces dans le pire des cas.</li>
 </ol>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_bottom_up</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">rendu</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">somme</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="p">],</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">rendu</span><span class="p">[</span><span class="n">s</span><span class="o">-</span><span class="n">p</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">rendu</span><span class="p">[</span><span class="n">somme</span><span class="p">]</span>    
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_bottom_up</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
 <span class="mi">12</span>
