@@ -3813,6 +3813,29 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">12</span><span class="p">)</span>
 <span class="mi">3</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">pieces</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span><span class="n">pieces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">nb_pieces</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">somme</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme</span><span class="p">:</span>
+            <span class="n">nb_pieces</span> <span class="o">+=</span> <span class="mi">1</span> 
+            <span class="n">somme</span> <span class="o">-=</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>   
+    <span class="k">return</span> <span class="n">nb_pieces</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <p>Nous savons que cet algorithme est optimal sous certaines conditions sur la composition des pièces. Par exemple le système des euros (1, 2, 5, 10, 20, 50, 100, 200) rend l'algorithme glouton optimal (on dit que le système est <em>canonique</em>).</p>
 <p>Mais si le système n'est pas canonique, l'algorithme glouton peut ne pas donner la meilleure solution :</p>
