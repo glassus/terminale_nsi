@@ -88,7 +88,7 @@ Il faut pour cela faire les observations suivantes :
 - pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)
 - :star: Si ```p``` est une pièce de ```pieces```, le nombre minimal de pièces nécessaires pour rendre la somme ```somme```   est égal à 1 + le nombre minimal de pièces nécessaires (contenant ```p```)    pour rendre la somme ```somme - p```. :star: 
 
-Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur ```p```) à la meileure combinaison qui rend ```somme - p``` pour avoir la meilleure combinaison qui rend ```somme``` (meilleure combinaison parmi celles contenant ```p```). 
+Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur ```p```) à la meilleure combinaison qui rend ```somme - p``` pour avoir la meilleure combinaison qui rend ```somme``` (meilleure combinaison parmi celles contenant ```p```). 
 
 On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaque fois le nombre minimal de pièces.
 
@@ -169,7 +169,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
     On procèdera de manière classique :
 
     - Soit la ```somme``` est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.
-    - Soit on la calcule (comme dans l'algorithme classique), on stocke le résultat dans le dictionnaire avant de le renvoyer.
+    - Soit on la calcule (comme dans l'algorithme classique), puis on stocke le résultat dans le dictionnaire avant de le renvoyer.
     
     ```python linenums='1'
     memo_rendu = {}
