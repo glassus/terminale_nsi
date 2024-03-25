@@ -3692,6 +3692,73 @@
 <p class="admonition-title">Exercice  1</p>
 <p>Exercice 1 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf" target="_blank">sujet 0 - version B 2024</a></p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p><em>Largement inspiré du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#__tabbed_48_1" target="_blank">24.2</a> de la BNS 2024.</em></p>
+<p>On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer
+la plus grande somme possible de ses éléments consécutifs.</p>
+<p>Par exemple, dans le tableau <code>[1, -2, 3, 10, -4, 7, 2, -5]</code>, la plus grande
+somme est 18 obtenue en additionnant les éléments 3, 10, -4, 7, 2.</p>
+<p>Pour cela, on va résoudre le problème par programmation dynamique. </p>
+<p>Le problème sera résolu en 2 temps.</p>
+<p>Dans un premier temps, si on note <code>tab</code> le
+tableau considéré et <code>i</code> un indice dans ce tableau, on va chercher à déterminer la plus grande somme possible de ses éléments consécutifs se terminant à
+l’indice <code>i</code>.
+Voici la méthode :</p>
+<p>Si on connait la plus grande somme possible de ses éléments consécutifs se terminant à
+l’indice <code>i-1</code>, on peut déterminer la plus grande somme possible de ses éléments consécutifs
+se terminant à l’indice <code>i</code> :</p>
+<ul>
+<li>soit on obtient une plus grande somme en ajoutant <code>tab[i]</code> à cette somme précédente ;</li>
+<li>soit on commence une nouvelle somme à partir de <code>tab[i]</code>.</li>
+</ul>
+<p>Dans un deuxième temps, il suffira de parcourir le tableau pour chercher la somme maximale d'éléments consécutifs.</p>
+<p>Compléter la fonction <code>somme_max</code> ci-dessous qui réalise cet algorithme.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">somme_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    <span class="n">sommes_max</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+    <span class="n">sommes_max</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># on calcule la plus grande somme se terminant en i</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="n">sommes_max</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sommes_max</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="c1"># on en déduit la plus grande somme de celles-ci</span>
+    <span class="n">maximum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="n">maximum</span> <span class="o">=</span> <span class="n">i</span>
+
+    <span class="k">return</span> <span class="n">sommes_max</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> 
+</code></pre></div></td></tr></table></div>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">somme_max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="mi">15</span>
+<span class="o">&gt;&gt;</span> <span class="n">somme_max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">somme_max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">somme_max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="mi">18</span>
+</code></pre></div>
+</div>
 
 
 
