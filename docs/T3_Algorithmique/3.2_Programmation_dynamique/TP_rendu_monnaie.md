@@ -189,7 +189,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
