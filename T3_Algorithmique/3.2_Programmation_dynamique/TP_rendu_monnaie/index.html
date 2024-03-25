@@ -3827,7 +3827,7 @@
 <li>pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)</li>
 <li><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires pour rendre la somme <code>somme</code>   est égal à 1 + le nombre minimal de pièces nécessaires (contenant <code>p</code>)    pour rendre la somme <code>somme - p</code>. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> </li>
 </ul>
-<p>Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur <code>p</code>) à la meileure combinaison qui rend <code>somme - p</code> pour avoir la meilleure combinaison qui rend <code>somme</code> (meilleure combinaison parmi celles contenant <code>p</code>). </p>
+<p>Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur <code>p</code>) à la meilleure combinaison qui rend <code>somme - p</code> pour avoir la meilleure combinaison qui rend <code>somme</code> (meilleure combinaison parmi celles contenant <code>p</code>). </p>
 <p>On va donc passer en revue toutes les pièces <code>p</code> et mettre à jour à chaque fois le nombre minimal de pièces.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
@@ -3877,7 +3877,7 @@
 <p>On procèdera de manière classique :</p>
 <ul>
 <li>Soit la <code>somme</code> est disponible dans le dictionnaire, et on se contente de renvoyer la valeur associée.</li>
-<li>Soit on la calcule (comme dans l'algorithme classique), on stocke le résultat dans le dictionnaire avant de le renvoyer.</li>
+<li>Soit on la calcule (comme dans l'algorithme classique), puis on stocke le résultat dans le dictionnaire avant de le renvoyer.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -4005,7 +4005,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 mars 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mars 2024</span>
   </span>
 
     
