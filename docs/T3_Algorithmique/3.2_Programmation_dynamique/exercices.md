@@ -4,7 +4,7 @@
     Exercice 1 du [sujet 0 - version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ```python
@@ -19,7 +19,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Un conduit de score de maximal est (par exemple) : 3-2-9-2 pour un score total de 16.
@@ -28,7 +28,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         Les différents conduits possibles sont :
@@ -43,7 +43,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         Pour une pyramide de $n$ niveaux, il va y avoir $n-1$ choix de direction (droite ou gauche). Cela revient donc à écrire un mot binaire composé de $n-1$ chiffres (0 ou 1).
@@ -54,7 +54,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         D'après la formule précédente, le nombre de conduits évolue de manière exponentielle avec le nombre de niveaux de la pyramide. Pour une pyramide de taille 40, il sera de plusieurs milliards. Il est alors impossible de tous les étudier pour en extraire le conduit de score maximal. 
@@ -64,7 +64,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\" 
         ```python linenums='1'
@@ -78,7 +78,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\" 
         ```python linenums='1'
@@ -101,7 +101,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8.\" 
         ```python linenums='1', hl_lines='3 5 6 8-10'
@@ -123,7 +123,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9.\" 
         Les deux boucles imbriquées des lignes 8 et 9 sont responsables du coût quadratique : 
@@ -138,7 +138,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.\" 
         On pourrait utiliser la mémoïsation pour éviter la redondance des calculs, par exemple en utilisant un dictionnaire de clés ```(i,j)``` pour stocker les ```score_max(i,j,p)```.
