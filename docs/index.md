@@ -1,3 +1,6 @@
+!!! tip "Grand Oral"
+    - [Digipad de centralisation des sujets et des recherches](https://digipad.app/p/713202/3dd01c719c377){. target="_blank"}
+
 
 
 !!! abstract "Actualités"
