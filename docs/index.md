@@ -17,6 +17,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
     - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
