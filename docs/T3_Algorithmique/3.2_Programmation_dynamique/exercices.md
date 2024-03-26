@@ -43,7 +43,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         Pour une pyramide de $n$ niveaux, il va y avoir $n-1$ choix de direction (droite ou gauche). Cela revient donc à écrire un mot binaire composé de $n-1$ chiffres (0 ou 1).
@@ -54,7 +54,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         D'après la formule précédente, le nombre de conduits évolue de manière exponentielle avec le nombre de niveaux de la pyramide. Pour une pyramide de taille 40, il sera de plusieurs milliards. Il est alors impossible de tous les étudier pour en extraire le conduit de score maximal. 
