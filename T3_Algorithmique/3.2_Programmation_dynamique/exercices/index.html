@@ -3753,7 +3753,8 @@ ou mieux :
     <span class="k">return</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div></p>
 </details>
-</div>
+<details class="success">
+<summary>Correction Q8.</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3767,60 +3768,47 @@ ou mieux :
 <span class="normal">11</span>
 <span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prog_dyn</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="c1"># remplissage du dernier niveau</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="c1"># remplissage des autres niveaux</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="c1"># renvoie du score maximal</span>
+<span class="hll">    <span class="n">s</span> <span class="o">=</span> <span class="n">pyramide_nulle</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span>    <span class="c1"># remplissage du dernier niveau</span>
+<span class="hll">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+</span>    <span class="c1"># remplissage des autres niveaux</span>
+<span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+</span><span class="hll">            <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+</span>    <span class="c1"># renvoie du score maximal</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><pre><span></span><code>??? success &quot;Correction Q8.&quot; 
-    ```python linenums=&#39;1&#39;, hl_lines=&#39;3 5 6 8-10&#39;
-    def prog_dyn(p):
-        n = len(p)
-        s = pyramide_nulle(n)
-        # remplissage du dernier niveau
-        for j in range(n):
-            s[n-1][j] = p[n-1][j]
-        # remplissage des autres niveaux
-        for i in range(n-2, -1, -1):
-            for j in range(len(s[i])):
-                s[i][j] = p[i][j] + max(s[i+1][j], s[i+1][j+1])
-        # renvoie du score maximal
-        return s[0][0]
-    ```
-
-
-
-??? success &quot;Correction Q9.&quot; 
-    Les deux boucles imbriquées des lignes 8 et 9 sont responsables du coût quadratique :
-
-    - la première va engendrer $n-1$ itérations.
-    - le nombre d&#39;itérations de la deuxième dépend aussi de $n$
-
-    Donc l&#39;imbrication des deux boucles va provoquer un coût quadratique.
-
-
-
-
-??? success &quot;Correction Q10.&quot; 
-    On pourrait utiliser la mémoïsation pour éviter la redondance des calculs, par exemple en utilisant un dictionnaire de clés ```(i,j)``` pour stocker les ```score_max(i,j,p)```.
-
-    Exemple de code (non demandé) :
-    ```python linenums=&#39;1&#39;
-    memo = {}
-    def score_max(i, j, p):
-        if i == len(p) - 1:
-            return p[len(p)-1][j]
-        if (i, j) not in memo:
-            memo[(i,j)] = p[i][j] + max(score_max(i+1, j, p), score_max(i+1, j+1, p))
-        return memo[(i,j)]
-    ```
-</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q9.</summary>
+<p>Les deux boucles imbriquées des lignes 8 et 9 sont responsables du coût quadratique : </p>
+<ul>
+<li>la première va engendrer <span class="arithmatex">\(n-1\)</span> itérations.</li>
+<li>le nombre d'itérations de la deuxième dépend aussi de <span class="arithmatex">\(n\)</span></li>
+</ul>
+<p>Donc l'imbrication des deux boucles va provoquer un coût quadratique.</p>
+</details>
+<details class="success">
+<summary>Correction Q10.</summary>
+<p>On pourrait utiliser la mémoïsation pour éviter la redondance des calculs, par exemple en utilisant un dictionnaire de clés <code>(i,j)</code> pour stocker les <code>score_max(i,j,p)</code>.</p>
+<p>Exemple de code (non demandé) :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">def</span> <span class="nf">score_max</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">p</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
+        <span class="n">memo</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">score_max</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="n">score_max</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p><em>Largement inspiré du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#__tabbed_48_1" target="_blank">24.2</a> de la BNS 2024.</em></p>
