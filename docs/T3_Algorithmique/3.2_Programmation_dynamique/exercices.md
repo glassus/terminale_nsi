@@ -4,7 +4,7 @@
     Exercice 1 du [sujet 0 - version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ```python
@@ -19,7 +19,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         Un conduit de score de maximal est (par exemple) : 3-2-9-2 pour un score total de 16.
@@ -28,7 +28,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         Les différents conduits possibles sont :
