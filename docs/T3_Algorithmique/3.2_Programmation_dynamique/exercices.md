@@ -99,20 +99,6 @@
     )
     }}
 
-```python linenums='1'
-def prog_dyn(p):
-    n = len(p)
-    s = ...
-    # remplissage du dernier niveau
-    for j in ...:
-        s[n-1][j] = ...
-    # remplissage des autres niveaux
-    for i in ...:
-        for j in ...:
-            s[i][j] = ...
-    # renvoie du score maximal
-    return s[0][0]
-```
 
     {{
     correction(True,
