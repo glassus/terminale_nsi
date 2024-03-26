@@ -64,7 +64,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         ```python linenums='1'
