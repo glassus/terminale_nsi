@@ -3778,6 +3778,49 @@ ou mieux :
     <span class="c1"># renvoie du score maximal</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code>??? success &quot;Correction Q8.&quot; 
+    ```python linenums=&#39;1&#39;, hl_lines=&#39;3 5 6 8-10&#39;
+    def prog_dyn(p):
+        n = len(p)
+        s = pyramide_nulle(n)
+        # remplissage du dernier niveau
+        for j in range(n):
+            s[n-1][j] = p[n-1][j]
+        # remplissage des autres niveaux
+        for i in range(n-2, -1, -1):
+            for j in range(len(s[i])):
+                s[i][j] = p[i][j] + max(s[i+1][j], s[i+1][j+1])
+        # renvoie du score maximal
+        return s[0][0]
+    ```
+
+
+
+??? success &quot;Correction Q9.&quot; 
+    Les deux boucles imbriquées des lignes 8 et 9 sont responsables du coût quadratique :
+
+    - la première va engendrer $n-1$ itérations.
+    - le nombre d&#39;itérations de la deuxième dépend aussi de $n$
+
+    Donc l&#39;imbrication des deux boucles va provoquer un coût quadratique.
+
+
+
+
+??? success &quot;Correction Q10.&quot; 
+    On pourrait utiliser la mémoïsation pour éviter la redondance des calculs, par exemple en utilisant un dictionnaire de clés ```(i,j)``` pour stocker les ```score_max(i,j,p)```.
+
+    Exemple de code (non demandé) :
+    ```python linenums=&#39;1&#39;
+    memo = {}
+    def score_max(i, j, p):
+        if i == len(p) - 1:
+            return p[len(p)-1][j]
+        if (i, j) not in memo:
+            memo[(i,j)] = p[i][j] + max(score_max(i+1, j, p), score_max(i+1, j+1, p))
+        return memo[(i,j)]
+    ```
+</code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p><em>Largement inspiré du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#__tabbed_48_1" target="_blank">24.2</a> de la BNS 2024.</em></p>
