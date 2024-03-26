@@ -115,7 +115,7 @@ def prog_dyn(p):
 ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8.\" 
         ```python linenums='1', hl_lines='3 5 6 8-10'
@@ -137,7 +137,7 @@ def prog_dyn(p):
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9.\" 
         Les deux boucles imbriquées des lignes 8 et 9 sont responsables du coût quadratique : 
@@ -152,7 +152,7 @@ def prog_dyn(p):
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.\" 
         On pourrait utiliser la mémoïsation pour éviter la redondance des calculs, par exemple en utilisant un dictionnaire de clés ```(i,j)``` pour stocker les ```score_max(i,j,p)```.
