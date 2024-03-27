@@ -21,7 +21,7 @@ objet dans une deuxième boîte.
 On a donc utilisé deux boîtes de capacité `c = 5` pour ranger les 3 objets.
 
 Compléter la fonction Python `empaqueter(liste_masses, c)` suivante pour
-qu’elle renvoie le nombre de boîtes de capacité c nécessaires pour empaqueter un
+qu’elle renvoie le nombre de boîtes de capacité `c` nécessaires pour empaqueter un
 ensemble d’objets dont les masses sont contenues dans la liste `liste_masses`.
 
 ```python linenums='1'
