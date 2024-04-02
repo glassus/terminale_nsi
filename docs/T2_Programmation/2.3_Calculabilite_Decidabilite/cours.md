@@ -296,13 +296,13 @@ Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-- https://interstices.info/pnp-elementaire-ma-chere-watson/
-- https://interstices.info/alan-turing-du-calculable-a-lindecidable/
-- https://www.labri.fr/perso/betrema/MC/MC8.html
-- https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/
+??? quote "Bibliographie / Sitographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
+    - [ https://interstices.info/pnp-elementaire-ma-chere-watson/]( https://interstices.info/pnp-elementaire-ma-chere-watson/){. target="_blank"}
+    - [https://interstices.info/alan-turing-du-calculable-a-lindecidable/](https://interstices.info/alan-turing-du-calculable-a-lindecidable/){. target="_blank"} 
+    - [https://www.labri.fr/perso/betrema/MC/MC8.html](https://www.labri.fr/perso/betrema/MC/MC8.html){. target="_blank"} 
+    - [https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/](https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/){. target="_blank"} 
 
 
 

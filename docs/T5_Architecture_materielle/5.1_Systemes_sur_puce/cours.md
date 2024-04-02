@@ -139,13 +139,21 @@ L'orientation actuelle de l'électronique est donc à la fois :
 ## 5. Exercice
 
 !!! abstract "Exercice *(Polynésie 2021)*"
-    === "Énoncé"
-        Un constructeur automobile intègre à ses véhicules des systèmes embarqués, comme par exemple un système de guidage par satellites (GPS), un système de freinage antiblocage (ABS)... 
 
-        Ces dispositifs utilisent des systèmes sur puces (SoC : System on a Chip).
+    Un constructeur automobile intègre à ses véhicules des systèmes embarqués, comme par exemple un système de guidage par satellites (GPS), un système de freinage antiblocage (ABS)... 
 
-        Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.
-    === "Correction"
+    Ces dispositifs utilisent des systèmes sur puces (SoC : System on a Chip).
+
+    Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        
+    """
+    )
+    }}
          
 
 
