@@ -1,12 +1,15 @@
 
 # Listes, piles, files
-*Exemples de structures de données linéaires.*
+
+![image](data/BO1.png){: .center}
+![image](data/BO2.png){: .center}
+
+
 
 ![image](data/data.jpeg){: .center width=40%}
 
 
-![image](data/BO1.png){: .center}
-![image](data/BO2.png){: .center}
+
 
 
 

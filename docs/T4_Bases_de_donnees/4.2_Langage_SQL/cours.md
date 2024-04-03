@@ -1,5 +1,7 @@
 # Langage SQL
 
+![](data/extraitBO.png)
+
 ![image](data/meme1.png){: .center width=40%}
 
 
@@ -30,7 +32,7 @@ Sa simplicité d'utilisation en fera notre choix pour illustrer cette présentat
 
 ## 1. Introduction au langage SQL
 
-![](data/extraitBO.png)
+
 
 Dans toute la suite, nous allons travailler avec la base de données ```livres.db``` qui provient de l'ouvrage paru chez Ellipses, cité en bibliographie.
 

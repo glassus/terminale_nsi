@@ -20,14 +20,14 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
     - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
-    - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
-    - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
-
 
 
 
 ### *Thèmes déjà traités*
+- [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
+- [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
 - [Programmation dynamique : TP Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
 - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
@@ -154,7 +154,7 @@
 
 
 
-
+[https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
 
 -->
-[https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
+
