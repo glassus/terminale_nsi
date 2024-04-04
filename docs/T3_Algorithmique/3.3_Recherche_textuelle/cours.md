@@ -191,14 +191,15 @@ with open('Les_Miserables.txt') as f:
         ```python linenums='1'
         def presqueBMH(texte, motif):
             indices = []
-            i = len(motif) -1
-            while i < len(texte):
-                k = 0
-                while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
-                    k += 1
-                if k == len(motif):
-                    indices.append(i-len(motif)+1)
+            i = 0
+            while i <= len(texte) - len(motif):
+                k = len(motif)-1
+                while k > 0 and texte[i+k] == motif[k]:
+                    k -= 1
+                if k == 0:
+                    indices.append(i)
                 i += 1
+
             return indices
         ```        
     """
