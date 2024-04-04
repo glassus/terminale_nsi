@@ -3913,6 +3913,41 @@
 <p class="admonition-title">Exercice  1</p>
 <p>Re-écrire l'algorithme précédent en s'arrêtant dès qu'une occurrence de <code>motif</code> est trouvée dans <code>texte</code>.</p>
 <p>La fonction renverra uniquement un booléen. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naive_bool</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie un booléen indiquant la présence ou non de</span>
+<span class="sd">    la chaîne motif dans la chaîne texte.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">trouve</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">trouve</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="13-application-a-la-recherche-dun-motif-dans-un-roman">1.3 Application à la recherche d'un motif dans un roman<a class="headerlink" href="#13-application-a-la-recherche-dun-motif-dans-un-roman" title="Permanent link">⚓︎</a></h3>
 <p>Le <a class="" href="https://www.gutenberg.org/browse/languages/fr" target="_blank">Projet Gutenberg</a> permet de télécharger légalement des ouvrages libres de droits dans différents formats.</p>
