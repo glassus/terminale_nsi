@@ -69,7 +69,7 @@ Exemple d'utilisation :
     La fonction renverra uniquement un booléen. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
