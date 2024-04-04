@@ -3961,6 +3961,48 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>À l'aide du module <code>time</code>, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Les_Miserables.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">roman</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie la liste des indices (éventuellement vide) des occurrences de</span>
+<span class="sd">    de la chaîne `motif` dans la chaîne `texte`.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">indices</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;maison&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;La chandelle était sur la cheminée et ne donnait que peu de clarté.&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;parcoursup&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">recherche_naive</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+</code></pre></div>
+<p>On remarque que le temps de recherche est semblable, quel que soit le motif cherché.         </p>
+</details>
 </div>
 <h2 id="2-vers-lalgorithme-de-boyer-moore-et-si-on-partait-a-lenvers">2. Vers l'algorithme de Boyer-Moore : et si on partait à l'envers ?<a class="headerlink" href="#2-vers-lalgorithme-de-boyer-moore-et-si-on-partait-a-lenvers" title="Permanent link">⚓︎</a></h2>
 <details class="tip" open="open">
