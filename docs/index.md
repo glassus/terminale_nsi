@@ -5,6 +5,8 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
+    - une idée pour le Grand Oral : [(vidéo)](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
+
     {#
     -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
     - :new: Deux sujets zéro viennent d'être publiés :
