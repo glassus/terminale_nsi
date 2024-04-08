@@ -295,7 +295,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
 
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
-    {#
+    
     ```python linenums='1'
     def dico_lettres(mot):
         d = {}
@@ -331,7 +331,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres.
     6. La lettre n'est pas dans le motif : on se positionne juste après elle en se décalant de toute la longueur du motif. 
 
-    #}
+    
 Exemple d'utilisation :
 ```python
 >>> BMH("une magnifique maison bleue", "maison")
