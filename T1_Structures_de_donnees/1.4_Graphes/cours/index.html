@@ -1005,6 +1005,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#23-representation-uniquement-avec-des-listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Représentation uniquement avec des listes.
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3979,8 +3988,10 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
 <p>Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, ce qui signifie que l'arête qui relie B et C va donner lieu à deux "1" dans la matrice, situé de part et d'autre de la diagonale descendante (un mathématicien parlera de matrice <em>symétrique</em>).</p>
 <h4 id="212-graphe-oriente">2.1.2 Graphe orienté<a class="headerlink" href="#212-graphe-oriente" title="Permanent link">⚓︎</a></h4>
 <p><img alt="" class="center" src="../data/matgraph_2.png" width="70%" /></p>
+<p>Comme le graphe est orienté, la matrice n'est pas forcément symétrique (il faudrait que tous les liens soient réciproques pour qu'elle le soit).</p>
 <h4 id="213-graphe-pondere">2.1.3 Graphe pondéré<a class="headerlink" href="#213-graphe-pondere" title="Permanent link">⚓︎</a></h4>
 <p><img alt="" class="center" src="../data/matgraph_3.png" width="75%" /></p>
+<p>Il peut exister de la même manière des graphes pondérés <strong>et</strong> orientés.</p>
 <h4 id="214-exercices">2.1.4 Exercices<a class="headerlink" href="#214-exercices" title="Permanent link">⚓︎</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
@@ -3996,24 +4007,7 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
 <li>Héloïse est amie avec Béa.</li>
 </ul>
 <p><strong>Q1.</strong> Représenter le graphe des relations dans ce réseau social (on désignera chaque individu par l'initiale de son prénom). Il est possible de faire en sorte que les arêtes ne se croisent pas !</p>
-<details class="tip">
-<summary>Correction Q1</summary>
-<p><img alt="image" class="center" src="../data/grapheRS.png" /></p>
-</details>
 <p><strong>Q2.</strong> Donner la matrice d'adjacence de ce graphe.</p>
-<details class="tip">
-<summary>Correction Q2</summary>
-<p><span class="arithmatex">\(\pmatrix{
-0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
-0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-}\)</span></p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
@@ -4025,10 +4019,6 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
     1&amp;0&amp;1&amp;0&amp;1\\
     1&amp;0&amp;0&amp;1&amp;0\\
     }\)</span></p>
-<details class="tip">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/ex2_Q1.png" /></p>
-</details>
 <p><strong>Q2.</strong> <span class="arithmatex">\(M_2=\pmatrix{
     0&amp;1&amp;1&amp;0&amp;1\\
     0&amp;0&amp;1&amp;0&amp;0\\
@@ -4036,10 +4026,6 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
     1&amp;0&amp;0&amp;0&amp;1\\
     0&amp;0&amp;0&amp;0&amp;0\\
     }\)</span></p>
-<details class="tip">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/ex2_Q2.png" /></p>
-</details>
 <p><strong>Q3.</strong> <span class="arithmatex">\(M_3=\pmatrix{
     0&amp;5&amp;10&amp;50&amp;12\\
     5&amp;0&amp;10&amp;0&amp;0\\
@@ -4047,10 +4033,6 @@ Ce graphe peut être <strong>non-orienté</strong> ou <strong>orienté</strong> 
     50&amp;0&amp;8&amp;0&amp;100\\
     12&amp;0&amp;0&amp;100&amp;0\\
     }\)</span>    </p>
-<details class="tip">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/ex2_Q3.png" /></p>
-</details>
 </div>
 <h4 id="215-implementation-python-des-matrices-dadjacence">2.1.5 Implémentation Python des matrices d'adjacence<a class="headerlink" href="#215-implementation-python-des-matrices-dadjacence" title="Permanent link">⚓︎</a></h4>
 <div class="admonition info">
@@ -4130,10 +4112,6 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
      <span class="p">}</span>
 </code></pre></div></p>
-<details class="tip">
-<summary>Correction Q1</summary>
-<p><img alt="image" class="center" src="../data/ex3_Q1.png" /></p>
-</details>
 <p><strong>Q2.</strong> 
 <div class="highlight"><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">],</span>
@@ -4143,11 +4121,12 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
      <span class="p">}</span>
 </code></pre></div></p>
-<details class="tip">
-<summary>Correction Q2</summary>
-<p><img alt="image" class="center" src="../data/ex3_Q2.png" /></p>
-</details>
 </div>
+<h3 id="23-representation-uniquement-avec-des-listes">2.3 Représentation uniquement avec des listes.<a class="headerlink" href="#23-representation-uniquement-avec-des-listes" title="Permanent link">⚓︎</a></h3>
+<p><img alt="image" class="center" src="../data/graphEP.png" /></p>
+<p>Ainsi qu'il est fait dans le sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#exercice-212" target="_blank">21.2</a> de la BNS 2024, le graphe ci-dessus peut être représenté par la liste de listes suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="n">adj</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
+</code></pre></div>
 <h2 id="3-creation-dune-classe-graphe">3. Création d'une classe <code>Graphe</code><a class="headerlink" href="#3-creation-dune-classe-graphe" title="Permanent link">⚓︎</a></h2>
 <p>Dans cette partie, nous ne traiterons que des graphes <strong>non-orientés</strong>.</p>
 <h3 id="31-interface-souhaitee">3.1 Interface souhaitée<a class="headerlink" href="#31-interface-souhaitee" title="Permanent link">⚓︎</a></h3>
@@ -4609,7 +4588,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 mai 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 avril 2024</span>
   </span>
 
     
