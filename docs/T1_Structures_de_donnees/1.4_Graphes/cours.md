@@ -112,11 +112,12 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
 
 ![](data/matgraph_2.png){: .center width=70%}
 
-
+Comme le graphe est orienté, la matrice n'est pas forcément symétrique (il faudrait que tous les liens soient réciproques pour qu'elle le soit).
 #### 2.1.3 Graphe pondéré
 
 ![](data/matgraph_3.png){: .center width=75%}
 
+Il peut exister de la même manière des graphes pondérés **et** orientés.
 
 #### 2.1.4 Exercices
 
@@ -134,22 +135,37 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
     
     **Q1.** Représenter le graphe des relations dans ce réseau social (on désignera chaque individu par l'initiale de son prénom). Il est possible de faire en sorte que les arêtes ne se croisent pas !
 
-    ??? tip "Correction Q1"
-        ![image](data/grapheRS.png){: .center}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/grapheRS.png){: .center}    
+    """
+    )
+    }}
+
         
     **Q2.** Donner la matrice d'adjacence de ce graphe.
 
-    ??? tip "Correction Q2"
-        $\pmatrix{
-        0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
-        1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\
-        1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
-        0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
-        1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
-        1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
-        0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
-        0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
-        }$
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        $\\pmatrix{
+        0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\\\
+        1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 \\\\
+        1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\\\
+        0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\\\
+        1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\\\
+        1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\\\
+        0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\\\
+        0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+        }$        
+    """
+    )
+    }}
+
         
         
 !!! example "{{ exercice() }}"
@@ -163,8 +179,14 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
         1&0&0&1&0\\
         }$
 
-    ??? tip "Correction"
-        ![image](data/ex2_Q1.png){: .center}
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/ex2_Q1.png){: .center} 
+    """
+    )
+    }}
         
     **Q2.** $M_2=\pmatrix{
         0&1&1&0&1\\
@@ -174,8 +196,17 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
         0&0&0&0&0\\
         }$
     
-    ??? tip "Correction"
-        ![image](data/ex2_Q2.png){: .center}
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/ex2_Q2.png){: .center} 
+    """
+    )
+    }}
+
+
+        
 
     **Q3.** $M_3=\pmatrix{
         0&5&10&50&12\\
@@ -185,8 +216,16 @@ Dans ce graphe non orienté, comme B est voisin de C, C est aussi voisin de B, c
         12&0&0&100&0\\
         }$    
 
-    ??? tip "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ![image](data/ex2_Q3.png){: .center}
+    """
+    )
+    }}
+
+        
 
 
 
@@ -265,8 +304,17 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     'F': ['B', 'E']
          }
     ```
-    ??? tip "Correction Q1"
-        ![image](data/ex3_Q1.png){: .center}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/ex3_Q1.png){: .center}        
+    """
+    )
+    }}
+
+
 
 
     **Q2.** 
@@ -280,12 +328,27 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
          }
 
     ```
-    ??? tip "Correction Q2"
-        ![image](data/ex3_Q2.png){: .center}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/ex3_Q2.png){: .center}        
+    """
+    )
+    }}
 
 
 
 
+### 2.3 Représentation uniquement avec des listes.
+![image](data/graphEP.png){: .center}
+
+Ainsi qu'il est fait dans le sujet [21.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#exercice-212){. target="_blank"} de la BNS 2024, le graphe ci-dessus peut être représenté par la liste de listes suivante :
+
+```python
+adj = [[1, 2], [0, 3], [0], [1], [5], [4]]
+```
 
 
 

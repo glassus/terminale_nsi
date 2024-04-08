@@ -22,6 +22,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
     - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
     - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 
