@@ -589,21 +589,36 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     
     **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
-    ??? tip "correction Q1"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> BFS(g, 'B')
         ['B', 'A', 'D', 'E', 'C', 'F', 'G', 'H']
-        ```
+        ```        
+    """
+    )
+    }}
+  
 
     **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
 
-    ??? tip "Correction Q2"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> BFS(g, 'D')
         ['D', 'B', 'C', 'E', 'A', 'F', 'G', 'H']
         >>> BFS(g, 'G')
         ['G', 'E', 'F', 'H', 'B', 'D', 'A', 'C']
-        ```
+        ```        
+    """
+    )
+    }}
+
+
     
 
 ### 4.1.3 Application du BFS : recherche du plus court chemin
@@ -759,7 +774,11 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de A est donc B.
 
     **Q2.** Vérifier avec le code précédent. 
-    ??? tip "Correction Q2"
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Graphe:
             def __init__(self, liste_sommets):
@@ -802,7 +821,11 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
         ```python
         >>> DFSrec(g, [], 'A')
         ['A', 'B', 'D', 'C', 'E', 'F', 'G', 'H']
-        ```
+        ```        
+    """
+    )
+    }}
+
 
     **Q3.** Reprendre les questions précédentes en changeant le sommet de départ.
 
