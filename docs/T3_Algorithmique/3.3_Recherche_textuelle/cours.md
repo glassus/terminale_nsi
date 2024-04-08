@@ -349,7 +349,7 @@ Exemple d'utilisation :
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -367,19 +367,19 @@ Exemple d'utilisation :
         def BMH(texte, motif):
             dico = dico_lettres(motif)
             indices = []
-            i = len(motif) -1
-            while i < len(texte):
-                k = 0
-                while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]: #(1)
-                    k += 1
-                if k == len(motif): #(2)
-                    indices.append(i-len(motif)+1)
+            i = 0
+            while i <= len(texte) - len(motif):
+                k = len(motif)-1
+                while k > 0 and texte[i+k] == motif[k]: #(1)
+                    k -= 1
+                if k == 0: #(2)
+                    indices.append(i)
                     i += 1 #(3)
                 else:
-                    if texte[i-k] in dico: (#4)
-                        i = max(i - k  + len(motif) - dico[texte[i-k]] - 1, i+1) #(5)
+                    if texte[i+k] in dico: #(4)
+                        i += len(motif) - dico[texte[i+k]] - 1 #(5)
                     else:
-                        i = i - k + len(motif) #(6)
+                        i += len(motif) #(6)
 
             return indices
 
