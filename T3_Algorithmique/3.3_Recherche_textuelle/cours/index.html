@@ -4152,6 +4152,66 @@ Certes, c'est pour l'instant très artificiel, mais :
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p>Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMH. Que remarquez-vous ?  </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Les_Miserables.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">roman</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">dico_lettres</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">mot</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">BMH</span><span class="p">(</span><span class="n">texte</span><span class="p">,</span> <span class="n">motif</span><span class="p">):</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="n">dico_lettres</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">motif</span><span class="p">[</span><span class="n">k</span><span class="p">]:</span> <span class="c1">#(1)</span>
+            <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#(2)</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#(3)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span> <span class="c1">#(4)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="o">-</span> <span class="n">dico</span><span class="p">[</span><span class="n">texte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]]</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1">#(5)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">motif</span><span class="p">)</span> <span class="c1">#(6)</span>
+
+    <span class="k">return</span> <span class="n">indices</span>
+
+
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;maison&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BMH</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;La chandelle était sur la cheminée et ne donnait que peu de clarté.&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BMH</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">motif</span> <span class="o">=</span> <span class="s1">&#39;parcoursup&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BMH</span><span class="p">(</span><span class="n">roman</span><span class="p">,</span> <span class="n">motif</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+</code></pre></div>
+<p>retour console :</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">7264</span><span class="p">,</span> <span class="mi">9090</span><span class="p">,</span> <span class="mi">9547</span><span class="p">,</span> <span class="mi">9745</span><span class="p">,</span> <span class="mi">10936</span><span class="p">,</span> <span class="mi">17820</span><span class="p">,</span> <span class="mi">23978</span><span class="p">,</span> <span class="mi">38192</span><span class="p">,</span> <span class="mi">41639</span><span class="p">,</span> <span class="mi">41651</span><span class="p">,</span> <span class="mi">41840</span><span class="p">,</span> <span class="mi">42493</span><span class="p">,</span> <span class="mi">48028</span><span class="p">,</span> <span class="mi">48393</span><span class="p">,</span> <span class="mi">51448</span><span class="p">,</span> <span class="mi">53353</span><span class="p">,</span> <span class="mi">70867</span><span class="p">,</span> <span class="mi">72692</span><span class="p">,</span> <span class="mi">72768</span><span class="p">,</span> <span class="mi">75608</span><span class="p">,</span> <span class="mi">77855</span><span class="p">,</span> <span class="mi">108489</span><span class="p">,</span> <span class="mi">115739</span><span class="p">,</span> <span class="mi">130629</span><span class="p">,</span> <span class="mi">132983</span><span class="p">,</span> <span class="mi">138870</span><span class="p">,</span> <span class="mi">143681</span><span class="p">,</span> <span class="mi">144600</span><span class="p">,</span> <span class="mi">153114</span><span class="p">,</span> <span class="mi">155973</span><span class="p">,</span> <span class="mi">158709</span><span class="p">,</span> <span class="mi">160700</span><span class="p">,</span> <span class="mi">163649</span><span class="p">,</span> <span class="mi">169164</span><span class="p">,</span> <span class="mi">169181</span><span class="p">,</span> <span class="mi">171761</span><span class="p">,</span> <span class="mi">171967</span><span class="p">,</span> <span class="mi">182642</span><span class="p">,</span> <span class="mi">186413</span><span class="p">,</span> <span class="mi">190534</span><span class="p">,</span> <span class="mi">219378</span><span class="p">,</span> <span class="mi">220314</span><span class="p">,</span> <span class="mi">224518</span><span class="p">,</span> <span class="mi">225098</span><span class="p">,</span> <span class="mi">227579</span><span class="p">,</span> <span class="mi">296302</span><span class="p">,</span> <span class="mi">345108</span><span class="p">,</span> <span class="mi">345893</span><span class="p">,</span> <span class="mi">346740</span><span class="p">,</span> <span class="mi">349677</span><span class="p">,</span> <span class="mi">359727</span><span class="p">,</span> <span class="mi">362025</span><span class="p">,</span> <span class="mi">389945</span><span class="p">,</span> <span class="mi">395690</span><span class="p">,</span> <span class="mi">434118</span><span class="p">,</span> <span class="mi">438068</span><span class="p">,</span> <span class="mi">457795</span><span class="p">,</span> <span class="mi">457886</span><span class="p">,</span> <span class="mi">464696</span><span class="p">,</span> <span class="mi">469403</span><span class="p">,</span> <span class="mi">501768</span><span class="p">,</span> <span class="mi">514980</span><span class="p">,</span> <span class="mi">520667</span><span class="p">,</span> <span class="mi">520878</span><span class="p">,</span> <span class="mi">520926</span><span class="p">,</span> <span class="mi">520968</span><span class="p">,</span> <span class="mi">522707</span><span class="p">,</span> <span class="mi">529329</span><span class="p">,</span> <span class="mi">598128</span><span class="p">,</span> <span class="mi">601390</span><span class="p">,</span> <span class="mi">645915</span><span class="p">]</span>
+<span class="mf">0.06359553337097168</span>
+<span class="p">[</span><span class="mi">651731</span><span class="p">]</span>
+<span class="mf">0.01853322982788086</span>
+<span class="p">[]</span>
+<span class="mf">0.037064313888549805</span>
+</code></pre></div>
+<p>On constate quelque chose de remarquable (et qui peut être à première vue contre-intuitif) : </p>
+<p><strong>Plus le motif recherché est long, plus la recherche est rapide</strong>.        </p>
+</details>
 </div>
 
 
