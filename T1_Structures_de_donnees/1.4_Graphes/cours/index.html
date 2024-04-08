@@ -4245,7 +4245,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 </ul>
 <p>En début d'algorithme, seul le sommet de départ <code class="highlight"><span class="n">depart</span></code> donné en paramètre est découvert. La fonction <code>BFS</code> renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Parcours en largeur - BFS </p>
+<p class="admonition-title">Parcours en largeur - BFS <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4268,17 +4268,17 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <span class="sd">    et renvoie la liste des sommets visités dans l&#39;ordre du parcours.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
-    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
-    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
-        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
-                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
-                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
-        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">traites</span>
+    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="k">while</span> <span class="o">...</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="o">....</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+                <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+                <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition warning">
@@ -4405,7 +4405,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
             <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
                 <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
                 <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
-                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="n">sommet</span>
+                <span class="n">parent</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
                 <span class="k">if</span> <span class="n">voisin</span> <span class="o">==</span> <span class="n">arrivee</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
         <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
@@ -4415,9 +4415,9 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
     <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
-    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
-        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
-        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
+    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="o">...</span><span class="p">:</span>
+        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="n">chemin</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">chemin</span>
     <span class="k">return</span> <span class="n">chemin</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -4439,10 +4439,10 @@ Tester le code précédent pour trouver le plus court chemin entre A et G, entre
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
-    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actuel</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">actuel</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">traites</span><span class="p">:</span>
-            <span class="n">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">voisin</span><span class="p">)</span>
+    <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">...</span>
     <span class="k">return</span> <span class="n">traites</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -4562,7 +4562,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
 <p><strong>Remarques :</strong></p>
 <ul>
 <li>
-<p>À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours quele parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la <strong>méthode de découverte</strong>, plus que l'implémentation proprement dite.</p>
+<p>À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours que le parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la <strong>méthode de découverte</strong>, plus que l'implémentation proprement dite.</p>
 </li>
 <li>
 <p>Contrairement au BFS, il est possible d'empiler un sommet déjà découvert (on vérifie juste qu'il n'ait pas déjà été traité). Vous pouvez vous en apercevoir en écrivant l'état de la pile lors du parcours DFS itératif du graphe de l'exercice 6.</p>
