@@ -399,7 +399,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 ### 3.3 Implémentation
 
 
-!!! abstract "Implémentation d'une classe ```Graphe``` "
+!!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
