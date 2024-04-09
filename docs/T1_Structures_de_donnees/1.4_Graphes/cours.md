@@ -398,13 +398,13 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-{#
+
 !!! abstract "Implémentation d'une classe ```Graphe``` "
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
-            self.liste_sommets = ...
-            self.adjacents = ...
+            ...
+            ...
 
         def ajoute_arete(self, sommetA, sommetB):
             ...
@@ -416,9 +416,9 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return ...
     ```
-#}
 
 
+{#
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -436,7 +436,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return sommetB in self.adjacents[sommetA]
     ```
-
+#}
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
@@ -590,7 +590,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -605,7 +605,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -777,7 +777,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     **Q2.** Vérifier avec le code précédent. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
