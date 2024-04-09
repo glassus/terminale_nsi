@@ -33,7 +33,7 @@ dict_fibo = {1:1, 2:1}
 def fibonacci(n):
     if n in dict_fibo:
         return dict_fibo[n]
-    dict_fibo[n] = fibo(n-1) + fibo(n-2)
+    dict_fibo[n] = fibonacci(n-1) + fibonacci(n-2)
     return dict_fibo[n]
 ```
 

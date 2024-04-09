@@ -57,14 +57,17 @@ tab = [0, 0, 1, 0, 1, 0, 1, 1]
 - **Etape 3 :** on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.  
 ```python
 tab = [0, 0, 1, 0, 1, 0, 1, 1]
-             ^        ^
+             ^           ^
 ```
 
 
 
 - **Etape 4 :** on regarde la troisième case, qui contient un 1 : ce 1 va aller dans la seconde partie du tableau final et on l’échange avec l’avant-dernière case.
 Il est à présent bien positionné : on ne prend plus l’avant-dernière case en compte.  
-
+```python
+tab = [0, 0, 1, 0, 1, 0, 1, 1]
+             ^        ^
+```
 
 
 Et ainsi de suite...
