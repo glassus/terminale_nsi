@@ -453,13 +453,12 @@ L'objet de type ```Graphe``` aura comme attributs :
 
     Tous les parcours suivent plus ou moins le même algorithme de base :
 
-    - On visite un sommet ```A``` . On crée une structure ```S```  qui contiendra au départ l’*ensemble* des voisins de ```A``` .
+    - On visite un sommet ```A``` . On crée une structure ```S```  qui contiendra au départ uniquement le sommet ```A``` .
 
     - Tant que ```S``` n’est pas vide :
     
-        - on choisit un sommet ```s```  de ```S```
-        - on visite ```s```
-        - on ajoute à ```S``` tous les voisins de ```s``` **pas encore visités**
+        - on choisit un sommet ```s```  de ```S``` (on dit qu'on «visite» ```s```);
+        - on ajoute à ```S``` tous les voisins de ```s``` **pas encore visités**.
 
 
 !!! warning "Sommets visités"
@@ -515,10 +514,10 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         decouverts = [...]
         en_attente = [...]
         while ... != [] :
-            sommet = ....pop(0)
-            voisins = g.voisins(...)
-            for ... in ...:
-                if voisin not in ...:
+            sommet = ...
+            voisins = ...
+            for voisin in ...:
+                if ... not in ...:
                     ....append(...)
                     ....append(...)
             ....append(...)
