@@ -1,11 +1,14 @@
 !!! tip "Grand Oral"
     - [Digipad de centralisation des sujets et des recherches](https://digipad.app/p/713202/3dd01c719c377){. target="_blank"}
+    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
+    - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
+    - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
 
 
 
 !!! abstract "Actualités"
     - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
-    - une idée pour le Grand Oral : [(vidéo)](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
+
 
     {#
     -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
