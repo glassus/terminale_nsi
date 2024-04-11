@@ -4,7 +4,7 @@ entier positif `n` et renvoie une une chaine de caractère correspondant à l‘
 
 On rappelle que :
 
-- l’écriture binaire de 25 est 11001 car $25 = 1 \times 24 + 1 \times 23 + 0 \times 22 + 0 \times 21 + 1 \times 20$ ;
+- l’écriture binaire de 25 est 11001 car $25 = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$ ;
 - `n % 2` vaut 0 ou 1 selon que `n` est pair ou impair ;
 - `n // 2`  donne le quotient de la division euclidienne de `n` par 2.
 
