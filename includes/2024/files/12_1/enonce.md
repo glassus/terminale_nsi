@@ -3,7 +3,7 @@ entiers (type `list`) et qui le modifie afin qu’il soit trié par ordre croiss
 
 On utilisera l’algorithme suivant :
 
-- on recherche le plus petit élément du tableau, en la parcourant du rang 0 au dernier
+- on recherche le plus petit élément du tableau, en le parcourant du rang 0 au dernier
 rang, et on l’échange avec l’élément d’indice 0 ;
 - on recherche ensuite le plus petit élément du tableau restreint du rang 1 au dernier
 rang, et on l’échange avec l’élément d’indice 1 ;

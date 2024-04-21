@@ -39,8 +39,8 @@ Exemples :
 25
 >>> distance_carre((1, 0), (0, 1))
 2
->>> plus_courte_distance([(7, 9), (2, 5), (5, 2)], (0, 0))
+>>> point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)])
 (2, 5)
->>> plus_courte_distance([(7, 9), (2, 5), (5, 2)], (5, 2))
+>>> point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)])
 (5, 2)
 ```
