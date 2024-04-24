@@ -14235,11 +14235,11 @@ tères.
 Cette fonction renvoie le nombre d’occurrences de <code>caractere</code> dans <code>chaine</code>, c’est-à-dire
 le nombre de fois où <code>caractere</code> apparaît dans <code>chaine</code>.</p>
 <p>Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s2">&quot;sciences&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">occurrences</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s2">&quot;sciences&quot;</span><span class="p">)</span>
 <span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s2">&quot;mississippi&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">occurrences</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s2">&quot;mississippi&quot;</span><span class="p">)</span>
 <span class="mi">4</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s2">&quot;mississippi&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">occurrences</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s2">&quot;mississippi&quot;</span><span class="p">)</span>
 <span class="mi">0</span>
 </code></pre></div></p>
 </div>
@@ -14266,11 +14266,11 @@ le nombre de fois où `caractere` apparaît dans `chaine`.
 
 Exemples :
 ```python
-&gt;&gt;&gt; recherche(&#39;e&#39;, &quot;sciences&quot;)
+&gt;&gt;&gt; occurrences(&#39;e&#39;, &quot;sciences&quot;)
 2
-&gt;&gt;&gt; recherche(&#39;i&#39;,&quot;mississippi&quot;)
+&gt;&gt;&gt; occurrences(&#39;i&#39;,&quot;mississippi&quot;)
 4
-&gt;&gt;&gt; recherche(&#39;a&#39;,&quot;mississippi&quot;)
+&gt;&gt;&gt; occurrences(&#39;a&#39;,&quot;mississippi&quot;)
 0
 ```
 </code></pre></div>
@@ -14992,7 +14992,7 @@ Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>,
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie True si l&#39;adresse IP est une adresse</span>
 <span class="sd">        réservée, False sinon&quot;&quot;&quot;</span>
 <span class="hll">        <span class="n">reservees</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;192.168.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.0.255&#39;</span> <span class="p">]</span> 
-</span><span class="hll">        <span class="k">return</span> <span class="bp">self</span> <span class="ow">in</span> <span class="n">reservees</span> 
+</span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span> <span class="ow">in</span> <span class="n">reservees</span> 
 </span>
     <span class="k">def</span> <span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie un objet de AdresseIP avec l&#39;adresse</span>
@@ -15532,8 +15532,8 @@ dans <code>tab_ins</code> après tous les éléments du tableau <code>tab</code>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </code></pre></div>
 <p>Compléter et tester le code ci-dessous :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -15606,8 +15606,8 @@ Exemples :
 [7, 4, 8, 9]
 &gt;&gt;&gt; ajoute(3, 4, [7, 8, 9])
 [7, 8, 9, 4]
-&gt;&gt;&gt; ajoute(4, 4, [7, 8, 9])
-[7, 8, 9, 4]
+&gt;&gt;&gt; ajoute(0, 4, [7, 8, 9])
+[4, 7, 8, 9]
 </code></pre></div>
 <p>Compléter et tester le code ci-dessous :</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -15770,7 +15770,7 @@ dans un tableau de valeurs triées dans l'ordre croissant.</p>
 </span>    <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
 <span class="hll">        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
 </span>        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
-<span class="hll">            <span class="k">return</span> <span class="n">m</span> 
+<span class="hll">            <span class="k">return</span> <span class="kc">True</span> 
 </span>        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
 <span class="hll">            <span class="n">debut</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> 
 </span>        <span class="k">else</span><span class="p">:</span>
@@ -16427,7 +16427,7 @@ tableau <code>tab</code> (de type <code>list</code>) et renvoyant le nombre d’
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">compte_occurrence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">compte_occurrences</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
