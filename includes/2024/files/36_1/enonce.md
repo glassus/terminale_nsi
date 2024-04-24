@@ -6,10 +6,10 @@ le nombre de fois où `caractere` apparaît dans `chaine`.
 
 Exemples :
 ```python
->>> recherche('e', "sciences")
+>>> occurrences('e', "sciences")
 2
->>> recherche('i',"mississippi")
+>>> occurrences('i',"mississippi")
 4
->>> recherche('a',"mississippi")
+>>> occurrences('a',"mississippi")
 0
 ```

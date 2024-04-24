@@ -1,5 +1,5 @@
 ```python linenums='1'
-def compte_occurrence(x, tab):
+def compte_occurrences(x, tab):
     nb = 0
     for element in tab:
         if element == x:

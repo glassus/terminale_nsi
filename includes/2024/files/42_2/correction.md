@@ -9,7 +9,7 @@ def dichotomie(tab, x):
     while debut <= fin:
         m = (debut + fin) // 2 
         if x == tab[m]:
-            return m 
+            return True 
         if x > tab[m]:
             debut = m + 1 
         else:

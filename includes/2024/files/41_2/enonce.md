@@ -20,8 +20,8 @@ Exemples :
 [7, 4, 8, 9]
 >>> ajoute(3, 4, [7, 8, 9])
 [7, 8, 9, 4]
->>> ajoute(4, 4, [7, 8, 9])
-[7, 8, 9, 4]
+>>> ajoute(0, 4, [7, 8, 9])
+[4, 7, 8, 9]
 ```
 
 Compléter et tester le code ci-dessous :
