@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
     
     
       
@@ -12011,7 +12011,7 @@ lancers aléatoires nécessaires pour terminer le jeu.</p>
 </span><span class="hll">    <span class="k">while</span> <span class="n">nombre_cases_vues</span> <span class="o">&lt;</span> <span class="n">nombre_cases</span><span class="p">:</span> 
 </span>        <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="hll">        <span class="n">case_en_cours</span> <span class="o">=</span> <span class="p">(</span><span class="n">case_en_cours</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="o">%</span> <span class="n">nombre_cases</span> 
-</span><span class="hll">        <span class="k">if</span> <span class="n">case_en_cours</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cases_vues</span><span class="p">:</span> 
+</span><span class="hll">        <span class="k">if</span> <span class="ow">not</span> <span class="n">cases_vues</span><span class="p">[</span><span class="n">case_en_cours</span><span class="p">]:</span> 
 </span>            <span class="n">cases_vues</span><span class="p">[</span><span class="n">case_en_cours</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="hll">            <span class="n">nombre_cases_vues</span> <span class="o">=</span> <span class="n">nombre_cases_vues</span> <span class="o">+</span> <span class="mi">1</span> 
 </span><span class="hll">        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> 
@@ -17444,7 +17444,7 @@ def nombre_suivant(s):
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
       
         <script src="../../scripts/mathjax.js"></script>
       
