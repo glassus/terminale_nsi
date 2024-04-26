@@ -1,5 +1,5 @@
 ![image](data2023/03_coeur.png){: .center width=30%}
-On travaille sur des dessins en noir et blanc obtenu à partir de pixels noirs et blancs :
+On travaille sur des dessins en noir et blanc obtenus à partir de pixels noirs et blancs :
 La figure « cœur » ci-dessus va servir d’exemple.
 On la représente par une grille de nombres, c’est-à-dire par une liste composée de sous-listes de même longueurs.
 Chaque sous-liste représentera donc une ligne du dessin.

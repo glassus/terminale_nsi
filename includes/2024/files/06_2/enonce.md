@@ -7,7 +7,7 @@ Par exemple, les résultats pourraient correspondre au tableau :
 urne = ['A', 'A', 'A', 'B', 'C', 'B', 'C', 'B', 'C', 'B']
 ```
 
-indiquant que 3 candidats ont obtenus au moins un vote chacun : A, B et C.
+indiquant que 3 candidats ont obtenu au moins un vote chacun : A, B et C.
 
 On cherche à déterminer le ou les candidats ayant obtenu le plus de suffrages. Pour cela, on
 propose d’écrire deux fonctions :

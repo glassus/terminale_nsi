@@ -1,7 +1,7 @@
 On s’intéresse à la suite d’entiers définie par :
 
 - les deux premières valeurs sont égales à 1 ;
-- ensuite, chaque valeur est obtenue en faisant la somme des deux valeurs qui le précè-
+- ensuite, chaque valeur est obtenue en faisant la somme des deux valeurs qui la précè-
 dent.
 
 La troisième valeur est donc $1+1 = 2$, la quatrième est $1+2 = 3$, la cinquième est $2+3 = 5$,

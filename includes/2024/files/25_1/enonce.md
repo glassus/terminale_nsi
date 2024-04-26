@@ -1,5 +1,4 @@
-Écrire une fonction `recherche_min` qui prend en paramètre un tableau de nombres `tab`, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les
-tableaux seront représentés sous forme de liste Python.
+Écrire une fonction `recherche_min` qui prend en paramètre un tableau de nombres `tab`, et qui renvoie l'indice de la première occurrence du minimum de ce tableau. Les tableaux seront représentés sous forme de liste Python.
 
 Exemples :
 ```python
