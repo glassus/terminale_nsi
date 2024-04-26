@@ -14,7 +14,7 @@ def nombre_coups():
     while nombre_cases_vues < nombre_cases: 
         x = randint(1, 6)
         case_en_cours = (case_en_cours + x) % nombre_cases 
-        if case_en_cours not in cases_vues: 
+        if not cases_vues[case_en_cours]: 
             cases_vues[case_en_cours] = True
             nombre_cases_vues = nombre_cases_vues + 1 
         n = n + 1 
