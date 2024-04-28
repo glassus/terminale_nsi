@@ -9254,25 +9254,33 @@ Exemples :
 <div class="tabbed-set tabbed-alternate" data-tabs="30:3"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><input id="__tabbed_30_3" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">Énoncé</label><label for="__tabbed_30_2">Correction</label><label for="__tabbed_30_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère la fonction <code>binaire</code> ci-dessous qui prend en paramètre un entier positif <code>a</code> en écriture décimale et qui renvoie son écriture binaire sous la forme d'une chaine de caractères.</p>
+<p>On considère la fonction <code>binaire</code>.
+Cette fonction prend en paramètre un entier positif <code>a</code> en
+écriture décimale et renvoie son écriture binaire sous la forme d’une chaine de caractères.</p>
 <p>L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
 l’exemple ci-après.</p>
 <p><img alt="image" class="center" src="../data2023/30_divisions.png" /></p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<p>Compléter le code de la fonction <code>binaire</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;convertit un nombre entier a en sa representation</span>
+<span class="sd">    binaire sous forme de chaine de caractères.&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
     <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">while</span> <span class="n">a</span> <span class="o">...</span> <span class="p">:</span>
+    <span class="k">while</span> <span class="o">...</span> <span class="p">:</span>
         <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">bin_a</span>
         <span class="n">a</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">bin_a</span>
 </code></pre></div></td></tr></table></div>
-Compléter le code de la fonction <code>binaire</code>.</p>
 <p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
 <span class="s1">&#39;1010011&#39;</span>
@@ -9305,7 +9313,9 @@ Compléter le code de la fonction <code>binaire</code>.</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`binaire`</span> ci-dessous qui prend en paramètre un entier positif <span class="sb">`a`</span> en écriture décimale et qui renvoie son écriture binaire sous la forme d&#39;une chaine de caractères.
+<div class="highlight"><pre><span></span><code>On considère la fonction <span class="sb">`binaire`</span>.
+Cette fonction prend en paramètre un entier positif <span class="sb">`a`</span> en
+écriture décimale et renvoie son écriture binaire sous la forme d’une chaine de caractères.
 
 L’algorithme utilise la méthode des divisions euclidiennes successives comme l’illustre
 l’exemple ci-après.
@@ -9313,17 +9323,21 @@ l’exemple ci-après.
 ![<span class="nt">image</span>](<span class="na">data2023/30_divisions.png</span>){: .center}
 
 
+Compléter le code de la fonction <span class="sb">`binaire`</span>.
+
 
 ```python linenums=&#39;1&#39;
 def binaire(a):
+    &#39;&#39;&#39;convertit un nombre entier a en sa representation
+    binaire sous forme de chaine de caractères.&#39;&#39;&#39;
+    if a == 0:
+        return ...
     bin_a = ...
-    a = a // 2
-    while a ... :
+    while ... :
         bin_a = ... + bin_a
         a = ...
     return bin_a
 </code></pre></div>
-Compléter le code de la fonction <code>binaire</code>.</p>
 <p>Exemples :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">binaire</span><span class="p">(</span><span class="mi">83</span><span class="p">)</span>
 <span class="s1">&#39;1010011&#39;</span>
