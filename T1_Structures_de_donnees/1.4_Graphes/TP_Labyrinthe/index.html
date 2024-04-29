@@ -3853,150 +3853,10 @@
 <h2 id="2-modelisation-par-un-graphe">2. Modélisation par un graphe<a class="headerlink" href="#2-modelisation-par-un-graphe" title="Permanent link">⚓︎</a></h2>
 <p>Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrinthe.</p>
 <p>Proposer deux «formes» possibles pour ce graphe.</p>
-<details class="tip">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/laby3.png" width="35%" /></p>
-<p><img alt="image" class="center" src="../data/laby4.png" width="35%" /></p>
-</details>
 <h2 id="3-implementation-du-graphe-en-python">3. Implémentation du graphe en Python<a class="headerlink" href="#3-implementation-du-graphe-en-python" title="Permanent link">⚓︎</a></h2>
 <p>En utilisant la classe <code>Graphe</code> créée en cours, implémenter le graphe de ce labyrinthe.</p>
-<details class="tip">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
-
-    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
-
-<span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">])</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <h2 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h2>
 <p>En utilisant la fonction <code>recherche_chemin</code> du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.</p>
-<details class="tip">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
-<span class="sd">    qui s&#39;arrête dès que le sommet arrivee est atteint.</span>
-<span class="sd">    Renvoie alors le chemin du depart vers arrivee.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
-    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
-    <span class="n">parent</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
-        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
-                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
-                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
-                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="n">sommet</span>
-                <span class="k">if</span> <span class="n">voisin</span> <span class="o">==</span> <span class="n">arrivee</span><span class="p">:</span>
-                    <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
-        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>  
-
-
-<span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
-    <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
-    <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
-    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
-        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
-        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
-    <span class="k">return</span> <span class="n">chemin</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">)</span>
-<span class="s1">&#39;AEFBCGKLP&#39;</span>
-</code></pre></div>
-</details>
 <h2 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">⚓︎</a></h2>
 <p>Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode de résolution :</p>
 <p><center>
@@ -4044,7 +3904,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 mai 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 avril 2024</span>
   </span>
 
     
