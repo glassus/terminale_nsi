@@ -1017,30 +1017,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Annexe : et pourquoi pas en DFS ?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-dans-un-labyrinthe-parfait" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 Dans un labyrinthe parfait
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-dans-un-labyrinthe-non-parfait" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 Dans un labyrinthe non parfait
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -3844,20 +3820,29 @@
 
 
 <h1 id="resolution-dun-labyrinthe">Résolution d'un labyrinthe<a class="headerlink" href="#resolution-dun-labyrinthe" title="Permanent link">⚓︎</a></h1>
-<h2 id="1-presentation-du-probleme">1. Présentation du problème<a class="headerlink" href="#1-presentation-du-probleme" title="Permanent link">⚓︎</a></h2>
+<h3 id="1-presentation-du-probleme">1. Présentation du problème<a class="headerlink" href="#1-presentation-du-probleme" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le labyrinthe suivant :
 <img alt="image" class="center" src="../data/laby1.png" width="35%" /></p>
 <p>Affectons une lettre à chaque case de ce labyrinthe.</p>
 <p><img alt="image" class="center" src="../data/laby2.png" width="35%" /></p>
 <p>Notre objectif est de trouver comment aller <strong>de A en P</strong>.</p>
-<h2 id="2-modelisation-par-un-graphe">2. Modélisation par un graphe<a class="headerlink" href="#2-modelisation-par-un-graphe" title="Permanent link">⚓︎</a></h2>
+<h3 id="2-modelisation-par-un-graphe">2. Modélisation par un graphe<a class="headerlink" href="#2-modelisation-par-un-graphe" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
 <p>Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrinthe.</p>
 <p>Proposer deux «formes» possibles pour ce graphe.</p>
-<h2 id="3-implementation-du-graphe-en-python">3. Implémentation du graphe en Python<a class="headerlink" href="#3-implementation-du-graphe-en-python" title="Permanent link">⚓︎</a></h2>
+</div>
+<h3 id="3-implementation-du-graphe-en-python">3. Implémentation du graphe en Python<a class="headerlink" href="#3-implementation-du-graphe-en-python" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
 <p>En utilisant la classe <code>Graphe</code> créée en cours, implémenter le graphe de ce labyrinthe.</p>
-<h2 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h2>
+</div>
+<h3 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
 <p>En utilisant la fonction <code>recherche_chemin</code> du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.</p>
-<h2 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">⚓︎</a></h2>
+</div>
+<h3 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">⚓︎</a></h3>
 <p>Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode de résolution :</p>
 <p><center>
 <gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/data/sol_laby.gif" speed="1" play></gif-player>
@@ -3867,14 +3852,14 @@
 <li>lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire <code>parent</code>, et ainsi le chemin de sortie du labyrinthe est généré. </li>
 </ul>
 <p><a class="" href="../data/anim_laby.py" target="_blank">Code de cette animation</a> (en Pygame)</p>
-<h2 id="6-annexe-et-pourquoi-pas-en-dfs">6. Annexe : et pourquoi pas en DFS ?<a class="headerlink" href="#6-annexe-et-pourquoi-pas-en-dfs" title="Permanent link">⚓︎</a></h2>
+<h3 id="6-annexe-et-pourquoi-pas-en-dfs">6. Annexe : et pourquoi pas en DFS ?<a class="headerlink" href="#6-annexe-et-pourquoi-pas-en-dfs" title="Permanent link">⚓︎</a></h3>
 <p>Les parcours BFS et DFS ont tous deux la propriété de parcourir <strong>la totalité</strong> du graphe (ils sont même conçus pour cela). Cela a permis au parcours BFS de nous fournir une solution au labyrinthe (dont on a démontré qu'elle était la plus courte).</p>
 <p>Que penser de solution qui sera donnée par le DFS ?</p>
-<h3 id="61-dans-un-labyrinthe-parfait">6.1 Dans un labyrinthe parfait<a class="headerlink" href="#61-dans-un-labyrinthe-parfait" title="Permanent link">⚓︎</a></h3>
+<h4 id="61-dans-un-labyrinthe-parfait">6.1 Dans un labyrinthe parfait<a class="headerlink" href="#61-dans-un-labyrinthe-parfait" title="Permanent link">⚓︎</a></h4>
 <p>Voici un code où la solution est d'abord recherchée par BFS (cases explorées en bleu clair, chemin trouvé marqué en bleu), puis en DFS (cases explorées en rose, chemin trouvé marqué en rouge).</p>
 <p><a href="../data/anim_laby_DFSvsBFS_laby_parfait.py">anim_laby_DFSvsBFS_laby_parfait.py</a> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /></p>
 <p>Que remarquez-vous ???</p>
-<h3 id="62-dans-un-labyrinthe-non-parfait">6.2 Dans un labyrinthe non parfait<a class="headerlink" href="#62-dans-un-labyrinthe-non-parfait" title="Permanent link">⚓︎</a></h3>
+<h4 id="62-dans-un-labyrinthe-non-parfait">6.2 Dans un labyrinthe non parfait<a class="headerlink" href="#62-dans-un-labyrinthe-non-parfait" title="Permanent link">⚓︎</a></h4>
 <p>Changeons de code pour un labyrinthe <em>dégénéré</em> :</p>
 <p><a href="../data/anim_laby_DFSvsBFS_laby_degenere.py">anim_laby_DFSvsBFS_laby_degenere.py</a> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /></p>
 <p>Que remarquez-vous ???</p>

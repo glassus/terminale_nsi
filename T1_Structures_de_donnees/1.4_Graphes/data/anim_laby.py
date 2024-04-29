@@ -167,7 +167,7 @@ def recupere_chemin(depart, arrivee, parent):
 
 
 
-def affiche_chemin(chemin:list, cote:int):
+def affiche_chemin(chemin, cote):
     '''
     Dessine dans la fenetre Pygame screen des carrés de coté taille avec comme
     couleur:
@@ -198,7 +198,7 @@ def affiche_chemin(chemin:list, cote:int):
 ###                                Constantes                                ###
 ################################################################################
 
-hauteur_laby, largeur_laby, cote_cellule = 30, 60, 10
+hauteur_laby, largeur_laby, cote_cellule = 30, 60, 20
 taille_ecran = (largeur_laby*cote_cellule, hauteur_laby*cote_cellule)
 
 laby = Labyrinthe(hauteur_laby, largeur_laby)
@@ -207,7 +207,8 @@ laby.creer_labyrinthe(0, 0, hauteur_laby, largeur_laby)
 
 depart, arrivee = (0,0), (hauteur_laby-1, largeur_laby-1)
 
-#depart, arrivee = (0,0), (15, 15)
+
+
 ################################################################################
 ###                                 Graphe                                   ###
 ################################################################################
@@ -237,9 +238,11 @@ screen = pygame.display.set_mode(taille_ecran)
 screen.fill([255, 255, 255])
 pygame.display.set_caption("Chemin dans un labyrinthe")
 
+
+laby.afficher(cote_cellule)
 chemin = trouve_chemin(g, depart, arrivee)
 affiche_chemin(chemin, cote_cellule)
-laby.afficher(cote_cellule)
+
 
 
 continuer = True
@@ -249,8 +252,6 @@ while continuer:
             continuer = False
             pygame.display.quit()
             sys.exit()
-
-    pygame.display.flip()
 
 pygame.quit()
 
