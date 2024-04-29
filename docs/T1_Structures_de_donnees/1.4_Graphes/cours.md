@@ -833,7 +833,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 #### 4.2.2 Parcours DFS itératif
 
-Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant mal son nom, puisque c'est devenu une pile).
+Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant très mal son nom, puisque c'est devenu une pile).
 
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
@@ -853,6 +853,6 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
 
 **Remarques :**
 
-- À la ligne 7, on inverse l'ordre des voisins pour que ce code renvoie le même parcours que le parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la **méthode de découverte**, plus que l'implémentation proprement dite.
+- À la ligne 7, on inverse l'ordre des voisins (avec l'astuce ```[::-1]```)  pour que ce code renvoie le même parcours que le parcours récursif (sinon c'est le dernier voisin ajouté qui sera dépilé). Cela n'est pas obligatoire : il n'y a pas «un seul» parcours DFS (tout comme il n'y a pas qu'un seul BFS). Ce qui les caractérise est la **méthode de découverte**, plus que l'implémentation proprement dite.
 
 - Contrairement au BFS, il est possible d'empiler un sommet déjà découvert (on vérifie juste qu'il n'ait pas déjà été traité). Vous pouvez vous en apercevoir en écrivant l'état de la pile lors du parcours DFS itératif du graphe de l'exercice 6.
