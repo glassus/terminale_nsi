@@ -17,21 +17,30 @@ Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrin
 
 Proposer deux «formes» possibles pour ce graphe.
 
-
-??? tip "Correction"
-    
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ![image](data/laby3.png){: .center width=35%}
 
 
-    ![image](data/laby4.png){: .center width=35%}
+    ![image](data/laby4.png){: .center width=35%}    
+"""
+)
+}}
+
+    
+
 
 
 ## 3. Implémentation du graphe en Python
 
 En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de ce labyrinthe.
 
-
-??? tip "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     class Graphe:
         def __init__(self, liste_sommets):
@@ -65,7 +74,12 @@ En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de 
     g.ajoute_arete('O', 'K')
     g.ajoute_arete('K', 'L')
     g.ajoute_arete('L', 'P')
-    ```
+    ```    
+"""
+)
+}}
+
+
 
 
 ## 4. Recherche du plus court chemin
@@ -73,7 +87,10 @@ En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de 
 En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.
 
 
-??? tip "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -96,7 +113,7 @@ En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court
                     if voisin == arrivee:
                         return remonte_chemin(depart, arrivee, parent)
             traites.append(sommet)
-        return "non trouvé"  
+        return 'non trouvé'  
 
 
     def remonte_chemin(depart, arrivee, parent):
@@ -111,7 +128,12 @@ En utilisant la fonction ```recherche_chemin``` du cours, établir le plus court
     ```python
     >>> recherche_chemin(g, 'A', 'P')
     'AEFBCGKLP'
-    ```
+    ```    
+"""
+)
+}}
+
+
 
 
 ## 5. Conclusion
