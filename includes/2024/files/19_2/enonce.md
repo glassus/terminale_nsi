@@ -68,8 +68,8 @@ def codes_parfait(mot):
 
 Exemples :
 ```python
->>> est_parfait("PAUL")
+>>> codes_parfait("PAUL")
 (50, 1612112, False)
->>> est_parfait("ALAIN")
+>>> codes_parfait("ALAIN")
 (37, 1121914, True)
 ```

@@ -6,7 +6,7 @@ dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
         "W": 23, "X": 24, "Y": 25, "Z": 26}
 
 
-def est_parfait(mot):
+def codes_parfait(mot):
     # mot est une chaîne de caractères (en lettres majuscules)
     code_concatene = ""
     code_additionne = 0
