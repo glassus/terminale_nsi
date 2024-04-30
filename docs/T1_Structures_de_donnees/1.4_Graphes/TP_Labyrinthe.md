@@ -43,7 +43,7 @@ Notre objectif est de trouver comment aller **de A en P**.
     En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de ce labyrinthe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -95,7 +95,7 @@ Notre objectif est de trouver comment aller **de A en P**.
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
