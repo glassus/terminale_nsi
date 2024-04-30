@@ -21,7 +21,7 @@ Notre objectif est de trouver comment aller **de A en P**.
     Proposer deux «formes» possibles pour ce graphe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/laby3.png){: .center width=35%}
