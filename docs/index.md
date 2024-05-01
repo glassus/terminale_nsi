@@ -25,14 +25,17 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
+    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
-    - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-    - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
-    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+
 
 
 
 ### *Thèmes déjà traités*
+- [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
+- [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
+- [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
 - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
@@ -48,7 +51,7 @@
 - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
 - [Les algorithmes à connaître](T6_5_algos_coeur/cours.md){. target="_blank"}
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
--  [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
+- [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
