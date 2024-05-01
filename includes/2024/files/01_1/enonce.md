@@ -26,7 +26,7 @@ droit, de l’arbre `arbre` de sommet `lettre`.
 
 Exemple :
 ```python
->>> taille(a, ’F’)
+>>> taille(a, 'F')
 9
 >>> taille(a, 'B')
 5
