@@ -378,7 +378,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python
@@ -392,7 +392,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1' hl_lines='3 6 7'
@@ -412,7 +412,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         ![image](data/exo5.png){: .center}        
