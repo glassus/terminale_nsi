@@ -3,6 +3,7 @@
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
     - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
     - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
+    - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
 
 
 
