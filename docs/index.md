@@ -25,6 +25,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
