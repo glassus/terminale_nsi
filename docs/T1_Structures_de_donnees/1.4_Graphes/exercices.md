@@ -409,7 +409,7 @@
         pass
     ```
 
-    Pour vous aider à comprendre l'algorithme de Djisktra, n'oubliez pas [cette vidéo](https://youtu.be/rI-Rc7eF4iw){. target="_blank"} d'un youtuber célèbre.
+    Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas [cette vidéo](https://youtu.be/rI-Rc7eF4iw){. target="_blank"} d'un youtuber célèbre.
     {{
     correction(False,
     """
