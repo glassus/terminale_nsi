@@ -340,3 +340,162 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }}"
+    Exercice 2 du [sujet Concours GEIPI 2024](data/GEIPI_2024.pdf){. target="_blank"}.
+
+    Codes du sujet :
+    
+    ```python linenums='1'
+    sentiers = [('Briana', 'La Concorde', 'Grand Palais', 100),
+                ('Teddy', 'Grand Palais', 'Trocadéro', 550),
+                ('Elaine', 'La Concorde', 'Trocadéro', 200),
+                ('Lucie', 'Grand Palais', 'Champ de Mars', 512),
+                ('Sydney', 'Trocadéro', 'Champ de Mars', 100)]
+
+    def creer_dico_arcs_sortants(sentiers):
+        arcs_sortants = ...
+        for (n, p1, p2, d) in sentiers:
+            if ... not in arcs_sortants:
+                arcs_sortants[ ... ] = []
+            arcs_sortants[ ... ].append((p1, n, d))
+            if ... not in ... :
+                arcs_sortants[ ... ] = []
+            arcs_sortants[ ... ].append( ... )
+        return arcs_sortants
+
+    from math import inf # la constante inf représente (+ infini)
+    def plus_proche(a_visiter):
+        min = ...
+        proche = ''
+        for (p, (poids, pred, sent)) in a_visiter.items():
+            if ... <= ... :
+                ( ... , ... ) = ( ... , ... )
+        return ...
+
+    def meilleur_chemin(base, depart, arrivee):
+        arcs = creer_dico_arcs_sortants(base)
+        a_visiter = {p: (inf, '', '') for p in arcs.keys()}
+        a_visiter[depart] = ...
+        visites = ...
+        while a_visiter != ... :
+            # recherche du sommet suivant à visiter
+            p = ...
+            (dist,precedent,sentier) = a_visiter[p]
+            # m-à-j des voisins de p restant à visiter
+            for (suivant, n, d) in ... :
+                if ... in a_visiter:
+                    (min,prec,sent) = ...
+                    poids = ... + dist
+                    if ... < ... :
+                        a_visiter[suivant] = (..., ..., ...)
+            # p passe des sommets à visiter aux sommets visités
+            visites[p] = a_visiter[p]
+            del a_visiter[p]
+        affichage(visites, depart, arrivee)
+
+    def affichage(visites, depart, arrivee):
+        pass
+        (dist, depuis, nom) = visites[arrivee]
+        pass
+        if dist == inf:
+            pass
+            return
+        pass
+        if depart != arrivee:
+            pass  
+            pass
+        pass
+    ```
+
+    Pour vous aider à comprendre l'algorithme de Djisktra, n'oubliez pas [cette vidéo](https://youtu.be/rI-Rc7eF4iw){. target="_blank"} d'un youtuber célèbre.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.\" 
+        ```python linenums='1'
+        def creer_dico_arcs_sortants(sentiers):
+            arcs_sortants = {}
+            for (n, p1, p2, d) in sentiers:
+                if p2 not in arcs_sortants:
+                    arcs_sortants[p2] = []
+                arcs_sortants[p2].append((p1, n, d))
+                if p1 not in arcs_sortants :
+                    arcs_sortants[p1] = []
+                arcs_sortants[p1].append((p2, n, d))
+            return arcs_sortants
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
+        ```python linenums='1'
+        from math import inf # la constante inf représente (+ infini)
+        def plus_proche(a_visiter):
+            min = inf
+            proche = ''
+            for (p, (poids, pred, sent)) in a_visiter.items():
+                if poids <= min :
+                    ( min , proche ) = ( poids , p )
+            return p
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
+        ```python linenums='1'
+        def meilleur_chemin(base, depart, arrivee):
+            arcs = creer_dico_arcs_sortants(base)
+            a_visiter = {p: (inf, '', '') for p in arcs.keys()}
+            a_visiter[depart] = (0, '', '')
+            visites = {}
+            while a_visiter != {} :
+                # recherche du sommet suivant à visiter
+                p = plus_proche(a_visiter)
+                (dist, precedent, sentier) = a_visiter[p]
+                # m-à-j des voisins de p restant à visiter
+                for (suivant, n, d) in arcs[p] :
+                    if suivant in a_visiter:
+                        (min, prec, sent) = a_visiter[suivant]
+                        poids = dist + d
+                        if poids < min :
+                            a_visiter[suivant] = (poids, p, n)
+                # p passe des sommets à visiter aux sommets visités
+                visites[p] = a_visiter[p]
+                del a_visiter[p]
+            affichage(visites, depart, arrivee)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\" 
+        ```python linenums='1'
+        def affichage(visites, depart, arrivee):
+            pass
+            (dist, depuis, nom) = visites[arrivee]
+            pass
+            if dist == inf:
+                print('aucun chemin du point', depart, 'au point', arrivee)
+                return
+            pass
+            if depart != arrivee:
+                affichage(visites, depart, depuis)  
+                print('en passant par le chemin', nom)
+            print('étape au point', arrivee, '(distance', dist, ')')
+        ```
+    """
+    )
+    }}

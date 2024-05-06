@@ -9,6 +9,7 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
+    - [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}
 
 
     {#
