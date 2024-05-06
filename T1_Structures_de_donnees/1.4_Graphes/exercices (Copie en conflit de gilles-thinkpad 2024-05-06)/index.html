@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/exercices/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/exercices%20%28Copie%20en%20conflit%20de%20gilles-thinkpad%202024-05-06%29/">
       
       
-        <link rel="prev" href="../TP_Labyrinthe/">
+        <link rel="prev" href="../cours/">
       
       
-        <link rel="next" href="../../../T2_Programmation/sommaire/">
+        <link rel="next" href="../exercices/">
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Exercices - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>exercices (Copie en conflit de gilles thinkpad 2024 05 06) - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercices
+              exercices (Copie en conflit de gilles thinkpad 2024 05 06)
             
           </span>
         </div>
@@ -933,17 +933,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +945,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3749,7 +3741,7 @@
   
 
 
-  <h1>Exercices</h1>
+  <h1>exercices (Copie en conflit de gilles thinkpad 2024 05 06)</h1>
 
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
@@ -3757,10 +3749,6 @@
 <details class="success">
 <summary>Correction Q1.</summary>
 <p><img alt="image" class="center" src="../data/0A_Q1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Le chemin le plus court est A-E-D (10 km).</p>
 </details>
 <details class="tip">
 <summary>Code pour tester la Q8.</summary>
@@ -3907,130 +3895,6 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">accessibles</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>    
 </code></pre></div></p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  4</p>
-<p>Exercice 2 du <a class="" href="../data/GEIPI_2024.pdf" target="_blank">sujet Concours GEIPI 2024</a>.</p>
-<p>Codes du sujet :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">sentiers</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Briana&#39;</span><span class="p">,</span> <span class="s1">&#39;La Concorde&#39;</span><span class="p">,</span> <span class="s1">&#39;Grand Palais&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-            <span class="p">(</span><span class="s1">&#39;Teddy&#39;</span><span class="p">,</span> <span class="s1">&#39;Grand Palais&#39;</span><span class="p">,</span> <span class="s1">&#39;Trocadéro&#39;</span><span class="p">,</span> <span class="mi">550</span><span class="p">),</span>
-            <span class="p">(</span><span class="s1">&#39;Elaine&#39;</span><span class="p">,</span> <span class="s1">&#39;La Concorde&#39;</span><span class="p">,</span> <span class="s1">&#39;Trocadéro&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
-            <span class="p">(</span><span class="s1">&#39;Lucie&#39;</span><span class="p">,</span> <span class="s1">&#39;Grand Palais&#39;</span><span class="p">,</span> <span class="s1">&#39;Champ de Mars&#39;</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
-            <span class="p">(</span><span class="s1">&#39;Sydney&#39;</span><span class="p">,</span> <span class="s1">&#39;Trocadéro&#39;</span><span class="p">,</span> <span class="s1">&#39;Champ de Mars&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span>
-
-<span class="k">def</span> <span class="nf">creer_dico_arcs_sortants</span><span class="p">(</span><span class="n">sentiers</span><span class="p">):</span>
-    <span class="n">arcs_sortants</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sentiers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arcs_sortants</span><span class="p">:</span>
-            <span class="n">arcs_sortants</span><span class="p">[</span> <span class="o">...</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">arcs_sortants</span><span class="p">[</span> <span class="o">...</span> <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span> <span class="p">:</span>
-            <span class="n">arcs_sortants</span><span class="p">[</span> <span class="o">...</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">arcs_sortants</span><span class="p">[</span> <span class="o">...</span> <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-    <span class="k">return</span> <span class="n">arcs_sortants</span>
-
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span> <span class="c1"># la constante inf représente (+ infini)</span>
-<span class="k">def</span> <span class="nf">plus_proche</span><span class="p">(</span><span class="n">a_visiter</span><span class="p">):</span>
-    <span class="nb">min</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">proche</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">sent</span><span class="p">))</span> <span class="ow">in</span> <span class="n">a_visiter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-            <span class="p">(</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span> <span class="p">)</span> <span class="o">=</span> <span class="p">(</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span> <span class="p">)</span>
-    <span class="k">return</span> <span class="o">...</span>
-
-<span class="k">def</span> <span class="nf">meilleur_chemin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-    <span class="n">arcs</span> <span class="o">=</span> <span class="n">creer_dico_arcs_sortants</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-    <span class="n">a_visiter</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="n">inf</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">arcs</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
-    <span class="n">a_visiter</span><span class="p">[</span><span class="n">depart</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">visites</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="n">a_visiter</span> <span class="o">!=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="c1"># recherche du sommet suivant à visiter</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="p">(</span><span class="n">dist</span><span class="p">,</span><span class="n">precedent</span><span class="p">,</span><span class="n">sentier</span><span class="p">)</span> <span class="o">=</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-        <span class="c1"># m-à-j des voisins de p restant à visiter</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">suivant</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="o">...</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">a_visiter</span><span class="p">:</span>
-                <span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="n">prec</span><span class="p">,</span><span class="n">sent</span><span class="p">)</span> <span class="o">=</span> <span class="o">...</span>
-                <span class="n">poids</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="n">dist</span>
-                <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="o">...</span> <span class="p">:</span>
-                    <span class="n">a_visiter</span><span class="p">[</span><span class="n">suivant</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-        <span class="c1"># p passe des sommets à visiter aux sommets visités</span>
-        <span class="n">visites</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-        <span class="k">del</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-    <span class="n">affichage</span><span class="p">(</span><span class="n">visites</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">affichage</span><span class="p">(</span><span class="n">visites</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-    <span class="k">pass</span>
-    <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">depuis</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span> <span class="o">=</span> <span class="n">visites</span><span class="p">[</span><span class="n">arrivee</span><span class="p">]</span>
-    <span class="k">pass</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="n">inf</span><span class="p">:</span>
-        <span class="k">pass</span>
-        <span class="k">return</span>
-    <span class="k">pass</span>
-    <span class="k">if</span> <span class="n">depart</span> <span class="o">!=</span> <span class="n">arrivee</span><span class="p">:</span>
-        <span class="k">pass</span>  
-        <span class="k">pass</span>
-    <span class="k">pass</span>
-</code></pre></div></td></tr></table></div>
-<p>Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas <a class="" href="https://youtu.be/rI-Rc7eF4iw" target="_blank">cette vidéo</a> d'un youtuber célèbre.</p>
 </div>
 
 
