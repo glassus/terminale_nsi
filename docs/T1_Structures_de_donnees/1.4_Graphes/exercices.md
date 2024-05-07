@@ -173,7 +173,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9.\" 
         Le problème vient de la variable globale ```tab_itineraires```.
