@@ -3929,6 +3929,70 @@
 </span>    <span class="k">return</span> <span class="n">tab_court</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<details class="success">
+<summary>Correction Q9.</summary>
+<p>Le problème vient de la variable globale <code>tab_itineraires</code>.</p>
+<ul>
+<li>Après l'exécution de la commande <code>itineraires_court(G2, 'A', 'E')</code>,  <code>tab_itineraires</code> contient tous les chemins de A à E.</li>
+<li>Si le programme n'est pas re-exécuté, l'enchainement avec la commande <code>itineraires_court(G2, 'A', 'F')</code> va venir <strong>rajouter</strong> à la liste <code>tab_itineraires</code> tous les chemins de A à F.</li>
+<li>Lors de la recherche du trajet minimum, les trajets testés seront donc à la fois les trajets de A à F mais aussi de A à E : on peut donc potentiellement avoir une réponse erronnée.</li>
+</ul>
+<p>Pour éviter cela, on pourrait faire ceci (non demandé) :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">tab_itineraires</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="nf">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">chaine</span>
+        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">u</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
+                <span class="n">nchemin</span> <span class="o">=</span> <span class="n">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">tab_itineraires</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[])</span>
+    <span class="k">return</span> <span class="n">tab_itineraires</span>
+
+
+<span class="k">def</span> <span class="nf">itineraires_court</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+    <span class="n">tab_itineraires</span> <span class="o">=</span> <span class="n">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+    <span class="n">tab_court</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">mini</span><span class="p">:</span>
+            <span class="n">mini</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="n">mini</span><span class="p">:</span>
+            <span class="n">tab_court</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tab_court</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
