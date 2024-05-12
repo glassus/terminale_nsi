@@ -2,10 +2,8 @@ Version récursive :
 
 ```python linenums='1'
 def fibonacci(n):
-    if n == 1 :
-        return 1   
-    elif n == 1 :
-        return 1
+    if n <= 2 :
+        return n   
     else :
         return fibonacci(n-1) + fibonacci(n-2)
 ```
