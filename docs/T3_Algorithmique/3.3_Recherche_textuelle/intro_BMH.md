@@ -124,7 +124,7 @@ def dico_lettres(mot):
         i = 0
         while i <= ... - ...:
             k = ...
-            while k > 0 and texte[...] == motif[...]: 
+            while k >= 0 and texte[...] == motif[...]: 
                 k = ...
             if k == ...: 
                 indices.append(...)

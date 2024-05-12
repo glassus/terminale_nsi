@@ -194,9 +194,9 @@ with open('Les_Miserables.txt') as f:
             i = 0
             while i <= len(texte) - len(motif):
                 k = len(motif)-1
-                while k > 0 and texte[i+k] == motif[k]:
+                while k >= 0 and texte[i+k] == motif[k]:
                     k -= 1
-                if k == 0:
+                if k == -1:
                     indices.append(i)
                 i += 1
 
@@ -259,39 +259,6 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
 [codes à trous](../intro_BMH/){. target="_blank"}
 
-{#
-!!! note "Algorithme de Boyer-Moore-Horspool :heart:"
-    ```python linenums='1'
-    def dico_lettres(mot):
-        d = {}
-        for i in range(len(mot)-1):
-            d[mot[i]] = i
-        return d
-
-    def BMH(texte, motif):
-        dico = dico_lettres(motif)
-        indices = []
-        i = len(motif) -1
-        while i < len(texte):
-            k = 0
-            while k < len(motif) and motif[len(motif)-1-k] == texte[i-k]:
-                k += 1
-            if k == ...:
-                indices.append(i-len(motif)+1)
-                i += ...
-            else:
-                if texte[i-k] in ...:
-                    i += len(motif)-dico[texte[i-k]]-1
-                else:
-                    i += ...
-
-        return indices
-
-    ```
-
-
-#}
-
 
 
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
@@ -309,9 +276,9 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
         i = 0
         while i <= len(texte) - len(motif):
             k = len(motif)-1
-            while k > 0 and texte[i+k] == motif[k]: #(1)
+            while k >= 0 and texte[i+k] == motif[k]: #(1)
                 k -= 1
-            if k == 0: #(2)
+            if k == -1: #(2)
                 indices.append(i)
                 i += 1 #(3)
             else:
@@ -325,7 +292,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     ```
 
     1. On remonte le motif à l'envers, tant qu'il y a correspondance et qu'on n'est pas arrivés au début du motif
-    2. Si on est arrivés au début du motif, c'est qu'on a trouvé le mot.
+    2. Si on est arrivés à la valeur ```k=-1```, c'est qu'on a parcouru tout le mot : on l'a donc trouvé.
     3. On a trouvé le motif, mais attention, il ne faut pas trop se décaler sinon on pourrait rater d'autres occurences du motif (pensez à la recherche du motif «mama» dans le mot «mamamamama»). On se décale donc de 1.
     4. On s'est arrêté avant la fin, sur une lettre présente dans le mot : il va falloir faire un décalage intelligent.
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres.
@@ -370,16 +337,16 @@ Exemple d'utilisation :
             i = 0
             while i <= len(texte) - len(motif):
                 k = len(motif)-1
-                while k > 0 and texte[i+k] == motif[k]: #(1)
+                while k >= 0 and texte[i+k] == motif[k]: 
                     k -= 1
-                if k == 0: #(2)
+                if k == -1: 
                     indices.append(i)
-                    i += 1 #(3)
+                    i += 1
                 else:
                     if texte[i+k] in dico: #(4)
-                        i += len(motif) - dico[texte[i+k]] - 1 #(5)
+                        i += len(motif) - dico[texte[i+k]] - 1 
                     else:
-                        i += len(motif) #(6)
+                        i += len(motif) 
 
             return indices
 
