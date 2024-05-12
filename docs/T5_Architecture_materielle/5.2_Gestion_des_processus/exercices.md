@@ -528,3 +528,128 @@
     """
     )
     }}
+
+
+!!! abstract "{{ exercice() }}"        
+
+
+    Exercice 2 du [sujet 0 version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        Dans un logiciel libre, le code-source est disponible, peut être amélioré et redistribué par les utilisateurs (voir [ici](https://www.gnu.org/philosophy/free-sw.fr.html){. target='_blank'}).
+
+        Dans un logiciel propriétaire le code-source n'est pas disponible.
+
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        Le rôle d'un système d'exploitation est de permettre à l'utiliseur des stocker ses données et d'exploiter les ressources du processeur. *question très difficile car beaucoup trop vaste*
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        Le chemin absolu est ```home/elsa/documents/boulot/rapport.odt``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        Le chemin relatif est ```../max/elsa/images/photo_vac/photo_1.jpg``` 
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        Le répertoire ```documents``` n'as pas changé, il contient toujours les mêmes fichiers.
+
+        Le répertoire ```boulot``` contient maintenant, en plus du fichier ```rapport.odt```, le fichier ```fiche.ods```. 
+    """
+    )
+    }}
+
+
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ![image](data/0B_2024_1.png){: .center}
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        Par exemple, une écriture sur le disque dur alors que celui-ci est déjà en cours d'écriture peut entraîner un passage à l'état bloqué.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        La structure de pile est une structure LIFO.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        ![image](data/0B_2024_2.png){: .center}
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        ![image](data/0B_2024_3.png){: .center}
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        Imaginons par exemple cette situation :
+
+        - P1 réclame et obtient la ressource R1.
+        - P2 réclame et obtient la ressource R2.
+        - P1 réclame la ressource R2.
+        - P2 réclame la ressource R1.
+
+        La situation amènera donc à un cycle d'interdépendance et donc un interblocage :
+
+        ![image](data/0B_2024_4.png){: .center}
+        
+    """
+    )
+    }}
