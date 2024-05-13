@@ -27,6 +27,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Exercice 7 de la page d'exos sur les processus](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
     - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
