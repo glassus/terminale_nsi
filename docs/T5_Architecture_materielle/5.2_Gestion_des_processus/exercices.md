@@ -609,7 +609,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         La structure de pile est une structure LIFO.
