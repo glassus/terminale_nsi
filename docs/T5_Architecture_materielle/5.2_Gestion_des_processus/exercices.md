@@ -577,7 +577,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Le répertoire ```documents``` n'as pas changé, il contient toujours les mêmes fichiers.
