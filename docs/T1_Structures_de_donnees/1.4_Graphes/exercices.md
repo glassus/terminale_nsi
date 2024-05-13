@@ -313,7 +313,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -411,7 +411,7 @@
 
     Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas [cette vidéo](https://youtu.be/rI-Rc7eF4iw){. target="_blank"} d'un youtuber célèbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ```python linenums='1'
@@ -431,7 +431,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -449,7 +449,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -479,7 +479,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
