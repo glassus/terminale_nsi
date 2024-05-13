@@ -558,7 +558,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         Le chemin absolu est ```home/elsa/documents/boulot/rapport.odt``` 
@@ -567,7 +567,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Le chemin relatif est ```../max/elsa/images/photo_vac/photo_1.jpg``` 
