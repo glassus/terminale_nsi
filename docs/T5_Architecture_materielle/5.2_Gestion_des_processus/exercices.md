@@ -618,7 +618,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         ![image](data/0B_2024_2.png){: .center}
@@ -627,7 +627,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ![image](data/0B_2024_3.png){: .center}
@@ -636,7 +636,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Imaginons par exemple cette situation :
