@@ -4,7 +4,7 @@
     - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
     - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
     - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
-
+    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"}
 
 
 !!! abstract "Actualités"
