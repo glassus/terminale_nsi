@@ -175,7 +175,7 @@ Le protocole que nous allons décrire ci-dessous permet :
 - d'empêcher qu'un message intercepté soit déchiffré (ce qui était déjà le cas dans le 2.1)
 - mais aussi de s'assurer que chaque personne est bien celle qu'elle prétend être : on résout le **problème d'authentification**.
 
-![image](data/total_auth.png){: .center}
+![image](data/total_auth.png){: .center width=80%}
 
 **En résumé :**
 
