@@ -27,6 +27,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Sujet Amérique du Nord J1 2024](T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
     - [Exercice 7 de la page d'exos sur les processus](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
     - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
