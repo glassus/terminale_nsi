@@ -27,6 +27,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Exercice 8 de la page d'exos sur les processus (exo1 ANJ12024)](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
     - [Sujet Amérique du Nord J1 2024](T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
     - [Exercice 7 de la page d'exos sur les processus](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
     - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 

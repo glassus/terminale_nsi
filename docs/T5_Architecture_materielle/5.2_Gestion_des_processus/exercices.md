@@ -664,27 +664,68 @@
     correction(True,
     """
     ??? success \"Correction Q1\" 
-
+        Les 3 états sont : Prêt, Élu, Bloqué.
 
     """
     )
     }}
+
+ 
 
     {{
     correction(True,
     """
     ??? success \"Correction Q2\" 
-
+        Le processus ne peut plus être bloqué, les deux seuls états restants sont donc Prêt et Élu.
     """
     )
     }}
 
 
+    
+    ```python linenums='1'
+        class File:
+            def __init__ (self):
+                """ Crée une file vide """
+                self.contenu = []
+            
+            def enfile(self, element):
+                """ Enfile element dans la file """
+                self.contenu.append(element)
+            
+            def defile (self):
+                """ Renvoie le premier élément de la file et l'enlève de la file """
+                return self.contenu.pop(0)
+
+            def est_vide(self):
+                """ Renvoie True si la file est vide, False sinon """
+                return self.contenu == []
+    ```
+
     {{
     correction(True,
     """
     ??? success \"Correction Q3\" 
+        ```python linenums='1'
+            class File:
+                def __init__ (self):
+                    \"\"\" Crée une file vide \"\"\"
+                    self.contenu = []
+                
+                def enfile(self, element):
+                    \"\"\" Enfile element dans la file \"\"\"
+                    self.contenu.append(element)
 
+                def defile (self):
+                    \"\"\" Renvoie le premier élément de la file et l'enlève de la file \"\"\"
+                    if self.est_vide():
+                        return None
+                    return self.contenu.pop(0)
+
+                def est_vide(self):
+                    \"\"\" Renvoie True si la file est vide, False sinon \"\"\"
+                    return self.contenu == []
+        ```
     """
     )
     }}
@@ -693,7 +734,8 @@
     correction(True,
     """
     ??? success \"Correction Q4\" 
-
+        ![image](data/AN2024_1.png){: .center}
+        
     """
     )
     }}
@@ -703,19 +745,72 @@
     correction(True,
     """
     ??? success \"Correction Q5\" 
+        ```python linenums='1'
+        class Ordonnanceur:
+	
+            def __init__ (self):
+                self.temps = 0
+                self.file = File()
+                
+            def ajoute_nouveau_processus (self, proc):
+                \"\"\"Ajoute un nouveau processus dans la file de l'ordonnanceur. \"\"\"
+                self.file.enfile(proc)
+                
+            def tourniquet (self) :
+                \"\"\"Effectue une étape d'ordonnancement et renvoie le nom du processus élu.\"\"\"
+                self.temps += 1
+                if not self.file.est_vide():
+                    proc = self.file.defile()
+                    proc.execute_un_cycle()
 
+                    if not proc.est_fini ():
+                        self.file.enfile(proc)
+                    return proc.nom
+                else:
+                    return None
+        ```
     """
     )
     }}
 
+    Pour tester votre code de la question Q6, vous pouvez utiliser le code suivant (qui propose une implémentation de la classe ```Processus```, qui n'est pas donnée dans l'énoncé)
 
+    ```python linenums='1'
+    class Processus:
+        def __init__(self, nom, duree):
+            self.nom = nom
+            self.duree = duree
+            self.exectime = 0
+        
+        def execute_un_cycle(self):
+            self.exectime += 1
+        
+        def est_fini(self):
+            return self.exectime == self.duree
+
+
+    p1 = Processus("p1", 4)
+    p2 = Processus("p2", 3)
+    p3 = Processus("p3", 5)
+    p4 = Processus("p4", 3)
+    depart_proc = {0: p1, 1: p3, 2: p2, 3: p4}
+    ```
 
 
     {{
     correction(True,
     """
     ??? success \"Correction Q6\" 
-
+        ```python linenums='1'
+        ordo = Ordonnanceur()
+        ordo.ajoute_nouveau_processus(depart_proc[0])
+        print(ordo.tourniquet()) 
+        while not ordo.file.est_vide():
+            t = ordo.temps
+            if t in depart_proc:
+                ordo.ajoute_nouveau_processus(depart_proc[t])
+            print(ordo.tourniquet()) 
+        ```
     """
     )
     }}
@@ -724,7 +819,8 @@
     correction(True,
     """
     ??? success \"Correction Q7\" 
-
+        ![image](data/AN2024_2.png){: .center}
+        La situation présente un cycle et donc un risque d'interblocage.
     """
     )
     }}
