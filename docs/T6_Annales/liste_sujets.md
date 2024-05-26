@@ -1,6 +1,8 @@
 # Annales des Épreuves Écrites
 
 ## 2024
+- [Amérique du Nord J1](data/2024/24-NSIJ1AN1.pdf)
+- [Amérique du Nord J2](data/2024/24-NSIJ2AN1.pdf)
 - [Sujet 0 - version A](data/2024/bac_nsi_2024_sujet0a.pdf)
 - [Sujet 0 - version B](data/2024/bac_nsi_2024_sujet0b.pdf)
 
