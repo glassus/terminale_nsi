@@ -839,7 +839,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ![image](data/AN2024_2.png){: .center}
