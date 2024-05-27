@@ -4345,6 +4345,25 @@ navigateur Web (chromium-browser) ?</p>
 <span class="n">p4</span> <span class="o">=</span> <span class="n">Processus</span><span class="p">(</span><span class="s2">&quot;p4&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">depart_proc</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="n">p1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">p3</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">p2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="n">p4</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction Q6</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ordo</span> <span class="o">=</span> <span class="n">Ordonnanceur</span><span class="p">()</span>
+<span class="n">ordo</span><span class="o">.</span><span class="n">ajoute_nouveau_processus</span><span class="p">(</span><span class="n">depart_proc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ordo</span><span class="o">.</span><span class="n">tourniquet</span><span class="p">())</span> 
+<span class="k">while</span> <span class="ow">not</span> <span class="n">ordo</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">ordo</span><span class="o">.</span><span class="n">temps</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">depart_proc</span><span class="p">:</span>
+        <span class="n">ordo</span><span class="o">.</span><span class="n">ajoute_nouveau_processus</span><span class="p">(</span><span class="n">depart_proc</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ordo</span><span class="o">.</span><span class="n">tourniquet</span><span class="p">())</span> 
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
