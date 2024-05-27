@@ -4181,6 +4181,14 @@ navigateur Web (chromium-browser) ?</p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  8</p>
 <p>Exercice 1 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf" target="_blank">sujet Amérique du Nord J1 2024</a></p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Les 3 états sont : Prêt, Élu, Bloqué.</p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p>Le processus ne peut plus être bloqué, les deux seuls états restants sont donc Prêt et Élu.</p>
+</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4213,6 +4221,45 @@ navigateur Web (chromium-browser) ?</p>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie True si la file est vide, False sinon &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction Q3</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+        <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot; Crée une file vide &quot;&quot;&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot; Enfile element dans la file &quot;&quot;&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">defile</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie le premier élément de la file et l&#39;enlève de la file &quot;&quot;&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+                <span class="k">return</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie True si la file est vide, False sinon &quot;&quot;&quot;</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>Pour tester votre code de la question Q6, vous pouvez utiliser le code suivant (qui propose une implémentation de la classe <code>Processus</code>, qui n'est pas donnée dans l'énoncé)</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
