@@ -776,6 +776,29 @@
     Pour tester votre code de la question Q6, vous pouvez utiliser le code suivant (qui propose une implémentation de la classe ```Processus```, qui n'est pas donnée dans l'énoncé)
 
     ```python linenums='1'
+
+    class Ordonnanceur:	
+        def __init__(self):
+            self.temps = 0
+            self.file = File()
+            
+        def ajoute_nouveau_processus(self, proc):
+            """Ajoute un nouveau processus dans la file de l'ordonnanceur. """
+            ...
+            
+        def tourniquet (self) :
+            """Effectue une étape d'ordonnancement et renvoie le nom du processus élu."""
+            self.temps += 1
+            if not self.file.est_vide():
+                proc = ...
+                ...
+                if not proc.est_fini ():
+                    ...
+                return proc.nom
+            else:
+                return None
+
+
     class Processus:
         def __init__(self, nom, duree):
             self.nom = nom
