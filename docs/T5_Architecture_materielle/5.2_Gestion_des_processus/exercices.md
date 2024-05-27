@@ -763,7 +763,7 @@
                     proc = self.file.defile()
                     proc.execute_un_cycle()
 
-                    if not proc.est_fini ():
+                    if not proc.est_fini():
                         self.file.enfile(proc)
                     return proc.nom
                 else:
@@ -821,7 +821,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
