@@ -499,3 +499,158 @@
     """
     )
     }}
+
+
+
+!!! example "{{ exercice() }}"
+    Exercice 2 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.\" 
+        ![image](data/ANJ12024_1.png){: .center}
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
+        ```python
+        #                G, J, Y, E, N, M, A, L
+        matrice_adj = [ [0, 1, 1, 0, 1, 1, 0, 0], #G
+                        [1, 0, 1, 1, 0, 0, 0, 1], #J
+                        [1, 1, 0, 1, 1, 1, 1, 0], #Y
+                        [0, 1, 1, 0, 1, 0, 0, 0], #E
+                        [1, 0, 1, 1, 0, 0, 0, 0], #N
+                        [1, 0, 1, 0, 0, 0, 1, 0], #M
+                        [0, 0, 1, 0, 0, 1, 0, 0], #A
+                        [0, 1, 0, 0, 0, 0, 0, 0]] #L
+        ```
+        
+    
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
+        - ```position(sommets, 'G')``` renvoie 0
+        - ```position(sommets, 'Z')``` renvoie ```None``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\" 
+        ```python linenums='1' hl_lines='2 4 7 8'
+        def nb_amis(L, m, s):
+            pos_s = position(L, s)
+            if pos_s == None:
+                return None
+            amis = 0
+            for i in range(len(m)):
+                amis += m[pos_s][i]
+            return amis
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5.\" 
+        ```nb_amis(sommets, matrice_adj, 'G')``` renvoie 4.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6.\" 
+        - ```c``` représente la clé.
+        - ```v``` représente la valeur associée à cette clé. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7.\" 
+        ```python
+        graphe = {
+                'G' : ['J', 'Y', 'N', 'M'],
+                'J': ['G', 'Y', 'E', 'L'],
+                'Y': ['G', 'J', 'E', 'N', 'M', 'A'],
+                'E': ['J', 'Y', 'N'],
+                'N': ['G', 'Y', 'E'],
+                'M': ['G', 'Y', 'A'],
+                'A': ['Y', 'M'],
+                'L': ['J']
+                }
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8.\" 
+        ```python
+        def nb_amis(d, s):
+            return len(d[s])
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9.\" 
+        Le cercle d'amis de Lou est ```J G Y E N```. 
+    """
+    )
+    }}
+
+    :warning: Erreur d'énoncé sur la question 10.
+
+    Le code à compléter est celui-ci :
+    ```python linenums='1'
+    visites = []
+    def parcours_en_profondeur(d, s):
+        ...
+        for v in d[s]:
+            ...
+                parcours_en_profondeur(d, v)
+        ...
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10.\" 
+        ```python linenums='1' hl_lines='3 5 7'
+        visites = []
+        def parcours_en_profondeur(d, s):
+            visites.append(s)
+            for v in d[s]:
+                if v not in visites:
+                    parcours_en_profondeur(d, v)
+            return visites
+        ```
+    """
+    )
+    }}
