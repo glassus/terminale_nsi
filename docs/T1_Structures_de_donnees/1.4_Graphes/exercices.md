@@ -547,7 +547,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1' hl_lines='2 4 7 8'
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```nb_amis(sommets, matrice_adj, 'G')``` renvoie 4.
