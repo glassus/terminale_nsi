@@ -4429,6 +4429,10 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
         <span class="p">}</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q9.</summary>
+<p>Le cercle d'amis de Lou est <code>J G Y E N</code>. </p>
+</details>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Erreur d'énoncé sur la question 10.</p>
 <p>Le code à compléter est celui-ci :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -4445,6 +4449,23 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
             <span class="n">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
     <span class="o">...</span>
 </code></pre></div></td></tr></table></div></p>
+<details class="success">
+<summary>Correction Q10.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">visites</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="hll">    <span class="n">visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span>    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>
+<span class="hll">        <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visites</span><span class="p">:</span>
+</span>            <span class="n">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="hll">    <span class="k">return</span> <span class="n">visites</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
