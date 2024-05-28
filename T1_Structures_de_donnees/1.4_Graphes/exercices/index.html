@@ -4385,6 +4385,29 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
 <li><code>position(sommets, 'Z')</code> renvoie <code>None</code> </li>
 </ul>
 </details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_amis</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="hll">    <span class="n">pos_s</span> <span class="o">=</span> <span class="n">position</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</span>    <span class="k">if</span> <span class="n">pos_s</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="kc">None</span>
+</span>    <span class="n">amis</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)):</span>
+<span class="hll">        <span class="n">amis</span> <span class="o">+=</span> <span class="n">m</span><span class="p">[</span><span class="n">pos_s</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">amis</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q5.</summary>
+<p><code>nb_amis(sommets, matrice_adj, 'G')</code> renvoie 4.</p>
+</details>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Erreur d'énoncé sur la question 10.</p>
 <p>Le code à compléter est celui-ci :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
