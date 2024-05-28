@@ -537,7 +537,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         - ```position(sommets, 'G')``` renvoie 0
