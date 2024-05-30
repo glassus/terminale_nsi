@@ -364,6 +364,189 @@
             Mousse[indPetite] = None
         ```
 
+
+!!! example "{{ exercice() }} <i id="ex3J2AN2024"></i>"
+    Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}   
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \" 
+        Une adresse possible est ```192.168.1.17```. 
+        Comme le masque de sous-réseau est ```255.255.255.0```, les adresses IP de ce sous-réseau sont de la forme ```192.168.1.X```, où ```X``` est un nombre entre 1 et 254 (inclus), et qui ne peut pas être égal à 1 ou 2 (adresses déjà prises par Alice et Bob).   
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \" 
+        La liste correspondant à ces transactions est ```[Transaction(Alice, Charlie, 10), Transaction(Bob, Alice, 5)]``` 
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \" 
+        Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \" 
+        L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \" 
+        ```python linenums='1'
+        ma_blockchain = Blockchain()        
+        b1 = Bloc([Transaction('Alice', 'Charlie', 50), Transaction('Charlie', 'Bob', 50)], ma_blockchain.tete)
+        ma_blockchain.tete = b1
+        b2 = Bloc([Transaction('Bob', 'Charlie', 20), Transaction('Bob', 'Charlie', 20), Transaction('Charlie', 'Alice', 30)], ma_blockchain.tete)
+        ma_blockchain.tete = b2
+        ```
+
+
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \" 
+        Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \" 
+        ```python linenums='1'
+        def ajouter_blocs(self, liste_transactions):
+            new_bloc = Bloc(liste_transactions, self.tete)
+            self.tete = new_bloc
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8 \" 
+        L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
+    """
+    )
+    }}
+
+
+    :warning: À la question 9, le code à utiliser est celui ci :
+    ```python linenums='1'
+    def calculer_solde(self, utilisateur):
+        if self.bloc_precedent is None:
+            solde = 0
+        else:
+            solde = ...
+            for transaction in self.liste_transactions:
+                if ... == utilisateur:
+                    solde = solde - ...
+                elif ...:
+                    ...
+            return solde    
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9 \" 
+        ```python linenums='1' hl_lines='6 7-10'
+        def calculer_solde(self, utilisateur):
+            if self.bloc_precedent is None:
+                solde = 0
+            else:
+                solde = calculer_solde(self.bloc_precedent)
+                for transaction in self.liste_transactions:
+                    if transaction.expediteur == utilisateur:
+                        solde = solde - transaction.montant
+                    elif transaction.destinataire == utilisateur:
+                        solde = solde + transaction.montant
+                return solde
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10 \" 
+        L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11 \" 
+        Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12 \" 
+        D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13 \" 
+        Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q14 \"
+        ```python linenums='1'
+        def minage_bloc(self):
+            self.nonce = 0
+            self.hash = self.calculer_hash()
+            while self.hash[:2] != '00':
+                self.nonce = self.nonce + 1
+                self.hash = self.calculer_hash()
+        ``` 
+        
+    """
+    )
+    }}
+
+
 {#
 !!! abstract "DS02"
     === "Sujet"

@@ -26,10 +26,12 @@
 #}
 
 
+
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Exercice 5 de la page d'exos sur les graphes (exo2 ANJ12024)](T1_Structures_de_donnees/1.4_Graphes/exercices.md){. target="_blank"}
-    - [Exercice 8 de la page d'exos sur les processus (exo1 ANJ12024)](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
-    - [Sujet Amérique du Nord J1 2024](T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
+    - POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
+    - Récursivité : [Exercice 1 Amérique du Nord J2 2024](T2_Programmation/2.2_Recursivite/exercices/#ex1J2AN2024)
+    - Graphes : [Exercice 2 Amérique du Nord J1 2024](T1_Structures_de_donnees/1.4_Graphes/exercices/#ex2AN2024)
+    - Processus : [Exercice 1 Amérique du Nord J1 2024](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/#ex1AN2024)
     - [Exercice 7 de la page d'exos sur les processus](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
     - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)

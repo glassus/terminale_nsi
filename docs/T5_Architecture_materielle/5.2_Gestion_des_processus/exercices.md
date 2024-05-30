@@ -655,7 +655,7 @@
     }}
 
 
-!!! abstract "{{ exercice() }}"        
+!!! abstract "{{ exercice() }} <i id='ex1AN2024'></i>"        
 
 
     Exercice 1 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}

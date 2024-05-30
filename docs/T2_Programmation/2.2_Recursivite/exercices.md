@@ -456,17 +456,117 @@
 
         
 
+!!! example "{{ exercice() }} <i id="ex1J2AN2024"></i>"
+
+    Exercice 1 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        ```python linenums='1'
+        def echange(tab, i, j):
+            temp = tab[i]
+            tab[i] = tab[j]
+            tab[j] = temp       
+        ``` 
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```python linenums='1' hl_lines='6-8'
+        def triStooge(tab, i, j):
+            if tab[i] > tab[j]:
+                echange(tab, i, j)
+            if j - i > 1:
+                k = (j - i + 1) // 3
+                triStooge(tab, i, j-k)
+                triStooge(tab, i+k, j)
+                triStooge(tab, i, j-k)
+        ``` 
+    """
+    )
+    }}
 
 
 
 
-??? info "Bibliographie"
-    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-    - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        ```k``` vaut ```(5 - 0 + 1) // 3```, donc ```k``` vaut 2. 
+    """
+    )
+    }}
 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        - étape 1 : 3 appels
+        - étape 2 : 9 appels
+        - étape 3 : 17 appels
+
+        Il y a donc 29 appels au total.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        - case 1 : ```triStooge(A,1,3)``` 
+        - case 2 : ```triStooge(A,2,3)```
+        - case 3 : ```triStooge(A,0,3)```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+
+        Correction probable, mais cette question est incompréhensible...
+
+        | Appel | Valeur de A avant l'appel | Valeur de A après l'appel |
+        |:---:|:---:|:---:|
+        | ```triStooge(A,0,3) ```  | [5, 6, 4, 2] | [2, 6, 4, 5] |
+        |  ```triStooge(A,0,2) ```| [2, 6, 4, 5] | [2, 4, 6, 5] |
+        |  ```triStooge(A,1,3) ```| [2, 4, 6, 5]| [2, 4, 5, 6]  |
+        |  ```triStooge(A,0,2) ```| [2, 4, 5, 6] | [2, 4, 5, 6]   |
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        Nous connaissons (par exemple) le tri par sélection, dont l'ordre est en $n^2$. 
+
+        Comme $2 < \\frac{8}{3}$, on en déduit que le tri par sélection a un coût meilleur que le tri de Stooge. 
+    """
+    )
+    }}
 
 {#
-<!-- - [lien](data/DS02.pdf) vers le DS
-- [lien](data/DS02_correction.pdf) vers sa correction -->
-
+??? quote "Bibliographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
 #}
