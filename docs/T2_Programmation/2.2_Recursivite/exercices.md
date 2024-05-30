@@ -527,7 +527,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         - case 1 : ```triStooge(A,1,3)``` 
@@ -538,7 +538,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
 
@@ -555,7 +555,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         Nous connaissons (par exemple) le tri par sélection, dont l'ordre est en $n^2$. 
