@@ -13,4 +13,5 @@ def notes_triees(eff):
                 triees.append(i)
     return triees
 ```
+
 1. On peut ne pas effectuer ce test, car si ```eff[i]``` vaut 0, on ne rentrera pas dans la boucle ```for _ in range(0)``` et donc on ne touchera pas à la liste ```triees```.  
