@@ -461,7 +461,7 @@
     Exercice 1 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         ```python linenums='1'
@@ -475,7 +475,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python linenums='1' hl_lines='6-8'
@@ -496,7 +496,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.
@@ -505,7 +505,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         ```k``` vaut ```(5 - 0 + 1) // 3```, donc ```k``` vaut 2. 
@@ -514,7 +514,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         - étape 1 : 3 appels
