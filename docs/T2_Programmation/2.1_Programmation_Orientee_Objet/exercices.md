@@ -486,7 +486,7 @@
                         solde = solde - transaction.montant
                     elif transaction.destinataire == utilisateur:
                         solde = solde + transaction.montant
-                return solde
+            return solde
         ```
     """
     )
