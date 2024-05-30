@@ -4298,6 +4298,53 @@ Partez!</code></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  12 <i id="ex1J2AN2024"></i></p>
 <p>Exercice 1 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf" target="_blank">sujet Amérique du Nord J2 2024</a>    </p>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>       
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+        <span class="n">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><code>k</code> vaut <code>(5 - 0 + 1) // 3</code>, donc <code>k</code> vaut 2. </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<ul>
+<li>étape 1 : 3 appels</li>
+<li>étape 2 : 9 appels</li>
+<li>étape 3 : 17 appels</li>
+</ul>
+<p>Il y a donc 29 appels au total.</p>
+</details>
 </div>
 
 
