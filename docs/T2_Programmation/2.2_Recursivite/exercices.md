@@ -519,9 +519,9 @@
     ??? success \"Correction Q5\" 
         - étape 1 : 3 appels
         - étape 2 : 9 appels
-        - étape 3 : 17 appels
+        - étape 3 : 27 appels
 
-        Il y a donc 29 appels au total.
+        Il y a donc 39 appels au total.
     """
     )
     }}
