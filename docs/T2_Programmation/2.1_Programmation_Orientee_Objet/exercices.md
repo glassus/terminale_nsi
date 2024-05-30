@@ -369,7 +369,7 @@
     Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}   
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         Une adresse possible est ```192.168.1.17```. 
@@ -379,7 +379,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction(Alice, Charlie, 10), Transaction(Bob, Alice, 5)]``` 
@@ -389,7 +389,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3 \" 
         Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
@@ -398,7 +398,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
