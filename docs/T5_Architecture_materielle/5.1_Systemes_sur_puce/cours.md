@@ -150,7 +150,9 @@ L'orientation actuelle de l'électronique est donc à la fois :
     correction(True,
     """
     ??? success \"Correction\" 
-        
+        - Ces systèmes consomment moins d'énergie.
+        - Ils sont plus petits donc plus facile à embarquer dans le véhicule.
+        - Ils sont moins chers à fabriquer grâce à l'intégration directe de tous les composants. 
     """
     )
     }}
