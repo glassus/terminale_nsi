@@ -4222,6 +4222,164 @@ Smells Like Teen Spirit, 1991
 </details>
 </details>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  7 <i id="ex3J1AN2024"></i></p>
+<p>Exercice 3 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf" target="_blank">sujet Amérique du Nord J1 2024</a>    </p>
+<p><strong>Partie A</strong></p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Le séparateur utilisé est le point-virgule <code>;</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p>Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans <code>Allemagne, Italie, Japon</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">charger</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">):</span>
+<span class="hll">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">donnees</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">donnees</span>
+</span></code></pre></div></td></tr></table></div>
+(la fonction renvoie une liste de dictionnaires et non un dictionnaire comme dit dans l'énoncé)</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>La méthode utilisée est la méthode <code>sleep</code>, à la ligne 37. </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<p><code>donnees[i]</code> est un dictionnaire.</p>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">flashcard</span> <span class="o">=</span> <span class="n">charger</span><span class="p">(</span><span class="s1">&#39;flashcards.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">choix_discipline</span><span class="p">(</span><span class="n">flashcard</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">choix_chapitre</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">entrainement</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Si vous souhaitez jouer avec ces flashcards, téléchargez le fichier <a class="" href="../data/flashcards.csv" target="_blank">flashcards.csv</a> et utilisez le code ci-dessous :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">charger</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
+        <span class="n">donnees</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">donnees</span>
+
+<span class="k">def</span> <span class="nf">choix_discipline</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
+    <span class="n">disciplines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="n">disc</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">disc</span> <span class="ow">in</span> <span class="n">disciplines</span><span class="p">:</span>
+            <span class="n">disciplines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">disc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">disciplines</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">disciplines</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">num_disc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;numéro de la discipline ? &#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">disciplines</span><span class="p">[</span><span class="n">num_disc</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">choix_chapitre</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">disc</span><span class="p">):</span>
+    <span class="n">chapitres</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">flashcard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">disc</span><span class="p">:</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">flashcard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;chapitre&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chapitres</span><span class="p">:</span>
+                <span class="n">chapitres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chapitres</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">chapitres</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">num_ch</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;numéro du chapitre ? &#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">chapitres</span><span class="p">[</span><span class="n">num_ch</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">entrainement</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">disc</span><span class="p">,</span> <span class="n">ch</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">disc</span> <span class="ow">and</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;chapitre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ch</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;QUESTION : &#39;</span><span class="p">,</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;question&#39;</span><span class="p">])</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;réponse&#39;</span><span class="p">])</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">flashcard</span> <span class="o">=</span> <span class="n">charger</span><span class="p">(</span><span class="s1">&#39;flashcards.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">choix_discipline</span><span class="p">(</span><span class="n">flashcard</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">choix_chapitre</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">entrainement</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>Partie B</strong></p>
+<details class="success">
+<summary>Correction Q7</summary>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+</details>
+<details class="success">
+<summary>Correction Q12</summary>
+</details>
+</div>
 
 
 
@@ -4242,7 +4400,7 @@ Smells Like Teen Spirit, 1991
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 juin 2024</span>
   </span>
 
     
