@@ -43,14 +43,24 @@
     **Q0.** Écrire le schéma relationnel de la table Ordonnances. On soulignera les clés primaires et marquera d'un # les clés étrangères.
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
+    
         Ordonnances ((<ins>code</ins>, Int), (id_patient#, Int), (matricule_medecin#, Int), (date_ord, Text), (medicaments, Text))
     
+    """
+    )
+    }}    
 
     **Q1.** (HP) Donner les commandes SQL permettant de créer ces tables.
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         CREATE TABLE Patients(
         id INTEGER PRIMARY KEY,
@@ -78,55 +88,77 @@
         );
 
         ```
-    
+    """
+    )
+    }}       
 
 
     **Q2.** Mme Anne Wizeunid, née en 2000 et demeurant 3 rue des Pignons Verts 12345 Avonelit doit être enregistrée comme patiente numéro 1. Donner la commande SQLite correspondante.
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         INSERT INTO Patients
-        VALUES (1, "Wizeunit", "Anne", "F", 2000);
+        VALUES (1, 'Wizeunit', 'Anne', 'F', 2000);
         ```
-    
+    """
+    )
+    }}       
 
     **Q3.** Le patient numéro 100 a changé de prénom et s'appelle maintenant "Alice". Donner la commande SQLite modifiant en conséquence ses données.
 
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         UPDATE Patients
         SET prenom = 'Alice' 
         WHERE id = 100 ;
         ```
-    
+    """
+    )
+    }}       
 
     **Q4.** Par souci d'économie, la direction décide de se passer des médecins spécialisés en épidémiologie. Donner la commande permettant de supprimer leurs fiches.
     
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         DELETE FROM Medecins 
-        WHERE specialite = "épidémiologie";
+        WHERE specialite = 'épidémiologie';
         ```
-    
+    """
+    )
+    }}       
 
     **Q5.**  Donner la liste des patient(e)s ayant été examiné(e)s par un(e) psychiatre en avril 2020.
 
      
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT p.nom, p.prenom
         FROM Patients AS p
         JOIN Ordonnances AS o ON p.id = o.id_patient
         JOIN Medecins AS m ON o.matricule_medecin = m.matricule
-        WHERE m.specialite = "psychiatrie"
-              AND o.date_ord LIKE "%-04-2020"
+        WHERE m.specialite = 'psychiatrie'
+              AND o.date_ord LIKE '%-04-2020'
 
         ```
-    
+    """
+    )
+    }}       
 
 !!! abstract "{{exercice()}}"
     _basé sur le travail de G.Viateau (Bayonne)_
@@ -138,60 +170,88 @@
     **Q1**. Quelle requête SQL donne le prix d'achat du produit dont le ```nom_court``` est «Liq_Vaiss_1L» ?
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' 
         ```
-    
+    """
+    )
+    }}        
 
     **Q2**. Quelle requête donne l'adresse, le code postal et la ville du fournisseur dont le nom est «Avenir_confiseur» ?
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
         ``` 
-
+    """
+    )
+    }}    
     
 
 
     **Q3**. Quelle requête donne les produits étant en rupture de stock ?
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT Produits.nom FROM Produits
         JOIN Stocks ON Produits.id = Stocks.produit
         WHERE Stocks.quantite = 0;
         ```
-    
+    """
+    )
+    }}        
 
     **Q4**. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT nom 
         FROM Produits 
-        WHERE nom LIKE "%ampoule%";
+        WHERE nom LIKE '%ampoule%';
         ```
-    
+    """
+    )
+    }}        
 
     **Q5**. Quelle requête permet d'avoir le prix moyen de ces ampoules ?
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT AVG(prix_vente) 
         FROM Produits 
-        WHERE nom LIKE "%ampoule%";
+        WHERE nom LIKE '%ampoule%';
         ```
-    
+    """
+    )
+    }}        
 
     **Q6**. Quelle requête permet d'identifier le produit le plus cher du magasin ?
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT nom_court 
         FROM Produits 
@@ -204,73 +264,85 @@
         FROM Produits 
         WHERE prix_vente = (SELECT MAX(prix_vente) FROM Produits);
         ``` 
-    
+    """
+    )
+    }}        
 
     **Q7**. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? _(on pourra utiliser la fonction SQL ```NOW()``` qui renvoie la date actuelle )_
 
     
-    ??? note "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \"
         ```SQL
         SELECT p.nom FROM Produits AS p
         JOIN Stocks AS s ON s.produits = p.id
         WHERE s.date_peremption < NOW();
         ```
-    
+    """
+    )
+    }}        
 
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
-    ??? note "Correction"
+	{{
+	correction(True,
+	"""
+	??? success \"Correction \"
  
-        ??? note "Correction Q1.a."
+        ??? note \"Correction Q1.a.\"
             La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
 
-        ??? note "Correction Q1.b."
+        ??? note \"Correction Q1.b.\"
             - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
 
             - Contrainte d'intégrité de relation :  le couple (nomSport, nomStation) ne peut pas se retrouver deux fois dans la table (car il forme une clé primaire)
 
             - Contrainte d'intégrité de référence :  l'attribut nomStation ne peut pas être un nom n'apparaissant pas dans la relation Station.
 
-        ??? note "Correction Q2.a."
-            La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ("planche à voile" , "La tramontane catalane") existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
+        ??? note \"Correction Q2.a.\"
+            La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ('planche à voile' , 'La tramontane catalane') existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
             Il faut donc utiliser :
             ```SQL
             UPDATE Sports SET prix = 1350 
-            WHERE nomSport = "planche à voile" AND nomStation = "La tramontane catalane"        
+            WHERE nomSport = 'planche à voile' AND nomStation = 'La tramontane catalane'        
             ```
 
-        ??? note "Correction Q2.b."
+        ??? note \"Correction Q2.b.\"
             ```SQL
-            INSERT INTO Station VALUES ("Soleil Rouge", "Bastia", "Corse")  
-            INSERT INTO Sport VALUES ("plongée", "Soleil Rouge", 900)        
+            INSERT INTO Station VALUES ('Soleil Rouge', 'Bastia', 'Corse')  
+            INSERT INTO Sport VALUES ('plongée', 'Soleil Rouge', 900)        
             ```
 
-        ??? note "Correction Q3.a."
+        ??? note \"Correction Q3.a.\"
             ```SQL
             SELECT mail FROM Client        
             ```
 
-        ??? note "Correction Q3.b."
+        ??? note \"Correction Q3.b.\"
             ```SQL
             SELECT nomStation FROM Sport
-            WHERE nomSport = "plongee"      
+            WHERE nomSport = 'plongee'      
             ```
 
-        ??? note "Correction Q4.a."
+        ??? note \"Correction Q4.a.\"
             ```SQL
             SELECT Station.ville, Station.nomStation FROM Station
             JOIN Sport ON Sport.nomStation = Station.nomStation
-            WHERE Sport.nomSport = "plongee"        
+            WHERE Sport.nomSport = 'plongee'        
             ```
 
-        ??? note "Correction Q4.b."
+        ??? note \"Correction Q4.b.\"
             ```SQL
             SELECT COUNT(*) FROM Sejour
             JOIN Station ON Station.nomStation = Sejour.nomStation
-            WHERE Sejour.annee = 2020 AND Station.region = "Corse"
+            WHERE Sejour.annee = 2020 AND Station.region = 'Corse'
             ```
- 
+	"""
+	)
+	}} 
 
 
 
@@ -573,6 +645,143 @@
     correction(True,
     """
     ??? success \"Correction Q7\" 
+        ```sql
+        INSERT INTO boite
+        VALUES (5, 'tous les quinze jours', 15)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\" 
+        ```sql
+        UPDATE flashcard
+        SET reponse = '7 décembre 1941'
+        WHERE id = 5
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\" 
+        ```sql
+        SELECT lib
+        FROM discipline
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\" 
+        ```sql
+        SELECT chapitre.lib
+        FROM chapitre
+        JOIN discipline ON discipline.id = chapitre.id_disc
+        WHERE discipline.lib = 'histoire'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\" 
+        ```sql
+        SELECT flashcard.id
+        FROM flashcard
+        JOIN chapitre ON chapitre.id = flashcard.id_ch
+        JOIN discipline ON discipline.id = chapitre.id_disc
+        WHERE discipline.lib = 'histoire'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q12\" 
+        ```sql
+        DELETE FROM flashcard
+        WHERE id_boite = 3
+        ```
+    """
+    )
+    }}
+
+!!! example "{{ exercice() }} <i id="ex2J2AN2024"></i>"
+
+    Exercice 2 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\" 
+    
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\" 
+
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\" 
+
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\" 
+  
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\" 
+
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\" 
+       
+    """
+    )
+    }}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\" 
 
     """
     )
@@ -582,42 +791,6 @@
     correction(True,
     """
     ??? success \"Correction Q8\" 
-
-    """
-    )
-    }}
-
-    {{
-    correction(True,
-    """
-    ??? success \"Correction Q9\" 
-
-    """
-    )
-    }}
-
-    {{
-    correction(True,
-    """
-    ??? success \"Correction Q10\" 
-
-    """
-    )
-    }}
-
-    {{
-    correction(True,
-    """
-    ??? success \"Correction Q11\" 
-
-    """
-    )
-    }}
-
-    {{
-    correction(True,
-    """
-    ??? success \"Correction Q12\" 
 
     """
     )

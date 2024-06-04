@@ -28,7 +28,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Dictionnaires et BDD : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
+    - SQL : [Exercice 2 Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024)
+    - Dictionnaires et SQL : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
     - POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
     - Récursivité : [Exercice 1 Amérique du Nord J2 2024](T2_Programmation/2.2_Recursivite/exercices/#ex1J2AN2024)
     - Graphes : [Exercice 2 Amérique du Nord J1 2024](T1_Structures_de_donnees/1.4_Graphes/exercices/#ex2AN2024)

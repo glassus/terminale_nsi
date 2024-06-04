@@ -2,7 +2,7 @@
 def parcours_largeur(arbre):
     parcours = []
     file = [arbre]
-    while file:
+    while file != []:
         a = file.pop(0)
         parcours.append(a[1])
         if a[0] != None:
