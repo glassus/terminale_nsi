@@ -11462,7 +11462,7 @@ binaire et qui renvoie la liste des étiquettes des nœuds de l’arbre parcouru
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcours_largeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">file</span> <span class="o">=</span> <span class="p">[</span><span class="n">arbre</span><span class="p">]</span>
-    <span class="k">while</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">file</span> <span class="o">!=</span> <span class="p">[]:</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
