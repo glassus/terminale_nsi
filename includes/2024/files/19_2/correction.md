@@ -14,10 +14,7 @@ def codes_parfait(mot):
         code_concatene = code_concatene + str(dico[c])
         code_additionne = code_additionne + dico[c]
     code_concatene = int(code_concatene)
-    if code_concatene % code_additionne == 0:
-        mot_est_parfait = True
-    else:
-        mot_est_parfait = False
+    mot_est_parfait = code_concatene % code_additionne == 0
     return code_additionne, code_concatene, mot_est_parfait
 
 
