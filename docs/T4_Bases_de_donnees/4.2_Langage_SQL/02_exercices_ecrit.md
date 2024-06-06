@@ -724,12 +724,16 @@
 
     Exercice 2 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
 
-    {#
+    
     {{
     correction(True,
     """
     ??? success \"Correction Q1\" 
-    
+        Le résultat de la requête est :
+        ```
+        Dufour, Marc
+        Martin, Sophie
+        ```    
     """
     )
     }}
@@ -738,7 +742,11 @@
     correction(True,
     """
     ??? success \"Correction Q2\" 
-
+        ```sql
+        SELECT nom_medic
+        FROM medicament
+        WHERE prix < 3
+        ```
     """
     )
     }}
@@ -817,4 +825,4 @@
     )
     }}
 
-    #}
+    
