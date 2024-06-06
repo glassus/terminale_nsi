@@ -755,7 +755,10 @@
     correction(True,
     """
     ??? success \"Correction Q3\" 
-
+        ```sql
+        INSERT INTO Clients
+        VALUES (3, 'DURAND', 'Nathalie', '269054958815780')
+        ```
     """
     )
     }}
