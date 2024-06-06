@@ -521,7 +521,7 @@
     **Partie A**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -530,7 +530,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
@@ -539,7 +539,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='2-4'
@@ -554,7 +554,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         La méthode utilisée est la méthode ```sleep```, à la ligne 37. 
@@ -563,7 +563,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```donnees[i]``` est un dictionnaire.
@@ -572,7 +572,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
