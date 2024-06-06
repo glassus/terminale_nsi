@@ -767,7 +767,10 @@
     correction(True,
     """
     ??? success \"Correction Q4\" 
-  
+        Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
+
+        - ```id_client``` : qui fait référence à l'attribut ```id_client``` de la table ```client``` 
+        - ```id_medic``` : qui fait référence à l'attribut ```id_medic``` de la table ```medic``` 
     """
     )
     }}
