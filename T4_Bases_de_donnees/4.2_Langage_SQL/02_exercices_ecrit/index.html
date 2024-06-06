@@ -4361,6 +4361,48 @@ Smells Like Teen Spirit, 1991
 </code></pre></div></td></tr></table></div>
 </details>
 <p><strong>Partie B</strong></p>
+<details class="success">
+<summary>Correction Q7</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">boite</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tous les quinze jours&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">reponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7 décembre 1941&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">lib</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">discipline</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">lib</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">chapitre</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">discipline</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id_disc</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;histoire&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">flashcard</span><span class="p">.</span><span class="n">id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">chapitre</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flashcard</span><span class="p">.</span><span class="n">id_ch</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">discipline</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id_disc</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;histoire&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q12</summary>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id_boite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+</details>
 </div>
 
 
