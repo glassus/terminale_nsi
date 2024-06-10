@@ -3944,6 +3944,25 @@ ls
         <span class="n">f</span><span class="o">.</span><span class="n">parcours</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<details class="success">
+<summary>Correction Q9</summary>
+<p>Sur une arborescence de fichiers, il arrive toujours un moment où un dossier ne contient plus de sous-dossiers. À ce moment là, l'appel récursif se fera donc uniquement sur des fichiers, dont l'attribut <code>fils</code> est une liste vide, qui ne déclenchera donc aucun appel. </p>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">parcours</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<p>Un appel à la méthode <code>parcours</code> va afficher même le contenu des sous-dossiers, alors que <code>ls</code> ne le fait pas.</p>
+</details>
 
 
 
