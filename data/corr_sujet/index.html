@@ -3915,6 +3915,35 @@ ls
 <p><code>home-documents-multimedia-cours-administratif-personnel-images-videos-films</code> </p>
 </details>
 <p><strong>Partie B</strong></p>
+<details class="success">
+<summary>Correction Q6</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">films</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="s1">&#39;films&#39;</span><span class="p">,</span> <span class="p">[])</span>
+<span class="n">videos</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="s1">&#39;videos&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">films</span><span class="p">])</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="p">[])</span>
+<span class="n">var_multimedia</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="s1">&#39;multimedia&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">images</span><span class="p">,</span> <span class="n">videos</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">parcours</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
