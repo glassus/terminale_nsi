@@ -87,7 +87,7 @@ correction(False,
     films = Dossier('films', [])
     videos = Dossier('videos', [films])
     images = Dossier('images', [])
-    multimedia = Dossier('multimedia', [images, videos])
+    var_multimedia = Dossier('multimedia', [images, videos])
     ```
 """
 )
