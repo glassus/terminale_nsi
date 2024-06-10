@@ -49,7 +49,7 @@ correction(False,
 }}
 
 
-**Partie A**
+**Partie B**
 
 
 {{
