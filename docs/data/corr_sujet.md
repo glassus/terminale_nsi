@@ -2,6 +2,16 @@
 
 **Partie A**
 
+Liste des commandes UNIX à connaître :
+
+- ```ls``` : donne la liste des fichiers et répertoires de l'emplacement courant
+- ```cd``` : pour Change Directory, permet de changer de répertoire.
+    - ```cd truc``` : va dans le répertoire ```truc``` (il faut que ```truc``` soit un repertoire de l'emplacement courant)
+    - ```cd ..``` : remonte dans le répertoire parent de l'emplacement courant
+- ```mv truc/ ailleurs/``` : déplace l'intégralité du dossier ```truc``` dans le dossier ```ailleurs```
+- ```cp truc/ ailleurs/``` : copie l'intégralité du dossier ```truc``` dans le dossier ```ailleurs```
+
+
 {{
 correction(False,
 """
