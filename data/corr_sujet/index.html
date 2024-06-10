@@ -3963,6 +3963,61 @@ ls
 <summary>Correction Q11</summary>
 <p>Un appel à la méthode <code>parcours</code> va afficher même le contenu des sous-dossiers, alors que <code>ls</code> ne le fait pas.</p>
 </details>
+<details class="success">
+<summary>Correction Q12</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">mkdir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+    <span class="n">new_doss</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_doss</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q13</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom_dossier</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rep</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">:</span>
+            <span class="n">rep</span> <span class="o">=</span> <span class="n">rep</span> <span class="ow">or</span> <span class="n">f</span><span class="o">.</span><span class="n">contient</span><span class="p">(</span><span class="n">nom_dossier</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rep</span>    
+</code></pre></div></td></tr></table></div>
+<p>ou bien</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom_dossier</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">any</span><span class="p">([</span><span class="n">f</span><span class="o">.</span><span class="n">contient</span><span class="p">(</span><span class="n">nom_dossier</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">])</span>    
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q14</summary>
+<p>Il pourrait refaire un parcours infixe et observer si le dossier cherché est un fils du dossier actuel, et dans ce cas afficher le nom du dossier actuel.  </p>
+</details>
+<details class="success">
+<summary>Correction Q15</summary>
+<p>Il suffit de rajouter un attribut <code>self.parent</code>. </p>
+</details>
 
 
 
