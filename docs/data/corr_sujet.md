@@ -13,17 +13,22 @@ Liste des commandes UNIX à connaître :
 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q1\" 
-    ```ls``` 
+    ```ls documents```
+    ou
+    ```
+    cd documents
+    ls
+    ``` 
 """
 )
 }}
 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q2\" 
     La totalité du dossier ```multimedia``` va être déplacée et sera maintenant un sous-dossier de ```documents```.
@@ -32,7 +37,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q3\" 
     La classe  ```Arbre``` ne permet d'avoir que deux attributs ```gauche``` et ```droit``` alors que ```documents``` présente 3 sous-dossiers.
@@ -41,7 +46,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q4\" 
     C'est un parcours préfixe. 
@@ -50,7 +55,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q5\" 
     ```home-documents-multimedia-cours-administratif-personnel-images-videos-films``` 
