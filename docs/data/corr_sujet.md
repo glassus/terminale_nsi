@@ -108,7 +108,7 @@ correction(True,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q9\" 
     Sur une arborescence de fichiers, il arrive toujours un moment où un dossier ne contient plus de sous-dossiers. À ce moment là, l'appel récursif se fera donc uniquement sur des fichiers, dont l'attribut ```fils``` est une liste vide, qui ne déclenchera donc aucun appel. 
@@ -117,7 +117,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q10\" 
     ```python linenums='1'
@@ -131,7 +131,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q11\" 
     Un appel à la méthode ```parcours``` va afficher même le contenu des sous-dossiers, alors que ```ls``` ne le fait pas.
