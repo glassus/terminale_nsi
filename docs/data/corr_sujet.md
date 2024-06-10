@@ -68,7 +68,7 @@ correction(True,
 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q6\" 
     ```python linenums='1'
@@ -80,7 +80,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q7\" 
     ```python linenums='1'
@@ -94,7 +94,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q8\" 
     ```python linenums='1'
