@@ -140,7 +140,7 @@ correction(True,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q12\"
     ```python linenums='1'
@@ -154,7 +154,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q13\" 
     ```python linenums='1'
@@ -186,7 +186,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q14\" 
     Il pourrait refaire un parcours infixe et observer si le dossier cherché est un fils du dossier actuel, et dans ce cas afficher le nom du dossier actuel.  
@@ -195,7 +195,7 @@ correction(False,
 }}
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction Q15\" 
     Il suffit de rajouter un attribut ```self.parent```. 
