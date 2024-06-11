@@ -775,30 +775,29 @@
     )
     }}
 
-    {{
-    correction(True,
-    """
-    ??? success \"Correction Q5\" 
 
-    """
-    )
-    }}
+    
 
+
+!!! example "{{ exercice() }} <i id="ex3J2G12024"></i>"
+
+    Exercice 3 Partie B du [sujet Centres Étrangers J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}    
+
+    
     {{
     correction(True,
     """
     ??? success \"Correction Q6\" 
-       
+        Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
     """
     )
     }}
-
 
     {{
     correction(True,
     """
     ??? success \"Correction Q7\" 
-
+        Cette requête pose problème car la valeur 1 de l'attribut ```idagres``` n'existe pas dans la table ```agres```.
     """
     )
     }}
@@ -807,7 +806,50 @@
     correction(True,
     """
     ??? success \"Correction Q8\" 
+        ```sql
+        UPDATE intervention
+        SET heure = '10:44:06'
+        WHERE jour = '2024-02-15' AND heure = '01:44:06'
+        ```
+    """
+    )
+    }}
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\" 
+        Le résultat de cette requête est 
+        ```
+        Charlot
+        Red
+        Kevin    
+        ```  
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\" 
+        ```sql
+        SELECT nom
+        FROM personnel
+        WHERE qualif >= 16 AND actif = 1
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\" 
+        - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
+        - Requête B : compte le nombre d'agrès mobilisés le 27 mars mais dont l'id est dans la table ```moyen```. La réponse est 1.
+
+        Pour info, ```INNER JOIN``` signifie la même chose que ```JOIN``` (mais le programme officiel de NSI ne parle que de ```JOIN```)
     """
     )
     }}
@@ -816,8 +858,15 @@
     {{
     correction(True,
     """
-    ??? success \"Correction Q7\" 
+    ??? success \"Correction Q12\" 
+        ```sql
+        SELECT DISTINCT nom
+        FROM personnel
+        JOIN agres ON idchefagres = matricule
+        WHERE jour = '2024-02-15'
+        ```
 
+        Pour info, ```DISTINCT``` n'a pas besoin de parenthèses (comme ```COUNT```), ce n'est pas une fonction.
     """
     )
     }}
@@ -825,10 +874,19 @@
     {{
     correction(True,
     """
-    ??? success \"Correction Q8\" 
+    ??? success \"Correction Q13\"
+        ```sql
+        SELECT DISTINCT nom
+        FROM personnel
+        JOIN agres ON agres.idchefagres = personnel.matricule
+        JOIN moyen ON moyen.idagres = agres.id
+        JOIN intervention ON intervention.id = moyen.idinter        
+        WHERE intervention.jour = '2024-06-11'
+        ``` 
 
     """
     )
     }}
+
 
     

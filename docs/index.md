@@ -26,8 +26,8 @@
 #}
 
 
-
 !!! note ":star: Thème en cours d'étude :star: "
+    - SQL : [Exercice 3 Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024)
     - Correction sujet bac [ici](data/corr_sujet.md){. target="_blank"}  
     - SQL : [Exercice 2 Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024)
     - Dictionnaires et SQL : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
