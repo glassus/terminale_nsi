@@ -1,3 +1,13 @@
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+
+
 !!! tip "Grand Oral"
     - [Digipad de centralisation des sujets et des recherches](https://digipad.app/p/713202/3dd01c719c377){. target="_blank"}
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
