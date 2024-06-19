@@ -1,6 +1,8 @@
 # Annales des Épreuves Écrites
 
 ## 2024
+- [Asie J1](data/2024/24-NSIJ1JA1.pdf)
+- [Asie J2](data/2024/24-NSIJ2JA1.pdf)
 - [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf)
 - [Centres Étrangers J2](data/2024/24-NSIJ2G1.pdf)
 - [Amérique du Nord J1](data/2024/24-NSIJ1AN1.pdf)
