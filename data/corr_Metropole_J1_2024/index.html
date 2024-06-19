@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/data/corr_Metropole_J1_2024/">
       
       
-        <link rel="prev" href="../cours/">
+        <link rel="prev" href="../../T7_Divers/9_AOC/cours/">
       
       
-        <link rel="next" href="../TP_rendu_monnaie/">
+        <link rel="next" href="../corr_sujet/">
       
       
-      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <link rel="icon" href="../../xtra/favTNSI.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>TP Pyramides - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>corr Metropole J1 2024 - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -52,8 +52,8 @@
     
       
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -67,11 +67,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#optimisation-dune-somme-dans-une-pyramide" class="md-skip">
+        <a href="#exercice-1" class="md-skip">
           Aller au contenu
         </a>
       
@@ -121,7 +121,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+    <a href="../.." title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP Pyramides
+              corr Metropole J1 2024
             
           </span>
         </div>
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -267,7 +267,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T1_Structures_de_donnees/sommaire/" class="md-tabs__link">
           
   
   T1 Structures de données
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
+        <a href="../../T2_Programmation/sommaire/" class="md-tabs__link">
           
   
   T2 Programmation
@@ -299,13 +299,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../T3_Algorithmique/sommaire/" class="md-tabs__link">
           
   
   T3 Algorithmique
@@ -323,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
           
   
   T4 Base de données
@@ -341,7 +339,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+        <a href="../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
           
   
   T5 Arch. matérielle
@@ -359,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_2_CoursPremiere/cours/" class="md-tabs__link">
+        <a href="../../T6_2_CoursPremiere/cours/" class="md-tabs__link">
           
   
   Cours 1ère
@@ -377,7 +375,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_5_algos_coeur/cours/" class="md-tabs__link">
+        <a href="../../T6_5_algos_coeur/cours/" class="md-tabs__link">
           
   
   Algos ❤
@@ -395,7 +393,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-tabs__link">
+        <a href="../../T6_6_Epreuve_pratique/BNS_2024/" class="md-tabs__link">
           
   
   EP 💻
@@ -413,7 +411,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
+        <a href="../../T6_Annales/epreuve_bac/" class="md-tabs__link">
           
   
   Bac 🖊️
@@ -437,7 +435,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T7_Divers/10_orientation/cours/" class="md-tabs__link">
+        <a href="../../T7_Divers/10_orientation/cours/" class="md-tabs__link">
           
   
   Divers
@@ -454,11 +452,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../data/corr_Metropole_J1_2024/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Data
@@ -493,7 +493,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+    <a href="../.." title="Terminale NSI - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Terminale NSI - Lycée François Mauriac - Bordeaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -523,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Dictionnaires/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.2_Dictionnaires/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.2_Dictionnaires/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Arbres/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.3_Arbres/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.3_Arbres/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Graphes/cours/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Graphes/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Structures_de_donnees/1.4_Graphes/exercices/" class="md-nav__link">
+      <a href="../../T1_Structures_de_donnees/1.4_Graphes/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1032,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
+      <a href="../../T2_Programmation/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1093,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.1_Programmation_Orientee_Objet/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1114,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/TP/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.1_Programmation_Orientee_Objet/TP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1135,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Recursivite/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.2_Recursivite/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1225,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.2_Recursivite/exercices/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.2_Recursivite/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Programmation/2.4_Pratiques_de_programmation/cours/" class="md-nav__link">
+      <a href="../../T2_Programmation/2.4_Pratiques_de_programmation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1396,28 +1396,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1428,7 +1425,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             T3 Algorithmique
@@ -1442,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.1_Diviser_pour_regner/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,8 +1547,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1561,11 +1556,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -1579,7 +1576,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             3.2 Programmation dynamique
@@ -1593,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1611,30 +1608,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    TP Pyramides
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1643,113 +1620,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-quelques-outils" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Quelques outils
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-recherche-par-force-brute" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Recherche par force brute
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Recherche par force brute">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-liste-de-tous-les-parcours" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 Liste de tous les parcours
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-valeur-dun-trajet" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 Valeur d'un trajet
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-somme-maximale-par-force-brute" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 Somme maximale par force brute
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-recherche-par-methode-gloutonne" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Recherche par méthode gloutonne
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-recherche-par-methode-recursive" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Recherche par méthode récursive
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-optimisation-de-la-methode-recursive-par-programmation-dynamique" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Optimisation de la méthode récursive par programmation dynamique
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-methode-bottom-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Méthode bottom-up
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1762,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TP_rendu_monnaie/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1783,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TP_carre_blanc/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1804,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exercices/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.2_Programmation_dynamique/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.3_Recherche_textuelle/cours/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.3_Recherche_textuelle/intro_BMH/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/intro_BMH/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1915,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.3_Recherche_textuelle/intro_naive/" class="md-nav__link">
+      <a href="../../T3_Algorithmique/3.3_Recherche_textuelle/intro_naive/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.1_Modele_relationnel/cours/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.1_Modele_relationnel/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2142,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/cours/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_Langage_SQL/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2163,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2184,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2205,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/" class="md-nav__link">
+      <a href="../../T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2281,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2342,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2411,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2480,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2501,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2570,7 +2440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2591,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2660,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2681,7 +2551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/exercices/" class="md-nav__link">
+      <a href="../../T5_Architecture_materielle/5.4_Cryptographie/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2757,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_2_CoursPremiere/cours/" class="md-nav__link">
+      <a href="../../T6_2_CoursPremiere/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2825,7 +2695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_5_algos_coeur/cours/" class="md-nav__link">
+      <a href="../../T6_5_algos_coeur/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2893,7 +2763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2914,7 +2784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2935,7 +2805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2956,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+      <a href="../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3024,7 +2894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
+      <a href="../../T6_Annales/epreuve_bac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3045,7 +2915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
+      <a href="../../T6_Annales/liste_sujets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3153,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/10_orientation/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/10_orientation/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3222,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/11_parcoursup/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/11_parcoursup/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3291,7 +3161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3360,7 +3230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/2_VM/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/2_VM/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3429,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/3_Thonny/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/3_Thonny/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3498,7 +3368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/4_Processing/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/4_Processing/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3567,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/5_Capytale/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/5_Capytale/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3636,7 +3506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/6_Pygame/05_Initiation_Pygame/" class="md-nav__link">
+      <a href="../../T7_Divers/6_Pygame/05_Initiation_Pygame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3705,7 +3575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/7_Liens/liens/" class="md-nav__link">
+      <a href="../../T7_Divers/7_Liens/liens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3774,7 +3644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/8_Zenika/" class="md-nav__link">
+      <a href="../../T7_Divers/8_Zenika/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3843,7 +3713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/9_AOC/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/9_AOC/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3876,25 +3746,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
-        
-          
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3905,7 +3778,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Data
@@ -3916,10 +3789,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../data/corr_Metropole_J1_2024/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    corr Metropole J1 2024
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3928,6 +3819,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3940,7 +3858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data/corr_sujet/" class="md-nav__link">
+      <a href="../corr_sujet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3980,380 +3898,42 @@
   
 
 
-<h1 id="optimisation-dune-somme-dans-une-pyramide">Optimisation d'une somme dans une pyramide<a class="headerlink" href="#optimisation-dune-somme-dans-une-pyramide" title="Permanent link">⚓︎</a></h1>
-<div class="admonition question">
-<p class="admonition-title">Problème</p>
-<p>Considérons la pyramide ci-dessous :</p>
-<p><img alt="image" class="center" src="../data/pyrvide.png" width="20%" /></p>
-<p>En partant du sommet et en descendant jusqu'en bas en prenant soit à gauche soit à droite, quelle est la somme maximale que l'on peut obtenir ?</p>
-<p><img alt="image" class="center" src="../data/pyrexsommes.png" width="75%" /></p>
-</div>
-<h2 id="1-quelques-outils">1. Quelques outils<a class="headerlink" href="#1-quelques-outils" title="Permanent link">⚓︎</a></h2>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> La pyramide ci-dessus sera implémentée par une liste de listes :</p>
-<div class="highlight"><pre><span></span><code><span class="n">pyr_exemple</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
-</code></pre></div>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Pour générer une pyramide de hauteur <code>n</code> (composée d'entiers aléatoires entre 0 et 9) :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+  <h1>corr Metropole J1 2024</h1>
 
-<span class="k">def</span> <span class="nf">genere_pyr</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">pyr</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span>
-        <span class="n">pyr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">pyr</span>
-</code></pre></div></td></tr></table></div>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Pour afficher une pyramide en console :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="n">pyr</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">))</span>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h3>
+<p><strong>Q1.</strong> <code>s2</code> n'a aucun prédécesseur donc son attribut <code>predecesseurs</code> est une liste vide.</p>
+<p><strong>Q2.</strong> 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s4</span><span class="o">.</span><span class="n">predecesseurs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="n">s5</span><span class="o">.</span><span class="n">predecesseurs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">s3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">s4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div></p>
-<div class="admonition example">
-<p class="admonition-title">Exercice  1</p>
-<p>Créer puis afficher une pyramide de hauteur 10.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pyr</span> <span class="o">=</span> <span class="n">genere_pyr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-         <span class="mi">9</span>
-        <span class="mi">9</span> <span class="mi">2</span>
-       <span class="mi">8</span> <span class="mi">1</span> <span class="mi">7</span>
-      <span class="mi">4</span> <span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span>
-     <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">8</span>
-    <span class="mi">4</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">5</span> <span class="mi">8</span> <span class="mi">4</span>
-   <span class="mi">7</span> <span class="mi">8</span> <span class="mi">1</span> <span class="mi">6</span> <span class="mi">0</span> <span class="mi">6</span> <span class="mi">0</span>
-  <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">8</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">8</span>
- <span class="mi">6</span> <span class="mi">0</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">9</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">8</span>
-<span class="mi">3</span> <span class="mi">1</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">9</span> <span class="mi">6</span> <span class="mi">5</span> <span class="mi">9</span>                    
-</code></pre></div>
-</details>
-</div>
-<h2 id="2-recherche-par-force-brute">2. Recherche par force brute<a class="headerlink" href="#2-recherche-par-force-brute" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-liste-de-tous-les-parcours">2.1 Liste de tous les parcours<a class="headerlink" href="#21-liste-de-tous-les-parcours" title="Permanent link">⚓︎</a></h3>
-<p>La fonction <code>liste_parcours</code>  ci-dessous renvoie la liste de tous les trajets possibles lors de la traversée de la pyramide <code>pyr</code>. Ces parcours contiennent les <strong>indices</strong> des valeurs traversées lors du parcours.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">liste_parcours</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]]</span>
-    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">trajet</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">j</span> <span class="o">=</span> <span class="n">trajet</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">trajet_left</span> <span class="o">=</span> <span class="n">trajet</span><span class="p">[::]</span>
-        <span class="n">trajet_right</span> <span class="o">=</span> <span class="n">trajet</span><span class="p">[::]</span>
-        <span class="n">niv</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">trajet</span><span class="p">)</span>
-        <span class="n">trajet_left</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-        <span class="n">trajet_right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">trajet_left</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trajet_left</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trajet_left</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">trajet_right</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trajet_right</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trajet_right</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">parcours</span>
-</code></pre></div></td></tr></table></div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  2</p>
-<ol>
-<li>Observez la liste des trajets pour la pyramide <code>pyr_exemple</code> pour en comprendre la notation.</li>
-<li>Pour une pyramide de hauteur <span class="arithmatex">\(n\)</span>, combien y a-t-il de trajets différents ? </li>
-<li>Pour une pyramide de hauteur 41, que pensez-vous du nombre de trajets différents ?</li>
-</ol>
-<details class="success">
-<summary>Correction</summary>
-<p>Le nombre de trajets pour une hauteur <span class="arithmatex">\(n\)</span> est <span class="arithmatex">\(2^{n-1}\)</span>.</p>
-<p>Pour une pyramide de hauteur 41, cela donne <span class="arithmatex">\(2^{40}\)</span>, soit plus de mille milliards de chemins possibles...</p>
-</details>
-</div>
-<h3 id="22-valeur-dun-trajet">2.2 Valeur d'un trajet<a class="headerlink" href="#22-valeur-dun-trajet" title="Permanent link">⚓︎</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exercice  3</p>
-<p>Écrire une fonction <code>val_trajet</code> qui prend en paramètres un trajet <code>trajet</code> et une pyramide <code>pyr</code> et qui renvoie la somme finale à l'issue de ce trajet.</p>
-<p>Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">val_trajet</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">pyr_exemple</span><span class="p">)</span>
-<span class="mi">23</span>
+<p><strong>Q3.</strong> Cela renvoie la valeur 5, qui est le nombre de liens depuis le site <code>site2</code> vers le site <code>site3</code>. </p>
+<p><strong>Q4.</strong> La valeur de popularité de <code>site1</code> est 6.</p>
+<p><strong>Q5.</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">calculPopularite</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">popularite</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">predecesseurs</span><span class="p">:</span>
+        <span class="n">popularite</span> <span class="o">+=</span> <span class="n">site</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">popularite</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Q6.</strong> C'est une structure de file.</p>
+<p><strong>Q7.</strong> C'est un parcours en largeur.</p>
+<p><strong>Q8.</strong> La valeur renvoyée est 
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">s4</span><span class="p">,</span> <span class="n">s5</span><span class="p">]</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">val_trajet</span><span class="p">(</span><span class="n">trajet</span><span class="p">,</span> <span class="n">pyr</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trajet</span><span class="p">)):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">trajet</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
-</div>
-<h3 id="23-somme-maximale-par-force-brute">2.3 Somme maximale par force brute<a class="headerlink" href="#23-somme-maximale-par-force-brute" title="Permanent link">⚓︎</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Exercice  4</p>
-<p><strong>Q1.</strong> Écrire une fonction <code>max_force_brute</code> qui prend en paramètre une pyramide <code>pyr</code> et qui renvoie la somme maximale parmi tous les trajets possibles.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_force_brute</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">trajets</span> <span class="o">=</span> <span class="n">liste_parcours</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">trajets</span><span class="p">:</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">val_trajet</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">pyr</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
-            <span class="n">m</span> <span class="o">=</span> <span class="n">v</span>
-    <span class="k">return</span> <span class="n">m</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Notre algorithme donne bien la bonne solution pour <code>pyr_exemple</code>, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.</p>
-</details>
-</div>
-<h2 id="3-recherche-par-methode-gloutonne">3. Recherche par méthode gloutonne<a class="headerlink" href="#3-recherche-par-methode-gloutonne" title="Permanent link">⚓︎</a></h2>
-<p>Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d'être plus efficace. Pourquoi ne pas chercher une méthode <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" target="_blank">gloutonne</a> ?</p>
-<p><em>Rappel :</em>  lors du parcours d'une pyramide, les deux cases sous la case <code>[i][j]</code> sont la case <code>[i+1][j]</code> et <code>[i+1][j+1]</code>.</p>
-<p><img alt="image" class="center" src="../data/glouton.png" width="60%" /></p>
-<div class="admonition example">
-<p class="admonition-title">Exercice  5</p>
-<p><strong>Q1.</strong> Compléter la fonction <code>max_glouton</code> ci-dessous qui calcule de manière gloutonne le «meilleur» trajet d'une pyramide <code>pyr</code>. </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_glouton</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
-        <span class="n">v1</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="n">v2</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
-            <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_glouton</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)):</span>
-        <span class="n">v1</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">v2</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">v1</span> <span class="o">&gt;</span> <span class="n">v2</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="n">v1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="n">v2</span>
-            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<p><strong>Q2.</strong> Observer et analyser le résultat donné par notre algorithme sur <code>pyr_exemple</code>.</p>
-</div>
-<h2 id="4-recherche-par-methode-recursive">4. Recherche par méthode récursive<a class="headerlink" href="#4-recherche-par-methode-recursive" title="Permanent link">⚓︎</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Exercice  6</p>
-<p>Observer le dessin suivant :
-<img alt="image" class="center" src="../data/recurs.png" width="30%" /></p>
-<p><strong>Q1.</strong> En déduire une fonction <code>max_recursif</code> qui prendra en paramètre une pyramide <code>pyr</code> et qui calculera de manière récursive la somme maximale.</p>
-<p>Pour extraire les deux sous-pyramides gauche et droite, on pourra utiliser le code suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extract_sub_left_right</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">left</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">right</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)):</span>
-        <span class="n">lst_left</span> <span class="o">=</span> <span class="p">[</span><span class="n">pyr</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span>
-        <span class="n">lst_right</span> <span class="o">=</span> <span class="p">[</span><span class="n">pyr</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span>
-        <span class="n">left</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst_left</span><span class="p">)</span>
-        <span class="n">right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst_right</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
-</code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_recursif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">pyr_left</span><span class="p">,</span> <span class="n">pyr_right</span> <span class="o">=</span> <span class="n">extract_sub_left_right</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_left</span><span class="p">),</span> <span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_right</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Dès que la hauteur de la pyramide dépasse 25 (environ) le programme devient extrêmement lent et inutilisable. On retrouve le problème rencontré avec l'algorithme de force brute.</p>
-</details>
-</div>
-<h2 id="5-optimisation-de-la-methode-recursive-par-programmation-dynamique">5. Optimisation de la méthode récursive par programmation dynamique<a class="headerlink" href="#5-optimisation-de-la-methode-recursive-par-programmation-dynamique" title="Permanent link">⚓︎</a></h2>
-<p>La lenteur de l'algorithme précédent vient du fait que certains calculs sont redondants. </p>
-<p><img alt="image" class="center" src="../data/dynam.png" width="30%" /></p>
-<p>Par exemple, le calcul du maximum de la pyramide rouge sera lancé en tant que sous-pyramide droite de la valeur 5, et en tant que sous-pyramide gauche de la valeur 4.</p>
-<p>Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ralentir considérablement l'exécution du programme.</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice  7</p>
-<p>Dans le code récursif suivant, chaque pyramide est identifiée par les coordonnées de son sommet, stockées dans le tuple <code>pos</code> .
-On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque sommet <code>(i, j)</code> la somme maximale de sa pyramide.</p>
-<p>Pour chaque sommet de coordonnées <code>(i, j)</code> :</p>
-<ul>
-<li>si on est tout en bas de la pyramide, on renvoie la valeur du sommet de cette pyramide (réduite à une valeur).</li>
-<li>sinon :<ul>
-<li>on interroge notre dictionnaire de stockage <code>dict_max</code> : est-ce qu'il contient parmi ses clés notre tuple <code>(i, j)</code> ? Si oui, on renvoie juste la valeur associée.</li>
-<li>sinon, on calcule cette valeur par deux appels récursifs (sur les deux sous-pyramides), et on la stocke dans <code>dict_max</code>, associée au tuple  <code>(i, j)</code>, avant de la renvoyer.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Q1.</strong> Compléter le code suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
-    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">...</span>
-
-    <span class="k">if</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">dict_max</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">...</span>
-    <span class="k">else</span><span class="p">:</span>   
-        <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
-        <span class="k">return</span> <span class="o">...</span>
-</code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
-    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">dict_max</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span>
-    <span class="k">else</span><span class="p">:</span>   
-        <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)),</span> <span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
-        <span class="k">return</span> <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span>        
-</code></pre></div></td></tr></table></div>
-</details>
-<p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour faire trouver le maximum d'une pyramide de taille 500.</p>
-</details>
-</div>
-<h2 id="6-methode-bottom-up">6. Méthode bottom-up<a class="headerlink" href="#6-methode-bottom-up" title="Permanent link">⚓︎</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Plus court chemin</p>
-<p><img alt="image" class="center" src="../data/bell.png" /></p>
-<p>Dans la figure ci-dessus, le chemin surligné est le chemin de longueur minimale entre A et C. </p>
-<p>Ce chemin passe par B. </p>
-<p>On peut donc en déduire que la portion de ce chemin entre B et C (portion rouge) est le chemin minimal entre B et C.</p>
-<blockquote>
-<p>On peut le démontrer facilement <em>par l'absurde</em> : si le chemin rouge n'est pas le chemin minimal entre B et C, alors il en existe un autre qui est minimal (par exemple le violet). En emprutant ce chemin à partir de B, on pourrait donc construire entre A et C un chemin plus court que le chemin surligné, ce qui est impossible.</p>
-</blockquote>
-<p>De manière analogue, on peut affirmer ceci : si le chemin minimal passe par B, alors la portion de ce chemin minimal entre B et C est forcément le chemin rouge.</p>
-</div>
-<p>Nous allons exploiter une idée similaire pour maximiser le parcours dans notre pyramide.</p>
-<p><img alt="image" class="center" src="../data/bup.png" width="25%" /></p>
-<p>Admettons que le parcours maximal passe par la valeur 6. Ensuite, ce parcours doit passer par 8 ou par 9. Comme ce parcours est maximal, il passera forcément par 9.</p>
-<p>On peut donc en déduire que si le parcours arrive à cette valeur 6, alors cette valeur pourrait être remplacée par 15.</p>
-<p>Faisons de même pour les autres valeurs de l'avant-dernière ligne :</p>
-<p><img alt="image" class="center" src="../data/bup2.png" width="25%" /></p>
-<p>En procédant de même pour les lignes supérieures, on trouve la valeur maximale de 30 :</p>
-<p><img alt="image" class="center" src="../data/bup3.png" width="25%" /></p>
-<div class="admonition example">
-<p class="admonition-title">Exercice  8</p>
-<p>En s'inspirant de la méthode précédente, écrire une fonction <code>max_iteratif</code> qui prend une pyramide <code>pyr</code> en paramètre et qui renvoie la somme maximale des parcours de cette pyramide.</p>
-<p>Effectuer des tests pour apprécier l'efficacité de cette fonction.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">max_iteratif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
-            <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-On peut calculer que cet algorithme est de complexité quadratique. Il reste néanmoins très rapide, y compris pour des grandes pyramides.</p>
-</details>
-</div>
+<p><strong>Q9.</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">maxPopularite</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">popularite</span>
+<span class="n">siteLePlusPopulaire</span> <span class="o">=</span> <span class="n">site</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Q10.</strong>
+Cela renverra <code>s5</code>, car le site 5 est le plus populaire avec 9 liens.</p>
+<p><strong>Q11.</strong>
+Un parcours de graphe n'est pas forcément adapté, car il ne va étudier que chaque composante connexe du graphe : si les sites présentent deux nuages distincts, il faudra faire deux parcours. De plus, la méthode <code>pop(0)</code> peut être très lente si la liste est de grande taille. </p>
 
 
 
@@ -4374,7 +3954,7 @@ On peut calculer que cet algorithme est de complexité quadratique. Il reste né
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 mars 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 juin 2024</span>
   </span>
 
     
@@ -4390,7 +3970,7 @@ On peut calculer que cet algorithme est de complexité quadratique. Il reste né
 
 
                 
-    <script src="../../../js/ide.js"></script> 
+    <script src="../../js/ide.js"></script> 
 
               </article>
             </div>
@@ -4457,14 +4037,14 @@ On peut calculer que cet algorithme est de complexité quadratique. Il reste né
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="../../../scripts/mathjax.js"></script>
+        <script src="../../scripts/mathjax.js"></script>
       
-        <script src="../../../xtra/javascripts/interpreter.js"></script>
+        <script src="../../xtra/javascripts/interpreter.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
