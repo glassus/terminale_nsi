@@ -5,10 +5,11 @@ _abrégée par POO en français, OOP en anglais (ne pas confondre)_
 
 ![image](data/meme3.jpg){: .center width='50%'}
 
+{{initexo(0)}}
 
 
 ## 0. Introduction
-La POO est un **paradigme** de programmation, au même titre que la programmation impérative (que nous pratiquons déjà) ou la programmation fonctionnelle (qui sera étudiée cette année en Terminale), ou encore d'autres paradigmes (la liste est longue).  
+La POO est un **paradigme** de programmation, au même titre que la programmation impérative (que nous pratiquons déjà) ou la programmation fonctionnelle (qui sera évoquée cette année en Terminale), ou encore d'autres paradigmes (la liste est longue).  
 Un paradigme de programmation pourrait se définir comme une _philosophie_ dans la manière de programmer : c'est un parti-pris revendiqué dans la manière d'aborder le problème à résoudre. Une fois cette décision prise, des outils spécifiques au paradigme choisi sont utilisés. 
 
 !!! info "Métaphore"
@@ -50,7 +51,7 @@ Mais qu'a donc fait cette méthode ```reverse()``` ?
 ```
 
 Nous ne sommes pas surpris par ce résultat car la personne qui a programmé la méthode ```reverse()``` lui a donné un nom explicite.  
-Comment a-t-elle programmé cette inversion des valeurs de la liste ? Nous n'en savons rien et cela ne nous intéresse pas. Nous sommes juste utilisateurs de cette méthode. 
+Comment a-t-elle programmé cette inversion des valeurs de la liste ? Nous n'en savons rien et cela ne nous intéresse pas. Nous sommes juste **utilisateurs** de cette méthode. 
 L'objet de type ```list``` nous a été livré avec sa méthode ```reverse()``` (et bien d'autres choses) et nous n'avons pas à démonter la boîte pour en observer les engrenages : on parle de principe d'**encapsulation**.
 
 On peut obtenir la liste de toutes les fonctions disponibles pour un objet de type ```list```, par la fonction ```dir``` :
@@ -82,10 +83,17 @@ Comment savoir ce que font les méthodes ? Si elles ont été correctement codé
 
 
 ```python
->>> m.append.__doc__
-'Append object to the end of the list.'
->>> m.reverse.__doc__
-'Reverse *IN PLACE*.'
+>>> help(m.append)
+Help on built-in function append:
+
+append(object, /) method of builtins.list instance
+    Append object to the end of the list.
+
+>>> help(m.reverse)__doc__
+Help on built-in function reverse:
+
+reverse() method of builtins.list instance
+    Reverse *IN PLACE*.
 ```
 
 
@@ -94,7 +102,7 @@ Comment savoir ce que font les méthodes ? Si elles ont été correctement codé
 Jusqu'ici nous avons employé uniquement le mot «objet». Il convient maintenant d'être plus précis.  
 
 - On désignera par **classe** la structure de données définissant une catégorie générique d'objets. Dans le monde animal, _chat_ est une classe (nommée en réalité _félidé_ ). 
-- Chaque élement de la classe _chat_ va se distinguer par des caractéristiques : un âge, une couleur de pelage, un surnom... (on appelera ces caractéristiques des **attributs**) et des fonctionnalités, comme la **méthode** ```attrape_souris()```.  
+- Chaque élement de la classe _chat_ va se distinguer par des caractéristiques : un âge, une couleur de pelage, un surnom... (on appelera ces caractéristiques des **attributs**) et des fonctionnalités, comme la **méthode** ```attrape_souris```.  
 - Lorsqu'on désigne un chat en particulier, on désigne alors un **objet** (bien réel) qui est une **instance** de la **classe** (abstraite) _chat_. 
 
 Par exemple, 
@@ -111,7 +119,7 @@ larry.pelage = "blanc et tabby"
 larry.surnom = "Chief Mouser to the Cabinet Office"
 ```
 
-Toujours d'après Wikipedia, la méthode ```larry.attrape_souris()``` est plutôt efficace.
+Toujours d'après Wikipedia, la méthode ```larry.attrape_souris``` est plutôt efficace.
 
 ### 2.2 Création d'une classe
 
@@ -157,7 +165,7 @@ Mais arrêtons-là cette mauvaise méthode. Si on désire créer une classe «vo
 
 L'idée est donc qu'à la création (on dira plutôt à la **construction**) de chaque objet voiture, on va lui spécifier directement ses attributs :
 
-#### 2.2.2 (bonne) manière : la méthode constructeur :heart:
+#### 2.2.2 :heart: (bonne) manière : la méthode constructeur :heart:
 
 La **méthode constructeur**, toujours appelée ```__init__()```, est une méthode (une «def») qui sera automatiquement appelée à la création de l'objet. Elle va donc le doter de tous les attributs de sa classe.
 
@@ -168,10 +176,10 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2023 - self.annee
+        self.age = 2024 - self.annee
 ```
 
-- le mot-clé ```self```, omniprésent en POO (d'autres langages utilisent ```this```), fait référence à l'objet lui-même, qui est en train d'être construit.
+- le mot-clé ```self```, omniprésent en POO (d'autres langages utilisent ```this```), **fait référence à l'objet lui-même**, qui est en train d'être construit.
 - pour construire l'objet, 3 paramètres seront nécessaires : ```annee```, ```coul``` et ```vmax```. Ils donneront respectivement leur valeur aux attributs ```annee```, ```couleur``` et ```vitesse_max```.
 - dans cet exemple, les noms ```coul``` et ```vmax``` ont été utilisés pour abréger ```couleur``` et ```vitesse_max```, mais il est recommandé de garder les mêmes noms, même si ce n'est pas du tout obligatoire.
 
@@ -194,7 +202,7 @@ __main__.Voiture
 ```mon_bolide``` possède 4 attributs : 
 
 - ```annee```, ```couleur``` et ```vitesse_max``` ont été donnés par l'utilisateur lors de la création.
-- ```age``` s'est créé «tout seul» par l'instruction ```self.age = 2021 - self.annee```.
+- ```age``` s'est créé «tout seul» par l'instruction ```self.age = 2024 - self.annee```.
 
 
 ```python
@@ -205,11 +213,11 @@ __main__.Voiture
 >>> mon_bolide.vitesse_max
 190
 >>> mon_bolide.age
-11
+13
 ```
 
 Observons les différentes étapes grâce à PythonTutor :
-<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202023%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202024%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 Bien sûr, on peut créer une autre voiture en suivant le même principe :
@@ -221,29 +229,36 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
 'noire'
 ```
 
+!!! example "{{ exercice() }}"
+ 
+    Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
+    
 
-!!! example "Exercice 1"
-    === "Énoncé"
-        Créer une classe ```Point``` permettant de créer un objet ```A``` , dont on récupèrera l'abscisse par la variable ```A.x``` et l'ordonnée par ```A.y```.
-        
+    !!! info "Exemple d'utilisation de la classe"
+        ```python
+        >>> A = Point(3, 5)
+        >>> A.x
+        3
+        >>> A.y
+        5
+        ```
 
-        !!! info "Exemple d'utilisation de la classe"
-            ```python
-            >>> A = Point(3,5)
-            >>> A.x
-            3
-            >>> A.y
-            5
-            ```
-
-    === "Correction"
-        
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Point :
-            def __init__(self,x,y):
+            def __init__(self, x, y):
                 self.x = x
                 self.y = y
-        ```
+        ```    
+    """
+    )
+    }}
+
+        
+
         
 
 #### 2.2.4 Créer une méthode pour notre objet
@@ -255,7 +270,7 @@ class Voiture :
         self.annee = annee
         self.couleur = coul
         self.vitesse_max = vmax
-        self.age = 2023 - self.annee
+        self.age = 2024 - self.annee
     
     def petite_annonce(self) :
         print("À vendre voiture", self.couleur, "de", self.annee,\
@@ -290,8 +305,11 @@ class Voiture :
 
 ```python
 >>> batmobile = Voiture(2036, "noire", 325)
->>> batmobile.petite_annonce.__doc__
-    ' Rédige automatiquement une petite annonce concernant le véhicule'
+>>> help(batmobile.petite_annonce)
+Help on method petite_annonce in module __main__:
+
+petite_annonce() method of __main__.Voiture instance
+    Rédige automatiquement une petite annonce concernant le véhicule
 ```
 
 
@@ -342,28 +360,34 @@ dir(batmobile)
 On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avons créés pour notre objet.
 
 
-!!! example "Exercice 2"
-    === "Énoncé"
-        Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
+!!! example "{{ exercice() }}"
+    Reprendre la classe de l'exercice précédent et rajouter une méthode ```distance()``` qui renvoie la distance du point par rapport à l'origine du repère (dans un repère orthonormé).
 
-        !!! info "Exemple d'utilisation de la classe"
-            ```python
-            >>> A = Point(3,5)
-            >>> A.distance()
-            5.830951894845301
-            ```
+    !!! info "Exemple d'utilisation de la classe"
+        ```python
+        >>> A = Point(3, 5)
+        >>> A.distance()
+        5.830951894845301
+        ```
 
-    === "Correction"
-        
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Point:
-            def __init__(self,x,y):
+            def __init__(self, x, y):
                 self.x = x
                 self.y = y
             
             def distance(self) :
-                return (self.x**2+self.y**2)**0.5
-        ```
+                return (self.x**2 + self.y**2)**0.5
+        ```        
+    """
+    )
+    }}
+        
+
         
 
 ### 3. Compléments
@@ -405,7 +429,7 @@ class Fraction:
 
 
 ```python
->>> a = Fraction(3,4)
+>>> a = Fraction(3, 4)
 >>> print(a)
   3/4
 >>> a
@@ -414,10 +438,13 @@ class Fraction:
 Ce qui est nettement plus agréable !
 
 
-!!! example "Exercice 3"
-    === "Énoncé"
-        Modifier la méthode ```__repr__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
-    === "Correction"
+!!! example "{{ exercice() }}"
+    Modifier la méthode ```__repr__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Fraction:
             def __init__(self, num, den):
@@ -427,8 +454,12 @@ Ce qui est nettement plus agréable !
             def __repr__(self):
                 if self.denominateur == 1:
                     return str(self.numerateur)
-                return str(self.numerateur) + "/" + str(self.denominateur)
-        ```
+                return str(self.numerateur) + '/' + str(self.denominateur)
+        ```        
+    """
+    )
+    }}
+
 
 #### 3.2 L'encapsulation poussée à bout : les ```getters``` et les ```setters```
 

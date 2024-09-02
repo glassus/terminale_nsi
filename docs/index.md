@@ -1,33 +1,13 @@
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
 
 
-!!! tip "Grand Oral"
-    - [Digipad de centralisation des sujets et des recherches](https://digipad.app/p/713202/3dd01c719c377){. target="_blank"}
-    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
-    - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
-    - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
-    - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
-    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"}
+
 
 
 !!! abstract "Actualités"
+    - [Utilisation des machines virtuelles](./T7_Divers/2_VM/cours/)
     - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
-    - [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}
+    
 
-
-    {#
-    -  [Présentation de l'algorithme de Gale-Shapley](T7_Divers/11_parcoursup/cours/){. target="_blank"}
-    - :new: Deux sujets zéro viennent d'être publiés :
-        - [sujet 0-A](T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
-        - [sujet 0-B](T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
-    #}
 
 
 {#
@@ -37,24 +17,25 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - SQL : [Exercice 3 Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024)
-    - Correction sujet bac [ici](data/corr_sujet.md){. target="_blank"}  
-    - SQL : [Exercice 2 Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024)
-    - Dictionnaires et SQL : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
-    - POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
-    - Récursivité : [Exercice 1 Amérique du Nord J2 2024](T2_Programmation/2.2_Recursivite/exercices/#ex1J2AN2024)
-    - Graphes : [Exercice 2 Amérique du Nord J1 2024](T1_Structures_de_donnees/1.4_Graphes/exercices/#ex2AN2024)
-    - Processus : [Exercice 1 Amérique du Nord J1 2024](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/#ex1AN2024)
-    - [Exercice 7 de la page d'exos sur les processus](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
-    - [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
-    - [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
-    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
-    - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
+    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
 
 
-
+{#
 
 ### *Thèmes déjà traités*
+- SQL : [Exercice 3 Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024)
+- Correction sujet bac [ici](data/corr_sujet.md){. target="_blank"}  
+- SQL : [Exercice 2 Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024)
+- Dictionnaires et SQL : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
+- POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
+- Récursivité : [Exercice 1 Amérique du Nord J2 2024](T2_Programmation/2.2_Recursivite/exercices/#ex1J2AN2024)
+- Graphes : [Exercice 2 Amérique du Nord J1 2024](T1_Structures_de_donnees/1.4_Graphes/exercices/#ex2AN2024)
+- Processus : [Exercice 1 Amérique du Nord J1 2024](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/#ex1AN2024)
+- [Exercice 7 de la page d'exos sur les processus](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/){. target="_blank"}
+- [Exercice sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+- [Exercice Labyrinthe (exercice 2)](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
+- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
 - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
 - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
 - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
@@ -90,7 +71,7 @@
 - [POO : cours](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
 - [POO : exercices](T2_Programmation/2.1_Programmation_Orientee_Objet/z_Exercices/) 
 
-
+#}
 {#
 ### *Thèmes déjà traités*
 - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
@@ -112,9 +93,19 @@
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
 - [https://www.youtube.com/watch?v=PvpeSYVNVrE](https://www.youtube.com/watch?v=PvpeSYVNVrE)
 
-#}
 
-<!--
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+
+
+
+
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
     Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
 
@@ -125,7 +116,7 @@
         - Dichotomie
         
 
-
+- [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}
 
 
 !!! abstract ":star: Actualités :star:"
@@ -188,5 +179,16 @@
 
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
 
--->
+
+
+!!! tip "Grand Oral"
+    - [Digipad de centralisation des sujets et des recherches](https://digipad.app/p/713202/3dd01c719c377){. target="_blank"}
+    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
+    - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
+    - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
+    - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
+    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"
+
+
+#}
 

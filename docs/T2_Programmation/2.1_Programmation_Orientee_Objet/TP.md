@@ -46,8 +46,10 @@ while True:
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
-
-??? info "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -90,14 +92,22 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
         time.sleep(0.02)
 
 
-    ```
+    ```    
+"""
+)
+}}
+
+
 
 
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
 
-??? info "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -165,7 +175,11 @@ Attention au nommage des variables...
         time.sleep(0.03)
 
 
-    ```
+    ```    
+"""
+)
+}}
+
 
 ### 1.3 Gestion de la collision entre les deux balles
 **Q1.** À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
@@ -176,7 +190,10 @@ Attention au nommage des variables...
 
 **Q2.** Implémentez ce test (en créant pour cela une fonction ```distance``` )  et affichez "collision" en console lorsque les deux balles se touchent.
 
-??? info "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -239,7 +256,7 @@ Attention au nommage des variables...
             dxB = -dxB
 
         if distanceAB(xA, yA, xB, yB) < 2 * RAYON:
-            print("collision")
+            print('collision')
 
         pygame.display.update()
 
@@ -253,12 +270,19 @@ Attention au nommage des variables...
 
 
 
-    ```
+    ```    
+"""
+)
+}}
+
 
 
 **Q3.** Pour donner l'illusion physique du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
 
-??? info "Correction"
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -336,7 +360,10 @@ Attention au nommage des variables...
 
 
 
-    ```
+    ```    
+"""
+)
+}}
 
 
 
@@ -361,9 +388,10 @@ Il faut pour cela importer la fonction, par ```from random import randint```
 
 Créez cette classe et instanciez une balle.
 
-
-??? info "Correction"
-    
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -419,15 +447,21 @@ Créez cette classe et instanciez une balle.
 
         time.sleep(0.05)
 
-    ```
+    ```    
+"""
+)
+}}
+
     
 
 ### 2.2 Plusieurs balles
 
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 
-??? info "Correction"
-    
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -486,15 +520,24 @@ L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé d
         time.sleep(0.05)
 
 
-    ```
+    ```    
+"""
+)
+}}
+
+
+    
+
     
 
 ### 2.3 Collision de toutes les balles
 
 Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
-??? info "Correction"
-    
+{{
+correction(False,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
@@ -547,7 +590,7 @@ Il «suffit» , dans la méthode constructeur, de tester la collision de la ball
         new_ball = Balle()
         mon_sac_a_balles.append(new_ball)
 
-    # ces 4 dernière lignes peuvent s'écrire par une seule ligne en compréhension :
+    # ces 4 dernières lignes peuvent s'écrire par une seule ligne en compréhension :
     # mon_sac_a_balles = [Balle() for _ in range(NB_BALLES)]
 
     while True:
@@ -566,8 +609,12 @@ Il «suffit» , dans la méthode constructeur, de tester la collision de la ball
         time.sleep(0.05)
 
 
-    ```
-    
+    ```    
+"""
+)
+}}
+
+
 
 {#
 !!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
