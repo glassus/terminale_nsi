@@ -5,6 +5,7 @@
 
 !!! abstract "Actualités"
     - [Utilisation des machines virtuelles](./T7_Divers/2_VM/cours/)
+    - [Modalité des épreuves du bac](./T6_Annales/epreuve_bac/)
     - :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
     
 
