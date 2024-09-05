@@ -3867,8 +3867,43 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p><strong>Q1.</strong> Écrire une classe <code>Eleve</code> qui contiendra les attributs <code>nom</code>, <code>classe</code> et <code>note</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Eleve</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">classe</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classe</span> <span class="o">=</span> <span class="n">classe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Instancier trois élèves de cette classe.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="n">riri</span> <span class="o">=</span> <span class="n">Eleve</span><span class="p">(</span><span class="s1">&#39;Henri&#39;</span><span class="p">,</span> <span class="s1">&#39;TG2&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">fifi</span> <span class="o">=</span> <span class="n">Eleve</span><span class="p">(</span><span class="s1">&#39;Philippe&#39;</span><span class="p">,</span> <span class="s1">&#39;TG6&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">loulou</span> <span class="o">=</span> <span class="n">Eleve</span><span class="p">(</span><span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;TG1&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p><strong>Q3.</strong>  Écrire une fonction <code>compare</code> qui prend en paramètres deux élèves <code>eleve1</code> et <code>eleve2</code> qui renvoie le nom de l'élève ayant la meilleure note (on ne traitera pas à part le cas d'égalité).</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Eleve</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">classe</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classe</span> <span class="o">=</span> <span class="n">classe</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
+
+<span class="k">def</span> <span class="nf">compare</span><span class="p">(</span><span class="n">eleve1</span><span class="p">,</span> <span class="n">eleve2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">eleve1</span><span class="o">.</span><span class="n">note</span> <span class="o">&gt;</span> <span class="n">eleve2</span><span class="o">.</span><span class="n">note</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">eleve1</span><span class="o">.</span><span class="n">nom</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">eleve2</span><span class="o">.</span><span class="n">nom</span>   
+</code></pre></div>
+</details>
 <div class="admonition info">
 <p class="admonition-title">Exemple d'utilisation de la classe</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">riri</span> <span class="o">=</span> <span class="n">Eleve</span><span class="p">(</span><span class="s2">&quot;Henri&quot;</span><span class="p">,</span> <span class="s2">&quot;TG2&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
