@@ -130,7 +130,7 @@
     )
     }}
 
-    **Q2.** Doter la classe d'une méthode ```affiche``` qui fera affichera le temps ```t```.
+    **Q2.** Doter la classe d'une méthode ```affiche``` qui affichera le temps ```t```.
     {{
     correction(False,
     """
