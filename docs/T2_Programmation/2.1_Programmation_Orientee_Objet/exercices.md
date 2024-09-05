@@ -116,7 +116,7 @@
 
     **Q1.** Écrire une classe ```Chrono``` qui contiendra les attributs ```heures```, ```minutes``` et ```secondes```.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -132,7 +132,7 @@
 
     **Q2.** Doter la classe d'une méthode ```affiche``` qui affichera le temps ```t```.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
