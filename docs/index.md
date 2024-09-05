@@ -19,6 +19,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
 
 
 {#
