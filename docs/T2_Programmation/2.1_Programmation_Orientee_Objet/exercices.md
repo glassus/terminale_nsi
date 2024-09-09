@@ -266,7 +266,7 @@
                     self.alive = False
                 
             def soin(self):
-                if self.energie > 0:
+                if self.alive:
                     self.energie += 1
         ```        
     """
