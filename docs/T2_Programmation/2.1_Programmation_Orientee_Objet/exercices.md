@@ -152,7 +152,7 @@
     **Q3.** Doter la classe d'une méthode ```avance``` qui prend en paramètre un temps ```s``` en secondes et qui fait avancer le temps ```t``` de ```s``` secondes.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
