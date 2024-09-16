@@ -626,12 +626,16 @@ correction(False,
 - Vous pouvez créer une balle que vous déplacerez au clavier (voir [ici](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/){. target="_blank"} pour la gestion des déplacements)
 - ...
 
-## 4. Dépot du projet
+## 4. Organisation du projet
 
+!!! tip "Calendrier du projet"
+    - 16/09/2024 : démarrage du projet et constitution des groupes
+    - séances du jeudi 19/09/2024, 26/09/2024 et 03/10/2024 : travail sur le projet
+    - remise du projet sur Capytale : **03/10/2024 à 18h dernier délai**
 
 !!! capytale "Dépôt de projet sur Capytale "
 
-    Cliquez [ici](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}.
+    Cliquez [ici](https://capytale2.ac-paris.fr/web/c/1923-3932584){. target="_blank"}.
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
