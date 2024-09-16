@@ -616,13 +616,25 @@ correction(False,
 
 
 
-{#
-!!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
+
+
+
+## 3. Extensions
+
+- Vous pouvez créer des balles de couleurs identiques, sauf une. Cette balle diffusera sa couleur à toutes les balles avec qui elle rentrera en collision.
+- En la supprimant de la liste ```sac_a_balles```, vous pouvez faire disparaitre une balle.
+- Vous pouvez créer une balle que vous déplacerez au clavier (voir [ici](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/){. target="_blank"} pour la gestion des déplacements)
+- ...
+
+## 4. Dépot du projet
+
+
+!!! capytale "Dépôt de projet sur Capytale "
+
+    Cliquez [ici](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}.
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
     Ce que je ne veux pas voir :
     ![](data/paste.jpg){: .center width=40%} 
-
-#}
 
