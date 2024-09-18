@@ -4173,6 +4173,18 @@
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sejour</span><span class="o">.</span><span class="n">sup</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">sup</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">sup</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">villa</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">villa</span><span class="o">.</span><span class="n">eqCuis</span> <span class="o">==</span> <span class="s1">&#39;eq&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">villa</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
+<p>ou bien</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">villa</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">villa</span><span class="o">.</span><span class="n">equip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;eq&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">villa</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
