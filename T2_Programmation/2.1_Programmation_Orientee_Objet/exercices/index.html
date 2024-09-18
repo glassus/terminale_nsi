@@ -4189,6 +4189,33 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <p>Exercice 5 du sujet <a class="" href="../../../T6_Annales/data/2022/2022_Metropole_J1.pdf" target="_blank">Métropole J1 2022</a></p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Instruction 3 : <code>joueur1 = Joueur('Sniper', 319, 'A')</code> </p>
+</details>
+<details class="success">
+<summary>Correction Q2.a</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redevenir_actif</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_actif</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">est_actif</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+ou mieux : 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">redevenir_actif</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_actif</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">est_actif</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<details class="success">
+<summary>Correction Q2.b</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_tirs_recus</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">liste_id_tirs_recus</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
