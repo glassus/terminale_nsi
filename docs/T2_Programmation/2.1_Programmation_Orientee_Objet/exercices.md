@@ -340,7 +340,7 @@
     Exercice 2 Partie A du sujet [Métropole Septembre 2022](../../T6_Annales/data/2022/2022_Metropole_Septembre.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\" 
         La liste ```v``` contient 5 éléments.
@@ -349,7 +349,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\" 
         ```v[1].nom()``` renvoie ```Les goélands```.
@@ -360,7 +360,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c\" 
         ```python
