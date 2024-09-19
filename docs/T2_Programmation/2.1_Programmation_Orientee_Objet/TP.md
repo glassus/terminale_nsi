@@ -642,3 +642,17 @@ correction(True,
     Ce que je ne veux pas voir :
     ![](data/paste.jpg){: .center width=40%} 
 
+
+
+!!! abstract "Groupes de projet"
+    - groupe A : Yanis - Jean
+    - groupe B : Marilou
+    - groupe C : Allan - Sarah
+    - groupe D : Perine - Rita
+    - groupe E : Gansiry
+    - groupe F : Thomas - Etan - Titouan
+    - groupe G : Noah
+    - groupe H : Tesnime - Enzo
+    - groupe I : Malone - Bryan - Moustapha
+    - groupe J : Oscar - Owen - Mikhailo
+    - groupe K : Milan - Nathan
