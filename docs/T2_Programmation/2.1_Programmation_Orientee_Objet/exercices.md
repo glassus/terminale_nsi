@@ -552,6 +552,109 @@
 
 
 
+
+
+!!! example "{{ exercice() }} <i id="ex3J1ME2024"></i>"
+    Exercice 3 (partie A et B) du [sujet Métropole J1 2024](../../T6_Annales/data/2024/24-NSIJ1ME.pdf){. target="_blank"}   
+
+    **Partie A**
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \" 
+        ```python
+        chien40 = Chien(40, 'Duke', 'wheel dog', 10)
+        ```  
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \" 
+        ```python linenums='1'
+        def changer_role(self, nouveau_role):
+            self.role = nouveau_role
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \" 
+        ```python 
+        chien40.changer_role('leader')
+        ``` 
+    """
+    )
+    }}  
+
+
+    **Partie B**
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \" 
+        ```python linenums='1'
+        def retirer_chien(self, numero):
+            nouvelle_liste = []
+            for chien in self.liste_chiens:
+                if chien.id_chien != numero:
+                    nouvelle_liste.append(chien)
+            self.liste_chiens = nouvelle_liste
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \" 
+        ```python 
+        eq11.retirer_chien(46)
+        ``` 
+    """
+    )
+    }}  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \" 
+        ```convert('4h36')``` va renvoyer le nombre ```4.6```  
+    """
+    )
+    }} 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \" 
+        ```python linenums='1'
+        def temps_course(equipe):
+            total = 0
+            for temps in equipe.liste_temps:
+                total += convert(temps)
+            return total
+        ```  
+        ou mieux :
+        ```python linenums='1'
+        def temps_course(equipe):
+            return sum([convert(t) for t in equipe.liste_temps])        
+        ```
+
+    """
+    )
+    }} 
+
+
+
 !!! example "{{ exercice() }} <i id="ex3J2AN2024"></i>"
     Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}   
 
@@ -732,7 +835,6 @@
     """
     )
     }}
-
 
 {#
 !!! abstract "DS02"
