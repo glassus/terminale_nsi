@@ -1,7 +1,10 @@
 # Annales des Épreuves Écrites
 
 ## 2024
-- [Septembre Métropole](data/2024/24-NSIJ2ME3.pdf)
+- [Septembre Métropole J1](data/2024/24-NSIJ1ME3.pdf)
+- [Septembre Métropole J2](data/2024/24-NSIJ2ME3.pdf)
+- [Métropole J1](data/2024/24-NSIJ1ME.pdf)
+- [Métropole J2](data/2024/24-NSIJ2ME1.pdf)
 - [Asie J1](data/2024/24-NSIJ1JA1.pdf)
 - [Asie J2](data/2024/24-NSIJ2JA1.pdf)
 - [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf)

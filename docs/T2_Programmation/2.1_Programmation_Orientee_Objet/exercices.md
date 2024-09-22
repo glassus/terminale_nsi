@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(True
+    correction(True,
     """
     ??? success \"Correction\" 
         Le test est le **test 1**.
@@ -449,7 +449,7 @@
     }}
     
     {{
-    correction(True
+    correction(True,
     """
     ??? success \"Correction Q3.b\" 
         Si un joueur a été touché par un tir allié, son score diminue de 20 points.    
@@ -536,7 +536,7 @@
             # calcul du nouveau rayon de la grosse bulle
             surfPetite = pi * Mousse[indPetite].rayon**2
             surfGrosse = pi * Mousse[indGrosse].rayon**2
-            surfGrosseApresCollision = surfPetite + surfGrosse = pi
+            surfGrosseApresCollision = surfPetite + surfGrosse
             rayonGrosseApresCollision = sqrt(surfGrosseApresCollision/pi)
             
             #réduction de 50% de la vitesse de la grosse bulle
