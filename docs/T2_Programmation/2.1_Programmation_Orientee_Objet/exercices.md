@@ -560,7 +560,7 @@
     **Partie A**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         ```python
@@ -571,7 +571,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         ```python linenums='1'
@@ -583,7 +583,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3 \" 
         ```python 
