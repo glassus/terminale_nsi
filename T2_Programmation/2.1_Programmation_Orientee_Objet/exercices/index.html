@@ -4331,6 +4331,21 @@ ou mieux :
 </code></pre></div>
 </details>
 <p><strong>Partie B</strong></p>
+<details class="success">
+<summary>Correction Q4 </summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">retirer_chien</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
+    <span class="n">nouvelle_liste</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">chien</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">chien</span><span class="o">.</span><span class="n">id_chien</span> <span class="o">!=</span> <span class="n">numero</span><span class="p">:</span>
+            <span class="n">nouvelle_liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chien</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span> <span class="o">=</span> <span class="n">nouvelle_liste</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  11 <i id="ex3J2AN2024"></i></p>
