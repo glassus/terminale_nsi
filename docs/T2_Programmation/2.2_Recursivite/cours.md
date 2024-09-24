@@ -80,7 +80,7 @@ Disons-le clairement : au-delà de la blague pour initiés (dont vous faites par
 Ce «cas de base» sera aussi appelé «condition d'arrêt», puisque la très grande majorité des algorithmes récursifs peuvent être perçus comme des escaliers qu'on descend marche par marche, jusqu'au sol qui assure notre arrêt.
 
 
-### 2.1 La récursivité en BD :
+### 2.1 La récursivité en BD 
 
 
 
@@ -158,48 +158,68 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 {{ initexo(0) }}
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
-    === "Correction"
+    Coder la fonction ```prix``` de la BD présentée plus haut, qui prend en paramètre un entier positif ```etage``` et qui renvoie le prix de vente de la BD.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def prix(etage):
             if etage == 0:
                 return 3
             else:
                 return 2 * prix(etage - 1)
-        ```
+        ```        
+    """
+    )
+    }}
 
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère la fonction ```factorielle(n)``` (notée $n!$ en mathématiques), qui calcule le produit d'un entier $n$ par les entiers positifs qui lui sont inférieurs:
+    On considère la fonction ```factorielle``` (notée $n!$ en mathématiques), qui prend en paramètre un entier positif ```n``` et qui calcule le produit de $n$ et de tous les entiers positifs qui lui sont inférieurs:
 
-        $$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
-        
-        Exemple : $5!=5\times4\times3\times2\times1=120$
+    $$ n! = n \times (n-1) \times (n-2) \times  \dots \times 3 \times 2 \times 1$$
+    
+    Exemple : $5!=5\times4\times3\times2\times1=120$
 
-        Par convention, $1!=1$
+    Par convention, $1!=1$
 
-        1. Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
-        2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
-
-        Quelle paradigme de programmation vous a semblé le plus naturel ?
-    === "Correction"
-        
+    **Q1.** Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def fact_imp(n):
             p = 1
             for k in range(1, n + 1):
                 p = p * k
             return p
+        ```        
+    """
+    )
+    }}
 
+    **Q2.** Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
         def fact_rec(n):
             if n == 1:
                 return 1
             else:
                 return n * fact_rec(n - 1)
-        ```
+        ```        
+    """
+    )
+    }}
+
+    Quelle paradigme de programmation vous a semblé le plus naturel ?
+
         
 
 <!--
@@ -276,10 +296,12 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Implémenter de façon récursive la suite de Fibonacci.
-    === "Correction"
-        
+
+    Implémenter de façon récursive la suite de Fibonacci.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def fibo(n):
             if n == 0 :
@@ -289,6 +311,12 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
             else :
                 return fibo(n-1) + fibo(n-2)
         ```
+      
+    """
+    )
+    }}
+        
+
         
 
 
@@ -325,10 +353,13 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
 ### 4.2 Comparaison des performances
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
-    === "Correction"
-        {#
+
+    Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def fibo_imperatif(n):
             f = {}
@@ -337,8 +368,19 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
             for k in range(2, n+1):
                 f[k] = f[k-1] + f[k-2]
             return f[n]
-        ```
-        #}
+        ```        
+    """
+    )
+    }}
+
+{#
+    f = {}
+    f[0] = 0
+    f[1] = 1
+    for k in range(2, n+1):
+        f[k] = f[k-1] + f[k-2]
+    return f[n]
+#}
 
 
 
@@ -349,12 +391,7 @@ Construisons une fonction ```comparaison``` qui affichera le temps de calcul pou
 import time
 
 def fibo_imperatif(n):
-    f = {}
-    f[0] = 0
-    f[1] = 1
-    for k in range(2, n+1):
-        f[k] = f[k-1] + f[k-2]
-    return f[n]
+    ...
 
 def fibo_recursif(n):
     if n == 0 :
