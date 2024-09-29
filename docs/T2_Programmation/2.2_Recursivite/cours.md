@@ -152,7 +152,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     Il venait pour cela d'inventer la formule : 
     $1+2+3+\dots+n=\frac{n(n+1)}{2}$
 
-    Ici, $1+2+3+\dots+100=\frac{100\times 101)}{2}=50 \times 101=5050$
+    Ici, $1+2+3+\dots+100=\frac{100\times 101}{2}=50 \times 101=5050$
 
 
 {{ initexo(0) }}
@@ -160,7 +160,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     Coder la fonction ```prix``` de la BD présentée plus haut, qui prend en paramètre un entier positif ```etage``` et qui renvoie le prix de vente de la BD.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
