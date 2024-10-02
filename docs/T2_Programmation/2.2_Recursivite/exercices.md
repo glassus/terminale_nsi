@@ -101,14 +101,13 @@
         ```python linenums='1'
         def syracuse(n, t=0):
             print(n)
-            t += 1
             if n == 1:
                 print('temps de vol :', t)
                 return None
             if n % 2 == 0:
-                syracuse(n // 2, t)
+                syracuse(n // 2, t+1)
             else:
-                syracuse(3*n + 1, t)
+                syracuse(3*n + 1, t+1)
         ``` 
     """
         ) }}           
