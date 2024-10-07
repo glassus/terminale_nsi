@@ -35,13 +35,13 @@
     Écrire une fonction récursive ```pgcd``` qui prend en paramètres deux nombres ```a``` et ```b``` et qui renvoie leur PGCD.
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         def pgcd(a, b):
-            if a % b == 0:
-                return b
+            if b == 0:
+                return a
             else:
                 return pgcd(b, a % b)
         ```    
