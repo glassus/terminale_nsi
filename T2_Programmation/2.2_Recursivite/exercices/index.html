@@ -3887,6 +3887,19 @@
 <p>Cette propriété est à la base de l'algorithme d'Euclide</p>
 <p>Exemple : <span class="arithmatex">\(pgcd(24,18)=pgcd(18,6)=pgcd(6,0)\)</span>, donc <span class="arithmatex">\(pgcd(24,18)=6\)</span></p>
 <p>Écrire une fonction récursive <code>pgcd</code> qui prend en paramètres deux nombres <code>a</code> et <code>b</code> et qui renvoie leur PGCD.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
