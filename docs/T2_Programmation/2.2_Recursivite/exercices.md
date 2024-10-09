@@ -370,8 +370,6 @@
     }}
         
 
-        
-
 
 
 !!! example "{{ exercice() }}"
@@ -410,7 +408,7 @@
 
 
         grid = initgrid()
-        propager(grid,0,3,0)
+        propager(grid,3,3,0)
         grid.show()
         ```        
     """
