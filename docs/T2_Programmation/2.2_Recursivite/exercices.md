@@ -293,6 +293,8 @@
     Cet exercice a pour objectif le tracé du flocon de Von Koch.
     ![](data/floc.png){: .center width=60%}
 
+    !!! info "Les fractales"
+        Ce flocon est une structure [fractale](https://fr.wikipedia.org/wiki/Fractale){. target="_blank"}, au même titre que le superbe [ensemble de Mandelbrot](https://mandelbrot.site/){. target="_blank"}, dont vous pouvez trouver une implémentation en Pygame [ici](data/mandelbrot_pygame.py){. target="_blank"}.
 
     L'idée est de répéter de manière récursive la transformation ci-dessous : chaque segment de longueur ```l``` donne naissance à 4 segments de longueur ```l/3```, en construisant une pointe de triangle équilatéral sur le deuxième tiers du segment.
 
