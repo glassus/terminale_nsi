@@ -338,7 +338,7 @@
     **Q2.** Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
