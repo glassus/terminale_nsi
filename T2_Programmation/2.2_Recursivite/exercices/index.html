@@ -4357,10 +4357,157 @@ On teste les deux cas possibles.        </p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  11</p>
 <p>Exercice 1 du sujet <a class="" href="../../../T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf" target="_blank">Centres Étrangers J2 2022</a></p>
+<details class="success">
+<summary>Correction Q1.a.</summary>
+<p><code>f(5)</code> affichera :
+<code>`5
+4
+3
+2
+1
+Partez!</code>        </p>
+</details>
+<details class="success">
+<summary>Correction Q1.b.</summary>
+<p>On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.        </p>
+</details>
+<details class="success">
+<summary>Correction  Q2.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">m</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<p>La commande renvoie :
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;ba&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;bc&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q2.c.</summary>
+<p>La commande renvoie :
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q3.a.</summary>
+<p>Comme <code>n</code> vaut 0, on est dans le cas de base et donc la commande renvoie <code>[""]</code>.</p>
+<p><code>[""]</code> <strong>n'est pas</strong> une liste vide, car elle contient un élément (une chaine de caractères vide). La liste vide est <code>[]</code>.        </p>
+</details>
+<details class="success">
+<summary>Correction Q3.b.</summary>
+<p><code>produit('ab', 1)</code> renvoie  <code>['a', 'b']</code>.        </p>
+</details>
+<details class="success">
+<summary>Correction Q3.c.</summary>
+<p><code>produit('ab', 2)</code> renvoie  <code>['aa', 'ab', 'ba', 'bb']</code>.           </p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  12 <i id="ex1J2AN2024"></i></p>
 <p>Exercice 1 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf" target="_blank">sujet Amérique du Nord J2 2024</a>    </p>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>       
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+        <span class="n">echange</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">triStooge</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><code>k</code> vaut <code>(5 - 0 + 1) // 3</code>, donc <code>k</code> vaut 2. </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<ul>
+<li>étape 1 : 3 appels</li>
+<li>étape 2 : 9 appels</li>
+<li>étape 3 : 27 appels</li>
+</ul>
+<p>Il y a donc 39 appels au total.</p>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<ul>
+<li>case 1 : <code>triStooge(A,1,3)</code> </li>
+<li>case 2 : <code>triStooge(A,2,3)</code></li>
+<li>case 3 : <code>triStooge(A,0,3)</code>        </li>
+</ul>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<p>Correction probable, mais cette question est incompréhensible...</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Appel</th>
+<th style="text-align: center;">Valeur de A avant l'appel</th>
+<th style="text-align: center;">Valeur de A après l'appel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>triStooge(A,0,3)</code></td>
+<td style="text-align: center;">[5, 6, 4, 2]</td>
+<td style="text-align: center;">[2, 6, 4, 5]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>triStooge(A,0,2)</code></td>
+<td style="text-align: center;">[2, 6, 4, 5]</td>
+<td style="text-align: center;">[2, 4, 6, 5]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>triStooge(A,1,3)</code></td>
+<td style="text-align: center;">[2, 4, 6, 5]</td>
+<td style="text-align: center;">[2, 4, 5, 6]</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>triStooge(A,0,2)</code></td>
+<td style="text-align: center;">[2, 4, 5, 6]</td>
+<td style="text-align: center;">[2, 4, 5, 6]</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<p>Nous connaissons (par exemple) le tri par sélection, dont l'ordre est en <span class="arithmatex">\(n^2\)</span>. </p>
+<p>Comme <span class="arithmatex">\(2 &lt; \frac{8}{3}\)</span>, on en déduit que le tri par sélection a un coût meilleur que le tri de Stooge. </p>
+</details>
 </div>
 
 
