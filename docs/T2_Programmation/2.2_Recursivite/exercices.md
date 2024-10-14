@@ -478,7 +478,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\" 
         ```python linenums='1'
@@ -494,7 +494,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b\" 
         'GATCGTCTAGCA' n'est pas un palindrome donc 'GATCGT' n'est pas palindromique.        
@@ -503,7 +503,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.c\" 
         ```python linenums='1'
