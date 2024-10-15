@@ -170,11 +170,13 @@ Mais plus précisément, on a :
 
 {{initexo(0)}}
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Retrouvez comment accéder aux éléments 3, 5 et 1.
-    === "Correction"
-        {{ correction(True,
-        "
+
+    Retrouvez comment accéder aux éléments 3, 5 et 1.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> lst.contenu
         3
@@ -182,9 +184,10 @@ Mais plus précisément, on a :
         5
         >>> lst.suivante.suivante.contenu
         1
-        ``` 
-        "
-        ) }}
+        ```         
+    """
+    )
+    }}
 
 
 
@@ -225,24 +228,26 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée.
-        ```python
-        1. lst = Liste()      
-        2. lst.ajoute_tete(3)
-        3. lst.ajoute_tete(5) 
-        4. lst.ajoute_tete(1) 
-        5. lst.renvoie_tete() 
-        6. lst.est_vide()     
-        7. lst.ajoute_tete(2) 
-        8. lst.renvoie_tete() 
-        9. lst.renvoie_tete() 
-        10. lst.renvoie_tete()
-        11. lst.est_vide()    
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
+
+    On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée.
+    ```python
+    1. lst = Liste()      
+    2. lst.ajoute_tete(3)
+    3. lst.ajoute_tete(5) 
+    4. lst.ajoute_tete(1) 
+    5. lst.renvoie_tete() 
+    6. lst.est_vide()     
+    7. lst.ajoute_tete(2) 
+    8. lst.renvoie_tete() 
+    9. lst.renvoie_tete() 
+    10. lst.renvoie_tete()
+    11. lst.est_vide()    
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         1. lst = Liste()      # lst = None
         2. lst.ajoute_tete(3) # lst = 3
@@ -255,9 +260,10 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         9. lst.renvoie_tete() # lst = 3 valeur renvoyée : 5
         10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
         11. lst.est_vide()    #  valeur renvoyée : True
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}    
 
 
 ## 3. Les piles
@@ -276,29 +282,31 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
 ### 3.1 Utilisation d'une interface de pile
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile ```p``` et la valeur éventuellement renvoyée.
 
-        Bien comprendre que la classe ```Pile()``` et ses méthodes n'existent pas vraiment. Nous *jouons* avec son interface.
+    On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la pile ```p``` et la valeur éventuellement renvoyée.
 
-        On prendra pour convention que la tête de la pile est à droite.
+    Bien comprendre que la classe ```Pile()``` et ses méthodes n'existent pas vraiment. Nous *jouons* avec son interface.
 
-        ```python
-        1. p = Pile() 
-        2. p.empile(3)   
-        3. p.empile(5)  
-        4. p.est_vide()  
-        4. p.empile(1)  
-        5. p.depile()  
-        6. p.depile() 
-        7. p.empile(9)  
-        8. p.depile()  
-        9. p.depile() 
-        10. p.est_vide() 
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
+    On prendra pour convention que la tête de la pile est à droite.
+
+    ```python
+    1. p = Pile() 
+    2. p.empile(3)   
+    3. p.empile(5)  
+    4. p.est_vide()  
+    4. p.empile(1)  
+    5. p.depile()  
+    6. p.depile() 
+    7. p.empile(9)  
+    8. p.depile()  
+    9. p.depile() 
+    10. p.est_vide() 
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         1. p = Pile()  # p = None
         2. p.empile(3)   # p = 3
@@ -311,9 +319,11 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         8. p.depile()  # p = 3       valeur renvoyée :9
         9. p.depile()  # p est vide      valeur renvoyée : 3
         10. p.est_vide() # True
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 ### 3.2 Implémentation(s) d'une pile
@@ -332,37 +342,38 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Créer la classe ```Pile```   ci-dessus. 
+
+    Créer la classe ```Pile```   ci-dessus. 
+    
+    Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
+
+    {#
+    **Correction :heart: :heart: :heart:** 
+
+    ```python linenums='1'
+    class Pile:
+        def __init__(self):
+            self.data = []
         
-        Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
+        def est_vide(self):
+            return len(self.data) == 0       
+    
+        def empile(self,x):
+            self.data.append(x)
 
-        **Correction :heart: :heart: :heart:** 
+        def depile(self):
+            if self.est_vide():
+                print('Vous avez essayé de dépiler une pile vide !')
+                return None
+            else :
+                return self.data.pop() 
+    ```
+    #}
 
-        ```python linenums='1'
-        class Pile:
-            def __init__(self):
-                self.data = []
-            
-            def est_vide(self):
-                return len(self.data) == 0       
-        
-            def empile(self,x):
-                self.data.append(x)
-
-            def depile(self):
-                if self.est_vide():
-                    print('Vous avez essayé de dépiler une pile vide !')
-                    return None
-                else :
-                    return self.data.pop() 
-        ```
-
-
-       
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Pile:
             def __init__(self):
@@ -396,10 +407,10 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
         >>> p.empile(7)
         >>> p
         |5|3|7|
-        ```
-        
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 
 
@@ -418,12 +429,13 @@ class Cellule :
 ```
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
-    === "Correction"
-        {{ correction(True,
-        "
+    À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Cellule :
         def __init__(self, contenu, suivante):
@@ -454,7 +466,6 @@ class Cellule :
                 return s
 
         ```
-        
         Test de l'implémentation :
         ```python
         >>> p = Pile()
@@ -464,8 +475,11 @@ class Cellule :
         >>> p
         |7|3|5|
         ```
-        "
-        ) }}
+
+    """
+    )
+    }}
+
 
 
 
@@ -477,28 +491,29 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 ### 3.3 Application des piles
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Simulez une gestion de l'historique de navigation internet, en créant une classe ```Nav``` qui utilisera une pile.
-        Attention, il ne faut pas réinventer la classe ```Pile```, mais uniquement s'en servir !
-        
-        Exemple d'utilisation :
-        ```python 
-        >>> n = Nav()
-        >>> n.visite('lemonde.fr')
-        page actuelle : lemonde.fr
-        >>> n.visite('google.fr')
-        page actuelle : google.fr
-        >>> n.visite('lyceemauriac.fr')
-        page actuelle : lyceemauriac.fr
-        >>> n.back()
-        page quittée : lyceemauriac.fr
-        >>> n.back()
-        page quittée : google.fr
-        ```
 
-    === "Correction"
-        {{ correction(True,
-        "
+    Simulez une gestion de l'historique de navigation internet, en créant une classe ```Nav``` qui utilisera une pile.
+    Attention, il ne faut pas réinventer la classe ```Pile```, mais uniquement s'en servir !
+    
+    Exemple d'utilisation :
+    ```python 
+    >>> n = Nav()
+    >>> n.visite('lemonde.fr')
+    page actuelle : lemonde.fr
+    >>> n.visite('google.fr')
+    page actuelle : google.fr
+    >>> n.visite('lyceemauriac.fr')
+    page actuelle : lyceemauriac.fr
+    >>> n.back()
+    page quittée : lyceemauriac.fr
+    >>> n.back()
+    page quittée : google.fr
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class Nav:
             def __init__(self):
@@ -511,9 +526,11 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
             def back(self):
                 page_quittee = self.pile.depile()
                 print('page quittée :', page_quittee)
-        ```      
-        "
-        ) }}
+        ```          
+    """
+    )
+    }}
+
 
 
 
@@ -538,25 +555,27 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
 ### 4.1 Utilisation d'une interface de file
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
-        Par convention, on enfilera **à gauche** et on défilera **à droite**.
-        ```python
-        1. f = File()
-        2. f.enfile(3) 
-        3. f.enfile(5)
-        4. f.est_vide()
-        5. f.enfile(1) 
-        6. f.defile() 
-        7. f.defile()
-        8. f.enfile(9) 
-        9. f.defile() 
-        10. f.defile()
-        11. f.est_vide() 
-        ```
-    === "Correction"
-        {{ correction(False,
-        "
+
+    On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la file ```f``` et la valeur éventuellement renvoyée.
+    Par convention, on enfilera **à gauche** et on défilera **à droite**.
+    ```python
+    1. f = File()
+    2. f.enfile(3) 
+    3. f.enfile(5)
+    4. f.est_vide()
+    5. f.enfile(1) 
+    6. f.defile() 
+    7. f.defile()
+    8. f.enfile(9) 
+    9. f.defile() 
+    10. f.defile()
+    11. f.est_vide() 
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         1. f est vide
         2. f = 3
@@ -569,9 +588,12 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         9. val renvoyée : 1 , f =  9 
         10. val renvoyée : 9 , f est vide  
         11. val renvoyée : True
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
+
 
 
 
@@ -587,15 +609,16 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
 - ```__repr__``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```)
 
 
-!!! example "Exercice"
-    === "Énoncé"
-        Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
-        
-        Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
+!!! example "{{ exercice() }}"
 
-    === "Correction"
-        {{ correction(True,
-        "
+    Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
+    
+    Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         class File:
             def __init__(self):
@@ -629,11 +652,11 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
         |8|5|
         >>> f.defile()
         5
-        ```
+        ```        
+    """
+    )
+    }}
 
-
-        "
-        ) }}
 
 
 **Remarque :**  
@@ -656,80 +679,92 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 </center>
 
 
-```python linenums='1'
-# il est impératif de comprendre qu'on peut choisir l'implémentation
-# de la classe Pile qu'on préfère parmi les deux traitées plus haut.
-# Comme elles ont la MÊME INTERFACE et qu'on ne va se servir que
-# de cette interface, leur mécanisme interne n'a aucune influence
-# sur le code de la classe File que nous ferons ensuite.
+!!! example "{{ exercice() }}"
+    Créer une file avec deux piles.
 
-# Par exemple, on choisit celle avec la liste chaînée :
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        # il est impératif de comprendre qu'on peut choisir l'implémentation
+        # de la classe Pile qu'on préfère parmi les deux traitées plus haut.
+        # Comme elles ont la MÊME INTERFACE et qu'on ne va se servir que
+        # de cette interface, leur mécanisme interne n'a aucune influence
+        # sur le code de la classe File que nous ferons ensuite.
 
-class Cellule :
-    def __init__(self, contenu, suivante):
-        self.contenu = contenu
-        self.suivante = suivante
+        # Par exemple, on choisit celle avec la liste chaînée :
 
-
-class Pile:
-    def __init__(self):
-        self.data = None
-    
-    def est_vide(self):
-        return self.data == None
-    
-    def empile(self, x):
-        self.data = Cellule(x, self.data)
-    
-    def depile(self):
-        v = self.data.contenu #on récupère la valeur à renvoyer
-        self.data = self.data.suivante  # on supprime la 1ère cellule  
-        return v
-    
-    def __str__(self):
-        s = "|"
-        c = self.data
-        while c != None :
-            s += str(c.contenu)+"|"
-            c = c.suivante
-        return s
-
-# -------------------------------------------------------    
-# Implémentation d'une file à l'aide de deux piles 
-
-class File:
-    def __init__(self):
-        self.entree = Pile()
-        self.sortie = Pile()
-   
-    def est_vide(self):
-        return self.entree.est_vide() and self.sortie.est_vide()
-
-    def enfile(self,x):
-        self.entree.empile(x)
-
-    def defile(self):
-        if self.est_vide():
-            print("File vide !")
-            return None
-
-        if self.sortie.est_vide():
-            while not self.entree.est_vide():
-                self.sortie.empile(self.entree.depile())
-
-        return self.sortie.depile()
-    
-    
-```
+        class Cellule :
+            def __init__(self, contenu, suivante):
+                self.contenu = contenu
+                self.suivante = suivante
 
 
-```python
->>> f = File()
->>> f.enfile(5)
->>> f.enfile(8)
->>> f.defile()
-5
-```
+        class Pile:
+            def __init__(self):
+                self.data = None
+
+            def est_vide(self):
+                return self.data == None
+
+            def empile(self, x):
+                self.data = Cellule(x, self.data)
+
+            def depile(self):
+                v = self.data.contenu #on récupère la valeur à renvoyer
+                self.data = self.data.suivante  # on supprime la 1ère cellule  
+                return v
+
+            def __str__(self):
+                s = '|'
+                c = self.data
+                while c != None :
+                    s += str(c.contenu) + '|'
+                    c = c.suivante
+                return s
+
+        # -------------------------------------------------------    
+        # Implémentation d'une file à l'aide de deux piles 
+
+        class File:
+            def __init__(self):
+                self.entree = Pile()
+                self.sortie = Pile()
+
+            def est_vide(self):
+                return self.entree.est_vide() and self.sortie.est_vide()
+
+            def enfile(self,x):
+                self.entree.empile(x)
+
+            def defile(self):
+                if self.est_vide():
+                    print('File vide !')
+                    return None
+
+                if self.sortie.est_vide():
+                    while not self.entree.est_vide():
+                        self.sortie.empile(self.entree.depile())
+
+                return self.sortie.depile()
+
+
+        ```
+
+
+        ```python
+        >>> f = File()
+        >>> f.enfile(5)
+        >>> f.enfile(8)
+        >>> f.defile()
+        5
+        ```
+    """
+    )
+    }}
+
+
 
 
 

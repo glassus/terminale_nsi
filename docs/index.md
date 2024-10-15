@@ -2,11 +2,11 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-
+{#
 !!! abstract "Actualités"
     - [Correction DS02](data/DS02_POO_corr.pdf){. target="_blank"} 
     
-
+#}
 
 
 {#
@@ -18,9 +18,13 @@
 !!! note ":star: Thème en cours d'étude :star: "
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
     - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
-    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)   
-    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+
+
+
+### *Thèmes déjà traités*
+- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+- [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)   
+- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
 
 {#
