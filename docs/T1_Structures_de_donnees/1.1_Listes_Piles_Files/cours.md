@@ -229,7 +229,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
 
 !!! example "{{ exercice() }}"
 
-    On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée.
+    On considère l'enchaînement d'opérations ci-dessous. Écrire à chaque étape l'état de la liste ```lst``` et la valeur éventuellement renvoyée. On considèrera que la tête de la liste est à gauche.
     ```python
     1. lst = Liste()      
     2. lst.ajoute_tete(3)
@@ -251,12 +251,12 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         ```python
         1. lst = Liste()      # lst = None
         2. lst.ajoute_tete(3) # lst = 3
-        3. lst.ajoute_tete(5) # lst = 3 5 
-        4. lst.ajoute_tete(1) # lst = 3 5 1
-        5. lst.renvoie_tete() # lst = 3 5 valeur renvoyée : 1
+        3. lst.ajoute_tete(5) # lst = 5 3 
+        4. lst.ajoute_tete(1) # lst = 1 5 3
+        5. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 1
         6. lst.est_vide()     # valeur renvoyée : False
-        7. lst.ajoute_tete(2) # lst = 3 5 2
-        8. lst.renvoie_tete() # lst = 3 5 valeur renvoyée : 2
+        7. lst.ajoute_tete(2) # lst = 2 5 3
+        8. lst.renvoie_tete() # lst = 5 3 valeur renvoyée : 2
         9. lst.renvoie_tete() # lst = 3 valeur renvoyée : 5
         10. lst.renvoie_tete()# lst = None valeur renvoyée : 3
         11. lst.est_vide()    #  valeur renvoyée : True
@@ -485,7 +485,7 @@ class Cellule :
 
 
 **À retenir :** 
-pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, l'implémentation qui est derrière. 
+pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, quelle est l'implémentation qui est derrière. 
 ![](data/xkcd.png){: .center}
 
 ### 3.3 Application des piles
