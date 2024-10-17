@@ -345,9 +345,9 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
 
     Créer la classe ```Pile```   ci-dessus. 
     
-    Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
+    Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists){. target="_blank"}.
 
-    {#
+ 
     **Correction :heart: :heart: :heart:** 
 
     ```python linenums='1'
@@ -371,7 +371,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
     #}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
