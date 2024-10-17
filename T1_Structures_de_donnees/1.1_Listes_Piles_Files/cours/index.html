@@ -4206,6 +4206,16 @@ On notera que cette problématique est universelle : voir par exemple <a href="h
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Retrouvez comment accéder aux éléments 3, 5 et 1.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span><span class="o">.</span><span class="n">contenu</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span><span class="o">.</span><span class="n">suivante</span><span class="o">.</span><span class="n">contenu</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span><span class="o">.</span><span class="n">suivante</span><span class="o">.</span><span class="n">suivante</span><span class="o">.</span><span class="n">contenu</span>
+<span class="mi">1</span>
+</code></pre></div>
+</details>
 </div>
 <p>On pourra remarquer que l'interface proposée à l'utilisateur n'est pas des plus pratiques...</p>
 <h3 id="24-et-les-listes-de-python">2.4 Et les listes de Python ???<a class="headerlink" href="#24-et-les-listes-de-python" title="Permanent link">⚓︎</a></h3>
@@ -4248,6 +4258,21 @@ Néanmoins, l'implémentation qui a été choisie par les concepteurs de Python 
 <span class="mf">10.</span> <span class="n">lst</span><span class="o">.</span><span class="n">renvoie_tete</span><span class="p">()</span>
 <span class="mf">11.</span> <span class="n">lst</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>    
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span> <span class="n">lst</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">()</span>      <span class="c1"># lst = None</span>
+<span class="mf">2.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># lst = 3</span>
+<span class="mf">3.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># lst = 5 3 </span>
+<span class="mf">4.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># lst = 1 5 3</span>
+<span class="mf">5.</span> <span class="n">lst</span><span class="o">.</span><span class="n">renvoie_tete</span><span class="p">()</span> <span class="c1"># lst = 5 3 valeur renvoyée : 1</span>
+<span class="mf">6.</span> <span class="n">lst</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>     <span class="c1"># valeur renvoyée : False</span>
+<span class="mf">7.</span> <span class="n">lst</span><span class="o">.</span><span class="n">ajoute_tete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># lst = 2 5 3</span>
+<span class="mf">8.</span> <span class="n">lst</span><span class="o">.</span><span class="n">renvoie_tete</span><span class="p">()</span> <span class="c1"># lst = 5 3 valeur renvoyée : 2</span>
+<span class="mf">9.</span> <span class="n">lst</span><span class="o">.</span><span class="n">renvoie_tete</span><span class="p">()</span> <span class="c1"># lst = 3 valeur renvoyée : 5</span>
+<span class="mf">10.</span> <span class="n">lst</span><span class="o">.</span><span class="n">renvoie_tete</span><span class="p">()</span><span class="c1"># lst = None valeur renvoyée : 3</span>
+<span class="mf">11.</span> <span class="n">lst</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span>    <span class="c1">#  valeur renvoyée : True</span>
+</code></pre></div>
+</details>
 </div>
 <h2 id="3-les-piles">3. Les piles<a class="headerlink" href="#3-les-piles" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/gifpile.webp" /></p>
@@ -4421,7 +4446,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 octobre 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 octobre 2024</span>
   </span>
 
     
