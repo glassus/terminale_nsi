@@ -174,7 +174,7 @@ Mais plus précisément, on a :
     Retrouvez comment accéder aux éléments 3, 5 et 1.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -245,7 +245,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
