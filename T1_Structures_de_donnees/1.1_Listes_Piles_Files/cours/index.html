@@ -4466,9 +4466,9 @@ Test de l'implémentation :
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Cellule</span> <span class="p">:</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
 
 <span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -4524,6 +4524,31 @@ Attention, il ne faut pas réinventer la classe <code>Pile</code>, mais uniqueme
 <span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
 <span class="n">page</span> <span class="n">quittée</span> <span class="p">:</span> <span class="n">google</span><span class="o">.</span><span class="n">fr</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Nav</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">visite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page actuelle :&#39;</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">page_quittee</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page quittée :&#39;</span><span class="p">,</span> <span class="n">page_quittee</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h2 id="4-les-files">4. Les files<a class="headerlink" href="#4-les-files" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/giffile.webp" /></p>
