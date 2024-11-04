@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -4049,7 +4049,7 @@
 <h2 id="1-premiere-approche">1. Première approche<a class="headerlink" href="#1-premiere-approche" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-definition">1.1. Définition<a class="headerlink" href="#11-definition" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
-<p class="admonition-title">Fonction récursive <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Fonction récursive <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Une fonction est dite récursive lorsqu'elle fait appel à elle-même dans sa propre définition. </p>
 </div>
 <h3 id="12-un-tres-mauvais-exemple">1.2 Un très mauvais exemple<a class="headerlink" href="#12-un-tres-mauvais-exemple" title="Permanent link">⚓︎</a></h3>
@@ -4096,7 +4096,7 @@ un très mauvais exemple
 <li>VISA (les cartes bancaires) signifie VISA International Service Association.</li>
 </ul>
 <h2 id="2-la-recursivite-ca-marche">2. La récursivité, ça marche !<a class="headerlink" href="#2-la-recursivite-ca-marche" title="Permanent link">⚓︎</a></h2>
-<p>Disons-le clairement : au-delà de la blague pour initiés (dont vous faites partie maintenant) la récursivité ne DOIT PAS être associée à une auto-référence vertigineuse : c'est en algorithmique une méthode (parfois) très efficace, à condition de respecter une règle cruciale :  <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <strong>l'existence d'un CAS DE BASE</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> .  </p>
+<p>Disons-le clairement : au-delà de la blague pour initiés (dont vous faites partie maintenant) la récursivité ne DOIT PAS être associée à une auto-référence vertigineuse : c'est en algorithmique une méthode (parfois) très efficace, à condition de respecter une règle cruciale :  <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <strong>l'existence d'un CAS DE BASE</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> .  </p>
 <p>Ce «cas de base» sera aussi appelé «condition d'arrêt», puisque la très grande majorité des algorithmes récursifs peuvent être perçus comme des escaliers qu'on descend marche par marche, jusqu'au sol qui assure notre arrêt.</p>
 <h3 id="21-la-recursivite-en-bd">2.1 La récursivité en BD<a class="headerlink" href="#21-la-recursivite-en-bd" title="Permanent link">⚓︎</a></h3>
 <p><a href="../data/bd.png" target="_blank"><img alt="image" class="center" src="../data/bd.png" width="70%" /></a></p>
@@ -4106,7 +4106,7 @@ Le cas de base est ici l'étage 0. Il empêche une descente infinie.</p>
 <p>Pour l'instant, découvrons enfin à quoi ressemble une fonction récursive «bien écrite» :</p>
 <h3 id="22-enfin-un-bon-exemple">2.2 Enfin un bon exemple<a class="headerlink" href="#22-enfin-un-bon-exemple" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Exemple fondateur n°1 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Exemple fondateur n°1 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4334,7 +4334,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
     <span class="n">fibo_recursif</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;algo récursif : &quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Résultats</strong></p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Résultats</strong></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">comparaison</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">algo</span> <span class="n">impératif</span> <span class="p">:</span>  <span class="mf">6.9141387939453125e-06</span>
 <span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">1.7642974853515625e-05</span>
@@ -4349,7 +4349,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 <span class="n">algo</span> <span class="n">récursif</span> <span class="p">:</span>  <span class="mf">31.332343339920044</span>
 </code></pre></div>
 <p>La fonction récursive apparait donc <strong>beaucoup</strong>, beaucoup plus lente que l'impérative (ici d'un facteur 100 pour toute augmentation de 10 du paramètre <code>n</code>.)</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même <em>complexité</em>. Nous étudierons la complexité au moment des algorithmes de tri. La complexité des fonctions récursives n'est pas au programme de NSI.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même <em>complexité</em>. Nous étudierons la complexité au moment des algorithmes de tri. La complexité des fonctions récursives n'est pas au programme de NSI.</p>
 <p><img alt="image" class="center" src="../data/prod.jpg" width="40%" /></p>
 <p>Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est <em>aussi</em> avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)</p>
 <h2 id="5-annexe-dessins-recursifs-grace-au-module-turtle">5. Annexe : dessins récursifs grâce au module <code>turtle</code><a class="headerlink" href="#5-annexe-dessins-recursifs-grace-au-module-turtle" title="Permanent link">⚓︎</a></h2>

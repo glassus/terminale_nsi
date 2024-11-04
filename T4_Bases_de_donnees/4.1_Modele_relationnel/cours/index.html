@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -4017,7 +4017,7 @@ le modèle relationnel est à ce jour le modèle de base de données le plus uti
 <p>Prenons l'exemple d'une bibliothèque dont la base de données possède une relation «livres» :
 <img alt="" src="../data/rel_livres.png" /></p>
 <div class="admonition aide">
-<p class="admonition-title">Vocabulaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Vocabulaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li><strong>relation</strong>, ou <strong>table</strong> : c'est l'endroit où sont rangées les données. L'ordre des lignes (que l'on appelera des enregistrements) n'a pas d'importance.</li>
 <li><strong>enregistrement</strong>, ou <strong>tuple</strong>, ou <strong>n-uplet</strong>, ou <strong>t-uplet</strong>, ou <strong>vecteur</strong> : cela correspond à une ligne du tableau, et donc un ensemble de valeurs liées entre elles : l'auteur «Eric VUILLARD» a bien écrit le livre «L'Ordre du jour». 
@@ -4033,7 +4033,7 @@ Par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifes
 </div>
 <h2 id="3-cle-primaire">3. Clé Primaire<a class="headerlink" href="#3-cle-primaire" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
-<p class="admonition-title">Clé primaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Clé primaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Une clé primaire est un attribut (ou une réunion d'attributs) <strong>dont la connaissance suffit à identifier avec certitude un unique enregistrement</strong>.</p>
 </div>
 <p>Par exemple, la clé primaire de la relation des personnes nées en France pourrait être leur <a href="https://fr.wikipedia.org/wiki/Num%C3%A9ro_de_s%C3%A9curit%C3%A9_sociale_en_France" target="_blank">numéro de Sécurité Sociale</a>.</p>
@@ -4049,7 +4049,7 @@ Par contre l'attribut «ISBN» est un nombre de 13 chiffres, commençant manifes
 Il peut arriver aussi que deux livres aient le même titre : l'attribut «Titre» n'est donc pas une bonne clé primaire.</p>
 <p>Par définition, l'attribut «ISBN» pourrait jouer le rôle de clé primaire.</p>
 <p>Quant à l'attribut «Code», il s'agit sans doute d'une nomenclature «maison» correspondant à une étiquette collée sur la tranche des livres : c'est donc une clé primaire qu'on qualifiera d'«artificielle».  </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention</strong> <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /><br />
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention</strong> <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /><br />
 Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire choisie ici serait sans aucun doute l'attribut «Code».</p>
 <p><img alt="image" class="center" src="../data/meme_primary_key.png" /></p>
 <h2 id="4-dautres-relations">4. D'autres relations<a class="headerlink" href="#4-dautres-relations" title="Permanent link">⚓︎</a></h2>
@@ -4129,7 +4129,7 @@ Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire cho
 <p>Y-a-t-il une clé primaire dans la relation «Emprunts» ? </p>
 <p>«id_emprunteur» est bien une clé primaire (d'«Emprunteurs») mais ne peut pas être une clé primaire d'«Emprunts», car une personne peut prendre plusieurs livres à la fois : on dit que c'est une <strong>clé étrangère</strong>. </p>
 <div class="admonition note">
-<p class="admonition-title">Clé étrangère <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Clé étrangère <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Une clé étrangère est une clé primaire d'une autre relation.</p>
 </div>
 <p>«code» est aussi une clé étrangère : c'est une clé primaire (de la relation «livres») mais elle ne peut pas jouer le rôle de clé primaire pour la relation emprunt, car un même livre pourra être pris à différentes dates.</p>
@@ -4166,18 +4166,18 @@ Il ne peut pas y avoir deux clés primaires dans une table. La clé primaire cho
 </table>
 <h2 id="6-les-3-contraintes-dintegrite">6. Les 3 contraintes d'intégrité<a class="headerlink" href="#6-les-3-contraintes-dintegrite" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
-<p class="admonition-title">Contrainte de domaine <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Contrainte de domaine <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Tout attribut d'un enregistrement doit respecter le domaine indiqué dans le schéma relationnel.</p>
 </div>
 <p>Attention, certains domaines sont subtils. Par exemple, si une relation possède un attribut "Code Postal", le domaine de cet attribut devra être <code>String</code> plutôt que <code>Entier</code> . Dans le cas contraire, un enregistrement possédant le code postal <code>03150</code> serait converti en <code>3150</code> (car pour les entiers, 03150 = 3150). Or le code postal <code>3150</code> n'existe pas.</p>
 <div class="admonition note">
-<p class="admonition-title">Contrainte de relation <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Contrainte de relation <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Tout enregistrement est unique.<br />
 Cette contrainte est assurée par l'existence obligatoire d'une clé primaire.</p>
 </div>
 <p>Cette clé primaire est souvent créée de manière artificielle (voir <code>id_emprunteurs</code>  dans la table ci-dessus par exemple).</p>
 <div class="admonition note">
-<p class="admonition-title">Contrainte de référence <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Contrainte de référence <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>La cohérence entre les différentes tables d'une base de données est assurée par les clés étrangères : dans une table, la valeur d'un attribut qui est clé étrangère doit obligatoirement pouvoir être retrouvée dans la table dont cet attribut est clé primaire.</p>
 </div>
 <p>Par exemple, la relation «Emprunts_v2» ci-dessous n'est pas valable :</p>
@@ -4270,7 +4270,7 @@ Cette contrainte est assurée par l'existence obligatoire d'une clé primaire.</
 </tbody>
 </table>
 <div class="admonition aide">
-<p class="admonition-title">Écriture classique d'un schéma relationnel <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Écriture classique d'un schéma relationnel <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Le schéma relationnel de cette table sera fréquemment donné sous cette forme :<br />
 Equipes ( <ins>codeEquipe</ins>  <code>String</code>,  nomEquipe <code>String</code> ) </p>
 <p>Notez le soulignement sous le mot «codeEquipe», qui signifie que cet attribut est une clé primaire. 
@@ -4460,7 +4460,7 @@ Equipes ( <ins>dossard</ins>  <code>Int</code>,  nomCoureur <code>String</code>,
 Temps ( <ins>dossard</ins>*  <code>Int</code>,  <ins>numéroEtape</ins> *  <code>Int</code>,  tempsRéalisé <code>String</code>) </p>
 <p>Remarquez que la clé primaire de cette relation est le couple dossard-numéroEtape.</p>
 <div class="admonition aide">
-<p class="admonition-title">Diagramme relationnel <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Diagramme relationnel <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Fréquemment, on présentera l'ensemble des renseignements d'un modèle relationnel sous forme d'un diagramme qui synthétise la composition des différentes tables et les relations entre elles.
 <img alt="" class="center" src="../data/schema_tdf.png" /></p>
 </div>
