@@ -522,8 +522,11 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
                 print('page actuelle :', page)
             
             def back(self):
-                page_quittee = self.data.depile()
-                print('page quittée :', page_quittee)
+                if self.data.est_vide():
+                    print("pas de back possible")
+                else:
+                    page_quittee = self.data.depile()
+                    print('page quittée :', page_quittee)
         ```          
     """
     )
