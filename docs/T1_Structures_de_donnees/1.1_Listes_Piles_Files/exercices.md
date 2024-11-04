@@ -38,7 +38,7 @@
             return m
         ```
 
-        Avec le code ci-dessus, la pile ```p``` est vide à la fin de l'exécution. Pour éviter cela, on peut par exemple créer une pile ```q``` temporaire qui recevra les éléments de ```p```, avant de retransférer à la fin du programme les éléments de ```q```  dans ```p```.
+        Avec le code ci-dessus, la pile ```P``` est vide à la fin de l'exécution. Pour éviter cela, on peut par exemple créer une pile ```Q``` temporaire qui recevra les éléments de ```Q```, avant de retransférer à la fin du programme les éléments de ```Q```  dans ```P```.
 
         ```python linenums='1'
         def maximum(P):
