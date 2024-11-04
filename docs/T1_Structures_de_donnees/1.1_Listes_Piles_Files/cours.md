@@ -368,12 +368,10 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
             else :
                 return self.data.pop() 
     ```
-    #}
-
     {{
     correction(True,
     """
-    ??? success \"Correction\" 
+    ??? success \"Correction (avec ```__repr__```)\" 
         ```python linenums='1'
         class Pile:
             def __init__(self):
