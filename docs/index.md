@@ -17,6 +17,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 
 
 
