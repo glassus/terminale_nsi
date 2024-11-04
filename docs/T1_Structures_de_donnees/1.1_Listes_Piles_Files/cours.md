@@ -523,7 +523,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
             
             def back(self):
                 if self.data.est_vide():
-                    print("pas de back possible")
+                    print('pas de back possible')
                 else:
                     page_quittee = self.data.depile()
                     print('page quittée :', page_quittee)
