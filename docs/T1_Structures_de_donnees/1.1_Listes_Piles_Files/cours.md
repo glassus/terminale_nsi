@@ -436,9 +436,9 @@ class Cellule :
     ??? success \"Correction\" 
         ```python linenums='1'
         class Cellule :
-        def __init__(self, contenu, suivante):
-            self.contenu = contenu
-            self.suivante = suivante
+            def __init__(self, contenu, suivante):
+                self.contenu = contenu
+                self.suivante = suivante
 
         class Pile:
             def __init__(self):
@@ -509,20 +509,20 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         class Nav:
             def __init__(self):
-                self.pile = Pile()
+                self.data = Pile()
             
             def visite(self, page):
-                self.pile.empile(page)
+                self.data.empile(page)
                 print('page actuelle :', page)
             
             def back(self):
-                page_quittee = self.pile.depile()
+                page_quittee = self.data.depile()
                 print('page quittée :', page_quittee)
         ```          
     """
