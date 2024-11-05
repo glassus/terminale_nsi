@@ -1,6 +1,6 @@
+{{initexo(0)}}
 
-
-!!! example "Exercice 1"
+!!! example "{{ exercice() }}"
 
     Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
 
@@ -91,7 +91,7 @@
 
         
 
-!!! example "Exercice 2"
+!!! example "{{ exercice() }}"
 
     Exercice 1 du sujet [La Réunion J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
 
@@ -162,39 +162,76 @@
 
 
         
+!!! example "{{ exercice() }}"
 
-!!! example "Exercice 3"
-    === "Énoncé"
-        Exercice 2 du sujet [Métropole Candidats Libres J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf){. target="blank"}
+    Exercice 2 du sujet [Métropole Candidats Libres J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf){. target="blank"}
 
-    === "Corr. Q1a"
+
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\" 
         ```python linenums='1'
         pile1 = Pile()
         pile1.empiler(7)
         pile1.empiler(5)
         pile1.empiler(2)
-        ```
+        ```        
+    """
+    )
+    }}
 
-    === "Corr. Q1b"
-        L'affichage produit est ```7, 5, 5, 2```.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\" 
+        L'affichage produit est ```7, 5, 5, 2```.        
+    """
+    )
+    }}
 
-    === "Corr. Q2a"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a.\" 
         - Cas n°1 : ```3, 2``` 
         - Cas n°2 : ```3, 2, 5, 7```
         - Cas n°3 : ```3```
         - Cas n°4 : ```«pile vide»```
+        
+    """
+    )
+    }}
 
-    === "Corr. Q2b"
-        La fonction ```mystere``` permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b\" 
+        La fonction ```mystere``` permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).        
+    """
+    )
+    }}
 
-    === "Corr. Q3"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
         ```python linenums='1'
         def etendre(pile1, pile2):
             while not pile2.est_vide():
                 val = pile2.depiler()
                 pile1.empiler(val)
-        ```
-    === "Corr. Q4"
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\" 
         ```python linenums='1'
         def supprime_toutes_occurences(pile, element):
             p_temp = Pile()
@@ -205,28 +242,43 @@
             while not p_temp.est_vide():
                 val = p_temp.depiler()
                 pile.empiler(val)
-        ```
+        ```        
+    """
+    )
+    }}
 
-!!! example "Exercice 4"
-    === "Énoncé"
-        Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
 
-    === "Corr. Q1a"
+
+
+!!! example "{{ exercice() }}"
+
+    Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\" 
         Le contenu de la pile P sera 
 
         ```python
-        | "rouge" |
-        | "vert"  |
-        | "jaune" |
-        | "rouge" |
-        | "jaune" |
+        | 'rouge' |
+        | 'vert'  |
+        | 'jaune' |
+        | 'rouge' |
+        | 'jaune' |
          _________
-        ```
+        ```       
+    """
+    )
+    }}
 
-    === "Corr. Q1b"   
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\" 
         ```python linenums='1'
         def taille_file(F):
-            """File -> Int"""
+            \"\"\"File -> Int\"\"\"
             F_temp = creer_file_vide()
             n = 0
             while not est_vide(F):
@@ -235,12 +287,19 @@
             while not est_vide(F_temp):
                 enfiler(F, defiler(F_temp))
             return n
-        ```
+        ```     
+    """
+    )
+    }}
 
-    === "Corr. Q2"   
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
+
         ```python linenums='1'
         def former_pile(F):
-            """File -> Pile"""
+            \"\"\"File -> Int\"\"\"
             P_temp = creer_pile_vide()
             P = creer_pile_vide()
             while not est_vide(F):
@@ -248,12 +307,20 @@
             while not est_vide(P_temp):
                 empiler(P, depiler(P_temp))
             return P
-        ```
+        ```        
+    """
+    )
+    }}
 
-    === "Corr. Q3"   
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
         ```python linenums='1'
         def nb_elements(F, elt):
-            """File, Int -> Int"""
+            \"\"\"File -> Int\"\"\"
             F_temp = creer_file_vide()
             n = 0
             while not est_vide(F):
@@ -264,34 +331,65 @@
             while not est_vide(F_temp):
                 enfiler(F, deFiler(F_temp))
             return n
-        ```
-    === "Corr. Q4"   
+        ```  
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\" 
         ```python linenums='1'
         def verifier_contenu(F, nb_rouge, nb_vert, nb_jaune):
-            """File, Int, Int, Int -> Bool"""
-            return nb_elements(F, "rouge") <= nb_rouge and \
-                   nb_elements(F, "vert") <= nb_vert and \
-                   nb_elements(F, "jaune") <= nb_jaune
-        ```
+            \"\"\"File, Int, Int, Int -> Bool\"\"\"
+            return nb_elements(F, 'rouge') <= nb_rouge and 
+                   nb_elements(F, 'vert') <= nb_vert and 
+                   nb_elements(F, 'jaune') <= nb_jaune
+        ```  
+    """
+    )
+    }}
 
-!!! example "Exercice 5"
-    === "Énoncé"
-        Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
 
-    === "Corr. Q1"
+
+
+
+!!! example "{{ exercice() }}"
+
+    Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.\" 
         Il faut écrire l'instruction : 
 
         ```python
-        panier_1.enfile((31002, "café noir", 1.50, 50525))
-        ```
-    === "Corr. Q2"
+        panier_1.enfile((31002, 'café noir', 1.50, 50525))
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
         ```python linenums='1'
         def remplir(self, panier_temp):
             while not panier_temp.est_vide():
                 article = panier_temp.defile()
                 self.enfile(article)
-        ```
-    === "Corr. Q3"
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
         ```python linenums='1'
         def prix_total(self):
             total = 0
@@ -303,8 +401,15 @@
             self.remplir(panier_temp)
             return total          
  
-        ```
-    === "Corr. Q4"
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\" 
         ```python linenums='1'
         def duree_passage_en_caisse(self):
             if self.est_vide():
@@ -313,10 +418,139 @@
             while not self.est_vide():
                 horaire_dernier = self.defile()[3]
             return horaire_dernier - horaire_premier                 
+        ```        
+    """
+    )
+    }}
+
+
+
+
+!!! example "{{ exercice() }}"
+    Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
+
+    [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.\" 
+        ```python linenums='1' hl_lines='3 4'
+        def ajout(f):
+            couleurs = ('bleu', 'rouge', 'jaune', 'vert')
+            indice = randint(0, 3)
+            enfiler(f, couleur[indice])
+            return f
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
+        ```python
+        def vider(f):
+            while not est_vide(f):
+                defiler(f)
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.\" 
+        ```python linenums='1' hl_lines='5 6 8-10'
+        def affich_seq(sequence):
+            stock = creer_file_vide()
+            ajout(sequence)
+            while not est_vide(sequence):
+                c = defiler(sequence)
+                affichage(c)
+                time.sleep(0.5)
+                enfiler(stock, c)
+            while not est_vide(stock):
+                enfiler(sequence, defiler(stock))        
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.a.\" 
+        ```python linenums='1' hl_lines='2 6 7 8 10-12'
+        def tour_de_jeu(sequence):
+            affich_seq(sequence)
+            stock = creer_file_vide()
+            while not est_vide(sequence):
+                c_joueur = saisie_joueur()
+                c_seq = defiler(sequence)
+                if c_joueur == c_seq:
+                    enfiler(stock, c_seq)
+                else:
+                    vider(sequence)
+            while not est_vide(stock):
+                enfiler(sequence, defiler(stock))
+        ```        
+    """
+    )
+    }}
+
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.b.\" 
+        Question bizarre...
+
+        ```python linenums='1'
+        def tour_de_jeu_modifie(sequence):
+            while True:
+                affich_seq(sequence)
+                stock = creer_file_vide()
+                while not est_vide(sequence):
+                    c_joueur = saisie_joueur()
+                    c_seq = defiler(sequence)
+                    if c_joueur == c_seq:
+                        enfiler(stock, c_seq)
+                    else:
+                        vider(sequence)
+                        vider(stock)
+                while not est_vide(stock):
+                    enfiler(sequence, defiler(stock))
         ```
+        
+        ou bien
+
+        ```python linenums='1'
+        def tour_de_jeu_modifie(sequence):
+            affich_seq(sequence)
+            stock = creer_file_vide()
+            while not est_vide(sequence):
+                c_joueur = saisie_joueur()
+                c_seq = defiler(sequence)
+                if c_joueur == c_seq:
+                    enfiler(stock, c_seq)
+                else:
+                    vider(sequence)
+                    print('Perdu ! On rejoue !')
+                    tour_de_jeu_modifie(sequence)
+            while not est_vide(stock):
+                enfiler(sequence, defiler(stock))
+            tour_de_jeu_modifie(sequence)
+        ```        
+    """
+    )
+    }}
 
 
-??? example "Exercice 6"
+
+??? example "{{ exercice() }} (:skull: difficile :skull:)"
 
     Cet exercice est basé sur l'[énigme n°5](https://adventofcode.com/2018/day/5){. target="_blank"} d'Advent Of Code 2018.
 
@@ -421,7 +655,7 @@
     Dans cette énigme n°5, la réponse à donner est le nombre de caractères de la chaîne une fois simplifiée. Ce qui ne devrait pas nous poser de problème.
 
     Par contre, la chaîne ```'dabAcCaCBAcCcaDA'``` sur laquellle nous avons travaillé n'est qu'un exemple...
-    La **vraie** chaîne contient 50000 caractères : 
+    La **vraie** chaîne contient 50000 caractères : vous pouvez télécharger le fichier la contenant ici : [input.txt](data/input.txt){. target="_blank"}
 
     Anecdotique ? Pas vraiment...
 
@@ -429,7 +663,7 @@
 
     ??? aide "Correction"
         ```python linenums='1'
-        s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
+        s = open('input.txt').read()
 
         def simplifiable(l1, l2):
             return abs(ord(l1) - ord(l2)) == 32
@@ -452,7 +686,7 @@
         print(len(reduction(s)))
         ```
         
-        Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)
+        Le résultat (9371) est loooong à nous parvenir ! (30 secondes sur ma machine)
     
 
     #### 5. Sauvé par une pile
@@ -472,9 +706,36 @@
 
     ??? aide "Correction"
         ```python linenums='1'
-        s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
+        s = open('input.txt').read()
+        class Pile:
+            def __init__(self):
+                self.data = []
 
-        p = Pile() # ne pas oublier de récupérer une implémentation de la classe Pile()...
+            def est_vide(self):
+                return len(self.data) == 0       
+
+            def empile(self,x):
+                self.data.append(x)
+
+            def depile(self):
+                if self.est_vide():
+                    print('Vous avez essayé de dépiler une pile vide !')
+                    return None
+                else :
+                    return self.data.pop()
+
+            def taille(self):
+                Q = Pile()
+                n = 0
+                while not self.est_vide():
+                    Q.empile(self.depile())
+                    n += 1
+                while not Q.est_vide():
+                    self.empile(Q.depile())
+                return n
+
+
+        p = Pile() 
 
         def simplifiable(l1, l2):
             return abs(ord(l1) - ord(l2)) == 32
@@ -488,98 +749,8 @@
                     p.empile(sommet)
                     p.empile(lettre)
 
-        print(p.taille())     
+        print(p.taille())
+   
         ```
 
         Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
-
-!!! example "Exercice 7"
-    Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
-
-    [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
-
-    ??? tip "Correction Q1."
-        ```python linenums='1' hl_lines='3 4'
-        def ajout(f):
-            couleurs = ("bleu", "rouge", "jaune", "vert")
-            indice = randint(0, 3)
-            enfiler(f, couleur[indice])
-            return f
-        ```
-
-    ??? tip "Correction Q2."
-        ```python
-        def vider(f):
-            while not est_vide(f):
-                defiler(f)
-        ```
-
-    ??? tip "Correction Q3."
-        ```python linenums='1' hl_lines='5 6 8-10'
-        def affich_seq(sequence):
-            stock = creer_file_vide()
-            ajout(sequence)
-            while not est_vide(sequence):
-                c = defiler(sequence)
-                affichage(c)
-                time.sleep(0.5)
-                enfiler(stock, c)
-            while not est_vide(stock):
-                enfiler(sequence, defiler(stock))        
-        ```
-
-    ??? tip "Correction Q4.a."
-        ```python linenums='1' hl_lines='2 6 7 8 10-12'
-        def tour_de_jeu(sequence):
-            affich_seq(sequence)
-            stock = creer_file_vide()
-            while not est_vide(sequence):
-                c_joueur = saisie_joueur()
-                c_seq = defiler(sequence)
-                if c_joueur == c_seq:
-                    enfiler(stock, c_seq)
-                else:
-                    vider(sequence)
-            while not est_vide(stock):
-                enfiler(sequence, defiler(stock))
-        ```
-
-    ??? tip "Correction Q4.b."
-        Question bizarre...
-
-        ```python linenums='1'
-        def tour_de_jeu_modifie(sequence):
-            while True:
-                affich_seq(sequence)
-                stock = creer_file_vide()
-                while not est_vide(sequence):
-                    c_joueur = saisie_joueur()
-                    c_seq = defiler(sequence)
-                    if c_joueur == c_seq:
-                        enfiler(stock, c_seq)
-                    else:
-                        vider(sequence)
-                        vider(stock)
-                while not est_vide(stock):
-                    enfiler(sequence, defiler(stock))
-        ```
-        
-        ou bien
-
-        ```python linenums='1'
-        def tour_de_jeu_modifie(sequence):
-            affich_seq(sequence)
-            stock = creer_file_vide()
-            while not est_vide(sequence):
-                c_joueur = saisie_joueur()
-                c_seq = defiler(sequence)
-                if c_joueur == c_seq:
-                    enfiler(stock, c_seq)
-                else:
-                    vider(sequence)
-                    print("Perdu ! On rejoue !")
-                    tour_de_jeu_modifie(sequence)
-            while not est_vide(stock):
-                enfiler(sequence, defiler(stock))
-            tour_de_jeu_modifie(sequence)
-        ```
