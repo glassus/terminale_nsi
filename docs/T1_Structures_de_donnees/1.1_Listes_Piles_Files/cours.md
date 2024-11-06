@@ -574,7 +574,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -617,7 +617,7 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
     Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
