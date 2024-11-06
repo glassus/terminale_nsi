@@ -61,11 +61,11 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
-        **Q4a.** On va vider la pile ```p``` dans une pile ```q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
-        On redonne ensuite à ```p``` son état initial en vidant ```q``` dans ```p```.
+        **Q4a.** On va vider la pile ```P``` dans une pile ```Q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
+        On redonne ensuite à ```P``` son état initial en vidant ```Q``` dans ```P```.
 
         **Q4b**
 
