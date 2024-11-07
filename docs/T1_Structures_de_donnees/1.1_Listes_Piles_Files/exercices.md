@@ -329,7 +329,7 @@
                     n += 1
                 enfiler(F_temp, val)
             while not est_vide(F_temp):
-                enfiler(F, deFiler(F_temp))
+                enfiler(F, defiler(F_temp))
             return n
         ```  
     """
@@ -337,7 +337,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
