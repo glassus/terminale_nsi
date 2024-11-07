@@ -366,7 +366,7 @@
         Il faut écrire l'instruction : 
 
         ```python
-        panier_1.enfile((31002, 'café noir', 1.50, 50525))
+        panier_1.enfiler((31002, 'café noir', 1.50, 50525))
         ```        
     """
     )
@@ -379,8 +379,8 @@
         ```python linenums='1'
         def remplir(self, panier_temp):
             while not panier_temp.est_vide():
-                article = panier_temp.defile()
-                self.enfile(article)
+                article = panier_temp.defiler()
+                self.enfiler(article)
         ```        
     """
     )
@@ -395,9 +395,9 @@
             total = 0
             panier_temp = Panier()
             while not self.est_vide():
-                article = self.defile()
+                article = self.defiler()
                 total += article[2]
-                panier_temp.enfile(article)
+                panier_temp.enfiler(article)
             self.remplir(panier_temp)
             return total          
  
@@ -414,9 +414,9 @@
         def duree_passage_en_caisse(self):
             if self.est_vide():
                 return None
-            horaire_premier = self.defile()[3]
+            horaire_premier = self.defiler()[3]
             while not self.est_vide():
-                horaire_dernier = self.defile()[3]
+                horaire_dernier = self.defiler()[3]
             return horaire_dernier - horaire_premier                 
         ```        
     """
