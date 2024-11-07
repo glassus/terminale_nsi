@@ -4037,8 +4037,21 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
             <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">enfiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F_temp</span><span class="p">):</span>
-        <span class="n">enfiler</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">deFiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">))</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">F_temp</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">n</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> 
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> 
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_jaune</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
