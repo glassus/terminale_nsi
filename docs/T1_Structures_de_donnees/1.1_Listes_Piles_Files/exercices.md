@@ -360,7 +360,7 @@
     Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         Il faut écrire l'instruction : 
