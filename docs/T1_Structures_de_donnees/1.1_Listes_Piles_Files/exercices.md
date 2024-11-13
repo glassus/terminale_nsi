@@ -215,7 +215,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -229,7 +229,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -439,7 +439,7 @@
         def ajout(f):
             couleurs = ('bleu', 'rouge', 'jaune', 'vert')
             indice = randint(0, 3)
-            enfiler(f, couleur[indice])
+            enfiler(f, couleurs[indice])
             return f
         ```        
     """
