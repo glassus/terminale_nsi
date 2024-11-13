@@ -523,7 +523,7 @@
                         vider(stock)
                 while not est_vide(stock):
                     enfiler(sequence, defiler(stock))
-                ajout(sequence)
+                
         ```
         Le jeu ne s'arrête jamais ¯\\\\_(ツ)\_/¯
     """
