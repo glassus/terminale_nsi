@@ -97,7 +97,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ex2Q1.png){: .center width=70%}
@@ -107,7 +107,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a.\" 
         La variable ```temp``` contient la valeur 25.    
@@ -117,7 +117,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\" 
         ```p1``` est identique, elle contient toujours les valeurs 25, 3 et 7. 
@@ -128,7 +128,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -142,7 +142,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
