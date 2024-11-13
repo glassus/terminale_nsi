@@ -4138,6 +4138,29 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
         <span class="n">defiler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="n">ajout</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="hll">        <span class="n">c</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">affichage</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="hll">        <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>        
+</span></code></pre></div></td></tr></table></div>
+</details>
 </div>
 <details class="example">
 <summary>Exercice  7 (<img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f480.svg" title=":skull:" /> difficile <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f480.svg" title=":skull:" />)</summary>
