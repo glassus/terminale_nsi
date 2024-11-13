@@ -4021,6 +4021,38 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <summary>Correction Q2.b</summary>
 <p>La fonction <code>mystere</code> permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).        </p>
 </details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">etendre</span><span class="p">(</span><span class="n">pile1</span><span class="p">,</span> <span class="n">pile2</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">pile2</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">pile2</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="n">pile1</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">supprime_toutes_occurences</span><span class="p">(</span><span class="n">pile</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+    <span class="n">p_temp</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">pile</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="n">element</span><span class="p">:</span>
+            <span class="n">p_temp</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+        <span class="n">pile</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -4193,7 +4225,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span>
 <span class="hll">    <span class="n">indice</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">couleur</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
+</span><span class="hll">    <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">couleurs</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
 </span>    <span class="k">return</span> <span class="n">f</span>
 </code></pre></div></td></tr></table></div>
 </details>
