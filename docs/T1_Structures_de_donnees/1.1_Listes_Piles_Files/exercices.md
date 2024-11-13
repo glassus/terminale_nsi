@@ -432,7 +432,7 @@
     [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ```python linenums='1' hl_lines='3 4'
@@ -447,7 +447,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python
@@ -523,32 +523,34 @@
                         vider(stock)
                 while not est_vide(stock):
                     enfiler(sequence, defiler(stock))
+                ajout(sequence)
         ```
-        
-        ou bien
-
-        ```python linenums='1'
-        def tour_de_jeu_modifie(sequence):
-            affich_seq(sequence)
-            stock = creer_file_vide()
-            while not est_vide(sequence):
-                c_joueur = saisie_joueur()
-                c_seq = defiler(sequence)
-                if c_joueur == c_seq:
-                    enfiler(stock, c_seq)
-                else:
-                    vider(sequence)
-                    print('Perdu ! On rejoue !')
-                    tour_de_jeu_modifie(sequence)
-            while not est_vide(stock):
-                enfiler(sequence, defiler(stock))
-            tour_de_jeu_modifie(sequence)
-        ```        
+        Le jeu ne s'arrête jamais ¯\\\\_(ツ)\_/¯
     """
     )
     }}
 
+{#
+ou bien
 
+```python linenums='1'
+def tour_de_jeu_modifie(sequence):
+    affich_seq(sequence)
+    stock = creer_file_vide()
+    while not est_vide(sequence):
+        c_joueur = saisie_joueur()
+        c_seq = defiler(sequence)
+        if c_joueur == c_seq:
+            enfiler(stock, c_seq)
+        else:
+            vider(sequence)
+            print('Perdu ! On rejoue !')
+            tour_de_jeu_modifie(sequence)
+    while not est_vide(stock):
+        enfiler(sequence, defiler(stock))
+    tour_de_jeu_modifie(sequence)
+```        
+#}
 
 ??? example "{{ exercice() }} (:skull: difficile :skull:)"
 
