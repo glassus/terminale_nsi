@@ -26,7 +26,6 @@ Quelles études pour poursuivre dans l'informatique ?
 ## 2. La classe préparatoire MP2I au lycée Montaigne
 
 - [https://montaigne-bordeaux.fr/classe-mp2i/](https://montaigne-bordeaux.fr/classe-mp2i/){. target="_blank"}
-- [https://prepas-mp2i.fr/mp2i/](https://prepas-mp2i.fr/mp2i/){. target="_blank"}
 - via Parcoursup
 
 ## 3. La licence Informatique de l'Université de Bordeaux
