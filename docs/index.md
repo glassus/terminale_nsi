@@ -2,11 +2,10 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-{#
+
 !!! abstract "Actualités"
-    - [Correction DS02](data/DS02_POO_corr.pdf){. target="_blank"} 
-    
-#}
+    - [Orientation Post-Bac](./T7_Divers/10_orientation/cours.md){. target="_blank"}
+
 
 
 {#
