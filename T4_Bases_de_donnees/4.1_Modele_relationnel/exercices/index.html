@@ -1955,17 +1955,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Exercices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1975,43 +1964,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercice 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercice 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3912,7 +3864,8 @@
 
 
 <h1 id="exercices-sur-le-modele-relationnel">Exercices sur le modèle relationnel<a class="headerlink" href="#exercices-sur-le-modele-relationnel" title="Permanent link">⚓︎</a></h1>
-<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
 <p><em>(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)</em></p>
 <p>Deux relations modélisent la flotte de voitures d'un réseau de location de voitures.</p>
 <p><strong>Agences</strong></p>
@@ -3986,11 +3939,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition example">
-<p class="admonition-title">Questions</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <ol>
 <li>Combien la relation <code>Voitures</code> comporte-t-elle d'attributs ?</li>
 <li>Que vaut son cardinal ?</li>
@@ -4001,21 +3949,8 @@
 <li>Quelle est la clé étrangère de la relation <code>Voitures</code> ?</li>
 </ol>
 </div>
-<div class="tabbed-block">
-<ol>
-<li>6</li>
-<li>3</li>
-<li>Entier (<code>Int</code> )</li>
-<li>((<ins>id_agence</ins>, Int), (ville, String), (département, Int))</li>
-<li><code>id_agence</code> </li>
-<li><code>id_voiture</code> </li>
-<li><code>id_agence</code> </li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
 <p>Reprenons la base Tour de France 2020 vue en cours :</p>
 <p><strong>relation Équipes</strong></p>
 <table>
@@ -4244,24 +4179,10 @@
 </tbody>
 </table>
 <p><img alt="" src="../data/schema_tdf.png" /></p>
-<div class="admonition example">
-<p class="admonition-title">Questions</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <ol>
 <li>Quel temps a réalisé Guillaume MARTIN sur l'étape Sisteron / Orcières-Merlette ?</li>
 <li>À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?</li>
 </ol>
-</div>
-<div class="tabbed-block">
-<ol>
-<li>Temps de Guillaume Martin (dossard 121): 04:07:47</li>
-<li>Aucun des deux, ils sont arrivés dans le même temps (04:21:22)</li>
-</ol>
-</div>
-</div>
-</div>
 </div>
 
 
@@ -4283,7 +4204,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 novembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 novembre 2024</span>
   </span>
 
     
