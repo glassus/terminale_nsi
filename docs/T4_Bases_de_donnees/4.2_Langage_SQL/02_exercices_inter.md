@@ -11,7 +11,10 @@
 
     **Q1.** Travail sur SELECT, (base de données Nobel) :arrow_right: [ici](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial){. target="_blank"}.
 
-    ??? note "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
         ```SQL
         /*
@@ -84,7 +87,7 @@
         */
         SELECT *
         FROM nobel
-        WHERE (subject = "Physics" AND yr = '1980') OR (subject = 'Chemistry' AND yr = 1984)
+        WHERE (subject = 'Physics' AND yr = '1980') OR (subject = 'Chemistry' AND yr = 1984)
 
         --#9
         /*
@@ -139,11 +142,18 @@
         FROM nobel
         WHERE yr=1984
         ORDER BY subject IN ('Physics','Chemistry'),subject,winner
-        ```
+        ```        
+    """
+    )
+    }}
+        
 
     **Q2.** Travail sur SUM et COUNT, (base de données World) :arrow_right: [ici](https://sqlzoo.net/wiki/SUM_and_COUNT){. target="_blank"}. (jusqu'à la question 5.)
 
-    ??? note "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
         ```SQL
         /*
@@ -216,10 +226,16 @@
         GROUP BY continent
         HAVING SUM(population) > 100000000
         ```
+    """
+    )
+    }}
 
     **Q3.** Travail sur JOIN, (base de données Euro2012) :arrow_right: [ici](https://sqlzoo.net/wiki/The_JOIN_operation){. target="_blank"}.
 
-    ??? note "correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```SQL
         /*
         Sixth section of sqlzoo, Join
@@ -346,7 +362,7 @@
 
         --#13
         /*
-        List every match with the goals scored by each team as shown. This will use "CASE WHEN" which has not been explained in any previous exercises.
+        List every match with the goals scored by each team as shown. This will use 'CASE WHEN' which has not been explained in any previous exercises.
         mdate	team1	score1	team2	score2
         1 July 2012	ESP	4	ITA	0
         10 June 2012	ESP	1	ITA	1
@@ -363,7 +379,13 @@
             game LEFT JOIN goal ON (id = matchid)
             GROUP BY mdate,team1,team2
             ORDER BY mdate, matchid, team1, team2
-        ```
+        ```                
+    """
+    )
+    }}
+        
+
+        
 
 !!! abstract "{{ exercice() }}"
     Gestion d'un réseau d'agences de location de voitures.   
@@ -379,7 +401,7 @@
         **Q1**. Visualisez toute la relation ```Agences```
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -394,7 +416,7 @@
         **Q2**. Listez uniquement les noms des agences et de leur ville.
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -410,7 +432,7 @@
 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -428,7 +450,7 @@
 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -447,7 +469,7 @@
         **Q5**. Déterminez le nombre de voitures que vous possédez. 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -462,7 +484,7 @@
 
         **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -477,7 +499,7 @@
 
         **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -492,7 +514,7 @@
 
         **Q8**.  Quel est le kilométrage maximum des véhicules ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -506,7 +528,7 @@
 
         **Q9**.  Quel est le kilométrage moyen des véhicules ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -522,7 +544,7 @@
         **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -540,7 +562,7 @@
 
         **Q11**. Visualisez toute la relation Locations. 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -555,7 +577,7 @@
 
         **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -572,7 +594,7 @@
 
         **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -587,7 +609,7 @@
 
         **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -603,7 +625,7 @@
 
         **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -619,7 +641,7 @@
 
         **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -635,7 +657,7 @@
 
         **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -666,7 +688,7 @@
     **Q1**. Combien d'équipes ont participé à ce championnat ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -681,7 +703,7 @@
     **Q2**. Listez les noms des clubs ainsi que leur date de création dans l'ordre chronologique de leur création.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -698,7 +720,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -716,7 +738,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -732,7 +754,7 @@
     **Q5**. Combien de cartons ont été distribués ? 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -748,7 +770,7 @@
 
     **Q6**. Combien de buts ont été marqués ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -765,7 +787,7 @@
     **Q7**. Affichez tous les renseignements sur les 10 cartons rouges obtenus le plus rapidement pendant un match.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -781,7 +803,7 @@
 
     **Q8**.  Donnez le nom du joueur qui a obtenu le carton rouge le plus rapidement.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```sql
@@ -806,7 +828,7 @@
     ![](data/schemaMM.png){: .center width=100%}
 
     ???+ note "Zone d'enquête :octicons-search-16: (à coups de requêtes)"
-        Il est conseillé de travailler avec un Bloc-Notes ouvert à côté afin d'y coller les renseignements obtenus.
+        Il est conseillé de travailler avec un Bloc-Notes ouvert à côté afin d'y coller les renseignements obtenus. Vous pouvez utiliser le champ de requêtes ci-dessous mais il est possible que des colonnes n'apparaissent pas. Vous pouvez aussi utiliser n'importe quel champ sur la [la page officielle](https://mystery.knightlab.com/walkthrough.html){:target="_blank"}.
 
         {!{ sqlide titre="Tapez votre requête ci-dessous"  base="T4_Bases_de_donnees/4.2_Langage_SQL/data/sql-murder-mystery.db" }!}
 
@@ -825,6 +847,13 @@
 
     - Vous pouvez si vous le souhaitez télécharger la base [sql-murder-mystery.db](data/sql-murder-mystery.db). 
 
-    
-    - Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target="_blank"}...
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target='_blank'}.
+    """
+    )
+    }}
+
     

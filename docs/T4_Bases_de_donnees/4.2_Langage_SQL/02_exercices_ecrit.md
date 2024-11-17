@@ -44,7 +44,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
     
@@ -58,7 +58,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -97,7 +97,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -113,7 +113,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -129,7 +129,7 @@
     
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -144,7 +144,7 @@
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -171,7 +171,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -185,7 +185,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -201,7 +201,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -217,7 +217,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -233,7 +233,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -249,7 +249,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -272,7 +272,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -287,111 +287,213 @@
 !!! abstract "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
-	{{
-	correction(True,
-	"""
-	??? success \"Correction \"
- 
-        ??? note \"Correction Q1.a.\"
-            La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
 
-        ??? note \"Correction Q1.b.\"
-            - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
+        
 
-            - Contrainte d'intégrité de relation :  le couple (nomSport, nomStation) ne peut pas se retrouver deux fois dans la table (car il forme une clé primaire)
+        
 
-            - Contrainte d'intégrité de référence :  l'attribut nomStation ne peut pas être un nom n'apparaissant pas dans la relation Station.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\"
+        La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\"
+        - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
 
-        ??? note \"Correction Q2.a.\"
-            La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ('planche à voile' , 'La tramontane catalane') existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
-            Il faut donc utiliser :
-            ```SQL
-            UPDATE Sports SET prix = 1350 
-            WHERE nomSport = 'planche à voile' AND nomStation = 'La tramontane catalane'        
-            ```
+        - Contrainte d'intégrité de relation :  le couple (nomSport, nomStation) ne peut pas se retrouver deux fois dans la table (car il forme une clé primaire)
 
-        ??? note \"Correction Q2.b.\"
-            ```SQL
-            INSERT INTO Station VALUES ('Soleil Rouge', 'Bastia', 'Corse')  
-            INSERT INTO Sport VALUES ('plongée', 'Soleil Rouge', 900)        
-            ```
-
-        ??? note \"Correction Q3.a.\"
-            ```SQL
-            SELECT mail FROM Client        
-            ```
-
-        ??? note \"Correction Q3.b.\"
-            ```SQL
-            SELECT nomStation FROM Sport
-            WHERE nomSport = 'plongee'      
-            ```
-
-        ??? note \"Correction Q4.a.\"
-            ```SQL
-            SELECT Station.ville, Station.nomStation FROM Station
-            JOIN Sport ON Sport.nomStation = Station.nomStation
-            WHERE Sport.nomSport = 'plongee'        
-            ```
-
-        ??? note \"Correction Q4.b.\"
-            ```SQL
-            SELECT COUNT(*) FROM Sejour
-            JOIN Station ON Station.nomStation = Sejour.nomStation
-            WHERE Sejour.annee = 2020 AND Station.region = 'Corse'
-            ```
-	"""
-	)
-	}} 
+        - Contrainte d'intégrité de référence :  l'attribut nomStation ne peut pas être un nom n'apparaissant pas dans la relation Station.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a.\"
+        La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ('planche à voile' , 'La tramontane catalane') existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
+        Il faut donc utiliser :
+        ```SQL
+        UPDATE Sports SET prix = 1350 
+        WHERE nomSport = 'planche à voile' AND nomStation = 'La tramontane catalane'        
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b.\"
+        ```SQL
+        INSERT INTO Station VALUES ('Soleil Rouge', 'Bastia', 'Corse')  
+        INSERT INTO Sport VALUES ('plongée', 'Soleil Rouge', 900)        
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.a.\"
+        ```SQL
+        SELECT mail FROM Client        
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.b.\"
+        ```SQL
+        SELECT nomStation FROM Sport
+        WHERE nomSport = 'plongee'      
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.a.\"
+        ```SQL
+        SELECT Station.ville, Station.nomStation FROM Station
+        JOIN Sport ON Sport.nomStation = Station.nomStation
+        WHERE Sport.nomSport = 'plongee'        
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.b.\"
+        ```SQL
+        SELECT COUNT(*) FROM Sejour
+        JOIN Station ON Station.nomStation = Sejour.nomStation
+        WHERE Sejour.annee = 2020 AND Station.region = 'Corse'
+        ```
+    """
+    )
+    }}
 
 
 
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
     
-    ??? note "Correction"
-        ??? note "Correction Q1.a."
-            L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
 
-        ??? note "Correction Q1.b."
-            L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
 
-        ??? note "Correction Q2.a."
-            Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
+        
 
-        ??? note "Correction Q2.b."
-            ```SQL
-            SELECT nom_ville FROM Centres 
-            WHERE altitude >= 700 AND altitude <= 1200;
-            ```
 
-        ??? note "Correction Q2.c."
-            ```SQL
-            SELECT longitude, nom_ville FROM Centres
-            WHERE longitude > 5
-            ORDER BY nom_ville;
-            ```
-
-        ??? note "Correction Q3.a."
-            Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
-
-        ??? note "Correction Q3.b."
-            ```SQL
-            INSERT INTO Mesures VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
-            ```
-
-        ??? note "Correction Q4.a."
-            Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
-
-        ??? note "Correction Q4.b."
-            ```SQL
-            SELECT DISTINCT Centres.nom_ville FROM Centres
-            JOIN Mesures ON Mesures.id_centre = Centres.id_centre
-            WHERE Mesures.temperature < 10
-            AND Mesures.date <= 2021-10-31
-            AND Mesures.date >= 2021-10-01;
-            ```
-
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\"
+        L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\"
+        L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a.\"
+        Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b.\"
+        ```SQL
+        SELECT nom_ville FROM Centres 
+        WHERE altitude >= 700 AND altitude <= 1200;
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.c.\"
+        ```SQL
+        SELECT longitude, nom_ville FROM Centres
+        WHERE longitude > 5
+        ORDER BY nom_ville;
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.a.\"
+        Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.b.\"
+        ```SQL
+        INSERT INTO Mesures VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.a.\"
+        Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.b.\"
+        ```SQL
+        SELECT DISTINCT Centres.nom_ville FROM Centres
+        JOIN Mesures ON Mesures.id_centre = Centres.id_centre
+        WHERE Mesures.temperature < 10
+        AND Mesures.date <= 2021-10-31
+        AND Mesures.date >= 2021-10-01;
+        ```
+    """
+    )
+    }}
     
 
 
@@ -402,117 +504,232 @@
 !!! abstract "{{exercice()}}"
     Exercice 4 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
  
-    ??? note "Correction"
-        ??? note "Correction Q1.a."
-            ```
-            Hey Jude
-            I Want To Hold Your Hand
-            ``` 
 
-        ??? note "Correction Q1.b."
-            ```SQL
-            SELECT nom FROM interpretes
-            WHERE pays = 'Angleterre';
-            ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\"
+        ```
+        Hey Jude
+        I Want To Hold Your Hand
+        ``` 
+    """
+    )
+    }}
 
-        ??? note "Correction Q1.c."
-            ```
-            I Want To Hold Your Hand, 1963
-            Like a Rolling Stone, 1965
-            Respect, 1967
-            Hey Jude, 1968
-            Imagine, 1970
-            Smells Like Teen Spirit, 1991
-            ``` 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\"
+        ```SQL
+        SELECT nom FROM interpretes
+        WHERE pays = 'Angleterre';
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q1.d."
-            ```SQL
-            SELECT COUNT(*) FROM morceaux;
-            ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.c.\"
+        ```
+        I Want To Hold Your Hand, 1963
+        Like a Rolling Stone, 1965
+        Respect, 1967
+        Hey Jude, 1968
+        Imagine, 1970
+        Smells Like Teen Spirit, 1991
+        ``` 
+    """
+    )
+    }}
 
-        ??? note "Correction Q1.e."
-            ```SQL
-            SELECT titre FROM morceaux
-            ORDER BY titre;
-            ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.d.\"
+        ```SQL
+        SELECT COUNT(*) FROM morceaux;
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q2.a."
-            La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.e.\"
+        ```SQL
+        SELECT titre FROM morceaux
+        ORDER BY titre;
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q2.b."
-            ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
-            ```interpretes``` : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a.\"
+        La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
+    """
+    )
+    }}
 
-        ??? note "Correction Q2.c."    
-            La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b.\"
+        ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
+        ```interpretes``` : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   
+    """
+    )
+    }}
 
-        ??? note "Correction Q3.a."
-            ```SQL
-            UPDATE morceaux
-            SET annee = 1971
-            WHERE titre = 'Imagine'
-            ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.c.\"    
+        La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
+    """
+    )
+    }}
 
-        ??? note "Correction Q3.b."
-            ```SQL
-            INSERT INTO interpretes
-            VALUES (6, "The Who", "Angleterre")
-            ```      
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.a.\"
+        ```SQL
+        UPDATE morceaux
+        SET annee = 1971
+        WHERE titre = 'Imagine'
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q3.c."
-            ```SQL
-            INSERT INTO morceaux
-            VALUES (7, "My Generation", 1965, 6)
-            ```     
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.b.\"
+        ```SQL
+        INSERT INTO interpretes
+        VALUES (6, \"The Who\", \"Angleterre\")
+        ```      
+    """
+    )
+    }}
 
-        ??? note "Correction Q4."
-            ```SQL
-            SELECT morceaux.titre
-            FROM morceaux
-            JOIN interpretes ON interpretes.id_interprete = morceaux.id_interprete
-            WHERE interpretes.pays = "États-Unis"
-            ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.c.\"
+        ```SQL
+        INSERT INTO morceaux
+        VALUES (7, \"My Generation\", 1965, 6)
+        ```     
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4.\"
+        ```SQL
+        SELECT morceaux.titre
+        FROM morceaux
+        JOIN interpretes ON interpretes.id_interprete = morceaux.id_interprete
+        WHERE interpretes.pays = \"États-Unis\"
+        ```
+    """
+    )
+    }}
+
+ 
+        
+
 
 
 !!! abstract "{{exercice()}}"
     Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
-    ??? note "Correction"
-        ??? note "Correction Q1."
-            Le couple ```(NumClient, NumChambre)``` ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple ```(NumClient, NumChambre)``` ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation ```Reservations```.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.\"
+        Le couple ```(NumClient, NumChambre)``` ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple ```(NumClient, NumChambre)``` ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation ```Reservations```.
+    """
+    )
+    }}
 
-        ??? note "Correction Q2.a."
-            ```SQL
-            SELECT Nom, Prenom FROM Clients            
-            ```
+    {{
+    correction(False,
+    """
 
-        ??? note "Correction Q2.b."
-            ```SQL
-            SELECT Telephone FROM Clients
-            WHERE Prenom = "Grace" AND Nom = "Hopper"
-            ```
+    ??? success \"Correction Q2.a.\"
+        ```SQL
+        SELECT Nom, Prenom FROM Clients            
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q3."
-            ```SQL
-            SELECT NumChambre FROM Reservations
-            WHERE date(DateArr) <= date('2024-12-28')
-            AND date(DateDep) > date('2024-12-28')
-            ```
+    {{
+    correction(False,
+    """
 
-        ??? note "Correction Q4.a."
-            ```SQL
-            UPDATE Chambres
-            SET prix = 75
-            WHERE NumChambre = 404
-            ```
+    ??? success \"Correction Q2.b.\"
+        ```SQL
+        SELECT Telephone FROM Clients
+        WHERE Prenom = \"Grace\" AND Nom = \"Hopper\"
+        ```
+    """
+    )
+    }}
 
-        ??? note "Correction Q4.b"
-            ```SQL
-            SELECT Reservations.NumChambre FROM Reservations
-            JOIN Clients ON Clients.NumClient = Reservations.NumClient
-            WHERE Clients.Nom = 'Codd' AND Clients.Prenom = 'Edgar'
-            ```
+    {{
+    correction(False,
+    """
 
+    ??? success \"Correction Q3.\"
+        ```SQL
+        SELECT NumChambre FROM Reservations
+        WHERE date(DateArr) <= date('2024-12-28')
+        AND date(DateDep) > date('2024-12-28')
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+
+    ??? success \"Correction Q4.a.\"
+        ```SQL
+        UPDATE Chambres
+        SET prix = 75
+        WHERE NumChambre = 404
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+
+    ??? success \"Correction Q4.b\"
+        ```SQL
+        SELECT Reservations.NumChambre FROM Reservations
+        JOIN Clients ON Clients.NumClient = Reservations.NumClient
+        WHERE Clients.Nom = 'Codd' AND Clients.Prenom = 'Edgar'
+        ```
+    """
+    )
+    }}
 
 !!! example "{{ exercice() }} <i id="ex3J1AN2024"></i>"
 
@@ -521,7 +738,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -530,7 +747,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
@@ -539,7 +756,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='2-4'
@@ -554,7 +771,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         La méthode utilisée est la méthode ```sleep```, à la ligne 37. 
@@ -563,7 +780,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```donnees[i]``` est un dictionnaire.
@@ -572,7 +789,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -642,7 +859,7 @@
     **Partie B**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```sql
@@ -654,7 +871,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -667,7 +884,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```sql
@@ -679,7 +896,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -693,7 +910,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         ```sql
@@ -708,7 +925,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -726,7 +943,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le résultat de la requête est :
@@ -739,7 +956,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -752,7 +969,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```sql
@@ -764,7 +981,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
@@ -785,7 +1002,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
@@ -794,7 +1011,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Cette requête pose problème car la valeur 1 de l'attribut ```idagres``` n'existe pas dans la table ```agres```.
@@ -803,7 +1020,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -816,7 +1033,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Le résultat de cette requête est 
@@ -830,7 +1047,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -843,7 +1060,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
@@ -856,7 +1073,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -872,7 +1089,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\"
         ```sql
