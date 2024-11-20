@@ -401,7 +401,7 @@
         **Q1**. Visualisez toute la relation ```Agences```
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -416,7 +416,7 @@
         **Q2**. Listez uniquement les noms des agences et de leur ville.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -432,7 +432,7 @@
 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -450,7 +450,7 @@
 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
