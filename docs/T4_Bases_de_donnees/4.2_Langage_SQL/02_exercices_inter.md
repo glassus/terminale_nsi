@@ -151,7 +151,7 @@
     **Q2.** Travail sur SUM et COUNT, (base de données World) :arrow_right: [ici](https://sqlzoo.net/wiki/SUM_and_COUNT){. target="_blank"}. (jusqu'à la question 5.)
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
