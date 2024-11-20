@@ -12,7 +12,7 @@
     **Q1.** Travail sur SELECT, (base de données Nobel) :arrow_right: [ici](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial){. target="_blank"}.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
