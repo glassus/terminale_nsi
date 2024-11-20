@@ -4099,9 +4099,35 @@
 <details class="note">
 <summary>Questions sur la relation <code>Agences</code></summary>
 <p><strong>Q1</strong>. Visualisez toute la relation <code>Agences</code></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
 <p><strong>Q2</strong>. Listez uniquement les noms des agences et de leur ville.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+</code></pre></div>
+</details>
 <p><strong>Q3</strong>. Listez les noms des agences de la ville de Lorient</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Lorient&#39;</span>
+</code></pre></div>
+</details>
 <p><strong>Q4</strong>. Listez les noms des agences du département du Morbihan (code postal 56***) ainsi que les codes postaux en utilisant par exemple un <code>WHERE LIKE</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Agences</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;56%&#39;</span>
+</code></pre></div>
+</details>
 </details>
 <details class="note">
 <summary>Questions sur la relation <code>Vehicules</code></summary>
