@@ -175,7 +175,9 @@
     """
     ??? success \"Correction \"
         ```SQL
-        SELECT prix_achat FROM Produits WHERE nom_court = 'Liq_Vaiss_1L' 
+        SELECT prix_achat
+        FROM Produits 
+        WHERE nom_court = 'Liq_Vaiss_1L' 
         ```
     """
     )
@@ -189,7 +191,9 @@
     """
     ??? success \"Correction \"
         ```SQL
-        SELECT adresse, cp, ville FROM Fournisseurs WHERE nom = 'Avenir_confiseur';
+        SELECT adresse, cp, ville 
+        FROM Fournisseurs 
+        WHERE nom = 'Avenir_confiseur';
         ``` 
     """
     )
@@ -205,7 +209,8 @@
     """
     ??? success \"Correction \"
         ```SQL
-        SELECT Produits.nom FROM Produits
+        SELECT Produits.nom 
+        FROM Produits
         JOIN Stocks ON Produits.id = Stocks.produit
         WHERE Stocks.quantite = 0;
         ```
@@ -276,7 +281,8 @@
     """
     ??? success \"Correction \"
         ```SQL
-        SELECT p.nom FROM Produits AS p
+        SELECT p.nom 
+        FROM Produits AS p
         JOIN Stocks AS s ON s.produits = p.id
         WHERE s.date_peremption < NOW();
         ```
