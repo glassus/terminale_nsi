@@ -609,7 +609,7 @@
 
         **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -625,7 +625,7 @@
 
         **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
