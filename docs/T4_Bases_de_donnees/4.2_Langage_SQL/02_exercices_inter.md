@@ -641,7 +641,7 @@
 
         **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -657,7 +657,7 @@
 
         **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
