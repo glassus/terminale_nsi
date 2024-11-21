@@ -598,7 +598,7 @@
         """
         ??? success \"Correction\" 
             ```sql
-            SELECT SUM(distance) 
+            SELECT SUM(kilometrage) 
             FROM Locations
             ```            
         """
