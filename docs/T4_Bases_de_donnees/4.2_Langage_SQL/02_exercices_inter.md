@@ -233,7 +233,7 @@
     **Q3.** Travail sur JOIN, (base de données Euro2012) :arrow_right: [ici](https://sqlzoo.net/wiki/The_JOIN_operation){. target="_blank"}.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```SQL
@@ -562,7 +562,7 @@
 
         **Q11**. Visualisez toute la relation Locations. 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -577,7 +577,7 @@
 
         **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -594,7 +594,7 @@
 
         **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
