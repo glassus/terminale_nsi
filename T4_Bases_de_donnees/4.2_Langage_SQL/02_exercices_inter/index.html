@@ -4347,7 +4347,21 @@
 </code></pre></div>
 </details>
 <p><strong>Q14</strong>. Listez toutes les locations en y associant les caractéristiques du véhicule</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vehicules</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">vehicule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span>
+</code></pre></div>
+</details>
 <p><strong>Q15</strong>. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Vehicules</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span><span class="p">,</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="nb">date</span><span class="p">,</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">kilometrage</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Locations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vehicules</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Locations</span><span class="p">.</span><span class="n">vehicule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vehicules</span><span class="p">.</span><span class="n">immatriculation</span>
+</code></pre></div>
+</details>
 <p><strong>Q16</strong>. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.</p>
 <p><strong>Q17</strong>. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.</p>
 </details>
