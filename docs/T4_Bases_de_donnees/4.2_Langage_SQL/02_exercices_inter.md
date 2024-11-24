@@ -1,6 +1,6 @@
 # Exercices SQL interactifs
 
-
+*Vous pourrez trouver de très nombreux exercices interactifs d'entraînement sur le site de Nicolas Reveret, à l'adresse [https://nreveret.forge.apps.education.fr/exercices_bdd/](https://nreveret.forge.apps.education.fr/exercices_bdd/){. target="_blank"}*
 
 {{initexo(0)}}
 
