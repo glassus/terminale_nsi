@@ -4056,7 +4056,21 @@
 </code></pre></div>
 </details>
 <p><strong>Q4</strong>. Quelle requête donne la liste de toutes les ampoules vendues en magasin ? On pourra faire l'hypothèse que le nom du produit contient le mot «ampoule»</p>
+<details class="success">
+<summary>Correction </summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%ampoule%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</details>
 <p><strong>Q5</strong>. Quelle requête permet d'avoir le prix moyen de ces ampoules ?</p>
+<details class="success">
+<summary>Correction </summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">prix_vente</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Produits</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%ampoule%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</details>
 <p><strong>Q6</strong>. Quelle requête permet d'identifier le produit le plus cher du magasin ?</p>
 <p><strong>Q7</strong>. Quelle requête renvoie les noms des produits dont la date de péremption est dépassée ? <em>(on pourra utiliser la fonction SQL <code>NOW()</code> qui renvoie la date actuelle )</em></p>
 </div>
