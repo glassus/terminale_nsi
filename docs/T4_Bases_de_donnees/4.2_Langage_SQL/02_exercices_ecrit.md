@@ -327,7 +327,8 @@
         La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ('planche à voile' , 'La tramontane catalane') existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
         Il faut donc utiliser :
         ```SQL
-        UPDATE Sports SET prix = 1350 
+        UPDATE Sports 
+        SET prix = 1350 
         WHERE nomSport = 'planche à voile' AND nomStation = 'La tramontane catalane'        
         ```
     """
@@ -339,8 +340,10 @@
     """
     ??? success \"Correction Q2.b.\"
         ```SQL
-        INSERT INTO Station VALUES ('Soleil Rouge', 'Bastia', 'Corse')  
-        INSERT INTO Sport VALUES ('plongée', 'Soleil Rouge', 900)        
+        INSERT INTO Station 
+        VALUES ('Soleil Rouge', 'Bastia', 'Corse')  
+        INSERT INTO Sport 
+        VALUES ('plongée', 'Soleil Rouge', 900)        
         ```
     """
     )
@@ -351,7 +354,8 @@
     """
     ??? success \"Correction Q3.a.\"
         ```SQL
-        SELECT mail FROM Client        
+        SELECT mail 
+        FROM Client        
         ```
     """
     )
@@ -362,7 +366,8 @@
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
-        SELECT nomStation FROM Sport
+        SELECT nomStation 
+        FROM Sport
         WHERE nomSport = 'plongee'      
         ```
     """
@@ -374,7 +379,8 @@
     """
     ??? success \"Correction Q4.a.\"
         ```SQL
-        SELECT Station.ville, Station.nomStation FROM Station
+        SELECT Station.ville, Station.nomStation 
+        FROM Station
         JOIN Sport ON Sport.nomStation = Station.nomStation
         WHERE Sport.nomSport = 'plongee'        
         ```
@@ -387,7 +393,8 @@
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
-        SELECT COUNT(*) FROM Sejour
+        SELECT COUNT(*) 
+        FROM Sejour
         JOIN Station ON Station.nomStation = Sejour.nomStation
         WHERE Sejour.annee = 2020 AND Station.region = 'Corse'
         ```
@@ -437,7 +444,8 @@
     """
     ??? success \"Correction Q2.b.\"
         ```SQL
-        SELECT nom_ville FROM Centres 
+        SELECT nom_ville 
+        FROM Centres 
         WHERE altitude >= 700 AND altitude <= 1200;
         ```
     """
@@ -449,7 +457,8 @@
     """
     ??? success \"Correction Q2.c.\"
         ```SQL
-        SELECT longitude, nom_ville FROM Centres
+        SELECT longitude, nom_ville 
+        FROM Centres
         WHERE longitude > 5
         ORDER BY nom_ville;
         ```
@@ -471,7 +480,8 @@
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
-        INSERT INTO Mesures VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
+        INSERT INTO Mesures 
+        VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
         ```
     """
     )
@@ -491,7 +501,8 @@
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
-        SELECT DISTINCT Centres.nom_ville FROM Centres
+        SELECT DISTINCT Centres.nom_ville 
+        FROM Centres
         JOIN Mesures ON Mesures.id_centre = Centres.id_centre
         WHERE Mesures.temperature < 10
         AND Mesures.date <= 2021-10-31
@@ -528,7 +539,8 @@
     """
     ??? success \"Correction Q1.b.\"
         ```SQL
-        SELECT nom FROM interpretes
+        SELECT nom 
+        FROM interpretes
         WHERE pays = 'Angleterre';
         ```
     """
@@ -556,7 +568,8 @@
     """
     ??? success \"Correction Q1.d.\"
         ```SQL
-        SELECT COUNT(*) FROM morceaux;
+        SELECT COUNT(*) 
+        FROM morceaux;
         ```
     """
     )
@@ -567,7 +580,8 @@
     """
     ??? success \"Correction Q1.e.\"
         ```SQL
-        SELECT titre FROM morceaux
+        SELECT titre 
+        FROM morceaux
         ORDER BY titre;
         ```
     """
@@ -676,7 +690,8 @@
 
     ??? success \"Correction Q2.a.\"
         ```SQL
-        SELECT Nom, Prenom FROM Clients            
+        SELECT Nom, Prenom 
+        FROM Clients            
         ```
     """
     )
@@ -688,7 +703,8 @@
 
     ??? success \"Correction Q2.b.\"
         ```SQL
-        SELECT Telephone FROM Clients
+        SELECT Telephone 
+        FROM Clients
         WHERE Prenom = \"Grace\" AND Nom = \"Hopper\"
         ```
     """
@@ -701,7 +717,8 @@
 
     ??? success \"Correction Q3.\"
         ```SQL
-        SELECT NumChambre FROM Reservations
+        SELECT NumChambre 
+        FROM Reservations
         WHERE date(DateArr) <= date('2024-12-28')
         AND date(DateDep) > date('2024-12-28')
         ```
@@ -729,7 +746,8 @@
 
     ??? success \"Correction Q4.b\"
         ```SQL
-        SELECT Reservations.NumChambre FROM Reservations
+        SELECT Reservations.NumChambre 
+        FROM Reservations
         JOIN Clients ON Clients.NumClient = Reservations.NumClient
         WHERE Clients.Nom = 'Codd' AND Clients.Prenom = 'Edgar'
         ```
