@@ -375,7 +375,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\"
         ```SQL
@@ -389,7 +389,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
