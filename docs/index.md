@@ -4,7 +4,11 @@
 
 
 !!! abstract "Actualités"
-    - [Orientation Post-Bac](./T7_Divers/10_orientation/cours.md){. target="_blank"}
+    Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
+    ![image](data/aoc2024.png){: .center width=20%}
+    
+    - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
+
 
 
 
