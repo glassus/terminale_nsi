@@ -505,8 +505,8 @@
         FROM Centres
         JOIN Mesures ON Mesures.id_centre = Centres.id_centre
         WHERE Mesures.temperature < 10
-        AND Mesures.date <= 2021-10-31
-        AND Mesures.date >= 2021-10-01;
+        AND Mesures.date <= '2021-10-31'
+        AND Mesures.date >= '2021-10-01';
         ```
     """
     )
@@ -1016,8 +1016,56 @@
     )
     }}
 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        Le médicament d'```id_medic``` égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.
 
+        Le médicament d'```id_medic``` égale à 4 est l'acide ascorbique'. D'après l'ordonnance, il faut 28 comprimés donc 3 boites sont nécessaires.       
+    """
+    )
+    }}
     
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ```sql
+        UPDATE medicament
+        SET quantite = 447
+        WHERE id_medic = 4
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        $1 \times 3,50 + 3 \times 5,50 = 20$ 
+
+        Le prix des médicaments est donc de 20 €.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```sql
+        SELECT nom_medic
+        FROM medicament
+        JOIN ordonnance ON ordonnance.id_medic = medicament.id_medic
+        WHERE id_ordo = 6
+        ```
+    """
+    )
+    }}
+
 
 
 !!! example "{{ exercice() }} <i id="ex3J2G12024"></i>"
@@ -1090,7 +1138,7 @@
         - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
         - Requête B : compte le nombre d'agrès mobilisés le 27 mars mais dont l'id est dans la table ```moyen```. La réponse est 1.
 
-        Pour info, ```INNER JOIN``` signifie la même chose que ```JOIN``` (mais le programme officiel de NSI ne parle que de ```JOIN```)
+        Pour info, ```INNER JOIN``` signifie la même chose que ```JOIN``` (mais le programme officiel de NSI ne parle que de ```JOIN```...)
     """
     )
     }}

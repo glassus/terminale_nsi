@@ -160,8 +160,17 @@ connexion.close()
 
 - Exécutez ce fichier, rentrez quelques valeurs, quittez, et ouvrez dans ```DB Browser``` la table ```notes``` pour bien vérifier que vos valeurs ont bien été stockées.
 - Lancez à nouveau le fichier, en donnant ensuite comme nom la chaîne de caractères suivante : 
-```g','3'); DROP TABLE notes;--``` 
-- Donnez une note quelconque (par exemple 12), quittez le programme... et allez observer l'état de la base de données. La table  ```notes``` n'existe plus !
+
+```sql
+g','3'); DROP TABLE notes;--
+```
+
+
+- Donnez une note quelconque (par exemple 12), quittez le programme... et allez observer l'état de la base de données.
+
+:skull: :skull: :skull:
+
+ La table  ```notes``` n'existe plus !
 
 **Explication** :  
 La requête qui a été formulée est ```INSERT INTO notes VALUES ('g','3'); DROP TABLE notes;--','12')``` 
@@ -179,6 +188,9 @@ Rappelons enfin que ce genre de pratiques est interdit sur un serveur qui ne vou
 
 
 ### 2. Lecture des enregistrements
+
+La récupération des résultats des requêtes peut se faire avec la méthode ```fetchall()```, qui renvoie une liste de tuples. 
+
 ```python
 import sqlite3
 
