@@ -416,7 +416,7 @@
     correction(True,
     """
     ??? success \"Correction Q1.a.\"
-        L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
+        L'attribut ```id_mesure``` semble être une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
     """
     )
     }}
@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\"
         ```SQL
@@ -453,7 +453,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.c.\"
         ```SQL
