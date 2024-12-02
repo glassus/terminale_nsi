@@ -467,7 +467,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\"
         Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
@@ -476,7 +476,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
@@ -488,7 +488,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\"
         Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
