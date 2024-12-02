@@ -4269,24 +4269,377 @@ Smells Like Teen Spirit, 1991
 <summary>Correction Q2.c.</summary>
 <p>La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.</p>
 </details>
+<details class="success">
+<summary>Correction Q3.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">morceaux</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1971</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Imagine&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">interpretes</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;The Who&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Angleterre&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">morceaux</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;My Generation&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1965</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">morceaux</span><span class="p">.</span><span class="n">titre</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">morceaux</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">interpretes</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">interpretes</span><span class="p">.</span><span class="n">id_interprete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">morceaux</span><span class="p">.</span><span class="n">id_interprete</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">interpretes</span><span class="p">.</span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;États-Unis&quot;</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  6</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf" target="_blank">La Réunion J2 2022</a></p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<p>Le couple <code>(NumClient, NumChambre)</code> ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple <code>(NumClient, NumChambre)</code> ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation <code>Reservations</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q2.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom</span><span class="p">,</span><span class="w"> </span><span class="n">Prenom</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Clients</span><span class="w">            </span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Telephone</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Clients</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Grace&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hopper&quot;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumChambre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Reservations</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateArr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2024-12-28&#39;</span><span class="p">)</span>
+<span class="k">AND</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateDep</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2024-12-28&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Chambres</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">NumChambre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">404</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4.b</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Reservations</span><span class="p">.</span><span class="n">NumChambre</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Reservations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Clients</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">NumClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reservations</span><span class="p">.</span><span class="n">NumClient</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Codd&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Clients</span><span class="p">.</span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Edgar&#39;</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7 <i id="ex3J1AN2024"></i></p>
 <p>Exercice 3 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf" target="_blank">sujet Amérique du Nord J1 2024</a>    </p>
 <p><strong>Partie A</strong></p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Le séparateur utilisé est le point-virgule <code>;</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p>Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans <code>Allemagne, Italie, Japon</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">charger</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">):</span>
+<span class="hll">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">donnees</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">donnees</span>
+</span></code></pre></div></td></tr></table></div>
+(la fonction renvoie une liste de dictionnaires et non un dictionnaire comme dit dans l'énoncé)</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>La méthode utilisée est la méthode <code>sleep</code>, à la ligne 37. </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<p><code>donnees[i]</code> est un dictionnaire.</p>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">flashcard</span> <span class="o">=</span> <span class="n">charger</span><span class="p">(</span><span class="s1">&#39;flashcards.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">choix_discipline</span><span class="p">(</span><span class="n">flashcard</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">choix_chapitre</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">entrainement</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Si vous souhaitez jouer avec ces flashcards, téléchargez le fichier <a class="" href="../data/flashcards.csv" target="_blank">flashcards.csv</a> et utilisez le code ci-dessous :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">charger</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
+        <span class="n">donnees</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">donnees</span>
+
+<span class="k">def</span> <span class="nf">choix_discipline</span><span class="p">(</span><span class="n">donnees</span><span class="p">):</span>
+    <span class="n">disciplines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="n">disc</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">disc</span> <span class="ow">in</span> <span class="n">disciplines</span><span class="p">:</span>
+            <span class="n">disciplines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">disc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">disciplines</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">disciplines</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">num_disc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;numéro de la discipline ? &#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">disciplines</span><span class="p">[</span><span class="n">num_disc</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">choix_chapitre</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">disc</span><span class="p">):</span>
+    <span class="n">chapitres</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">flashcard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">disc</span><span class="p">:</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">flashcard</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;chapitre&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chapitres</span><span class="p">:</span>
+                <span class="n">chapitres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chapitres</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">chapitres</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">num_ch</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;numéro du chapitre ? &#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">chapitres</span><span class="p">[</span><span class="n">num_ch</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">entrainement</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">disc</span><span class="p">,</span> <span class="n">ch</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;discipline&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">disc</span> <span class="ow">and</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;chapitre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ch</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;QUESTION : &#39;</span><span class="p">,</span> <span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;question&#39;</span><span class="p">])</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;réponse&#39;</span><span class="p">])</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">flashcard</span> <span class="o">=</span> <span class="n">charger</span><span class="p">(</span><span class="s1">&#39;flashcards.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">choix_discipline</span><span class="p">(</span><span class="n">flashcard</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">choix_chapitre</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">entrainement</span><span class="p">(</span><span class="n">flashcard</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Partie B</strong></p>
+<details class="success">
+<summary>Correction Q7</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">boite</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tous les quinze jours&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">reponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;7 décembre 1941&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">lib</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">discipline</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">lib</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">chapitre</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">discipline</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id_disc</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;histoire&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">flashcard</span><span class="p">.</span><span class="n">id</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">chapitre</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flashcard</span><span class="p">.</span><span class="n">id_ch</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">discipline</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chapitre</span><span class="p">.</span><span class="n">id_disc</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">discipline</span><span class="p">.</span><span class="n">lib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;histoire&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q12</summary>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">flashcard</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id_boite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8 <i id="ex2J2AN2024"></i></p>
 <p>Exercice 2 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf" target="_blank">sujet Amérique du Nord J2 2024</a>    </p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Le résultat de la requête est :
+<div class="highlight"><pre><span></span><code>Dufour, Marc
+Martin, Sophie
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_medic</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">medicament</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Clients</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DURAND&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Nathalie&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;269054958815780&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Les attributs de la table <code>ordonnance</code> devant être déclarés clés étrangères sont :</p>
+<ul>
+<li><code>id_client</code> : qui fait référence à l'attribut <code>id_client</code> de la table <code>client</code> </li>
+<li><code>id_medic</code> : qui fait référence à l'attribut <code>id_medic</code> de la table <code>medic</code> </li>
+</ul>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<p>Le médicament d'<code>id_medic</code> égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.</p>
+<p>Le médicament d'<code>id_medic</code> égale à 4 est l'acide ascorbique'. D'après l'ordonnance, il faut 28 comprimés donc 3 boites sont nécessaires.       </p>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">medicament</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">quantite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">447</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id_medic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<p><span class="arithmatex">\(1  imes 3,50 + 3   imes 5,50 = 20\)</span> </p>
+<p>Le prix des médicaments est donc de 20 €.</p>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_medic</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">medicament</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">ordonnance</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ordonnance</span><span class="p">.</span><span class="n">id_medic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">medicament</span><span class="p">.</span><span class="n">id_medic</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id_ordo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9 <i id="ex3J2G12024"></i></p>
 <p>Exercice 3 Partie B du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2G1.pdf" target="_blank">sujet Centres Étrangers J2 2024</a>    </p>
+<details class="success">
+<summary>Correction Q6</summary>
+<p>Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    </p>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<p>Cette requête pose problème car la valeur 1 de l'attribut <code>idagres</code> n'existe pas dans la table <code>agres</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">intervention</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">heure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;10:44:06&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">heure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;01:44:06&#39;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<p>Le résultat de cette requête est 
+<div class="highlight"><pre><span></span><code>Charlot
+Red
+Kevin    
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">personnel</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">qualif</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">actif</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<ul>
+<li>Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.</li>
+<li>Requête B : compte le nombre d'agrès mobilisés le 27 mars mais dont l'id est dans la table <code>moyen</code>. La réponse est 1.</li>
+</ul>
+<p>Pour info, <code>INNER JOIN</code> signifie la même chose que <code>JOIN</code> (mais le programme officiel de NSI ne parle que de <code>JOIN</code>...)</p>
+</details>
+<details class="success">
+<summary>Correction Q12</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">nom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">personnel</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">agres</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">idchefagres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matricule</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-02-15&#39;</span>
+</code></pre></div>
+<p>Pour info, <code>DISTINCT</code> n'a pas besoin de parenthèses (comme <code>COUNT</code>), ce n'est pas une fonction.</p>
+</details>
+<details class="success">
+<summary>Correction Q13</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">nom</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">personnel</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">agres</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">agres</span><span class="p">.</span><span class="n">idchefagres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">personnel</span><span class="p">.</span><span class="n">matricule</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">moyen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">moyen</span><span class="p">.</span><span class="n">idagres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">agres</span><span class="p">.</span><span class="n">id</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">intervention</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">intervention</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moyen</span><span class="p">.</span><span class="n">idinter</span><span class="w">        </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">intervention</span><span class="p">.</span><span class="n">jour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2024-06-11&#39;</span>
+</code></pre></div>
+</details>
 </div>
 
 
