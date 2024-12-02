@@ -481,7 +481,7 @@
     ??? success \"Correction Q3.b.\"
         ```SQL
         INSERT INTO Mesures 
-        VALUES (3650, 138, 2021-11-08, 11, 1013, 0);
+        VALUES (3650, 138, '2021-11-08', 11, 1013, 0);
         ```
     """
     )
@@ -491,13 +491,13 @@
     correction(True,
     """
     ??? success \"Correction Q4.a.\"
-        Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimum de tous les centres.
+        Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimale de tous les centres.
     """
     )
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
