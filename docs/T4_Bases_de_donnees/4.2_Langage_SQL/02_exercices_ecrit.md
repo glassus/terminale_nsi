@@ -413,7 +413,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\"
         L'attribut ```id_mesure``` semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
@@ -422,7 +422,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\"
         L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
@@ -431,7 +431,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a.\"
         Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
