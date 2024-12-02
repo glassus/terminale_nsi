@@ -617,7 +617,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\"
         ```SQL
@@ -630,7 +630,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
@@ -642,7 +642,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.c.\"
         ```SQL
@@ -654,7 +654,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\"
         ```SQL
@@ -676,7 +676,7 @@
     Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\"
         Le couple ```(NumClient, NumChambre)``` ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple ```(NumClient, NumChambre)``` ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation ```Reservations```.
@@ -685,7 +685,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction Q2.a.\"
@@ -698,7 +698,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction Q2.b.\"
@@ -712,7 +712,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction Q3.\"
@@ -727,7 +727,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction Q4.a.\"
@@ -741,7 +741,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction Q4.b\"
@@ -762,7 +762,7 @@
     **Partie A**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -771,7 +771,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
@@ -780,7 +780,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='2-4'
@@ -795,7 +795,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         La méthode utilisée est la méthode ```sleep```, à la ligne 37. 
@@ -804,7 +804,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```donnees[i]``` est un dictionnaire.
@@ -813,7 +813,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -883,7 +883,7 @@
     **Partie B**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ```sql
@@ -895,7 +895,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -908,7 +908,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         ```sql
@@ -920,7 +920,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -934,7 +934,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         ```sql
@@ -949,7 +949,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -967,7 +967,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le résultat de la requête est :
@@ -980,7 +980,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -993,7 +993,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```sql
@@ -1005,7 +1005,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
@@ -1017,7 +1017,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Le médicament d'```id_medic``` égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.
@@ -1028,7 +1028,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```sql
@@ -1041,7 +1041,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         $1 \times 3,50 + 3 \times 5,50 = 20$ 
@@ -1053,7 +1053,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -1074,7 +1074,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
@@ -1083,7 +1083,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Cette requête pose problème car la valeur 1 de l'attribut ```idagres``` n'existe pas dans la table ```agres```.
@@ -1092,7 +1092,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -1105,7 +1105,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Le résultat de cette requête est 
@@ -1119,7 +1119,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -1132,7 +1132,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
@@ -1145,7 +1145,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -1161,7 +1161,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\"
         ```sql
