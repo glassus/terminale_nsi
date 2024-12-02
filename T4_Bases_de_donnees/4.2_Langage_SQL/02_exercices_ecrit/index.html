@@ -4167,7 +4167,7 @@ Il faut donc utiliser :
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf" target="_blank">Centres Étrangers J1 2022</a></p>
 <details class="success">
 <summary>Correction Q1.a.</summary>
-<p>L'attribut <code>id_mesure</code> semble une clé primaire acceptable car elle semble spécifique à chaque enregistrement.</p>
+<p>L'attribut <code>id_mesure</code> semble être une clé primaire acceptable car elle semble spécifique à chaque enregistrement.</p>
 </details>
 <details class="success">
 <summary>Correction Q1.b.</summary>
@@ -4176,6 +4176,21 @@ Il faut donc utiliser :
 <details class="success">
 <summary>Correction Q2.a.</summary>
 <p>Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        </p>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">altitude</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">700</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">altitude</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1200</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.c.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">longitude</span><span class="p">,</span><span class="w"> </span><span class="n">nom_ville</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Centres</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">longitude</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">nom_ville</span><span class="p">;</span>
+</code></pre></div>
 </details>
 </div>
 <div class="admonition abstract">
