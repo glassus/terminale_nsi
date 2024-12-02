@@ -589,7 +589,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a.\"
         La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
@@ -598,7 +598,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\"
         ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
@@ -608,7 +608,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.c.\"    
         La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
