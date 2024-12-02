@@ -4256,6 +4256,19 @@ Smells Like Teen Spirit, 1991
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q2.a.</summary>
+<p>La clé étrangère de la table <code>morceaux</code> est l'attribut <code>id_interprete</code> qui fait référence à la clé primaire <code>id_interprete</code> de la table <code>interpretes</code>.   </p>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<p><code>morceaux</code> : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))<br />
+<code>interpretes</code> : ((<ins>id_interprete</ins>, Int), (nom, Text), (pays, Text))   </p>
+</details>
+<details class="success">
+<summary>Correction Q2.c.</summary>
+<p>La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.</p>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  6</p>
