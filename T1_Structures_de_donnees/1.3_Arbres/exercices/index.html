@@ -3861,62 +3861,6 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf" target="_blank">Nouvelle-Calédonie J2 2022</a>  </p>
-<details class="success">
-<summary>Correction 1.</summary>
-<p>C'est un arbre binaire car chaque nœud possède au maximum deux fils.</p>
-</details>
-<details class="success">
-<summary>Correction 2.a</summary>
-<p><code>V</code> est un dictionnaire. </p>
-</details>
-<details class="success">
-<summary>Correction 2.b</summary>
-<div class="highlight"><pre><span></span><code><span class="n">V</span><span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction 2.c</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">W</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">W</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction 2.d</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">VMax</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
-    <span class="n">val_max</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">W</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">W</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val_max</span><span class="p">:</span>
-            <span class="n">val_max</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-            <span class="n">cle_max</span> <span class="o">=</span> <span class="n">cle</span>
-    <span class="k">return</span> <span class="n">cle_max</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction 3.</summary>
-<p>Cet algorithme calcule le nombre total de nœuds de l'arbre, donc la taille de l'arbre.
-C'est un algorithme récursif qui va renvoyer, si on n'est pas positionné sur un arbre vide, la valeur 1 (correspond au nœud racine sur lequel on est positionné), plus la taille des deux sous-arbres gauche et droits.         </p>
-</details>
-<details class="success">
-<summary>Correction 4.a</summary>
-<p>Le parcours est <code>A-B-C-E-D-F-G-I-H-J</code>         </p>
-</details>
-<details class="success">
-<summary>Correction 4.b</summary>
-<p>C'est un parcours préfixe.           </p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
@@ -3936,14 +3880,12 @@ père ;  </li>
 <p>Par exemple, dans l’arbre ci-dessous, on a utilisé ce procédé pour numéroter les nœuds A, B, C, E et
 F .</p>
 <p><img alt="image" class="center" src="../data/ex1b.png" /></p>
-<ol>
-<li>Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?</li>
-<li>Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?</li>
-<li>En notant <span class="arithmatex">\(h\)</span> la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
-bas ?</li>
-<li>Justifier que pour tout arbre de hauteur <span class="arithmatex">\(h\)</span> et de taille <span class="arithmatex">\(n \geqslant 2\)</span>, on a :
-<span class="arithmatex">\(h\leqslant n \leqslant 2^h-1\)</span></li>
-</ol>
+<p><strong>a</strong>. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?</p>
+<p><strong>b</strong>. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?</p>
+<p><strong>c</strong>. En notant <span class="arithmatex">\(h\)</span> la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
+bas ?</p>
+<p><strong>d</strong>. Justifier que pour tout arbre de hauteur <span class="arithmatex">\(h\)</span> et de taille <span class="arithmatex">\(n \geqslant 2\)</span>, on a :
+<span class="arithmatex">\(h\leqslant n \leqslant 2^h-1\)</span></p>
 <p><strong>Question 3</strong><br />
 Un arbre binaire est dit complet si tous les niveaux de l’arbre sont remplis.
 <img alt="image" class="center" src="../data/ex1c.png" /></p>
@@ -3956,10 +3898,8 @@ l’arbre, de la façon suivante :  </p>
 <li>On place la taille <span class="arithmatex">\(n\)</span> de l’arbre dans la case d’indice 0.</li>
 </ul>
 <p>Répondre aux questions suivantes :  </p>
-<ol>
-<li>Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.</li>
-<li>On considère le père du nœud d’indice <span class="arithmatex">\(i\)</span> avec <span class="arithmatex">\(i \geqslant 2\)</span>. Quel est son indice dans le tableau ?</li>
-</ol>
+<p><strong>a</strong>. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.</p>
+<p><strong>b</strong>. On considère le père du nœud d’indice <span class="arithmatex">\(i\)</span> avec <span class="arithmatex">\(i \geqslant 2\)</span>. Quel est son indice dans le tableau ?</p>
 <p><strong>Question 4</strong>  </p>
 <p>On se place dans le cas particulier d’un arbre binaire de recherche complet où les nœuds
 contiennent des entiers et pour lequel la valeur de chaque noeud est supérieure à celles des
@@ -3967,30 +3907,6 @@ noeuds de son fils gauche, et inférieure à celles des noeuds de son fils droit
 <p>Écrire une fonction <code>recherche</code> ayant pour paramètres un arbre <code>arbre</code> et un élément <code>element</code>. Cette
 fonction renvoie <code>True</code> si <code>element</code> est dans l’arbre et <code>False</code> sinon. L’arbre sera représenté par un tableau
 comme dans la question précédente.</p>
-<details class="tip">
-<summary>corrigé</summary>
-<p><strong>Q1</strong> La taille est 9, la hauteur est 4.<br />
-<strong>Q2</strong> 1. G est associé à 1010. <br />
-<strong>Q2</strong> 2. 13 s'écrit 1101 en binaire, c'est donc le nœud I.  <br />
-<strong>Q2</strong> 3. Les nœuds les plus en bas sont notés sur <span class="arithmatex">\(h\)</span> bits.<br />
-<strong>Q2</strong> 4. L'arbre de hauteur <span class="arithmatex">\(h\)</span> de taille minimale est l'arbre filiforme, qui est de taille <span class="arithmatex">\(h\)</span>.<br />
-L'arbre de hauteur <span class="arithmatex">\(h\)</span> de taille maximale est l'arbre complet, qui est de taille <span class="arithmatex">\(2^h-1\)</span>. Si <span class="arithmatex">\(n\)</span> est la taille d'un arbre quelconque de taille <span class="arithmatex">\(h\)</span>, on a donc bien</p>
-<p><span class="arithmatex">\(h \leqslant n \leqslant 2^h-1\)</span>.</p>
-<p><strong>Q3</strong> 1. Tableau : <code>[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]</code> .<br />
-<strong>Q3</strong> 2. Le père du nœud d'indice <code>i</code> a pour indice <code>i//2</code>.   </p>
-<p><strong>Q4</strong> :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">arbre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">element</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">element</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="c1"># on se place sur le fils gauche</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span>  <span class="mi">1</span> <span class="c1"># on se place sur le fils droit</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -4000,25 +3916,9 @@ même clé. De plus, un arbre binaire de recherche limité à un nœud a une hau
 On considère l’arbre binaire de recherche représenté ci-dessous (figure 1), où <code>val</code> représente un entier :</p>
 <p><img alt="image" class="center" src="../data/ex2a.png" /></p>
 <p><strong>1.a</strong> Donner le nombre de feuilles de cet arbre et préciser leur valeur (étiquette).  </p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>1.a.</strong> Il y a 4 feuilles, d'étiquette 12, <code>val</code>, 21 et 32. </p>
-</details>
 <p><strong>1.b</strong> Donner le sous arbre-gauche du nœud 23.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>1.b.</strong> Le sous-arbre gauche du nœud 23 est 19-21. </p>
-</details>
 <p><strong>1.c</strong> Donner la hauteur et la taille de l’arbre.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>1.c.</strong> La hauteur de l'arbre est 4. Sa taille est 9.</p>
-</details>
 <p><strong>1.d</strong> Donner les valeurs entières possibles de <code>val</code> pour cet arbre binaire de recherche.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>1.d.</strong> Les valeurs possibles de <code>val</code> sont 16 et 17.</p>
-</details>
 <p>On suppose, pour la suite de cet exercice, que <code>val</code> est égal à 16.</p>
 <p><strong>2.</strong> On rappelle qu’un parcours infixe depuis un nœud consiste, dans l’ordre, à faire un parcours
 infixe sur le sous arbre-gauche, afficher le nœud puis faire un parcours infixe sur le sous-arbre
@@ -4026,138 +3926,20 @@ droit.  <br />
 Dans le cas d’un parcours suffixe, on fait un parcours suffixe sur le sous-arbre gauche puis un
 parcours suffixe sur le sous-arbre droit, avant d’afficher le nœud.</p>
 <p><strong>a.</strong> Donner les valeurs d’affichage des nœuds dans le cas du parcours infixe de l’arbre.  </p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>2.a.</strong> Parcours infixe : 12-13-15-16-18-19-21-23-32  </p>
-</details>
 <p><strong>b</strong>. Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe de l’arbre.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>2.b.</strong> Parcours suffixe : 12-13-16-15-21-19-32-23-18  </p>
-</details>
 <p><strong>3.</strong> On considère la classe <code>Noeud</code> définie de la façon suivante en Python :</p>
 <p><img alt="image" class="center" src="../data/ex2b.png" /></p>
 <p><strong>a.</strong> Représenter l’arbre construit suite à l’exécution de l’instruction suivante :</p>
 <div class="highlight"><pre><span></span><code><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">racine</span><span class="o">.</span><span class="n">insere_tout</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>3.a.</strong> <img alt="image" class="center" src="../data/exobac.png" /></p>
-</details>
 <p><strong>b.</strong> Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
 le nombre <code>val</code> est égal à 16.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>3.b.</strong> <br />
-<div class="highlight"><pre><span></span><code><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
-<span class="n">racine</span><span class="o">.</span><span class="n">insere</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">])</span>
-</code></pre></div>
-(d'autres solutions sont possibles)        </p>
-</details>
 <p><strong>c.</strong> On considère l’arbre tel qu’il est présenté sur la figure 1. Déterminer l’ordre d’exécution des
 blocs (repérés de 1 à 3) suite à l’application de la méthode <code>insere(19)</code> au nœud racine
 de cet arbre.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>3.c.</strong> Bloc 3 - Bloc 2 - Bloc 1  </p>
-</details>
 <p><strong>4.</strong> Écrire une méthode <code>recherche(self, v)</code> qui prend en argument un entier <code>v</code> et renvoie la
 valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>False</code> sinon.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>4.</strong>  </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span>
-
-    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">while</span> <span class="ow">not</span> <span class="n">est_insere</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
-                <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="k">elif</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ag</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">n</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-                    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">ad</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-                    <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
-
-    <span class="k">def</span> <span class="nf">insere_tout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="n">arbre</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="k">while</span> <span class="ow">not</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span> <span class="o">==</span> <span class="n">v</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">True</span>
-            <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span><span class="p">:</span>
-                <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">ag</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">ad</span>
-        <span class="k">return</span> <span class="kc">False</span>
-
-
-<span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
-<span class="n">racine</span><span class="o">.</span><span class="n">insere_tout</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">23</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">racine</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="mi">149</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">racine</span><span class="o">.</span><span class="n">recherche</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -4396,21 +4178,9 @@ Les nœuds ont été nommés dans l'ordre de leur insertion dans l'arbre ci-dess
 en coloriant en rouge le chemin parcouru.</p>
 <p>Préciser sous quel nœud la valeur 25 sera insérée et si elle est insérée en fils
 gauche ou en fils droit, et expliquer toutes les étapes de la décision.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/ex6_1.png" width="50%" /></p>
-<p>25 étant plus petit que 26, on part dans son sous-arbre gauche.<br />
-25 étant plus grand que 3, on part dans son sous-arbre droit.<br />
-25 étant plus grand que 15, on part dans son sous-arbre droit.<br />
-25 étant plus grand que 19, on insère 25 en tant que fils droit de 19. </p>
-</details>
 <p><strong>Q2.</strong> Préciser toutes les valeurs entières que l’on peut stocker dans le nœud fils
 gauche du nœud04 (vide pour l'instant), en respectant les règles sur les arbres
 binaires de recherche.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.</p>
-</details>
 <p><strong>Q3.</strong> Voici un algorithme récursif permettant de parcourir et d'afficher les valeurs de
 l'arbre :</p>
 <div class="highlight"><pre><span></span><code><span class="n">Parcours</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># A est un arbre binaire de recherche</span>
@@ -4421,100 +4191,13 @@ l'arbre :</p>
 <p><strong>Q3.a.</strong> Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.</p>
 <p><strong>Q3.b.</strong> Choisir le type de parcours d'arbres binaires de recherche réalisé parmi les
 propositions suivantes : Préfixe, Suffixe ou Infixe.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>On reconnait un parcours préfixe.        </p>
-</details>
 <p><strong>Q4.</strong> En vous inspirant de l’algorithme précédent, écrire un algorithme Parcours2
 permettant de parcourir et d'afficher les valeurs de l'arbre A dans l'ordre
 croissant.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Parcours2</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># A est un arbre binaire de recherche</span>
-    <span class="n">Parcours2</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_gauche</span><span class="p">)</span>
-    <span class="n">Afficher</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
-    <span class="n">Parcours2</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">)</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf" target="blank">Centres Etrangers J2 - 2023</a></p>
-<details class="success">
-<summary>Correction Q1.a.</summary>
-<p><code>'Bonjour Alan !'</code>    </p>
-</details>
-<details class="success">
-<summary>Correction Q1.b.</summary>
-<p>Ce sont des booléens. <code>x</code> vaut <code>False</code>, <code>y</code> vaut <code>True</code>.        </p>
-</details>
-<details class="success">
-<summary>Correction Q1.c.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
-    <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">une_chaine</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">une_lettre</span><span class="p">:</span>
-            <span class="n">nb</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q2.a</summary>
-<p><img alt="image" class="center" src="../data/23-NSIJ2G11_1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q2.b</summary>
-<p><img alt="image" class="center" src="../data/23-NSIJ2G11_2.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q3.a</summary>
-<p>L'exécution de <code>mystere(abr_mots_francais)</code> va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste <code>liste_mots_francais</code>, et donc dans l'arbre <code>abr_mots_francais</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q3.b.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_gauche</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="o">.</span><span class="n">sous_arbre_droit</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q4.a.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">longueur</span> <span class="ow">and</span> <span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">lettre</span><span class="p">:</span>
-            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">res</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q4.b.</summary>
-<p>Cette commande va <strong>d'abord</strong> chercher dans la liste tous les mots de 3 lettres qui comportent un <code>x</code> en dernière position (indice 2).</p>
-<p>Ensuite, parmi les mots trouvés, on va chercher ceux qui ont un <code>a</code> en deuxième position (indice 1).</p>
-<p>Donc on cherche les mots de 3 lettres finissant par <code>ax</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q4.c.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-</details>
 <ul>
 <li>Fichier des mots français : <a href="../data/gutenberg.txt">gutenberg.txt</a></li>
 <li>Instruction pour créer une liste à partir du fichier :
@@ -4542,7 +4225,7 @@ croissant.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 décembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 décembre 2024</span>
   </span>
 
     

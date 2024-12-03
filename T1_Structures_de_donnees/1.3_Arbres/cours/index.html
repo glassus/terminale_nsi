@@ -1136,15 +1136,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bibliographie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliographie
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4407,9 +4398,6 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Dessinez l'arbre créé par les instructions suivantes :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -4419,12 +4407,6 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 </code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<p><img alt="correction" class="center" src="../data/exo_imp.png" /></p>
-</div>
-</div>
-</div>
 </div>
 <p><strong><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Implémentation <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></strong></p>
 <p>⯈ <strong>Principe</strong> : nous allons créer une classe <code>Arbre</code>, qui contiendra 3 attributs : </p>
@@ -4587,17 +4569,7 @@ est représenté par le tuple :</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p><img alt="" class="center" src="../data/carac3.png" /></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Écrire le tuple représentant l'arbre ci-dessous.       </p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">,(</span><span class="n">Y</span><span class="p">,(</span><span class="n">P</span><span class="p">,(),()),()),(</span><span class="n">O</span><span class="p">,(</span><span class="n">H</span><span class="p">,(),()),(</span><span class="n">N</span><span class="p">,(),())))</span>
-</code></pre></div>
-</div>
-</div>
-</div>
 </div>
 <h3 id="33-implementation-a-partir-dune-simple-liste">3.3 Implémentation à partir d'une «simple» liste<a class="headerlink" href="#33-implementation-a-partir-dune-simple-liste" title="Permanent link">⚓︎</a></h3>
 <p>De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
@@ -4610,18 +4582,9 @@ Ceci peut se faire par le biais d'une astuce sur les indices :</p>
 <p><img alt="" class="center" src="../data/eytzinger2.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Δ</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<p><img alt="correction" class="center" src="../data/corrtuple.png" /></p>
-</div>
-</div>
-</div>
 </div>
 <p><strong>Remarque :</strong> parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.</p>
 <h2 id="4-utilisation-de-limplementation-parcours-taille">4. Utilisation de l'implémentation : parcours, taille...<a class="headerlink" href="#4-utilisation-de-limplementation-parcours-taille" title="Permanent link">⚓︎</a></h2>
@@ -4639,22 +4602,8 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="41-parcours-prefixe-infixe-postfixe">4.1 Parcours préfixe, infixe, postfixe<a class="headerlink" href="#41-parcours-prefixe-infixe-postfixe" title="Permanent link">⚓︎</a></h3>
+<p>Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons <em>afficher</em> les sommets, donc nous utiliserons <code>print</code>. Et deux appels récursifs... </p>
 <h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
 <p>Exemple avec l'arbre 
 <img alt="" class="center" src="../data/exo_2.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -4679,30 +4628,10 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <span class="mi">9</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
 </code></pre></div>
 <h4 id="412-parcours-infixe">4.1.2 Parcours infixe<a class="headerlink" href="#412-parcours-infixe" title="Permanent link">⚓︎</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-</code></pre></div>
-</div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
 </code></pre></div>
 <h4 id="413-parcours-postfixe">4.1.3 Parcours postfixe<a class="headerlink" href="#413-parcours-postfixe" title="Permanent link">⚓︎</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-</code></pre></div>
-</div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="mi">6</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span>
 </code></pre></div>
@@ -5033,10 +4962,12 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </code></pre></div>
 <p>La valeur 4 a donc bien été insérée au bon endroit.</p>
 <hr />
-<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Bibliographie</p>
 <ul>
 <li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
 </ul>
+</div>
 
 
 
@@ -5057,7 +4988,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 décembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 décembre 2024</span>
   </span>
 
     
