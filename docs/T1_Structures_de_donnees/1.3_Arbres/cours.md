@@ -272,19 +272,28 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Dessinez l'arbre créé par les instructions suivantes :
-        ```python
-        >>> a = Arbre(4)
-        >>> a.left = Arbre(3)
-        >>> a.right = Arbre(1)
-        >>> a.right.left = Arbre(2)
-        >>> a.right.right = Arbre(7)
-        >>> a.left.left = Arbre(6)
-        >>> a.right.right.left = Arbre(9)
-        ```
-    === "Correction"
-        ![correction](data/exo_imp.png){: .center}
+
+    Dessinez l'arbre créé par les instructions suivantes :
+    ```python
+    >>> a = Arbre(4)
+    >>> a.left = Arbre(3)
+    >>> a.right = Arbre(1)
+    >>> a.right.left = Arbre(2)
+    >>> a.right.right = Arbre(7)
+    >>> a.left.left = Arbre(6)
+    >>> a.right.right.left = Arbre(9)
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![correction](data/exo_imp.png){: .center} 
+    """
+    )
+    }}
+
+        
 
 
 
@@ -462,13 +471,20 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
 
 !!! example "{{ exercice() }}"
     ![](data/carac3.png){: .center}
-    === "Énoncé"
-        Écrire le tuple représentant l'arbre ci-dessous.       
-        
-    === "Correction"
+
+    Écrire le tuple représentant l'arbre ci-dessous.       
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         a = (T,(Y,(P,(),()),()),(O,(H,(),()),(N,(),())))
-        ```
+        ```        
+    """
+    )
+    }}        
+
 
 
 
@@ -494,14 +510,21 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
-        ```python
-        a = [3, 4, Δ, 7, 5]
-        ```       
+
+    Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
+    ```python
+    a = [3, 4, Δ, 7, 5]
+    ```       
         
-    === "Correction"
-        ![correction](data/corrtuple.png){: .center}
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![correction](data/corrtuple.png){: .center}        
+    """
+    )
+    }}
+
 
 
 **Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.
@@ -525,8 +548,11 @@ class Arbre:
 
 ### 4.1 Parcours préfixe, infixe, postfixe
 
+Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons *afficher* les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
+
 #### 4.1.1 Parcours préfixe
 
+{#
 !!! note "Parcours préfixe :heart:"
 
     ```python linenums='1'
@@ -538,7 +564,7 @@ class Arbre:
         prefixe(arbre.right)
 
     ```
-
+#}
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center}
@@ -564,6 +590,7 @@ a.right.right.right = Arbre(3)
 
 #### 4.1.2 Parcours infixe
 
+{#
 !!! note "Parcours infixe :heart:"
 
     ```python
@@ -575,7 +602,7 @@ a.right.right.right = Arbre(3)
         infixe(arbre.right)
     ```
 
-
+#}
 
 ```python
 >>> infixe(a)
@@ -583,6 +610,8 @@ a.right.right.right = Arbre(3)
 ```
 
 #### 4.1.3 Parcours postfixe
+
+{#
 
 !!! note "Parcours postfixe :heart:"
 
@@ -595,7 +624,7 @@ a.right.right.right = Arbre(3)
         print(arbre.data, end = '-')
     ```
 
-
+#}
 
 ```python
 >>> postfixe(a)
@@ -975,8 +1004,10 @@ La valeur 4 a donc bien été insérée au bon endroit.
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+
+!!! quote "Bibliographie"
+
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 
 
 
