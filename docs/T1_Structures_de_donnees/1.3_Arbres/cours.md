@@ -475,7 +475,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
     Écrire le tuple représentant l'arbre ci-dessous.       
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
