@@ -517,7 +517,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
     ```       
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![correction](data/corrtuple.png){: .center}        
