@@ -687,8 +687,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
     def taille(arbre):
         if arbre is None:
             return 0
-        else:
-            return 1 + taille(arbre.left) + taille(arbre.right)
+        return 1 + taille(arbre.left) + taille(arbre.right)
     ```
 
 #}
