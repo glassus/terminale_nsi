@@ -717,7 +717,7 @@ a.right.right.right = Arbre(3)
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
 
-{#
+
 !!! note "Hauteur d'un arbre :heart:"
 
     ```python
@@ -734,7 +734,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 >>> hauteur(a)
 4
 ```
-#}
+
 
 ### 4.4 Calcul du nombre de feuilles d'un arbre
 Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
@@ -923,6 +923,7 @@ Un arbre binaire de taille $n$ contient $n$ clés (pas forcément différentes).
 
 Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.
 
+{#
 !!! note "Recherche d'une clé dans un ABR :heart:"
     
     ```python
@@ -937,7 +938,7 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
             return contient_valeur(arbre.right, valeur)
 
     ```
-    
+#}  
 
 **Exemple** 
 
