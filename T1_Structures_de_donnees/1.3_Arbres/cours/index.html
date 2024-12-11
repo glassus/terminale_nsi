@@ -4766,6 +4766,18 @@ ou
 </code></pre></div>
 <h3 id="43-calcul-de-la-hauteur-dun-arbre">4.3 Calcul de la hauteur d'un arbre<a class="headerlink" href="#43-calcul-de-la-hauteur-dun-arbre" title="Permanent link">⚓︎</a></h3>
 <p>Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.</p>
+<div class="admonition note">
+<p class="admonition-title">Hauteur d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
 <h3 id="44-calcul-du-nombre-de-feuilles-dun-arbre">4.4 Calcul du nombre de feuilles d'un arbre<a class="headerlink" href="#44-calcul-du-nombre-de-feuilles-dun-arbre" title="Permanent link">⚓︎</a></h3>
 <p>Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -4907,19 +4919,6 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <h3 id="52-rechercher-une-cle-dans-un-abr">5.2 Rechercher une clé dans un ABR<a class="headerlink" href="#52-rechercher-une-cle-dans-un-abr" title="Permanent link">⚓︎</a></h3>
 <p>Un arbre binaire de taille <span class="arithmatex">\(n\)</span> contient <span class="arithmatex">\(n\)</span> clés (pas forcément différentes). Pour savoir si une valeur particulière fait partie des clés, on peut parcourir tous les nœuds de l'arbre, jusqu'à trouver (ou pas) cette valeur dans l'arbre. Dans le pire des cas, il faut donc faire <span class="arithmatex">\(n\)</span> comparaisons.</p>
 <p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
-<div class="admonition note">
-<p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-</code></pre></div>
-</div>
 <p><strong>Exemple</strong> </p>
 <p>L'arbre <code>a</code> contient la valeur 8, mais l'arbre <code>b</code> ne la contient pas :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
