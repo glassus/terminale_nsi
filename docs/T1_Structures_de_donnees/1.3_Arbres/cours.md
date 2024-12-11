@@ -634,7 +634,11 @@ a.right.right.right = Arbre(3)
 !!! aide "Pause vidéo" 
     - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
     - À l'aide de la vidéo, codez le parcours infixe en itératif.  
-    ??? tip "solution"
+    {{
+    correction(False,
+    """
+
+    ??? success \"Correction\" 
         ```python linenums='1'
         def infixe(arbre):
             parcours = []
@@ -652,7 +656,12 @@ a.right.right.right = Arbre(3)
                     current = current.right
 
             return parcours
-        ```
+        ```        
+    """
+    )
+    }}
+
+
 
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
