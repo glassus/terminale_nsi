@@ -4676,37 +4676,59 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 </ul>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code>```python linenums=&#39;1&#39;
-</code></pre></div>
-<p>def infixe(arbre):
-    pile = []
-    while pile != [] or arbre is not None:
-        if arbre is not None:
-            pile.append(arbre)
-            arbre = arbre.left
-        else:
-            arbre = pile.pop()
-            print(arbre.data)
-            arbre = arbre.right</p>
-<div class="highlight"><pre><span></span><code>ou
-```python linenums=&#39;1&#39;
-def infixe_avec_liste(arbre):
-    parcours = []
-    pile = []
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">arbre</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">right</span>
+</code></pre></div></td></tr></table></div>
+ou
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe_avec_liste</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
 
-    current = arbre
+    <span class="n">current</span> <span class="o">=</span> <span class="n">arbre</span>
 
-    while pile != [] or current is not None:
-        if current is not None:
-            pile.append(current)
-            current = current.left
-        else:
-            current = pile.pop()
-            parcours.append(current.data)
-            current = current.right
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">right</span>
 
-    return parcours
-</code></pre></div>
+    <span class="k">return</span> <span class="n">parcours</span>
+</code></pre></div></td></tr></table></div></p>
 </details>
 </div>
 <h3 id="42-calcul-de-la-taille-dun-arbre">4.2 Calcul de la taille d'un arbre<a class="headerlink" href="#42-calcul-de-la-taille-dun-arbre" title="Permanent link">⚓︎</a></h3>
