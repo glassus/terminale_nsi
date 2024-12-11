@@ -666,6 +666,7 @@ a.right.right.right = Arbre(3)
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
+{#
 !!! note "Taille d'un arbre :heart:"
 
     ```python
@@ -676,7 +677,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
             return 1 + taille(arbre.left) + taille(arbre.right)
     ```
 
-
+#}
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center}
@@ -702,6 +703,8 @@ a.right.right.right = Arbre(3)
 ### 4.3 Calcul de la hauteur d'un arbre
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
+
+{#
 !!! note "Hauteur d'un arbre :heart:"
 
     ```python
@@ -718,11 +721,12 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 >>> hauteur(a)
 4
 ```
-
+#}
 
 ### 4.4 Calcul du nombre de feuilles d'un arbre
 Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
 
+{#
 !!! note "Nombre de feuilles d'un arbre :heart:"
 
     ```python
@@ -734,6 +738,7 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
         return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
     ```
 
+#}
 
 ```python
 >>> nb_feuilles(a)
@@ -745,6 +750,7 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 ### 4.5 Recherche d'une valeur dans un arbre
 On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
 
+{#
 !!! note "Recherche d'une valeur dans un arbre :heart:"
     
     ```python
@@ -756,7 +762,7 @@ On renverra ```True``` ou ```False``` en fonction de la présence ou non de la v
         return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
     ```
     
-
+#}
 
 ```python
 >>> recherche(a, 2)
