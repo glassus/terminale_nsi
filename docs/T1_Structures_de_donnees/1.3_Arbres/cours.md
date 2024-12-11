@@ -639,7 +639,7 @@ a.right.right.right = Arbre(3)
     """
 
     ??? success \"Correction\" 
-            ```python linenums='1'
+        ```python linenums='1'
         def infixe(arbre):
             pile = []
             while pile != [] or arbre is not None:
