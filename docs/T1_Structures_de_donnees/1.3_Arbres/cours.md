@@ -639,8 +639,22 @@ a.right.right.right = Arbre(3)
     """
 
     ??? success \"Correction\" 
-        ```python linenums='1'
+            ```python linenums='1'
         def infixe(arbre):
+            pile = []
+            while pile != [] or arbre is not None:
+                if arbre is not None:
+                    pile.append(arbre)
+                    arbre = arbre.left
+                else:
+                    arbre = pile.pop()
+                    print(arbre.data)
+                    arbre = arbre.right
+
+        ```   
+        ou
+        ```python linenums='1'
+        def infixe_avec_liste(arbre):
             parcours = []
             pile = []
 
