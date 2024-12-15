@@ -986,6 +986,7 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
     - Si la clé est supérieure, on fait la même chose avec l'arbre de droite.
     - on renvoie le nouvel arbre ainsi créé.
 
+{#
 !!! note "Insertion dans un ABR :heart:"
 
     ```python
@@ -1000,7 +1001,7 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
                 arbre.right = insertion(arbre.right, cle)
             return arbre
     ```
-
+#}
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 

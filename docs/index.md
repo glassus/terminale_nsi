@@ -20,6 +20,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
     - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 
 
