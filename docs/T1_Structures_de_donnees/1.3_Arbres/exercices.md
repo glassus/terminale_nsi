@@ -104,7 +104,7 @@
     ![image](data/ex1a.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La taille est 9, la hauteur est 4.        
@@ -130,7 +130,7 @@
 
     **a**. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         G est associé à 1010.  
@@ -139,7 +139,7 @@
     }}
     **b**. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         13 s'écrit 1101 en binaire, c'est donc le nœud I.          
@@ -149,7 +149,7 @@
     **c**. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
     bas ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Les nœuds les plus en bas sont notés sur $h$ bits.      
@@ -159,7 +159,7 @@
     **d**. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a :
     $h\leqslant n \leqslant 2^h-1$
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
@@ -184,7 +184,7 @@
 
     **a**. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Tableau : ```[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]``` .     
@@ -193,7 +193,7 @@
     }}
     **b**. On considère le père du nœud d’indice $i$ avec $i \geqslant 2$. Quel est son indice dans le tableau ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le père du nœud d'indice ```i``` a pour indice ```i//2```.       
@@ -213,7 +213,7 @@
     comme dans la question précédente.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -246,7 +246,7 @@
 
     **1.a** Donner le nombre de feuilles de cet arbre et préciser leur valeur (étiquette).  
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 32. 
@@ -256,7 +256,7 @@
 
     **1.b** Donner le sous arbre-gauche du nœud 23.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.b.** Le sous-arbre gauche du nœud 23 est 19-21. 
@@ -266,7 +266,7 @@
 
     **1.c** Donner la hauteur et la taille de l’arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.c.** La hauteur de l'arbre est 4. Sa taille est 9.
@@ -275,7 +275,7 @@
     }}
     **1.d** Donner les valeurs entières possibles de `val` pour cet arbre binaire de recherche.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.
@@ -292,7 +292,7 @@
 
     **a.** Donner les valeurs d’affichage des nœuds dans le cas du parcours infixe de l’arbre.  
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **2.a.** Parcours infixe : 12-13-15-16-18-19-21-23-32  
@@ -301,7 +301,7 @@
     }}
     **b**. Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe de l’arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **2.b.** Parcours suffixe : 12-13-16-15-21-19-32-23-18  
