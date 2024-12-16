@@ -4982,6 +4982,20 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </ul>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Insertion dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">arbre</span>
+</code></pre></div>
+</div>
 <p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
 <p><img alt="" class="center" src="../data/insertionABR.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
