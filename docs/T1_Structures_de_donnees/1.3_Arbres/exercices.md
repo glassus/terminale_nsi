@@ -595,12 +595,8 @@
         Méthode ```taille```    de la classe ```Noeud``` :  
         ```python linenums='1'
         def taille(self):
-            if self.gauche is None and self.droit is None:
-                return 1
-            elif self.gauche is None:
-                return 1 + self.droit.taille()
-            elif self.droit is None:
-                return 1 + self.gauche.taille()
+            if self == None:
+                return 0
             else:
                 return 1 + self.gauche.taille() + self.droit.taille()
         ```
