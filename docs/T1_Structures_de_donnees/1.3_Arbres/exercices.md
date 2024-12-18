@@ -347,7 +347,7 @@
     blocs (repérés de 1 à 3) suite à l’application de la méthode `insere(19)` au nœud racine
     de cet arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.c.** Bloc 3 - Bloc 2 - Bloc 1  
@@ -360,7 +360,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **4.**  
