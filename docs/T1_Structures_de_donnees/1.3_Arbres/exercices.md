@@ -984,7 +984,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```'Bonjour Alan !'```    
@@ -994,7 +994,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         Ce sont des booléens. ```x``` vaut ```False```, ```y``` vaut ```True```.        
@@ -1003,7 +1003,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c.\" 
         ```python linenums='1'
@@ -1019,7 +1019,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a\" 
         ![image](data/23-NSIJ2G11_1.png){: .center}
