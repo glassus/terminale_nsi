@@ -13,6 +13,9 @@
 
 
 !!! abstract "Notions essentielles :heart: :heart: :heart:"
+
+    ![image](data/ex_reseau.png){: .center}
+    
     Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :
 
     - La machine A calcule (grâce au masque de sous-réseau) si B est dans le même sous-réseau qu'elle, ou pas.
@@ -226,12 +229,16 @@ Pour le comprendre, vous pouvez regarder la vidéo d'un célèbre YouTuber :
 
 Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. Et c'est donc grâce à lui que chaque routeur calcule la route la plus rapide pour acheminer les données qu'il reçoit.
 
-!!! abstract "Exercice d'application de l'algorithme de Dijkstra (HP)"
-    
+{{initexo(0)}}
+!!! example "{{ exercice() }} : application de l'algorithme de Dijkstra (HP)"
+      
     Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
     ![image](data/graph.png){: .center width=60%}
 
-    ??? tip "correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         |E|A|B|C|D|F|Choix|
         |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
         |**0**|--|--|--|--|--|E(0)|
@@ -242,47 +249,61 @@ Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. 
         |.|.|.|.|.|**70vB**|F(70)|
 
         Le meilleur trajet est donc E-D-A-C-B-F.  
-        _Attention ce trajet correspond à la colonne choix (dans l'ordre) mais c'est un hasard._
+        _Attention ce trajet correspond à la colonne choix (dans l'ordre) mais c'est un hasard._        
+    """
+    )
+    }}
 
 
-### 3.4 Exercice
-_(extrait du sujet 0)_
-
-On considère le réseau suivant :
-
-![image](data/ex3.png){: .center width=40%}
-
-
-
-On rappelle que le coût d’une liaison est donné par la formule suivante :
-
-
-$$ \text{coût} = \frac{10^8}{d} $$
-
-
-**Question 1**
-
-1. Vérifier que le coût de la liaison entre les routeurs A et B est 0,01.
-2. La liaison entre le routeur B et D a un coût de 5. Quel est le débit de cette liaison ?
-
-
-**Question 2**
-
-Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
-
-??? tip "Correction"
-    **Q1**  
-    1. $\text{coût} = \dfrac{10^8}{10 \times 10^9}= \dfrac{10^8}{10^{10}}= 10^{-2}=0,01$  
-    2. $5=\dfrac{10^8}{d}$ donc $d=\dfrac{10^8}{5}=20 \times 10^6$ = 20 Mb/s
+!!! example "{{ exercice() }} _(extrait du sujet 0 de 2020)_"
     
+    On considère le réseau suivant :
 
-    **Q2**
-    Le graphe pondéré par les coûts est :
-    ![image](data/ex3_corr.png){: .center}
+    ![image](data/ex3.png){: .center width=40%}
 
-    On peut y deviner le chemin de coût minimal entre A et G, qui est A-D-E-G (coût 1,011).  
-    Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
-    ![image](data/corr_tab.png){: .center} 
+    On rappelle que le coût d’une liaison est donné par la formule suivante :
+
+
+    $$ \text{coût} = \frac{10^8}{d} $$
+
+
+    **Question 1**
+
+    a. Vérifier que le coût de la liaison entre les routeurs A et B est 0,01.
+    b. La liaison entre le routeur B et D a un coût de 5. Quel est le débit de cette liaison ?
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        **Q1**  
+            a. $\\text{coût} = \\dfrac{10^8}{10 \\times 10^9}= \\dfrac{10^8}{10^{10}}= 10^{-2}=0,01$  
+            b. $5=\\dfrac{10^8}{d}$ donc $d=\\dfrac{10^8}{5}=20 \\times 10^6$ = 20 Mb/s        
+    """
+    )
+    }}
+
+
+    **Question 2**
+
+    Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        **Q2**
+        Le graphe pondéré par les coûts est :
+        ![image](data/ex3_corr.png){: .center}
+
+        On peut y deviner le chemin de coût minimal entre A et G, qui est A-D-E-G (coût 1,011).  
+        Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
+        ![image](data/corr_tab.png){: .center}          
+    """
+    )
+    }}
+
+
     
 
 
