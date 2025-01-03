@@ -312,7 +312,7 @@ Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. 
 !!! aide "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-    - Site d'Olivier Lécluse [https://www.lecluse.fr/nsi/NSI_T/archi/routage/](https://www.lecluse.fr/nsi/NSI_T/archi/routage/)
+    - Site d'Olivier Lécluse [https://lecluseo.frama.io/leclusemaths/nsi/NSI_T/archi/(https://lecluseo.frama.io/leclusemaths/nsi/NSI_T/archi/)
 
 
 ---

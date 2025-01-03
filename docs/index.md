@@ -1,17 +1,14 @@
 
-[https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
-
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-
+{#
 !!! abstract "Actualités"
-    Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
-    ![image](data/aoc2024.png){: .center width=20%}
-    
-    - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
-    - Vous pouvez retrouver mes solutions (quand elles existent...) à [cette adresse](https://github.com/glassus/aoc2024){. target="_blank"}
+#}
 
-
+!!! tip "Grand Oral"
+    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
+    - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
+    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"}
 
 
 {#
@@ -20,7 +17,8 @@
 #}
 
 
-!!! note ":star: Thème en cours d'étude :star: "
+!!! note ":star: Thèmes en cours d'étude :star: "
+    - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
     - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 
@@ -211,7 +209,18 @@
     - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
     - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
     - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
-    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"
+    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"}
+
+
+    Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
+    ![image](data/aoc2024.png){: .center width=20%}
+    
+    - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
+    - Vous pouvez retrouver mes solutions (quand elles existent...) à [cette adresse](https://github.com/glassus/aoc2024){. target="_blank"}
+
+
+    - une idée pour le Grand Oral : [Le bug de Minecraft](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
+    - [Un article sur les mots de passe](https://www.numerama.com/cyberguerre/1734250-un-mot-de-passe-de-8-caracteres-est-devenu-trop-faible-a-cause-des-avancees-technologiques.html){. target="_blank"}
 
 
 #}
