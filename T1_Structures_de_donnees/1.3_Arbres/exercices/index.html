@@ -3880,7 +3880,7 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">somme</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">W</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="n">W</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
@@ -3895,7 +3895,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">VMax</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">VMax</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
     <span class="n">val_max</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">W</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">W</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val_max</span><span class="p">:</span>
@@ -3994,7 +3994,7 @@ fonction renvoie <code>True</code> si <code>element</code> est dans l’arbre et
 comme dans la question précédente.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">arbre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">element</span><span class="p">:</span>
@@ -4126,13 +4126,13 @@ valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>Fa
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Noeud</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ag</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">v</span>
 
-    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="n">est_insere</span><span class="p">:</span>
@@ -4151,11 +4151,11 @@ valeur <code>True</code> si cet entier est une étiquette de l’arbre, <code>Fa
                     <span class="n">n</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
                     <span class="n">est_insere</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="nf">insere_tout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insere_tout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="n">arbre</span> <span class="o">=</span> <span class="bp">self</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">v</span> <span class="o">==</span> <span class="n">v</span><span class="p">:</span>
@@ -4235,14 +4235,14 @@ récursivement une nouvelle clé.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span> <span class="p">:</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Noeud</span> <span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cle</span> <span class="o">=</span> <span class="n">cle</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">cle</span> <span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
@@ -4254,12 +4254,12 @@ récursivement une nouvelle clé.</p>
             <span class="k">else</span> <span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">Arbre</span> <span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span> <span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">racine</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">insere</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Donner la représentation de l’arbre codé par les instructions ci-dessous.</p>
@@ -4277,7 +4277,7 @@ récursivement une nouvelle clé.</p>
 </details>
 <p><strong>4.</strong> Pour calculer la hauteur d’un arbre non vide, on a écrit la méthode ci-dessous dans
 la classe Noeud.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
@@ -4298,7 +4298,7 @@ l’arbre.</p>
 <summary>Correction</summary>
 <p><strong>4.</strong>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">hauteur</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div></p>
 </details>
@@ -4312,7 +4312,7 @@ Méthode <code>taille</code>    de la classe <code>Noeud</code> :<br />
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4320,7 +4320,7 @@ Méthode <code>taille</code>    de la classe <code>Noeud</code> :<br />
 </code></pre></div></td></tr></table></div>
 Méthode <code>taille</code>    de la classe <code>Arbre</code> : 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div></p>
 </details>
@@ -4345,7 +4345,7 @@ est <span class="arithmatex">\(2^h - 1\)</span>.</p>
 <p>Pour tester si un arbre est <em>bien construit</em>, on va donc juste vérifier que <span class="arithmatex">\(t \geqslant 2^{h-1}\)</span> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">bien_construit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bien_construit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">h</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -4404,17 +4404,17 @@ de recherche.</p>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ABR</span><span class="p">:</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ABR</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Implémentation d’un arbre binaire de recherche (ABR)&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">estVide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">==</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">insererElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insererElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">estVide</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">e</span>
         <span class="k">else</span><span class="p">:</span>
@@ -4575,7 +4575,7 @@ croissant.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">occurences_lettre</span><span class="p">(</span><span class="n">une_chaine</span><span class="p">,</span> <span class="n">une_lettre</span><span class="p">):</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">une_chaine</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">une_lettre</span><span class="p">:</span>
@@ -4601,7 +4601,7 @@ croissant.</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="n">un_abr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">un_abr</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4615,7 +4615,7 @@ croissant.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chercher_mots</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">,</span> <span class="n">longueur</span><span class="p">,</span> <span class="n">lettre</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">)):</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">longueur</span> <span class="ow">and</span> <span class="n">liste_mots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="n">lettre</span><span class="p">:</span>

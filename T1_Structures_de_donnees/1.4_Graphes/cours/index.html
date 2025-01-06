@@ -4337,19 +4337,19 @@ La matrice <span class="arithmatex">\(M_1 =\pmatrix{
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -4426,7 +4426,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">BFS</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Effectue un parcours en largeur du graphe g en partant du sommet depart,</span>
 <span class="sd">    et renvoie la liste des sommets visités dans l&#39;ordre du parcours.</span>
@@ -4538,7 +4538,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
 <span class="sd">    qui s&#39;arrête dès que le sommet arrivee est atteint.</span>
@@ -4562,7 +4562,7 @@ parcours de graphe. <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net
     <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>  
 
 
-<span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
     <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
@@ -4588,7 +4588,7 @@ Tester le code précédent pour trouver le plus court chemin entre A et G, entre
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">DFSrec</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">traites</span><span class="p">,</span> <span class="n">actuel</span><span class="p">):</span>
     <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
@@ -4619,7 +4619,7 @@ Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de 
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">DFS_iteratif</span><span class="p">(</span><span class="n">graphe</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">DFS_iteratif</span><span class="p">(</span><span class="n">graphe</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
     <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
     <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]:</span>

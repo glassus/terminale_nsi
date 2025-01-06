@@ -4002,19 +4002,19 @@
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Graphe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">])</span>
@@ -4073,7 +4073,7 @@
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
 <span class="sd">    qui s&#39;arrête dès que le sommet arrivee est atteint.</span>
@@ -4097,7 +4097,7 @@
     <span class="k">return</span> <span class="s1">&#39;non trouvé&#39;</span>  
 
 
-<span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
     <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
     <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>

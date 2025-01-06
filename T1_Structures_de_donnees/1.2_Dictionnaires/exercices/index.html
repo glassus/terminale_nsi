@@ -3879,7 +3879,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;monfichier.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div></li>
 <li>comment calculer du MD5 en Python : 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s1">&#39;azerty&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
 </code></pre></div></li>
@@ -3935,7 +3935,7 @@ Seule la première station sera renvoyée, à cause du <code>return</code>. Si a
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
     <span class="n">velo_dispo</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
         <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">,</span> <span class="n">stations</span><span class="p">[</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">]])</span>

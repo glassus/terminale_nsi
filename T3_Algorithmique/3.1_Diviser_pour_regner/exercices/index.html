@@ -3863,7 +3863,7 @@
 <p>Exercice 4 du sujet <a class="" href="../../../T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf" target="_blank">Amérique du Sud J2 2022</a></p>
 <details class="success">
 <summary>Correction Q1.a</summary>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
 </code></pre></div>
 </details>
 <div class="admonition note">
@@ -3875,7 +3875,7 @@
 <details class="success">
 <summary>Correction Q1.b</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -3893,7 +3893,7 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">distance_points</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -3910,7 +3910,7 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -3937,7 +3937,7 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
     <span class="n">deb</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">fin</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -3964,7 +3964,7 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="n">ext</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">ext</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
@@ -3972,12 +3972,12 @@
 </code></pre></div></td></tr></table></div>
 <p>ou </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
 <p>ou </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -4000,7 +4000,7 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
 <span class="hll">        <span class="k">return</span> <span class="n">ligne</span>
@@ -4063,8 +4063,8 @@
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;coord_france.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 <span class="n">france</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4072,10 +4072,10 @@
     <span class="n">cpl</span> <span class="o">=</span> <span class="n">couple</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
     <span class="n">france</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">cpl</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">cpl</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
 
-<span class="k">def</span> <span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -4084,21 +4084,21 @@
     <span class="n">ym</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">xm</span> <span class="o">+</span> <span class="n">od</span>
     <span class="k">return</span> <span class="n">distance_points</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">xm</span><span class="p">,</span> <span class="n">ym</span><span class="p">))</span>  
 
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
-    <span class="o">...</span>
-
-
-<span class="k">def</span> <span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-    <span class="o">...</span>
-
-<span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
     <span class="o">...</span>
 
 
-<span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">trace</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
     <span class="n">new_ligne</span> <span class="o">=</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">)</span>
     <span class="n">nb_segments</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">new_ligne</span><span class="p">))</span>
     <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">new_ligne</span><span class="p">]</span>
@@ -4186,8 +4186,8 @@
 <span class="normal">70</span>
 <span class="normal">71</span>
 <span class="normal">72</span>
-<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;coord_france.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 <span class="n">france</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4195,10 +4195,10 @@
     <span class="n">cpl</span> <span class="o">=</span> <span class="n">couple</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
     <span class="n">france</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">cpl</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">cpl</span><span class="p">[</span><span class="mi">1</span><span class="p">])))</span>
 
-<span class="k">def</span> <span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance_points</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -4207,13 +4207,13 @@
     <span class="n">ym</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">xm</span> <span class="o">+</span> <span class="n">od</span>
     <span class="k">return</span> <span class="n">distance_points</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">xm</span><span class="p">,</span> <span class="n">ym</span><span class="p">))</span>  
 
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">distance_points</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">distance_point_droite</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
     <span class="n">deb</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">fin</span> <span class="o">=</span> <span class="n">ligne</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -4228,13 +4228,13 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">indice_max</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extrait</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="n">ext</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">ext</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">ext</span>
 
-<span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">ligne</span>
@@ -4246,7 +4246,7 @@
             <span class="k">return</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">indice_max</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span> <span class="o">+</span>                             <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">indice_max</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">trace</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
     <span class="n">new_ligne</span> <span class="o">=</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">)</span>
     <span class="n">nb_segments</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">new_ligne</span><span class="p">))</span>
     <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">new_ligne</span><span class="p">]</span>
@@ -4288,11 +4288,11 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Labyrinthe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Labyrinthe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">grille</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construire_grille</span><span class="p">(</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">construire_grille</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">construire_grille</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
         <span class="n">grille</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="hll">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hauteur</span><span class="p">):</span>
 </span>            <span class="n">ligne</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4325,7 +4325,7 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">creer_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">haut</span><span class="p">,</span> <span class="n">long</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">haut</span><span class="p">,</span> <span class="n">long</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">haut</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span> <span class="c1"># Cas de base</span>
 <span class="hll">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">colonne</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">+</span> <span class="n">long</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
 </span>            <span class="bp">self</span><span class="o">.</span><span class="n">creer_passage</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>

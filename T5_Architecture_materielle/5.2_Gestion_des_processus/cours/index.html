@@ -4130,13 +4130,13 @@
 <p>Revenons sur l'expression «actifs en même temps», car elle véhicule une fausse idée : ces processus sont bien vivants dans un même laps de temps, mais ils s'exécutent <strong>LES UNS APRÈS LES AUTRES</strong>, le processeur ne pouvant en traiter qu'<strong>un seul à la fois</strong>.</p>
 <p>Un cadencement extrêmement rapide et efficace donne l'<em>apparence</em> d'une (fausse) simultanéité. Nous allons la mettre en évidence :</p>
 <p>Considérons les fichiers <code>progA.py</code> et <code>progB.py</code> ci-dessous :</p>
-<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme A en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>  
 </code></pre></div>
-<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme B en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
@@ -4150,13 +4150,13 @@ Il devrait donc en résulter un entrelacement entre les phrases <code>programme 
 <p>Nous retrouvons bien l'alternance prévue à la lecture du code.<br />
 Tout se passe donc comme si les deux processus avaient été lancés et traités simultanément.</p>
 <p>Réduisons maintenant les temporisations (en passant du centième de seconde à la milliseconde): </p>
-<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">progA.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme A en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.002</span><span class="p">)</span>  
 </code></pre></div>
-<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">progB.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;programme B en cours, itération&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>

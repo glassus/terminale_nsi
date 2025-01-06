@@ -4039,8 +4039,8 @@
 <li>le tester directement via https://repl.it/, en choisissant <code>pygame</code> dans la liste des langages proposés.</li>
 </ul>
 <h2 id="1-preparation-de-la-scene-du-jeu">1. Préparation de la scène du jeu<a class="headerlink" href="#1-preparation-de-la-scene-du-jeu" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
@@ -4086,8 +4086,8 @@ Pour afficher cette image, nous allons venir le superposer aux éléments graphi
 <div class="highlight"><pre><span></span><code><span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>▸ récapitulatif du code</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
@@ -4120,7 +4120,7 @@ Nous allons nous intéresser aux évènements de type <code>KEYDOWN</code> (touc
 La touche (en anglais <em>key</em>) «Flèche Droite» est appelée <code>K_RIGHT</code> par <code>pygame</code>. </p>
 <p>Le nom de toutes les touches peut être retrouvé à l'adresse https://www.pygame.org/docs/ref/key.html.</p>
 <p><strong>Remarque :</strong> c'est grâce à la ligne initiale
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
 que la variable <code>K_RIGHT</code> (et toutes les autres) est reconnue.</p>
 <h4 id="312-probleme-de-la-remanence">3.1.2. Problème de la rémanence<a class="headerlink" href="#312-probleme-de-la-remanence" title="Permanent link">⚓︎</a></h4>
@@ -4164,9 +4164,9 @@ Réaliser un déplacement aléatoire, comme l'animation ci-dessous.</p>
 <details><summary> Proposition de correction </summary>
 <p>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
@@ -4200,8 +4200,8 @@ Réaliser un contrôle au clavier du personnage, comme dans l'animation ci-desso
 <details><summary> Proposition de correction </summary>
 <p>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">set_repeat</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
@@ -4263,7 +4263,7 @@ dessine un rectangle vert de 100 pixels sur 10 pixels, dont le coin en haut à g
 </li>
 <li>
 <p><strong>gérer le temps:</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">topchrono</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">delai</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">sortir</span> <span class="o">=</span> <span class="kc">False</span>

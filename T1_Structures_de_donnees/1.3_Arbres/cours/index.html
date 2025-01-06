@@ -4445,25 +4445,25 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">set_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">sousarbre</span>
 
-    <span class="k">def</span> <span class="nf">set_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">sousarbre</span>  
 
-    <span class="k">def</span> <span class="nf">get_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span>
 
-    <span class="k">def</span> <span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span>
 
-    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -4489,8 +4489,8 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
@@ -4526,7 +4526,7 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
     <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -4608,8 +4608,8 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
@@ -4643,7 +4643,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h4 id="412-parcours-infixe">4.1.2 Parcours infixe<a class="headerlink" href="#412-parcours-infixe" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
@@ -4657,7 +4657,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h4 id="413-parcours-postfixe">4.1.3 Parcours postfixe<a class="headerlink" href="#413-parcours-postfixe" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
@@ -4685,7 +4685,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -4712,7 +4712,7 @@ ou
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe_avec_liste</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe_avec_liste</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -4735,7 +4735,7 @@ ou
 <p>Rappel : la taille d'un arbre est le nombre de ses nœuds.</p>
 <div class="admonition note">
 <p class="admonition-title">Taille d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
@@ -4768,7 +4768,7 @@ ou
 <p>Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.</p>
 <div class="admonition note">
 <p class="admonition-title">Hauteur d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4782,7 +4782,7 @@ ou
 <p>Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.</p>
 <div class="admonition note">
 <p class="admonition-title">Nombre de feuilles d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
@@ -4797,7 +4797,7 @@ ou
 <p>On renverra <code>True</code> ou <code>False</code> en fonction de la présence ou non de la valeur dans l'arbre.</p>
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une valeur dans un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span>  <span class="n">valeur</span><span class="p">:</span>
@@ -4844,9 +4844,9 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Parcours en largeur (BFS) </p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">queue</span> <span class="kn">import</span> <span class="n">Queue</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">queue</span><span class="w"> </span><span class="kn">import</span> <span class="n">Queue</span>
 
-<span class="k">def</span> <span class="nf">BFS</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>        
+<span class="k">def</span><span class="w"> </span><span class="nf">BFS</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>        
     <span class="n">file</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
     <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
     <span class="n">sol</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4894,7 +4894,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
@@ -4905,7 +4905,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="k">return</span> <span class="n">s</span>
 
 
-<span class="k">def</span> <span class="nf">est_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un booléen indiquant si arbre est un ABR&#39;&#39;&#39;</span>
     <span class="n">parcours</span> <span class="o">=</span> <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">parcours</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parcours</span><span class="p">)</span> <span class="c1"># on regarde si le parcours est égal au parcours trié </span>
@@ -4941,7 +4941,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
@@ -4984,7 +4984,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Insertion dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
         <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="k">else</span> <span class="p">:</span>

@@ -4041,7 +4041,7 @@ l'<strong>objet</strong> <a href="https://fr.wikipedia.org/wiki/Larry_(chat)">La
 <p><img alt="image" class="center" src="../data/voitures_animaux.jpeg" width="30%" /></p>
 <h4 id="221-mauvaise-maniere-minimale">2.2.1 (mauvaise) manière minimale<a class="headerlink" href="#221-mauvaise-maniere-minimale" title="Permanent link">⚓︎</a></h4>
 <p>Créons une classe «voiture». Il suffit d'écrire :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Voiture</span> <span class="p">:</span>
     <span class="k">pass</span>   <span class="c1">#pass, car pour l&#39;instant il n&#39;y a rien dans la déclaration de la classe (et c&#39;est mal)</span>
 </code></pre></div>
 <p>La classe <code>Voiture</code> est créée.<br />
@@ -4067,8 +4067,8 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Voiture</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
@@ -4124,8 +4124,8 @@ Pour créer une instance de cette classe, on écrit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Point</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Point</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 </code></pre></div></td></tr></table></div>
@@ -4141,14 +4141,14 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Voiture</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2024</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
-    <span class="k">def</span> <span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
              <span class="s2">&quot;, vitesse maximale&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">&quot;km/h.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -4158,14 +4158,14 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="n">À</span> <span class="n">vendre</span> <span class="n">voiture</span> <span class="n">noire</span> <span class="n">de</span> <span class="mi">2036</span> <span class="p">,</span> <span class="n">vitesse</span> <span class="n">maximale</span> <span class="mi">325</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span><span class="o">.</span>
 </code></pre></div>
 <p>Nous aurions pu (ou dû) en profiter pour écrire une docstring pour notre méthode <code>petite_annonce()</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voiture</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Voiture</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">annee</span><span class="p">,</span> <span class="n">coul</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="n">annee</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">coul</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="n">vmax</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2023</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
-    <span class="k">def</span> <span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Rédige automatiquement une petite annonce concernant le véhicule&quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
              <span class="s2">&quot;, vitesse maximale&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">&quot;km/h.&quot;</span><span class="p">)</span>
@@ -4231,12 +4231,12 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
-    <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -4248,8 +4248,8 @@ Pour créer une instance de cette classe, on écrit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Fraction</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Fraction</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span> <span class="o">=</span> <span class="n">num</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">=</span> <span class="n">den</span>
 </code></pre></div></td></tr></table></div>
@@ -4264,12 +4264,12 @@ Pour créer une instance de cette classe, on écrit :</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Fraction</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Fraction</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span> <span class="o">=</span> <span class="n">num</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">=</span> <span class="n">den</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -4292,12 +4292,12 @@ Ce qui est nettement plus agréable !</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Fraction</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Fraction</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span> <span class="o">=</span> <span class="n">num</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">=</span> <span class="n">den</span>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
@@ -4310,8 +4310,8 @@ Ce qui est nettement plus agréable !</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Joueur</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Joueur</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">club</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
@@ -4338,13 +4338,13 @@ Ce qui est nettement plus agréable !</p>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Joueur</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Joueur</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">club</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 
-    <span class="k">def</span> <span class="nf">mutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_club</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_club</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">nouveau_club</span>
 </code></pre></div></td></tr></table></div>
 <p>Le changement de club se fera maintenant par l'appel :
@@ -4357,16 +4357,16 @@ Ce qui est nettement plus agréable !</p>
 <p>Mais si 
 <code>nducuing.club</code> est interdit, comment savoir dans quel club joue notre joueur préféré ?</p>
 <p>Une fois de plus, en construisant une méthode qui va nous renvoyer l'état actuel de son attribut <code>club</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Joueur</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Joueur</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">club</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">club</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 
-    <span class="k">def</span> <span class="nf">mutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_club</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_club</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">nouveau_club</span>
 
-    <span class="k">def</span> <span class="nf">get_club</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_club</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">club</span>
 </code></pre></div>
 <p>L'accès à l'attribut <code>club</code> de notre instance se fera donc maintenant par :</p>

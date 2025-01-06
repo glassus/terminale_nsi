@@ -4056,7 +4056,7 @@
 <p>C'est déjà une première chose à comprendre : un programme <strong>peut</strong> être appelé par lui-même, à l'intérieur de sa propre définition.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prems</span><span class="p">():</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prems</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;un très mauvais exemple&quot;</span><span class="p">)</span>
     <span class="n">prems</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
@@ -4111,7 +4111,7 @@ Le cas de base est ici l'étage 0. Il empêche une descente infinie.</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">mystere</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mystere</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">else</span> <span class="p">:</span> 
@@ -4162,7 +4162,7 @@ Il venait pour cela d'inventer la formule :
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prix</span><span class="p">(</span><span class="n">etage</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prix</span><span class="p">(</span><span class="n">etage</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">etage</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">3</span>
     <span class="k">else</span><span class="p">:</span>
@@ -4271,7 +4271,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibo_imperatif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fibo_imperatif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -4307,9 +4307,9 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">fibo_imperatif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fibo_imperatif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -4317,7 +4317,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
         <span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">f</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">fibo_recursif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fibo_recursif</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>   
     <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
@@ -4326,7 +4326,7 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
         <span class="k">return</span> <span class="n">fibo_recursif</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo_recursif</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">comparaison</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comparaison</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">fibo_imperatif</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;algo impératif : &quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
@@ -4377,11 +4377,11 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">ang</span> <span class="o">=</span> <span class="mi">40</span>
 
-<span class="k">def</span> <span class="nf">trace</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">trace</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">else</span> <span class="p">:</span>

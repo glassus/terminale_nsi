@@ -3939,7 +3939,7 @@ ls
 <details class="success">
 <summary>Correction Q6</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -3959,7 +3959,7 @@ ls
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">:</span>
         <span class="n">f</span><span class="o">.</span><span class="n">parcours</span><span class="p">()</span>
@@ -3974,7 +3974,7 @@ ls
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parcours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="p">:</span>
         <span class="n">f</span><span class="o">.</span><span class="n">parcours</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span>
@@ -3988,7 +3988,7 @@ ls
 <summary>Correction Q12</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">mkdir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mkdir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
     <span class="n">new_doss</span> <span class="o">=</span> <span class="n">Dossier</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="p">[])</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">fils</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_doss</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -4004,7 +4004,7 @@ ls
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom_dossier</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]:</span>
@@ -4022,7 +4022,7 @@ ls
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">contient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_dossier</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom_dossier</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils</span> <span class="o">==</span> <span class="p">[]:</span>

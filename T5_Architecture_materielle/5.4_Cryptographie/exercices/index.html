@@ -3871,7 +3871,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="n">decipher_shift</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sympy.crypto.crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">decipher_shift</span>
 
 <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV&#39;</span>
 
@@ -3913,10 +3913,10 @@
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
 
-<span class="k">def</span> <span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="n">sol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
         <span class="n">rg</span> <span class="o">=</span> <span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
@@ -3942,8 +3942,8 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">sympy.crypto.crypto</span> <span class="kn">import</span> <span class="n">decipher_affine</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sympy.crypto.crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">decipher_affine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">gcd</span>
 
 <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -3979,10 +3979,10 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">Crypto</span>
-<span class="kn">import</span> <span class="nn">libnum</span>
-<span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
-<span class="kn">from</span> <span class="nn">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span> 
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Crypto</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">libnum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
 
 <span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;en NSI on fait de la crypto&quot;</span>
@@ -4032,10 +4032,10 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">Crypto</span>
-<span class="kn">import</span> <span class="nn">libnum</span>
-<span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
-<span class="kn">from</span> <span class="nn">Crypto.Random</span> <span class="kn">import</span> <span class="n">get_random_bytes</span> 
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Crypto</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">libnum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
 
 <span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;en NSI on fait de la crypto&#39;</span>
@@ -4069,9 +4069,9 @@
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  5</p>
 <p><strong>module RSA</strong> dans les règles de l'art</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">Crypto.PublicKey</span> <span class="kn">import</span> <span class="n">RSA</span>
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">PKCS1_OAEP</span>
-<span class="kn">import</span> <span class="nn">binascii</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.PublicKey</span><span class="w"> </span><span class="kn">import</span> <span class="n">RSA</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Cipher</span><span class="w"> </span><span class="kn">import</span> <span class="n">PKCS1_OAEP</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">binascii</span>
 
 <span class="n">keyPair</span> <span class="o">=</span> <span class="n">RSA</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
 

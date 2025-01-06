@@ -3879,7 +3879,7 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">maximum</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">depile</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
@@ -3903,7 +3903,7 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">maximum</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="n">creer_pile</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -3934,7 +3934,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="n">Q</span> <span class="o">=</span> <span class="n">creer_pile</span><span class="p">()</span>
@@ -3968,7 +3968,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">addition</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="n">nb1</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
     <span class="n">nb2</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
     <span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">nb1</span> <span class="o">+</span> <span class="n">nb2</span><span class="p">)</span>
@@ -4026,7 +4026,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">etendre</span><span class="p">(</span><span class="n">pile1</span><span class="p">,</span> <span class="n">pile2</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">etendre</span><span class="p">(</span><span class="n">pile1</span><span class="p">,</span> <span class="n">pile2</span><span class="p">):</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">pile2</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">pile2</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
         <span class="n">pile1</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
@@ -4042,7 +4042,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">supprime_toutes_occurences</span><span class="p">(</span><span class="n">pile</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">supprime_toutes_occurences</span><span class="p">(</span><span class="n">pile</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
     <span class="n">p_temp</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">pile</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
@@ -4079,7 +4079,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille_file</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille_file</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -4101,7 +4101,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">former_pile</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">former_pile</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
     <span class="n">P_temp</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
     <span class="n">P</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
@@ -4125,7 +4125,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -4145,7 +4145,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> 
            <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> 
@@ -4167,7 +4167,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
@@ -4183,7 +4183,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">panier_temp</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -4202,7 +4202,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="n">horaire_premier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defiler</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span>
@@ -4222,7 +4222,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ajout</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajout</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span>
 <span class="hll">    <span class="n">indice</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">couleurs</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
@@ -4231,7 +4231,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 </details>
 <details class="success">
 <summary>Correction Q2.</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vider</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">vider</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
         <span class="n">defiler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </code></pre></div>
@@ -4247,7 +4247,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
     <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">ajout</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
@@ -4272,7 +4272,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tour_de_jeu</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
 <span class="hll">    <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
 </span>    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
@@ -4302,7 +4302,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
         <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
@@ -4333,7 +4333,7 @@ Le jeu ne s'arrête jamais ¯\_(ツ)_/¯</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
     <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
     <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
@@ -4379,7 +4379,7 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <details class="aide">
 <summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -4409,7 +4409,7 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
             <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
@@ -4431,7 +4431,7 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">fini</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">fini</span><span class="p">:</span>
         <span class="n">s_temp</span> <span class="o">=</span> <span class="n">s</span>
@@ -4471,16 +4471,16 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 <span class="normal">20</span>
 <span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
 
-<span class="k">def</span> <span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">simplifiable</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
             <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
     <span class="k">return</span> <span class="n">s</span>
 
-<span class="k">def</span> <span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">reduction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">fini</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">fini</span><span class="p">:</span>
         <span class="n">s_temp</span> <span class="o">=</span> <span class="n">s</span>
@@ -4554,24 +4554,24 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Pile</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>       
 
-    <span class="k">def</span> <span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">Q</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
         <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -4584,7 +4584,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span> 
 
-<span class="k">def</span> <span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
 
 <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>

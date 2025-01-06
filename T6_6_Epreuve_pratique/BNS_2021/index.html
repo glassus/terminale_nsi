@@ -4469,7 +4469,7 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">indice_solution</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
@@ -4495,15 +4495,15 @@ est donnée par la formule :</p>
 <div class="arithmatex">\[d=\sqrt{(x-x')^2+(y-y')^2}\]</div>
 <p>On importe pour cela la fonction racine carrée (<code>sqrt</code>) du module <code>math</code> de Python.</p>
 <p>On dispose d'une fonction <code>distance</code> et d'une fonction <code>plus_courte_distance</code> :</p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>     <span class="c1"># import de la fonction racine carrée</span>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>     <span class="c1"># import de la fonction racine carrée</span>
 
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance entre deux points. &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s2">&quot;erreur de calcul&quot;</span>
 
-<span class="k">def</span> <span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
     <span class="n">point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span>
@@ -4539,16 +4539,16 @@ de vérifier la ou les préconditions.</p>
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
 
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance entre deux points. &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s2">&quot;erreur de calcul&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
     <span class="n">point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">min_dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">depart</span><span class="p">)</span>
@@ -4592,7 +4592,7 @@ de vérifier la ou les préconditions.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tab</span> <span class="o">==</span> <span class="p">[]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;erreur&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -4642,7 +4642,7 @@ considère alors qu’il appartient à la zone ne contenant que des 1.</li>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="c1">#i est le premier indice de la zone non triee, j le dernier indice.</span>
     <span class="c1">#Au debut, la zone non triee est le tableau entier.</span>
     <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
@@ -4676,7 +4676,7 @@ considère alors qu’il appartient à la zone ne contenant que des 1.</li>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="c1">#i est le premier indice de la zone non triee, j le dernier indice.</span>
     <span class="c1">#Au debut, la zone non triee est le tableau entier.</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -4715,7 +4715,7 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n2</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -4753,7 +4753,7 @@ ne recopiera pas les commentaires.</p>
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau d’entiers trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
@@ -4795,7 +4795,7 @@ ne recopiera pas les commentaires.</p>
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau d’entiers trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
@@ -4826,7 +4826,7 @@ ne recopiera pas les commentaires.</p>
 <p>Écrire une fonction qui prend en paramètre un tableau d'entiers non vide et qui renvoie la
 moyenne de ces entiers. La fonction est spécifiée ci-après et doit passer les assertions
 fournies.
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span> <span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span> <span class="p">(</span><span class="n">tab</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    moyenne(list) -&gt; float</span>
 <span class="sd">    Entrée : un tableau non vide d&#39;entiers</span>
@@ -4852,7 +4852,7 @@ fournies.
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    moyenne(list) -&gt; float</span>
 <span class="sd">    Entrée : un tableau non vide d&#39;entiers</span>
@@ -4905,7 +4905,7 @@ la valeur est comprise entre les valeurs extrêmes du tableau.</p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
@@ -4963,7 +4963,7 @@ la valeur est comprise entre les valeurs extrêmes du tableau.</p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
@@ -5003,7 +5003,7 @@ l'écriture binaire de l'entier dont l'écriture décimale est
 <code>2**6 + 2**4 + 2**1 + 2**0 = 83</code>.</p>
 <p>À l'aide d'un parcours séquentiel, écrire la fonction convertir répondant aux
 spécifications suivantes :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    T est un tableau d&#39;entiers, dont les éléments sont 0 ou 1 et</span>
 <span class="sd">    représentant un entier écrit en binaire. Renvoie l&#39;écriture</span>
@@ -5025,7 +5025,7 @@ Exemple :
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">puissance</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -5070,7 +5070,7 @@ spécification demandée.</p>
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 
     <span class="c1"># cas du tableau vide</span>
@@ -5129,7 +5129,7 @@ spécification demandée.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 
     <span class="c1"># cas du tableau vide</span>
@@ -5191,7 +5191,7 @@ billets de 5 euros, puis celui des pièces de 2 euros et enfin celui des pièces
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
     <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
     <span class="n">retour</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
     <span class="n">reste_a_rendre</span> <span class="o">=</span> <span class="n">somme_a_rendre</span>
@@ -5217,8 +5217,8 @@ d’une valeur et d’une référence au maillon suivant de la chaîne :</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Maillon</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
@@ -5254,25 +5254,25 @@ correspondant à l’élément arrivé en dernier dans la file :</p>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">File</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">File</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">nouveau_maillon</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
         <span class="n">nouveau_maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">==</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
         <span class="k">while</span> <span class="n">maillon</span> <span class="o">!=</span> <span class="o">...</span> <span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
             <span class="n">maillon</span> <span class="o">=</span> <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">suivant</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span>
                 <span class="n">resultat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">valeur</span>
@@ -5346,30 +5346,30 @@ suivantes dans la console Python :
 <span class="normal">33</span>
 <span class="normal">34</span>
 <span class="normal">35</span>
-<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Maillon</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Maillon</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="k">class</span> <span class="nc">File</span> <span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">File</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">element</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">nouveau_maillon</span> <span class="o">=</span> <span class="n">Maillon</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
         <span class="n">nouveau_maillon</span><span class="o">.</span><span class="n">suivant</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">=</span> <span class="n">nouveau_maillon</span>
 
-    <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span> <span class="o">==</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span>
         <span class="k">while</span> <span class="n">maillon</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
             <span class="n">maillon</span> <span class="o">=</span> <span class="n">maillon</span><span class="o">.</span><span class="n">suivant</span>
 
-    <span class="k">def</span> <span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">suivant</span> <span class="o">==</span> <span class="kc">None</span> <span class="p">:</span>
                 <span class="n">resultat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dernier_file</span><span class="o">.</span><span class="n">valeur</span>
@@ -5418,7 +5418,7 @@ suivantes dans la console Python :
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fibonnaci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fibonnaci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -5460,7 +5460,7 @@ attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms 
 <span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_eleves</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">]</span>
 <span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">meilleures_notes</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">meilleures_notes</span><span class="p">():</span>
     <span class="n">note_maxi</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">nb_eleves_note_maxi</span> <span class="o">=</span> <span class="o">...</span>
     <span class="n">liste_maxi</span> <span class="o">=</span> <span class="o">...</span>
@@ -5502,7 +5502,7 @@ attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms 
 <span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_eleves</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">]</span>
 <span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">meilleures_notes</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">meilleures_notes</span><span class="p">():</span>
     <span class="n">note_maxi</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">nb_eleves_note_maxi</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">liste_maxi</span> <span class="o">=</span> <span class="p">[]</span>
@@ -5546,7 +5546,7 @@ dans <code>mot</code>, c’est-à-dire le nombre de fois où <code>caractere</co
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">caractere</span><span class="p">,</span> <span class="n">mot</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">caractere</span><span class="p">,</span> <span class="n">mot</span><span class="p">):</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">caractere</span><span class="p">:</span>
@@ -5582,7 +5582,7 @@ algorithme et renvoie la liste des pièces à rendre.</p>
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">arendre</span><span class="p">,</span> <span class="n">solution</span><span class="o">=</span><span class="p">[],</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">arendre</span><span class="p">,</span> <span class="n">solution</span><span class="o">=</span><span class="p">[],</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arendre</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -5612,7 +5612,7 @@ On devra obtenir :</p>
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">arendre</span><span class="p">,</span> <span class="n">solution</span><span class="o">=</span><span class="p">[],</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">arendre</span><span class="p">,</span> <span class="n">solution</span><span class="o">=</span><span class="p">[],</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arendre</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">solution</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -5654,7 +5654,7 @@ résultat du calcul suivant :</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">somme_notes</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">somme_coeffs</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">devoir</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
@@ -5691,7 +5691,7 @@ triangle de Pascal de la ligne <code>1</code> à la ligne <code>n</code> où <co
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pascal</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pascal</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">C</span><span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>
         <span class="n">Ck</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
@@ -5719,7 +5719,7 @@ Pour <code>n = 5</code>, voici ce qu'on devra obtenir :
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">pascal</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pascal</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">C</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">Ck</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -5753,7 +5753,7 @@ Pour <code>n = 5</code>, voici ce qu'on devra obtenir :
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">maxi</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">val_max</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">pos_max</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
@@ -5791,7 +5791,7 @@ ordre, sans modifier la variable <code>T</code>.</p>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">positif</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">positif</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">T2</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="n">T3</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">while</span> <span class="n">T2</span> <span class="o">!=</span> <span class="p">[]:</span>
@@ -5824,7 +5824,7 @@ ordre, sans modifier la variable <code>T</code>.</p>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">positif</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">positif</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">T2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="n">T3</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="n">T2</span> <span class="o">!=</span> <span class="p">[]:</span>
@@ -5882,7 +5882,7 @@ Soit <code>T=[5,2,4,10]</code>. Après <code>T.reverse()</code>, la liste devien
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">conv_bin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">conv_bin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">bits</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -5912,7 +5912,7 @@ Compléter le code Python ci-dessous qui implémente la fonction <code>tri_bulle
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -5948,7 +5948,7 @@ en lieu et place de la troisième ligne du code précédent.</p>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
@@ -5960,7 +5960,7 @@ en lieu et place de la troisième ligne du code précédent.</p>
 
 <span class="c1">#version 2</span>
 
-<span class="k">def</span> <span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tri_bulles</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -5995,7 +5995,7 @@ en lieu et place de la troisième ligne du code précédent.</p>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">maxi</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">val_max</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">pos_max</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
@@ -6029,7 +6029,7 @@ Compléter le code Python ci-dessous pour qu’il implémente la fonction <code>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">seq_adn</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">seq_adn</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq_adn</span><span class="p">)</span>
     <span class="n">g</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">gene</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
@@ -6063,7 +6063,7 @@ Compléter le code Python ci-dessous pour qu’il implémente la fonction <code>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">seq_adn</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span> <span class="n">seq_adn</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq_adn</span><span class="p">)</span>
     <span class="n">g</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">gene</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -6109,7 +6109,7 @@ d'indice 1 ;</li>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_selection</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
@@ -6160,9 +6160,9 @@ Compléter le code ci-dessous et le tester :</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
-<span class="k">def</span> <span class="nf">plus_ou_moins</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plus_ou_moins</span><span class="p">():</span>
     <span class="n">nb_mystere</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
     <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Proposez un nombre entre 1 et 99 : &quot;</span><span class="p">))</span>
     <span class="n">compteur</span> <span class="o">=</span> <span class="o">...</span>
@@ -6200,9 +6200,9 @@ Compléter le code ci-dessous et le tester :</p>
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
-<span class="k">def</span> <span class="nf">plus_ou_moins</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plus_ou_moins</span><span class="p">():</span>
     <span class="n">nb_mystere</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Proposez un nombre entre 1 et 99 : &#39;</span><span class="p">))</span>
     <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
@@ -6245,7 +6245,7 @@ tableau de nombres, et qui renvoie le tableau des indices de <code>elt</code> da
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="n">tab_indices</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
@@ -6298,7 +6298,7 @@ Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
         <span class="n">notes</span> <span class="o">=</span> <span class="n">resultats</span><span class="p">[</span><span class="n">nom</span><span class="p">]</span>
         <span class="n">total_points</span> <span class="o">=</span> <span class="o">...</span>
@@ -6350,7 +6350,7 @@ Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le
                         <span class="s1">&#39;DS3&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
                         <span class="s1">&#39;DS4&#39;</span> <span class="p">:[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}}</span>
 
-<span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="n">resultats</span><span class="p">:</span>
         <span class="n">notes</span> <span class="o">=</span> <span class="n">resultats</span><span class="p">[</span><span class="n">nom</span><span class="p">]</span>
         <span class="n">total_points</span> <span class="o">=</span> <span class="mi">0</span>
@@ -6400,7 +6400,7 @@ forme de liste Python.</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rechercheMinMax</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rechercheMinMax</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tab</span> <span class="o">==</span> <span class="p">[]:</span>
         <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
     <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
@@ -6460,14 +6460,14 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
-<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
@@ -6480,19 +6480,19 @@ assertions dans l’initialiseur de <code>Carte</code>, ainsi que dans la métho
             <span class="k">return</span> <span class="s2">&quot;As&quot;</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trefle&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
-<span class="k">class</span> <span class="nc">PaquetDeCarte</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PaquetDeCarte</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1">#A compléter</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
         <span class="c1">#A compléter</span>
 </code></pre></div></td></tr></table></div>
 Exemple :</p>
@@ -6546,16 +6546,16 @@ Exemple :</p>
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Carte</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">=</span> <span class="n">v</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getNom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">Valeur</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
@@ -6568,21 +6568,21 @@ Exemple :</p>
             <span class="k">return</span> <span class="s2">&quot;As&quot;</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCouleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trefle&#39;</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">Couleur</span><span class="p">]</span>
 
-<span class="k">class</span> <span class="nc">PaquetDeCarte</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PaquetDeCarte</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remplit le paquet de cartes&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">nb_coul</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Carte</span><span class="p">(</span><span class="n">nb_coul</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la Carte qui se trouve à la position donnée&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getCarteAt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
         <span class="k">assert</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">56</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
@@ -6611,7 +6611,7 @@ représentés sous forme de liste Python.</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
         <span class="n">somme</span> <span class="o">+=</span> <span class="n">val</span>
@@ -6634,7 +6634,7 @@ représentés sous forme de liste Python.</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dec_to_bin</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dec_to_bin</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">bin_a</span> <span class="o">=</span> <span class="o">...</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">//</span><span class="mi">2</span>
     <span class="k">while</span> <span class="n">a</span> <span class="o">...</span> <span class="p">:</span>
@@ -6657,7 +6657,7 @@ Compléter la fonction <code>dec_to_bin</code>.</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dec_to_bin</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dec_to_bin</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">bin_a</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
@@ -6693,7 +6693,7 @@ tableaux seront représentés sous forme de liste Python.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">indice_du_min</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">indice_du_min</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">indice_min</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
@@ -6722,7 +6722,7 @@ tableau et les <code>1</code> à la suite.</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="p">:</span>
@@ -6751,7 +6751,7 @@ tableau et les <code>1</code> à la suite.</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="p">:</span>
@@ -6791,7 +6791,7 @@ dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1<
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">i</span>        
@@ -6820,7 +6820,7 @@ listes python.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="c1">#l contient les mêmes éléments que tab</span>
     <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="o">...</span>
@@ -6849,7 +6849,7 @@ listes python.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="c1">#l contient les mêmes éléments que tab</span>
     <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
@@ -6893,7 +6893,7 @@ tableau, <code>-1</code> sinon.</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">ind_debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ind_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">ind_debut</span> <span class="o">&lt;=</span> <span class="n">ind_fin</span><span class="p">:</span>
@@ -6941,10 +6941,10 @@ le décalage <code>decalage</code>.</p>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ALPHABET</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
 
-<span class="k">def</span> <span class="nf">position_alphabet</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">position_alphabet</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">ALPHABET</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">ALPHABET</span><span class="p">:</span>
@@ -6978,10 +6978,10 @@ le décalage <code>decalage</code>.</p>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ALPHABET</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
 
-<span class="k">def</span> <span class="nf">position_alphabet</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">position_alphabet</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">ALPHABET</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">ALPHABET</span><span class="p">:</span>
@@ -7028,7 +7028,7 @@ période et l’année correspondante.</p>
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">t_moy</span> <span class="o">=</span> <span class="p">[</span><span class="mf">14.9</span><span class="p">,</span> <span class="mf">13.3</span><span class="p">,</span> <span class="mf">13.1</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">13.6</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">]</span>
 <span class="n">annees</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">2019</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">mini</span><span class="p">(</span><span class="n">releve</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mini</span><span class="p">(</span><span class="n">releve</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
     <span class="n">temp_mini</span> <span class="o">=</span> <span class="n">releve</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">date_mini</span> <span class="o">=</span> <span class="n">date</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">releve</span><span class="p">)):</span>
@@ -7064,17 +7064,17 @@ la fonction précédente.</p>
 renvoie <code>True</code> si c’est le cas et <code>False</code> sinon. Cette fonction s’appuie sur la fonction
 précédente.</p>
 <p>Compléter le code des trois fonctions ci-dessous.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">result</span>
 
-<span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">inverse</span> <span class="o">=</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">est_nbre_palindrome</span><span class="p">(</span><span class="n">nbre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_nbre_palindrome</span><span class="p">(</span><span class="n">nbre</span><span class="p">):</span>
     <span class="n">chaine</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div>
@@ -7104,17 +7104,17 @@ Exemples :</p>
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">caractere</span> <span class="o">+</span> <span class="n">result</span>
     <span class="k">return</span> <span class="n">result</span>
 
-<span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">inverse</span> <span class="o">=</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="n">inverse</span>
 
-<span class="k">def</span> <span class="nf">est_nbre_palindrome</span><span class="p">(</span><span class="n">nbre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_nbre_palindrome</span><span class="p">(</span><span class="n">nbre</span><span class="p">):</span>
     <span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nbre</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -7146,7 +7146,7 @@ liste.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nb_repetitions</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_repetitions</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
@@ -7174,7 +7174,7 @@ convertir un nombre entier positif en binaire :
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">while</span> <span class="n">a</span> <span class="o">...</span> <span class="p">:</span>
@@ -7197,7 +7197,7 @@ Compléter la fonction <code>binaire</code>.</p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">binaire</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">bin_a</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
@@ -7235,7 +7235,7 @@ renvoie le nombre d'occurrences de <code>a</code> dans <code>t</code>.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">a</span><span class="p">:</span>
@@ -7276,7 +7276,7 @@ Le code de la fonction est donné ci-dessous :</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_monnaie_centimes</span><span class="p">(</span><span class="n">s_due</span><span class="p">,</span> <span class="n">s_versee</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rendu_monnaie_centimes</span><span class="p">(</span><span class="n">s_due</span><span class="p">,</span> <span class="n">s_versee</span><span class="p">):</span>
     <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
     <span class="n">rendu</span> <span class="o">=</span> <span class="o">...</span>
     <span class="n">a_rendre</span> <span class="o">=</span> <span class="o">...</span>
@@ -7308,7 +7308,7 @@ Le code de la fonction est donné ci-dessous :</p>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_monnaie_centimes</span><span class="p">(</span><span class="n">s_due</span><span class="p">,</span> <span class="n">s_versee</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rendu_monnaie_centimes</span><span class="p">(</span><span class="n">s_due</span><span class="p">,</span> <span class="n">s_versee</span><span class="p">):</span>
     <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
     <span class="n">rendu</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">a_rendre</span> <span class="o">=</span> <span class="n">s_versee</span> <span class="o">-</span> <span class="n">s_due</span>
@@ -7357,7 +7357,7 @@ occurrences des caractères présents dans la phrase.</p>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurence_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">occurence_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
     <span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
@@ -7402,7 +7402,7 @@ fusionne en une liste triée <code>L12</code> qu’elle renvoie.</p>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>
     <span class="n">n1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
     <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
     <span class="n">L12</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">)</span>
@@ -7457,7 +7457,7 @@ fusionne en une liste triée <code>L12</code> qu’elle renvoie.</p>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fusion</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">):</span>
     <span class="n">n1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
     <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">)</span>
     <span class="n">L12</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">)</span>
@@ -7519,7 +7519,7 @@ dans <code>tab</code> si <code>elt</code> est dans <code>tab</code> et <code>-1<
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">ind_debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ind_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">ind_debut</span> <span class="o">&lt;=</span> <span class="n">ind_fin</span><span class="p">:</span>
@@ -7571,21 +7571,21 @@ une plage d’adresses IP de <code>192.168.0.0</code> à <code>192.168.0.255</co
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AdresseIP</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse</span><span class="p">):</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">AdresseIP</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span> <span class="o">=</span> <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">liste_octet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">liste_octet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie une liste de nombres entiers,</span>
 <span class="sd">        la liste des octets de l&#39;adresse IP&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)]</span>
 
-    <span class="k">def</span> <span class="nf">est_reservee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_reservee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie True si l&#39;adresse IP est une adresse</span>
 <span class="sd">        réservée, False sinon&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="o">...</span> <span class="ow">or</span> <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie un objet de AdresseIP avec l&#39;adresse</span>
 <span class="sd">        IP qui suit l’adresse self</span>
 <span class="sd">        si elle existe et False sinon&quot;&quot;&quot;</span>
@@ -7634,21 +7634,21 @@ Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>,
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AdresseIP</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse</span><span class="p">):</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">AdresseIP</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adresse</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span> <span class="o">=</span> <span class="n">adresse</span>
 
-    <span class="k">def</span> <span class="nf">liste_octet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">liste_octet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie une liste de nombres entiers,</span>
 <span class="sd">        la liste des octets de l&#39;adresse IP&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)]</span>
 
-    <span class="k">def</span> <span class="nf">est_reservee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_reservee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie True si l&#39;adresse IP est une adresse</span>
 <span class="sd">        réservée, False sinon&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_octet</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_octet</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="mi">255</span>
 
-    <span class="k">def</span> <span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie un objet de AdresseIP avec l&#39;adresse</span>
 <span class="sd">        IP qui suit l’adresse self</span>
 <span class="sd">        si elle existe et False sinon&quot;&quot;&quot;</span>
@@ -7692,7 +7692,7 @@ successifs qu'il peut y avoir dans <code>tab</code>.</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">solution</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
@@ -7745,7 +7745,7 @@ valeur entière <code>val</code>. Elle met à la valeur <code>val</code> tous le
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span> <span class="o">...</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
 
@@ -7795,7 +7795,7 @@ Exemple :
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
 
@@ -7858,7 +7858,7 @@ Puis on calculera l’indice <code>k</code> d’un maximum du tableau <code>occu
 <span class="normal">14</span>
 <span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;o,&#39;</span><span class="p">,</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">occurrence_max</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">occurrence_max</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">occurence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span>  <span class="mi">26</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
         <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
@@ -7917,15 +7917,15 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le nombre de lignes de l&#39;image&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie la largeur de l&#39;image&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">negatif</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">negatif</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le négatif de l&#39;image sous la forme d&#39;une liste de listes&#39;&#39;&#39;</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="c1"># on créé une image de 0 aux mêmes dimensions que le paramètre image</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">)):</span>
@@ -7933,7 +7933,7 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
             <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">L</span>
 
-<span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">binaire</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une image binarisée de l&#39;image sous la forme</span>
 <span class="sd">    d&#39;une liste de listes contenant des 0 si la valeur</span>
 <span class="sd">    du pixel est strictement inférieure au seuil</span>
@@ -7988,15 +7988,15 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le nombre de lignes de l&#39;image&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie la largeur de l&#39;image&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">negatif</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">negatif</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le négatif de l&#39;image sous la forme d&#39;une liste de listes&#39;&#39;&#39;</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="c1"># on créé une image de 0 aux mêmes dimensions que le paramètre image</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">)):</span>
@@ -8004,7 +8004,7 @@ un entier compris entre 0 et 255, représentant l’intensité lumineuse du pixe
             <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span><span class="o">-</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">L</span>
 
-<span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">binaire</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une image binarisée de l&#39;image sous la forme</span>
 <span class="sd">    d&#39;une liste de listes contenant des 0 si la valeur</span>
 <span class="sd">    du pixel est strictement inférieure au seuil</span>
@@ -8040,7 +8040,7 @@ moyenne des valeurs de cette liste.</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
         <span class="n">somme</span> <span class="o">+=</span> <span class="n">val</span>
@@ -8124,7 +8124,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> \
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
 
-<span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; affichage d&#39;une grille : les 1 sont représentés par </span>
 <span class="sd">        des &quot; *&quot; , les 0 par deux espaces &quot;  &quot; &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">dessin</span><span class="p">:</span>
@@ -8136,7 +8136,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
         <span class="nb">print</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">zoomListe</span><span class="p">(</span><span class="n">liste_depart</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zoomListe</span><span class="p">(</span><span class="n">liste_depart</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une liste contenant k fois chaque </span>
 <span class="sd">    élément de liste_depart&#39;&#39;&#39;</span>
     <span class="n">liste_zoom</span> <span class="o">=</span> <span class="o">...</span>
@@ -8145,7 +8145,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
             <span class="o">...</span>
     <span class="k">return</span> <span class="n">liste_zoom</span>
 
-<span class="k">def</span> <span class="nf">zoomDessin</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zoomDessin</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une grille où les lignes sont zoomées k fois </span>
 <span class="sd">    ET répétées k fois&#39;&#39;&#39;</span>
     <span class="n">grille_zoom</span><span class="o">=</span><span class="p">[]</span>
@@ -8243,7 +8243,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> \
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
 
-<span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">dessin</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">ligne</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -8253,14 +8253,14 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
         <span class="nb">print</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">zoomListe</span><span class="p">(</span><span class="n">liste_depart</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zoomListe</span><span class="p">(</span><span class="n">liste_depart</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">liste_zoom</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste_depart</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
             <span class="n">liste_zoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elt</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">liste_zoom</span>
 
-<span class="k">def</span> <span class="nf">zoomDessin</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zoomDessin</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">grille_zoom</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">grille</span><span class="p">:</span>
         <span class="n">liste_zoom</span> <span class="o">=</span> <span class="n">zoomListe</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
@@ -8317,7 +8317,7 @@ seulement est <code>''</code>, le fils droit seulement est <code>''</code>, aucu
 <span class="normal">16</span>
 <span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],</span> <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]}</span>
 
-<span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
     <span class="n">fils_gauche</span> <span class="o">=</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">fils_droit</span> <span class="o">=</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
@@ -8365,7 +8365,7 @@ dessous.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_iteratif</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_iteratif</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">imax</span> <span class="o">=</span> <span class="o">...</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
@@ -8390,7 +8390,7 @@ dessous.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_iteratif</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_iteratif</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">imax</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
@@ -8546,7 +8546,7 @@ le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <
 <span class="s2">&quot;N&quot;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span> \
 <span class="s2">&quot;T&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;V&quot;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span><span class="mi">26</span><span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="p">:</span>
     <span class="c1">#mot est une chaîne de caractères (en lettres majuscules)</span>
     <span class="n">code_c</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">code_a</span> <span class="o">=</span> <span class="err">???</span>
@@ -8590,7 +8590,7 @@ le code additionné de <code>mot</code>, ainsi qu’un booléen qui indique si <
 <span class="s2">&quot;N&quot;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span> \
 <span class="s2">&quot;T&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;V&quot;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">:</span><span class="mi">26</span><span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_parfait</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span> <span class="p">:</span>
     <span class="c1">#mot est une chaîne de caractères (en lettres majuscules)</span>
     <span class="n">code_c</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">code_a</span> <span class="o">=</span> <span class="mi">0</span>
@@ -8637,7 +8637,7 @@ Les seules opérations autorisées sont l’addition et la soustraction. </p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiplication</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="n">multiplication</span><span class="p">(</span><span class="o">-</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n2</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -8685,7 +8685,7 @@ condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoi
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chercher</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="err">???</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -8722,7 +8722,7 @@ condition n’est pas vérifiée, elle affiche <code>"Erreur"</code> puis renvoi
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chercher</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chercher</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erreur&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>

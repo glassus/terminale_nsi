@@ -4037,7 +4037,7 @@
 <p><strong>Q1.</strong> Créer une fonction <code>fabrique_liste</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie une liste composée de tous les entiers de <code>0</code> à <code>nb-1</code>.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">lst</span>
 </code></pre></div>
@@ -4045,7 +4045,7 @@
 <p><strong>Q2.</strong> Créer une fonction <code>fabrique_dict</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie dictionnaire composé de paires qui associent à toutes les clés <code>k</code>  de <code>0</code> à <code>nb-1</code> leur propre valeur <code>k</code>. </p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)}</span>
     <span class="k">return</span> <span class="n">dct</span>
 </code></pre></div>
@@ -4098,17 +4098,17 @@
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">lst</span>
 
-<span class="k">def</span> <span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)}</span>
     <span class="k">return</span> <span class="n">dct</span>
 
-<span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
 
@@ -4182,7 +4182,7 @@ Mesurons cette fois non pas la recherche dans le dictionnaire, mais la création
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
         <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>

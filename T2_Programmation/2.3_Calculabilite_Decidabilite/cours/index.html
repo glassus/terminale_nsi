@@ -4008,7 +4008,7 @@
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <h2 id="1-un-programme-comme-parametre-dun-programme">1. Un programme comme paramètre d'un programme<a class="headerlink" href="#1-un-programme-comme-parametre-dun-programme" title="Permanent link">⚓︎</a></h2>
 <p>Les codes que nous manipulons ressemblent souvent à cela :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
 </code></pre></div></p>
@@ -4016,7 +4016,7 @@
 <p>Voici comment nous pouvons représenter notre machine <code>accueil</code>, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)</p>
 <p><img alt="image" class="center" src="../data/m1.png" width="30%" /></p>
 <p>Maintenant, enregistrons le code suivant dans un fichier <code>test.py</code> :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
 
@@ -4041,7 +4041,7 @@ Ce type de code (magique !) existe dans tous les langages et s'appelle un <a cla
 <h2 id="2-mon-programme-va-t-il-sarreter">2. Mon programme va-t-il s'arrêter ?<a class="headerlink" href="#2-mon-programme-va-t-il-sarreter" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-un-exemple">2.1 Un exemple<a class="headerlink" href="#21-un-exemple" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le programme suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">countdown</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
@@ -4069,7 +4069,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 </ul>
 <p><img alt="image" class="center" src="../data/halt2.png" width="60%" /></p>
 <p><strong>Tentative d'écriture de <code>halt</code> en Python :</strong></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="s2">&quot;prog(x) s&#39;arrête&quot;</span><span class="p">:</span>   <span class="c1"># mes excuses, je n&#39;ai pas eu le temps de finir totalement ce code</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span> <span class="p">:</span>
@@ -4078,7 +4078,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 <p>Nous en resterons là pour l'instant dans l'écriture de ce programme. Nous allons nous en servir pour construire d'autres programmes.</p>
 <h3 id="23-amusons-nous-avec-ce-programme-halt">2.3 Amusons-nous avec ce programme <code>halt</code>.<a class="headerlink" href="#23-amusons-nous-avec-ce-programme-halt" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le programme :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sym</span><span class="p">(</span><span class="n">prog</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sym</span><span class="p">(</span><span class="n">prog</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">halt</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">prog</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vers l&#39;infini et au-delà !&quot;</span><span class="p">)</span>

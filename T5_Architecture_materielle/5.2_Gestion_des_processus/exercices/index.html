@@ -4181,13 +4181,13 @@ navigateur Web (chromium-browser) ?</p>
 </details>
 <details class="success">
 <summary>Correction Q2.b.</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">-</span> <span class="mi">1</span>
 
-<span class="k">def</span> <span class="nf">change_etat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouvel_etat</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">change_etat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouvel_etat</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">=</span> <span class="n">nouvel_etat</span>
 
-<span class="k">def</span> <span class="nf">est_termine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">est_termine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">==</span> <span class="mi">0</span>
 </code></pre></div>
 </details>
@@ -4208,7 +4208,7 @@ navigateur Web (chromium-browser) ?</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tourniquet</span><span class="p">(</span><span class="n">liste_attente</span><span class="p">,</span> <span class="n">quantum</span><span class="p">):</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tourniquet</span><span class="p">(</span><span class="n">liste_attente</span><span class="p">,</span> <span class="n">quantum</span><span class="p">):</span>
     <span class="n">ordre_execution</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="n">liste_attente</span> <span class="o">!=</span> <span class="p">[]:</span>
         <span class="n">processus</span> <span class="o">=</span> <span class="n">liste_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -4311,20 +4311,20 @@ navigateur Web (chromium-browser) ?</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">class</span><span class="w"> </span><span class="nc">File</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Crée une file vide &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Enfile element dans la file &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">defile</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">defile</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie le premier élément de la file et l&#39;enlève de la file &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie True si la file est vide, False sinon &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
@@ -4347,22 +4347,22 @@ navigateur Web (chromium-browser) ?</p>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
-        <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">class</span><span class="w"> </span><span class="nc">File</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Crée une file vide &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">def</span> <span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">enfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Enfile element dans la file &quot;&quot;&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">defile</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">defile</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie le premier élément de la file et l&#39;enlève de la file &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
                 <span class="k">return</span> <span class="kc">None</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Renvoie True si la file est vide, False sinon &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
@@ -4411,16 +4411,16 @@ navigateur Web (chromium-browser) ?</p>
 <span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span>
-<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Ordonnanceur</span><span class="p">:</span> 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Ordonnanceur</span><span class="p">:</span> 
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">temps</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">ajoute_nouveau_processus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ajoute_nouveau_processus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Ajoute un nouveau processus dans la file de l&#39;ordonnanceur. &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
-    <span class="k">def</span> <span class="nf">tourniquet</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tourniquet</span> <span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Effectue une étape d&#39;ordonnancement et renvoie le nom du processus élu.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">temps</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -4433,16 +4433,16 @@ navigateur Web (chromium-browser) ?</p>
             <span class="k">return</span> <span class="kc">None</span>
 
 
-<span class="k">class</span> <span class="nc">Processus</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">duree</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Processus</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">duree</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="n">nom</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">duree</span> <span class="o">=</span> <span class="n">duree</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">exectime</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">exectime</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">est_fini</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">est_fini</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exectime</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">duree</span>
 
 
