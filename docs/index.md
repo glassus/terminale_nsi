@@ -1,9 +1,10 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-{#
+
 !!! abstract "Actualités"
-#}
+    - [3e édition du #CTF « Passe Ton Hack d’abord](https://www.defense.gouv.fr/comcyber/evenements/3e-edition-du-ctf-passe-ton-hack-dabord){. target="_blank"}
+
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
