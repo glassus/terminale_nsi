@@ -3889,6 +3889,21 @@
 <p>La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.</p>
 <p>La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. </p>
 </details>
+<details class="success">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">adresse</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">liste_IP</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">IP</span> <span class="ow">in</span> <span class="n">liste_IP</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trouvée&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liste_IP</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas trouvée, ajoutée&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  2</p>
