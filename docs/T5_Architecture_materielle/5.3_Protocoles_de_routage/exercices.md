@@ -57,7 +57,7 @@
 
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\" 
         Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
@@ -73,7 +73,7 @@
 
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\" 
         La commande permettant de connaître son adresse IP est ```ifconfig``` ou ```ip addr``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.
@@ -82,7 +82,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
