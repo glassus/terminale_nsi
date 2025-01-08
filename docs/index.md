@@ -19,6 +19,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
     - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
     - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
