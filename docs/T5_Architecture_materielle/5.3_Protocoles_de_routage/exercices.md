@@ -332,7 +332,7 @@
     correction(True,
     """
     ??? success \"Correction\" 
-        1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16. 
+        1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. 
     """
     )
     }}
@@ -342,7 +342,7 @@
     """
     ??? success \"Correction\" 
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
-        Pour le réseau L2 (175.6.0.0/16), l'adresse min est 175.6.0.1/16 et l'adresse max est 175.6.255.254/16   
+        Pour le réseau L2 (175.16.0.0/16), l'adresse min est 175.16.0.1/16 et l'adresse max est 175.16.255.254/16   
     """
     )
     }}
