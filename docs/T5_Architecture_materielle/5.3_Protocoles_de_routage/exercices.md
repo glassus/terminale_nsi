@@ -132,7 +132,7 @@
     1.1 Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
     sauts. Déterminer le trajet parcouru.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
@@ -141,7 +141,7 @@
     }}
     1.2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1.2.** 
@@ -166,7 +166,7 @@
     protocole RIP.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Nouvelle table de routage de A :  
