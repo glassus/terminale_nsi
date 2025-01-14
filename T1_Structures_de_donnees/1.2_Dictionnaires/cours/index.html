@@ -4035,21 +4035,7 @@
 <h3 id="11-protocole-de-mesure">1.1 Protocole de mesure<a class="headerlink" href="#11-protocole-de-mesure" title="Permanent link">⚓︎</a></h3>
 <p>Le but est de créer une liste et un dictionnaire de même taille (arbitraire), et de comparer ensuite le temps de recherche d'un élément n'appartenant pas à ces deux structures.</p>
 <p><strong>Q1.</strong> Créer une fonction <code>fabrique_liste</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie une liste composée de tous les entiers de <code>0</code> à <code>nb-1</code>.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">lst</span>
-</code></pre></div>
-</details>
 <p><strong>Q2.</strong> Créer une fonction <code>fabrique_dict</code> qui prend en paramètre un entier <code>nb</code> et qui renvoie dictionnaire composé de paires qui associent à toutes les clés <code>k</code>  de <code>0</code> à <code>nb-1</code> leur propre valeur <code>k</code>. </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)}</span>
-    <span class="k">return</span> <span class="n">dct</span>
-</code></pre></div>
-</details>
 <p><strong>Q3.</strong> Créer une fonction <code>mesures</code> qui prend en paramètre un entier <code>nb</code> et qui :</p>
 <ul>
 <li>Créé une liste et un dictionnaire de taille <code>nb</code> à l'aide des fonctions précédentes.</li>
@@ -4065,86 +4051,9 @@
 </div>
 <p>Pour davantage de précision, on pourra dans un second temps effectuer plusieurs mesures et faire une moyenne des temps obtenus.</p>
 <p>Pour rappel, l'import du module <code>time</code> permet d'appeler la fonction <code>time.time()</code>. </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="n">lst</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb</span><span class="p">)}</span>
-    <span class="k">return</span> <span class="n">dct</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">mesures</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="n">fabrique_liste</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">fabrique_dict</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-
-    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
-        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
-    <span class="n">tps_moyen_lst</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
-
-    <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
-        <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
-        <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
-    <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour une liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1">       : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q4.</strong> Effectuer des mesures avec différentes valeurs de <code>nb</code>.</p>
 <h3 id="12-mesures">1.2 Mesures<a class="headerlink" href="#12-mesures" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons effectuer 3 mesures, avec une taille de liste et de dictionnaire augmentant d'un facteur 10 à chaque fois.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">10000</span>       <span class="p">:</span> <span class="mf">0.00023534297943115235</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">un</span> <span class="n">dictionnaire</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">10000</span> <span class="p">:</span> <span class="mf">1.6689300537109374e-07</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">100000</span>       <span class="p">:</span> <span class="mf">0.0012505292892456056</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">un</span> <span class="n">dictionnaire</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">100000</span> <span class="p">:</span> <span class="mf">4.5299530029296873e-07</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">1000000</span>       <span class="p">:</span> <span class="mf">0.012522673606872559</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">un</span> <span class="n">dictionnaire</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">1000000</span> <span class="p">:</span> <span class="mf">2.384185791015625e-07</span>
-</code></pre></div>
 <ul>
 <li>la recherche dans une liste prend un ordre de grandeur à chaque fois : elle est environ 10 fois plus grande quand la taille de la liste est 10 fois plus grande.</li>
 <li>la recherche dans le dictionnaire reste dans le même ordre de grandeur (<span class="arithmatex">\(10^{-7}\)</span> secondes).</li>
@@ -4257,9 +4166,9 @@ Par exemple, un site où notre mot de passe serait <code>vive la NSI</code> cons
 Lors du transit du mot de passe, le chiffrement effectué par le protocole <code>https</code> assure la protection en cas d'interception.
 De cette façon, si le serveur est compromis, la non-réversibilité de la fonction de hachage assure que le mot de passe ne peut pas être retrouvé par les attaquants.</p>
 <h3 id="24-la-non-reversibilite-de-la-fonction-de-hachage-vraiment">2.4 La non-réversibilité de la fonction de hachage  (vraiment ?)<a class="headerlink" href="#24-la-non-reversibilite-de-la-fonction-de-hachage-vraiment" title="Permanent link">⚓︎</a></h3>
-<p>Prenons l'empreinte MD5 <code>bdc87b9c894da5168059e00ebffb9077</code> et allons fureter du côté de (par exemple) <a href="https://md5.gromweb.com/" target="_blank">https://md5.gromweb.com/</a></p>
-<p>Notre empreinte ne résiste pas bien longtemps...<br />
-Re-essayons alors avec l'empreinte  <code>e74fb2f94c052bbf16cea4a795145e35</code>.</p>
+<p>Prenons notre empreinte MD5 <code>e74fb2f94c052bbf16cea4a795145e35</code> et allons fureter du côté de (par exemple) <a href="https://md5.gromweb.com/" target="_blank">https://md5.gromweb.com/</a></p>
+<p>Notre empreinte ne résiste pas bien longtemps...  </p>
+<p>Calculez l'empreinte de <code>FrançoisMauriacFTW</code> et demandez au site de tenter de l'inverser. Que constatez-vous ? </p>
 <p>Les empreintes des mots de passe les plus fréquents sont stockées dans des tables (qu'on appelle <em>rainbow tables</em> ou <em>tables arc-en-ciel</em>) qui rendent possibles le déchiffrage de ces empreintes.</p>
 <p>Pour contrer cela, les cryptographes rajoutent des caractères avant hachage (le <em>sel</em>), et choisissent surtout des bonnes fonctions de hachage. MD5 et SHA-1 ne sont plus utilisées, on préfère maintenant SHA-256 (voir <a href="https://fr.wikipedia.org/wiki/Secure_Hash_Algorithm" target="_blank">ici</a>).</p>
 <h2 id="3-retour-aux-dictionnaires">3. Retour aux dictionnaires<a class="headerlink" href="#3-retour-aux-dictionnaires" title="Permanent link">⚓︎</a></h2>
@@ -4347,7 +4256,7 @@ TypeError: unhashable type: &#39;list&#39;
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 janvier 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 janvier 2025</span>
   </span>
 
     
