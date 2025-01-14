@@ -31,7 +31,7 @@ Le but est de créer une liste et un dictionnaire de même taille (arbitraire), 
 **Q1.** Créer une fonction ```fabrique_liste``` qui prend en paramètre un entier ```nb``` et qui renvoie une liste composée de tous les entiers de ```0``` à ```nb-1```.
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python
@@ -47,7 +47,7 @@ correction(True,
 **Q2.** Créer une fonction ```fabrique_dict``` qui prend en paramètre un entier ```nb``` et qui renvoie dictionnaire composé de paires qui associent à toutes les clés ```k```  de ```0``` à ```nb-1``` leur propre valeur ```k```. 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python
@@ -81,7 +81,7 @@ Pour davantage de précision, on pourra dans un second temps effectuer plusieurs
 Pour rappel, l'import du module ```time``` permet d'appeler la fonction ```time.time()```. 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -130,7 +130,7 @@ correction(True,
 ### 1.2 Mesures
 
 Nous allons effectuer 3 mesures, avec une taille de liste et de dictionnaire augmentant d'un facteur 10 à chaque fois.
-
+{#
 ```python
 >>> mesures(10**4)
 temps pour une liste de taille 10000       : 0.00023534297943115235
@@ -142,7 +142,7 @@ temps pour un dictionnaire de taille 100000 : 4.5299530029296873e-07
 temps pour une liste de taille 1000000       : 0.012522673606872559
 temps pour un dictionnaire de taille 1000000 : 2.384185791015625e-07
 ```
-
+#}
 - la recherche dans une liste prend un ordre de grandeur à chaque fois : elle est environ 10 fois plus grande quand la taille de la liste est 10 fois plus grande.
 - la recherche dans le dictionnaire reste dans le même ordre de grandeur ($10^{-7}$ secondes).
 
@@ -286,10 +286,11 @@ De cette façon, si le serveur est compromis, la non-réversibilité de la fonct
 
 ### 2.4 La non-réversibilité de la fonction de hachage  (vraiment ?) 
 
-Prenons l'empreinte MD5 ```bdc87b9c894da5168059e00ebffb9077``` et allons fureter du côté de (par exemple) [https://md5.gromweb.com/](https://md5.gromweb.com/){:target="_blank"}
+Prenons notre empreinte MD5 ```e74fb2f94c052bbf16cea4a795145e35``` et allons fureter du côté de (par exemple) [https://md5.gromweb.com/](https://md5.gromweb.com/){:target="_blank"}
 
 Notre empreinte ne résiste pas bien longtemps...  
-Re-essayons alors avec l'empreinte  ```e74fb2f94c052bbf16cea4a795145e35```.
+
+Calculez l'empreinte de ```FrançoisMauriacFTW``` et demandez au site de tenter de l'inverser. Que constatez-vous ? 
 
 
 Les empreintes des mots de passe les plus fréquents sont stockées dans des tables (qu'on appelle *rainbow tables* ou *tables arc-en-ciel*) qui rendent possibles le déchiffrage de ces empreintes.
