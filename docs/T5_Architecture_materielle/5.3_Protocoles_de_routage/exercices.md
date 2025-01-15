@@ -516,9 +516,9 @@
     ??? success \"Correction Q3.a.\" 
         Parcours possibles :  
 
-        - S1-R1-R2-S2
-        - S1-R1-R4-R2-S2
-        - S1-R1-R4-R3-R2-S2
+        - R1-R2
+        - R1-R4-R2
+        - R1-R4-R3-R2
     """
     )
     }}
