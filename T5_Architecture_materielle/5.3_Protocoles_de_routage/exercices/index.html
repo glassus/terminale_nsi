@@ -4329,6 +4329,50 @@ Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2
 <p>Le commentaire de la couche Application indique que l'adresse IP du serveur web est <code>192.168.254.201</code>. </p>
 </details>
 <p><strong>Correction Partie 4</strong></p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<p>Table de routage du routeur R4 :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Destination</th>
+<th style="text-align: center;">Routeur suivant</th>
+<th style="text-align: center;">Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">R3</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">R5</td>
+<td style="text-align: center;">R6</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">R6</td>
+<td style="text-align: center;">R6</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<p>Pour minimiser le nombre de sauts (protocole RIP), le trajet sera <code>R1-R2-R4-R6</code>. </p>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  9</p>
