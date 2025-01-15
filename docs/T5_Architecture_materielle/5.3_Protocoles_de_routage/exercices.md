@@ -622,7 +622,7 @@
     correction(True,
     """
     ??? success \"Correction Q1.\" 
-       La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```.  
+        La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```.  
     """
     )
     }}
