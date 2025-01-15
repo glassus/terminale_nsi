@@ -444,7 +444,7 @@
 
     1. Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             1. A-B-E-F  
@@ -459,7 +459,7 @@
     En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/graphAN_corr.png){: .center}
