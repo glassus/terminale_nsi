@@ -19,6 +19,8 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+    - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
     - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
     - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
