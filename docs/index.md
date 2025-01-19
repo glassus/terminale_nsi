@@ -3,7 +3,7 @@
 
 
 !!! abstract "Actualités"
-    - [3e édition du #CTF « Passe Ton Hack d’abord](https://www.defense.gouv.fr/comcyber/evenements/3e-edition-du-ctf-passe-ton-hack-dabord){. target="_blank"}
+    - [Lundi 20 janvier : démarrage du CTF PTHD](T7_Divers/Entrainement_CTF.md){. target="_blank"}
 
 
 !!! tip "Grand Oral"
