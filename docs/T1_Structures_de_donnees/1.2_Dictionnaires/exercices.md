@@ -70,7 +70,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a. \" 
         Les valeurs possibles pour ```choix``` sont ```electrique``` ou ```classique```. 
