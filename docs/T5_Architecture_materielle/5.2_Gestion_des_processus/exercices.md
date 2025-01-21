@@ -33,7 +33,7 @@
         - d.   ```kill```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1. b
@@ -62,7 +62,7 @@
     ![image](data/ex2_2.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/corr_exo21.png){: .center}
@@ -79,7 +79,7 @@
     ![image](data/ex2_3.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/scenarios.png){: .center}
@@ -99,7 +99,7 @@
     **Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
@@ -129,7 +129,7 @@
     - iii. Dernier entré, premier sorti
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q2a.** ii. Premier entré, premier sorti
@@ -158,7 +158,7 @@
     ![image](data/ex4_frise.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex4_frise_corr.png){: .center} 
@@ -203,7 +203,7 @@
     Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/corr_exo1.png){: .center}
@@ -234,7 +234,7 @@
     Justifier qu'une situation d'interblocage peut se produire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
@@ -249,7 +249,7 @@
     **Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On peut par exemple inverser la demande d'imprimante et de table traçante.
@@ -269,7 +269,7 @@
         - d. terminé
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il sera à l'état bloqué.
@@ -310,7 +310,7 @@
     **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.** b.
@@ -330,7 +330,7 @@
     Exercice 2 du sujet [Amérique du Nord J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         proposition 2
@@ -339,7 +339,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```cd lycee```
@@ -348,7 +348,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c.\" 
         ```mkdir algorithmique```
@@ -357,7 +357,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.d.\" 
         ```rm image1.jpg``` 
@@ -366,7 +366,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         927
@@ -375,7 +375,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         1058 (ou 927)
@@ -384,7 +384,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         1153 et 1154
@@ -393,7 +393,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.d.\" 
         923 et 1036
@@ -402,7 +402,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         ![image](data/ANJ2_1.png){: .center}
@@ -431,7 +431,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b.\" 
         En inversant la demande de R3 et R1 pour le processus P3, le risque d'interblocage disparaît.
@@ -449,7 +449,7 @@
     Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         11, 20, 32, 11, 20, 32, 11, 32, 11
@@ -458,7 +458,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         11, 11, 20, 20, 32, 32, 11, 11, 32
@@ -479,7 +479,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         ```python
@@ -503,7 +503,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         ```python linenums='1'
@@ -536,7 +536,7 @@
     Exercice 2 du [sujet 0 version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Dans un logiciel libre, le code-source est disponible, peut être amélioré et redistribué par les utilisateurs (voir [ici](https://www.gnu.org/philosophy/free-sw.fr.html){. target='_blank'}).
@@ -548,7 +548,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Le rôle d'un système d'exploitation est de permettre à l'utiliseur des stocker ses données et d'exploiter les ressources du processeur. *question très difficile car beaucoup trop vaste*
@@ -558,7 +558,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         Le chemin absolu est ```/home/elsa/documents/boulot/rapport.odt``` 
@@ -567,7 +567,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Le chemin relatif est ```../max/images/photo_vac/photo_1.jpg``` 
@@ -577,7 +577,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Le répertoire ```documents``` n'as pas changé, il contient toujours les mêmes fichiers.
@@ -591,7 +591,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ![image](data/0B_2024_1.png){: .center}
@@ -600,7 +600,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Par exemple, une écriture sur le disque dur alors que celui-ci est déjà en cours d'écriture peut entraîner un passage à l'état bloqué.
@@ -609,7 +609,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         La structure de pile est une structure LIFO.
@@ -618,7 +618,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ![image](data/0B_2024_2.png){: .center}
@@ -627,7 +627,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ![image](data/0B_2024_3.png){: .center}
@@ -636,7 +636,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Imaginons par exemple cette situation :
@@ -661,7 +661,7 @@
     Exercice 1 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Les 3 états sont : Prêt, Élu, Bloqué.
@@ -673,7 +673,7 @@
  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Le processus ne peut plus être bloqué, les deux seuls états restants sont donc Prêt et Élu.
@@ -703,7 +703,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1'
@@ -731,7 +731,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ![image](data/AN2024_1.png){: .center}
@@ -821,7 +821,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -839,7 +839,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ![image](data/AN2024_2.png){: .center}

@@ -70,7 +70,7 @@ La commande ```kill``` permet de fermer un processus, en donnant son ```PID```  
 Exemple : ```kill 1453``` tuera Chrome (voir la capture du 1.2.1)
 
 
-![image](data/kill.jpg){: .center width=50%}
+![image](data/meme_kill.jpeg){: .center width=50%}
 
 
 

@@ -1,10 +1,10 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-
+{#
 !!! abstract "Actualités"
     - [Lundi 20 janvier : démarrage du CTF PTHD](T7_Divers/Entrainement_CTF.md){. target="_blank"}
-
+#}
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
@@ -19,6 +19,8 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
     - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
     - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
     - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)

@@ -178,5 +178,90 @@
     """
     )
     }}
-     
-    
+
+!!! example "{{ exercice() }}"
+    Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre
+    d’apparitions de ce caractère dans la chaîne.
+
+    Exemples :
+
+    - le nombre d’occurrences du caractère `‘o’` dans `‘bonjour’` est 2 ;
+    - le nombre d’occurrences du caractère `‘b’` dans `‘Bébé’` est 1 ;
+    - le nombre d’occurrences du caractère `‘B’` dans `‘Bébé’` est 1 ;
+    - le nombre d’occurrences du caractère `‘ ‘` dans `‘Hello world !’` est 2.
+
+    On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
+    occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
+    les valeurs le nombre d’occurrences de ces caractères.
+
+    Par exemple : avec la phrase `'Hello world !'` le dictionnaire est le suivant :
+
+    `{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}`
+
+    *L’ordre des clefs n’a pas d’importance.*
+
+    Écrire une fonction `nbr_occurrences` prenant comme paramètre une chaîne de
+    caractères `chaine` et renvoyant le dictionnaire des nombres d’occurrences des
+    caractères de cette chaîne.    
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def nbr_occurrences(chaine):
+            nb_occ = {}
+            for caractere in chaine:
+                if caractere in nb_occ:
+                    nb_occ[caractere] += 1
+                else:
+                    nb_occ[caractere] = 1
+            return nb_occ
+        ```
+    """
+    )
+    }}
+
+!!! example "{{ exercice() }}"
+    Écrire une fonction `ajoute_dictionnaires` qui prend en paramètres deux
+    dictionnaires `d1` et `d2` dont les clés sont des nombres et renvoie le dictionnaire `d` défini de
+    la façon suivante :
+
+    - Les clés de `d` sont celles de `d1` et celles de `d2` réunies.
+    - Si une clé est présente dans les deux dictionnaires `d1` et `d2`, sa valeur associée
+    dans le dictionnaire `d` est la somme de ses valeurs dans les dictionnaires `d1` et `d2`.
+    - Si une clé n’est présente que dans un des deux dictionnaires, sa valeur associée
+    dans le dictionnaire `d` est la même que sa valeur dans le dictionnaire où elle est
+    présente.
+
+    Exemples :
+
+    ```python
+    >>> ajoute_dictionnaires({1: 5, 2: 7}, {2: 9, 3: 11})
+    {1: 5, 2: 16, 3: 11}
+    >>> ajoute_dictionnaires({}, {2: 9, 3: 11})
+    {2: 9, 3: 11}
+    >>> ajoute_dictionnaires({1: 5, 2: 7}, {})
+    {1: 5, 2: 7}
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def ajoute_dictionnaires(d1, d2):
+            d = {}
+            for cle in d1:
+                d[cle] = d1[cle]
+            for cle in d2:
+                if cle in d:
+                    d[cle] += d2[cle]
+                else:
+                    d[cle] = d2[cle]
+            return d
+        ```
+    """
+    )
+    }}
+        
