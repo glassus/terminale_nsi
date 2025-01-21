@@ -3902,6 +3902,49 @@ Seule la première station sera renvoyée, à cause du <code>return</code>. Si a
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p>Le nombre d’occurrences d’un caractère dans une chaîne de caractère est le nombre
+d’apparitions de ce caractère dans la chaîne.</p>
+<p>Exemples :</p>
+<ul>
+<li>le nombre d’occurrences du caractère <code>‘o’</code> dans <code>‘bonjour’</code> est 2 ;</li>
+<li>le nombre d’occurrences du caractère <code>‘b’</code> dans <code>‘Bébé’</code> est 1 ;</li>
+<li>le nombre d’occurrences du caractère <code>‘B’</code> dans <code>‘Bébé’</code> est 1 ;</li>
+<li>le nombre d’occurrences du caractère <code>‘ ‘</code> dans <code>‘Hello world !’</code> est 2.</li>
+</ul>
+<p>On cherche les occurrences des caractères dans une phrase. On souhaite stocker ces
+occurrences dans un dictionnaire dont les clefs seraient les caractères de la phrase et
+les valeurs le nombre d’occurrences de ces caractères.</p>
+<p>Par exemple : avec la phrase <code>'Hello world !'</code> le dictionnaire est le suivant :</p>
+<p><code>{'H': 1,'e': 1,'l': 3,'o': 2,' ': 2,'w': 1,'r': 1,'d': 1,'!': 1}</code></p>
+<p><em>L’ordre des clefs n’a pas d’importance.</em></p>
+<p>Écrire une fonction <code>nbr_occurrences</code> prenant comme paramètre une chaîne de
+caractères <code>chaine</code> et renvoyant le dictionnaire des nombres d’occurrences des
+caractères de cette chaîne.    </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p>Écrire une fonction <code>ajoute_dictionnaires</code> qui prend en paramètres deux
+dictionnaires <code>d1</code> et <code>d2</code> dont les clés sont des nombres et renvoie le dictionnaire <code>d</code> défini de
+la façon suivante :</p>
+<ul>
+<li>Les clés de <code>d</code> sont celles de <code>d1</code> et celles de <code>d2</code> réunies.</li>
+<li>Si une clé est présente dans les deux dictionnaires <code>d1</code> et <code>d2</code>, sa valeur associée
+dans le dictionnaire <code>d</code> est la somme de ses valeurs dans les dictionnaires <code>d1</code> et <code>d2</code>.</li>
+<li>Si une clé n’est présente que dans un des deux dictionnaires, sa valeur associée
+dans le dictionnaire <code>d</code> est la même que sa valeur dans le dictionnaire où elle est
+présente.</li>
+</ul>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute_dictionnaires</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">11</span><span class="p">})</span>
+<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">11</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute_dictionnaires</span><span class="p">({},</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">11</span><span class="p">})</span>
+<span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">11</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute_dictionnaires</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{})</span>
+<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+</code></pre></div>
+</div>
 
 
 
@@ -3922,7 +3965,7 @@ Seule la première station sera renvoyée, à cause du <code>return</code>. Si a
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 janvier 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 janvier 2025</span>
   </span>
 
     
