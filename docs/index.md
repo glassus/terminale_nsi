@@ -1,10 +1,10 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-
+{#
 !!! abstract "Actualités"
     - [Lundi 20 janvier : démarrage du CTF PTHD](T7_Divers/Entrainement_CTF.md){. target="_blank"}
-
+#}
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
