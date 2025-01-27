@@ -129,7 +129,7 @@
     - iii. Dernier entré, premier sorti
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q2a.** ii. Premier entré, premier sorti
@@ -158,7 +158,7 @@
     ![image](data/ex4_frise.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex4_frise_corr.png){: .center} 
