@@ -16,6 +16,7 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
 
 ### 1.1 Version impérative
 
+{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -41,6 +42,9 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     3. si la valeur centrale est la valeur cherchée...
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
+
+
+#}
 
 Exemple d'utilisation :
 
@@ -77,6 +81,7 @@ On comprend que  :
 
 #### 1.2.2 Dichotomie récursive avec slicing
 
+{#
 !!! note "Dichotomie version récursive avec slicing :heart:"
     
     ```python linenums='1'
@@ -95,7 +100,7 @@ On comprend que  :
     1. On prend la partie droite de liste, juste après l'indice central.
     2. On prend la partie gauche de liste, juste avant l'indice central.
     
-
+#}
 
 Exemple d'utilisation :
 
@@ -113,6 +118,8 @@ False
 #### 1.2.3 Dichotomie récursive sans slicing
 
 Il est possible de programmer de manière récursive la recherche dichotomique sans toucher à la liste, et donc en jouant uniquement sur les indices :
+
+{#
 
 !!! note "Dichotomie version récursive sans slicing :heart:"
     ```python linenums='1'
@@ -132,6 +139,9 @@ Il est possible de programmer de manière récursive la recherche dichotomique s
 
     1. Pour pouvoir appeler simplement la fonction sans avoir à préciser les indices, on leur donne des paramètres par défaut.
     2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter.
+
+
+#}
 
 Exemple d'utilisation :
 
@@ -178,6 +188,8 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
 
 ### 3.1 Algorithme classique
 
+{#
+
 !!! note "Exponentiation classique :heart:"
     ```python linenums='1'
     def puissance(a, n):
@@ -186,6 +198,8 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
         else:
             return a * puissance(a, n-1)
     ```
+
+#}
 
 ### 3.2 Algorithme utilisant *diviser pour régner*
 
@@ -198,6 +212,7 @@ Pour tout nombre $a$,
 
 Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
 
+{#
 
 !!! note "Exponentiation rapide :heart:"
     
@@ -210,7 +225,8 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
         else:
             return a * puissance_mod(a*a, (n-1)//2)
     ```
-    
+
+#} 
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
@@ -239,7 +255,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
     ![image](data/carre.png){: .center width=50%}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -305,7 +321,7 @@ On appelera ce mécanisme l'**interclassement**.
     :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -346,6 +362,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
+{#
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
     
     ```python
@@ -370,7 +387,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
     
-
+#}
 
 
 #### 4.2.3 Visualisation

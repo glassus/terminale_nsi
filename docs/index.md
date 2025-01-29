@@ -19,20 +19,23 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
     - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
     - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
     - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
     - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
-    - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
-    - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
-    - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+
 
 
 
 
 
 ### *Thèmes déjà traités*
+- [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
+- [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+- [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+- [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
 - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
 - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
