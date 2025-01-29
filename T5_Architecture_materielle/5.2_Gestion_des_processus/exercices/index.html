@@ -3970,44 +3970,52 @@ nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.</p
 <p>On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3</p>
 <p><strong>Q1.</strong> Les processus s'exécutent de manière concurrente.
 Justifier qu'une situation d'interblocage peut se produire.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
+<img alt="image" class="center" src="../data/2021_2.png" />
+On voit apparaître un cycle d'interdépendance : il peut donc y avoir une situation d'interblocage. </p>
+</details>
 <p><strong>Q2</strong>. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</p>
-<ol>
-<li>Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
-d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
-tant que la table traçante n'est pas disponible :<ul>
-<li>a. élu</li>
-<li>b. bloqué</li>
-<li>c. prêt</li>
-<li>d. terminé</li>
-</ul>
-</li>
-</ol>
-<p><strong>Partie B</strong></p>
-<p>Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage suivant :</p>
-<p><img alt="image" class="center" src="../data/ex3_2.png" /></p>
-<p>La documentation Linux donne la signification des différents champs :</p>
-<ul>
-<li><code>UID</code> : identifiant utilisateur effectif ;</li>
-<li><code>PID</code> : identifiant de processus ;</li>
-<li><code>PPID</code> : <code>PID</code> du processus parent ;</li>
-<li><code>C</code> : partie entière du pourcentage d'utilisation du processeur par rapport au temps de vie
-des processus ;</li>
-<li><code>STIME</code> : l'heure de lancement du processus ;</li>
-<li><code>TTY</code> : terminal de contrôle</li>
-<li><code>TIME</code> : temps d'exécution</li>
-<li><code>CMD</code> : nom de la commande du processus</li>
-</ul>
-<p><strong>Q1.</strong> Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?</p>
-<ul>
-<li>a. <code>ls -l</code> </li>
-<li>b. <code>ps -ef</code> </li>
-<li>c. <code>cd ..</code> </li>
-<li>d. <code>chmod 741 processus.txt</code> </li>
-</ul>
-<p><strong>Q2.</strong> Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le
-navigateur Web (chromium-browser) ?</p>
-<p><strong>Q3.</strong> Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?</p>
 </div>
+<p><strong>Q3</strong>. Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
+    d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
+    tant que la table traçante n'est pas disponible :
+        - a. élu
+        - b. bloqué
+        - c. prêt
+        - d. terminé</p>
+<div class="highlight"><pre><span></span><code>**Partie B**
+
+Avec une ligne de commande dans un terminal sous Linux, on obtient l&#39;affichage suivant :
+
+![image](data/ex3_2.png){: .center}
+
+La documentation Linux donne la signification des différents champs :
+
+- `UID` : identifiant utilisateur effectif ;
+- `PID` : identifiant de processus ;
+- `PPID` : `PID` du processus parent ;
+- `C` : partie entière du pourcentage d&#39;utilisation du processeur par rapport au temps de vie
+des processus ;
+- `STIME` : l&#39;heure de lancement du processus ;
+- `TTY` : terminal de contrôle
+- `TIME` : temps d&#39;exécution
+- `CMD` : nom de la commande du processus
+
+
+**Q1.** Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?
+
+- a. ```ls -l``` 
+- b. ```ps -ef``` 
+- c. ```cd ..``` 
+- d. ```chmod 741 processus.txt```
+
+**Q2.** Quel est l&#39;identifiant du processus parent à l&#39;origine de tous les processus concernant le
+navigateur Web (chromium-browser) ?
+
+**Q3.** Quel est l&#39;identifiant du processus dont le temps d&#39;exécution est le plus long ?
+</code></pre></div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  5</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf" target="_blank">Amérique du Nord J2 2022</a></p>
