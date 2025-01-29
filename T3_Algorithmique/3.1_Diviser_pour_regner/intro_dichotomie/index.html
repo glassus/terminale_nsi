@@ -3767,77 +3767,14 @@
 <span class="kc">False</span>
 </code></pre></div>
 <details class="note">
-<summary>Code à trous, newbie version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="n">i_centre</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
-        <span class="n">val_centrale</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>         
-        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>              
-            <span class="k">return</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>                
-            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">1</span>            
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="kc">False</span>
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+    <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="note">
-<summary>Code à trous, regular version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
-        <span class="n">i_centre</span> <span class="o">=</span> <span class="o">...</span>   
-        <span class="n">val_centrale</span> <span class="o">=</span> <span class="o">...</span>         
-        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span> <span class="p">:</span>              
-            <span class="k">return</span> <span class="o">...</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>                
-            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>        
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="note">
-<summary>Code à trous, expert version</summary>
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> </summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -3872,19 +3809,75 @@
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="note">
-<summary>Code à trous, God version</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-    <span class="o">...</span>
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">i_centre</span> <span class="o">=</span> <span class="o">...</span>   
+        <span class="n">val_centrale</span> <span class="o">=</span> <span class="o">...</span>         
+        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span> <span class="p">:</span>              
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>                
+            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>        
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<p>Pour tester :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25m0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.75.75 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.75.75 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41z"/></svg></span></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">while</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="n">i_centre</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
+        <span class="n">val_centrale</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>         
+        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>              
+            <span class="k">return</span> <span class="o">...</span>
+        <span class="k">if</span> <span class="n">val_centrale</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">:</span>                
+            <span class="n">i_debut</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="mi">1</span>            
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">i_fin</span> <span class="o">=</span> <span class="o">...</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
@@ -3905,7 +3898,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 janvier 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 janvier 2025</span>
   </span>
 
     
