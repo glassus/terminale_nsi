@@ -249,7 +249,7 @@
     **Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On peut par exemple inverser la demande d'imprimante et de table traçante.
@@ -269,7 +269,7 @@
         - d. terminé
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Il sera à l'état bloqué.
@@ -310,7 +310,7 @@
     **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1.** b.
