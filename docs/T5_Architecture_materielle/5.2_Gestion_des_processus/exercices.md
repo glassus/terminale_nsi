@@ -260,7 +260,7 @@
         
 
 
-   **Q3**. Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
+    **Q3**. Supposons que le processus p1 demande la table traçante alors qu'elle est en cours
     d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1
     tant que la table traçante n'est pas disponible :
         - a. élu
@@ -276,7 +276,7 @@
     """
     )
     }}
-       
+        
 
     **Partie B**
 
