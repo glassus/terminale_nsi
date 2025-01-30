@@ -4090,6 +4090,58 @@ Si chaque ligne de chaque processus est exécutée à tour de rôle, un cycle d'
 <summary>Correction Q1.b.</summary>
 <p>11, 11, 20, 20, 32, 32, 11, 11, 32</p>
 </details>
+<details class="success">
+<summary>Correction Q2.a.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">liste_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">Processus</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Processus</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">Processus</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">execute_un_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">change_etat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouvel_etat</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">=</span> <span class="n">nouvel_etat</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">est_termine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">reste_a_faire</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.c.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tourniquet</span><span class="p">(</span><span class="n">liste_attente</span><span class="p">,</span> <span class="n">quantum</span><span class="p">):</span>
+    <span class="n">ordre_execution</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">liste_attente</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">processus</span> <span class="o">=</span> <span class="n">liste_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">processus</span><span class="o">.</span><span class="n">change_etat</span><span class="p">(</span><span class="s1">&#39;En cours d exécution&#39;</span><span class="p">)</span>
+        <span class="n">compteur_tourniquet</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="hll">        <span class="k">while</span> <span class="n">compteur_tourniquet</span> <span class="o">&lt;</span> <span class="n">quantum</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">processus</span><span class="o">.</span><span class="n">est_termine</span><span class="p">():</span>
+</span><span class="hll">            <span class="n">ordre_execution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">processus</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
+</span>            <span class="n">processus</span><span class="o">.</span><span class="n">execute_un_cycle</span><span class="p">()</span>
+            <span class="n">compteur_tourniquet</span> <span class="o">=</span> <span class="n">compteur_tourniquet</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="hll">        <span class="k">if</span> <span class="ow">not</span> <span class="n">processus</span><span class="o">.</span><span class="n">est_termine</span><span class="p">():</span>
+</span>            <span class="n">processus</span><span class="o">.</span><span class="n">change_etat</span><span class="p">(</span><span class="s1">&#39;Suspendu&#39;</span><span class="p">)</span>
+            <span class="n">liste_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">processus</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="n">processus</span><span class="o">.</span><span class="n">change_etat</span><span class="p">(</span><span class="s1">&#39;Terminé&#39;</span><span class="p">)</span>
+</span>    <span class="k">return</span> <span class="n">ordre_execution</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  7</p>
