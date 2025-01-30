@@ -468,7 +468,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a.\" 
         ```python
@@ -479,7 +479,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\" 
         ```python
@@ -503,10 +503,10 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.c.\" 
-        ```python linenums='1'
+        ```python linenums='1' hl_lines='7 8 11 15'
         def tourniquet(liste_attente, quantum):
             ordre_execution = []
             while liste_attente != []:
