@@ -420,7 +420,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\" 
         Un processus peut être Prêt, Elu, ou Bloqué.
