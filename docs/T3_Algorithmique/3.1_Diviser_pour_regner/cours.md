@@ -1,5 +1,7 @@
 # Diviser pour régner
 
+{{initexo(0)}}
+
 ![image](data/BO.png){: .center}
 
 ## 1. Retour sur l'algorithme de dichotomie
@@ -138,7 +140,7 @@ Il est possible de programmer de manière récursive la recherche dichotomique s
     ```
 
     1. Pour pouvoir appeler simplement la fonction sans avoir à préciser les indices, on leur donne des paramètres par défaut.
-    2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter.
+    2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter dès le début du code.
 
 
 #}
@@ -233,7 +235,8 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
 ![image](data/puiss.png){: .center}
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
+    
     Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
 
     **Aide pour Matplotlib :** le code ci-dessous
@@ -287,6 +290,17 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
             t0 = time.time()
             p = puissance_mod(3,n)
             return time.time()-t0
+
+
+        x = list(range(200))
+
+        y1 = [mesure_puissance(k) for k in x]
+        y2 = [mesure_puissance_mod(k) for k in x]
+
+        plt.plot(x,y1, label='classique')
+        plt.plot(x,y2, label='modulaire')
+        plt.legend(loc='upper left')
+        plt.show()
         ```
     """
     )
@@ -311,11 +325,12 @@ On appelera ce mécanisme l'**interclassement**.
     Pour interclasser deux listes ```lst1``` et ```lst2```.
 
     - on part d'une liste vide ```lst_totale```
-    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
+    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```, en veillant à maintenir un ordre croissant. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
     - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
+    
     Coder la fonction ```interclassement```. 
 
     :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
