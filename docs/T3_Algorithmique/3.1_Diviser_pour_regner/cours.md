@@ -99,7 +99,7 @@ On comprend que  :
             return dichotomie_rec(tab[:i_centre], val)  # (2)
     ```
 
-    1. On prend la partie droite de liste, juste après l'indice central.
+    1. On prend la partie droite de liste, juste après l'indice central. 
     2. On prend la partie gauche de liste, juste avant l'indice central.
     
 
