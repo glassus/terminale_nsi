@@ -121,7 +121,7 @@ False
 
 Il est possible de programmer de manière récursive la recherche dichotomique sans toucher à la liste, et donc en jouant uniquement sur les indices :
 
-{#
+
 
 !!! note "Dichotomie version récursive sans slicing :heart:"
     ```python linenums='1'
@@ -143,7 +143,7 @@ Il est possible de programmer de manière récursive la recherche dichotomique s
     2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter dès le début du code.
 
 
-#}
+
 
 Exemple d'utilisation :
 
@@ -190,7 +190,7 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
 
 ### 3.1 Algorithme classique
 
-{#
+
 
 !!! note "Exponentiation classique :heart:"
     ```python linenums='1'
@@ -201,7 +201,7 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
             return a * puissance(a, n-1)
     ```
 
-#}
+
 
 ### 3.2 Algorithme utilisant *diviser pour régner*
 
@@ -214,7 +214,7 @@ Pour tout nombre $a$,
 
 Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
 
-{#
+
 
 !!! note "Exponentiation rapide :heart:"
     
@@ -228,7 +228,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
             return a * puissance_mod(a*a, (n-1)//2)
     ```
 
-#} 
+
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
