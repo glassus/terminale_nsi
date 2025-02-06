@@ -4415,6 +4415,29 @@ Pour tout nombre <span class="arithmatex">\(a\)</span>, </p>
 </ul>
 <h4 id="422-implementation">4.2.2 Implémentation<a class="headerlink" href="#422-implementation" title="Permanent link">⚓︎</a></h4>
 <p>La grande force de ce tri va être qu'il se programme simplement de manière <strong>récursive</strong>, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».</p>
+<div class="admonition abstract">
+<p class="admonition-title">Algorithme de tri fusion (<em>merge sort</em>) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">interclassement</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span> <span class="n">lst2</span><span class="p">):</span>
+    <span class="n">lst_totale</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
+    <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">]:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">])</span>
+            <span class="n">i1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lst_totale</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">])</span>
+            <span class="n">i2</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">lst_totale</span> <span class="o">+</span> <span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst2</span><span class="p">[</span><span class="n">i2</span><span class="p">:]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="n">interclassement</span><span class="p">(</span><span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="n">m</span><span class="p">]),</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">m</span><span class="p">:]))</span>
+</code></pre></div>
+</div>
 <h4 id="423-visualisation">4.2.3 Visualisation<a class="headerlink" href="#423-visualisation" title="Permanent link">⚓︎</a></h4>
 <p>Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
 L'animation suivante montre la progression du tri :</p>
