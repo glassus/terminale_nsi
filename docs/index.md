@@ -17,6 +17,7 @@
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 #}
 
+[https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
 
 !!! note ":star: Thèmes en cours d'étude :star: "
     - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
