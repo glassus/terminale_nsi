@@ -3999,6 +3999,31 @@
 </code></pre></div>
 <p><img alt="image" class="center" src="../data/geog.png" /></p>
 </div>
+<details class="success">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simplifie</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+<span class="hll">        <span class="k">return</span> <span class="n">ligne</span>
+</span>    <span class="k">else</span><span class="p">:</span>
+        <span class="n">indice_max</span><span class="p">,</span> <span class="n">dmax</span> <span class="o">=</span> <span class="n">le_plus_loin</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dmax</span> <span class="o">&lt;=</span> <span class="n">seuil</span><span class="p">:</span>
+<span class="hll">            <span class="k">return</span> <span class="p">[</span><span class="n">ligne</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ligne</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+</span>        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="k">return</span> <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">indice_max</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span> <span class="o">+</span>  \
+</span><span class="hll">                <span class="n">simplifie</span><span class="p">(</span><span class="n">extrait</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">indice_max</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">seuil</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
 <div class="admonition note">
 <p class="admonition-title">Bonus : mise en pratique de l'algorithme de Douglas-Peucker</p>
 <p>Téléchargez d'abord le fichier <a class="" href="../data/coord_france.txt" target="_blank">coord_france.txt</a> puis placez-le dans le même dossier que le code Python ci-dessous :</p>
