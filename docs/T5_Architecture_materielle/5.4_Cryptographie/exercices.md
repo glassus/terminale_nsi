@@ -1,6 +1,7 @@
 {{initexo(0)}}
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
+    
 
     **Utilisation des bibliothèques cryptographiques du module ```sympy```.**
 
@@ -10,7 +11,7 @@
     Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -27,7 +28,7 @@
     }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
 
     **Chiffrage affine**
@@ -51,7 +52,7 @@
     **Q1.** Codez votre fonction ```affine(msg, a, b)```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -81,7 +82,7 @@
         L'instruction ```gcd``` du module ```math``` permet de calculer le PGCD de deux nombres.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -103,7 +104,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     **Cryptographie RSA** presque à la main
 
 
@@ -141,7 +142,7 @@
     - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -176,7 +177,7 @@
     }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     En vous servant du code précédent, déchiffrez le message ```58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182```  sachant que :
 
@@ -216,7 +217,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     **module RSA** dans les règles de l'art
 
 
