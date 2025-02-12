@@ -412,14 +412,11 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         ![image](data/exo5.png){: .center}  
 
-        Tout ça en un joli gif (merci à Mireille Coilhac) :
-
-        ![image](data/laby_gif.gif){: .center}
               
     """
     )
