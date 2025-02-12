@@ -187,7 +187,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
     **Q1.** Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -204,7 +204,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     **Q2.** Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -299,7 +299,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 
     Implémenter de façon récursive la suite de Fibonacci.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
