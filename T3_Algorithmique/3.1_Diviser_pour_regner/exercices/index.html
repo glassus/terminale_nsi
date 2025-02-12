@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -4284,6 +4284,35 @@
 <summary>Correction Q1.</summary>
 <div class="highlight"><pre><span></span><code><span class="n">cellule</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Labyrinthe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grille</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construire_grille</span><span class="p">(</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">construire_grille</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">,</span> <span class="n">longueur</span><span class="p">):</span>
+        <span class="n">grille</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="hll">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hauteur</span><span class="p">):</span>
+</span>            <span class="n">ligne</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="hll">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
+</span><span class="hll">                <span class="n">cellule</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span><span class="hll">                <span class="n">ligne</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cellule</span><span class="p">)</span>
+</span>            <span class="n">grille</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">grille</span>
+</code></pre></div></td></tr></table></div>
 </details>
 </div>
 
