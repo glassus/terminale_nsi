@@ -4326,6 +4326,27 @@
     <span class="n">cellule2</span><span class="o">.</span><span class="n">murs</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_labyrinthe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">haut</span><span class="p">,</span> <span class="n">long</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">haut</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span> <span class="c1"># Cas de base</span>
+<span class="hll">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">colonne</span><span class="p">,</span> <span class="n">colonne</span> <span class="o">+</span> <span class="n">long</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span>            <span class="bp">self</span><span class="o">.</span><span class="n">creer_passage</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">long</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Cas de base</span>
+<span class="hll">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span> <span class="n">ligne</span> <span class="o">+</span> <span class="n">haut</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span class="hll">            <span class="bp">self</span><span class="o">.</span><span class="n">creer_passage</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">colonne</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">colonne</span><span class="p">)</span>
+</span>    <span class="k">else</span><span class="p">:</span> <span class="c1"># Appels récursifs</span>
+            <span class="c1"># Code non étudié (Ne pas compléter)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
