@@ -160,7 +160,7 @@
         n = p * q
         phi = (p - 1) * (q - 1)
 
-        e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
+        e = 65537  # 65537 est un nombre qui sera (normalement) premier avec phi
         d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
 
         M = bytes_to_long(msg.encode('utf-8'))

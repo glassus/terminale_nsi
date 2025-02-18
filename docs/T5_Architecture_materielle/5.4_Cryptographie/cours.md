@@ -257,13 +257,14 @@ $27512614111 \equiv 4 [33]$
 Elle récupère la valeur 4, qui est bien le message original de Bob.
 
 > **Comment ça marche ?**
-Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat), on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA)) assez facilement que $M^{ed} \equiv M [n]$.
+Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat){. target="_blank"}, on démontre (voir [ici](https://fr.wikipedia.org/wiki/Chiffrement_RSA){. target="_blank"}) assez facilement que $M^{ed} \equiv M [n]$.
 
 Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publique et de la clé privée sont **symétriques** : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
 
 **Animation interactive**
-voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html)
+voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html){. target="_blank"}
 
+[]()
 
 
 
