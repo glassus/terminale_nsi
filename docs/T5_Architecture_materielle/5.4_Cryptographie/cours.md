@@ -215,6 +215,8 @@ Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
 >Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
 
+Le «dernier» (en 2020) grand nombre $n$ factorisé en $p \times q$ avait 250 chiffres, soit une clé de 829 bits. (voir [https://en.wikipedia.org/wiki/RSA_Factoring_Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge){. target="_blank"})
+
 #### :arrow_right: Étape 3
 Alice choisit un nombre $e$ qui doit être premier avec $(p-1)(q-1)$.  On note $\phi(n)$ le nombre $(p-1)(q-1)$.
 
@@ -275,8 +277,8 @@ Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publi
 
     Deux évènements pourraient faire s'écrouler la sécurité du RSA :
 
-    - la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  [https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html](https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html))
-    - l'avènement d'[ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : [l'algorithme de Schor](https://fr.wikipedia.org/wiki/Algorithme_de_Shor).
+    - la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  [https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html](https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html){. target="_blank"})
+    - l'avènement d'[ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique){. target="_blank"}, dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : [l'algorithme de Schor](https://fr.wikipedia.org/wiki/Algorithme_de_Shor){. target="_blank"}.
 
 ## 3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.
 
