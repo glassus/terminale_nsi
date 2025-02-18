@@ -116,7 +116,6 @@
     from Crypto.Random import get_random_bytes 
 
     bits = 256
-    msg = "en NSI on fait de la crypto"
 
     p = ...
     q = ...
@@ -124,21 +123,24 @@
     n = ...
     phi = ...
 
-    e = 65537  
+    e = 65537  # très souvent choisi comme exposant de chiffrement
     d = ...  # on calcule l'inverse de e modulo phi
 
-    M = bytes_to_long(msg.encode('utf-8')) # on convertit le message msg en un nombre
 
-    chiffre = ...  # message chiffré (sous forme de nombre)
-    
-    clair = ...   # message déchiffré (sous forme de nombre) 
-    print(long_to_bytes(res)) # message déchiffré (sous forme de texte)
+    def encipher(msg):
+        M = bytes_to_long(msg.encode('utf-8')) # on convertit le message msg en un nombre M
+        c = ... # M puissance e modulo n
+        return c
+
+    def decipher(c):
+        res = ...
+        return long_to_bytes(res) # on convertit le nombre res en une chaine de caractères
 
 
     ```
 
-    - Pour générer un grand nombre premier, on utilise la fonction ```Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)```.
-    - Pour inverser un nombre $x$ modulo $n$, on utilise la fonction    ```libnum.invmod(x, n)```.
+    - Pour générer un grand nombre premier de taille ```bits``` , on utilise la fonction ```Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)```.
+    - Pour inverser un nombre $x$ modulo $n$, on utilise la fonction    ```pow(x, -1, n)```.
     - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
@@ -147,12 +149,10 @@
     ??? success \"Correction\" 
         ```python linenums='1'
         import Crypto
-        import libnum
         from Crypto.Util.number import bytes_to_long, long_to_bytes
         from Crypto.Random import get_random_bytes 
 
         bits = 256
-        msg = 'en NSI on fait de la crypto'
 
         p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
         q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
@@ -161,14 +161,18 @@
         phi = (p - 1) * (q - 1)
 
         e = 65537  # 65537 est un nombre qui sera (normalement) premier avec phi
-        d = libnum.invmod(e, phi)  # on calcule l'inverse de e modulo phi
+        d = pow(e, -1, phi)  # on calcule l'inverse de e modulo phi
 
-        M = bytes_to_long(msg.encode('utf-8'))
 
-        c = pow(M, e, n) # M puissance e modulo n
-        res = pow(c, d, n)
+        def encipher(msg):
+            M = bytes_to_long(msg.encode('utf-8'))
+            c = pow(M, e, n) # M puissance e modulo n
+            return c
 
-        print(long_to_bytes(res))
+        def decipher(c):
+            res = pow(c, d, n)
+            return long_to_bytes(res)
+
 
 
         ```        

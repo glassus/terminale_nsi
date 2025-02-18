@@ -177,10 +177,9 @@ Le protocole que nous allons décrire ci-dessous permet :
 
 ![image](data/total_auth.png){: .center width=80%}
 
-**En résumé :**
-
-- Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
-- Bob est sûr que le message qu'il reçoit vient bien d'Alice.
+!!! abstract "En résumé"
+    - Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
+    - Bob est sûr que le message qu'il reçoit vient bien d'Alice.
 
 ### 2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA
  
@@ -208,15 +207,15 @@ Le fait que 15 soit égal à 1 modulo 7 (car $15=2 \times 7+1$) s'écrira $15 \e
 De même, $10 \equiv  3 [7]$, $25 \equiv 4 [7]$, $32 \equiv 2 [10]$, etc.
 
 
-#### Étape 1
+#### :arrow_right: Étape 1
 Alice choisit 2 grands nombres premiers $p$ et $q$. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons $p = 3$ et $q = 11$.
 
-#### Étape 2
+#### :arrow_right: Étape 2
 Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
 >Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
 
-#### Étape 3
+#### :arrow_right: Étape 3
 Alice choisit un nombre $e$ qui doit être premier avec $(p-1)(q-1)$.  On note $\phi(n)$ le nombre $(p-1)(q-1)$.
 
 Dans notre exemple, $(p-1)(q-1) = 20$, Alice choisit donc $e = 3$. (mais elle aurait pu aussi choisir 7, 9, 13...).
@@ -225,18 +224,18 @@ Le couple $(e, n)$ sera **la clé publique** d'Alice. Elle la diffuse à qui veu
 
 Dans notre exemple, la clé publique d'Alice est $(3, 33)$.
 
-#### Étape 4
+#### :arrow_right: Étape 4
 Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui vérifie l'égalité $e d \equiv 1 [\phi(n)]$.
 
 Dans notre exemple, comme $7 \times 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
 
-En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse de e*.
+En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse modulaire de e*. En Python, on utilisera ```pow(3, -1, 20)```. 
 
 Le couple $(d, n)$ sera **la clé privée** d'Alice. Elle ne la diffuse à personne.
 
 Dans notre exemple, la clé privée d'Alice est $(7, 33)$.
 
-#### Étape 5
+#### :arrow_right: Étape 5
 Supposons que Bob veuille écrire à Alice pour lui envoyer le nombre 4. 
 Il possède la clé publique d'Alice, qui est $(3, 33)$.
 
@@ -246,7 +245,7 @@ $$4^3 \equiv 31 [33]$$
 
 > Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation $x^3 \equiv 31 [33]$ de manière efficace.
 
-#### Étape 6
+#### :arrow_right: Étape 6
 Alice reçoit la valeur 31.  
 Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calculer le reste modulo 33 :
 
@@ -261,23 +260,23 @@ Grâce au [Petit Théorème de Fermat](https://fr.wikipedia.org/wiki/Petit_th%C3
 
 Il faut remarquer que $M^{ed} = M^{de}$. On voit que les rôles de la clé publique et de la clé privée sont **symétriques** : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.
 
-**Animation interactive**
-voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html){. target="_blank"}
 
-[]()
-
+??? tip "Animation interactive"
+    voir [https://animations.interstices.info/interstices-rsa/rsa.html](https://animations.interstices.info/interstices-rsa/rsa.html){. target="_blank"}
 
 
-#### RSA, un système inviolable ?
-Le chiffrement RSA a des défauts (notamment une grande consommation des ressources, due à la manipulation de très grands nombres).
-Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bits) le rend pour l'instant inviolable. 
 
-Actuellement, il n'existe pas d'algorithme efficace pour factoriser un nombre ayant plusieurs centaines de chiffres.
 
-Deux évènements pourraient faire s'écrouler la sécurité du RSA :
+!!! bug "RSA, un système inviolable ?"
+    Le chiffrement RSA a des défauts (notamment une grande consommation des ressources, due à la manipulation de très grands nombres).
+    Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bits) le rend pour l'instant inviolable. 
 
-- la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  [https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html](https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html))
-- l'avènement d'[ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : [l'algorithme de Schor](https://fr.wikipedia.org/wiki/Algorithme_de_Shor).
+    Actuellement, il n'existe pas d'algorithme efficace pour factoriser un nombre ayant plusieurs centaines de chiffres.
+
+    Deux évènements pourraient faire s'écrouler la sécurité du RSA :
+
+    - la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  [https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html](https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html))
+    - l'avènement d'[ordinateurs quantiques](https://fr.wikipedia.org/wiki/Calculateur_quantique), dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : [l'algorithme de Schor](https://fr.wikipedia.org/wiki/Algorithme_de_Shor).
 
 ## 3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.
 
@@ -327,10 +326,11 @@ Le transmission par protocole ```http``` de données chiffrées au préalable av
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-- https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/
+!!! quote "Bibliographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
+    - [https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/](https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/){. target="_blank"}
+ 
 
 
 ---
