@@ -3927,13 +3927,14 @@
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Crypto</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Crypto</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">libnum</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
 
 <span class="n">bits</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;en NSI on fait de la crypto&quot;</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">q</span> <span class="o">=</span> <span class="o">...</span>
@@ -3941,19 +3942,22 @@
 <span class="n">n</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">phi</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  
+<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># très souvent choisi comme exposant de chiffrement</span>
 <span class="n">d</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
 
-<span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span> <span class="c1"># on convertit le message msg en un nombre</span>
 
-<span class="n">chiffre</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># message chiffré (sous forme de nombre)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">encipher</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span> <span class="c1"># on convertit le message msg en un nombre M</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># M puissance e modulo n</span>
+    <span class="k">return</span> <span class="n">c</span>
 
-<span class="n">clair</span> <span class="o">=</span> <span class="o">...</span>   <span class="c1"># message déchiffré (sous forme de nombre) </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">))</span> <span class="c1"># message déchiffré (sous forme de texte)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">decipher</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1"># on convertit le nombre res en une chaine de caractères</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Pour générer un grand nombre premier, on utilise la fonction <code>Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</code>.</li>
-<li>Pour inverser un nombre <span class="arithmatex">\(x\)</span> modulo <span class="arithmatex">\(n\)</span>, on utilise la fonction    <code>libnum.invmod(x, n)</code>.</li>
+<li>Pour générer un grand nombre premier de taille <code>bits</code> , on utilise la fonction <code>Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)</code>.</li>
+<li>Pour inverser un nombre <span class="arithmatex">\(x\)</span> modulo <span class="arithmatex">\(n\)</span>, on utilise la fonction    <code>pow(x, -1, n)</code>.</li>
 <li>Pour calculer <code>a</code> à la puissance <code>b</code> modulo <code>n</code>, on utilise <code>pow(a, b, n)</code>.</li>
 </ul>
 </div>

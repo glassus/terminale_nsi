@@ -2737,15 +2737,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#bibliographie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliographie
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4175,11 +4166,13 @@ et donc
 <li>mais aussi de s'assurer que chaque personne est bien celle qu'elle prétend être : on résout le <strong>problème d'authentification</strong>.</li>
 </ul>
 <p><img alt="image" class="center" src="../data/total_auth.png" width="80%" /></p>
-<p><strong>En résumé :</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">En résumé</p>
 <ul>
 <li>Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.</li>
 <li>Bob est sûr que le message qu'il reçoit vient bien d'Alice.</li>
 </ul>
+</div>
 <h3 id="23-un-exemple-de-chiffrement-asymetrique-le-chiffrement-rsa">2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA<a class="headerlink" href="#23-un-exemple-de-chiffrement-asymetrique-le-chiffrement-rsa" title="Permanent link">⚓︎</a></h3>
 <h4 id="231-histoire">2.3.1 Histoire<a class="headerlink" href="#231-histoire" title="Permanent link">⚓︎</a></h4>
 <p>Lorsqu'en 1976 Diffie et Hellman (chercheurs à Stanford) présentent le concept de chiffrement asymétrique (souvent appelé <em>cryptographie à clés publiques</em>), ils en proposent uniquement un modèle théorique, n'ayant pas trouvé une réelle implémentation de leur protocole.</p>
@@ -4192,26 +4185,26 @@ et donc
 <p>Le chiffrement RSA est basé sur <em>l'arithmétique modulaire</em>. Faire des calculs <em>modulo</em> un entier <span class="arithmatex">\(n\)</span>, c'est ne garder que le reste de la division euclidienne par <span class="arithmatex">\(n\)</span>.</p>
 <p>Le fait que 15 soit égal à 1 modulo 7 (car <span class="arithmatex">\(15=2 \times 7+1\)</span>) s'écrira <span class="arithmatex">\(15 \equiv 1 [7]\)</span>.</p>
 <p>De même, <span class="arithmatex">\(10 \equiv  3 [7]\)</span>, <span class="arithmatex">\(25 \equiv 4 [7]\)</span>, <span class="arithmatex">\(32 \equiv 2 [10]\)</span>, etc.</p>
-<h4 id="etape-1">Étape 1<a class="headerlink" href="#etape-1" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-1"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 1<a class="headerlink" href="#etape-1" title="Permanent link">⚓︎</a></h4>
 <p>Alice choisit 2 grands nombres premiers <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span>. Dans la réalité ces nombres seront vraiment très grands (plus de 100 chiffres). Dans notre exemple, nous prendrons <span class="arithmatex">\(p = 3\)</span> et <span class="arithmatex">\(q = 11\)</span>.</p>
-<h4 id="etape-2">Étape 2<a class="headerlink" href="#etape-2" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-2"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 2<a class="headerlink" href="#etape-2" title="Permanent link">⚓︎</a></h4>
 <p>Alice multiplie ces deux nombres <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> et obtient ainsi un nombre <span class="arithmatex">\(n\)</span>.</p>
 <blockquote>
 <p>Il est très facile pour Alice de calculer <span class="arithmatex">\(n\)</span> en connaissant <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span>, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> en connaissant <span class="arithmatex">\(n\)</span> prend un temps exponentiel avec la taille de <span class="arithmatex">\(n\)</span>.<br />
 C'est sur cette difficulté (appelée difficulté de <em>factorisation</em>) que repose la robustesse du système RSA.</p>
 </blockquote>
-<h4 id="etape-3">Étape 3<a class="headerlink" href="#etape-3" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-3"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 3<a class="headerlink" href="#etape-3" title="Permanent link">⚓︎</a></h4>
 <p>Alice choisit un nombre <span class="arithmatex">\(e\)</span> qui doit être premier avec <span class="arithmatex">\((p-1)(q-1)\)</span>.  On note <span class="arithmatex">\(\phi(n)\)</span> le nombre <span class="arithmatex">\((p-1)(q-1)\)</span>.</p>
 <p>Dans notre exemple, <span class="arithmatex">\((p-1)(q-1) = 20\)</span>, Alice choisit donc <span class="arithmatex">\(e = 3\)</span>. (mais elle aurait pu aussi choisir 7, 9, 13...).</p>
 <p>Le couple <span class="arithmatex">\((e, n)\)</span> sera <strong>la clé publique</strong> d'Alice. Elle la diffuse à qui veut lui écrire.</p>
 <p>Dans notre exemple, la clé publique d'Alice est <span class="arithmatex">\((3, 33)\)</span>.</p>
-<h4 id="etape-4">Étape 4<a class="headerlink" href="#etape-4" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-4"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 4<a class="headerlink" href="#etape-4" title="Permanent link">⚓︎</a></h4>
 <p>Alice calcule maintenant sa clé privée : elle doit trouver un nombre <em>d</em> qui vérifie l'égalité <span class="arithmatex">\(e d \equiv 1 [\phi(n)]\)</span>.</p>
 <p>Dans notre exemple, comme <span class="arithmatex">\(7 \times 3  \equiv 1 [20]\)</span>, ce nombre <span class="arithmatex">\(d\)</span> est égal à 7.</p>
-<p>En pratique, il existe un algorithme simple (algorithme d'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu">Euclide étendu</a>) pour trouver cette valeur <span class="arithmatex">\(d\)</span>, appelée <em>inverse de e</em>.</p>
+<p>En pratique, il existe un algorithme simple (algorithme d'<a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu">Euclide étendu</a>) pour trouver cette valeur <span class="arithmatex">\(d\)</span>, appelée <em>inverse modulaire de e</em>. En Python, on utilisera <code>pow(3, -1, 20)</code>. </p>
 <p>Le couple <span class="arithmatex">\((d, n)\)</span> sera <strong>la clé privée</strong> d'Alice. Elle ne la diffuse à personne.</p>
 <p>Dans notre exemple, la clé privée d'Alice est <span class="arithmatex">\((7, 33)\)</span>.</p>
-<h4 id="etape-5">Étape 5<a class="headerlink" href="#etape-5" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-5"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 5<a class="headerlink" href="#etape-5" title="Permanent link">⚓︎</a></h4>
 <p>Supposons que Bob veuille écrire à Alice pour lui envoyer le nombre 4. 
 Il possède la clé publique d'Alice, qui est <span class="arithmatex">\((3, 33)\)</span>.</p>
 <p>Il calcule donc <span class="arithmatex">\(4^3\)</span> modulo 33, qui vaut 31. C'est cette valeur 31 qu'il transmet à Alice.</p>
@@ -4219,7 +4212,7 @@ Il possède la clé publique d'Alice, qui est <span class="arithmatex">\((3, 33)
 <blockquote>
 <p>Si Marc intercepte cette valeur 31, même en connaissant la clé publique d'Alice (3,33), il ne peut pas résoudre l'équation <span class="arithmatex">\(x^3 \equiv 31 [33]\)</span> de manière efficace.</p>
 </blockquote>
-<h4 id="etape-6">Étape 6<a class="headerlink" href="#etape-6" title="Permanent link">⚓︎</a></h4>
+<h4 id="etape-6"><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Étape 6<a class="headerlink" href="#etape-6" title="Permanent link">⚓︎</a></h4>
 <p>Alice reçoit la valeur 31.<br />
 Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calculer le reste modulo 33 :</p>
 <p><span class="arithmatex">\(31^7 = 27512614111\)</span></p>
@@ -4230,10 +4223,12 @@ Il lui suffit alors d'élever 31 à la puissance 7 (sa clé privée), et de calc
 Grâce au <a class="" href="https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat" target="_blank">Petit Théorème de Fermat</a>, on démontre (voir <a class="" href="https://fr.wikipedia.org/wiki/Chiffrement_RSA" target="_blank">ici</a>) assez facilement que <span class="arithmatex">\(M^{ed} \equiv M [n]\)</span>.</p>
 </blockquote>
 <p>Il faut remarquer que <span class="arithmatex">\(M^{ed} = M^{de}\)</span>. On voit que les rôles de la clé publique et de la clé privée sont <strong>symétriques</strong> : un message chiffré avec la clé publique se déchiffrera en le chiffrant avec la clé privée, tout comme un message chiffré avec la clé privée se déchiffrera en le chiffrant avec la clé publique.</p>
-<p><strong>Animation interactive</strong>
-voir <a class="" href="https://animations.interstices.info/interstices-rsa/rsa.html" target="_blank">https://animations.interstices.info/interstices-rsa/rsa.html</a></p>
-<p><a href=""></a></p>
-<h4 id="rsa-un-systeme-inviolable">RSA, un système inviolable ?<a class="headerlink" href="#rsa-un-systeme-inviolable" title="Permanent link">⚓︎</a></h4>
+<details class="tip">
+<summary>Animation interactive</summary>
+<p>voir <a class="" href="https://animations.interstices.info/interstices-rsa/rsa.html" target="_blank">https://animations.interstices.info/interstices-rsa/rsa.html</a></p>
+</details>
+<div class="admonition bug">
+<p class="admonition-title">RSA, un système inviolable ?</p>
 <p>Le chiffrement RSA a des défauts (notamment une grande consommation des ressources, due à la manipulation de très grands nombres).
 Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bits) le rend pour l'instant inviolable. </p>
 <p>Actuellement, il n'existe pas d'algorithme efficace pour factoriser un nombre ayant plusieurs centaines de chiffres.</p>
@@ -4242,6 +4237,7 @@ Mais le choix d'une clé publique de grande taille (actuellement 1024 ou 2048 bi
 <li>la découverte d'un algorithme efficace de factorisation, capable de tourner sur les ordinateurs actuels. Cette annonce est régulièrement faite, et tout aussi régulièrement contredite par la communauté scientifique. (voir, le 05/03/2021,  <a href="https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html">https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html</a>)</li>
 <li>l'avènement d'<a href="https://fr.wikipedia.org/wiki/Calculateur_quantique">ordinateurs quantiques</a>, dont la vitesse d'exécution permettrait une factorisation rapide. Il est à noter que l'algorithme de factorisation destiné à tourner sur un ordinateur quantique existe déjà : <a href="https://fr.wikipedia.org/wiki/Algorithme_de_Shor">l'algorithme de Schor</a>.</li>
 </ul>
+</div>
 <h2 id="3-https-exemple-dutilisation-conjointe-dun-chiffrement-asymetrique-et-dun-chiffrement-symetrique">3. HTTPS : exemple d'utilisation conjointe d'un chiffrement asymétrique et d'un chiffrement symétrique.<a class="headerlink" href="#3-https-exemple-dutilisation-conjointe-dun-chiffrement-asymetrique-et-dun-chiffrement-symetrique" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-principe-general">3.1 Principe général<a class="headerlink" href="#31-principe-general" title="Permanent link">⚓︎</a></h3>
 <p>Aujourd'hui, plus de 90 % du trafic sur internet est chiffré : les données ne transitent plus en clair (protocole <code>http</code>) mais de manière chiffrée (protocole <code>https</code>), ce qui empêche la lecture de paquets éventuellements interceptés.</p>
@@ -4280,12 +4276,14 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
 <p>Remarque : en réalité, ce n'est pas la clé AES qui est transmise à l'étape 4, mais un nombre choisi par le client, qui permettra, avec deux autres nombres choisis par le client (étape 1) et le serveur (étape 2) de reconstituer la clé AES, qui sera donc identique côté client et côté serveur.</p>
 </blockquote>
 <hr />
-<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Bibliographie</p>
 <ul>
 <li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
 <li>Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.</li>
-<li>https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/</li>
+<li><a class="" href="https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/" target="_blank">https://www.cloudflare.com/fr-fr/learning/ssl/what-happens-in-a-tls-handshake/</a></li>
 </ul>
+</div>
 <hr />
 
 
