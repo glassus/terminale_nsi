@@ -214,7 +214,6 @@ Alice choisit 2 grands nombres premiers $p$ et $q$. Dans la réalité ces nombre
 Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
 >Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
-
 Le «dernier» (en 2020) grand nombre $n$ factorisé en $p \times q$ avait 250 chiffres, soit une clé de 829 bits. (voir [https://en.wikipedia.org/wiki/RSA_Factoring_Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge){. target="_blank"})
 
 #### :arrow_right: Étape 3
