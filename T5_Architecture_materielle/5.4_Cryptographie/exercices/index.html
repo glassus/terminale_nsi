@@ -3912,6 +3912,31 @@
 </ul>
 </div>
 <p><strong>Q1.</strong> Codez votre fonction <code>affine(msg, a, b)</code></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="n">rg</span> <span class="o">=</span> <span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
+        <span class="n">nv_rg</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">rg</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="c1">#chiffrement affine</span>
+        <span class="n">nv_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">nv_rg</span> <span class="o">+</span> <span class="mi">65</span><span class="p">)</span>
+        <span class="n">sol</span> <span class="o">+=</span> <span class="n">nv_lettre</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Comparez vos résultats avec ceux obtenus par la fonction <code>encipher_affine()</code> de <code>sympy</code>.</p>
 <p><strong>Q3.</strong> Décodez la phrase <code>UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC</code>, sachant qu'elle contient le mot <code>TRAVAIL</code> et que <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span> sont inférieurs à 20.</p>
 <div class="admonition tip">
