@@ -17,7 +17,7 @@
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 #}
 
-
+- [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}  
 
 !!! note ":star: Thèmes en cours d'étude :star: "
     - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
