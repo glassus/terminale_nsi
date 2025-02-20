@@ -4036,6 +4036,49 @@
 <li><span class="arithmatex">\(e\)</span> vaut 65537.</li>
 <li><span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> sont respectivement les 13èmes et 14èmes nombres de Mersenne.</li>
 </ul>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Crypto</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Util.number</span><span class="w"> </span><span class="kn">import</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Crypto.Random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_bytes</span> 
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">521</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 13ème nombre de Mersenne</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">607</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 14ème nombre de Mersenne</span>
+
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">decipher</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
