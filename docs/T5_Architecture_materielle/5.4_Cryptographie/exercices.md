@@ -52,7 +52,7 @@
     **Q1.** Codez votre fonction ```affine(msg, a, b)```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
