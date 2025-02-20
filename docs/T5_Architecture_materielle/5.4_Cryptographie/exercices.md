@@ -144,7 +144,7 @@
     - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
