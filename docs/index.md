@@ -7,10 +7,10 @@
 #}
 
 !!! tip "Grand Oral"
-    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](data/GO_NSI_Eduscol.pdf){. target="_blank"}
-    - [FAQ Grand Oral](data/GO_FAQ.pdf){. target="_blank"}
-    - [**Exemple** de grille d'évaluation de Grand Oral](data/grilleGO.pdf){. target="_blank"}
-
+    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
+    - [FAQ Grand Oral](T7_Divers/0_Grand_Oral/data/GO_FAQ.pdf){. target="_blank"}
+    - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/0_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
+    - [Liste de sujets NSI ou Maths/NSI](T7_Divers/0_Grand_Oral/sujets.md){. target="_blank"}
 
 {#
 !!! question "Code Puzzle du jour"
