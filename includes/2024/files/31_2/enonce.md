@@ -1,5 +1,4 @@
-On s’intéresse dans cet exercice à la recherche dichotomique dans un tableau trié d’en-
-tiers.
+On s’intéresse dans cet exercice à la recherche dichotomique dans un tableau trié d’entiers.
 Compléter la fonction suivante en respectant la spécification.
 
 ```python linenums='1'
