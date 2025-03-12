@@ -1,10 +1,11 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-{#
+
 !!! abstract "Actualités"
-    - [Lundi 20 janvier : démarrage du CTF PTHD](T7_Divers/Entrainement_CTF.md){. target="_blank"}
-#}
+    - [Sujet du Bac Blanc](data/BacBlancTNSI_2025.pdf){. target="_blank"} 
+    - [Correction](data/BacBlancTNSI_2025_corr.pdf){. target="_blank"}     
+
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
@@ -17,7 +18,7 @@
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target="_blank"}
 #}
 
-- [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}  
+
 
 !!! note ":star: Thèmes en cours d'étude :star: "
     - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)

@@ -34,7 +34,7 @@ Ce code, d'une grande simplicité, est malheureusement très inefficace.
     Mesurer le temps de calcul de ```fibo(40)```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -66,15 +66,17 @@ Observons l'arbre d'appels de ```fibo(6)``` :
 
 Le calcul de ```fibo(2)``` se retrouve ainsi 5 fois dans l'arbre.
 
-Pour résoudre notre problème, nous l'avons divisé en problèmes plus petits, mais malheureusement pas indépendants : on dit que les problèmes se **recouvrent**, ce qui nous amène à refaire des choses déjà faites. 
+Pour résoudre notre problème, nous l'avons divisé en problèmes plus petits, mais malheureusement pas indépendants. Une approche par [diviser pour régner](../3.1_Diviser_pour_regner/cours.md){. target="_blank"} est donc impossible.
+
+On dit que les problèmes se **recouvrent**, ce qui nous amène à refaire des choses déjà faites. 
 
 Dans l'algorithme de dichotomie, ou du tri-fusion, les problèmes étaient indépendants et ne se recouvraient pas : on ne refaisait jamais deux fois la même chose. Ce n'est pas le cas ici.
 
 ### 1.2 Se souvenir <strike>des belles choses</strike> des calculs : la mémoïsation
 
-Comment éviter de recalculer (par exemple) 5 fois ```fibo(2)``` ?
+Comment éviter de recalculer (par exemple) 5 fois ```fibo(2)``` ? En se souvenant que nous l'avons déjà calculé !
 
-L'idée générale est de stocker le résultat de chaque calcul, par exemple dans un dictionnaire. Ainsi, à chaque demande de calcul :
+L'idée générale est donc de stocker le résultat de chaque calcul, par exemple dans un dictionnaire. Ainsi, à chaque demande de calcul :
 
 - Soit le calcul a déjà été effectué : on a donc juste à le lire dans le dictionnaire.
 - Soit le calcul n'a jamais été effectué : on l'effectue, et **on stocke le résultat dans le dictionnaire**.
@@ -92,7 +94,7 @@ L'idée générale est de stocker le résultat de chaque calcul, par exemple dan
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -204,7 +206,7 @@ Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
