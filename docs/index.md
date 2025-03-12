@@ -3,6 +3,7 @@
 
 
 !!! abstract "Actualités"
+    - [des nouvelles des US](data/enola_gay.png){. target="_blank"}
     - [Sujet du Bac Blanc](data/BacBlancTNSI_2025.pdf){. target="_blank"} 
     - [Correction](data/BacBlancTNSI_2025_corr.pdf){. target="_blank"}     
 
