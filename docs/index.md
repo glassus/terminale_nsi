@@ -21,14 +21,8 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
-    - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
-    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
-    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
-    - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-    - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
+    - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
+
 
 
 
@@ -36,6 +30,14 @@
 
 
 ### *Thèmes déjà traités*
+- [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+- [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
+- [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+- [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
+- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
+- [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+- [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
 - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
