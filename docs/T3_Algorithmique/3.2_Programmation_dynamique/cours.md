@@ -34,7 +34,7 @@ Ce code, d'une grande simplicité, est malheureusement très inefficace.
     Mesurer le temps de calcul de ```fibo(40)```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
