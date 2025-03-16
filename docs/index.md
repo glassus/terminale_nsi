@@ -1,12 +1,12 @@
 
 :star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
 
-
+{#
 !!! abstract "Actualités"
     - [des nouvelles des US](data/enola_gay.png){. target="_blank"}
     - [Sujet du Bac Blanc](data/BacBlancTNSI_2025.pdf){. target="_blank"} 
     - [Correction](data/BacBlancTNSI_2025_corr.pdf){. target="_blank"}     
-
+#}
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
@@ -22,6 +22,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
