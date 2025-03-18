@@ -143,7 +143,7 @@ def liste_parcours(pyr):
     **Q1.** Écrire une fonction ```max_force_brute``` qui prend en paramètre une pyramide ```pyr``` et qui renvoie la somme maximale parmi tous les trajets possibles.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -163,7 +163,7 @@ def liste_parcours(pyr):
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Notre algorithme donne bien la bonne solution pour ```pyr_exemple```, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.
@@ -349,7 +349,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     correction(False,
     """
     ??? success \"Correction\" 
-        On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour faire trouver le maximum d'une pyramide de taille 500.
+        On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour trouver le maximum d'une pyramide de taille 500.
     """
     )
     }}

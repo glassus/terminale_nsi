@@ -22,6 +22,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Programmation dynamique : TP Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
     - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
