@@ -322,7 +322,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -346,7 +346,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour trouver le maximum d'une pyramide de taille 500.
@@ -396,7 +396,7 @@ En procédant de même pour les lignes supérieures, on trouve la valeur maximal
     Effectuer des tests pour apprécier l'efficacité de cette fonction.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
