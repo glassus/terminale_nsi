@@ -78,7 +78,7 @@ Sur une case noire, on écrira le nombre 0.
     Recopier le damier et compléter toutes les cases, **en commençant en haut à gauche**.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/man3.png){: .center}
