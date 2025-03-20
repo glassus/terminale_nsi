@@ -167,7 +167,7 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -204,7 +204,7 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
     :warning: Dans la structure de votre code, penser à réutiliser le dictionnaire de mémoïsation...
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
