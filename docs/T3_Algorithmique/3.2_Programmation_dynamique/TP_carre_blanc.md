@@ -95,7 +95,7 @@ Imaginons maintenant la situation suivante, sur un autre damier que vous ne pouv
     Quelle est la valeur qu'il faut écrire à la place du point d'interrogation ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Il faut écrire la valeur 3, qui est égale à 1 + le minimum des trois cases situées au Nord, Ouest et Nord-Ouest.
