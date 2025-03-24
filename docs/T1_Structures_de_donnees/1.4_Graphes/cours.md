@@ -137,7 +137,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/grapheRS.png){: .center}    
@@ -149,7 +149,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
     **Q2.** Donner la matrice d'adjacence de ce graphe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         $\\pmatrix{
@@ -180,7 +180,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q1.png){: .center} 
@@ -197,7 +197,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q2.png){: .center} 
@@ -217,7 +217,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q3.png){: .center}
@@ -306,7 +306,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q1.png){: .center}        
@@ -330,7 +330,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q2.png){: .center}        
