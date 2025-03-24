@@ -86,7 +86,7 @@ Il est possible de construire un algorithme optimal de manière récursive.
 Il faut pour cela faire les observations suivantes :
 
 - pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)
-- :star: Si ```p``` est une pièce de ```pieces```, le nombre minimal de pièces nécessaires pour rendre la somme ```somme```   est égal à 1 + le nombre minimal de pièces nécessaires (contenant ```p```)    pour rendre la somme ```somme - p```. :star: 
+- :star: Si ```p``` est une pièce de ```pieces```, le nombre minimal de pièces nécessaires (contenant ```p```) pour rendre la somme ```somme```   est égal à 1 + le nombre minimal de pièces nécessaires pour rendre la somme ```somme - p```. :star: 
 
 Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur ```p```) à la meilleure combinaison qui rend ```somme - p``` pour avoir la meilleure combinaison qui rend ```somme``` (meilleure combinaison parmi celles contenant ```p```). 
 
