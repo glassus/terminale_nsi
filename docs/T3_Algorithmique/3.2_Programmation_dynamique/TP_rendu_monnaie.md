@@ -48,7 +48,7 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaq
     ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
