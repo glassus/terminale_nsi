@@ -3936,7 +3936,17 @@
 
 
 <h1 id="epreuve-pratique-bns-2025">Épreuve Pratique BNS 2025<a class="headerlink" href="#epreuve-pratique-bns-2025" title="Permanent link">⚓︎</a></h1>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> 25/03/2025 RETAPAGE en cours <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> </p>
+<p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>25/03/2025</strong>.  <br />
+Pour signaler des erreurs éventuelles : <code>gilles.lassus@ac-bordeaux.fr</code>  </p>
+<p><img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>   </p>
+<ul>
+<li>
+<p>Une archive contenant les 48 dossiers (contenant chacun le sujet en <code>.pdf</code> et le script en <code>.py</code>) : <a class="" href="../data2025/BNS_2025.zip" target="_blank">BNS_2025.zip</a> (1,6 Mo)</p>
+</li>
+<li>
+<p>Un pdf unique de tous les sujets : <a class="" href="../data2025/BNS_2025_pdf_unique.pdf" target="_blank">BNS_2025_pdf_unique.pdf</a> (667 Ko) </p>
+</li>
+</ul>
 <h2 id="sujet-01">▶ Sujet 01<a class="headerlink" href="#sujet-01" title="Permanent link">⚓︎</a></h2>
 <p><a class="" href="../pdf2025/25-NSI-01.pdf" target="_blank">Version originale du sujet</a> en pdf.</p>
 <h3 id="exercice-011">Exercice 01.1<a class="headerlink" href="#exercice-011" title="Permanent link">⚓︎</a></h3>
@@ -9426,7 +9436,8 @@ nombre 25 :</p>
 <span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1\)</span><br />
 <span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1\)</span>   <br />
 <span class="arithmatex">\(\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1\)</span> <br />
-<span class="arithmatex">\(\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0\)</span>   </p>
+<span class="arithmatex">\(\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0\)</span> <br />
+<span class="arithmatex">\(\phantom{25} = \overline{11001}_2\)</span>  </p>
 <p>L'écriture binaire de 25 est donc <code>11001</code>.</p>
 <p>0n rappelle également que :</p>
 <ul>
@@ -9549,6 +9560,7 @@ $\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1$
 $\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$     
 $\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$   
 $\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$   
+$\phantom{25} = \overline{11001}_2$  
 
 L&#39;écriture binaire de 25 est donc ```11001```.
 
@@ -13402,11 +13414,8 @@ Exemples :
 <p>On considère un tableau d'entiers <code>tab</code> (de type <code>list</code>) dont les éléments sont des <code>0</code> ou des <code>1</code>). On se propose de trier ce tableau selon l'algorithme suivant : à chaque étape du tri, le tableau est constitué de trois zones consécutives, la première ne contenant que des <code>0</code>,
 la seconde n'étant pas triée et la dernière ne contenant que des <code>1</code>.
 Au départ, les zones ne contenant que des <code>0</code> et des <code>1</code> sont vides.</p>
-<p><table>
-<tr>
-<td>Zone de 0</td><td>Zone non triée</td><td>Zone de 1</td>
-</tr>
-</table></p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">zone</span> <span class="n">non</span> <span class="n">triée</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
 <p>Tant que la zone non triée n'est pas réduite à un seul élément, on regarde son premier
 élément :</p>
 <ul>
@@ -13484,39 +13493,45 @@ la seconde n&#39;étant pas triée et la dernière ne contenant que des <span cl
 Au départ, les zones ne contenant que des <span class="sb">`0`</span> et des <span class="sb">`1`</span> sont vides.
 
 
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td&gt;Zone de 0&lt;/td&gt;&lt;td&gt;Zone non triée&lt;/td&gt;&lt;td&gt;Zone de 1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-Tant que la zone non triée n&#39;est pas réduite à un seul élément, on regarde son premier
-élément :
-
-<span class="k">-</span><span class="w"> </span>si cet élément vaut 0, on considère qu&#39;il appartient désormais à la zone ne contenant
-que des 0 ;
-<span class="k">-</span><span class="w"> </span>si cet élément vaut 1, il est échangé avec le dernier élément de la zone non triée et on
-considère alors qu’il appartient à la zone ne contenant que des 1.
-
-Dans tous les cas, la longueur de la zone non triée diminue de 1.
-
-Compléter la fonction <span class="sb">`tri`</span> suivante :
-
-```python linenums=&#39;1&#39;
-def tri(tab):
-    &#39;&#39;&#39;tab est un tableau d&#39;entiers contenant des 0 et des 1.
-    La fonction trie ce tableau en plaçant tous les 0 à gauche&#39;&#39;&#39;
-    i = ... # premier indice de la zone non triée 
-    j = ... # dernier indice de la zone non triée 
-    while i &lt; j:
-        if tab[i] == 0:
-            i = ... 
-        else:
-            valeur = ... 
-            tab[j] = ... 
-            ...
-            j = ... 
+```python
+[0, ..., 0, &lt;zone non triée&gt;, 1, ..., 1]
 </code></pre></div>
+<p>Tant que la zone non triée n'est pas réduite à un seul élément, on regarde son premier
+élément :</p>
+<ul>
+<li>si cet élément vaut 0, on considère qu'il appartient désormais à la zone ne contenant
+que des 0 ;</li>
+<li>si cet élément vaut 1, il est échangé avec le dernier élément de la zone non triée et on
+considère alors qu’il appartient à la zone ne contenant que des 1.</li>
+</ul>
+<p>Dans tous les cas, la longueur de la zone non triée diminue de 1.</p>
+<p>Compléter la fonction <code>tri</code> suivante :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;tab est un tableau d&#39;entiers contenant des 0 et des 1.</span>
+<span class="sd">    La fonction trie ce tableau en plaçant tous les 0 à gauche&#39;&#39;&#39;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># premier indice de la zone non triée </span>
+    <span class="n">j</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># dernier indice de la zone non triée </span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="o">...</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">valeur</span> <span class="o">=</span> <span class="o">...</span> 
+            <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> 
+            <span class="o">...</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="o">...</span> 
+</code></pre></div></td></tr></table></div>
 <p>Exemple :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
@@ -15503,7 +15518,7 @@ def rendu_monnaie(somme_due, somme_versee):
 <div class="tabbed-set tabbed-alternate" data-tabs="93:3"><input checked="checked" id="__tabbed_93_1" name="__tabbed_93" type="radio" /><input id="__tabbed_93_2" name="__tabbed_93" type="radio" /><input id="__tabbed_93_3" name="__tabbed_93" type="radio" /><div class="tabbed-labels"><label for="__tabbed_93_1">Énoncé</label><label for="__tabbed_93_2">Correction</label><label for="__tabbed_93_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
+<p>Dans cet exercice, un arbre binaire de caractères non vide est stocké sous la forme d’un
 dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.</p>
 <p>On utilise la valeur <code>''</code> pour représenter un fils vide.</p>
@@ -15546,7 +15561,7 @@ droit, de l’arbre <code>arbre</code> de sommet <code>lettre</code>.</p>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
+<div class="highlight"><pre><span></span><code>Dans cet exercice, un arbre binaire de caractères non vide est stocké sous la forme d’un
 dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.
 
@@ -15740,22 +15755,15 @@ def tri_selection(tab):
 <div class="tabbed-set tabbed-alternate" data-tabs="95:3"><input checked="checked" id="__tabbed_95_1" name="__tabbed_95" type="radio" /><input id="__tabbed_95_2" name="__tabbed_95" type="radio" /><input id="__tabbed_95_3" name="__tabbed_95" type="radio" /><div class="tabbed-labels"><label for="__tabbed_95_1">Énoncé</label><label for="__tabbed_95_2">Correction</label><label for="__tabbed_95_3">Source Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère dans cet exercice un graphe orienté représenté sous forme de listes d’adjacence.</p>
-<p>On suppose que les sommets sont numérotés de <code>0</code> à <code>n-1</code>.</p>
-<p>Par exemple, le graphe suivant :</p>
-<p><img alt="image" class="center" src="../data2024/graph2.png" /></p>
-<p>est représenté par la liste d’adjacence suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">adj</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-</code></pre></div>
-<p>Écrire une fonction <code>voisins_entrants(adj, x)</code> qui prend en paramètre le graphe
-donné sous forme de liste d’adjacence et qui renvoie une liste contenant les voisins entrants
-du sommet <code>x</code>, c’est-à-dire les sommets <code>y</code> tels qu’il existe une arête de <code>y</code> vers <code>x</code>.</p>
-<p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">voisins_entrants</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="mi">0</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">voisins_entrants</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="mi">1</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div>
+<p>Programmer la fonction <code>recherche</code>, prenant en paramètres un tableau non vide <code>tab</code> (type <code>list</code>) d'entiers et un entier <code>n</code>, et qui renvoie l'indice de la <strong>dernière</strong> occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie <code>None</code>.</p>
+<p>Exemples
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># renvoie None</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -15763,40 +15771,25 @@ du sommet <code>x</code>, c’est-à-dire les sommets <code>y</code> tels qu’i
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">voisins_entrants</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">vois</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">adj</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">vois</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">vois</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">indice_solution</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">indice_solution</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">indice_solution</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>On considère dans cet exercice un graphe orienté représenté sous forme de listes d’adjacence.
+<div class="highlight"><pre><span></span><code>Programmer la fonction `recherche`, prenant en paramètres un tableau non vide `tab` (type `list`) d&#39;entiers et un entier `n`, et qui renvoie l&#39;indice de la **dernière** occurrence de l&#39;élément cherché. Si l&#39;élément n&#39;est pas présent, la fonction renvoie `None`.
 
-On suppose que les sommets sont numérotés de `0` à `n-1`.
-
-Par exemple, le graphe suivant :
-
-![image](data2024/graph2.png){: .center}
-
-est représenté par la liste d’adjacence suivante :
-
+Exemples
 ```python
-adj = [[1, 2], [2], [0], [0]]
-```
-
-Écrire une fonction `voisins_entrants(adj, x)` qui prend en paramètre le graphe
-donné sous forme de liste d’adjacence et qui renvoie une liste contenant les voisins entrants
-du sommet `x`, c’est-à-dire les sommets `y` tels qu’il existe une arête de `y` vers `x`.
-
-Exemples :
-
-```python
-&gt;&gt;&gt; voisins_entrants([[1, 2], [2], [0], [0]], 0)
-[2, 3]
-&gt;&gt;&gt; voisins_entrants([[1, 2], [2], [0], [0]], 1)
-[0]
+&gt;&gt;&gt; recherche([5, 3], 1) # renvoie None
+2
+&gt;&gt;&gt; recherche([2, 4], 2)
+0
+&gt;&gt;&gt; recherche([2, 3, 5, 2, 4], 2)
+3
 ```
 </code></pre></div>
 </div>
@@ -15810,16 +15803,14 @@ Exemples :
 <div class="tabbed-set tabbed-alternate" data-tabs="96:3"><input checked="checked" id="__tabbed_96_1" name="__tabbed_96" type="radio" /><input id="__tabbed_96_2" name="__tabbed_96" type="radio" /><input id="__tabbed_96_3" name="__tabbed_96" type="radio" /><div class="tabbed-labels"><label for="__tabbed_96_1">Énoncé</label><label for="__tabbed_96_2">Correction</label><label for="__tabbed_96_3">Sources Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...</p>
-<p>Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on la lit et on l’écrit sous la forme d’un nombre. Ainsi, pour 1211 :</p>
-<ul>
-<li>on lit <em>un 1, un 2, deux 1</em> ;</li>
-<li>on écrit donc en nombre <em>1 1, 1 2, 2 1</em> ;</li>
-<li>puis on concatène <em>111221</em>.</li>
-</ul>
-<p>Compléter la fonction <code>nombre_suivant</code> qui prend en entrée un nombre sous forme de
-chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
-chaîne de caractères.</p>
+<p>On souhaite programmer une fonction indiquant le point le plus proche d’un point de départ
+dans un tableau de points non vide. Les points sont tous à coordonnées entières et sont
+donnés sous la forme d’un tuple de deux entiers. Le tableau des points à traiter est donc un
+tableau de tuples.</p>
+<p>On rappelle que la distance <span class="arithmatex">\(d\)</span> entre deux points du plan de coordonnées <span class="arithmatex">\((x;y)\)</span> et <span class="arithmatex">\((x';y')\)</span>
+vérifie la formule :</p>
+<div class="arithmatex">\[d^2=(x-x')^2+(y-y')^2\]</div>
+<p>Compléter le code des fonctions <code>distance_carre</code> et <code>point_le_plus_proche</code> fournies ci-dessous pour qu’elles répondent à leurs spécifications.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -15834,29 +15825,31 @@ chaîne de caractères.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nombre_suivant</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le nombre suivant de celui representé par s</span>
-<span class="sd">    en appliquant le procédé de lecture.&#39;&#39;&#39;</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">chiffre</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">compte</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> 
-        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">chiffre</span><span class="p">:</span>
-            <span class="n">compte</span> <span class="o">=</span> <span class="o">...</span> 
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">resultat</span> <span class="o">+=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> 
-            <span class="n">chiffre</span> <span class="o">=</span> <span class="o">...</span> 
-            <span class="o">...</span>
-    <span class="n">lecture_</span><span class="o">...</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> 
-    <span class="n">resultat</span> <span class="o">+=</span> <span class="n">lecture_chiffre</span>
-    <span class="k">return</span> <span class="n">resultat</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance_carre</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance au carre entre </span>
+<span class="sd">    deux points.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> 
+
+<span class="k">def</span><span class="w"> </span><span class="nf">point_le_plus_proche</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie les coordonnées du premier point du tableau tab se </span>
+<span class="sd">    trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
+    <span class="n">min_point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">distance_carre</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">depart</span><span class="p">)</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span> 
+            <span class="n">min_point</span> <span class="o">=</span> <span class="o">...</span> 
+            <span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span> 
+    <span class="k">return</span> <span class="n">min_point</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;1211&#39;</span><span class="p">)</span>
-<span class="s1">&#39;111221&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;311&#39;</span><span class="p">)</span>
-<span class="s1">&#39;1321&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="mi">25</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -15874,61 +15867,64 @@ chaîne de caractères.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nombre_suivant</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le nombre suivant de celui representé par s</span>
-<span class="sd">    en appliquant le procédé de lecture.&#39;&#39;&#39;</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">chiffre</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">compte</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span> 
-</span>        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">chiffre</span><span class="p">:</span>
-<span class="hll">            <span class="n">compte</span> <span class="o">=</span> <span class="n">compte</span> <span class="o">+</span> <span class="mi">1</span> 
-</span>        <span class="k">else</span><span class="p">:</span>
-<span class="hll">            <span class="n">resultat</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">compte</span><span class="p">)</span> <span class="o">+</span> <span class="n">chiffre</span> 
-</span><span class="hll">            <span class="n">chiffre</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
-</span><span class="hll">            <span class="n">compte</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class="hll">    <span class="n">lecture_chiffre</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">compte</span><span class="p">)</span> <span class="o">+</span> <span class="n">chiffre</span> 
-</span>    <span class="n">resultat</span> <span class="o">+=</span> <span class="n">lecture_chiffre</span>
-    <span class="k">return</span> <span class="n">resultat</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance_carre</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance au carre entre </span>
+<span class="sd">    deux points.&quot;&quot;&quot;</span>
+<span class="hll">    <span class="k">return</span> <span class="p">(</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">**</span><span class="mi">2</span>
+</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">point_le_plus_proche</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie les coordonnées du premier point du tableau tab se </span>
+<span class="sd">    trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
+    <span class="n">min_point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="hll">    <span class="n">min_dist</span> <span class="o">=</span> <span class="n">distance_carre</span><span class="p">(</span><span class="n">min_point</span><span class="p">,</span> <span class="n">depart</span><span class="p">)</span> 
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+<span class="hll">        <span class="k">if</span> <span class="n">distance_carre</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">depart</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">min_dist</span><span class="p">:</span> 
+</span><span class="hll">            <span class="n">min_point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+</span><span class="hll">            <span class="n">min_dist</span> <span class="o">=</span> <span class="n">distance_carre</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">depart</span><span class="p">)</span> 
+</span>    <span class="k">return</span> <span class="n">min_point</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...
+<div class="highlight"><pre><span></span><code>On souhaite programmer une fonction indiquant le point le plus proche d’un point de départ
+dans un tableau de points non vide. Les points sont tous à coordonnées entières et sont
+donnés sous la forme d’un tuple de deux entiers. Le tableau des points à traiter est donc un
+tableau de tuples.
 
-Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on la lit et on l’écrit sous la forme d’un nombre. Ainsi, pour 1211 :
+On rappelle que la distance $d$ entre deux points du plan de coordonnées $(x;y)$ et $(x&#39;;y&#39;)$
+vérifie la formule :
 
-<span class="k">-</span><span class="w"> </span>on lit <span class="ge">*un 1, un 2, deux 1*</span> ;
-<span class="k">-</span><span class="w"> </span>on écrit donc en nombre <span class="ge">*1 1, 1 2, 2 1*</span> ;
-<span class="k">-</span><span class="w"> </span>puis on concatène <span class="ge">*111221*</span>.
+$$d^2=(x-x&#39;)^2+(y-y&#39;)^2$$
 
-Compléter la fonction <span class="sb">`nombre_suivant`</span> qui prend en entrée un nombre sous forme de
-chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
-chaîne de caractères.
+
+
+Compléter le code des fonctions <span class="sb">`distance_carre`</span> et <span class="sb">`point_le_plus_proche`</span> fournies ci-dessous pour qu’elles répondent à leurs spécifications.
 
 ```python linenums=&#39;1&#39;
-def nombre_suivant(s):
-    &#39;&#39;&#39;Renvoie le nombre suivant de celui representé par s
-    en appliquant le procédé de lecture.&#39;&#39;&#39;
-    resultat = &#39;&#39;
-    chiffre = s[0]
-    compte = 1
-    for i in range(...): 
-        if s[i] == chiffre:
-            compte = ... 
-        else:
-            resultat += ... + ... 
-            chiffre = ... 
-            ...
-    lecture_... = ... + ... 
-    resultat += lecture_chiffre
-    return resultat
+def distance_carre(point1, point2):
+    &quot;&quot;&quot; Calcule et renvoie la distance au carre entre 
+    deux points.&quot;&quot;&quot;
+    return (...)**2 + (...)**2 
+
+def point_le_plus_proche(depart, tab):
+    &quot;&quot;&quot; Renvoie les coordonnées du premier point du tableau tab se 
+    trouvant à la plus courte distance du point depart.&quot;&quot;&quot;
+    min_point = tab[0]
+    min_dist = ... 
+    for i in range(1, len(tab)):
+        if distance_carre(tab[i], depart) &lt; ...: 
+            min_point = ... 
+            min_dist = ... 
+    return min_point
 </code></pre></div>
 <p>Exemples :</p>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;1211&#39;</span><span class="p">)</span>
-<span class="s1">&#39;111221&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_suivant</span><span class="p">(</span><span class="s1">&#39;311&#39;</span><span class="p">)</span>
-<span class="s1">&#39;1321&#39;</span>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="mi">25</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 ```             </p>
 </div>
@@ -15956,7 +15952,7 @@ def nombre_suivant(s):
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 mars 2025 13:07:04">25 mars 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 mars 2025 13:32:10">25 mars 2025</span>
   </span>
 
     
