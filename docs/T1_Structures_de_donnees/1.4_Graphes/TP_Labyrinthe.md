@@ -21,7 +21,7 @@ Notre objectif est de trouver comment aller **de A en P**.
     Proposer deux «formes» possibles pour ce graphe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/laby3.png){: .center width=35%}
@@ -43,7 +43,7 @@ Notre objectif est de trouver comment aller **de A en P**.
     En utilisant la classe ```Graphe``` créée en cours, implémenter le graphe de ce labyrinthe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -95,7 +95,7 @@ Notre objectif est de trouver comment aller **de A en P**.
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
