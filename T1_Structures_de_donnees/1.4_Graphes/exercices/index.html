@@ -3965,35 +3965,6 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Exercice 3 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf" target="_blank">sujet 0 version A - 2024</a></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p><img alt="image" class="center" src="../data/0A_Q1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Le chemin le plus court est A-E-D (10 km).</p>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<p>La matrice d'adjacence de G1 est :
-<span class="arithmatex">\(\pmatrix{
-0 &amp; 4 &amp; 0 &amp; 0 &amp; 4 &amp; 0 &amp; 0  \\
-4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 7 &amp; 5  \\ 
-0 &amp; 0 &amp; 0 &amp; 4 &amp; 8 &amp; 0 &amp; 0  \\
-0 &amp; 0 &amp; 4 &amp; 0 &amp; 6 &amp; 8 &amp; 0  \\ 
-4 &amp; 0 &amp; 8 &amp; 6 &amp; 0 &amp; 0 &amp; 0  \\
-0 &amp; 7 &amp; 0 &amp; 8 &amp; 0 &amp; 0 &amp; 3  \\ 
-0 &amp; 5 &amp; 0 &amp; 0 &amp; 0 &amp; 3 &amp; 0  \\
-}\)</span>  </p>
-</details>
-<details class="success">
-<summary>Correction Q6.</summary>
-<p>La fonction <code>cherche_itineraires</code> s'appelle elle-même, elle est donc récursive.</p>
-</details>
-<details class="success">
-<summary>Correction Q7.</summary>
-<p>La fonction <code>cherche_itineraires</code> sert à remplir la liste <code>tab_itineraires</code> (initialement vide) avec tous les chemins (uniques) partant de <code>start</code> et allant à <code>end</code>. </p>
-</details>
 <details class="tip">
 <summary>Code pour tester la Q8.</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -4067,143 +4038,6 @@
     <span class="k">return</span> <span class="n">tab_court</span>        
 </code></pre></div></td></tr></table></div>
 </details>
-<details class="success">
-<summary>Correction Q8.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">G2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]</span>
-    <span class="p">}</span>
-
-<span class="n">tab_itineraires</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">chaine</span>
-    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">u</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
-            <span class="n">nchemin</span> <span class="o">=</span> <span class="n">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">tab_itineraires</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">[]</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">itineraires_court</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
-    <span class="n">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-<span class="hll">    <span class="n">tab_court</span> <span class="o">=</span> <span class="p">[]</span>
-</span>    <span class="n">mini</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
-<span class="hll">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">mini</span><span class="p">:</span>
-</span><span class="hll">            <span class="n">mini</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</span>    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="n">mini</span><span class="p">:</span>
-<span class="hll">            <span class="n">tab_court</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-</span>    <span class="k">return</span> <span class="n">tab_court</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q9.</summary>
-<p>Le problème vient de la variable globale <code>tab_itineraires</code>.</p>
-<ul>
-<li>Après l'exécution de la commande <code>itineraires_court(G2, 'A', 'E')</code>,  <code>tab_itineraires</code> contient tous les chemins de A à E.</li>
-<li>Si le programme n'est pas re-exécuté, l'enchainement avec la commande <code>itineraires_court(G2, 'A', 'F')</code> va venir <strong>rajouter</strong> à la liste <code>tab_itineraires</code> tous les chemins de A à F.</li>
-<li>Lors de la recherche du trajet minimum, les trajets testés seront donc à la fois les trajets de A à F mais aussi de A à E : on peut donc potentiellement avoir une réponse erronnée.</li>
-</ul>
-<p>Pour éviter cela, on pourrait faire ceci (non demandé) :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">tab_itineraires</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[]):</span>
-        <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">chaine</span>
-        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">start</span><span class="p">]:</span>
-            <span class="k">if</span> <span class="n">u</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
-                <span class="n">nchemin</span> <span class="o">=</span> <span class="n">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="p">)</span>
-                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">tab_itineraires</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nchemin</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[]</span>
-    <span class="n">cherche</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">chaine</span><span class="o">=</span><span class="p">[])</span>
-    <span class="k">return</span> <span class="n">tab_itineraires</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">itineraires_court</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
-    <span class="n">tab_itineraires</span> <span class="o">=</span> <span class="n">cherche_itineraires</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-    <span class="n">tab_court</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">mini</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">mini</span><span class="p">:</span>
-            <span class="n">mini</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tab_itineraires</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="n">mini</span><span class="p">:</span>
-            <span class="n">tab_court</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">tab_court</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
@@ -4224,21 +4058,6 @@ du sommet <code>x</code>, c’est-à-dire les sommets <code>y</code> tels qu’i
 <span class="o">&gt;&gt;&gt;</span> <span class="n">voisins_entrants</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">voisins_entrants</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">vois</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">adj</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">vois</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">vois</span>        
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -4291,47 +4110,6 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">accessibles</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>    
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">adj</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">parcours</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Réalise un parcours en profondeur récursif</span>
-<span class="sd">    du graphe donné par les listes d&#39;adjacence adj</span>
-<span class="sd">    depuis le sommet x en accumulant les sommets</span>
-<span class="sd">    rencontrés dans acc&#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">acc</span><span class="p">:</span>
-        <span class="n">acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">adj</span><span class="p">[</span><span class="n">x</span><span class="p">]:</span>
-            <span class="n">parcours</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">accessibles</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la liste des sommets accessibles dans le</span>
-<span class="sd">    graphe donné par les listes d&#39;adjacence adj depuis</span>
-<span class="sd">    le sommet x.&#39;&#39;&#39;</span>
-    <span class="n">acc</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">parcours</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">acc</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -4456,200 +4234,10 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
 <p>Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas <a class="" href="https://youtu.be/rI-Rc7eF4iw" target="_blank">cette vidéo</a> d'un youtuber célèbre.</p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_dico_arcs_sortants</span><span class="p">(</span><span class="n">sentiers</span><span class="p">):</span>
-    <span class="n">arcs_sortants</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sentiers</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">p2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arcs_sortants</span><span class="p">:</span>
-            <span class="n">arcs_sortants</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">arcs_sortants</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">p1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arcs_sortants</span> <span class="p">:</span>
-            <span class="n">arcs_sortants</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">arcs_sortants</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p2</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">arcs_sortants</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">inf</span> <span class="c1"># la constante inf représente (+ infini)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">plus_proche</span><span class="p">(</span><span class="n">a_visiter</span><span class="p">):</span>
-    <span class="nb">min</span> <span class="o">=</span> <span class="n">inf</span>
-    <span class="n">proche</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">sent</span><span class="p">))</span> <span class="ow">in</span> <span class="n">a_visiter</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">poids</span> <span class="o">&lt;=</span> <span class="nb">min</span> <span class="p">:</span>
-            <span class="p">(</span> <span class="nb">min</span> <span class="p">,</span> <span class="n">proche</span> <span class="p">)</span> <span class="o">=</span> <span class="p">(</span> <span class="n">poids</span> <span class="p">,</span> <span class="n">p</span> <span class="p">)</span>
-    <span class="k">return</span> <span class="n">p</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">meilleur_chemin</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-    <span class="n">arcs</span> <span class="o">=</span> <span class="n">creer_dico_arcs_sortants</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-    <span class="n">a_visiter</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="n">inf</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">arcs</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
-    <span class="n">a_visiter</span><span class="p">[</span><span class="n">depart</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">visites</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">while</span> <span class="n">a_visiter</span> <span class="o">!=</span> <span class="p">{}</span> <span class="p">:</span>
-        <span class="c1"># recherche du sommet suivant à visiter</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">plus_proche</span><span class="p">(</span><span class="n">a_visiter</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">precedent</span><span class="p">,</span> <span class="n">sentier</span><span class="p">)</span> <span class="o">=</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-        <span class="c1"># m-à-j des voisins de p restant à visiter</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">suivant</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="n">arcs</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">suivant</span> <span class="ow">in</span> <span class="n">a_visiter</span><span class="p">:</span>
-                <span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">prec</span><span class="p">,</span> <span class="n">sent</span><span class="p">)</span> <span class="o">=</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">suivant</span><span class="p">]</span>
-                <span class="n">poids</span> <span class="o">=</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">d</span>
-                <span class="k">if</span> <span class="n">poids</span> <span class="o">&lt;</span> <span class="nb">min</span> <span class="p">:</span>
-                    <span class="n">a_visiter</span><span class="p">[</span><span class="n">suivant</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-        <span class="c1"># p passe des sommets à visiter aux sommets visités</span>
-        <span class="n">visites</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-        <span class="k">del</span> <span class="n">a_visiter</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-    <span class="n">affichage</span><span class="p">(</span><span class="n">visites</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q4.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affichage</span><span class="p">(</span><span class="n">visites</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-    <span class="k">pass</span>
-    <span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">depuis</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span> <span class="o">=</span> <span class="n">visites</span><span class="p">[</span><span class="n">arrivee</span><span class="p">]</span>
-    <span class="k">pass</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="n">inf</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;aucun chemin du point&#39;</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="s1">&#39;au point&#39;</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
-        <span class="k">return</span>
-    <span class="k">pass</span>
-    <span class="k">if</span> <span class="n">depart</span> <span class="o">!=</span> <span class="n">arrivee</span><span class="p">:</span>
-        <span class="n">affichage</span><span class="p">(</span><span class="n">visites</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">depuis</span><span class="p">)</span>  
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;en passant par le chemin&#39;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;étape au point&#39;</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="s1">&#39;(distance&#39;</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5 <i id='ex2AN2024'></i></p>
 <p>Exercice 2 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf" target="_blank">sujet Amérique du Nord J1 2024</a></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p><img alt="image" class="center" src="../data/ANJ12024_1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<div class="highlight"><pre><span></span><code><span class="c1">#                G, J, Y, E, N, M, A, L</span>
-<span class="n">matrice_adj</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#G</span>
-                <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1">#J</span>
-                <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#Y</span>
-                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#E</span>
-                <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#N</span>
-                <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#M</span>
-                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="c1">#A</span>
-                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span> <span class="c1">#L</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<ul>
-<li><code>position(sommets, 'G')</code> renvoie 0</li>
-<li><code>position(sommets, 'Z')</code> renvoie <code>None</code> </li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q4.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_amis</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="hll">    <span class="n">pos_s</span> <span class="o">=</span> <span class="n">position</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
-</span>    <span class="k">if</span> <span class="n">pos_s</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-<span class="hll">        <span class="k">return</span> <span class="kc">None</span>
-</span>    <span class="n">amis</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)):</span>
-<span class="hll">        <span class="n">amis</span> <span class="o">+=</span> <span class="n">m</span><span class="p">[</span><span class="n">pos_s</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-</span><span class="hll">    <span class="k">return</span> <span class="n">amis</span>
-</span></code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q5.</summary>
-<p><code>nb_amis(sommets, matrice_adj, 'G')</code> renvoie 4.</p>
-</details>
-<details class="success">
-<summary>Correction Q6.</summary>
-<ul>
-<li><code>c</code> représente la clé.</li>
-<li><code>v</code> représente la valeur associée à cette clé. </li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q7.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">graphe</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;G&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;J&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">]</span>
-        <span class="p">}</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q8.</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_amis</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q9.</summary>
-<p>Le cercle d'amis de Lou est <code>J G Y E N</code>. </p>
-</details>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Erreur d'énoncé sur la question 10.</p>
 <p>Le code à compléter est celui-ci :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -4666,23 +4254,6 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
             <span class="n">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
     <span class="o">...</span>
 </code></pre></div></td></tr></table></div></p>
-<details class="success">
-<summary>Correction Q10.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">visites</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-<span class="hll">    <span class="n">visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span>    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]:</span>
-<span class="hll">        <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visites</span><span class="p">:</span>
-</span>            <span class="n">parcours_en_profondeur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-<span class="hll">    <span class="k">return</span> <span class="n">visites</span>
-</span></code></pre></div></td></tr></table></div>
-</details>
 </div>
 
 
@@ -4704,7 +4275,7 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="30 mai 2024 06:55:27">30 mai 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 mars 2025 16:23:44">25 mars 2025</span>
   </span>
 
     
