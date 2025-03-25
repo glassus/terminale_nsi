@@ -1,4 +1,4 @@
-Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
+Dans cet exercice, un arbre binaire de caractères non vide est stocké sous la forme d’un
 dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.
 

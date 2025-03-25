@@ -3,11 +3,9 @@ la seconde n'étant pas triée et la dernière ne contenant que des `1`.
 Au départ, les zones ne contenant que des `0` et des `1` sont vides.
 
 
-<table>
-<tr>
-<td>Zone de 0</td><td>Zone non triée</td><td>Zone de 1</td>
-</tr>
-</table>
+```python
+[0, ..., 0, <zone non triée>, 1, ..., 1]
+```
 
 Tant que la zone non triée n'est pas réduite à un seul élément, on regarde son premier
 élément :

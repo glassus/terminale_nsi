@@ -14,6 +14,7 @@ $\phantom{25} = 2 \times (2 \times (2 \times 3 + 0) + 0) + 1$
 $\phantom{25} = 2 \times (2 \times (2 \times (2 \times 1+1) + 0) + 0) + 1$     
 $\phantom{25} = 2 \times (2 \times (2 \times (2 \times (2 \times 0 + 1)+1) + 0) + 0) + 1$   
 $\phantom{25} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$   
+$\phantom{25} = \overline{11001}_2$  
 
 L'écriture binaire de 25 est donc ```11001```.
 

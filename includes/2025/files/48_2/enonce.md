@@ -1,40 +1,46 @@
-On considère dans cet exercice la suite de nombre suivante : 1, 11, 21, 1211, 111221, ...
+On souhaite programmer une fonction indiquant le point le plus proche d’un point de départ
+dans un tableau de points non vide. Les points sont tous à coordonnées entières et sont
+donnés sous la forme d’un tuple de deux entiers. Le tableau des points à traiter est donc un
+tableau de tuples.
 
-Cette suite est construite ainsi : pour passer d’une valeur à la suivante, on la lit et on l’écrit sous la forme d’un nombre. Ainsi, pour 1211 :
+On rappelle que la distance $d$ entre deux points du plan de coordonnées $(x;y)$ et $(x';y')$
+vérifie la formule :
 
-- on lit *un 1, un 2, deux 1* ;
-- on écrit donc en nombre *1 1, 1 2, 2 1* ;
-- puis on concatène *111221*.
+$$d^2=(x-x')^2+(y-y')^2$$
 
-Compléter la fonction `nombre_suivant` qui prend en entrée un nombre sous forme de
-chaine de caractères et qui renvoie le nombre suivant par ce procédé, encore sous forme de
-chaîne de caractères.
+
+
+Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu’elles répondent à leurs spécifications.
 
 ```python linenums='1'
-def nombre_suivant(s):
-    '''Renvoie le nombre suivant de celui representé par s
-    en appliquant le procédé de lecture.'''
-    resultat = ''
-    chiffre = s[0]
-    compte = 1
-    for i in range(...): 
-        if s[i] == chiffre:
-            compte = ... 
-        else:
-            resultat += ... + ... 
-            chiffre = ... 
-            ...
-    lecture_... = ... + ... 
-    resultat += lecture_chiffre
-    return resultat
+def distance_carre(point1, point2):
+    """ Calcule et renvoie la distance au carre entre 
+    deux points."""
+    return (...)**2 + (...)**2 
+
+def point_le_plus_proche(depart, tab):
+    """ Renvoie les coordonnées du premier point du tableau tab se 
+    trouvant à la plus courte distance du point depart."""
+    min_point = tab[0]
+    min_dist = ... 
+    for i in range(1, len(tab)):
+        if distance_carre(tab[i], depart) < ...: 
+            min_point = ... 
+            min_dist = ... 
+    return min_point
+
 
 ```
 
 Exemples :
 
 ```python
->>> nombre_suivant('1211')
-'111221'
->>> nombre_suivant('311')
-'1321'
+>>> distance_carre((1, 0), (5, 3))
+25
+>>> distance_carre((1, 0), (0, 1))
+2
+>>> point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)])
+(2, 5)
+>>> point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)])
+(5, 2)
 ```

@@ -1,26 +1,11 @@
-On considère dans cet exercice un graphe orienté représenté sous forme de listes d’adjacence.
+Programmer la fonction `recherche`, prenant en paramètres un tableau non vide `tab` (type `list`) d'entiers et un entier `n`, et qui renvoie l'indice de la **dernière** occurrence de l'élément cherché. Si l'élément n'est pas présent, la fonction renvoie `None`.
 
-On suppose que les sommets sont numérotés de `0` à `n-1`.
-
-Par exemple, le graphe suivant :
-
-![image](data2024/graph2.png){: .center}
-
-est représenté par la liste d’adjacence suivante :
-
+Exemples
 ```python
-adj = [[1, 2], [2], [0], [0]]
-```
-
-Écrire une fonction `voisins_entrants(adj, x)` qui prend en paramètre le graphe
-donné sous forme de liste d’adjacence et qui renvoie une liste contenant les voisins entrants
-du sommet `x`, c’est-à-dire les sommets `y` tels qu’il existe une arête de `y` vers `x`.
-
-Exemples :
-
-```python
->>> voisins_entrants([[1, 2], [2], [0], [0]], 0)
-[2, 3]
->>> voisins_entrants([[1, 2], [2], [0], [0]], 1)
-[0]
+>>> recherche([5, 3], 1) # renvoie None
+2
+>>> recherche([2, 4], 2)
+0
+>>> recherche([2, 3, 5, 2, 4], 2)
+3
 ```
