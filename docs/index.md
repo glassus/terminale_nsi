@@ -1,5 +1,9 @@
 
-:star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2024 est [ici](T6_6_Epreuve_pratique/BNS_2024/){. target="_blank"} :star: :star: :star:
+:new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: 
+
+:star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2025 est [ici](T6_6_Epreuve_pratique/BNS_2025/){. target="_blank"} :star: :star: :star:
+
+:new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new:
 
 {#
 !!! abstract "Actualités"
