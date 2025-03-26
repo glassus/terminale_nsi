@@ -5,12 +5,11 @@
 
 :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new:
 
-{#
+
 !!! abstract "Actualités"
-    - [des nouvelles des US](data/enola_gay.png){. target="_blank"}
-    - [Sujet du Bac Blanc](data/BacBlancTNSI_2025.pdf){. target="_blank"} 
-    - [Correction](data/BacBlancTNSI_2025_corr.pdf){. target="_blank"}     
-#}
+    - Vous êtes le roi / la reine de la tablette graphique ? Participez au [concours d'affiches NSI](https://aeif.fr/index.php/2025/03/25/participez-au-concours-daffiches-nsi/){. target="_blank"}
+
+
 
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
