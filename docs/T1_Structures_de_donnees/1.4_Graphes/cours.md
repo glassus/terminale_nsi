@@ -502,7 +502,7 @@ On utilise :
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
 
-{#
+
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
     def BFS(g, depart):
@@ -524,9 +524,9 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return ...
 
     ```
-#}
 
 
+{#
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
     def BFS(g, depart):
@@ -548,7 +548,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return traites
 
     ```
-
+#}
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
@@ -648,7 +648,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
 
 !!! abstract "Recherche du plus court chemin "
 
-    {#
+    
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -682,10 +682,10 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = ... + chemin
         return chemin
     ```
-    #}
+    
     
 
-   
+    {#
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -719,7 +719,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = sommet + chemin
         return chemin
     ```
-    
+    #}
 
 
 
