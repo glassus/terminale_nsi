@@ -9,7 +9,7 @@
 
 {{ initexo(0) }}
 
-*Ce cours est intégralement inspiré du [cours de Cédric Gouygou](https://cgouygou.github.io/TNSI/T01_StructuresDonnees/T1.5_Graphes/T1.5.1_Graphes/){. target="_blank"} , du lycée Marguerite de Valois d'Angoulême (16)*
+*Ce cours est en très grande partie inspiré du [cours de Cédric Gouygou](https://cgouygou.github.io/TNSI/T01_StructuresDonnees/T1.5_Graphes/T1.5.1_Graphes/){. target="_blank"} , du lycée Marguerite de Valois d'Angoulême (16)*
 
 ## 1. Notion de graphe et vocabulaire
 
@@ -58,7 +58,7 @@ Dans un graphe **orienté**, les *arcs* ne peuvent être empruntés que dans le 
 
 Les sommets C et D sont *adjacents* au sommet B (mais pas A !), ce sont les *voisins* de B.
 
-**Exemple de graphe orienté** : le graphe des relations d'un individu sur Twitter est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.
+**Exemple de graphe orienté** : le graphe des relations d'un individu sur Instagram est orienté, car on peut «suivre» quelqu'un sans que cela soit réciproque.
 
 #### 1.2.3 Graphe pondéré
 
@@ -398,7 +398,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-{#
+
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -416,9 +416,9 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return ...
     ```
-#}
 
 
+{#
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -436,7 +436,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return sommetB in self.adjacents[sommetA]
     ```
-
+#}
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
