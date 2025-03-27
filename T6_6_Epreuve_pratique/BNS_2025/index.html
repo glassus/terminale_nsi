@@ -5585,7 +5585,7 @@
 <h1 id="epreuve-pratique-bns-2025">Épreuve Pratique BNS 2025<a class="headerlink" href="#epreuve-pratique-bns-2025" title="Permanent link">⚓︎</a></h1>
 <p>Les sujets ci-dessous correspondent à la dernière version officielle, publiée le <strong>25/03/2025</strong>.  <br />
 Pour signaler des erreurs éventuelles : <code>gilles.lassus@ac-bordeaux.fr</code>  </p>
-<p><img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>     </p>
+<p><img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b07.svg" title=":arrow_down:" /> <strong>Téléchargements</strong>      </p>
 <ul>
 <li>
 <p>Une archive contenant les 48 dossiers (contenant chacun le sujet en <code>.pdf</code> et le script en <code>.py</code>) : <a class="" href="../data2025/BNS_2025.zip" target="_blank">BNS_2025.zip</a> (1,6 Mo)</p>
@@ -11867,7 +11867,6 @@ pose le pion sur la case 2.</p>
 <p>Le jeu se termine lorsque le joueur a posé son pion sur <strong>toutes les cases</strong> de la piste.</p>
 <p>Compléter la fonction <code>nombre_coups</code> ci-dessous de sorte qu’elle renvoie le nombre de
 lancers aléatoires nécessaires pour terminer le jeu.</p>
-<p>Proposer ensuite quelques tests pour en vérifier le fonctionnement.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11891,7 +11890,7 @@ lancers aléatoires nécessaires pour terminer le jeu.</p>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">nombre_coups</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Simule un jeu de plateau avec 12 cases et renvoie le nombre</span>
-<span class="sd">    minimal de coups pour visiter toutes les cases.&#39;&#39;&#39;</span>
+<span class="sd">    nécessaire de coups pour visiter toutes les cases.&#39;&#39;&#39;</span>
     <span class="n">nombre_cases</span> <span class="o">=</span> <span class="mi">12</span>
     <span class="c1"># indique si une case a été vue</span>
     <span class="n">cases_vues</span> <span class="o">=</span> <span class="p">[</span> <span class="kc">False</span> <span class="p">]</span> <span class="o">*</span> <span class="n">nombre_cases</span>
@@ -11972,14 +11971,13 @@ Le jeu se termine lorsque le joueur a posé son pion sur <span class="gs">**tout
 Compléter la fonction <span class="sb">`nombre_coups`</span> ci-dessous de sorte qu’elle renvoie le nombre de
 lancers aléatoires nécessaires pour terminer le jeu.
 
-Proposer ensuite quelques tests pour en vérifier le fonctionnement.
 
 ```python linenums=&#39;1&#39;
 from random import randint
 
 def nombre_coups():
     &#39;&#39;&#39;Simule un jeu de plateau avec 12 cases et renvoie le nombre
-    minimal de coups pour visiter toutes les cases.&#39;&#39;&#39;
+    nécessaire de coups pour visiter toutes les cases.&#39;&#39;&#39;
     nombre_cases = 12
     # indique si une case a été vue
     cases_vues = [ False ] * nombre_cases
@@ -16350,7 +16348,7 @@ On la représente par une grille de nombres, c’est-à-dire par une liste compo
 Chaque sous-liste représentera donc une ligne du dessin.</p>
 <p>Dans le code ci-dessous, la fonction <code>affiche</code> permet d’afficher le dessin. Les pixels noirs
 (1 dans la grille) seront représentés par le caractère "*" et les blancs (0 dans la grille) par
-deux espaces.</p>
+une espace.</p>
 <p>La fonction <code>liste_zoom</code> prend en arguments une liste <code>liste_depart</code> et un entier <code>k</code>. Elle
 renvoie une liste où chaque élément de <code>liste_depart</code> est dupliqué <code>k</code> fois.</p>
 <p>La fonction <code>dessin_zoom</code> prend en argument la grille <code>dessin</code> et renvoie une grille où
@@ -16388,7 +16386,7 @@ toutes les lignes de <code>dessin</code> sont zoomées <code>k</code> fois et r�
 <span class="normal">30</span>
 <span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; affichage d&#39;une grille : les 1 sont représentés par </span>
-<span class="sd">        des &quot;*&quot; , les 0 par un espace &quot; &quot; &#39;&#39;&#39;</span>
+<span class="sd">        un &quot;*&quot; , les 0 par une espace &quot; &quot; &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">dessin</span><span class="p">:</span>
         <span class="n">affichage</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">ligne</span><span class="p">:</span>
@@ -16572,7 +16570,7 @@ Chaque sous-liste représentera donc une ligne du dessin.
 
 Dans le code ci-dessous, la fonction <span class="sb">`affiche`</span> permet d’afficher le dessin. Les pixels noirs
 (1 dans la grille) seront représentés par le caractère &quot;*&quot; et les blancs (0 dans la grille) par
-deux espaces.
+une espace.
 
 La fonction <span class="sb">`liste_zoom`</span> prend en arguments une liste <span class="sb">`liste_depart`</span> et un entier <span class="sb">`k`</span>. Elle
 renvoie une liste où chaque élément de <span class="sb">`liste_depart`</span> est dupliqué <span class="sb">`k`</span> fois.
@@ -16585,7 +16583,7 @@ Compléter les fonctions <span class="sb">`liste_zoom`</span> et <span class="sb
 ```python linenums=&#39;1&#39;
 def affiche(dessin):
     &#39;&#39;&#39; affichage d&#39;une grille : les 1 sont représentés par 
-        des &quot;*&quot; , les 0 par un espace &quot; &quot; &#39;&#39;&#39;
+        un &quot;*&quot; , les 0 par une espace &quot; &quot; &#39;&#39;&#39;
     for ligne in dessin:
         affichage = &#39;&#39;
         for col in ligne:
@@ -17610,7 +17608,7 @@ def point_le_plus_proche(depart, tab):
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 mars 2025 18:13:30">27 mars 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 mars 2025 20:45:05">27 mars 2025</span>
   </span>
 
     
