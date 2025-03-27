@@ -18,14 +18,13 @@ Le jeu se termine lorsque le joueur a posé son pion sur **toutes les cases** de
 Compléter la fonction `nombre_coups` ci-dessous de sorte qu’elle renvoie le nombre de
 lancers aléatoires nécessaires pour terminer le jeu.
 
-Proposer ensuite quelques tests pour en vérifier le fonctionnement.
 
 ```python linenums='1'
 from random import randint
 
 def nombre_coups():
     '''Simule un jeu de plateau avec 12 cases et renvoie le nombre
-    minimal de coups pour visiter toutes les cases.'''
+    nécessaire de coups pour visiter toutes les cases.'''
     nombre_cases = 12
     # indique si une case a été vue
     cases_vues = [ False ] * nombre_cases
