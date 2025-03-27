@@ -1,5 +1,5 @@
 On considère la fonction `eleves_du_mois` prenant en paramètres `eleves` et `notes` deux
-tableaux de même longueur, le premier contenant le nom des élèves et le second, des
+tableaux non vides de même longueur, le premier contenant le nom des élèves et le second, des
 entiers positifs désignant leur note à un contrôle de sorte que `eleves[i]` a obtenu la
 note `notes[i]`.  
 
@@ -33,6 +33,4 @@ Exemples :
 >>> notes_nsi = [30, 40, 80, 60, 58, 80, 75, 80, 60, 24]
 >>> eleves_du_mois(eleves_nsi, notes_nsi)
 (80, ['c', 'f', 'h'])
->>> eleves_du_mois([],[])
-(0, [])
 ```

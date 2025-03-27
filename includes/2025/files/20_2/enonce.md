@@ -4,8 +4,7 @@ jouer.
 Compléter la classe `Paquet_de_cartes` suivante en respectant les spécifications
 données dans les chaînes de documentation.
 
-Ajouter une assertion dans la méthode `recuperer_carte` afin de vérifier que le paramètre `pos`
-est correct.
+Ajouter une assertion dans la méthode `recuperer_carte` de la classe `Paquet_de_cartes` afin de vérifier que le paramètre `pos` est correct.
 
 On rappelle que l’instruction
 

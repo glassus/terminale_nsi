@@ -35,11 +35,14 @@ renvoie bien la liste donnée en exemple.
 ```python linenums='1'
 def voisinage(n, ligne, colonne):
     """ Renvoie la liste des coordonnées des voisins de la case
-    (ligne, colonne) en gérant les cases sur les bords. """
+    (ligne, colonne) dans un grille de taille n x n,
+    en tenant compte des cases sur les bords. """
     voisins = []
-    for l in range(max(0,ligne-1), min(n, ligne+2)):
-        for c in range(max(0, colonne-1), min(n, colonne+2)):
-            if (l, c) != (ligne, colonne):
+    for dl in range(-1, 2):
+        for dc in range(-1, 2):
+            l = ligne + dl
+            c = colonne + dc
+            if (l, c) != (ligne, colonne) and 0 <= l < n and 0 <= c < n:
                 voisins.append((l,c))
     return voisins
 

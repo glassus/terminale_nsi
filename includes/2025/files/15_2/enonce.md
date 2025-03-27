@@ -33,12 +33,12 @@ def chercher(tab, x, i, j):
 
 Exemples :
 ```python
->>> chercher([1, 5, 6, 6, 9, 12], 7, 0, 10)
-
 >>> chercher([1, 5, 6, 6, 9, 12], 7, 0, 5)
-
 >>> chercher([1, 5, 6, 6, 9, 12], 9, 0, 5)
 4
 >>> chercher([1, 5, 6, 6, 9, 12], 6, 0, 5)
 2
+>>> chercher([1], 0, 0, 0)
+>>> chercher([1], 1, 0, 0)
+0
 ```

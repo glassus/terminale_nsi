@@ -43,8 +43,7 @@ un mot en majuscule et renvoie un triplet constitué du code additionné, du cod
 et d’un booléen indiquant si le mot est parfait ou non.
 
 
-On rappelle que pour tester si un entier `a` divise un entier `b`, on utilise l’opérateur modulo
-`b % a` qui renvoie le reste de la division euclidienne de `b` par `a`. Si` b % a` vaut `0`, alors `a` divise `b`.
+On rappelle que pour tester si un entier `b` divise un entier `a`, on utilise l'opérateur modulo `a % b` qui renvoie le reste de la division euclidienne de `a` par `b`. Si `a % b` vaut 0, alors `b` divise `a`.
 
 
 ```python linenums='1'

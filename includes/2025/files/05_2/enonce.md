@@ -18,7 +18,7 @@ cases du tableau dont l’indice est un multiple de `i`, à partir de `2*i` (c�
 changement sur le tableau. 
 
 On dispose de la fonction `crible`, incomplète et donnée ci-dessous, prenant en paramètre un
-entier `n` strictement positif et renvoyant un tableau contenant tous les nombres premiers plus
+entier `n`  supérieur à 1 et renvoyant un tableau contenant tous les nombres premiers plus
 petits que `n`.
 
 ```python linenums='1'

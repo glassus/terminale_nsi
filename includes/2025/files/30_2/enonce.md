@@ -26,7 +26,7 @@ class Expr:
     def __init__(self, g, v, d):
         """un objet Expr possède 3 attributs :
         - gauche : la sous-expression gauche ;
-        - valeur : la valeur de l'étiquette, opérande ou nombre ;
+        - valeur : la valeur de l'étiquette, opérateur ou nombre ;
         - droite : la sous-expression droite."""
         self.gauche = g
         self.valeur = v
@@ -42,7 +42,7 @@ class Expr:
         chaine de caractères"""
         s = ... 
         if self.gauche is not None:
-            s = '(' + s + ... .infixe() 
+            s = s + '(' + ....infixe()
         s = s + ... 
         if ... is not None: 
             s = s + ... + ... 

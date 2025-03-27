@@ -32,6 +32,6 @@ def binaire(image, seuil):
             if image[i][j] < seuil : 
                 nouvelle_image[i][j] = 0 
             else:
-                nouvelle_image[i][j] = 1 
+                nouvelle_image[i][j] = 255 
     return nouvelle_image
 ```

@@ -21,7 +21,7 @@ abr1 = (n0, 1, n2)
 Écrire une fonction récursive `insertion_abr(a, cle)` qui prend en paramètres une
 clé `cle` et un arbre binaire de recherche `a`, et qui renvoie un arbre binaire de recherche
 dans lequel `cle` a été insérée.
-Dans le cas où `cle` est déjà présente dans `a`, la fonction renvoie l’arbre a inchangé.
+Dans le cas où `cle` est déjà présente dans `a`, la fonction renvoie un arbre identique à `a`.
 
 Résultats à obtenir :
 

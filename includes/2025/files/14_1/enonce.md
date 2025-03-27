@@ -19,18 +19,22 @@ Exemples :
 
 ```python
 >>> lancer1 = lancer(5)
+>>> lancer1
 [5, 6, 6, 2, 2]
 >>> paire_6(lancer1)
 True
 >>> lancer2 = lancer(5)
+>>> lancer2
 [6, 5, 1, 6, 6]
 >>> paire_6(lancer2)
 True
 >>> lancer3 = lancer(3)
+>>> lancer3
 [2, 2, 6]
 >>> paire_6(lancer3)
 False
 >>> lancer4 = lancer(0)
+>>> lancer4
 []
 >>> paire_6(lancer4)
 False

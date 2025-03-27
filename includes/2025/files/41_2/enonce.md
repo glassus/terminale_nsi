@@ -7,7 +7,7 @@ Un carré est dit semimagique lorsque les sommes des éléments situés sur chaq
 colonne sont égales.
 
 - Ainsi c2 et c3 sont semimagiques car la somme de chaque
-ligne, chaque colonne et chaque diagonale est égale à 8 pour c2 et 12 pour c3.
+ligne et chaque colonne est égale à 8 pour c2 et 12 pour c3.
 
 - Le carre c3bis n'est pas semimagique car la somme de la première ligne est égale à 15 alors que celle de la deuxième ligne
 est égale à 10.

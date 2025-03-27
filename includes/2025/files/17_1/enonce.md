@@ -1,7 +1,4 @@
-Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud,
-contenant une étiquette et deux sous-arbres gauche et droit et représenté par une instance
-de la classe `Noeud` donnée ci-dessous.
-
+Un arbre binaire est soit vide, représenté en Python par la valeur `None`, soit un nœud, contenant une étiquette et deux sous-arbres gauche et droit représentés par une instance de la classe `Noeud` donnée ci-dessous.
 
 ```python
 class Noeud:
