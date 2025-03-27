@@ -462,7 +462,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 
 !!! warning "Sommets visités"
-    Contrairement à un parcours d'arbre, où les fils d'un nœud ne peuvent pas avoir été visités avant le nœud, un voisin d'un sommet peut avoir déjà été visité en tant que voisin d'un sommet précédent...
+    Contrairement à un parcours d'arbre, où un nœud ne peut pas être fils de deux nœuds différents, un sommet **peut** être voisin de deux sommets différents.
 
     Il est donc nécessaire de mémoriser les sommets déja visités ou découverts (on dira qu'un sommet est découvert lorsqu'on l'ajoute à ```S```).
 
