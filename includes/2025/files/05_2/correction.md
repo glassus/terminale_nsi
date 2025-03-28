@@ -1,5 +1,5 @@
 ```python linenums='1' hl_lines='9 10 12 13'
-ddef crible(n):
+def crible(n):
     """Renvoie un tableau contenant tous les nombres premiers
     plus petits que n."""
     premiers = []
@@ -8,7 +8,7 @@ ddef crible(n):
     for i in range(n):
         if tab[i]:
             premiers.append(i)
-            multiple = i 
+            multiple = 2*i 
             while multiple < n:
                 tab[multiple] = False 
                 multiple = multiple + i 
