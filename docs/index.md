@@ -25,6 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
     - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
     - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
