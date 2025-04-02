@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         La matrice d'adjacence de G1 est :
