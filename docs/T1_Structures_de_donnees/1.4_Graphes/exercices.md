@@ -4,7 +4,7 @@
     Exercice 3 du [sujet 0 version A - 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/0A_Q1.png){: .center}
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         Le chemin le plus court est A-E-D (10 km).
