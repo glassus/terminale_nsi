@@ -645,7 +645,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
     
     Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur ```k```, il sera donc minimal. 
 
-
+{#
 !!! abstract "Recherche du plus court chemin "
 
     
@@ -682,10 +682,10 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = ... + chemin
         return chemin
     ```
-    
+#} 
     
 
-    {#
+    
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -719,7 +719,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = sommet + chemin
         return chemin
     ```
-    #}
+
 
 
 
