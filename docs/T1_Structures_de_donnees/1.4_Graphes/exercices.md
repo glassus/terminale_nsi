@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         Le parcours en largeur de ce graphe donne A-B-C-H-I-D-E-G-F.
@@ -70,7 +70,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         La fonction ```cherche_itineraires``` s'appelle elle-même, elle est donc récursive.
@@ -78,7 +78,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7.\" 
         La fonction ```cherche_itineraires``` sert à remplir la liste ```tab_itineraires``` (initialement vide) avec tous les chemins (uniques) partant de ```start``` et allant à ```end```. 
