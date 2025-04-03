@@ -836,6 +836,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant très mal son nom, puisque c'est devenu une pile).
 
+{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -851,9 +852,9 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 ....append(...)
         return ...
     ```
+#}
 
 
-{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -869,7 +870,7 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 traites.append(actuel)
         return traites
     ```
-#}
+
 
 **Remarques :**
 
