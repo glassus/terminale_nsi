@@ -839,6 +839,24 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
+        traites = ...
+        en_attente = ...
+        while ... != []:
+            actuel = ...
+            if ... not in ...:
+                voisins = g.voisins(actuel)[::-1]
+                for ... in ...:
+                    if ... not in ...:
+                        ....append(...)
+                ....append(...)
+        return ...
+    ```
+
+
+{#
+!!! abstract "Parcours en profondeur itératif - DFS "
+    ```python linenums='1'
+    def DFS_iteratif(graphe, start):
         traites = []
         en_attente = [start]
         while en_attente != []:
@@ -851,6 +869,7 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 traites.append(actuel)
         return traites
     ```
+#}
 
 **Remarques :**
 
