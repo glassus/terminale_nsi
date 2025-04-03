@@ -777,7 +777,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     **Q2.** Vérifier avec le code précédent. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
