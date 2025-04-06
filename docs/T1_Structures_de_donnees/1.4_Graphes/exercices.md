@@ -409,7 +409,7 @@
         pass
     ```
 
-    Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas [cette vidéo](https://youtu.be/rI-Rc7eF4iw){. target="_blank"} d'un youtuber célèbre.
+    
     {{
     correction(False,
     """
@@ -650,6 +650,190 @@
                 if v not in visites:
                     parcours_en_profondeur(d, v)
             return visites
+        ```
+    """
+    )
+    }}
+
+!!! example "{{ exercice() }} : l'algorithme de Dijkstra"
+    L'algorithme de Dijkstra est un algorithme de recherche de plus court chemin dans un graphe, découvert en 1959 par le mathématicien et informaticien néerlandais [Edsger Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra){. target="_blank"}.
+
+    Cet algorithme (plus exactement son optimisation [A*](https://fr.wikipedia.org/wiki/Algorithme_A*){. target="_blank"} que nous n'aborderons pas ici) est l'algorithme utilisé couramment par toutes les interfaces de recherche d'itinéraires (GPS des voitures, Itinéraires dans GoogleMaps, etc.)
+
+    Nous allons observer son fonctionnement sur un graphe en exemple, puis le programmer.
+
+    ![image](data/exdijk.png){: .center}
+    
+
+    <iframe width="799" height="376" src="https://www.youtube.com/embed/rI-Rc7eF4iw" title="algorithme de Dijkstra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    ### 1. Préambule
+
+    À chaque étape il faut choisir le sommet qui est associé à la distance la plus petite. Nous allons pour cela devoir ordonner une liste **par son deuxième élément**.
+
+    Par exemple, vous voulons transformer la liste 
+
+    ```python
+    [["A", 3], ["B", 2], ["C", 8], ["D", 1]]
+    ```
+
+    en
+    ```python
+    [["D", 1], ["B", 2], ["A", 3], ["C", 8]]
+    ```
+
+    Il faut pour cela procéder en 2 étapes.
+
+    :right_arrow: Créer une fonction ```deuxieme``` qui prend en paramètre un tableau ```lst``` de type `List` et qui renvoie le deuxième élément de ```lst```. 
+
+    *Exemple d'utilisation*
+    ```python
+    >>> simpsons = ['Bart', 'Lisa', 'Maggie']
+    >>> deuxieme(simpsons)
+    'Lisa'
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python
+        def deuxieme(lst) :
+            return lst[1]
+        ```
+    """
+    )
+    }}
+
+
+    Grâce à cette fonction ```deuxieme```, nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste à trier et une fonction de tri.
+
+    **Exemple :**
+
+    ```python
+    >>> mylist = [["A", 3], ["B", 2], ["C", 8]]
+    >>> mynewlist = sorted(mylist, key=deuxieme)
+    >>> mynewlist
+    [['B', 2], ['A', 3], ['C', 8]]
+    ```
+
+    ??? tip "les fonctions ```lambda```"
+        Python permet en fait de faire cela de manière beaucoup plus rapide, avec les fonctions ```lambda```, qui sont comme des fonctions créées à la volée sans avoir besoin de les nommer :
+        ```python
+        >>> mylist = [["A", 3], ["B", 2], ["C", 8]]
+        >>> mynewlist = sorted(mylist, key=lambda x:x[1])
+        >>> mynewlist
+        [['B', 2], ['A', 3], ['C', 8]]
+        ```
+    
+    ### 2. Algorithme de Dijkstra
+
+    ```python linenums='1'
+    g = {
+        'A': {'B': 12, 'D': 14},
+        'B': {'A': 12, 'F': 9, 'G': 16},
+        'C': {'E': 13, 'F': 10},
+        'D': {'A': 14, 'E': 10},
+        'E': {'D': 10, 'C': 13, 'F': 16, 'H': 10},
+        'F': {'B': 9, 'C': 10, 'E': 16, 'H': 11},
+        'G': {'B': 16, 'H': 11},
+        'H': {'E': 10, 'F': 11, 'G': 11}
+    }
+
+
+    def deuxieme(lst):
+        return ...
+
+    def classe_file(lst):
+        return ...
+
+    def remonte_chemin(parent, start, end):
+        s = end
+        actuel = end
+        while actuel != start:
+            actuel = parent[actuel]
+            s = actuel + s
+        return s
+
+    def dijkstra(g, start, end):
+        distance = {k:10**6 for k in g}
+        distance[start] = 0
+        parent = {}
+        file = [(start, 0)]
+        while file != []:
+            file = ... #(1)
+            actuel, dist = ... #(2)
+            for voisin in ... : #(3)
+                new_dist = ... + ... #(4)
+                if new_dist < distance[voisin]:
+                    distance[voisin] = ... #(5)
+                    parent[voisin] = ... #(6)
+                    file.append((..., ...)) #(7)
+        return remonte_chemin(parent, start, end), distance[end]
+
+
+
+    ```
+
+    1. On classe la file de sorte que le 1er élément soit le sommet ayant la plus petite distance.
+    2. On sort de la liste ce premier élément, et on récupère le nom du sommet et sa distance associée.
+    3. Les voisins du sommet ```actuel``` sont les clés du dictionnaire associé au sommet ```actuel```.
+    4. La nouvelle distance (potentielle) est la somme de la distance actuelle et de la distance entre ```actuel``` et ```voisin```.
+    5. On met à jour la distance.
+    6. On met à jour le parent.
+    7. On remet dans la file le sommet ```voisin``` ainsi que sa nouvelle distance associée.
+
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        g = {
+            'A': {'B': 12, 'D': 14},
+            'B': {'A': 12, 'F': 9, 'G': 16},
+            'C': {'E': 13, 'F': 10},
+            'D': {'A': 14, 'E': 10},
+            'E': {'D': 10, 'C': 13, 'F': 16, 'H': 10},
+            'F': {'B': 9, 'C': 10, 'E': 16, 'H': 11},
+            'G': {'B': 16, 'H': 11},
+            'H': {'E': 10, 'F': 11, 'G': 11}
+        }
+
+
+        def deuxieme(lst):
+            return lst[1]
+
+        def classe_file(lst):
+            return sorted(lst, key=deuxieme)
+
+        def remonte_chemin(parent, start, end):
+            s = end
+            actuel = end
+            while actuel != start:
+                actuel = parent[actuel]
+                s = actuel + s
+            return s
+
+        def dijkstra(g, start, end):
+            distance = {k:10**6 for k in g}
+            distance[start] = 0
+            parent = {}
+            file = [(start, 0)]
+            while file != []:
+                file = classe_file(file)
+                actuel, dist = file.pop(0)
+                for voisin in g[actuel].keys():
+                    new_dist = dist + g[actuel][voisin]
+                    if new_dist < distance[voisin]:
+                        distance[voisin] = new_dist
+                        parent[voisin] = actuel
+                        file.append((voisin, new_dist))
+            return remonte_chemin(parent, start, end), distance[end]
+
+
+
         ```
     """
     )
