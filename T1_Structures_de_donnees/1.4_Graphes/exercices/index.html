@@ -106,6 +106,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-preambule" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -994,6 +999,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Exercices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1005,6 +1023,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-preambule" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Préambule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algorithme-de-dijkstra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Algorithme de Dijkstra
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4526,7 +4579,6 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
         <span class="k">pass</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-<p>Pour vous aider à comprendre l'algorithme de Dijkstra, n'oubliez pas <a class="" href="https://youtu.be/rI-Rc7eF4iw" target="_blank">cette vidéo</a> d'un youtuber célèbre.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5 <i id='ex2AN2024'></i></p>
@@ -4572,6 +4624,137 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
     <span class="o">...</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  6 : l'algorithme de Dijkstra</p>
+<p>L'algorithme de Dijkstra est un algorithme de recherche de plus court chemin dans un graphe, découvert en 1959 par le mathématicien et informaticien néerlandais <a class="" href="https://fr.wikipedia.org/wiki/Edsger_Dijkstra" target="_blank">Edsger Dijkstra</a>.</p>
+<p>Cet algorithme (plus exactement son optimisation <a class="" href="https://fr.wikipedia.org/wiki/Algorithme_A*" target="_blank">A*</a> que nous n'aborderons pas ici) est l'algorithme utilisé couramment par toutes les interfaces de recherche d'itinéraires (GPS des voitures, Itinéraires dans GoogleMaps, etc.)</p>
+<p>Nous allons observer son fonctionnement sur un graphe en exemple, puis le programmer.</p>
+<p><img alt="image" class="center" src="../data/exdijk.png" /></p>
+<p><iframe width="799" height="376" src="https://www.youtube.com/embed/rI-Rc7eF4iw" title="algorithme de Dijkstra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h3 id="1-preambule">1. Préambule<a class="headerlink" href="#1-preambule" title="Permanent link">⚓︎</a></h3>
+<p>À chaque étape il faut choisir le sommet qui est associé à la distance la plus petite. Nous allons pour cela devoir ordonner une liste <strong>par son deuxième élément</strong>.</p>
+<p>Par exemple, vous voulons transformer la liste </p>
+<div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+</code></pre></div>
+<p>en
+<div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</code></pre></div></p>
+<p>Il faut pour cela procéder en 2 étapes.</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":right_arrow:" /> Créer une fonction <code>deuxieme</code> qui prend en paramètre un tableau <code>lst</code> de type <code>List</code> et qui renvoie le deuxième élément de <code>lst</code>. </p>
+<p><em>Exemple d'utilisation</em>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
+<span class="s1">&#39;Lisa&#39;</span>
+</code></pre></div></p>
+<p>Grâce à cette fonction <code>deuxieme</code>, nous allons utiliser la fonction <code>sorted</code>, qui prend en paramètre une liste à trier et une fonction de tri.</p>
+<p><strong>Exemple :</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">deuxieme</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span>
+<span class="p">[[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</code></pre></div>
+<details class="tip">
+<summary>les fonctions <code>lambda</code></summary>
+<p>Python permet en fait de faire cela de manière beaucoup plus rapide, avec les fonctions <code>lambda</code>, qui sont comme des fonctions créées à la volée sans avoir besoin de les nommer :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span>
+<span class="p">[[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</code></pre></div></p>
+</details>
+<h3 id="2-algorithme-de-dijkstra">2. Algorithme de Dijkstra<a class="headerlink" href="#2-algorithme-de-dijkstra" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">},</span>
+    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">},</span>
+    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+    <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
+    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">},</span>
+    <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">},</span>
+    <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">deuxieme</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">classe_file</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">end</span>
+    <span class="n">actuel</span> <span class="o">=</span> <span class="n">end</span>
+    <span class="k">while</span> <span class="n">actuel</span> <span class="o">!=</span> <span class="n">start</span><span class="p">:</span>
+        <span class="n">actuel</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">actuel</span><span class="p">]</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">actuel</span> <span class="o">+</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">dijkstra</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">g</span><span class="p">}</span>
+    <span class="n">distance</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="p">[(</span><span class="n">start</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+    <span class="k">while</span> <span class="n">file</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#(1)</span>
+        <span class="n">actuel</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#(2)</span>
+        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="o">...</span> <span class="p">:</span> <span class="c1">#(3)</span>
+            <span class="n">new_dist</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span> <span class="c1">#(4)</span>
+            <span class="k">if</span> <span class="n">new_dist</span> <span class="o">&lt;</span> <span class="n">distance</span><span class="p">[</span><span class="n">voisin</span><span class="p">]:</span>
+                <span class="n">distance</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#(5)</span>
+                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#(6)</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span> <span class="c1">#(7)</span>
+    <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">),</span> <span class="n">distance</span><span class="p">[</span><span class="n">end</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On classe la file de sorte que le 1er élément soit le sommet ayant la plus petite distance.</li>
+<li>On sort de la liste ce premier élément, et on récupère le nom du sommet et sa distance associée.</li>
+<li>Les voisins du sommet <code>actuel</code> sont les clés du dictionnaire associé au sommet <code>actuel</code>.</li>
+<li>La nouvelle distance (potentielle) est la somme de la distance actuelle et de la distance entre <code>actuel</code> et <code>voisin</code>.</li>
+<li>On met à jour la distance.</li>
+<li>On met à jour le parent.</li>
+<li>On remet dans la file le sommet <code>voisin</code> ainsi que sa nouvelle distance associée.</li>
+</ol>
+</div>
 
 
 
@@ -4592,7 +4775,7 @@ Pour cela, on va procéder à un parcours en profondeur du graphe.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 avril 2025 15:53:52">3 avril 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 avril 2025 19:39:56">6 avril 2025</span>
   </span>
 
     
