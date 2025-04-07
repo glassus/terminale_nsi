@@ -664,7 +664,8 @@
 
     ![image](data/exdijk.png){: .center}
     
-
+    ### 0. Fonctionnement
+    
     <iframe width="799" height="376" src="https://www.youtube.com/embed/rI-Rc7eF4iw" title="algorithme de Dijkstra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     ### 1. Préambule
