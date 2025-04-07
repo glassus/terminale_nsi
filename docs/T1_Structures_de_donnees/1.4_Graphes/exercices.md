@@ -617,10 +617,10 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9.\" 
-        Le cercle d'amis de Lou est ```J G Y E N```. 
+        Le cercle d'amis de Lou est ```L J G Y E N```. 
     """
     )
     }}
@@ -639,7 +639,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.\" 
         ```python linenums='1' hl_lines='3 5 7'
