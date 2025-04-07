@@ -25,6 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
     - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
