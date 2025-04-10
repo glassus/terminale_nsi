@@ -25,6 +25,7 @@
 
 [codes à trous](../intro_naive/){. target="_blank"}
 
+{#
 !!! note "Algorithme de recherche naïve :heart:"
     
     ```python linenums='1'
@@ -46,7 +47,7 @@
         return indices
 
     ```
-    
+#}   
 
 
 Exemple d'utilisation :
