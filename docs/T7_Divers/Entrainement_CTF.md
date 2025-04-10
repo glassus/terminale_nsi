@@ -94,6 +94,5 @@ Nous allons nous entraîner sur l'excellent site [https://www.challenges-kids.fr
     }}    
 
 
-- Vous trouverez votre lien de connexion à la plateforme Passe Ton Hack D'abord sur [cette page](./CTF2025.md){. target="_blank"}
 
 - Lien vers votre VM : [https://172.17.191.244:8006](https://172.17.191.244:8006){. target="_blank"}

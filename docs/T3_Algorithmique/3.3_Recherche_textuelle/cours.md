@@ -259,7 +259,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
 [codes à trous](../intro_BMH/){. target="_blank"}
 
-
+{#
 
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
@@ -285,7 +285,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
                 if texte[i+k] in dico: #(4)
                     i += len(motif) - dico[texte[i+k]] - 1 #(5)
                 else:
-                    i += len(motif) #(6)
+                    i += k+1 #(6)
 
         return indices
 
@@ -296,9 +296,10 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     3. On a trouvé le motif, mais attention, il ne faut pas trop se décaler sinon on pourrait rater d'autres occurences du motif (pensez à la recherche du motif «mama» dans le mot «mamamamama»). On se décale donc de 1.
     4. On s'est arrêté avant la fin, sur une lettre présente dans le mot : il va falloir faire un décalage intelligent.
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres.
-    6. La lettre n'est pas dans le motif : on se positionne juste après elle en se décalant de toute la longueur du motif. 
+    6. La lettre n'est pas dans le motif : on se positionne juste après elle.
 
-    
+
+#}   
 Exemple d'utilisation :
 ```python
 >>> BMH("une magnifique maison bleue", "maison")
