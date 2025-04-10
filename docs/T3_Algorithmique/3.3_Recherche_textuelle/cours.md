@@ -69,7 +69,7 @@ Exemple d'utilisation :
     La fonction renverra uniquement un booléen. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -117,7 +117,7 @@ with open('Les_Miserables.txt') as f:
     À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -185,7 +185,7 @@ with open('Les_Miserables.txt') as f:
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -241,7 +241,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -317,7 +317,7 @@ Exemple d'utilisation :
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
