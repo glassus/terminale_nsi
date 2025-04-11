@@ -284,7 +284,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
                 i += 1 #(3)
             else:
                 if texte[i+k] in dico: #(4)
-                    i += len(motif) - dico[texte[i+k]] - 1 #(5)
+                    i += max(k - dico[texte[i+k]], 1) #(5)
                 else:
                     i += k+1 #(6)
 
@@ -296,7 +296,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     2. Si on est arrivés à la valeur ```k=-1```, c'est qu'on a parcouru tout le mot : on l'a donc trouvé.
     3. On a trouvé le motif, mais attention, il ne faut pas trop se décaler sinon on pourrait rater d'autres occurences du motif (pensez à la recherche du motif «mama» dans le mot «mamamamama»). On se décale donc de 1.
     4. On s'est arrêté avant la fin, sur une lettre présente dans le mot : il va falloir faire un décalage intelligent.
-    5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres.
+    5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres, en faisant attention à ne pas décaler d'un nombre négatif. Au pire, on décale de 1.
     6. La lettre n'est pas dans le motif : on se positionne juste après elle.
 
 
