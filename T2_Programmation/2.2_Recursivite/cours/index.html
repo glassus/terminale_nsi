@@ -4495,9 +4495,10 @@ Lien vers une [correction](https://gist.github.com/glassus/de73e52a753f58e2e29e2
 <h3 id="31-notion-de-pile">3.1 Notion de pile<a class="headerlink" href="#31-notion-de-pile" title="Permanent link">⚓︎</a></h3>
 <p>Lors d'un appel à une fonction récursive, le processeur utilise une structure de <strong>pile</strong> pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (voir <a href="../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/">ici</a>), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).</p>
 <p>La pile d'appels de notre fonction <code>mystere(5)</code> peut donc être schématisée comme ceci :</p>
-<p><center>
+<center>
 <gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_exec.gif" speed="1" play></gif-player>
-</center></p>
+</center>
+
 <!-- ![](data/pile_exec.webp){: .center width=30%} -->
 
 <h3 id="32-limitation-de-la-taille-de-la-pile">3.2 Limitation de la taille de la pile<a class="headerlink" href="#32-limitation-de-la-taille-de-la-pile" title="Permanent link">⚓︎</a></h3>
@@ -4564,9 +4565,10 @@ RecursionError: maximum recursion depth exceeded in comparison
 </div>
 <p><strong>Observation de la pile d'exécution</strong></p>
 <p>Appelons <code>F(n)</code> la fonction calculant de manière récursive le n-ième terme de la suite. Observons en détail la pile d'exécution lors du calcul de <code>F(4)</code>.</p>
-<p><center>
+<center>
 <gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_fibo.gif" speed="1" play></gif-player>
-</center></p>
+</center>
+
 <div class="admonition aide">
 <p class="admonition-title">Analyse grâce à PythonTutor</p>
 <p><iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fibo%28n%29%3A%0A%20%20%20%20%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%20%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20return%20fibo%28n-1%29%20%2B%20fibo%28n-2%29%0A%0Aprint%28fibo%284%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe></p>
@@ -4724,9 +4726,9 @@ voir cette activité <a class="" href="https://capytale2.ac-paris.fr/web/c/a3ec-
 
 <span class="n">trace</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><center>
+<center>
 <gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/arbre.gif" speed="1" play></gif-player>
-</center></p>
+</center>
 
 
 
