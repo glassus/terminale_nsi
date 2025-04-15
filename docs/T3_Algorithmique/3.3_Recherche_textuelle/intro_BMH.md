@@ -131,7 +131,7 @@ def dico_lettres(mot):
                 i = ...
             else:
                 if ... in dico: 
-                    i += ... - ... - 1 
+                    i += max(..., 1) 
                 else:
                     i += ...
 

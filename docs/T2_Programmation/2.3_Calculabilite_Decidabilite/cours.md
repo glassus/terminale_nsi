@@ -215,7 +215,7 @@ Certaines fonctions peuvent être calculables, *ou ne pas l'être* : c'est notam
 
 ### 2.2 Langages Turing-complets
 Ce résultat ne dépend pas du langage utilisé : le fait que nous ayons utilisé Python au paragraphe précédent n'a pas d'influence sur notre démonstration. Nous savons depuis les machines de Turing que tous nos langages de programmation sont **Turing-complets** : ils sont tous capables de faire la même chose (avec plus ou moins de facilité !). 
-Scratch, C, Python, Java, Basic, Haskell, Brainfuck... tous ces langages sont théoriquement équivalents : **la calculabilité ne dépend pas du langage utilisé**.
+Scratch, C, Python, Java, Basic, Haskell, [Brainfuck](https://fr.wikipedia.org/wiki/Brainfuck){. target="_blank"}, [Piet](https://fr.wikipedia.org/wiki/Piet){. target="_blank"}, [Whitespace](https://en.wikipedia.org/wiki/Whitespace_(programming_language)){. target="_blank"} ... tous ces langages sont théoriquement équivalents : **la calculabilité ne dépend pas du langage utilisé**.
 
 
 ### 2.3 (HP) Calculable, oui, mais facilement ? -> 1 million de $ à gagner ci-dessous.

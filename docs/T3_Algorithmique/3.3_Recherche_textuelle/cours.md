@@ -181,6 +181,7 @@ with open('Les_Miserables.txt') as f:
 !!! example "{{ exercice() }}"
 
     Re-écrire l'algorithme de recherche naïve mais en démarrant de la fin du **motif** et non du début. 
+
     Certes, c'est pour l'instant très artificiel, mais :
     ![image](data/mickey.jpg){: .center width=40%}
         
@@ -216,8 +217,8 @@ L'idée est d'améliorer le code précédent (celui on parcourt le motif à l'en
 
 Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêté (car ```X``` n'était pas égal au caractère de rang équivalent dans le motif):
 
-- si ```X``` n'est pas dans le motif, il est inutile de se déplacer "de 1" : on retomberait tout de suite sur ```X```, c'est du temps perdu. On se décale donc juste assez pour dépasser ```X```, donc de la longueur du motif cherché.
-- si ```X``` est dans le motif (sauf à la dernière place du motif !), on va regarder la place de la dernière occurence de ```X``` dans le motif et de déplacer de ce nombre, afin de faire coïncider le ```X``` du motif et le ```X``` du texte.
+- si ```X``` n'est pas dans le motif, il est inutile de se déplacer "de 1" : on retomberait tout de suite sur ```X```, c'est du temps perdu. On se décale donc juste assez pour dépasser ```X```.
+- si ```X``` est dans le motif, on va regarder la place de la dernière occurence de ```X``` dans le motif et de déplacer de ce nombre, afin de faire coïncider le ```X``` du motif et le ```X``` du texte.
 
 ???+ tip "Illustration de l'algorithme"
     <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
@@ -346,9 +347,9 @@ Exemple d'utilisation :
                     i += 1
                 else:
                     if texte[i+k] in dico: #(4)
-                        i += len(motif) - dico[texte[i+k]] - 1 
+                        i += max(k - dico[texte[i+k]], 1) 
                     else:
-                        i += len(motif) 
+                        i += k+1 
 
             return indices
 
