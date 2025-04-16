@@ -118,7 +118,7 @@ with open('Les_Miserables.txt') as f:
     À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
