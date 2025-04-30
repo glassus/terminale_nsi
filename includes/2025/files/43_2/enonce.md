@@ -39,7 +39,6 @@ def colore_comp1(M, i, j, val):
 
 ```
 
-:warning: *dans le sujet original, les commentaires sur la direction de propagation sont erronés* :warning:
 
 Exemple :
 ```python
