@@ -26,10 +26,6 @@
 
 !!! note ":star: Thèmes en cours d'étude :star: "
     - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
-    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
-    - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
-    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
-    - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
 
 
 
@@ -37,6 +33,10 @@
 
 
 ### *Thèmes déjà traités*
+- [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+- [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
 - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
 - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
 - [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
