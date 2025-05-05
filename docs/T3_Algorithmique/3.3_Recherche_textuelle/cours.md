@@ -258,7 +258,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     }}
 
 #### 2.2.2 Boyer-Moore-Horspool
-
+  
 [codes à trous](../intro_BMH/){. target="_blank"}
 
 
