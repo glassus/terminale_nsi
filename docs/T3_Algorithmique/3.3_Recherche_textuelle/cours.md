@@ -261,7 +261,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
 [codes à trous](../intro_BMH/){. target="_blank"}
 
-{#
+
 
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
@@ -301,7 +301,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     6. La lettre n'est pas dans le motif : on se positionne juste après elle.
 
 
-#}   
+   
 Exemple d'utilisation :
 ```python
 >>> BMH("une magnifique maison bleue", "maison")
