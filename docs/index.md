@@ -25,6 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/)
     - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
 
 
