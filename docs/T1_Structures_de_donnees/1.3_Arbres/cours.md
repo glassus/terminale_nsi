@@ -13,7 +13,7 @@
 ### 1.1 Vocabulaire
 Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes, un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.
 
-![](data/term.png){: .center}
+![](data/term.png){: .center  .autolight}
 
 
 - Chaque **nœud** a exactement un seul **nœud père**, à l'exception du nœud **racine** qui est le seul nœud à ne pas avoir de père. (oui, **la** racine d'une arbre est **en haut**)
