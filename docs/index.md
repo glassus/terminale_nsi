@@ -25,8 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/)
-    - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/)
+    - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
 
 
 
