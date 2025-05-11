@@ -68,7 +68,7 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
 
 #### 1.3.1 Outils numériques de description
 
-![](data/carac.png){: .center width=30%}
+![](data/carac.png){: .center width=30% .autolight}
 
 !!! note "Définitions :heart:"
 
@@ -104,13 +104,13 @@ L'arbre généalogique de la famille royale britannique n'est pas un arbre binai
 
 L'arbre ci-dessous est lui un arbre binaire.
 
-![](data/carac3.png){: .center}
+![](data/carac3.png){: .center .autolight}
 
 #### 1.4.1 Sous-arbres d'un arbre binaire
 
 Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le **sous-arbre gauche** et le **sous-arbre droit**.
 
-![](data/sousarbres.png){: .center}
+![](data/sousarbres.png){: .center .autolight}
 
 
 - Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. 
@@ -123,7 +123,7 @@ Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est poss
 
 On rencontre très souvent des arbres binaires dits **complets** parce qu'aucun des fils gauche ou droit n'est manquant.
 
-![](data/complet.png){: .center}
+![](data/complet.png){: .center .autolight}
 
 
 **Taille d'un arbre complet de hauteur $h$ :**
@@ -150,7 +150,7 @@ Il existe plusieurs manières de parcourir un arbre.
 !!! note "Méthode du parcours en largeur (BFS) :heart:" 
     Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.
 
-![](data/BFS.png){: .center}
+![](data/BFS.png){: .center .autolight}
 
 L'ordre des lettres parcourues est donc T-Y-O-P-H-N.
 
@@ -165,7 +165,7 @@ Le parcours **préfixe** est un parcours **en profondeur d'abord**.
     - Chaque nœud est visité **avant** que ses fils le soient.
     - On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.
 
-![](data/prefixe.png){: .center}
+![](data/prefixe.png){: .center .autolight}
 
 L'ordre des lettres parcourues est donc T-Y-P-O-H-N.
 
@@ -178,7 +178,7 @@ Le parcours **infixe** est aussi un parcours en profondeur d'abord.
     - Chaque nœud est visité **après son fils gauche mais avant son fils droit**.
     - On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.
 
-![](data/infixe.png){: .center}
+![](data/infixe.png){: .center .autolight}
 
 L'ordre des lettres parcourues est donc P-Y-T-H-O-N.
 
@@ -191,7 +191,7 @@ Le parcours **postfixe** est aussi un parcours en profondeur d'abord.
     - Chaque nœud est visité **après** ses fils le soient.
     - On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. 
 
-![](data/postfixe.png){: .center}
+![](data/postfixe.png){: .center .autolight}
 
 L'ordre des lettres parcourues est donc P-Y-H-N-O-T.
 
@@ -216,7 +216,7 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 
 !!! example "{{ exercice() }}"
-    ![](data/exo_parcours.png){: .center}
+    ![](data/exo_parcours.png){: .center .autolight}
     === "Énoncé"
         Donner le rendu de chaque parcours :
 
@@ -235,7 +235,7 @@ Un parcours préfixe commencera toujours par la racine, alors qu'un parcours pos
 
 
 !!! example "{{ exercice() }}"
-    ![](data/exo_2.png){: .center}
+    ![](data/exo_2.png){: .center .autolight}
     === "Énoncé"
         Donner le rendu de chaque parcours :
 
@@ -288,7 +288,7 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
     correction(True,
     """
     ??? success \"Correction\" 
-        ![correction](data/exo_imp.png){: .center} 
+        ![correction](data/exo_imp.png){: .center .autolight} 
     """
     )
     }}
@@ -470,7 +470,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
 ```
 
 !!! example "{{ exercice() }}"
-    ![](data/carac3.png){: .center}
+    ![](data/carac3.png){: .center .autolight}
 
     Écrire le tuple représentant l'arbre ci-dessous.       
 
@@ -500,12 +500,12 @@ Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée 
 
 **Exemple :**
 
-![](data/eytzinger.png){: .center}
+![](data/eytzinger.png){: .center .autolight}
 
 
 Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :
 
-![](data/eytzinger2.png){: .center}
+![](data/eytzinger2.png){: .center .autolight}
 
 
 
@@ -567,7 +567,7 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
 #}
 
 Exemple avec l'arbre 
-![](data/exo_2.png){: .center}
+![](data/exo_2.png){: .center .autolight}
 
 
 ```python linenums='1'
@@ -693,7 +693,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
 
 Exemple avec l'arbre 
-![](data/exo_2.png){: .center}
+![](data/exo_2.png){: .center .autolight}
 
 
 ```python linenums='1'
@@ -795,7 +795,7 @@ Il est nécessaire d'utiliser une **file**  :
         - On garde son étiquette.
         - On enfile son sous-arbre gauche, puis son sous-arbre droit.
 
-![](data/parcoursBFS.png){: .center}
+![](data/parcoursBFS.png){: .center .autolight}
 
 On importera l'objet ```Queue()``` du module ```queue``` de Python, qui permet de  :
 
@@ -848,7 +848,7 @@ a.right.right = Arbre(3)
     - l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
     - l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
 
-![](data/exABR.png){: .center}
+![](data/exABR.png){: .center .autolight}
 
 À noter que l'arbre 3 (qui est bien un ABR) est appelé **arbre filiforme**. 
 
@@ -955,7 +955,7 @@ False
 
 
 ### 5.3  Coût de la recherche dans un ABR équilibré
-![](data/rechercheABR.png){: .center}
+![](data/rechercheABR.png){: .center .autolight}
 
 Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
@@ -1005,7 +1005,7 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 
-![](data/insertionABR.png){: .center}
+![](data/insertionABR.png){: .center .autolight}
 
 
 ```python

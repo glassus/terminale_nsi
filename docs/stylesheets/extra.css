@@ -179,3 +179,13 @@
 [data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
     background-color: hsla(var(--md-hue),25%,25%,1)
 }
+
+/*
+  La classe .autolight appliquée aux images
+  renverse leur couleur en mode "dark
+*/
+
+body[data-md-color-scheme^="slate"] img.autolight {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
