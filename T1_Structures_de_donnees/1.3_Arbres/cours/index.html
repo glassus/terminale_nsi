@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -4490,7 +4490,7 @@ dans l'arbre ci-dessus,</p>
 </div>
 <h3 id="13-caracteristiques-dun-arbre">1.3 Caractéristiques d'un arbre<a class="headerlink" href="#13-caracteristiques-dun-arbre" title="Permanent link">⚓︎</a></h3>
 <h4 id="131-outils-numeriques-de-description">1.3.1 Outils numériques de description<a class="headerlink" href="#131-outils-numeriques-de-description" title="Permanent link">⚓︎</a></h4>
-<p><img alt="" class="center" src="../data/carac.png" width="30%" /></p>
+<p><img alt="" class="center autolight" src="../data/carac.png" width="30%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Définitions <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
@@ -4524,10 +4524,10 @@ Ici, la hauteur de l'arbre est 4.<br />
 </div>
 <p>L'arbre généalogique de la famille royale britannique n'est pas un arbre binaire. </p>
 <p>L'arbre ci-dessous est lui un arbre binaire.</p>
-<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<p><img alt="" class="center autolight" src="../data/carac3.png" /></p>
 <h4 id="141-sous-arbres-dun-arbre-binaire">1.4.1 Sous-arbres d'un arbre binaire<a class="headerlink" href="#141-sous-arbres-dun-arbre-binaire" title="Permanent link">⚓︎</a></h4>
 <p>Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le <strong>sous-arbre gauche</strong> et le <strong>sous-arbre droit</strong>.</p>
-<p><img alt="" class="center" src="../data/sousarbres.png" /></p>
+<p><img alt="" class="center autolight" src="../data/sousarbres.png" /></p>
 <ul>
 <li>Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. </li>
 <li>Le nœud O admet comme sous-arbre gauche le nœud H et comme sous-arbre droit le nœud N.</li>
@@ -4535,7 +4535,7 @@ Ici, la hauteur de l'arbre est 4.<br />
 </ul>
 <h4 id="143-cas-des-arbres-binaires-complets">1.4.3 Cas des arbres binaires complets<a class="headerlink" href="#143-cas-des-arbres-binaires-complets" title="Permanent link">⚓︎</a></h4>
 <p>On rencontre très souvent des arbres binaires dits <strong>complets</strong> parce qu'aucun des fils gauche ou droit n'est manquant.</p>
-<p><img alt="" class="center" src="../data/complet.png" /></p>
+<p><img alt="" class="center autolight" src="../data/complet.png" /></p>
 <p><strong>Taille d'un arbre complet de hauteur <span class="arithmatex">\(h\)</span> :</strong>
 <span class="arithmatex">\(1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1\)</span></p>
 <p><em>preuve</em> : ceci est la somme <span class="arithmatex">\(S\)</span> des <span class="arithmatex">\(h\)</span> premiers termes d'une suite géométrique de raison 2 et de premier terme 1, d'où <span class="arithmatex">\(S= \frac{1-2^{h}}{1-2} = 2^{h} -1\)</span>.</p>
@@ -4551,7 +4551,7 @@ Ici, la hauteur de l'arbre est 4.<br />
 <p class="admonition-title">Méthode du parcours en largeur (BFS) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.</p>
 </div>
-<p><img alt="" class="center" src="../data/BFS.png" /></p>
+<p><img alt="" class="center autolight" src="../data/BFS.png" /></p>
 <p>L'ordre des lettres parcourues est donc T-Y-O-P-H-N.</p>
 <p>Les trois parcours que nous allons voir maintenant sont des parcours en <strong>profondeur d'abord</strong>, ou <strong>DFS</strong> (<em>Depth First Search</em>). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. </p>
 <h3 id="22-parcours-prefixe">2.2 Parcours préfixe<a class="headerlink" href="#22-parcours-prefixe" title="Permanent link">⚓︎</a></h3>
@@ -4564,7 +4564,7 @@ Ici, la hauteur de l'arbre est 4.<br />
 <li>On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.</li>
 </ul>
 </div>
-<p><img alt="" class="center" src="../data/prefixe.png" /></p>
+<p><img alt="" class="center autolight" src="../data/prefixe.png" /></p>
 <p>L'ordre des lettres parcourues est donc T-Y-P-O-H-N.</p>
 <h3 id="23-parcours-infixe">2.3 Parcours infixe<a class="headerlink" href="#23-parcours-infixe" title="Permanent link">⚓︎</a></h3>
 <p>Le parcours <strong>infixe</strong> est aussi un parcours en profondeur d'abord.</p>
@@ -4576,7 +4576,7 @@ Ici, la hauteur de l'arbre est 4.<br />
 <li>On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.</li>
 </ul>
 </div>
-<p><img alt="" class="center" src="../data/infixe.png" /></p>
+<p><img alt="" class="center autolight" src="../data/infixe.png" /></p>
 <p>L'ordre des lettres parcourues est donc P-Y-T-H-O-N.</p>
 <h3 id="24-parcours-postfixe">2.4 Parcours postfixe<a class="headerlink" href="#24-parcours-postfixe" title="Permanent link">⚓︎</a></h3>
 <p>Le parcours <strong>postfixe</strong> est aussi un parcours en profondeur d'abord.</p>
@@ -4588,7 +4588,7 @@ Ici, la hauteur de l'arbre est 4.<br />
 <li>On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. </li>
 </ul>
 </div>
-<p><img alt="" class="center" src="../data/postfixe.png" /></p>
+<p><img alt="" class="center autolight" src="../data/postfixe.png" /></p>
 <p>L'ordre des lettres parcourues est donc P-Y-H-N-O-T.</p>
 <h3 id="25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe">2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?<a class="headerlink" href="#25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -4606,7 +4606,7 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 <p>Un parcours préfixe commencera toujours par la racine, alors qu'un parcours postfixe finira toujours par la racine. Dans un parcours infixe, la racine sera «au milieu» (pas nécessairement parfaitement).</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<p><img alt="" class="center" src="../data/exo_parcours.png" /></p>
+<p><img alt="" class="center autolight" src="../data/exo_parcours.png" /></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Corr. largeur</label><label for="__tabbed_1_3">Corr. préfixe</label><label for="__tabbed_1_4">Corr. infixe</label><label for="__tabbed_1_5">Corr. postfixe</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4635,7 +4635,7 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<p><img alt="" class="center" src="../data/exo_2.png" /></p>
+<p><img alt="" class="center autolight" src="../data/exo_2.png" /></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Corr. largeur</label><label for="__tabbed_2_3">Corr. préfixe</label><label for="__tabbed_2_4">Corr. infixe</label><label for="__tabbed_2_5">Corr. postfixe</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4688,7 +4688,7 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
-<p><img alt="correction" class="center" src="../data/exo_imp.png" /> </p>
+<p><img alt="correction" class="center autolight" src="../data/exo_imp.png" /> </p>
 </details>
 </div>
 <p><strong><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Implémentation <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></strong></p>
@@ -4851,7 +4851,7 @@ est représenté par le tuple :</p>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
-<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<p><img alt="" class="center autolight" src="../data/carac3.png" /></p>
 <p>Écrire le tuple représentant l'arbre ci-dessous.       </p>
 <details class="success">
 <summary>Correction</summary>
@@ -4865,9 +4865,9 @@ Ceci peut se faire par le biais d'une astuce sur les indices :</p>
 <p><strong>Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2</strong>.</p>
 <p>Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en <a href="https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz">généalogie</a> pour numéroter facilement les individus d'un arbre généalogique.</p>
 <p><strong>Exemple :</strong></p>
-<p><img alt="" class="center" src="../data/eytzinger.png" /></p>
+<p><img alt="" class="center autolight" src="../data/eytzinger.png" /></p>
 <p>Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :</p>
-<p><img alt="" class="center" src="../data/eytzinger2.png" /></p>
+<p><img alt="" class="center autolight" src="../data/eytzinger2.png" /></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
 <p>Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
@@ -4897,7 +4897,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <p>Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons <em>afficher</em> les sommets, donc nous utiliserons <code>print</code>. Et deux appels récursifs... </p>
 <h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
 <p>Exemple avec l'arbre 
-<img alt="" class="center" src="../data/exo_2.png" /></p>
+<img alt="" class="center autolight" src="../data/exo_2.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5021,7 +5021,7 @@ ou
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
-<img alt="" class="center" src="../data/exo_2.png" /></p>
+<img alt="" class="center autolight" src="../data/exo_2.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5104,7 +5104,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" class="center" src="../data/parcoursBFS.png" /></p>
+<p><img alt="" class="center autolight" src="../data/parcoursBFS.png" /></p>
 <p>On importera l'objet <code>Queue()</code> du module <code>queue</code> de Python, qui permet de  :</p>
 <ul>
 <li>créer une file vide avec <code>file = Queue()</code></li>
@@ -5150,7 +5150,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <li>l'étiquette d'un nœud est <strong>strictement inférieure</strong> à celle du <strong>chaque</strong> nœud de son <strong>sous-arbre droit</strong>.</li>
 </ul>
 </div>
-<p><img alt="" class="center" src="../data/exABR.png" /></p>
+<p><img alt="" class="center autolight" src="../data/exABR.png" /></p>
 <p>À noter que l'arbre 3 (qui est bien un ABR) est appelé <strong>arbre filiforme</strong>. </p>
 <p>L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arbre gauche de 3 sans lui être inférieure.</p>
 <p><strong>Remarque :</strong> on pourrait aussi définir un ABR comme un arbre dont le parcours infixe est une suite croissante.</p>
@@ -5239,7 +5239,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <span class="kc">False</span>
 </code></pre></div>
 <h3 id="53-cout-de-la-recherche-dans-un-abr-equilibre">5.3  Coût de la recherche dans un ABR équilibré<a class="headerlink" href="#53-cout-de-la-recherche-dans-un-abr-equilibre" title="Permanent link">⚓︎</a></h3>
-<p><img alt="" class="center" src="../data/rechercheABR.png" /></p>
+<p><img alt="" class="center autolight" src="../data/rechercheABR.png" /></p>
 <p>Imaginons un arbre équilibré de taille <span class="arithmatex">\(n\)</span>. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?</p>
 <p>Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/05_Dichotomie.ipynb">ici</a>).</p>
 <p>S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur <span class="arithmatex">\(h\)</span> de l'arbre.</p>
@@ -5276,7 +5276,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 </code></pre></div>
 </div>
 <p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
-<p><img alt="" class="center" src="../data/insertionABR.png" /></p>
+<p><img alt="" class="center autolight" src="../data/insertionABR.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
@@ -5320,7 +5320,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="16 décembre 2024 16:27:08">16 décembre 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 mai 2025 10:12:56">11 mai 2025</span>
   </span>
 
     
@@ -5405,10 +5405,10 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
