@@ -746,7 +746,7 @@
     }}
 
 
-    :warning: À la question 9, le code à utiliser est celui ci (erreur d'énoncé à la ligne 6):
+    :warning: À la question 9, le code à utiliser est celui-ci (erreur d'énoncé à la ligne 6):
     ```python linenums='1'
     def calculer_solde(self, utilisateur):
         if self.bloc_precedent is None:
@@ -760,6 +760,10 @@
                     ...
             return solde    
     ```
+
+    ??? abstract "Blockchain"
+        ![image](data/blockchain.jpg){: .center}
+        
 
     {{
     correction(False,
