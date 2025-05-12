@@ -774,13 +774,13 @@
             if self.bloc_precedent is None:
                 solde = 0
             else:
-                solde = calculer_solde(self.bloc_precedent)
+                solde = self.bloc_precedent.calculer_solde(utlisateur)
                 for transaction in self.liste_transactions:
                     if transaction.expediteur == utilisateur:
                         solde = solde - transaction.montant
                     elif transaction.destinataire == utilisateur:
                         solde = solde + transaction.montant
-            return solde
+                return solde
         ```
     """
     )
