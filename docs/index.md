@@ -25,6 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
+    - Révisions POO : [Exercice 1 Centres Étrangers J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J2G12024)
     - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
 
 

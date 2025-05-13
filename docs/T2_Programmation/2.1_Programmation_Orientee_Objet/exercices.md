@@ -737,7 +737,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
@@ -766,7 +766,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1' hl_lines='6 7-10'
@@ -788,7 +788,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \" 
         L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
@@ -797,7 +797,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11 \" 
         Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
@@ -806,7 +806,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12 \" 
         D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
@@ -815,7 +815,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13 \" 
         Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
@@ -824,7 +824,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14 \"
         ```python linenums='1'
@@ -839,6 +839,182 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }} <i id="ex1J2G12024"></i>"
+    Exercice 1 du [sujet Centres Étrangers J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}   
+
+
+    ```python linenums='1'
+    class Chemin:
+
+        def __init__(self, itineraire):
+            self.itineraire = itineraire
+            longueur, largeur = 0, 0
+            for direction in self.itineraire:
+                if direction == "D":
+                    longueur = longueur + 1
+                if direction == "B":
+                    largeur = largeur +1
+            self.longueur = longueur
+            self.largeur = largeur
+            self.grille = [['.' for i in range(longueur+1)] for j in range(largeur+1)]
+
+        def remplir_grille(self):
+            i, j = 0, 0 
+            self.grille[0][0] = 'S' 
+            for direction in ...:
+                if direction == 'D':
+                    ... = ... 
+                elif direction == 'B':
+                    ... = ... 
+                self.grille[i][j] = '*' 
+            self.grille[self.largeur][self.longueur] = 'E'
+
+    ```
+
+{{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \" 
+        Un attribut est ```itineraire``` et une méthode est ```remplir_grille```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \" 
+        ```a``` vaut 4 et ```b``` vaut 7.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \" 
+        ```python linenums='1'
+        def remplir_grille(self):
+            i, j = 0, 0 
+            self.grille[0][0] = 'S' 
+            for direction in self.itineraire:
+                if direction == 'D':
+                    j = j + 1 
+                elif direction == 'B':
+                    i = i + 1 
+                self.grille[i][j] = '*' 
+            self.grille[self.largeur][self.longueur] = 'E'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \" 
+        ```python linenums='1'
+        def get_dimensions(self):
+            return (self.longueur, self.largeur)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \" 
+        ```python linenums='1'
+        def tracer_chemin(self):
+            self.remplir_grille()
+            for i in range(self.largeur+1):
+                s = ''
+                for j in range(self.longueur+1):
+                    s += self.grille[i][j]
+                print(s)
+        ```
+
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \" 
+        ```python linenums='1'
+        from random import choice
+
+        def itineraire_aleatoire(m, n):
+            itineraire = ''
+            i, j = 0, 0
+            while i != m and j != n:
+                dep = choice(['D', 'B'])
+                itineraire += dep
+                if dep == 'D':
+                    j += 1
+                else:
+                    i += 1
+            if i == m:
+                itineraire = itineraire + 'D'*(n-j)
+            if j == n:
+                itineraire = itineraire + 'B'*(m-i)
+            return itineraire
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \" 
+        Si la largeur de la grille est 1, il n'y a qu'un seul mouvement possible (```D```) donc il n'y a qu'un seul chemin. 
+        
+        Donc $\\forall n \\in \\mathbb{N}, N(1,n) = 1$
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8 \" 
+        $N(m,n)$ est le nombre de trajets d'une grille de taille $m \\times n$.
+
+        Si on se place au point de départ et qu'on part vers la droite, on se trouve alors avec une grille de taille $m \\times (n-1)$ à parcourir, qui possède $N(m, n-1)$ chemins différents.
+
+        De même, si on part vers le bas, on se trouve alors avec une grille de taille $(m-1) \\times n$ à parcourir, qui possède $N(m-1, n)$ chemins différents.
+
+        Donc $N(m,n) = N(m-1,n) + N(m,n-1)$.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9 \" 
+        ```python linenums='1'
+        def nombre_chemins(m, n):
+            if m == 1 or n == 1:
+                return 1
+            return nombre_chemins(m-1, n) + nombre_chemins(m, n-1)
+        ```
+    """
+    )
+    }}
+
+
+
+
+
 
 {#
 !!! abstract "DS02"
