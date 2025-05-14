@@ -994,7 +994,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         Si la largeur de la grille est 1, il n'y a qu'un seul mouvement possible (```D```) donc il n'y a qu'un seul chemin. 
@@ -1006,7 +1006,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         $N(m,n)$ est le nombre de trajets d'une grille de taille $m \\times n$.
@@ -1022,7 +1022,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1'
