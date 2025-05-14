@@ -874,7 +874,7 @@
     ```
 
 {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         Un attribut est ```itineraire``` et une méthode est ```remplir_grille```.
@@ -883,7 +883,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         ```a``` vaut 4 et ```b``` vaut 7.
