@@ -873,6 +873,30 @@
 
     ```
 
+    Pour la question 6 :
+    
+    ```python linenums='1'
+    from random import choice
+
+    def itineraire_aleatoire(m, n):
+        itineraire = ''
+        i, j = 0, 0
+        while i != m and j != n:
+            ...
+            ...
+            if dep == 'D':
+                j += 1
+            else:
+                i += 1
+        if i == m:
+            itineraire = itineraire + 'D'*(n-j)
+        if j == n:
+            itineraire = itineraire + 'B'*(m-i)
+        return itineraire
+    ```
+
+
+
 {{
     correction(True,
     """
