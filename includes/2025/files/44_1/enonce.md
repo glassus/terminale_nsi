@@ -2,8 +2,7 @@ Dans cet exercice on cherche à calculer la moyenne pondérée d’un élève da
 donnée. Chaque note est associée à un coefficient qui la pondère.
 
 
-Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coeffi-
-cient 2, sa moyenne pondérée sera donnée par
+Par exemple, si ses notes sont : 14 avec coefficient 3, 12 avec coefficient 1 et 16 avec coefficient 2, sa moyenne pondérée sera donnée par
 
 $$\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... $$
 
