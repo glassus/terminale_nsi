@@ -10,7 +10,7 @@ $$\dfrac{14 \times 3 + 12 \times 1 + 16 \times 2}{3+1+2}=14,333... $$
 
 Écrire une fonction `moyenne` :
 
-- qui prend en paramètre une liste notes non vide de tuples à deux éléments entiers
+- qui prend en paramètre une liste ```notes```  non vide de tuples à deux éléments entiers
 de la forme `(note, coefficient)` (`int` ou `float`) positifs ou nuls ;
 - et qui renvoie la moyenne pondérée des notes de la liste sous forme de flottant si la
 somme des coefficients est non nulle, `None` sinon.
