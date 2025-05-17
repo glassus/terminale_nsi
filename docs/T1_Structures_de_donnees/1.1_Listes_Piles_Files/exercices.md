@@ -758,3 +758,211 @@
         ```
 
         Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
+
+
+!!! example "{{ exercice() }} <i id="ex2J2ME32024"></i>"
+
+    Exercice 2 du sujet [Métropole J2 - Septembre 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2ME3.pdf){. target="blank"}  
+
+    On pourra utiliser la classe ```Pile``` ci-dessous :
+
+    ```python linenums='1'
+    class Pile:
+        def __init__(self):
+            self.data = []
+
+        def est_vide(self):
+            return len(self.data) == 0       
+
+        def empile(self,x):
+            self.data.append(x)
+
+        def depile(self):
+            if self.est_vide():
+                return None
+            else :
+                return self.data.pop()
+
+        def affiche(self):
+            p_temp = Pile()
+            print('---')
+            while not self.est_vide():
+                v = self.depile()
+                print('|' + str(v) + '|')
+                p_temp.empile(v)
+            print('---')
+            while not p_temp.est_vide():
+                self.empile(p_temp.depile())
+    ```
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.\" 
+      
+    """
+    )
+    }}    
+
+    **Q2**. 
+    ```python linenums='1'
+    def produire_jeu(n):
+        resultat = Pile()
+        for i in range(n, 0, -1):
+            resultat.empile(i)
+        return resultat
+
+    ```
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2.\" 
+        ```python linenums='1'
+        def remplir(self, panier_temp):
+            while not panier_temp.est_vide():
+                article = panier_temp.defiler()
+                self.enfiler(article)
+        ```        
+    """
+    )
+    }}
+
+    **Q3**. 
+    ```python linenums='1'
+    def scinder_jeu(p, n):
+        m1 = Pile()
+        m2 = Pile
+        for i in range(n):
+            m1.empile(p.depile())
+        for i in range(n):
+            m2.empile(p.depile())
+        return m1, m2
+    ```
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.\" 
+        ```python linenums='1'
+        def scinder_jeu(p, n):
+            m1 = Pile()
+            m2 = Pile()
+            for i in range(n//2):
+                m1.empile(p.depile())
+            for i in range(n//2):
+                m2.empile(p.depile())
+            return m1, m2
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4.\" 
+        ```python linenums='1'
+        def recombiner(m1, m2):
+            p = Pile()
+            while not m1.est_vide() or not m2.est_vide():
+                p.empile(m1.depile())
+                p.empile(m2.depile())
+            return p
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5.\" 
+        ```python linenums='1'
+        def faro(p, n):
+            m1, m2 = scinder_jeu(p, n)
+            return recombiner(m1, m2)
+        ```        
+    """
+    )
+    }}
+
+    Pour les questions **6.** et **7.**, on pourra utiliser la fonction ```identiques``` ci-dessous :
+
+    ```python linenums='1'
+    def identiques(p1, p2):
+        p1_copie = Pile()
+        p1_sauv = Pile()
+        while not p1.est_vide():
+            v = p1.depile()
+            p1_copie.empile(v)
+            p1_sauv.empile(v)
+
+        p2_copie = Pile()
+        p2_sauv = Pile()
+        while not p2.est_vide():
+            v = p2.depile()
+            p2_copie.empile(v)
+            p2_sauv.empile(v)    
+
+        while not p1_sauv.est_vide():
+            p1.empile(p1_sauv.depile())
+
+        while not p2_sauv.est_vide():
+            p2.empile(p2_sauv.depile())
+
+        while not p1_copie.est_vide() and not p2_copie.est_vide():
+            n1 = p1_copie.depile()
+            n2 = p2_copie.depile()
+            if n1 != n2:
+                return False
+        if not p1_copie.est_vide() or not p2_copie.est_vide():
+            return False
+        return True
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6.\" 
+        ```python linenums='1'
+        def test_identiques():
+            p1 = Pile()
+            p1.empile(1)
+            p2 = Pile()
+            assert not identiques(p1, p2)
+            
+            p1 = Pile()
+            p1.empile(3)
+            p2 = Pile()
+            p2.empile(5)
+            assert not identiques(p1, p2)
+
+            p1 = Pile()
+            p1.empile(4)
+            p2 = Pile()
+            p2.empile(4)
+            assert identiques(p1, p2))
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7.\" 
+        ```python linenums='1'
+        def ordre_faro(n):
+            p_origine = produire_jeu(n)
+            p = faro(produire_jeu(n), n)
+            i = 1
+            while not identiques(p, p_origine):
+                p = faro(p, n)
+                i += 1
+            return i
+        ```   
+
+        Voir aussi [https://en.wikipedia.org/wiki/Faro_shuffle](https://en.wikipedia.org/wiki/Faro_shuffle){. target="_blank"}     
+    """
+    )
+    }}
