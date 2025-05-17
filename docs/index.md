@@ -25,7 +25,7 @@
 
 
 !!! note ":star: Thèmes en cours d'étude :star: "
-    - Révisions Piles et Files : [Exercice 2 Métropole Septembre 2024](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/#ex2J2ME32024)
+    - Révisions Piles et Files : [Exercice 2 Métropole Septembre 2024](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex2J2ME32024)
     - Révisions POO : [Exercice 1 Centres Étrangers J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J2G12024)
     - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
 

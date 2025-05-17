@@ -795,10 +795,11 @@
                 self.empile(p_temp.depile())
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
-      
+        ![image](data/sept2024Q1.png){: .center .autolight}
+        
     """
     )
     }}    
@@ -815,7 +816,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -840,7 +841,7 @@
         return m1, m2
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -858,7 +859,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -874,7 +875,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1'
@@ -921,7 +922,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\" 
         ```python linenums='1'
@@ -948,7 +949,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\" 
         ```python linenums='1'
@@ -962,7 +963,7 @@
             return i
         ```   
 
-        Voir aussi [https://en.wikipedia.org/wiki/Faro_shuffle](https://en.wikipedia.org/wiki/Faro_shuffle){. target="_blank"}     
+        Voir aussi [https://en.wikipedia.org/wiki/Faro_shuffle](https://en.wikipedia.org/wiki/Faro_shuffle){. target='_blank'}     
     """
     )
     }}
