@@ -808,8 +808,8 @@
     ```python linenums='1'
     def produire_jeu(n):
         resultat = Pile()
-        for i in range(n, 0, -1):
-            resultat.empile(i)
+        for i in range(...):
+            resultat.empile(...)
         return resultat
 
     ```
@@ -820,11 +820,13 @@
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
-        def remplir(self, panier_temp):
-            while not panier_temp.est_vide():
-                article = panier_temp.defiler()
-                self.enfiler(article)
-        ```        
+        def produire_jeu(n):
+            resultat = Pile()
+            for i in range(n, 0, -1):
+                resultat.empile(i)
+            return resultat
+
+        ```      
     """
     )
     }}
