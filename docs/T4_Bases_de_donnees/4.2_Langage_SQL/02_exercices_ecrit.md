@@ -812,7 +812,7 @@
     )
     }}
 
-
+      
     Si vous souhaitez jouer avec ces flashcards, téléchargez le fichier [flashcards.csv](data/flashcards.csv){. target='_blank'} et utilisez le code ci-dessous :
 
     ```python linenums='1'
