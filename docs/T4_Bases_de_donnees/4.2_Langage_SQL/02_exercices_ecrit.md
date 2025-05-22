@@ -762,7 +762,7 @@
     **Partie A**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -771,7 +771,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
