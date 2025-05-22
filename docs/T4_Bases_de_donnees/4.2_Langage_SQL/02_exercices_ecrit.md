@@ -839,8 +839,8 @@
     def choix_chapitre(donnees, disc):
         chapitres = []
         for i in range(len(donnees)):
-            if flashcard[i]['discipline'] == disc:
-                ch = flashcard[i]['chapitre']
+            if donnees[i]['discipline'] == disc:
+                ch = donnees[i]['chapitre']
                 if not ch in chapitres:
                     chapitres.append(ch)
         for i in range(len(chapitres)):
@@ -904,8 +904,8 @@
         def choix_chapitre(donnees, disc):
             chapitres = []
             for i in range(len(donnees)):
-                if flashcard[i]['discipline'] == disc:
-                    ch = flashcard[i]['chapitre']
+                if donnees[i]['discipline'] == disc:
+                    ch = donnees[i]['chapitre']
                     if not ch in chapitres:
                         chapitres.append(ch)
             for i in range(len(chapitres)):
