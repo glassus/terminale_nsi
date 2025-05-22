@@ -852,7 +852,6 @@
     def entrainement(donnees, disc, ch):
         for i in range(len(donnees)):
             if donnees[i]['discipline'] == disc and donnees[i]['chapitre'] == ch:
-                print(donnees[i])
                 print('QUESTION : ', donnees[i]['question'])
                 time.sleep(5)
                 print(donnees[i]['réponse'])
@@ -868,7 +867,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -917,7 +916,6 @@
         def entrainement(donnees, disc, ch):
             for i in range(len(donnees)):
                 if donnees[i]['discipline'] == disc and donnees[i]['chapitre'] == ch:
-                    print(donnees[i])
                     print('QUESTION : ', donnees[i]['question'])
                     time.sleep(5)
                     print(donnees[i]['réponse'])
