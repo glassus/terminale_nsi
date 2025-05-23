@@ -762,7 +762,7 @@
     **Partie A**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -771,7 +771,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
@@ -780,7 +780,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='2-4'
@@ -795,7 +795,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         La méthode utilisée est la méthode ```sleep```, à la ligne 37. 
@@ -804,7 +804,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```donnees[i]``` est un dictionnaire.
@@ -812,8 +812,62 @@
     )
     }}
 
+      
+    Si vous souhaitez jouer avec ces flashcards, téléchargez le fichier [flashcards.csv](data/flashcards.csv){. target='_blank'} et utilisez le code ci-dessous :
+
+    ```python linenums='1'
+    import csv
+    import time
+
+    def charger(nom_fichier):
+        with open(nom_fichier, 'r') as fichier:
+            donnees = list(csv.DictReader(fichier, delimiter=';'))
+        return donnees
+
+    def choix_discipline(donnees):
+        disciplines = []
+        for i in range(len(donnees)):
+            disc = donnees[i]['discipline']
+            if not disc in disciplines:
+                disciplines.append(disc)
+        for i in range(len(disciplines)):
+            print(i + 1, disciplines[i])
+        num_disc = int(input('numéro de la discipline ? '))
+        return disciplines[num_disc - 1]
+
+
+    def choix_chapitre(donnees, disc):
+        chapitres = []
+        for i in range(len(donnees)):
+            if donnees[i]['discipline'] == disc:
+                ch = donnees[i]['chapitre']
+                if not ch in chapitres:
+                    chapitres.append(ch)
+        for i in range(len(chapitres)):
+            print(i + 1, chapitres[i])
+        num_ch = int(input('numéro du chapitre ? '))
+        return chapitres[num_ch - 1]
+
+
+    def entrainement(donnees, disc, ch):
+        for i in range(len(donnees)):
+            if donnees[i]['discipline'] == disc and donnees[i]['chapitre'] == ch:
+                print('QUESTION : ', donnees[i]['question'])
+                time.sleep(5)
+                print(donnees[i]['réponse'])
+                time.sleep(1)
+
+
+    flashcard = ...
+    d = ...
+    c = ...
+    entrainement(...)
+
+
+    ```
+
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -849,8 +903,8 @@
         def choix_chapitre(donnees, disc):
             chapitres = []
             for i in range(len(donnees)):
-                if flashcard[i]['discipline'] == disc:
-                    ch = flashcard[i]['chapitre']
+                if donnees[i]['discipline'] == disc:
+                    ch = donnees[i]['chapitre']
                     if not ch in chapitres:
                         chapitres.append(ch)
             for i in range(len(chapitres)):
@@ -862,7 +916,6 @@
         def entrainement(donnees, disc, ch):
             for i in range(len(donnees)):
                 if donnees[i]['discipline'] == disc and donnees[i]['chapitre'] == ch:
-                    print(donnees[i])
                     print('QUESTION : ', donnees[i]['question'])
                     time.sleep(5)
                     print(donnees[i]['réponse'])
