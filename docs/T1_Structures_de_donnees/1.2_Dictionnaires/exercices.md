@@ -265,3 +265,277 @@
     )
     }}
         
+
+!!! example "{{ exercice() }} <i id="ex1J2AN2025"></i>"
+    **Partie A**
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \"
+        ```01100001```  
+        
+    """
+    )
+    }}    
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \"
+        ```replique([0,0,1,0,1])``` renvoie ```[0,0,0,0,0,0,1,1,1,0,0,0,1,1,1]```   
+        
+    """
+    )
+    }}    
+
+    ```python linenums='1'
+    def nb_occurrences(tab, i):
+        '''
+        Renvoie un dictionnaire qui associe, à chaque élément
+        apparaissant dans tab entre la position 3i
+        incluse et la position 3(i + 1) exclue,
+        son nombre d'occurrences.
+        >>> nb_occurrences([0, 0, 1, 1, 0, 1, 0, 1, 1], 1)
+        {1: 2, 0: 1}
+        '''
+        nb_occ = {}
+        for j in range(3 * i, 3 * (i + 1)):
+            x = tab[j]
+            if x in nb_occ:
+                ...
+            else:
+                ...
+        return nb_occ
+
+    ```
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \"
+        ```python linenums='1'
+        def nb_occurrences(tab, i):
+            '''
+            Renvoie un dictionnaire qui associe, à chaque élément
+            apparaissant dans tab entre la position 3i
+            incluse et la position 3(i + 1) exclue,
+            son nombre d'occurrences.
+            >>> nb_occurrences([0, 0, 1, 1, 0, 1, 0, 1, 1], 1)
+            {1: 2, 0: 1}
+            '''
+            nb_occ = {}
+            for j in range(3 * i, 3 * (i + 1)):
+                x = tab[j]
+                if x in nb_occ:
+                    nb_occ[x] += 1
+                else:
+                    nb_occ[x] = 1
+            return nb_occ
+
+        ```
+        
+    """
+    )
+    }} 
+
+    ```python linenums='1'
+    def majorite(dict):
+        '''
+        Renvoie une clé du dictionnaire dict pour laquelle la
+        valeur associée est la plus grande.
+        Précondition : dict est un dictionnaire dont toutes
+        les valeurs sont positives.
+        '''
+        cle_max = None
+        valeur_max = -1
+        for cle in dict.keys():
+            ...
+                ...
+                ...
+        return cle_max
+    ```
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \"
+        ```python linenums='1'
+        def majorite(dict):
+            '''
+            Renvoie une clé du dictionnaire dict pour laquelle la
+            valeur associée est la plus grande.
+            Précondition : dict est un dictionnaire dont toutes
+            les valeurs sont positives.
+            '''
+            cle_max = None
+            valeur_max = -1
+            for cle in dict.keys():
+                if dict[cle] > valeur_max:
+                    cle_max = cle
+                    valeur_max = dict[cle]
+            return cle_max
+        ```
+        
+    """
+    )
+    }} 
+
+    **Partie B**
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \"
+        ![image](data/ex1_AN2025.png){: .center .autolight}
+           
+        
+    """
+    )
+    }}  
+
+    
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \"
+        ```python linenums='1'
+        def erreur_colonne(mat):
+            for j in range(3):
+                n = 0
+                for i in range(3):
+                    n += mat[i][j]
+                if n % 2 != 0:
+                    return j
+            return None
+        ```
+           
+        
+    """
+    )
+    }}  
+
+    **Partie C**
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \"
+        Le mot de 4 bits initial est ```1000```. 
+           
+        
+    """
+    )
+    }}  
+
+
+    ```python linenums='1'
+    def corriger_erreur(code_recu):
+        if code_recu in hamming_4_7:
+            return code_recu
+        else:
+            # Copie du code reçu créée par compréhension
+            code = ...
+            for indice in range(7):
+                # Inversion du bit d'indice courant
+                code[indice] = (code[indice] + 1) ...
+                if code in hamming_4_7:
+                    return code
+                else:
+                    # Réinit. du bit d'indice courant
+                    code[indice] = ...
+    ```
+
+    Tests :
+    ```python
+    >>> corriger_erreur([1,1,0,1,0,0,1])
+    [1, 1, 0, 1, 0, 0, 1]
+    >>> corriger_erreur([1,0,1,0,0,0,0])
+    [1, 1, 1, 0, 0, 0, 0]
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8 \"
+        ```python linenums='1'
+        def corriger_erreur(code_recu):
+            if code_recu in hamming_4_7:
+                return code_recu
+            else:
+                # Copie du code reçu créée par compréhension
+                code = [c for c in code_recu]
+                for indice in range(7):
+                    # Inversion du bit d'indice courant
+                    code[indice] = (code[indice] + 1) % 2
+                    if code in hamming_4_7:
+                        return code
+                    else:
+                        # Réinit. du bit d'indice courant
+                        code[indice] = code_recu[indice] 
+        ``` 
+           
+        
+    """
+    )
+    }} 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9 \"
+        Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est $2^7$, soit 128.
+           
+        
+    """
+    )
+    }}  
+
+    ```python linenums='1'
+    def decode(arbre, code, i):
+        '''
+        Descend dans l'arbre binaire arbre en lisant le
+        tableau code à partir de l'indice i et renvoie
+        le mot étiquetant la feuille atteinte.
+        Précondition : arbre est un arbre binaire
+        de hauteur len(code) - i
+        '''
+        if i == len(code):
+            return arbre.etiquette
+        if code[i] == 0:
+            return ...
+        if code[i] == 1:
+            return ...
+    ```
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10 \"
+        ```python linenums='1'
+        def decode(arbre, code, i):
+            '''
+            Descend dans l'arbre binaire arbre en lisant le
+            tableau code à partir de l'indice i et renvoie
+            le mot étiquetant la feuille atteinte.
+            Précondition : arbre est un arbre binaire
+            de hauteur len(code) - i
+            '''
+            if i == len(code):
+                return arbre.etiquette
+            if code[i] == 0:
+                return decode(arbre.gauche, code, i+1)
+            if code[i] == 1:
+                return decode(arbre.droit, code, i+1) 
+        ```
+           
+        
+    """
+    )
+    }}  

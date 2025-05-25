@@ -1,5 +1,11 @@
 # Annales des Épreuves Écrites
 
+## 2025
+- [Amérique du Nord Sujet de secours](data/2025/25_NSIPE2.pdf)
+- [Amérique du Nord J1](data/2025/25_NSIJ1AN1.pdf)
+- [Amérique du Nord J2](data/2025/25_NSIJ2AN1.pdf)
+
+
 ## 2024
 - [Septembre Métropole J1](data/2024/24-NSIJ1ME3.pdf)
 - [Septembre Métropole J2](data/2024/24-NSIJ2ME3.pdf)
