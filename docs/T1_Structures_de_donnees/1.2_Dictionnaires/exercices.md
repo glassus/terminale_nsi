@@ -267,6 +267,9 @@
         
 
 !!! example "{{ exercice() }} <i id="ex1J2AN2025"></i>"
+
+    Exercice 1 du sujet [Amérique du Nord J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2AN1.pdf){. target="_blank"}
+
     **Partie A**
 
     {{
