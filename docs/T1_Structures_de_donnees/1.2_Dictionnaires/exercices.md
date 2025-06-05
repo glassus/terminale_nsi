@@ -448,7 +448,7 @@
     [1,0,1,1,0,1,0], [0,1,1,0,0,1,1],
     [0,1,1,1,1,0,0], [1,0,1,0,1,0,1],
     [0,0,1,0,1,1,0], [1,1,1,1,1,1,1]]
-    
+
     def corriger_erreur(code_recu):
         if code_recu in hamming_4_7:
             return code_recu
@@ -474,7 +474,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \"
         ```python linenums='1'
