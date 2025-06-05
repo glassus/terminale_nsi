@@ -390,7 +390,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5 \"
         ![image](data/ex1_AN2025.png){: .center .autolight}
