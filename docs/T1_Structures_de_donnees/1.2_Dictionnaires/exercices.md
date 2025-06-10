@@ -1,6 +1,6 @@
 # Exercices sur les dictionnaires
 
-{{initexo(0)}}
+{{initexo(0)}}  
 
 !!! example "{{ exercice() }}"
     On considère la liste suivante :
