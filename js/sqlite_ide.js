@@ -1,6 +1,6 @@
 // noinspection SqlNoDataSourceInspection
 
-function load(ide, base = '', init = '', run='', espace='') {
+function load(ide, base = '', init = '', run = '', espace = '') {
     var execBtn = ide.querySelector("button.execute");
     var outputElm = ide.querySelector('pre.sqloutput');
     var errorElm = ide.querySelector('div.sqlerror');
@@ -10,7 +10,7 @@ function load(ide, base = '', init = '', run='', espace='') {
     var worker = espace;
     var neww;
     if (espace === '') {
-        worker = new Worker(path + "/js/worker.sql-wasm.js");
+        worker = new Worker(sqljs_base_path + "/js/worker.sql-wasm.js");
         worker.onerror = error;
         neww = true;
     } else {
@@ -22,24 +22,24 @@ function load(ide, base = '', init = '', run='', espace='') {
         }
 
     }
-// Open a database
-    if (neww) worker.postMessage({action: 'open'});
+    // Open a database
+    if (neww) worker.postMessage({ action: 'open' });
     if (base !== '/') {
         const u = new URL(base)
         fetch(u).then(res => {
             return res.arrayBuffer()
         }).then(buf => {
             try {
-                worker.postMessage({action: 'open', buffer: buf}, [buf]);
+                worker.postMessage({ action: 'open', buffer: buf }, [buf]);
             } catch (exception) {
-                worker.postMessage({action: 'open', buffer: buf});
+                worker.postMessage({ action: 'open', buffer: buf });
             }
-            if (run !== '') {execute(run, false);}
+            if (run !== '') { execute(run, false); }
         });
     }
     else if (init !== '') {
         execute(init, true);
-        if (run !=='') execute(run, false);
+        if (run !== '') execute(run, false);
     }
 
     function error(e) {
@@ -53,14 +53,14 @@ function load(ide, base = '', init = '', run='', espace='') {
         errorElm.textContent = ''
     }
 
-// Run a command in the database
+    // Run a command in the database
     function execute(commands, silent = false) {
         tic();
         worker.onmessage = function (event) {
             var results = event.data.results;
             toc("Executing SQL");
             if (!results) {
-                error({message: event.data.error});
+                error({ message: event.data.error });
                 return;
             }
 
@@ -72,11 +72,11 @@ function load(ide, base = '', init = '', run='', espace='') {
             if (outputElm.childElementCount === 0 && !silent) outputElm.innerHTML = "<p>Requête exécutée correctement, pas de résultat à afficher.</p>";
             toc("Displaying results");
         }
-        worker.postMessage({action: 'exec', sql: commands});
+        worker.postMessage({ action: 'exec', sql: commands });
         outputElm.textContent = "Fetching results...";
     }
 
-// Create an HTML table
+    // Create an HTML table
     var tableCreate = function () {
         function valconcat(vals, tagName) {
             if (vals.length === 0) return '';
@@ -97,7 +97,7 @@ function load(ide, base = '', init = '', run='', espace='') {
         }
     }();
 
-// Execute the commands when the button is clicked
+    // Execute the commands when the button is clicked
     function execEditorContents() {
         noerror()
         execute(editor.getValue() + ';');
@@ -105,10 +105,10 @@ function load(ide, base = '', init = '', run='', espace='') {
 
     execBtn.addEventListener("click", execEditorContents, true);
 
-// Performance measurement functions
+    // Performance measurement functions
     var tictime;
     if (!window.performance || !performance.now) {
-        window.performance = {now: Date.now}
+        window.performance = { now: Date.now }
     }
 
     function tic() {
@@ -120,7 +120,7 @@ function load(ide, base = '', init = '', run='', espace='') {
         console.log((msg || 'toc') + ": " + dt + "ms");
     }
 
-// Add syntax highlihjting to the textarea
+    // Add syntax highlihjting to the textarea
     var editor = CodeMirror.fromTextArea(commandsElm, {
         mode: 'text/x-mysql',
         viewportMargin: Infinity,
