@@ -1,8 +1,8 @@
 # Annales des Épreuves Écrites
 
 ## 2025
-- [Centres Étrangers J1](data/2025/25-NSIJ1G11.pdf)
-- [Centres Étrangers J2](data/2025/25-NSIJ2G11.pdf)
+- [Centres Étrangers J1](data/2025/25_NSIJ1G11.pdf)
+- [Centres Étrangers J2](data/2025/25_NSIJ2G11.pdf)
 - [Asie J2](data/2025/25-NSIJ2JA1.pdf)
 - [Asie J1](data/2025/25-NSIJ1JA1.pdf)  
 - [Amérique du Nord J1](data/2025/25_NSIJ1AN1.pdf)
