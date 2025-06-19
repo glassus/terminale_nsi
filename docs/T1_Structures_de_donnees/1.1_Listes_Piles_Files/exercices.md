@@ -969,3 +969,145 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }}"
+    Exercice 2 du sujet [Métropole J1 - 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="blank"} 
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.\"
+        ```python
+        tache1 = Tache(1, 'Répondre aux emails', 45)
+        tache2 = Tache(2, 'Ranger ma chambre', 60)
+        
+        ``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2.\"
+        ```python
+        def avancer(self, n):
+            self.duree_restante = self.duree_restante - n
+        
+        ``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.\"
+        ```python
+        def est_terminee(self):
+            return self.duree_restante <= 0
+        
+        ``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4.\"
+        Après le rajout de la tâche n°6 et de la tâche n°7 :
+
+
+        `[début] (<t3>, 4) (<t7>, 4) (<t1>, 3) (<t2>, 3) (<t6>, 2) (<t4>, 1) (<t5>, 1) [fin]`        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5.\"
+        ```f.defiler()[0]``` renvoie ```<t3>```.
+
+        Après exécution, la file ```f``` contient:
+
+        ```[début](<t1>, 3)(<t2>, 3)(<t4>, 1)(<t5>, 1)[fin]``` 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6.\"
+        ```f.examiner()[1]``` renvoie ```4```.
+
+        Après exécution, la file ```f``` contient:
+
+        ```[début](<t3>, 4) (<t1>, 3)(<t2>, 3)(<t4>, 1)(<t5>, 1)[fin]``` 
+
+        (elle est inchangée)
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7.\"
+        ```python linenums='1'
+        def ajouter_file_prio(f, t, p):
+            f_aux = File()
+            while not f.est_vide() and f.examiner()[1] >= p:
+                f_aux.enfiler(f.defiler())
+            f_aux.enfiler((t,p))
+            while not f.est_vide():
+                f_aux.enfiler(f.defiler())
+            while not f_aux.est_vide():
+                f.enfiler(f_aux.defiler()) 
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8.\"
+        On peut dire que le nombre d'opérations est directement proportionnel en ```m```, donc que la complexité de cette fonction est linéaire.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9.\"
+        ```3 7 3 3 3 1 2 1 2 2 6 6 6 4 5 4 5``` 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10.\"
+        ```python linenums='1'
+        def planning(file):
+            lst = []
+            while not file.est_vide():
+                tache, p = file.defiler()
+                lst.append(tache)
+                tache.avancer(25)
+                if not tache.est_terminee():
+                    ajouter_file_prio(file, tache, p)
+            return lst
+        ```
+    """
+    )
+    }}

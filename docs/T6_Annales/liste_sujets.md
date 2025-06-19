@@ -1,6 +1,7 @@
 # Annales des Épreuves Écrites
 
 ## 2025
+- [Métropole J2](data/2025/25_NSIJ2ME1.pdf)
 - [Métropole J1](data/2025/25_NSIJ1ME1.pdf)
 - [Centres Étrangers J1](data/2025/25_NSIJ1G11.pdf)
 - [Centres Étrangers J2](data/2025/25_NSIJ2G11.pdf)
