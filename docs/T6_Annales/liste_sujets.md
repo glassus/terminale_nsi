@@ -1,6 +1,8 @@
 # Annales des Épreuves Écrites
 
 ## 2025
+- [Polynésie J2](data/2025/25-NSIJ2PO1.pdf)
+- [Polynésie J1](data/2025/25-NSIJ1PO1.pdf)
 - [Métropole J2](data/2025/25_NSIJ2ME1.pdf)
 - [Métropole J1](data/2025/25_NSIJ1ME1.pdf)
 - [Centres Étrangers J1](data/2025/25_NSIJ1G11.pdf)
