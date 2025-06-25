@@ -1,3 +1,22 @@
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première (Groupe 1, 2 et 3), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}. (notamment, il faut connaître parfaitement les deux types de parcours de listes, par élément et par indice)
+    - Les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+    - La partie réseau, notamment le rôle des adresses IP et du masque de sous-réseau, à retrouver [ici](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/){. target="_blank"}
+
+
+
+
+
+
+
+
+
+
 
 :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: 
 
@@ -5,17 +24,18 @@
 
 :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new:
 
-
+{#
 !!! abstract "Actualités"
     - Vous êtes le roi / la reine de la tablette graphique ? Participez au [concours d'affiches NSI](https://aeif.fr/index.php/2025/03/25/participez-au-concours-daffiches-nsi/){. target="_blank"}
+#}
 
-
-
+{#
 !!! tip "Grand Oral"
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
     - [FAQ Grand Oral](T7_Divers/0_Grand_Oral/data/GO_FAQ.pdf){. target="_blank"}
     - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/0_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
     - [Liste de sujets NSI ou Maths/NSI](T7_Divers/0_Grand_Oral/sujets.md){. target="_blank"}
+#}
 
 {#
 !!! question "Code Puzzle du jour"
@@ -23,7 +43,7 @@
 #}
 
 
-
+{#
 !!! note ":star: Thèmes en cours d'étude :star: "
     - Dictionnaires, binaire et arbres : [Exercice 1 Amérique du Nord J2 2025](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#ex1J2AN2025)
     - Dictionnaires et SQL : [Exercice 3 Amérique du Nord J1 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2024)
@@ -31,11 +51,11 @@
     - Révisions POO : [Exercice 1 Centres Étrangers J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J2G12024)
     - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
 
+#}
 
 
 
-
-
+{#
 ### *Thèmes déjà traités*
 - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
@@ -72,7 +92,7 @@
 - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)   
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
-
+#}
 {#
 
 ### *Thèmes déjà traités*
