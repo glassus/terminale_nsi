@@ -10,6 +10,8 @@ Pour résumer, on peut donc dire que la note sur 20 au bacaccalauréat en NSI es
 
 ## Épreuve Pratique
 
+:warning: l'Épreuve Pratique change pour le bac 2026. Pour l'instant, nous n'en savons pas grand chose...
+
 !!! Abstract "Textes règlementaires"
     - [https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N](https://www.education.gouv.fr/bo/2023/Hebdo36/MENE2317750N)
 
