@@ -1,28 +1,22 @@
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1, 2 et 3), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+!!! abstract "Révisions de Première"
+    **Lundi 08 septembre** aura lieu un petit DS (sur 10 points) sur :
 
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}. (notamment, il faut connaître parfaitement les deux types de parcours de listes, par élément et par indice)
-    - Les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-    - La partie réseau, notamment le rôle des adresses IP et du masque de sous-réseau, à retrouver [ici](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/){. target="_blank"}
+    - les différents parcours de liste (par élément / par indice), à réviser [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.1_Listes/cours/#4-parcours-des-elements-dune-liste){. target="_blank"}.
+    - l'algorithme de recherche de maximum, à réviser [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.1_Extremums_et_moyennes/cours/#1-algorithme-de-recherche-de-maximum){. target="_blank"}.
+    - l'écriture d'une fonction, à réviser [ici](https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.5_Fonctions/cours/){. target="_blank"}.
 
 
 
 
+:warning: Si nécessaire, lire le [rappel pour l'utilisation des VM](https://glassus.github.io/premiere_nsi/T7_Divers/2_VM/cours/){. target="_blank"} :warning:
+
+
+!!! note ":star: Thèmes en cours d'étude :star: "
+    - Cours [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
 
 
 
-
-
-
-
-:new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: 
-
-:star: :star: :star: La page contenant les 48 sujets l'Épreuve Pratique 2025 est [ici](T6_6_Epreuve_pratique/BNS_2025/){. target="_blank"} :star: :star: :star:
-
-:new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new: :new:
 
 {#
 !!! abstract "Actualités"

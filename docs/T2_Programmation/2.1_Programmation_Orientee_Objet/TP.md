@@ -47,7 +47,7 @@ while True:
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -105,7 +105,7 @@ correction(True,
 Attention au nommage des variables...
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -191,7 +191,7 @@ correction(True,
 **Q2.** Implémentez ce test (en créant pour cela une fonction ```distance``` )  et affichez "collision" en console lorsque les deux balles se touchent.
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -280,7 +280,7 @@ correction(True,
 **Q3.** Pour donner l'illusion physique du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -389,7 +389,7 @@ Il faut pour cela importer la fonction, par ```from random import randint```
 Créez cette classe et instanciez une balle.
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -459,7 +459,7 @@ correction(True,
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -535,7 +535,7 @@ correction(True,
 Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -640,10 +640,10 @@ correction(True,
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
     Ce que je ne veux pas voir :
-    ![](data/paste.jpg){: .center width=40%} 
+    ![](data/paste.png){: .center width=40%} 
 
 
-
+{#
 !!! abstract "Groupes de projet"
     - groupe A : Yanis - Jean
     - groupe B : Marilou
@@ -656,3 +656,4 @@ correction(True,
     - groupe I : Malone - Bryan - Moustapha
     - groupe J : Oscar - Owen - Mikhailo
     - groupe K : Milan - Nathan
+#}
