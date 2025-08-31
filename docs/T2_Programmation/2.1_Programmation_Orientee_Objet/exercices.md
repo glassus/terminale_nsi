@@ -276,7 +276,7 @@
 
         
 
-!!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc){. target="_blank"}"
+!!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279){. target="_blank"}"
     !!! example "{{ exercice() }}"
         
         Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
