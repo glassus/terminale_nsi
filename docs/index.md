@@ -11,7 +11,7 @@
 :warning: Si nécessaire, lire le [rappel pour l'utilisation des VM](https://glassus.github.io/premiere_nsi/T7_Divers/2_VM/cours/){. target="_blank"} :warning:
 
 
-!!! note ":star: Thèmes en cours d'étude :star: "
+!!! note ":star: Thème en cours d'étude :star: "
     - Cours [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
     - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
 
