@@ -284,7 +284,7 @@
         - un attribut ```titulaire``` stockant le nom du propriétaire.
         - un attribut ```solde``` contenant le solde disponible sur le compte.  
         
-        Cette classe contiendra deux méthodes ```retrait()``` et ```depot()``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+        Cette classe contiendra deux méthodes ```retrait``` et ```depot``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
     
         !!! info "Exemple d'utilisation de la classe"
             ```python
