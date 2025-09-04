@@ -142,8 +142,8 @@
                 self.minutes = m
                 self.secondes = s   
 
-        def affiche(self):
-            print('Il est {} heures, {} minutes et {} secondes'.format(self.heures, self.minutes, self.secondes))   
+            def affiche(self):
+                print('Il est {} heures, {} minutes et {} secondes'.format(self.heures, self.minutes, self.secondes))   
         ```
     """
     )
@@ -162,27 +162,27 @@
                 self.minutes = m
                 self.secondes = s   
 
-        def affiche(self):
-            print('Il est {} heures, {} minutes et {} secondes'.format(self.heures, self.minutes, self.secondes))   
+            def affiche(self):
+                print('Il est {} heures, {} minutes et {} secondes'.format(self.heures, self.minutes, self.secondes))   
 
-        def avance(self, s):
-            self.secondes += s
+            def avance(self, s):
+                self.secondes += s
 
-            # il faut ajouter les minutes supplémentaires si les secondes
-            # dépassent 60
-            self.minutes += self.secondes // 60
+                # il faut ajouter les minutes supplémentaires si les secondes
+                # dépassent 60
+                self.minutes += self.secondes // 60
 
-            # il ne faut garder des secondes que ce qui n'a pas servi
-            # à fabriquer des minutes supplémentaires
-            self.secondes = self.secondes % 60
+                # il ne faut garder des secondes que ce qui n'a pas servi
+                # à fabriquer des minutes supplémentaires
+                self.secondes = self.secondes % 60
 
-            # il faut ajouter les heures supplémentaires si les minutes
-            # dépassent 60
-            self.heures += self.minutes // 60
+                # il faut ajouter les heures supplémentaires si les minutes
+                # dépassent 60
+                self.heures += self.minutes // 60
 
-            # il ne faut garder des minutes que ce qui n'a pas servi
-            # à fabriquer des heures supplémentaires
-            self.minutes = self.minutes % 60
+                # il ne faut garder des minutes que ce qui n'a pas servi
+                # à fabriquer des heures supplémentaires
+                self.minutes = self.minutes % 60
         ```
     """
     )
