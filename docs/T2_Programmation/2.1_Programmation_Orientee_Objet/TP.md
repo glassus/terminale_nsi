@@ -625,7 +625,10 @@ correction(False,
 - En la supprimant de la liste ```sac_a_balles```, vous pouvez faire disparaitre une balle.
 - Vous pouvez créer une balle que vous déplacerez au clavier (voir [ici](https://glassus.github.io/premiere_nsi/T6_Mini-projets/05_Initiation_Pygame/){. target="_blank"} pour la gestion des déplacements)
 - ...
+- Ce que je ne veux pas voir : 
+![](data/paste.png){: .center width=40%} 
 
+{#
 ## 4. Organisation du projet
 
 !!! tip "Calendrier du projet"
@@ -641,7 +644,7 @@ correction(False,
 
     Ce que je ne veux pas voir :
     ![](data/paste.png){: .center width=40%} 
-
+#}
 
 {#
 !!! abstract "Groupes de projet"
