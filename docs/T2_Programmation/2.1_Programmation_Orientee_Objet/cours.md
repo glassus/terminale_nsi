@@ -442,7 +442,7 @@ Ce qui est nettement plus agréable !
     Modifier la méthode ```__repr__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
