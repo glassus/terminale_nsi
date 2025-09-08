@@ -409,7 +409,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a\" 
         ```python linenums='1'
@@ -428,7 +428,7 @@
     }}
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b\" 
         ```python linenums='1'
