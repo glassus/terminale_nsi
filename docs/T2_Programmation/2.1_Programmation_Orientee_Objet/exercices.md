@@ -372,7 +372,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -381,12 +381,12 @@
                 print(villa.nom)
         ```
 
-        ou bien
+        ou bien, en utilisant les getters, 
 
         ```python
         for villa in v:
             if villa.equip() == 'eq':
-                print(villa.nom)
+                print(villa.nom())
         ```        
     """
     )
