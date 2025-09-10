@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a\" 
         Le test est le **test 1**.
@@ -449,7 +449,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b\" 
         Si un joueur a été touché par un tir allié, son score diminue de 20 points.    
@@ -459,7 +459,7 @@
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python linenums='1'
