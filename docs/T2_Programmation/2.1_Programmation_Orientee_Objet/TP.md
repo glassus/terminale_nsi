@@ -47,7 +47,7 @@ while True:
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -105,7 +105,7 @@ correction(True,
 Attention au nommage des variables...
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
