@@ -1,14 +1,6 @@
-!!! abstract "Révisions de Première"
-    **Lundi 08 septembre** aura lieu un petit DS (sur 10 points) sur :
-
-    - les différents parcours de liste (par élément / par indice), à réviser [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.1_Listes/cours/#4-parcours-des-elements-dune-liste){. target="_blank"}.
-    - l'algorithme de recherche de maximum, à réviser [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.1_Extremums_et_moyennes/cours/#1-algorithme-de-recherche-de-maximum){. target="_blank"}.
-    - l'écriture d'une fonction, à réviser [ici](https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.5_Fonctions/cours/){. target="_blank"}.
 
 
 
-
-:warning: Si nécessaire, lire le [rappel pour l'utilisation des VM](https://glassus.github.io/premiere_nsi/T7_Divers/2_VM/cours/){. target="_blank"} :warning:
 
 
 !!! note ":star: Thème en cours d'étude :star: "
