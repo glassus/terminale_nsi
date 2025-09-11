@@ -4572,7 +4572,303 @@
 <p><img alt="image" class="center" src="../data/TP_dist.png" /></p>
 </details>
 <p><strong>Q2.</strong> Implémentez ce test (en créant pour cela une fonction <code>distance</code> )  et affichez "collision" en console lorsque les deux balles se touchent.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+
+<span class="n">dxA</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">dyA</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">dyB</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">xA</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">yA</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xB</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">yB</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+
+
+<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">xA</span><span class="o">-</span><span class="n">xB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">yA</span><span class="o">-</span><span class="n">yB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurA</span><span class="p">,</span> <span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurB</span><span class="p">,</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+
+    <span class="n">xA</span> <span class="o">+=</span> <span class="n">dxA</span>
+    <span class="n">yA</span> <span class="o">+=</span> <span class="n">dyA</span>
+
+    <span class="n">xB</span> <span class="o">+=</span> <span class="n">dxB</span>
+    <span class="n">yB</span> <span class="o">+=</span> <span class="n">dyB</span>
+
+    <span class="c1"># rebond en haut ou en bas</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dyA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyA</span>
+
+    <span class="c1"># rebond à gauche ou à droite</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dxA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxA</span>
+
+    <span class="c1"># rebond en haut ou en bas</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dyB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyB</span>
+
+    <span class="c1"># rebond à gauche ou à droite</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxB</span>
+
+    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">RAYON</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;collision&#39;</span><span class="p">)</span>
+
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q3.</strong> Pour donner l'illusion physique du rebond, échangez les valeurs respectives de <code>dx</code> et <code>dy</code> pour les deux balles.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pygame.locals</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">LARGEUR</span> <span class="o">=</span> <span class="mi">640</span>
+<span class="n">HAUTEUR</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">RAYON</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">LARGEUR</span><span class="p">,</span> <span class="n">HAUTEUR</span><span class="p">))</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+
+<span class="n">dxA</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">dyA</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">dyB</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">xA</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="n">yA</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">xB</span> <span class="o">=</span> <span class="n">LARGEUR</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">yB</span> <span class="o">=</span> <span class="n">HAUTEUR</span> <span class="o">//</span> <span class="mi">2</span>
+
+
+<span class="n">couleurA</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="n">couleurB</span> <span class="o">=</span> <span class="p">(</span><span class="mi">155</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">xA</span><span class="o">-</span><span class="n">xB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">yA</span><span class="o">-</span><span class="n">yB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurA</span><span class="p">,</span> <span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">couleurB</span><span class="p">,</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">),</span> <span class="n">RAYON</span><span class="p">)</span>
+
+    <span class="n">xA</span> <span class="o">+=</span> <span class="n">dxA</span>
+    <span class="n">yA</span> <span class="o">+=</span> <span class="n">dyA</span>
+
+    <span class="n">xB</span> <span class="o">+=</span> <span class="n">dxB</span>
+    <span class="n">yB</span> <span class="o">+=</span> <span class="n">dyB</span>
+
+    <span class="c1"># rebond en haut ou en bas</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yA</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dyA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyA</span>
+
+    <span class="c1"># rebond à gauche ou à droite</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xA</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dxA</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxA</span>
+
+    <span class="c1"># rebond en haut ou en bas</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">yB</span> <span class="o">&gt;</span> <span class="n">HAUTEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dyB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dyB</span>
+
+    <span class="c1"># rebond à gauche ou à droite</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&lt;</span> <span class="n">RAYON</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">xB</span> <span class="o">&gt;</span> <span class="n">LARGEUR</span> <span class="o">-</span> <span class="n">RAYON</span><span class="p">):</span>
+        <span class="n">dxB</span> <span class="o">=</span> <span class="o">-</span><span class="n">dxB</span>
+
+    <span class="k">if</span> <span class="n">distanceAB</span><span class="p">(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">RAYON</span><span class="p">:</span>
+        <span class="n">dxA</span><span class="p">,</span> <span class="n">dxB</span> <span class="o">=</span> <span class="n">dxB</span><span class="p">,</span> <span class="n">dxA</span>
+        <span class="n">dyA</span><span class="p">,</span> <span class="n">dyB</span> <span class="o">=</span> <span class="n">dyB</span><span class="p">,</span> <span class="n">dyA</span>
+
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+    <span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.03</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h3 id="14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres">1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.<a class="headerlink" href="#14-rajout-dune-troisieme-balle-et-gestion-du-rebond-avec-les-deux-autres" title="Permanent link">⚓︎</a></h3>
 <p>... vraiment ? Peut-on continuer comme précédemment ?</p>
 <p><img alt="image" class="center" src="../data/meme_doubt.png" width="30%" /></p>
@@ -4624,7 +4920,7 @@ Il faut pour cela importer la fonction, par <code>from random import randint</co
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="10 septembre 2025 09:48:21 UTC">10 septembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 septembre 2025 12:27:16 UTC">11 septembre 2025</span>
   </span>
 
     
