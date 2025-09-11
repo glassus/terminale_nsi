@@ -191,7 +191,7 @@ correction(True,
 **Q2.** Implémentez ce test (en créant pour cela une fonction ```distance``` )  et affichez "collision" en console lorsque les deux balles se touchent.
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -280,7 +280,7 @@ correction(False,
 **Q3.** Pour donner l'illusion physique du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
