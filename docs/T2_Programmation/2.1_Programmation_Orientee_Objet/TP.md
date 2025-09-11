@@ -459,7 +459,7 @@ correction(True,
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
