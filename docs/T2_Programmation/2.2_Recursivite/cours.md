@@ -160,7 +160,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     Coder la fonction ```prix``` de la BD présentée plus haut, qui prend en paramètre un entier positif ```etage``` et qui renvoie le prix de vente de la BD.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -187,7 +187,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
     **Q1.** Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -204,7 +204,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     **Q2.** Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -299,7 +299,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 
     Implémenter de façon récursive la suite de Fibonacci.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -357,7 +357,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
     Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
