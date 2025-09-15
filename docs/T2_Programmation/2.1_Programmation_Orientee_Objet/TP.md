@@ -628,13 +628,13 @@ correction(False,
 - Ce que je ne veux pas voir : 
 ![](data/paste.png){: .center width=40%} 
 
-{#
+
 ## 4. Organisation du projet
 
 !!! tip "Calendrier du projet"
-    - 16/09/2024 : démarrage du projet et constitution des groupes
-    - séances du jeudi 19/09/2024, 26/09/2024 et 03/10/2024 : travail sur le projet
-    - remise du projet sur Capytale : **03/10/2024 à 18h dernier délai**
+    - 15/09/2025 : démarrage du projet et constitution des groupes
+    - à 17h les lundi 22/09, 29/09, 06/10 et 13/10 : travail sur le projet
+    - remise du projet sur Capytale : **jeudi 16/10/2025 à 18h dernier délai**
 
 !!! capytale "Dépôt de projet sur Capytale "
 
@@ -642,9 +642,11 @@ correction(False,
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
-    Ce que je ne veux pas voir :
-    ![](data/paste.png){: .center width=40%} 
-#}
+!!! abstract "Évaluation du projet"
+    - sur 10 points : note globale du projet.
+    - sur 10 points : entretien individuel autour du code du projet. 
+
+
 
 {#
 !!! abstract "Groupes de projet"
