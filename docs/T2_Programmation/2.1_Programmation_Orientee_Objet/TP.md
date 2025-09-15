@@ -648,17 +648,19 @@ correction(False,
 
 
 
-{#
+
 !!! abstract "Groupes de projet"
-    - groupe A : Yanis - Jean
-    - groupe B : Marilou
-    - groupe C : Allan - Sarah
-    - groupe D : Perine - Rita
-    - groupe E : Gansiry
-    - groupe F : Thomas - Etan - Titouan
-    - groupe G : Noah
-    - groupe H : Tesnime - Enzo
-    - groupe I : Malone - Bryan - Moustapha
-    - groupe J : Oscar - Owen - Mikhailo
-    - groupe K : Milan - Nathan
-#}
+    - Groupe 1:
+        - groupe A : Mykhaïlo - Andgel - Normann
+        - groupe B : Ethan -  Sohel
+        - groupe C : Tidiane - Mathis
+        - groupe D : Vitor - Nina - Alexandre
+        - groupe E : Fortuné - Rizgar
+
+    - Groupe 2:
+        - groupe A : Maël - Noham
+        - groupe B : Lana -  Kayna
+        - groupe C : Gift - Alice - Eliott
+        - groupe D : Yacine - Victor
+        - groupe E : Hugo - Alexis - Gabriel
+        - groupe F : Timéo - Raphaël
