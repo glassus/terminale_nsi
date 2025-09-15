@@ -459,7 +459,7 @@ correction(True,
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -535,7 +535,7 @@ correction(False,
 Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
