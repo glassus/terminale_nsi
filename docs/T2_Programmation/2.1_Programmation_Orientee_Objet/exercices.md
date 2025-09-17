@@ -483,7 +483,7 @@
     Exercice 2 du sujet [La Réunion J1 2022](../../T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\" 
         ```python linenums='1'
@@ -497,7 +497,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\" 
         ```python linenums='1'
@@ -511,7 +511,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python linenums='1'
@@ -523,7 +523,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='10 14 15 18'
@@ -560,7 +560,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         ```python
@@ -571,7 +571,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```python linenums='1'
@@ -583,7 +583,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python 
@@ -597,7 +597,7 @@
     **Partie B**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python linenums='1'
