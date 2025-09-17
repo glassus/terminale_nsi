@@ -4509,112 +4509,12 @@ ou mieux :
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
 <p>Exercice 2 du sujet <a class="" href="../../../T6_Annales/data/2022/2022_LeReunion_J1.pdf" target="_blank">La Réunion J1 2022</a></p>
-<details class="success">
-<summary>Correction Q1.a</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">Mousse</span><span class="p">)</span> <span class="ow">and</span> <span class="n">Mousse</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="k">return</span> <span class="n">i</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q1.b</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">placeBulle</span><span class="p">(</span><span class="n">B</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">donnePremierIndiceLibre</span><span class="p">(</span><span class="n">Mousse</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="n">Mousse</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">B</span> 
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bullesEnContact</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span><span class="n">B2</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">distanceEntreBulles</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">B2</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">B1</span><span class="o">.</span><span class="n">rayon</span> <span class="o">+</span> <span class="n">B2</span><span class="o">.</span><span class="n">rayon</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">collision</span><span class="p">(</span><span class="n">indPetite</span><span class="p">,</span> <span class="n">indGrosse</span><span class="p">,</span> <span class="n">Mousse</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Absorption de la plus petite bulle d’indice indPetite</span>
-<span class="sd">    par la plus grosse bulle d’indice indGrosse. Aucun test</span>
-<span class="sd">    n’est réalisé sur les positions.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># calcul du nouveau rayon de la grosse bulle</span>
-    <span class="n">surfPetite</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">Mousse</span><span class="p">[</span><span class="n">indPetite</span><span class="p">]</span><span class="o">.</span><span class="n">rayon</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">surfGrosse</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">Mousse</span><span class="p">[</span><span class="n">indGrosse</span><span class="p">]</span><span class="o">.</span><span class="n">rayon</span><span class="o">**</span><span class="mi">2</span>
-<span class="hll">    <span class="n">surfGrosseApresCollision</span> <span class="o">=</span> <span class="n">surfPetite</span> <span class="o">+</span> <span class="n">surfGrosse</span>
-</span>    <span class="n">rayonGrosseApresCollision</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">surfGrosseApresCollision</span><span class="o">/</span><span class="n">pi</span><span class="p">)</span>
-
-    <span class="c1">#réduction de 50% de la vitesse de la grosse bulle</span>
-<span class="hll">    <span class="n">Mousse</span><span class="p">[</span><span class="n">indGrosse</span><span class="p">]</span><span class="o">.</span><span class="n">dirx</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">Mousse</span><span class="p">[</span><span class="n">indGrosse</span><span class="p">]</span><span class="o">.</span><span class="n">dirx</span>
-</span><span class="hll">    <span class="n">Mousse</span><span class="p">[</span><span class="n">indGrosse</span><span class="p">]</span><span class="o">.</span><span class="n">diry</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">Mousse</span> <span class="p">[</span><span class="n">indGrosse</span><span class="p">]</span><span class="o">.</span><span class="n">diry</span>
-</span>
-    <span class="c1">#suppression de la petite bulle dans Mousse</span>
-<span class="hll">    <span class="n">Mousse</span><span class="p">[</span><span class="n">indPetite</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</span></code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  10 <i id="ex3J1ME2024"></i></p>
 <p>Exercice 3 (partie A et B) du <a class="" href="../../../T6_Annales/data/2024/24-NSIJ1ME.pdf" target="_blank">sujet Métropole J1 2024</a>   </p>
 <p><strong>Partie A</strong></p>
-<details class="success">
-<summary>Correction Q1 </summary>
-<div class="highlight"><pre><span></span><code><span class="n">chien40</span> <span class="o">=</span> <span class="n">Chien</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;Duke&#39;</span><span class="p">,</span> <span class="s1">&#39;wheel dog&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q2 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">changer_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_role</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="n">nouveau_role</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q3 </summary>
-<div class="highlight"><pre><span></span><code><span class="n">chien40</span><span class="o">.</span><span class="n">changer_role</span><span class="p">(</span><span class="s1">&#39;leader&#39;</span><span class="p">)</span>
-</code></pre></div>
-</details>
 <p><strong>Partie B</strong></p>
-<details class="success">
-<summary>Correction Q4 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">retirer_chien</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
-    <span class="n">nouvelle_liste</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">chien</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">chien</span><span class="o">.</span><span class="n">id_chien</span> <span class="o">!=</span> <span class="n">numero</span><span class="p">:</span>
-            <span class="n">nouvelle_liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chien</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span> <span class="o">=</span> <span class="n">nouvelle_liste</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  11 <i id="ex3J2AN2024"></i></p>
@@ -4756,7 +4656,7 @@ ou mieux :
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 septembre 2025 07:51:30 UTC">17 septembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 septembre 2025 07:54:40 UTC">17 septembre 2025</span>
   </span>
 
     
