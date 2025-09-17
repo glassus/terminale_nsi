@@ -459,7 +459,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         ```python linenums='1'
@@ -624,7 +624,7 @@
     }}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         ```convert('4h36')``` va renvoyer le nombre ```4.6```  
@@ -633,7 +633,7 @@
     }} 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -659,7 +659,7 @@
     Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}   
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         Une adresse possible est ```192.168.1.17```. 
@@ -669,7 +669,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction(Alice, Charlie, 10), Transaction(Bob, Alice, 5)]``` 
@@ -679,7 +679,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3 \" 
         Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
@@ -688,7 +688,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
@@ -697,7 +697,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -714,7 +714,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
@@ -723,7 +723,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -737,7 +737,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
@@ -766,7 +766,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1' hl_lines='6 7-10'
@@ -788,7 +788,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \" 
         L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
@@ -797,7 +797,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11 \" 
         Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
@@ -806,7 +806,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12 \" 
         D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
@@ -815,7 +815,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13 \" 
         Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
@@ -824,7 +824,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14 \"
         ```python linenums='1'
@@ -898,7 +898,7 @@
 
 
 {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         Un attribut est ```itineraire``` et une méthode est ```remplir_grille```.
@@ -907,7 +907,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         ```a``` vaut 4 et ```b``` vaut 7.
@@ -917,7 +917,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3 \" 
         ```python linenums='1'
@@ -937,7 +937,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         ```python linenums='1'
@@ -949,7 +949,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -967,7 +967,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         ```python linenums='1'
@@ -994,7 +994,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         Si la largeur de la grille est 1, il n'y a qu'un seul mouvement possible (```D```) donc il n'y a qu'un seul chemin. 
@@ -1006,7 +1006,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         $N(m,n)$ est le nombre de trajets d'une grille de taille $m \\times n$.
@@ -1022,7 +1022,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1'
