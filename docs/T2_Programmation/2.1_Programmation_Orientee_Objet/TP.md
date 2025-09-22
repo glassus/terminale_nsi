@@ -655,7 +655,7 @@ correction(False,
         - groupe B : Ethan -  Sohel
         - groupe C : Tidiane - Mathis
         - groupe D : Vitor - Nina - Alexandre
-        - groupe E : Fortuné - Rizgar
+        - groupe E : Fortuné - Rizgar - Mathys
 
     - Groupe 2:
         - groupe A : Maël - Noham
