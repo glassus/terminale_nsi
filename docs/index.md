@@ -4,10 +4,12 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Cours [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
-    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
-    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
 
+### *Thèmes déjà traités*
+- Cours [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+- [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
+- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
 
 
