@@ -160,7 +160,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     Coder la fonction ```prix``` de la BD présentée plus haut, qui prend en paramètre un entier positif ```etage``` et qui renvoie le prix de vente de la BD.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -187,7 +187,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
     **Q1.** Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -204,7 +204,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     **Q2.** Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
