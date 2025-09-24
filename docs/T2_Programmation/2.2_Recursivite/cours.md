@@ -160,7 +160,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     Coder la fonction ```prix``` de la BD présentée plus haut, qui prend en paramètre un entier positif ```etage``` et qui renvoie le prix de vente de la BD.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
