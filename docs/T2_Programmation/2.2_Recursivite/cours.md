@@ -204,7 +204,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     **Q2.** Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
