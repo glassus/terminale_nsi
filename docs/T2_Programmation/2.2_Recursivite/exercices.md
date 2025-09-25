@@ -125,7 +125,7 @@
     ![](data/carres_turtle.png){: .center width=40%}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -140,15 +140,15 @@
             forward(c/2)
             right(45)
 
-        def trace(c, n):
+        def trace(n, c):
             if n == 0 :
                 return None
             else :
                 base(c)
                 c = c/(2**0.5)
-                trace(c, n-1)
+                trace(n-1, c)
             
-        trace(200, 5)
+        trace(5, 200)
         ```        
     """
     )
