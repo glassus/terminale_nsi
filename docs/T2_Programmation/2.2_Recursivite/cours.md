@@ -357,7 +357,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
     Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -379,7 +379,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
 
 Construisons une fonction ```comparaison``` qui affichera le temps de calcul pour chacune des deux fonctions ```fibo_imperatif``` et ```fibo_recursif``` :
 
-
+{#
 ```python linenums='1'
 import time
 
@@ -406,8 +406,9 @@ def comparaison(n):
 
 
 ```
+#}
 
-{#
+
 ```python linenums='1'
 import time
 
@@ -439,7 +440,7 @@ def comparaison(n):
 
 
 ```
-#}
+
 
 :arrow_right: **Résultats**
 
