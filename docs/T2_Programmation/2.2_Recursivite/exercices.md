@@ -53,7 +53,7 @@
 
 !!! example "{{ exercice() }}"
 
-    La conjecture de Syracuse (ou de Collatz) postule ceci :  
+    La [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse){. target="_blank"}  (ou de Collatz) postule ceci :  
 
     *Prenons un nombre $n$ : si $n$ est pair, on le divise par 2, sinon on le multiplie par 3 puis on ajoute 1. On recommence cette opération tant que possible. Au bout d'un certain temps, on finira toujours par tomber sur le nombre 1.*
 
