@@ -299,7 +299,7 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
 
     Implémenter de façon récursive la suite de Fibonacci.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -384,6 +384,34 @@ Construisons une fonction ```comparaison``` qui affichera le temps de calcul pou
 import time
 
 def fibo_imperatif(n):
+    ...
+
+def fibo_recursif(n):
+    if n == 0 :
+        return 0   
+    elif n == 1 :
+        return 1
+    else :
+        return fibo_recursif(n-1) + fibo_recursif(n-2)
+
+
+def comparaison(n):
+    t0 = time.time()
+    fibo_imperatif(n)
+    print("algo impératif : ", time.time() - t0)
+    t0 = time.time()
+    fibo_recursif(n)
+    print("algo récursif : ", time.time() - t0)
+
+
+
+```
+
+{#
+```python linenums='1'
+import time
+
+def fibo_imperatif(n):
     f = {}
     f[0] = 0
     f[1] = 1
@@ -411,7 +439,7 @@ def comparaison(n):
 
 
 ```
-
+#}
 
 :arrow_right: **Résultats**
 
