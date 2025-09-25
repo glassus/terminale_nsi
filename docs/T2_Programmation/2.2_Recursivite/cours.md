@@ -354,7 +354,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
 
 !!! example "{{ exercice() }}"
 
-    Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
+    Écrire une fonction ```fibo_imperatif``` qui prend en paramètre un nombre ```n``` et qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
 
     {{
     correction(True,
