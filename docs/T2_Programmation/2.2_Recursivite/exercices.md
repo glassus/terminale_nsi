@@ -60,7 +60,7 @@
     **Q1.** Écrire une fonction récursive ```syracuse``` qui prend en paramètres une entier ```n``` et qui écrivant tous les termes de la suite de Syracuse commençant à ```n``` , et s'arrêtant (on l'espère...) à la valeur 1.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -95,7 +95,7 @@
     **Q2.** On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -125,7 +125,7 @@
     ![](data/carres_turtle.png){: .center width=40%}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
