@@ -125,7 +125,7 @@
     ![](data/carres_turtle.png){: .center width=40%}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
