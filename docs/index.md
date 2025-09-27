@@ -5,6 +5,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
+    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
 
 ### *Thèmes déjà traités*
 - Cours [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
