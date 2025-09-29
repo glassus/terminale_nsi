@@ -376,7 +376,7 @@
 
 !!! example "{{ exercice() }}"
 
-    1. [Exercice 04.2 de la BNS 2022](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2022/#exercice-042){. target="_blank"}
+    1. [Exercice 43.2 de la BNS 2025](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2025/#exercice-432){. target="_blank"}
     2. Application sur Capytale à retrouver [ici](https://capytale2.ac-paris.fr/web/c/ffb5-785788/mlc){. target="_blank"} 
 
     ![image](data/diffusion.png){: .center}
