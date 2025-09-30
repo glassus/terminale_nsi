@@ -388,24 +388,20 @@
         ```python linenums='1'
         def propager(grid, i, j, color):
             if grid[i,j].green == 0:
-                return None # 
+                return None 
 
             grid[i,j].green = color
 
-            # l'élément en haut fait partie de la composante
-            if ((i-1) >= 0 and grid[i-1,j].green == 180):
+            if (i-1) >= 0:
                 propager(grid, i-1, j, color)
 
-            # l'élément en bas fait partie de la composante
-            if ((i+1) < n and grid[i+1,j].green == 180):
+            if (i+1) < n:
                 propager(grid, i+1, j, color)
 
-            # l'élément à gauche fait partie de la composante
-            if ((j-1) >= 0 and grid[i,j-1].green == 180):
+            if (j-1) >= 0:
                 propager(grid, i, j-1, color)
 
-            # l'élément à droite fait partie de la composante
-            if ((j+1) < n and grid[i,j+1].green == 180): # 
+            if (j+1) < n : 
                 propager(grid, i, j+1, color)
 
 
