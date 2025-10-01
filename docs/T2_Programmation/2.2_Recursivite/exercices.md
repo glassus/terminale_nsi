@@ -387,7 +387,7 @@
     ??? success \"Correction\" 
         ```python linenums='1'
         def propager(grid, i, j, color):
-            if grid[i,j].green == 0:
+            if grid[i,j].green != 180:
                 return None 
 
             grid[i,j].green = color
