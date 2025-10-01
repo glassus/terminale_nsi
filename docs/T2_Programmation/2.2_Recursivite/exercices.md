@@ -35,7 +35,7 @@
     Écrire une fonction récursive ```pgcd``` qui prend en paramètres deux nombres ```a``` et ```b``` et qui renvoie leur PGCD.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -261,7 +261,7 @@
     Écrire une fonction récursive ```hanoi(n, depart, inter, arrivee)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de ```depart```  vers ```arrivee```  en prenant ```inter```  comme intermédiaire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -382,7 +382,7 @@
     ![image](data/diffusion.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
