@@ -382,7 +382,7 @@
     ![image](data/diffusion.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
