@@ -435,13 +435,14 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
         def test_palindrome():
             assert palindrome('kayak') == True
             assert palindrome('canoe') == False   
+            print('tests ok')
         ```
         On teste les deux cas possibles.        
     """
