@@ -219,7 +219,7 @@
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -307,7 +307,7 @@
     - l'étape ```n``` fait 4 appels successifs à l'étape ```n-1```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -335,7 +335,7 @@
     **Q2.** Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -415,7 +415,7 @@
     Exercice 4 du sujet [Amérique du Nord J1 2022](../../T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         Proposition 3        
@@ -424,7 +424,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```txt[0]``` vaut 'b'  
@@ -435,14 +435,13 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
         def test_palindrome():
             assert palindrome('kayak') == True
-            assert palindrome('canoe') == False  
-            printt("tests ok") 
+            assert palindrome('canoe') == False   
         ```
         On teste les deux cas possibles.        
     """
