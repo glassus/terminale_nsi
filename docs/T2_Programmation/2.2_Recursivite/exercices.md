@@ -225,12 +225,9 @@
         ```python linenums='1'
         def dicho_recursive(lst, val):
             print(lst) # pour voir la taille de la liste diminuer
-            if len(lst) == 1:  #cas de base
-                if lst[0] == val:
-                    return True
-                else:
-                    return False
-            else :              #cas récursif
+            if len(lst) == 1:   # cas de base
+                return lst[0] == val:
+            else :              # cas récursif
                 ind_milieu = len(lst)//2
                 if lst[ind_milieu] > val:
                     return recherche(lst[:ind_milieu], val)
@@ -580,6 +577,32 @@
     """
     )
     }}
+
+    {#
+    La question 3. est difficile, vous pouvez vous aider du code ci-dessous :
+
+
+    ```python
+    def ajouter(s, liste):
+        res = []
+        for m in liste:
+            res.append(s + m)
+        return res
+
+
+    def produit(s, n):
+        if n == 0:
+            return [""]
+        else:
+            res = []
+            for i in range(len(s)):
+                res = res + ajouter(s[i], produit(s, n-1))
+            return res
+
+
+    ```
+    #}
+
 
     {{
     correction(False,
