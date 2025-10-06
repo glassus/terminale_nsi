@@ -455,8 +455,6 @@
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
         def palindrome_imperatif(txt):
-            if len(txt) < 2:
-                return True
             i = 0
             j = len(txt)-1
             while i<j:
