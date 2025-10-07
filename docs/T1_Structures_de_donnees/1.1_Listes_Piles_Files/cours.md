@@ -174,7 +174,7 @@ Mais plus précisément, on a :
     Retrouvez comment accéder aux éléments 3, 5 et 1.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -245,7 +245,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -304,7 +304,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -369,7 +369,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
                 return self.data.pop() 
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction (avec ```__repr__```)\" 
         ```python linenums='1'
@@ -431,7 +431,7 @@ class Cellule :
     À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -509,7 +509,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -574,7 +574,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -617,7 +617,7 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
     Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -684,7 +684,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
     Créer une file avec deux piles.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
