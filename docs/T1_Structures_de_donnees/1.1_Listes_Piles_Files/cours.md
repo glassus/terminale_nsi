@@ -339,16 +339,16 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
 - ```__repr__``` : permet d'afficher la pile sous forme agréable (par ex : ```|3|6|2|5|```)
 
 #### 3.2.1 À l'aide du type ```list``` de Python 
-
+{#
 !!! example "{{ exercice() }}"
 
     Créer la classe ```Pile```   ci-dessus. 
     
     Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists){. target="_blank"}.
 
+#}
 
 
-{#
 !!! example "{{ exercice() }}"
 
     Créer la classe ```Pile```   ci-dessus. 
@@ -418,7 +418,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
     )
     }}
 
-#}
+
 
 
 #### 3.2.2 À l'aide d'une liste chaînée et de la classe  ```Cellule``` créée au 2.3
