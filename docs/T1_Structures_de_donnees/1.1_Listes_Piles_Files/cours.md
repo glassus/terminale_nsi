@@ -294,13 +294,13 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
     2. p.empile(3)   
     3. p.empile(5)  
     4. p.est_vide()  
-    4. p.empile(1)  
-    5. p.depile()  
-    6. p.depile() 
-    7. p.empile(9)  
-    8. p.depile()  
-    9. p.depile() 
-    10. p.est_vide() 
+    5. p.empile(1)  
+    6. p.depile()  
+    7. p.depile() 
+    8. p.empile(9)  
+    9. p.depile()  
+    10. p.depile() 
+    11. p.est_vide() 
     ```
 
     {{
@@ -312,13 +312,13 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         2. p.empile(3)   # p = 3
         3. p.empile(5)  # p = 3 5 par convention
         4. p.est_vide()  #  False
-        4. p.empile(1)  # p = 3 5 1
-        5. p.depile()  # p = 3 5    valeur renvoyée : 1
-        6. p.depile()  # p = 3      valeur renvoyée : 5
-        7. p.empile(9)  # p = 3 9
-        8. p.depile()  # p = 3       valeur renvoyée :9
-        9. p.depile()  # p est vide      valeur renvoyée : 3
-        10. p.est_vide() # True
+        5. p.empile(1)  # p = 3 5 1
+        6. p.depile()  # p = 3 5    valeur renvoyée : 1
+        7. p.depile()  # p = 3      valeur renvoyée : 5
+        8. p.empile(9)  # p = 3 9
+        9. p.depile()  # p = 3       valeur renvoyée :9
+        10. p.depile()  # p est vide      valeur renvoyée : 3
+        11. p.est_vide() # True
         ```        
     """
     )
