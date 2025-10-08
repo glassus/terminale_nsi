@@ -459,9 +459,13 @@ class Cellule :
                 self.data = Cellule(val, self.data)
             
             def depile(self):
-                v = self.data.contenu #on récupère la valeur à renvoyer
-                self.data = self.data.suivante  # on supprime la 1ère cellule  
-                return v
+                if self.est_vide():
+                    print('Vous avez essayé de dépiler une pile vide !')
+                    return None
+                else :
+                    v = self.data.contenu #on récupère la valeur à renvoyer
+                    self.data = self.data.suivante  # on supprime la 1ère cellule  
+                    return v
             
             def __repr__(self):
                 s = '|'
