@@ -4734,79 +4734,6 @@ Test de l'implémentation :
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p>À l'aide cette classe, re-créer une classe <code>Pile</code> disposant exactement de la même interface que dans l'exercice précédent.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Cellule</span> <span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contenu</span><span class="p">,</span> <span class="n">suivante</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="n">contenu</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suivante</span> <span class="o">=</span> <span class="n">suivante</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Pile</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="kc">None</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">empile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Cellule</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kc">None</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contenu</span> <span class="c1">#on récupère la valeur à renvoyer</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">suivante</span>  <span class="c1"># on supprime la 1ère cellule  </span>
-            <span class="k">return</span> <span class="n">v</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">while</span> <span class="n">c</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
-            <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
-        <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-Test de l'implémentation :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">p</span>
-<span class="o">|</span><span class="mi">7</span><span class="o">|</span><span class="mi">3</span><span class="o">|</span><span class="mi">5</span><span class="o">|</span>
-</code></pre></div></p>
-</details>
 </div>
 <p><strong>À retenir :</strong> 
 pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, quelle est l'implémentation qui est derrière. 
@@ -4829,37 +4756,6 @@ Attention, il ne faut pas réinventer la classe <code>Pile</code>, mais uniqueme
 <span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
 <span class="n">page</span> <span class="n">quittée</span> <span class="p">:</span> <span class="n">google</span><span class="o">.</span><span class="n">fr</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Nav</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">visite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page actuelle :&#39;</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas de back possible&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">page_quittee</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page quittée :&#39;</span><span class="p">,</span> <span class="n">page_quittee</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <h2 id="4-les-files">4. Les files<a class="headerlink" href="#4-les-files" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/giffile.webp" /></p>
@@ -4957,7 +4853,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 octobre 2025 13:38:45 UTC">9 octobre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 octobre 2025 13:53:33 UTC">9 octobre 2025</span>
   </span>
 
     
