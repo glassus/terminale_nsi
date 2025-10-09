@@ -496,7 +496,7 @@ class Cellule :
 
 **À retenir :** 
 pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques. Il ne peut pas savoir, en les utilisant, quelle est l'implémentation qui est derrière. 
-![](data/xkcd.png){: .center}
+![](data/xkcd.png){: .center .autolight}
 
 ### 3.3 Application des piles
 
@@ -521,7 +521,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
