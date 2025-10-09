@@ -436,7 +436,7 @@ class Cellule :
 
 !!! example "{{ exercice() }}"
 
-    À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
+    À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent. 
 
     {{
     correction(True,
