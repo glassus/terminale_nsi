@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ![image](data/ex1Q2.png){: .center width=50%}    
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         **Q4a.** On va vider la pile ```P``` dans une pile ```Q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
