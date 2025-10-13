@@ -63,6 +63,7 @@ correction(True,
     fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
     fenetre.fill([0, 0, 0])
 
+
     x = 300
     y = 200
     dx = 4
@@ -535,7 +536,7 @@ correction(True,
 Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
