@@ -71,8 +71,6 @@
 
         ```python linenums='1'
         def taille(P):
-            if est_vide(P):
-                return 0
             Q = creer_pile()
             t = 0
             while not est_vide(P):
