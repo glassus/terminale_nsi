@@ -168,7 +168,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```python linenums='1'
@@ -182,7 +182,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         L'affichage produit est ```7, 5, 5, 2```.        
@@ -191,7 +191,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         - Cas n°1 : ```3, 2``` 
@@ -204,7 +204,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\" 
         La fonction ```mystere``` permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).        
@@ -213,7 +213,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -227,7 +227,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
