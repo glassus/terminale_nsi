@@ -168,7 +168,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```python linenums='1'
@@ -182,7 +182,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         L'affichage produit est ```7, 5, 5, 2```.        
