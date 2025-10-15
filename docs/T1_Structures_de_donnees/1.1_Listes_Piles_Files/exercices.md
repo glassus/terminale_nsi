@@ -265,7 +265,9 @@
         | 'rouge' |
         | 'jaune' |
          _________
-        ```       
+        ```     
+
+        La file F sera vide.  
     """
     )
     }}
