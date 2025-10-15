@@ -629,7 +629,7 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
     Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists){. target="_blank"} les méthodes des objets de types ```list```, notamment la méthode ```insert```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
