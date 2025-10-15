@@ -626,7 +626,7 @@ Nous y ajouterons comme précédemment la méthode facultative suivante :
 
     Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
     
-    Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
+    Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists){. target="_blank"} les méthodes des objets de types ```list```, notamment la méthode ```insert```.
 
     {{
     correction(False,
