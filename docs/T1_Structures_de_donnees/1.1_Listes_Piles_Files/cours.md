@@ -696,7 +696,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
     Créer une file avec deux piles.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
