@@ -253,7 +253,7 @@
     Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         Le contenu de la pile P sera 
