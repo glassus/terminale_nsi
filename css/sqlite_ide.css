@@ -66,3 +66,16 @@ div.sqlhidden > br,
 div.sqlhidden > button {
 	display: none;
 }
+
+/* FIX - Line numbers going over the header menu */
+.CodeMirror-gutter-wrapper { z-index: 3 }
+.CodeMirror-gutters { z-index: 2 }
+
+/* FIX - "Kinda" react to the palette color change (without going through CodeMirror maze) */
+.CodeMirror { background-color: rgba(255, 255, 255, 0.6) }
+.CodeMirror-gutters { opacity: 60%; }
+
+/* FIX - Hide column sorting buttons in result tables */
+.md-typeset table.sqltable th[role="columnheader"]::after {
+	display: none;
+}

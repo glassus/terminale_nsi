@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -4160,6 +4160,7 @@
   
 
 
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
@@ -4543,8 +4544,8 @@
 <script>
   onElementLoaded("div#ide1").then(() => {
     const ide = document.querySelector("div#ide1");
-    load(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/locations.db', '', '', );
-}).catch(() => {});
+    new SqlIde(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/locations.db', '', '', );
+}).catch(console.error);
 </script>
 <details class="note">
 <summary>Questions sur la relation <code>Agences</code></summary>
@@ -4703,8 +4704,8 @@
 <script>
   onElementLoaded("div#ide2").then(() => {
     const ide = document.querySelector("div#ide2");
-    load(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/soccer.db', '', '', );
-}).catch(() => {});
+    new SqlIde(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/soccer.db', '', '', );
+}).catch(console.error);
 </script>
 <p><strong>Q1</strong>. Combien d'équipes ont participé à ce championnat ?</p>
 <p><strong>Q2</strong>. Listez les noms des clubs ainsi que leur date de création dans l'ordre chronologique de leur création.</p>
@@ -4736,8 +4737,8 @@
 <script>
   onElementLoaded("div#ide3").then(() => {
     const ide = document.querySelector("div#ide3");
-    load(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/sql-murder-mystery.db', '', '', );
-}).catch(() => {});
+    new SqlIde(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/sql-murder-mystery.db', '', '', );
+}).catch(console.error);
 </script>
 </details>
 <details class="question">
@@ -4757,8 +4758,8 @@
 <script>
   onElementLoaded("div#ide4").then(() => {
     const ide = document.querySelector("div#ide4");
-    load(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/sql-murder-mystery.db', '', '', );
-}).catch(() => {});
+    new SqlIde(ide, 'https://glassus.github.io/terminale_nsi//T4_Bases_de_donnees/4.2_Langage_SQL/data/sql-murder-mystery.db', '', '', );
+}).catch(console.error);
 </script>
 </details>
 <p>Sur <a href="https://mystery.knightlab.com/walkthrough.html" target="_blank">la page officielle</a>, vous pouvez être guidés étape par étape jusqu'à la recherche du meurtrier (qui n'est pas la fin de l'énigme !)</p>

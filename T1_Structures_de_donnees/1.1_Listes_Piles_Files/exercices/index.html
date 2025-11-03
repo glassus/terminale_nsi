@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -4155,6 +4155,7 @@
 
   <h1>Exercices</h1>
 
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
@@ -4251,6 +4252,44 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf" target="blank">La Réunion J2 - 2022</a></p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<p><img alt="image" class="center" src="../data/ex2Q1.png" width="70%" /></p>
+</details>
+<details class="success">
+<summary>Correction Q2.a.</summary>
+<p>La variable <code>temp</code> contient la valeur 25.    </p>
+</details>
+<details class="success">
+<summary>Correction Q2.b.</summary>
+<p><code>p1</code> est identique, elle contient toujours les valeurs 25, 3 et 7. </p>
+</details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">addition</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">nb1</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">nb2</span> <span class="o">=</span> <span class="n">depiler</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">nb1</span> <span class="o">+</span> <span class="n">nb2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="n">pile_vide</span><span class="p">()</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">addition</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">empiler</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">multiplication</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -4419,11 +4458,200 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf" target="blank">Centres Étrangers J1 - 2022</a></p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<p>Il faut écrire l'instruction : </p>
+<div class="highlight"><pre><span></span><code><span class="n">panier_1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s1">&#39;café noir&#39;</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remplir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">panier_temp</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="n">panier_temp</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prix_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">panier_temp</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">article</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">panier_temp</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">remplir</span><span class="p">(</span><span class="n">panier_temp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>          
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">duree_passage_en_caisse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">horaire_premier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defiler</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">horaire_dernier</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defiler</span><span class="p">()[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">horaire_dernier</span> <span class="o">-</span> <span class="n">horaire_premier</span>                 
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
 <p>Exercice 3 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf" target="blank">Centres Etrangers J1 - 2023</a></p>
 <p><a class="" href="https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon" target="_blank">Jeu du Simon</a></p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajout</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+<span class="hll">    <span class="n">indice</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">couleurs</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
+</span>    <span class="k">return</span> <span class="n">f</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">vider</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="n">defiler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="n">ajout</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="hll">        <span class="n">c</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">affichage</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="hll">        <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>        
+</span></code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.a.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+<span class="hll">    <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</span>    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+        <span class="n">c_joueur</span> <span class="o">=</span> <span class="n">saisie_joueur</span><span class="p">()</span>
+<span class="hll">        <span class="n">c_seq</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</span><span class="hll">        <span class="k">if</span> <span class="n">c_joueur</span> <span class="o">==</span> <span class="n">c_seq</span><span class="p">:</span>
+</span><span class="hll">            <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c_seq</span><span class="p">)</span>
+</span>        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="n">vider</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.b.</summary>
+<p>Question bizarre...</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+        <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+            <span class="n">c_joueur</span> <span class="o">=</span> <span class="n">saisie_joueur</span><span class="p">()</span>
+            <span class="n">c_seq</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">c_joueur</span> <span class="o">==</span> <span class="n">c_seq</span><span class="p">:</span>
+                <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c_seq</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">vider</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+                <span class="n">vider</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+            <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+Le jeu ne s'arrête jamais ¯\_(ツ)_/¯</p>
+<p>ou bien, en version récursive qui ne s'arrête jamais non plus :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="n">affich_seq</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="n">stock</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+        <span class="n">c_joueur</span> <span class="o">=</span> <span class="n">saisie_joueur</span><span class="p">()</span>
+        <span class="n">c_seq</span> <span class="o">=</span> <span class="n">defiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">c_joueur</span> <span class="o">==</span> <span class="n">c_seq</span><span class="p">:</span>
+            <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c_seq</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">vider</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Perdu ! On rejoue !&#39;</span><span class="p">)</span>
+            <span class="n">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+        <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
+    <span class="n">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <details class="example">
 <summary>Exercice  7 (<img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f480.svg" title=":skull:" /> difficile <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f480.svg" title=":skull:" />)</summary>
@@ -4731,6 +4959,10 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
         <span class="k">while</span> <span class="ow">not</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">p_temp</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction Q1.</summary>
+<p><img alt="image" class="center autolight" src="../data/sept2024Q1.png" /> </p>
+</details>
 <p><strong>Q2</strong>. 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -4742,6 +4974,19 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
         <span class="n">resultat</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">resultat</span>
 </code></pre></div></td></tr></table></div></p>
+<details class="success">
+<summary>Correction Q2.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">produire_jeu</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultat</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resultat</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q3</strong>. 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -4759,6 +5004,49 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
         <span class="n">m2</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span>
 </code></pre></div></td></tr></table></div></p>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">scinder_jeu</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">m1</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">m2</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recombiner</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">m1</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">m2</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">m2</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q5.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">faro</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">scinder_jeu</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">recombiner</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>Pour les questions <strong>6.</strong> et <strong>7.</strong>, on pourra utiliser la fonction <code>identiques</code> ci-dessous :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -4818,10 +5106,153 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
+<details class="success">
+<summary>Correction Q6.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_identiques</span><span class="p">():</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">identiques</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">p2</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">identiques</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">p1</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+    <span class="n">p2</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">identiques</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q7.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ordre_faro</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p_origine</span> <span class="o">=</span> <span class="n">produire_jeu</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">faro</span><span class="p">(</span><span class="n">produire_jeu</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">identiques</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p_origine</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">faro</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">i</span>
+</code></pre></div></td></tr></table></div>
+<p>Voir aussi <a class="" href="https://en.wikipedia.org/wiki/Faro_shuffle" target="_blank">https://en.wikipedia.org/wiki/Faro_shuffle</a>     </p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1ME1.pdf" target="blank">Métropole J1 - 2025</a> </p>
+<details class="success">
+<summary>Correction Q1.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">tache1</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Répondre aux emails&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">tache2</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Ranger ma chambre&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">avancer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">duree_restante</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">duree_restante</span> <span class="o">-</span> <span class="n">n</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3.</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_terminee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">duree_restante</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4.</summary>
+<p>Après le rajout de la tâche n°6 et de la tâche n°7 :</p>
+<p><code>[début] (&lt;t3&gt;, 4) (&lt;t7&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t6&gt;, 2) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code>        </p>
+</details>
+<details class="success">
+<summary>Correction Q5.</summary>
+<p><code>f.defiler()[0]</code> renvoie <code>&lt;t3&gt;</code>.</p>
+<p>Après exécution, la file <code>f</code> contient:</p>
+<p><code>[début](&lt;t1&gt;, 3)(&lt;t2&gt;, 3)(&lt;t4&gt;, 1)(&lt;t5&gt;, 1)[fin]</code> </p>
+</details>
+<details class="success">
+<summary>Correction Q6.</summary>
+<p><code>f.examiner()[1]</code> renvoie <code>4</code>.</p>
+<p>Après exécution, la file <code>f</code> contient:</p>
+<p><code>[début](&lt;t3&gt;, 4) (&lt;t1&gt;, 3)(&lt;t2&gt;, 3)(&lt;t4&gt;, 1)(&lt;t5&gt;, 1)[fin]</code> </p>
+<p>(elle est inchangée)</p>
+</details>
+<details class="success">
+<summary>Correction Q7.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajouter_file_prio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="n">f_aux</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()</span> <span class="ow">and</span> <span class="n">f</span><span class="o">.</span><span class="n">examiner</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">p</span><span class="p">:</span>
+        <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">())</span>
+    <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">t</span><span class="p">,</span><span class="n">p</span><span class="p">))</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">f_aux</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">())</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">f_aux</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">f_aux</span><span class="o">.</span><span class="n">defiler</span><span class="p">())</span> 
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Correction Q8.</summary>
+<p>On peut dire que le nombre d'opérations est directement proportionnel en <code>m</code>, donc que la complexité de cette fonction est linéaire.</p>
+</details>
+<details class="success">
+<summary>Correction Q9.</summary>
+<p><code>3 7 3 3 3 1 2 1 2 2 6 6 6 4 5 4 5</code> </p>
+</details>
+<details class="success">
+<summary>Correction Q10.</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">planning</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">file</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+        <span class="n">tache</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tache</span><span class="p">)</span>
+        <span class="n">tache</span><span class="o">.</span><span class="n">avancer</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tache</span><span class="o">.</span><span class="n">est_terminee</span><span class="p">():</span>
+            <span class="n">ajouter_file_prio</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">tache</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -4845,7 +5276,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="16 octobre 2025 15:28:31 UTC">16 octobre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 novembre 2025 08:51:19 UTC">3 novembre 2025</span>
   </span>
 
     
