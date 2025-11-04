@@ -7,6 +7,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+    - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
     - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
     - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
 

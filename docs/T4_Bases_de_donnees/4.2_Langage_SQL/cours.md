@@ -415,6 +415,7 @@ Le résultat précédent a permis d'améliorer la visibilité de la table «empr
 
     ![](data/ex14.png)
 
+{#
 ### 1.4 Exercice d'application : The SQL Murder Mystery 
 Cet exercice en ligne est proposé le Knight Lab de l'université américaine Northwerstern University.
 
@@ -431,6 +432,7 @@ Rendez-vous sur [cette page](https://mystery.knightlab.com/walkthrough.html){:ta
 - Vous pouvez travailler en ligne ou bien dans votre SGBD préféré, avec la base [sql-murder-mystery.db](data/sql-murder-mystery.db). Attention pour valider votre réponse, il faudra vous rendre en bas de la page officielle.
 
 - Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target="_blank"}...
+#}
 
 ## 2. Création et modification d'une base de données
 

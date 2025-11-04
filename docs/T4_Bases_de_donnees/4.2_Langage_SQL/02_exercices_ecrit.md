@@ -44,7 +44,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
     
@@ -58,7 +58,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -97,7 +97,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -113,7 +113,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -129,7 +129,7 @@
     
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -144,7 +144,7 @@
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -171,7 +171,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -187,7 +187,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -205,7 +205,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -222,7 +222,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -238,7 +238,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -254,7 +254,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -277,7 +277,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction \"
         ```SQL
@@ -299,7 +299,7 @@
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\"
         La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
@@ -308,7 +308,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\"
         - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
@@ -321,7 +321,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\"
         La commande INSERT ne sert que pour insérer de nouveaux enregistrements, or le couple ('planche à voile' , 'La tramontane catalane') existe déjà dans la relation (et c'est une clé primaire donc on ne peut pas la retrouver deux fois).
@@ -336,7 +336,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\"
         ```SQL
@@ -350,7 +350,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\"
         ```SQL
@@ -362,7 +362,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
@@ -375,7 +375,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.a.\"
         ```SQL
@@ -389,7 +389,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
@@ -413,7 +413,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\"
         L'attribut ```id_mesure``` semble être une clé primaire acceptable car elle semble spécifique à chaque enregistrement.
@@ -422,7 +422,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\"
         L'attribut ```id_centres``` semble être une clé primaire de la relation ```Centres```. On le retrouve aussi (sous le même nom) dans la relation ```Mesures```. C'est donc un attribut qui permettra de faire une jointure entre les deux relations.
@@ -431,7 +431,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\"
         Cette requête va afficher tous les renseignements disponibles sur les centres dont l'altitude est strictement supérieure à 500m.        
@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\"
         ```SQL
@@ -453,7 +453,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\"
         ```SQL
@@ -467,7 +467,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\"
         Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
@@ -476,7 +476,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
@@ -488,7 +488,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.a.\"
         Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimale de tous les centres.
@@ -497,7 +497,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
@@ -523,7 +523,7 @@
  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\"
         ```
@@ -535,7 +535,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\"
         ```SQL
@@ -548,7 +548,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c.\"
         ```
@@ -564,7 +564,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.d.\"
         ```SQL
@@ -576,7 +576,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.e.\"
         ```SQL
@@ -589,7 +589,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\"
         La clé étrangère de la table ```morceaux``` est l'attribut ```id_interprete``` qui fait référence à la clé primaire ```id_interprete``` de la table ```interpretes```.   
@@ -598,7 +598,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\"
         ```morceaux``` : ((<ins>id_morceau</ins>, Int), (titre, Text), (annee, Int), (id_interprete#, Int))  
@@ -608,7 +608,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\"    
         La requête va renvoyer une erreur car la clé primaire 1 est déjà présente dans la table : il s'agit d'une violation de la contrainte de relation.
@@ -617,7 +617,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\"
         ```SQL
@@ -630,7 +630,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
@@ -642,7 +642,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.c.\"
         ```SQL
@@ -654,7 +654,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\"
         ```SQL
@@ -676,7 +676,7 @@
     Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\"
         Le couple ```(NumClient, NumChambre)``` ne pouvait pas être une clé primaire car un même client peut revenir dans l'hôtel et avoir la même chambre qu'à un précédent séjour. Le couple ```(NumClient, NumChambre)``` ne serait donc pas unique et ne peut donc pas servir de clé primaire pour la relation ```Reservations```.
@@ -685,7 +685,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction Q2.a.\"
@@ -698,7 +698,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction Q2.b.\"
@@ -712,7 +712,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction Q3.\"
@@ -727,7 +727,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction Q4.a.\"
@@ -741,7 +741,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction Q4.b\"
@@ -762,7 +762,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le séparateur utilisé est le point-virgule ```;```.
@@ -771,7 +771,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Ce choix a été fait pour avoir la possibilité d'utiliser la virgule à l'intérieur des champs, comme dans ```Allemagne, Italie, Japon```.
@@ -780,7 +780,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='2-4'
@@ -795,7 +795,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         La méthode utilisée est la méthode ```sleep```, à la ligne 37. 
@@ -804,7 +804,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```donnees[i]``` est un dictionnaire.
@@ -867,7 +867,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -1020,7 +1020,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le résultat de la requête est :
@@ -1033,7 +1033,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -1046,7 +1046,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```sql
@@ -1058,7 +1058,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
@@ -1070,7 +1070,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Le médicament d'```id_medic``` égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.
@@ -1081,7 +1081,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```sql
@@ -1094,7 +1094,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         $1 \times 3,50 + 3 \times 5,50 = 20$ 
@@ -1106,7 +1106,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -1127,7 +1127,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
@@ -1136,7 +1136,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Cette requête pose problème car la valeur 1 de l'attribut ```idagres``` n'existe pas dans la table ```agres```.
@@ -1145,7 +1145,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -1158,7 +1158,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Le résultat de cette requête est 
@@ -1172,7 +1172,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -1185,7 +1185,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
@@ -1198,7 +1198,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -1214,7 +1214,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\"
         ```sql

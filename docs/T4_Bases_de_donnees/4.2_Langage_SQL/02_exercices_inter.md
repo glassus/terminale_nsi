@@ -12,7 +12,7 @@
     **Q1.** Travail sur SELECT, (base de données Nobel) :arrow_right: [ici](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial){. target="_blank"}.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
@@ -151,7 +151,7 @@
     **Q2.** Travail sur SUM et COUNT, (base de données World) :arrow_right: [ici](https://sqlzoo.net/wiki/SUM_and_COUNT){. target="_blank"}. (jusqu'à la question 5.)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Corrections extraites du dépôt *https://github.com/jisaw/sqlzoo-solutions*.
@@ -233,7 +233,7 @@
     **Q3.** Travail sur JOIN, (base de données Euro2012) :arrow_right: [ici](https://sqlzoo.net/wiki/The_JOIN_operation){. target="_blank"}.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```SQL
@@ -401,7 +401,7 @@
         **Q1**. Visualisez toute la relation ```Agences```
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -416,7 +416,7 @@
         **Q2**. Listez uniquement les noms des agences et de leur ville.
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -432,7 +432,7 @@
 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -450,7 +450,7 @@
 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -469,7 +469,7 @@
         **Q5**. Déterminez le nombre de voitures que vous possédez. 
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -484,7 +484,7 @@
 
         **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -499,7 +499,7 @@
 
         **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -514,7 +514,7 @@
 
         **Q8**.  Quel est le kilométrage maximum des véhicules ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -528,7 +528,7 @@
 
         **Q9**.  Quel est le kilométrage moyen des véhicules ?
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -544,7 +544,7 @@
         **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -562,7 +562,7 @@
 
         **Q11**. Visualisez toute la relation Locations. 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -577,7 +577,7 @@
 
         **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -594,7 +594,7 @@
 
         **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -609,7 +609,7 @@
 
         **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -625,7 +625,7 @@
 
         **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -641,7 +641,7 @@
 
         **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -657,7 +657,7 @@
 
         **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```sql
@@ -848,7 +848,7 @@
     - Vous pouvez si vous le souhaitez télécharger la base [sql-murder-mystery.db](data/sql-murder-mystery.db). 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target='_blank'}.
