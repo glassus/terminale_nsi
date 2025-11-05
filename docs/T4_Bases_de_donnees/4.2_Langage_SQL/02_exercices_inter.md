@@ -79,7 +79,7 @@
         */
         SELECT winner
         FROM nobel
-        WHERE winner LIKE 'john%'
+        WHERE winner LIKE 'John%'
 
         --#8
         /*

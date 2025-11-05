@@ -135,7 +135,7 @@
     2. À l'arrivée à Privas, qui est arrivé en premier entre Primož ROGLIČ et Simone CONSONNI ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1. Temps de Guillaume Martin (dossard 121): 04:07:47
