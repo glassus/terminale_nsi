@@ -38,7 +38,7 @@
     7. Quelle est la clé étrangère de la relation ```Voitures ``` ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1. 6
