@@ -112,7 +112,7 @@ Les différentes valeurs sont stockées au préalable dans une liste de tuples.
     )
     }}
 
-#### 1.4 ☠ Exemple d'injection SQL
+#### 1.4 :skull: Exemple d'injection SQL :skull:
 L'injection SQL est une technique consistant à écrire du code SQL à un endroit qui n'est pas censé en recevoir.
 
 
