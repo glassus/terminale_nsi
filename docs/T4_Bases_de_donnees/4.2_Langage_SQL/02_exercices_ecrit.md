@@ -4,7 +4,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     *(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)*
 
@@ -160,7 +160,7 @@
     )
     }}       
 
-!!! abstract "{{exercice()}}"
+!!! example "{{exercice()}}"
     _basé sur le travail de G.Viateau (Bayonne)_
 
     On considère ci-dessous le schéma de la base de données du stock d'un supermarché :
@@ -290,7 +290,7 @@
     )
     }}        
 
-!!! abstract "{{exercice()}}"
+!!! example "{{exercice()}}"
     Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
 
@@ -404,7 +404,7 @@
 
 
 
-!!! abstract "{{exercice()}}"
+!!! example "{{exercice()}}"
     Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
     
 
@@ -518,7 +518,7 @@
 
 
 
-!!! abstract "{{exercice()}}"
+!!! example "{{exercice()}}"
     Exercice 4 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
  
 
@@ -672,7 +672,7 @@
 
 
 
-!!! abstract "{{exercice()}}"
+!!! example "{{exercice()}}"
     Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
     {{

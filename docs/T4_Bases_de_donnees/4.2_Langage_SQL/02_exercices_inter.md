@@ -6,7 +6,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     *Questions interactives à réaliser sur le site sqlzoo.net.*
 
     **Q1.** Travail sur SELECT, (base de données Nobel) :arrow_right: [ici](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial){. target="_blank"}.
@@ -387,7 +387,7 @@
 
         
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Gestion d'un réseau d'agences de location de voitures.   
     *D'après le travail de J. Le Coupanec (Académie de Rennes)*
 
@@ -674,7 +674,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Championnat de France de Football 2015-2016
 
     *D'après le travail de J. Le Coupanec (Académie de Rennes)*
@@ -816,7 +816,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Cet exercice en ligne est proposé le Knight Lab de l'université américaine Northwerstern University.
 
     ![](data/murdermystery.png){: .center width=50%}
