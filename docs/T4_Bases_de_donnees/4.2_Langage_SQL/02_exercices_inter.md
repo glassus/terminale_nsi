@@ -469,7 +469,7 @@
         **Q5**. Déterminez le nombre de voitures que vous possédez. 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -484,7 +484,7 @@
 
         **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -499,7 +499,7 @@
 
         **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -514,7 +514,7 @@
 
         **Q8**.  Quel est le kilométrage maximum des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -528,7 +528,7 @@
 
         **Q9**.  Quel est le kilométrage moyen des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -544,7 +544,7 @@
         **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -562,7 +562,7 @@
 
         **Q11**. Visualisez toute la relation Locations. 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -577,7 +577,7 @@
 
         **Q12**. Déterminez le nombre de locations effectuées avec changement d'agence
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -594,7 +594,7 @@
 
         **Q13**. Déterminez le nombre total de kilomètres effectués durant les locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -609,7 +609,7 @@
 
         **Q14**. Listez toutes les locations en y associant les caractéristiques du véhicule
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -625,7 +625,7 @@
 
         **Q15**. Affichez le nom et l'immatriculation du véhicule ainsi que la date de la location et le kilométrage réalisé pour chacune des locations
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -641,7 +641,7 @@
 
         **Q16**. Affichez une seule fois le nom et l'immatriculation des véhicules ayant déjà été loués.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -657,7 +657,7 @@
 
         **Q17**. Affichez les locations du véhicule immatriculé AB-224-BA en précisant le nom de l'agence de départ ainsi que la ville de départ dans l'ordre chronologique des locations.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
