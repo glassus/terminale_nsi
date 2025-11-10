@@ -469,7 +469,7 @@
         **Q5**. Déterminez le nombre de voitures que vous possédez. 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -484,7 +484,7 @@
 
         **Q6**. Déterminez l'âge minimum et maximum de vos véhicules.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -499,7 +499,7 @@
 
         **Q7**. Quels sont la marque et le modèle de votre dernière acquisition qui date de trois mois ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -514,7 +514,7 @@
 
         **Q8**.  Quel est le kilométrage maximum des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -528,7 +528,7 @@
 
         **Q9**.  Quel est le kilométrage moyen des véhicules ?
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
@@ -544,7 +544,7 @@
         **Q10**. Afficher toute la flotte de véhicules par ordre décroissant de kilométrage.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```sql
