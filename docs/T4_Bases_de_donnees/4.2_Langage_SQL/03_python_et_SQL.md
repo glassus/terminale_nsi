@@ -181,7 +181,7 @@ Le reste du code (qui n'est pas correct) est ignoré car ```--``` est le symbole
 
 **Remarques** :  
 Évidemment, ce code a été fait spécifiquement pour être vulnérable à l'injection SQL. Il suffit d'ailleurs de remplacer le ```c.executescript(p)``` par ```c.execute(p)``` pour que le code reste fonctionnel mais refuse l'injection SQL. 
-Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au prix de manipulations bien sûr plus complexes que celles que nous venons de voir (vous pouvez par exemple regarder [ici](http://igm.univ-mlv.fr/~dr/XPOSE2011/injections_SQL/exploit.php)). 
+Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au prix de manipulations bien sûr plus complexes que celles que nous venons de voir (vous pouvez par exemple regarder [ici](http://igm.univ-mlv.fr/~dr/XPOSE2011/injections_SQL/exploit.php){. target="_blank"}. 
 
 Rappelons enfin que ce genre de pratiques est interdit sur un serveur qui ne vous appartient pas.
 
