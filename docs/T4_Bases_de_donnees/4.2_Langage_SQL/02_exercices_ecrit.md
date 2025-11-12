@@ -171,7 +171,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -187,7 +187,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -205,7 +205,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -222,7 +222,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -238,7 +238,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -254,7 +254,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
@@ -277,7 +277,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction \"
         ```SQL
