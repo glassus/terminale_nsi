@@ -848,7 +848,7 @@
     - Vous pouvez si vous le souhaitez télécharger la base [sql-murder-mystery.db](data/sql-murder-mystery.db). 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Vous pouvez trouver des éléments de correction [ici](https://gist.github.com/glassus/bbce06fec9e733c88e1085fc8c3a73ab){:target='_blank'}.
