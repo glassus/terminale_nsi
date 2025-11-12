@@ -7,14 +7,16 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
     - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
     - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
     - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
     - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-    - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
+
 
 ### *Thèmes déjà traités*
+- [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
 - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
