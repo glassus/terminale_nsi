@@ -4972,7 +4972,7 @@
 <li>La nouvelle table peut être ouverte avec <code>DB Browser</code> pour vérifier sa structure et ses données.</li>
 </ul>
 <h4 id="12-insertion-denregistrements-dans-la-table">1.2 Insertion d'enregistrements dans la table<a class="headerlink" href="#12-insertion-denregistrements-dans-la-table" title="Permanent link">⚓︎</a></h4>
-<p>Les morceaux de code ci-dessous sont à positionner entre les balises <code># ---- début des instructions SQL</code>  et <code># ---- fin des instructions SQL</code>.</p>
+<p>Les morceaux de code ci-dessous sont à positionner entre les balises <code># ---- début des instructions SQL</code>  et <code># ---- fin des instructions SQL</code>, <strong>après</strong> la commande de création de la table.</p>
 <h5 id="121-insertion-dun-enregistrement-unique">1.2.1 Insertion d'un enregistrement unique<a class="headerlink" href="#121-insertion-dun-enregistrement-unique" title="Permanent link">⚓︎</a></h5>
 <div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;INSERT INTO bulletin VALUES (&#39;Simpson&#39;, &#39;Bart&#39;, 17)&#39;&#39;&#39;</span><span class="p">)</span>
 </code></pre></div>
@@ -5049,10 +5049,19 @@ La requête qui a été formulée est <code>INSERT INTO notes VALUES ('g','3'); 
 <p>Dans un premier temps, le couple <code>('g','3')</code> a été inséré.<br />
 Puis l'ordre a été donné de détruire la table <code>notes</code>.<br />
 Le reste du code (qui n'est pas correct) est ignoré car <code>--</code> est le symbole du commentaire en SQL (l'équivalent du # de Python).  </p>
-<p><strong>Remarques</strong> :<br />
-Évidemment, ce code a été fait spécifiquement pour être vulnérable à l'injection SQL. Il suffit d'ailleurs de remplacer le <code>c.executescript(p)</code> par <code>c.execute(p)</code> pour que le code reste fonctionnel mais refuse l'injection SQL. 
+<p><strong>Remarques</strong> : </p>
+<ul>
+<li>
+<p>Évidemment, ce code a été fait spécifiquement pour être vulnérable à l'injection SQL. Il suffit d'ailleurs de remplacer le <code>c.executescript(p)</code> par <code>c.execute(p)</code> pour que le code reste fonctionnel mais refuse l'injection SQL. 
 Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au prix de manipulations bien sûr plus complexes que celles que nous venons de voir (vous pouvez par exemple regarder <a class="" href="http://igm.univ-mlv.fr/~dr/XPOSE2011/injections_SQL/exploit.php" target="_blank">ici</a>. </p>
+</li>
+<li>
 <p>Rappelons enfin que ce genre de pratiques est interdit sur un serveur qui ne vous appartient pas.</p>
+</li>
+<li>
+<p>Si cela vous a plu, vous pouvez aller visiter l'excellent site <a class="" href="https://www.hacksplaining.com/lessons/sql-injection" target="_blank">https://www.hacksplaining.com/lessons/sql-injection</a>.</p>
+</li>
+</ul>
 <h3 id="2-lecture-des-enregistrements">2. Lecture des enregistrements<a class="headerlink" href="#2-lecture-des-enregistrements" title="Permanent link">⚓︎</a></h3>
 <p>La récupération des résultats des requêtes peut se faire avec la méthode <code>fetchall()</code>, qui renvoie une liste de tuples. </p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
@@ -5104,7 +5113,7 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 novembre 2025 17:33:46 UTC">11 novembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="13 novembre 2025 08:34:30 UTC">13 novembre 2025</span>
   </span>
 
     
