@@ -40,7 +40,7 @@ connexion.close()
 - La nouvelle table peut être ouverte avec ```DB Browser``` pour vérifier sa structure et ses données.
 
 #### 1.2 Insertion d'enregistrements dans la table
-Les morceaux de code ci-dessous sont à positionner entre les balises ```# ---- début des instructions SQL```  et ```# ---- fin des instructions SQL```.
+Les morceaux de code ci-dessous sont à positionner entre les balises ```# ---- début des instructions SQL```  et ```# ---- fin des instructions SQL```, **après** la commande de création de la table.
 
 ##### 1.2.1 Insertion d'un enregistrement unique
 ```python
@@ -179,13 +179,14 @@ Dans un premier temps, le couple ```('g','3')``` a été inséré.
 Puis l'ordre a été donné de détruire la table ```notes```.  
 Le reste du code (qui n'est pas correct) est ignoré car ```--``` est le symbole du commentaire en SQL (l'équivalent du # de Python).  
 
-**Remarques** :  
-Évidemment, ce code a été fait spécifiquement pour être vulnérable à l'injection SQL. Il suffit d'ailleurs de remplacer le ```c.executescript(p)``` par ```c.execute(p)``` pour que le code reste fonctionnel mais refuse l'injection SQL. 
+**Remarques** : 
+ 
+- Évidemment, ce code a été fait spécifiquement pour être vulnérable à l'injection SQL. Il suffit d'ailleurs de remplacer le ```c.executescript(p)``` par ```c.execute(p)``` pour que le code reste fonctionnel mais refuse l'injection SQL. 
 Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au prix de manipulations bien sûr plus complexes que celles que nous venons de voir (vous pouvez par exemple regarder [ici](http://igm.univ-mlv.fr/~dr/XPOSE2011/injections_SQL/exploit.php){. target="_blank"}. 
 
-Rappelons enfin que ce genre de pratiques est interdit sur un serveur qui ne vous appartient pas.
+- Rappelons enfin que ce genre de pratiques est interdit sur un serveur qui ne vous appartient pas.
 
-
+- Si cela vous a plu, vous pouvez aller visiter l'excellent site [https://www.hacksplaining.com/lessons/sql-injection](https://www.hacksplaining.com/lessons/sql-injection){. target="_blank"}.
 
 ### 2. Lecture des enregistrements
 

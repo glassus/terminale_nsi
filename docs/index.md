@@ -7,6 +7,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
     - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
     - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
     - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
