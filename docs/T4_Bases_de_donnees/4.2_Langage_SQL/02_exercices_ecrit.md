@@ -299,7 +299,7 @@
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\"
         La relation Sport a pour clé primaire le **couple** NomSport et nomStation, et pour clé étrangère l'attribut nomStation, clé primaire de la relation Station.
@@ -308,7 +308,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\"
         - Contrainte d'intégrité de domaine :  l'attribut Prix doit être un nombre entier.
