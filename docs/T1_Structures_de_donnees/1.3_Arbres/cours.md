@@ -285,7 +285,7 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![correction](data/exo_imp.png){: .center .autolight} 
@@ -475,7 +475,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
     Écrire le tuple représentant l'arbre ci-dessous.       
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -517,7 +517,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
     ```       
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![correction](data/corrtuple.png){: .center}        
@@ -635,7 +635,7 @@ a.right.right.right = Arbre(3)
     - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
     - À l'aide de la vidéo, codez le parcours infixe en itératif.  
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction\" 

@@ -5,7 +5,7 @@
     Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 1.\" 
         C'est un arbre binaire car chaque nœud possède au maximum deux fils.
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.a\" 
         ```V``` est un dictionnaire. 
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.b\" 
         ```python
@@ -34,7 +34,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.c\" 
         ```python linenums='1'
@@ -50,7 +50,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 2.d\" 
         ```python linenums='1'
@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 3.\" 
         Cet algorithme calcule le nombre total de nœuds de l'arbre, donc la taille de l'arbre.
@@ -77,7 +77,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.a\" 
         Le parcours est ```A-B-C-E-D-F-G-I-H-J```         
@@ -86,7 +86,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.b\" 
         C'est un parcours préfixe.           
@@ -104,7 +104,7 @@
     ![image](data/ex1a.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La taille est 9, la hauteur est 4.        
@@ -130,7 +130,7 @@
 
     **a**. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         G est associé à 1010.  
@@ -139,7 +139,7 @@
     }}
     **b**. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         13 s'écrit 1101 en binaire, c'est donc le nœud I.          
@@ -149,7 +149,7 @@
     **c**. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
     bas ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les nœuds les plus en bas sont notés sur $h$ bits.      
@@ -159,7 +159,7 @@
     **d**. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a :
     $h\leqslant n \leqslant 2^h-1$
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
@@ -184,7 +184,7 @@
 
     **a**. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Tableau : ```[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]``` .     
@@ -193,7 +193,7 @@
     }}
     **b**. On considère le père du nœud d’indice $i$ avec $i \geqslant 2$. Quel est son indice dans le tableau ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le père du nœud d'indice ```i``` a pour indice ```i//2```.       
@@ -213,7 +213,7 @@
     comme dans la question précédente.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -246,7 +246,7 @@
 
     **1.a** Donner le nombre de feuilles de cet arbre et préciser leur valeur (étiquette).  
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **1.a.** Il y a 4 feuilles, d'étiquette 12, `val`, 21 et 32. 
@@ -256,7 +256,7 @@
 
     **1.b** Donner le sous arbre-gauche du nœud 23.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **1.b.** Le sous-arbre gauche du nœud 23 est 19-21. 
@@ -266,7 +266,7 @@
 
     **1.c** Donner la hauteur et la taille de l’arbre.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **1.c.** La hauteur de l'arbre est 4. Sa taille est 9.
@@ -275,7 +275,7 @@
     }}
     **1.d** Donner les valeurs entières possibles de `val` pour cet arbre binaire de recherche.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **1.d.** Les valeurs possibles de ```val``` sont 16 et 17.
@@ -292,7 +292,7 @@
 
     **a.** Donner les valeurs d’affichage des nœuds dans le cas du parcours infixe de l’arbre.  
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **2.a.** Parcours infixe : 12-13-15-16-18-19-21-23-32  
@@ -301,7 +301,7 @@
     }}
     **b**. Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe de l’arbre.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **2.b.** Parcours suffixe : 12-13-16-15-21-19-32-23-18  
@@ -321,7 +321,7 @@
     racine.insere_tout([12, 13, 15, 16, 19, 21, 32, 23])
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **3.a.** ![image](data/exobac.png){: .center}
@@ -331,7 +331,7 @@
     **b.** Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
     le nombre `val` est égal à 16.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **3.b.**   
@@ -347,7 +347,7 @@
     blocs (repérés de 1 à 3) suite à l’application de la méthode `insere(19)` au nœud racine
     de cet arbre.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **3.c.** Bloc 3 - Bloc 2 - Bloc 1  
@@ -360,7 +360,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **4.**  
@@ -467,7 +467,7 @@
     **1.b.** Quelle est la hauteur de l’arbre ci-dessus ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **1.a.** La taille de l'arbre est 7.  
@@ -482,7 +482,7 @@
     que celle de l’arbre initial.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **2.** ![image](data/ex3-2.png){: .center}        
@@ -537,7 +537,7 @@
     a.insere(5)
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **3.** ![image](data/ex3-3.png){: .center}        
@@ -570,7 +570,7 @@
     l’arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **4.**
@@ -588,7 +588,7 @@
     la taille d’un arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **5.**
@@ -620,7 +620,7 @@
     « bien construit » de hauteur $ℎ$ ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **6.a.** La configuration minimale d'un arbre bien construit de hauteur $h$ peut être :
@@ -638,7 +638,7 @@
     **6.b** Écrire la méthode ```bien_construit``` demandée.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **6.b.** Intuitivement, un arbre est *mal construit* si sa hauteur est trop grande par rapport à sa taille (trop *étiré*).
@@ -680,7 +680,7 @@
     **Q1.** Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le nœud racine est 5 et ses fils sont 2 et 7.        
@@ -692,7 +692,7 @@
     valeur 3.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La branche qui se termine par la feuille 3 a pour nœuds 5, 2 et 3.
@@ -705,7 +705,7 @@
     **Q3.** Dessiner l’arbre obtenu après l’ajout de la valeur 6.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex5_3.png){: .center}
@@ -750,7 +750,7 @@
     **Q1.** Expliquer le rôle de la fonction `__init__`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La fonction `__init__` est appelée «méthode constructeur», c'est elle qui crée l'objet et le dote de tous les attributs nécessaires.
@@ -764,7 +764,7 @@
     présent dans l’arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé.         
@@ -786,7 +786,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -812,7 +812,7 @@
     recherche dans l’ordre croissant.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le parcours qui permet de visiter les valeurs d'un ABR dans l'ordre croissant est le parcours infixe.        
@@ -826,7 +826,7 @@
     du tri par sélection.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         *question difficile*
@@ -886,7 +886,7 @@
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex6_1.png){: .center width=50%}
@@ -908,7 +908,7 @@
     binaires de recherche.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
@@ -930,7 +930,7 @@
 
     **Q3.a.** Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37        
@@ -945,7 +945,7 @@
     propositions suivantes : Préfixe, Suffixe ou Infixe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On reconnait un parcours préfixe.        
@@ -959,7 +959,7 @@
     croissant.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Pour afficher les valeurs d'un ABR dans un ordre croissant, il faut utiliser un parcours infixe. Un algorithme récursif de parcours infixe peut être celui-ci:
@@ -984,7 +984,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```'Bonjour Alan !'```    
@@ -994,7 +994,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         Ce sont des booléens. ```x``` vaut ```False```, ```y``` vaut ```True```.        
@@ -1003,7 +1003,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c.\" 
         ```python linenums='1'
@@ -1019,7 +1019,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a\" 
         ![image](data/23-NSIJ2G11_1.png){: .center}
@@ -1029,7 +1029,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\" 
         ![image](data/23-NSIJ2G11_2.png){: .center}
@@ -1039,7 +1039,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a\" 
         L'exécution de ```mystere(abr_mots_francais)``` va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste ```liste_mots_francais```, et donc dans l'arbre ``` abr_mots_francais```. 
@@ -1051,7 +1051,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         ```python linenums='1'
@@ -1067,7 +1067,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.a.\" 
         ```python linenums='1'
@@ -1084,7 +1084,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b.\" 
         Cette commande va **d'abord** chercher dans la liste tous les mots de 3 lettres qui comportent un ```x``` en dernière position (indice 2).
@@ -1098,7 +1098,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.c.\" 
         ```python
