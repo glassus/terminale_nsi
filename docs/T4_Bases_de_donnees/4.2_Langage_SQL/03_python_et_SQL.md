@@ -220,6 +220,58 @@ Reprendre le mini-projet précédent, en rendant possible à l'utilisateur de re
 
 ![](data/mp2.gif)
 
+??? aide "Aide"
+    ```python linenums='1'
+    import sqlite3
+
+    #Connexion
+    connexion = sqlite3.connect('mabase.db')
+
+    #Récupération d'un curseur
+    c = connexion.cursor()
+
+    c.execute(\"\"\"
+        CREATE TABLE IF NOT EXISTS notes(
+        Nom TEXT,
+        Note INT);
+        \"\"\")
+
+
+    def menu():
+        print(\"Menu\")
+        print(\"1. Rentrer des notes\")
+        print(\"2. Consulter des notes\")
+        print(\"3. Quitter\")
+        rep = input(\"choix ? \")
+        if rep == '1':
+            saisie()
+        if rep == '2':
+            consultation()
+        if rep == '3':
+            pass
+
+    def saisie():
+        while True :
+            ...
+
+
+            #Validation
+            connexion.commit()
+        menu()
+
+    def consultation():
+        print(\"Consultation des notes (taper Q pour sortir)\")
+        while True :
+            ...
+
+        menu()
+
+    menu()
+
+    connexion.close()    
+    ```
+
+
 {{
 correction(False,
 """
