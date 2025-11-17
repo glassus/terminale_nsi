@@ -382,14 +382,14 @@
         SELECT Station.ville, Station.nomStation 
         FROM Station
         JOIN Sport ON Sport.nomStation = Station.nomStation
-        WHERE Sport.nomSport = 'plongee'        
+        WHERE Sport.nomSport = 'plongée'        
         ```
     """
     )
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
