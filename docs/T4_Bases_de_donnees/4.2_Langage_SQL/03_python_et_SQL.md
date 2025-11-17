@@ -285,19 +285,19 @@ correction(False,
     #Récupération d'un curseur
     c = connexion.cursor()
 
-    c.execute(\"\"\"
+    c.execute('''
         CREATE TABLE IF NOT EXISTS notes(
         Nom TEXT,
         Note INT);
-        \"\"\")
+        ''')
 
 
     def menu():
-        print(\"Menu\")
-        print(\"1. Rentrer des notes\")
-        print(\"2. Consulter des notes\")
-        print(\"3. Quitter\")
-        rep = input(\"choix ? \")
+        print('Menu')
+        print('1. Rentrer des notes')
+        print('2. Consulter des notes')
+        print('3. Quitter')
+        rep = input('choix ? ')
         if rep == '1':
             saisie()
         if rep == '2':
@@ -319,13 +319,13 @@ correction(False,
         menu()
 
     def consultation():
-        print(\"Consultation des notes (taper Q pour sortir)\")
+        print('Consultation des notes (taper Q pour sortir)')
         while True :
             nom = input('Nom ? ')
             if nom in ['Q','q'] :
                 break
             data = (nom, )
-            c.execute(\"SELECT note FROM notes WHERE Nom = ?\", data)
+            c.execute('SELECT note FROM notes WHERE Nom = ?', data)
             for val in c.fetchall():
                 print(val[0])
         menu()
