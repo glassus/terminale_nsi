@@ -273,7 +273,7 @@ Reprendre le mini-projet précédent, en rendant possible à l'utilisateur de re
 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python
