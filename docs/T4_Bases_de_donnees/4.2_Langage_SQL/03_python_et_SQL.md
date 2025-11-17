@@ -44,7 +44,7 @@ Les morceaux de code ci-dessous sont à positionner entre les balises ```# ---- 
 
 ##### 1.2.1 Insertion d'un enregistrement unique
 ```python
-c.execute('''INSERT INTO bulletin VALUES ('Simpson', 'Bart', 17)''')
+c.execute('INSERT INTO bulletin VALUES ('Simpson', 'Bart', 17)')
 ``` 
 
 Pensez à vérifier avec  ```DB Browser``` si les modifications sont effectives.
@@ -52,7 +52,7 @@ Pensez à vérifier avec  ```DB Browser``` si les modifications sont effectives.
 ##### 1.2.2 Insertion d'un enregistrement unique avec variable
 ```python
 data = ('Simpson', 'Maggie', 2)
-c.execute('''INSERT INTO bulletin VALUES (?,?,?)''', data)
+c.execute('INSERT INTO bulletin VALUES (?,?,?)', data)
 ``` 
 
 
@@ -60,7 +60,7 @@ c.execute('''INSERT INTO bulletin VALUES (?,?,?)''', data)
 ```python
 lst_notes = [ ('Simpson', 'Lisa', 19), ('Muntz', 'Nelson', 4), ('Van Houten', 'Milhouse', 12) ]
 
-c.executemany('''INSERT INTO bulletin VALUES (?, ?, ?)''', lst_notes)
+c.executemany('INSERT INTO bulletin VALUES (?, ?, ?)', lst_notes)
 ``` 
 Les différentes valeurs sont stockées au préalable dans une liste de tuples.
 
@@ -98,7 +98,7 @@ Les différentes valeurs sont stockées au préalable dans une liste de tuples.
                 break
             note = input('Note ? ')
             data = (nom, note)
-            c.execute('''INSERT INTO notes VALUES (?,?)''', data)
+            c.execute('INSERT INTO notes VALUES (?,?)', data)
 
             #Validation
             connexion.commit()
@@ -203,7 +203,7 @@ c = connexion.cursor()
 
 data = ('Simpson', )
 
-c.execute("SELECT Prénom FROM Bulletin WHERE Nom = ?", data)
+c.execute('SELECT Prénom FROM Bulletin WHERE Nom = ?', data)
 print(c.fetchall())  
 
 
@@ -273,7 +273,7 @@ Reprendre le mini-projet précédent, en rendant possible à l'utilisateur de re
 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python
@@ -312,7 +312,7 @@ correction(False,
                 break
             note = input('Note ? ')
             data = (nom, note)
-            c.execute('''INSERT INTO notes VALUES (?,?)''', data)
+            c.execute('INSERT INTO notes VALUES (?,?)', data)
 
             #Validation
             connexion.commit()
