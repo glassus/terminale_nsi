@@ -510,7 +510,7 @@ CREATE TABLE Table_notes (
         NSI INTEGER
         );
 
-INSERT INTO Table_notes (Nom, Maths, Anglais, NSI) 
+INSERT INTO Table_notes 
 VALUES
 	('Alice', 16, 11, 17),
 	('Bob', 12, 15, 10),
