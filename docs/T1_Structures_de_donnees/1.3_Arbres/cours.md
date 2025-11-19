@@ -39,7 +39,7 @@ dans l'arbre ci-dessus,
 
 ![image](data/windsor.png){: .center width=60%}
 
-Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir [ici](https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg ) ), qui laissait apparaître les parents de chaque enfant ?
+Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir [ici](https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg){. target="_blank"} ), qui laissait apparaître les parents de chaque enfant ?
 
 #### 1.2.2 Le DOM d'une page web
 DOM : Document Object Model
@@ -61,6 +61,7 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
     - ```cd Dossier``` : pour se rendre dans le repértoire ```Dossier```
     - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
     - ```unzip monarchive.zip``` : pour décompresser une archive
+    - ```cat monfichier.txt``` : pour lire le contenu d'un fichier dans le terminal 
     - ```tree``` : pour afficher l'arborescence du répertoire courant
     - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
@@ -421,7 +422,7 @@ def affiche(self, indent = 0):
         s += self.right.affiche(indent + 1)
     if self.right is None and self.left is not None:
         s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'  
-    return s
+    print(s)
 ```
 
 La représentation de cet arbre :
@@ -429,7 +430,7 @@ La représentation de cet arbre :
 donnera alors :
 
 ```python
->>> print(a.affiche())
+>>> a.affiche()
 |_4
   |_3
     |_6
@@ -552,6 +553,12 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
 
 #### 4.1.1 Parcours préfixe
 
+!!! note "Parcours préfixe :heart:"
+    ```python
+    def prefixe(arbre):
+        ...
+    ```
+
 {#
 !!! note "Parcours préfixe :heart:"
 
@@ -590,7 +597,13 @@ a.right.right.right = Arbre(3)
 
 #### 4.1.2 Parcours infixe
 
+!!! note "Parcours infixe :heart:"
+    ```python
+    def infixe(arbre):
+        ...
+    ```
 
+{#
 !!! note "Parcours infixe :heart:"
 
     ```python
@@ -602,7 +615,7 @@ a.right.right.right = Arbre(3)
         infixe(arbre.right)
     ```
 
-
+#}
 
 ```python
 >>> infixe(a)
@@ -611,8 +624,12 @@ a.right.right.right = Arbre(3)
 
 #### 4.1.3 Parcours postfixe
 
-
-
+!!! note "Parcours postfixe :heart:"
+    ```python
+    def postfixe(arbre):
+        ...
+    ```
+{#
 !!! note "Parcours postfixe :heart:"
 
     ```python
@@ -623,7 +640,7 @@ a.right.right.right = Arbre(3)
         postfixe(arbre.right)
         print(arbre.data, end = '-')
     ```
-
+#}
 
 
 ```python
@@ -680,7 +697,14 @@ a.right.right.right = Arbre(3)
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
+!!! note "Taille d'un arbre :heart:"
 
+    ```python
+    def taille(arbre):
+        ...
+    ```
+
+{#
 !!! note "Taille d'un arbre :heart:"
 
     ```python
@@ -689,7 +713,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
             return 0
         return 1 + taille(arbre.left) + taille(arbre.right)
     ```
-
+#}
 
 
 Exemple avec l'arbre 
@@ -717,7 +741,14 @@ a.right.right.right = Arbre(3)
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
 
+!!! note "Hauteur d'un arbre :heart:"
 
+    ```python
+    def hauteur(arbre):
+        ...
+    ```
+
+{#
 !!! note "Hauteur d'un arbre :heart:"
 
     ```python
@@ -727,7 +758,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
         else:
             return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
     ```
-
+#}
 
 
 ```python
@@ -741,6 +772,14 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 
 
 !!! note "Nombre de feuilles d'un arbre :heart:"
+    ```python
+    def nb_feuilles(arbre):
+        ...
+    ```
+
+
+{#
+!!! note "Nombre de feuilles d'un arbre :heart:"
 
     ```python
     def nb_feuilles(arbre):
@@ -751,7 +790,7 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
         return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
     ```
 
-
+#}
 
 ```python
 >>> nb_feuilles(a)
@@ -763,9 +802,15 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 ### 4.5 Recherche d'une valeur dans un arbre
 On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
 
-
 !!! note "Recherche d'une valeur dans un arbre :heart:"
+    ```python
+    def recherche(arbre, valeur):
+        ...
+    ```
     
+
+{#
+!!! note "Recherche d'une valeur dans un arbre :heart:"
     ```python
     def recherche(arbre, valeur):
         if arbre is None:
@@ -774,6 +819,7 @@ On renverra ```True``` ou ```False``` en fonction de la présence ou non de la v
             return True
         return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
     ```
+#}
     
 
 
@@ -928,6 +974,15 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
     
     ```python
     def recherche_ABR(arbre, valeur):
+        ...
+
+    ```
+
+{#
+!!! note "Recherche d'une clé dans un ABR :heart:"
+    
+    ```python
+    def recherche_ABR(arbre, valeur):
         if arbre is None :
             return False
         if arbre.data == valeur :
@@ -938,7 +993,7 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
             return recherche_ABR(arbre.right, valeur)
 
     ```
- 
+#}
 
 **Exemple** 
 
@@ -986,7 +1041,15 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
     - Si la clé est supérieure, on fait la même chose avec l'arbre de droite.
     - on renvoie le nouvel arbre ainsi créé.
 
+!!! note "Insertion dans un ABR :heart:"
 
+    ```python
+    def insertion(arbre, cle):
+        ...
+    ```
+
+
+{#
 !!! note "Insertion dans un ABR :heart:"
 
     ```python
@@ -1001,7 +1064,7 @@ L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arb
                 arbre.right = insertion(arbre.right, cle)
             return arbre
     ```
-
+#}
 
 **Exemple :** Nous allons insérer la valeur 4 dans l'arbre ```a``` et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.
 

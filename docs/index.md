@@ -7,6 +7,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+    - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
     - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
     - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
     - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
