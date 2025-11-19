@@ -488,7 +488,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\"
         Cette requête va renvoyer tous les renseignements sur les centres dont la latitude est la latitude minimale de tous les centres.
@@ -497,7 +497,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\"
         ```SQL
