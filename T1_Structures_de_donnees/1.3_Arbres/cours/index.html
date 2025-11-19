@@ -5261,7 +5261,7 @@ dans l'arbre ci-dessus,</p>
 <h3 id="12-exemples-darbres">1.2 Exemples d'arbres<a class="headerlink" href="#12-exemples-darbres" title="Permanent link">⚓︎</a></h3>
 <h4 id="121-la-famille-royale-britannique-avant-le-08-septembre-2022">1.2.1 La famille royale britannique (avant le 08 septembre 2022)<a class="headerlink" href="#121-la-famille-royale-britannique-avant-le-08-septembre-2022" title="Permanent link">⚓︎</a></h4>
 <p><img alt="image" class="center" src="../data/windsor.png" width="60%" /></p>
-<p>Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir <a href="https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg">ici</a> ), qui laissait apparaître les parents de chaque enfant ?</p>
+<p>Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir <a class="" href="https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg" target="_blank">ici</a> ), qui laissait apparaître les parents de chaque enfant ?</p>
 <h4 id="122-le-dom-dune-page-web">1.2.2 Le DOM d'une page web<a class="headerlink" href="#122-le-dom-dune-page-web" title="Permanent link">⚓︎</a></h4>
 <p>DOM : Document Object Model</p>
 <p><img alt="image" class="center" src="../data/dom.svg" width="40%" /></p>
@@ -5277,6 +5277,7 @@ dans l'arbre ci-dessus,</p>
 <li><code>cd Dossier</code> : pour se rendre dans le repértoire <code>Dossier</code></li>
 <li><code>cd ..</code> : pour remonter d'un niveau dans l'arborescence</li>
 <li><code>unzip monarchive.zip</code> : pour décompresser une archive</li>
+<li><code>cat monfichier.txt</code> : pour lire le contenu d'un fichier dans le terminal </li>
 <li><code>tree</code> : pour afficher l'arborescence du répertoire courant</li>
 <li><code>sudo apt install monprog</code> : pour installer le programme <code>monprog</code> si celui-ci est manquant.</li>
 </ul>
@@ -5606,12 +5607,12 @@ Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils 
         <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>  
-    <span class="k">return</span> <span class="n">s</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>La représentation de cet arbre :
 <img alt="" class="center" src="../data/exo_imp.png" />
 donnera alors :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">affiche</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>
 <span class="o">|</span><span class="n">_4</span>
   <span class="o">|</span><span class="n">_3</span>
     <span class="o">|</span><span class="n">_6</span>
@@ -5676,6 +5677,12 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <h3 id="41-parcours-prefixe-infixe-postfixe">4.1 Parcours préfixe, infixe, postfixe<a class="headerlink" href="#41-parcours-prefixe-infixe-postfixe" title="Permanent link">⚓︎</a></h3>
 <p>Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons <em>afficher</em> les sommets, donc nous utiliserons <code>print</code>. Et deux appels récursifs... </p>
 <h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+</div>
 <p>Exemple avec l'arbre 
 <img alt="" class="center autolight" src="../data/exo_2.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -5703,11 +5710,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -5717,11 +5720,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
-    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -5739,9 +5738,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Taille d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <p>Exemple avec l'arbre 
@@ -5772,10 +5769,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Hauteur d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -5786,11 +5780,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Nombre de feuilles d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span>  <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -5801,11 +5791,7 @@ Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, 
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une valeur dans un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span>  <span class="n">valeur</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -5945,14 +5931,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <div class="admonition note">
 <p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">recherche_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <p><strong>Exemple</strong> </p>
@@ -5988,15 +5967,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <div class="admonition note">
 <p class="admonition-title">Insertion dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">arbre</span>
+    <span class="o">...</span>
 </code></pre></div>
 </div>
 <p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
@@ -6046,7 +6017,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="16 novembre 2025 14:36:35 UTC">16 novembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="19 novembre 2025 15:07:58 UTC">19 novembre 2025</span>
   </span>
 
     
