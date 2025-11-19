@@ -467,7 +467,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\"
         Cette requête va afficher tous les renseignements sur les mesures datées du 30 octobre 2021.
@@ -476,7 +476,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\"
         ```SQL
