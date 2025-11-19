@@ -233,7 +233,7 @@
     **Q3.** Travail sur JOIN, (base de données Euro2012) :arrow_right: [ici](https://sqlzoo.net/wiki/The_JOIN_operation){. target="_blank"}.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```SQL
@@ -688,7 +688,7 @@
     **Q1**. Combien d'équipes ont participé à ce championnat ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -703,7 +703,7 @@
     **Q2**. Listez les noms des clubs ainsi que leur date de création dans l'ordre chronologique de leur création.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -720,7 +720,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -738,7 +738,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -754,7 +754,7 @@
     **Q5**. Combien de cartons ont été distribués ? 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -770,7 +770,7 @@
 
     **Q6**. Combien de buts ont été marqués ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -787,7 +787,7 @@
     **Q7**. Affichez tous les renseignements sur les 10 cartons rouges obtenus le plus rapidement pendant un match.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
@@ -803,7 +803,7 @@
 
     **Q8**.  Donnez le nom du joueur qui a obtenu le carton rouge le plus rapidement.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```sql
