@@ -286,7 +286,7 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![correction](data/exo_imp.png){: .center .autolight} 
