@@ -476,7 +476,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
     Écrire le tuple représentant l'arbre ci-dessous.       
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -495,8 +495,7 @@ Ceci peut se faire par le biais d'une astuce sur les indices :
 
 **Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2**.
 
-Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en [généalogie](https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz) pour numéroter facilement les individus d'un arbre généalogique.
-
+Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en [généalogie](https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz){. target="_blank"} pour numéroter facilement les individus d'un arbre généalogique.
 
 
 **Exemple :**
