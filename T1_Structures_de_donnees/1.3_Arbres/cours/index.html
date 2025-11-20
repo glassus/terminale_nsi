@@ -5647,12 +5647,17 @@ est représenté par le tuple :</p>
 <p class="admonition-title">Exercice  5</p>
 <p><img alt="" class="center autolight" src="../data/carac3.png" /></p>
 <p>Écrire le tuple représentant l'arbre ci-dessous.       </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">,(</span><span class="n">Y</span><span class="p">,(</span><span class="n">P</span><span class="p">,(),()),()),(</span><span class="n">O</span><span class="p">,(</span><span class="n">H</span><span class="p">,(),()),(</span><span class="n">N</span><span class="p">,(),())))</span>
+</code></pre></div>
+</details>
 </div>
 <h3 id="33-implementation-a-partir-dune-simple-liste">3.3 Implémentation à partir d'une «simple» liste<a class="headerlink" href="#33-implementation-a-partir-dune-simple-liste" title="Permanent link">⚓︎</a></h3>
 <p>De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
 Ceci peut se faire par le biais d'une astuce sur les indices :</p>
 <p><strong>Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2</strong>.</p>
-<p>Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en <a href="https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz">généalogie</a> pour numéroter facilement les individus d'un arbre généalogique.</p>
+<p>Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en <a class="" href="https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz" target="_blank">généalogie</a> pour numéroter facilement les individus d'un arbre généalogique.</p>
 <p><strong>Exemple :</strong></p>
 <p><img alt="" class="center autolight" src="../data/eytzinger.png" /></p>
 <p>Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :</p>
@@ -6021,7 +6026,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 novembre 2025 16:35:02 UTC">20 novembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 novembre 2025 16:48:42 UTC">20 novembre 2025</span>
   </span>
 
     
