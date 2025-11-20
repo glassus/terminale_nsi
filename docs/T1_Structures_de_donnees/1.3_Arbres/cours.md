@@ -62,7 +62,7 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
     - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
     - ```unzip monarchive.zip``` : pour décompresser une archive
     - ```cat monfichier.txt``` : pour lire le contenu d'un fichier dans le terminal 
-    - ```tree``` : pour afficher l'arborescence du répertoire courant
+    - ```tree``` : pour __repr__r l'arborescence du répertoire courant
     - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
 ### 1.3 Caractéristiques d'un arbre
@@ -407,22 +407,23 @@ On voit que l'implémentation avec accès direct aux attributs est beaucoup plus
 
 #### 3.1.2 Représentation graphique en console
 
-La méthode ```affiche``` suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :
+La méthode ```__repr__``` suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :
 
 ```python linenums='1'
-def affiche(self, indent = 0):
+def __repr__(self, indent = 0):
     val = self.data
     s = ' '*2*indent + '|' + '_' + str(val) + '\n'
     if self.left is not None:
-        s += self.left.affiche(indent + 1)
+        s += self.left.__repr__(indent + 1)
     if self.left is None and self.right is not None:
         s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'     
 
     if self.right is not None:
-        s += self.right.affiche(indent + 1)
+        s += self.right.__repr__(indent + 1)
     if self.right is None and self.left is not None:
         s += ' '*(2*indent+2) + '|' + '_' + 'None' + '\n'  
-    print(s)
+   
+    return s
 ```
 
 La représentation de cet arbre :
@@ -430,7 +431,7 @@ La représentation de cet arbre :
 donnera alors :
 
 ```python
->>> a.affiche()
+>>> a
 |_4
   |_3
     |_6
@@ -548,7 +549,7 @@ class Arbre:
 
 ### 4.1 Parcours préfixe, infixe, postfixe
 
-Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons *afficher* les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
+Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons *__repr__r* les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
 
 #### 4.1.1 Parcours préfixe
 
