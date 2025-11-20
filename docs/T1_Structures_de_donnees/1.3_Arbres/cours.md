@@ -286,7 +286,7 @@ Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœu
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![correction](data/exo_imp.png){: .center .autolight} 
@@ -476,7 +476,7 @@ Le sous-arbre gauche est alors ```a[1]``` et le sous-arbre droit est ```a[2]```.
     Écrire le tuple représentant l'arbre ci-dessous.       
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
