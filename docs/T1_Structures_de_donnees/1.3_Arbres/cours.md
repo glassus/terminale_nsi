@@ -62,7 +62,7 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
     - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
     - ```unzip monarchive.zip``` : pour décompresser une archive
     - ```cat monfichier.txt``` : pour lire le contenu d'un fichier dans le terminal 
-    - ```tree``` : pour __repr__r l'arborescence du répertoire courant
+    - ```tree``` : pour afficher l'arborescence du répertoire courant
     - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
 ### 1.3 Caractéristiques d'un arbre
@@ -549,7 +549,7 @@ class Arbre:
 
 ### 4.1 Parcours préfixe, infixe, postfixe
 
-Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons *__repr__r* les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
+Dans un premier temps nous allons écrire ces parcours de manière récursive. Nous souhaitons afficher les sommets, donc nous utiliserons ```print```. Et deux appels récursifs... 
 
 #### 4.1.1 Parcours préfixe
 
