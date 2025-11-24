@@ -553,13 +553,14 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
 
 #### 4.1.1 Parcours préfixe
 
+{#
 !!! note "Parcours préfixe :heart:"
     ```python
     def prefixe(arbre):
         ...
     ```
+#}
 
-{#
 !!! note "Parcours préfixe :heart:"
 
     ```python linenums='1'
@@ -571,7 +572,7 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
         prefixe(arbre.right)
 
     ```
-#}
+
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center .autolight}
