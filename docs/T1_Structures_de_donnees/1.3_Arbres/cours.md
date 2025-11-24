@@ -597,14 +597,14 @@ a.right.right.right = Arbre(3)
 ```
 
 #### 4.1.2 Parcours infixe
-
+{#
 !!! note "Parcours infixe :heart:"
     ```python
     def infixe(arbre):
         ...
     ```
+#}
 
-{#
 !!! note "Parcours infixe :heart:"
 
     ```python
@@ -616,7 +616,7 @@ a.right.right.right = Arbre(3)
         infixe(arbre.right)
     ```
 
-#}
+
 
 ```python
 >>> infixe(a)
@@ -624,13 +624,14 @@ a.right.right.right = Arbre(3)
 ```
 
 #### 4.1.3 Parcours postfixe
-
+{#
 !!! note "Parcours postfixe :heart:"
     ```python
     def postfixe(arbre):
         ...
     ```
-{#
+#}
+
 !!! note "Parcours postfixe :heart:"
 
     ```python
@@ -641,7 +642,7 @@ a.right.right.right = Arbre(3)
         postfixe(arbre.right)
         print(arbre.data, end = '-')
     ```
-#}
+
 
 
 ```python
@@ -650,7 +651,7 @@ a.right.right.right = Arbre(3)
 ```
 
 !!! aide "Pause vidéo" 
-    - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}
+    - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}.
     - À l'aide de la vidéo, codez le parcours infixe en itératif.  
     {{
     correction(False,
