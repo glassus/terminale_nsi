@@ -528,7 +528,7 @@ Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre com
 
 
 
-**Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.
+**Remarque :** parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indices 2i et 2i+1.
 
 ## 4. Utilisation de l'implémentation : parcours, taille...
 
@@ -553,14 +553,14 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
 
 #### 4.1.1 Parcours préfixe
 
-
+{#
 !!! note "Parcours préfixe :heart:"
     ```python
     def prefixe(arbre):
         ...
     ```
+#}
 
-{#
 !!! note "Parcours préfixe :heart:"
 
     ```python linenums='1'
@@ -572,7 +572,7 @@ Dans un premier temps nous allons écrire ces parcours de manière récursive. N
         prefixe(arbre.right)
 
     ```
-#}
+
 
 Exemple avec l'arbre 
 ![](data/exo_2.png){: .center .autolight}
