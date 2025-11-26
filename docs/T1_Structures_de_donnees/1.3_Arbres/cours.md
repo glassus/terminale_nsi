@@ -654,7 +654,7 @@ a.right.right.right = Arbre(3)
     - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}.
     - À l'aide de la vidéo, codez le parcours infixe en itératif.  
     {{
-    correction(True,
+    correction(False,
     """
 
     ??? success \"Correction\" 
@@ -699,15 +699,14 @@ a.right.right.right = Arbre(3)
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
-{#
 !!! note "Taille d'un arbre :heart:"
 
     ```python
     def taille(arbre):
         ...
     ```
-#}
 
+{#
 !!! note "Taille d'un arbre :heart:"
 
     ```python
@@ -716,7 +715,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
             return 0
         return 1 + taille(arbre.left) + taille(arbre.right)
     ```
-
+#}
 
 
 Exemple avec l'arbre 
@@ -743,16 +742,15 @@ a.right.right.right = Arbre(3)
 ### 4.3 Calcul de la hauteur d'un arbre
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
-{#
-!!! note "Hauteur d'un arbre :heart:"
 
+!!! note "Hauteur d'un arbre :heart:"
 
     ```python
     def hauteur(arbre):
         ...
     ```
-#}
 
+{#
 !!! note "Hauteur d'un arbre :heart:"
 
     ```python
@@ -762,7 +760,7 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
         else:
             return 1 + max(hauteur(arbre.left), hauteur(arbre.right))
     ```
-
+#}
 
 
 ```python
@@ -774,15 +772,15 @@ Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 ### 4.4 Calcul du nombre de feuilles d'un arbre
 Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.
 
-{#
+
 !!! note "Nombre de feuilles d'un arbre :heart:"
     ```python
     def nb_feuilles(arbre):
         ...
     ```
 
-#}
 
+{#
 !!! note "Nombre de feuilles d'un arbre :heart:"
 
     ```python
@@ -794,7 +792,7 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
         return nb_feuilles(arbre.left) +  nb_feuilles(arbre.right)
     ```
 
-
+#}
 
 ```python
 >>> nb_feuilles(a)
