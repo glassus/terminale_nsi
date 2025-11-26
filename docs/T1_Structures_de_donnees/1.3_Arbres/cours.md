@@ -1020,7 +1020,7 @@ False
 
 Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
-Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/05_Dichotomie.ipynb)).
+Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.5_Dichotomie/cours/){. target="_blank"}).
 
 S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur $h$ de l'arbre.
 
