@@ -806,14 +806,16 @@ Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni 
 ### 4.5 Recherche d'une valeur dans un arbre
 On renverra ```True``` ou ```False``` en fonction de la présence ou non de la valeur dans l'arbre.
 
+{#
 !!! note "Recherche d'une valeur dans un arbre :heart:"
     ```python
     def recherche(arbre, valeur):
         ...
+  
     ```
-    
+#}
 
-{#
+
 !!! note "Recherche d'une valeur dans un arbre :heart:"
     ```python
     def recherche(arbre, valeur):
@@ -823,7 +825,7 @@ On renverra ```True``` ou ```False``` en fonction de la présence ou non de la v
             return True
         return recherche(arbre.left, valeur) or recherche(arbre.right, valeur)
     ```
-#}
+
     
 
 
