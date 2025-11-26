@@ -1032,7 +1032,7 @@ Par exemple, $\log_2(64)=6$ car $2^6=64$.
 
 Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille $n$ est donc de l'ordre de $\log_2(n)$, ce qui est très performant !
 
-Pour arbre contenant 1000 valeurs, 10 étapes suffisent.
+Pour un arbre contenant 1000 valeurs, 10 étapes suffisent. Mais pour un arbre contenant un milliard de valeurs, seules 30 étapes suffisent !
 
 Cette **complexité logarithmique** est un atout essentiel de la structure d'arbre binaire de recherche.
 
