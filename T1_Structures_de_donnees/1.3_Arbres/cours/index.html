@@ -6047,7 +6047,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
 <p><span class="arithmatex">\(h\)</span> est donc le «nombre de puissance de 2» que l'on peut mettre dans <span class="arithmatex">\(n+1\)</span>. Cette notion s'appelle le logarithme de base 2 et se note <span class="arithmatex">\(\log_2\)</span>.</p>
 <p>Par exemple, <span class="arithmatex">\(\log_2(64)=6\)</span> car <span class="arithmatex">\(2^6=64\)</span>.</p>
 <p>Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille <span class="arithmatex">\(n\)</span> est donc de l'ordre de <span class="arithmatex">\(\log_2(n)\)</span>, ce qui est très performant !</p>
-<p>Pour arbre contenant 1000 valeurs, 10 étapes suffisent.</p>
+<p>Pour un arbre contenant 1000 valeurs, 10 étapes suffisent. Mais pour un arbre contenant un milliard de valeurs, seules 30 étapes suffisent !</p>
 <p>Cette <strong>complexité logarithmique</strong> est un atout essentiel de la structure d'arbre binaire de recherche.</p>
 <h3 id="54-insertion-dans-un-abr">5.4  Insertion dans un ABR<a class="headerlink" href="#54-insertion-dans-un-abr" title="Permanent link">⚓︎</a></h3>
 <p>L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arbre. Dans la version récursive de l'algorithme d'insertion, que nous allons implémenter, il n'est pourtant pas nécessaire de descendre manuellement dans l'arbre jusqu'au bon endroit : il suffit de distinguer dans lequel des deux sous-arbres gauche et droit doit se trouver la future clé, et d'appeler récursivement la fonction d'insertion dans le sous-arbre en question.</p>
@@ -6114,7 +6114,7 @@ Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 novembre 2025 20:27:38 UTC">26 novembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 novembre 2025 20:31:55 UTC">26 novembre 2025</span>
   </span>
 
     
