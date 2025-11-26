@@ -743,10 +743,10 @@ a.right.right.right = Arbre(3)
 ### 4.3 Calcul de la hauteur d'un arbre
 Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.
 
-
+{#
 !!! note "Hauteur d'un arbre :heart:"
 
-{#
+
     ```python
     def hauteur(arbre):
         ...
