@@ -5,7 +5,7 @@
     Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 1.\" 
         C'est un arbre binaire car chaque nœud possède au maximum deux fils.
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 2.a\" 
         ```V``` est un dictionnaire. 
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 2.b\" 
         ```python
