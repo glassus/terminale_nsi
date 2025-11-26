@@ -654,7 +654,7 @@ a.right.right.right = Arbre(3)
     - Regardez et appréciez [cette vidéo](https://youtu.be/OTfp2_SwxHk){. target="_blank"}.
     - À l'aide de la vidéo, codez le parcours infixe en itératif.  
     {{
-    correction(False,
+    correction(True,
     """
 
     ??? success \"Correction\" 
