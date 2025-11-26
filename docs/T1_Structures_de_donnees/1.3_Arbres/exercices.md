@@ -34,7 +34,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 2.c\" 
         ```python linenums='1'
