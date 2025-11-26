@@ -699,14 +699,16 @@ a.right.right.right = Arbre(3)
 ### 4.2 Calcul de la taille d'un arbre
 Rappel : la taille d'un arbre est le nombre de ses nœuds.
 
+{#
 !!! note "Taille d'un arbre :heart:"
 
     ```python
     def taille(arbre):
         ...
-    ```
 
-{#
+ ```
+#} 
+
 !!! note "Taille d'un arbre :heart:"
 
     ```python
@@ -715,7 +717,7 @@ Rappel : la taille d'un arbre est le nombre de ses nœuds.
             return 0
         return 1 + taille(arbre.left) + taille(arbre.right)
     ```
-#}
+
 
 
 Exemple avec l'arbre 
