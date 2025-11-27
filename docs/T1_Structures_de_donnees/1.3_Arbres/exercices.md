@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 3.\" 
         Cet algorithme calcule le nombre total de nœuds de l'arbre, donc la taille de l'arbre.
