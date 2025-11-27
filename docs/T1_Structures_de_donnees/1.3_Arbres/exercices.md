@@ -77,7 +77,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 4.a\" 
         Le parcours est ```A-B-C-E-D-F-G-I-H-J```         
@@ -86,7 +86,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 4.b\" 
         C'est un parcours préfixe.           
