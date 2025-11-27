@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 3.\" 
         Cet algorithme calcule le nombre total de nœuds de l'arbre, donc la taille de l'arbre.
@@ -77,7 +77,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.a\" 
         Le parcours est ```A-B-C-E-D-F-G-I-H-J```         
@@ -86,7 +86,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction 4.b\" 
         C'est un parcours préfixe.           
