@@ -977,14 +977,15 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
 
 
 !!! note "Recherche d'une clé dans un ABR :heart:"
-    
+{#  
     ```python
     def recherche_ABR(arbre, valeur):
         ...
 
     ```
+#}
 
-{#
+
 !!! note "Recherche d'une clé dans un ABR :heart:"
     
     ```python
@@ -999,7 +1000,6 @@ Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va consi
             return recherche_ABR(arbre.right, valeur)
 
     ```
-#}
 
 **Exemple** 
 
