@@ -50,7 +50,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction 2.d\" 
         ```python linenums='1'
@@ -366,7 +366,7 @@
         **4.**  
 
         ```python linenums='1'
-        class Noeud():
+        class Noeud():Se connecter
             def __init__(self, v):
                 self.ag = None
                 self.ad = None
