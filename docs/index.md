@@ -4,11 +4,7 @@
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 
-:warning: Jeudi 27/11 : petit contrôle des révisions de 1ère (le retour) :warning:
 
-- [parcours de listes](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.1_Listes/cours/){. target="_blank"}
-- [extremums et moyenne](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.1_Extremums_et_moyennes/cours/){. target="_blank"}
-- [fonctions](https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.5_Fonctions/cours/){. target="_blank"}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
