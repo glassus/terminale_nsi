@@ -366,7 +366,7 @@
         **4.**  
 
         ```python linenums='1'
-        class Noeud():Se connecter
+        class Noeud():
             def __init__(self, v):
                 self.ag = None
                 self.ad = None
@@ -467,7 +467,7 @@
     **1.b.** Quelle est la hauteur de l’arbre ci-dessus ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **1.a.** La taille de l'arbre est 7.  
