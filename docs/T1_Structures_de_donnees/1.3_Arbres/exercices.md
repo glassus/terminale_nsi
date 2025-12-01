@@ -366,7 +366,7 @@
         **4.**  
 
         ```python linenums='1'
-        class Noeud():Se connecter
+        class Noeud():
             def __init__(self, v):
                 self.ag = None
                 self.ad = None
