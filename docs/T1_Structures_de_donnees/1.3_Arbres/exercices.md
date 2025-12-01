@@ -321,7 +321,7 @@
     racine.insere_tout([12, 13, 15, 16, 19, 21, 32, 23])
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.a.** ![image](data/exobac.png){: .center}
@@ -331,7 +331,7 @@
     **b.** Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
     le nombre `val` est égal à 16.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.b.**   
