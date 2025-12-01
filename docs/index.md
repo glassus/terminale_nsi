@@ -4,6 +4,11 @@
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 
+!!! abstract "Actualités"
+    - Décembre est le mois d'[Advent of Code](https://adventofcode.com/2025){. target="_blank"} !
+    ![image](data/aoc2024.png){: .center width=20%}
+    - Quelques [conseils pour démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}.
+
 
 
 !!! note ":star: Thème en cours d'étude :star: "
@@ -28,10 +33,7 @@
 
 
 
-{#
-!!! abstract "Actualités"
-    - Vous êtes le roi / la reine de la tablette graphique ? Participez au [concours d'affiches NSI](https://aeif.fr/index.php/2025/03/25/participez-au-concours-daffiches-nsi/){. target="_blank"}
-#}
+
 
 {#
 !!! tip "Grand Oral"
