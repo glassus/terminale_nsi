@@ -292,7 +292,7 @@
 
     **a.** Donner les valeurs d’affichage des nœuds dans le cas du parcours infixe de l’arbre.  
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **2.a.** Parcours infixe : 12-13-15-16-18-19-21-23-32  
@@ -301,7 +301,7 @@
     }}
     **b**. Donner les valeurs d’affichage des nœuds dans le cas du parcours suffixe de l’arbre.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **2.b.** Parcours suffixe : 12-13-16-15-21-19-32-23-18  
@@ -321,7 +321,7 @@
     racine.insere_tout([12, 13, 15, 16, 19, 21, 32, 23])
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.a.** ![image](data/exobac.png){: .center}
@@ -331,7 +331,7 @@
     **b.** Écrire les deux instructions permettant de construire l’arbre de la figure 1. On rappelle que
     le nombre `val` est égal à 16.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.b.**   
