@@ -933,7 +933,7 @@
     correction(False,
     """
     ??? success \"Correction\" 
-        Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37        
+        Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37.      
     """
     )
     }}
