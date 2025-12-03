@@ -482,7 +482,7 @@
     que celle de l’arbre initial.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **2.** ![image](data/ex3-2.png){: .center}        
@@ -537,7 +537,7 @@
     a.insere(5)
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **3.** ![image](data/ex3-3.png){: .center}        
@@ -570,7 +570,7 @@
     l’arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **4.**
@@ -588,7 +588,7 @@
     la taille d’un arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **5.**
@@ -620,7 +620,7 @@
     « bien construit » de hauteur $ℎ$ ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **6.a.** La configuration minimale d'un arbre bien construit de hauteur $h$ peut être :
@@ -638,7 +638,7 @@
     **6.b** Écrire la méthode ```bien_construit``` demandée.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **6.b.** Intuitivement, un arbre est *mal construit* si sa hauteur est trop grande par rapport à sa taille (trop *étiré*).
@@ -680,7 +680,7 @@
     **Q1.** Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le nœud racine est 5 et ses fils sont 2 et 7.        
@@ -692,7 +692,7 @@
     valeur 3.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La branche qui se termine par la feuille 3 a pour nœuds 5, 2 et 3.
@@ -705,7 +705,7 @@
     **Q3.** Dessiner l’arbre obtenu après l’ajout de la valeur 6.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex5_3.png){: .center}
@@ -750,7 +750,7 @@
     **Q1.** Expliquer le rôle de la fonction `__init__`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La fonction `__init__` est appelée «méthode constructeur», c'est elle qui crée l'objet et le dote de tous les attributs nécessaires.
@@ -764,7 +764,7 @@
     présent dans l’arbre.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé.         
@@ -786,7 +786,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -812,7 +812,7 @@
     recherche dans l’ordre croissant.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le parcours qui permet de visiter les valeurs d'un ABR dans l'ordre croissant est le parcours infixe.        
@@ -826,7 +826,7 @@
     du tri par sélection.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         *question difficile*
@@ -886,7 +886,7 @@
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex6_1.png){: .center width=50%}
@@ -908,7 +908,7 @@
     binaires de recherche.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
@@ -930,7 +930,7 @@
 
     **Q3.a.** Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37.      
@@ -945,7 +945,7 @@
     propositions suivantes : Préfixe, Suffixe ou Infixe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On reconnait un parcours préfixe.        
