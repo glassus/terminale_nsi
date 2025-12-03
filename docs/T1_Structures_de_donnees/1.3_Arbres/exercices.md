@@ -680,7 +680,7 @@
     **Q1.** Indiquer quelle valeur a le nœud racine et quels sont les fils de ce nœud.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le nœud racine est 5 et ses fils sont 2 et 7.        
@@ -692,7 +692,7 @@
     valeur 3.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La branche qui se termine par la feuille 3 a pour nœuds 5, 2 et 3.
@@ -705,7 +705,7 @@
     **Q3.** Dessiner l’arbre obtenu après l’ajout de la valeur 6.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex5_3.png){: .center}
