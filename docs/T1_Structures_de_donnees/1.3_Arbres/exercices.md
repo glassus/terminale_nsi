@@ -832,7 +832,7 @@
         *question difficile*
         Pour créer l'ABR, il faut d'abord insérer chacune des valeurs. La fonction ```insertion``` reposant sur une division par 2 à chaque étape de la taille de l'espace de recherche, on peut dire qu'elle a une complexité logarithmique. Mais cette opération est à effectuer autant de fois qu'il y a d'éléments à insérer : il faut donc multiplier la complexité logarithmique par ```n```, ce qui fera donc une complexité en $n \\log(n)$.
         L'algorithme de parcours infixe est lui aussi linéraire, ce qui ne change pas la complexité totale.
-        Cette complexité est meilleure que le tris par insertion ou sélection, qui sont de complexité quadratique.        
+        Cette complexité est meilleure que le tris par insertion ou sélection, qui sont de complexité quadratique, donc en $n^2$.        
     """
     )
     }}
@@ -886,7 +886,7 @@
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex6_1.png){: .center width=50%}
@@ -908,7 +908,7 @@
     binaires de recherche.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
