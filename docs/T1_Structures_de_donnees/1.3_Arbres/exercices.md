@@ -588,7 +588,7 @@
     la taille d’un arbre.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **5.**
