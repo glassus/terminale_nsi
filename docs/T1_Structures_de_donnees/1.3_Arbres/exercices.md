@@ -482,7 +482,7 @@
     que celle de l’arbre initial.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **2.** ![image](data/ex3-2.png){: .center}        
