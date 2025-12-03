@@ -620,7 +620,7 @@
     « bien construit » de hauteur $ℎ$ ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **6.a.** La configuration minimale d'un arbre bien construit de hauteur $h$ peut être :
