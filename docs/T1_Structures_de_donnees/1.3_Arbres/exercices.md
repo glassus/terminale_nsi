@@ -786,7 +786,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -812,7 +812,7 @@
     recherche dans l’ordre croissant.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le parcours qui permet de visiter les valeurs d'un ABR dans l'ordre croissant est le parcours infixe.        
@@ -826,7 +826,7 @@
     du tri par sélection.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         *question difficile*
