@@ -1,7 +1,7 @@
 {{initexo(0)}}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     Dans un réseau quelconque, le coût de chaque liaison se calcule par la formule :
 
@@ -20,12 +20,12 @@
     **D.** 50 Mb/s
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         Une adresse IPv4 se code à l'aide de 4 octets.
@@ -37,7 +37,7 @@
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
@@ -47,7 +47,7 @@
 
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ![image](data/ex5LR2022.png){: .center}
@@ -57,7 +57,7 @@
 
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
@@ -73,7 +73,7 @@
 
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         La commande permettant de connaître son adresse IP est ```ifconfig``` ou ```ip addr``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.
@@ -82,7 +82,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
@@ -94,7 +94,7 @@
  
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1'
@@ -113,7 +113,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     _2020, sujet 0_
 
@@ -132,7 +132,7 @@
     1.1 Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
     sauts. Déterminer le trajet parcouru.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
@@ -141,7 +141,7 @@
     }}
     1.2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.2.** 
@@ -166,7 +166,7 @@
     protocole RIP.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Nouvelle table de routage de A :  
@@ -187,7 +187,7 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     _2021, sujet Métropole 1_
 
@@ -210,7 +210,7 @@
 
     1.a. En utilisant l’extrait de la table de routage de R1, vers quel routeur R1 envoie-t-il ce paquet : R2 ou R3 ? Justifier.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2. 
@@ -220,7 +220,7 @@
 
     1.b. A l’aide des extraits de tables de routage ci-dessus, nommer les routeurs traversés par ce paquet, lorsqu’il va du réseau L1 au réseau L2.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2. 
@@ -231,7 +231,7 @@
 
     2.a. Sachant que ce réseau utilise le protocole RIP (distance en nombre de sauts), donner l’un des deux chemins possibles que pourra suivre un paquet allant de L1 vers L2.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6. 
@@ -240,7 +240,7 @@
     }}
     2.b. Dans les extraits de tables de routage ci-dessus, pour le chemin de la question 2.a, quelle(s) ligne(s) sera (seront) modifiée(s) ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.b. La ligne R1 sera modifiée, il faudra partir vers R3 (et son réseau 112.44.65.0/24). Les autres lignes n'ont pas à être modifiées puisque R3 amène en R4 qui amène en R6.
@@ -260,7 +260,7 @@
     où $BP$ est la bande passante de la connexion en bps (bits par seconde).
     Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.a $\\dfrac{10^9}{10 \\times 10^6}=100$ donc le coût R2-R3 est 100.  
@@ -270,7 +270,7 @@
 
     b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivant au réseau L2, en utilisant le protocole OSPF.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
@@ -280,7 +280,7 @@
     }}
     c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).
@@ -298,7 +298,7 @@
         
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     _2021, sujet Métropole 2_ (sujet modifié, correction d'erreurs sur les adresses passerelles)
 
@@ -329,7 +329,7 @@
     1/ 
     1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. 
@@ -338,7 +338,7 @@
     }}
     1.b. Donner la plus petite et la plus grande adresse IP valides pouvant être attribuées à un ordinateur portable ou un serveur sur chacun des réseaux L1 et L2 sachant que l’adresse du réseau et l’adresse de diffusion ne peuvent pas être attribuées à une machine.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
@@ -349,7 +349,7 @@
     1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
     et L2 ? 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)  
@@ -360,7 +360,7 @@
     2/ 
     2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  
@@ -369,7 +369,7 @@
     }}
     2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   
@@ -384,7 +384,7 @@
 
     Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.c Les liaisons Ether ont un coût de 10, les liaisons FastEther ont un coût de 1. Ce qui donne :
@@ -399,7 +399,7 @@
 
     ![](data/ex3_4_corrige.png)
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On veut que le chemin soit le plus court en nombre de sauts, donc il faut que le chemin soit R1-R2-R5-R6.
@@ -433,7 +433,7 @@
         
         
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     _2021, sujet Amérique du Nord_
 
@@ -444,7 +444,7 @@
 
     1. Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             1. A-B-E-F  
@@ -459,7 +459,7 @@
     En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/graphAN_corr.png){: .center}
@@ -470,11 +470,11 @@
         
     
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```195.168.1.0/24```
@@ -483,7 +483,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```195.168.1.17/24```
@@ -491,7 +491,7 @@
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\" 
         Le réseau T2 a pour adresse ```172.162.1.0/24```. Sur ce réseau, 254 adresses sont initialement disponibles (de ```172.162.1.1```  à ```172.162.1.254```, puisque l'adresse ```172.162.1.255``` est réservée pour le *broadcast* sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.
@@ -500,7 +500,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         - côté R4 : ```200.158.4.1```
@@ -511,7 +511,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         Parcours possibles :  
@@ -524,7 +524,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. 
@@ -533,7 +533,7 @@
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.c\" 
         Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.
@@ -542,7 +542,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
@@ -553,7 +553,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.a.\" 
         $10=\\dfrac{10^9}{d}$ donc $d=\\dfrac{10^9}{10}=10^8$.
@@ -564,7 +564,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.b.\" 
          ![image](data/exoNC.png){: .center}
@@ -583,13 +583,13 @@
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Parties 2, 3 et 4 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
 
     **Correction Partie 2**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         Le réseau services a pour adresse IP ```195.168.254.0```.
@@ -598,7 +598,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Le réseau Services a pour adresse ```195.168.254.0```. Comme le masque de sous-réseau utilisé est ```255.255.255.0```, 254 adresses sont initialement disponibles (```195.168.254.1```  à ```195.168.254.254```, puisque l'adresse ```195.168.254.255``` est réservée pour le *broadcast* sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.
@@ -607,7 +607,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est ```192.168.254.2```. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.
@@ -619,7 +619,7 @@
     **Correction Partie 3**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```.  
@@ -628,7 +628,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         La couche Transport montre que le protocole utilisé est le protocole UDP.
@@ -637,7 +637,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
@@ -649,7 +649,7 @@
     **Correction Partie 4**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         Table de routage du routeur R4 :
@@ -667,7 +667,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Pour minimiser le nombre de sauts (protocole RIP), le trajet sera ```R1-R2-R4-R6```. 
@@ -677,7 +677,7 @@
     }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
 
