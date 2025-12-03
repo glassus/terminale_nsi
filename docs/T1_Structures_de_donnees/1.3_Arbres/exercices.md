@@ -651,7 +651,7 @@
 
         ```python linenums='1'
         def bien_construit(self):
-            h = self.taille()
+            h = self.hauteur()
             return self.taille() >= 2**(h-1)
         ```        
     """
