@@ -750,7 +750,7 @@
     **Q1.** Expliquer le rôle de la fonction `__init__`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La fonction `__init__` est appelée «méthode constructeur», c'est elle qui crée l'objet et le dote de tous les attributs nécessaires.
@@ -764,7 +764,7 @@
     présent dans l’arbre.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé.         
