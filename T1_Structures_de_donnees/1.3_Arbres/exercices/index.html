@@ -5300,7 +5300,26 @@ renvoie la valeur <code>True</code> si l’arbre est « bien construit » et <co
 est <span class="arithmatex">\(2^h - 1\)</span>.</p>
 <p><strong>6.a</strong> Quelle est la taille minimale, notée <code>min</code> d’un arbre binaire de recherche
 « bien construit » de hauteur <span class="arithmatex">\(ℎ\)</span> ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>6.a.</strong> La configuration minimale d'un arbre bien construit de hauteur <span class="arithmatex">\(h\)</span> peut être :</p>
+<p><img alt="image" class="center" src="../data/ex3-6a.png" /></p>
+<p>La taille minimale <code>min</code> est donc égale à <span class="arithmatex">\(2^{h-1}\)</span>.</p>
+</details>
 <p><strong>6.b</strong> Écrire la méthode <code>bien_construit</code> demandée.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><strong>6.b.</strong> Intuitivement, un arbre est <em>mal construit</em> si sa hauteur est trop grande par rapport à sa taille (trop <em>étiré</em>).</p>
+<p>Donc un arbre est <em>mal construit</em> si sa taille est trop petite par rapport à sa hauteur.</p>
+<p>Donc un arbre de taille <span class="arithmatex">\(t\)</span> et de hauteur <span class="arithmatex">\(h\)</span> est <em>mal construit</em> si <span class="arithmatex">\(t &lt; 2^{h-1}\)</span>, puisqu'on a démontré que <span class="arithmatex">\(2^{h-1}\)</span> était la taille minimale.</p>
+<p>Pour tester si un arbre est <em>bien construit</em>, on va donc juste vérifier que <span class="arithmatex">\(t \geqslant 2^{h-1}\)</span> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bien_construit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hauteur</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">h</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
@@ -5471,7 +5490,7 @@ croissant.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 décembre 2025 09:45:35 UTC">3 décembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 décembre 2025 09:51:45 UTC">3 décembre 2025</span>
   </span>
 
     
