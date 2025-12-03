@@ -4871,7 +4871,7 @@
 <link rel="stylesheet" href="https://glassus.github.io/terminale_nsi//css/sqlite_ide.css">
 <script>sqljs_base_path="https://glassus.github.io/terminale_nsi/"</script>
 
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Dans un réseau quelconque, le coût de chaque liaison se calcule par la formule :</p>
 <div class="arithmatex">\[ \text{coût} = \frac{10^8}{d} \]</div>
@@ -4882,54 +4882,11 @@
 <p><strong>C.</strong> 1 Mb/s</p>
 <p><strong>D.</strong> 50 Mb/s</p>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>Exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf" target="_blank">La Réunion J1 2022</a></p>
-<details class="success">
-<summary>Correction Q1.a.</summary>
-<p>Une adresse IPv4 se code à l'aide de 4 octets.</p>
-</details>
-<details class="success">
-<summary>Correction Q1.b.</summary>
-<p>Le PC3 a pour adresse <code>172.150.4.30 / 24</code>. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque <code>255.255.255.0</code> en notation décimale.</p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p><img alt="image" class="center" src="../data/ex5LR2022.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q3.a.</summary>
-<p>Pour être dans le réseau 1, il faut que le &amp; logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (<code>172.150.4.0</code> ).</p>
-<p>Le réseau étant en <code>/24</code> (équivalent au masque <code>255.255.255.0</code>), cela signifie que l'adresse IP de la machine soit de la forme <code>172.150.4.???</code>.</p>
-<p>Attention, il faut en plus s'assurer que l'adresse ne soit pas déjà utilisée, et qu'elle ne soit pas l'adresse du réseau (<code>172.150.4.0</code>) ou de broadcast (<code>172.150.4.255</code>).</p>
-<p>Il reste alors les adresses 4) et 6). (<code>172.150.4.11</code> et <code>172.150.4.200</code>)</p>
-</details>
-<details class="success">
-<summary>Correction Q3.b.</summary>
-<p>La commande permettant de connaître son adresse IP est <code>ifconfig</code> ou <code>ip addr</code> sous Linux / MacOS. Ou bien <code>ipconfig</code> sous Windows.</p>
-</details>
-<details class="success">
-<summary>Correction Q4.</summary>
-<p>La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.</p>
-<p>La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. </p>
-</details>
-<details class="success">
-<summary>Correction Q5.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">adresse</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">liste_IP</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">IP</span> <span class="ow">in</span> <span class="n">liste_IP</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trouvée&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">liste_IP</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas trouvée, ajoutée&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
 <p><em>2020, sujet 0</em></p>
 <p>On considère un réseau composé de plusieurs routeurs reliés de la façon suivante :</p>
@@ -4939,102 +4896,12 @@
 <p><strong>Question 1</strong></p>
 <p>1.1 Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
 sauts. Déterminer le trajet parcouru.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>Q1.1.</strong> Le trajet parcouru de A à G est A-C-F-G  </p>
-</details>
 <p>1.2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><strong>Q1.2.</strong> 
-Table de routage de G :  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Destination</th>
-<th style="text-align: center;">Routeur suivant</th>
-<th style="text-align: center;">Distance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr>
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-</details>
 <p><strong>Question 2</strong></p>
 <p>Le routeur C tombe en panne. Reconstruire la table de routage du routeur A en suivant le
 protocole RIP.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Nouvelle table de routage de A :  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Destination</th>
-<th style="text-align: center;">Routeur suivant</th>
-<th style="text-align: center;">Distance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">G</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">4</td>
-</tr>
-</tbody>
-</table>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p><em>2021, sujet Métropole 1</em></p>
 <p>On représente ci-dessous un réseau dans lequel R1, R2, R3, R4, R5 et R6 sont des
@@ -5048,26 +4915,10 @@ tableau suivant :</p>
 <p><img alt="image" class="center" src="../data/bac2.png" width="70%" /></p>
 <p>1/ Un paquet part du réseau local L1 à destination du réseau local L2.</p>
 <p>1.a. En utilisant l’extrait de la table de routage de R1, vers quel routeur R1 envoie-t-il ce paquet : R2 ou R3 ? Justifier.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2. </p>
-</details>
 <p>1.b. A l’aide des extraits de tables de routage ci-dessus, nommer les routeurs traversés par ce paquet, lorsqu’il va du réseau L1 au réseau L2.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2. </p>
-</details>
 <p>2/ La liaison entre R1 et R2 est rompue.</p>
 <p>2.a. Sachant que ce réseau utilise le protocole RIP (distance en nombre de sauts), donner l’un des deux chemins possibles que pourra suivre un paquet allant de L1 vers L2.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6. </p>
-</details>
 <p>2.b. Dans les extraits de tables de routage ci-dessus, pour le chemin de la question 2.a, quelle(s) ligne(s) sera (seront) modifiée(s) ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.b. La ligne R1 sera modifiée, il faudra partir vers R3 (et son réseau 112.44.65.0/24). Les autres lignes n'ont pas à être modifiées puisque R3 amène en R4 qui amène en R6.</p>
-</details>
 <p>3/ On a rétabli la liaison entre R1 et R2.
 Par ailleurs, pour tenir compte du débit des liaisons, on décide d’utiliser le
 protocole OSPF (distance liée au coût minimal des liaisons) pour effectuer le
@@ -5077,23 +4928,10 @@ routage. Le coût des liaisons entre les routeurs est donné par le tableau suiv
 <span class="arithmatex">\(C = \dfrac{10^9}{BP}\)</span></p>
 <p>où <span class="arithmatex">\(BP\)</span> est la bande passante de la connexion en bps (bits par seconde).
 Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>3.a <span class="arithmatex">\(\dfrac{10^9}{10 \times 10^6}=100\)</span> donc le coût R2-R3 est 100.  </p>
-</details>
 <p>b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivant au réseau L2, en utilisant le protocole OSPF.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
-<img alt="image" class="center" src="../data/bac1_corr.png" width="50%" /></p>
-</details>
 <p>c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).</p>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p><em>2021, sujet Métropole 2</em> (sujet modifié, correction d'erreurs sur les adresses passerelles)</p>
 <table>
@@ -5131,34 +4969,12 @@ L’adresse IP dont tous les bits de la partie « machine » sont à 0 est appel
 L’adresse IP dont tous les bits de la partie « machine » sont à 1 est appelée « adresse de diffusion ».</p>
 <p>1/ 
 1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. </p>
-</details>
 <p>1.b. Donner la plus petite et la plus grande adresse IP valides pouvant être attribuées à un ordinateur portable ou un serveur sur chacun des réseaux L1 et L2 sachant que l’adresse du réseau et l’adresse de diffusion ne peuvent pas être attribuées à une machine.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.<br />
-Pour le réseau L2 (175.16.0.0/16), l'adresse min est 175.16.0.1/16 et l'adresse max est 175.16.255.254/16   </p>
-</details>
 <p>1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
 et L2 ? </p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)<br />
-Pour le réseau L2, il y en a <span class="arithmatex">\(256^2-2\)</span>, soit 65534.</p>
-</details>
 <p>2/ 
 2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  </p>
-</details>
 <p>2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   </p>
-</details>
 <p>2.c. La bande passante d’une liaison Ether (quantité d’information qui peut être transmise en bits/s) est de <span class="arithmatex">\(10^7\)</span> bits/s et celle d’une liaison FastEther est de <span class="arithmatex">\(10^8\)</span> bits/s. Le coût d’une liaison est défini par <span class="arithmatex">\(\frac{10^8}{d}\)</span> , où <span class="arithmatex">\(d\)</span> est sa bande passante en bits/s.</p>
 <table>
 <thead>
@@ -5173,66 +4989,11 @@ Pour le réseau L2, il y en a <span class="arithmatex">\(256^2-2\)</span>, soit 
 </tbody>
 </table>
 <p>Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût de ce chemin et préciser les routeurs utilisés.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.c Les liaisons Ether ont un coût de 10, les liaisons FastEther ont un coût de 1. Ce qui donne :
-<img alt="image" class="center" src="../data/ex3_1_corr.png" width="50%" />
-Le chemin le plus court est donc R1-R2-R3-R4-R5-R6, avec un coût total de 23.</p>
-</details>
 <p>3/ Dans l’annexe A figurent les tables de routages des routeurs R1, R2, R5 et R6 au
 démarrage du réseau. Indiquer sur votre copie ce qui doit figurer dans les lignes laissées vides des tables de routage des routeurs R5 et R6 pour que les échanges entre les ordinateurs des réseaux L1 et L2 se fassent en empruntant le chemin le plus court en nombre de sauts.</p>
 <p><img alt="" src="../data/ex3_4_corrige.png" /></p>
-<details class="success">
-<summary>Correction</summary>
-<p>On veut que le chemin soit le plus court en nombre de sauts, donc il faut que le chemin soit R1-R2-R5-R6.
-<img alt="image" class="center" src="../data/ex3_1_corr3.png" width="70%" />
-Dans la table R5, il manque les lignes :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">IP destination</th>
-<th style="text-align: center;">Passerelle</th>
-<th style="text-align: center;">Interface</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">192.168.1.0/24</td>
-<td style="text-align: center;">10.1.3.1</td>
-<td style="text-align: center;">Interface 1</td>
-</tr>
-<tr>
-<td style="text-align: center;">172.16.0.0/16</td>
-<td style="text-align: center;">10.1.7.2</td>
-<td style="text-align: center;">Interface 4</td>
-</tr>
-</tbody>
-</table>
-<p>Dans la table R6, on peut compléter comme ceci (il faudrait des lignes supplémentaires pour y inscrire tous les réseaux)</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">IP destination</th>
-<th style="text-align: center;">Passerelle</th>
-<th style="text-align: center;">Interface</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">10.1.7.0/24</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">Interface 2</td>
-</tr>
-<tr>
-<td style="text-align: center;">192.168.1.0/24</td>
-<td style="text-align: center;">10.1.7.1</td>
-<td style="text-align: center;">Interface 2</td>
-</tr>
-</tbody>
-</table>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
 <p><em>2021, sujet Amérique du Nord</em></p>
 <p>Un constructeur automobile possède six sites de production qui échangent des documents entre eux. Les sites de production sont reliés entre eux par six routeurs A, B, C, D, E et F.<br />
@@ -5241,12 +5002,6 @@ On donne ci-dessous les tables de routage des routeurs A à F obtenues avec le p
 <ol>
 <li>
 <p>Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.</p>
-<details class="success">
-<summary>Correction</summary>
-<ol>
-<li>A-B-E-F  </li>
-</ol>
-</details>
 </li>
 <li>
 <p>On veut représenter schématiquement le réseau de routeur à partir des tables de routage. 
@@ -5255,149 +5010,19 @@ Recopier sur la copie le schéma ci-dessous : </p>
 </ol>
 <p><img alt="image" class="center" src="../data/graphAN.png" /></p>
 <p>En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><img alt="image" class="center" src="../data/graphAN_corr.png" /></p>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
 <p>Exercice 4 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf" target="_blank">Nouvelle-Calédonie J2 2022</a>.</p>
-<details class="success">
-<summary>Correction Q1.a.</summary>
-<p><code>195.168.1.0/24</code></p>
-</details>
-<details class="success">
-<summary>Correction Q1.b.</summary>
-<p><code>195.168.1.17/24</code></p>
-</details>
-<details class="success">
-<summary>Correction Q1.c</summary>
-<p>Le réseau T2 a pour adresse <code>172.162.1.0/24</code>. Sur ce réseau, 254 adresses sont initialement disponibles (de <code>172.162.1.1</code>  à <code>172.162.1.254</code>, puisque l'adresse <code>172.162.1.255</code> est réservée pour le <em>broadcast</em> sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.</p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<ul>
-<li>côté R4 : <code>200.158.4.1</code></li>
-<li>côté R2 : <code>198.164.3.2</code> (car la <code>198.164.3.1</code> est déjà prise par R2)</li>
-<li>côté S3 : <code>199.160.1.1</code></li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q3.a.</summary>
-<p>Parcours possibles :  </p>
-<ul>
-<li>R1-R2</li>
-<li>R1-R4-R2</li>
-<li>R1-R4-R3-R2</li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q3.b.</summary>
-<p>Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. </p>
-</details>
-<details class="success">
-<summary>Correction Q3.c</summary>
-<p>Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.</p>
-</details>
-<details class="success">
-<summary>Correction Q4.</summary>
-<p>Le câble utilisé est le cable c) Ethernet.  </p>
-<p>(le câble «Internet» n'existe pas, les câbles VGA et HDMI servent à relier un ordinateur à un écran).</p>
-</details>
-<details class="success">
-<summary>Correction Q5.a.</summary>
-<p><span class="arithmatex">\(10=\dfrac{10^9}{d}\)</span> donc <span class="arithmatex">\(d=\dfrac{10^9}{10}=10^8\)</span>.</p>
-<p>Le débit de cette liaison est donc de <span class="arithmatex">\(10^8\)</span> bits par seconde, soit 100 Mbps.</p>
-</details>
-<details class="success">
-<summary>Correction Q5.b.</summary>
-<p><img alt="image" class="center" src="../data/exoNC.png" />
-Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2.</p>
-<p>Coût des autres parcours :</p>
-<ul>
-<li>R1-R2 : 10</li>
-<li>R1-R4-R3-R2 : 151</li>
-</ul>
-<p>Le parcours R1-R4-R2 est donc bien le parcours minimal.</p>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <p>Parties 2, 3 et 4 de l'exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf" target="_blank">Nouvelle-Calédonie J1 2022</a>.</p>
 <p><strong>Correction Partie 2</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>Le réseau services a pour adresse IP <code>195.168.254.0</code>.</p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Le réseau Services a pour adresse <code>195.168.254.0</code>. Comme le masque de sous-réseau utilisé est <code>255.255.255.0</code>, 254 adresses sont initialement disponibles (<code>195.168.254.1</code>  à <code>195.168.254.254</code>, puisque l'adresse <code>195.168.254.255</code> est réservée pour le <em>broadcast</em> sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.</p>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<p>Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est <code>192.168.254.2</code>. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.</p>
-</details>
 <p><strong>Correction Partie 3</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>La ligne 2 montre que l'adresse MAC du serveur DNS est <code>8A:FD:54:49:D0:CC</code>.  </p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>La couche Transport montre que le protocole utilisé est le protocole UDP.</p>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<p>Le commentaire de la couche Application indique que l'adresse IP du serveur web est <code>192.168.254.201</code>. </p>
-</details>
 <p><strong>Correction Partie 4</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>Table de routage du routeur R4 :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Destination</th>
-<th style="text-align: center;">Routeur suivant</th>
-<th style="text-align: center;">Distance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">R1</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">R3</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R5</td>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Pour minimiser le nombre de sauts (protocole RIP), le trajet sera <code>R1-R2-R4-R6</code>. </p>
-</details>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
 <p>Créer une fonction <code>meme_sous_reseau(ip_a, ip_b, masque)</code> qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.</p>
 <p>Exercice (difficile) à réaliser en Test Driven Developpement à partir du squelette de code ci-dessous, en testant chaque fonction après sa réalisation, jusqu'à la fonction finale.</p>
@@ -5475,7 +5100,7 @@ Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="15 janvier 2025 10:55:34 UTC">15 janvier 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 décembre 2025 14:30:21 UTC">3 décembre 2025</span>
   </span>
 
     
