@@ -930,7 +930,7 @@
 
     **Q3.a.** Écrire la liste de toutes les valeurs dans l'ordre où elles seront affichées.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Les valeurs seront affichées dans l'ordre suivant : 26-3-1-15-13-19-25-42-29-32-30-37.      
@@ -945,7 +945,7 @@
     propositions suivantes : Préfixe, Suffixe ou Infixe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On reconnait un parcours préfixe.        
