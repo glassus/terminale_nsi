@@ -886,7 +886,7 @@
     gauche ou en fils droit, et expliquer toutes les étapes de la décision.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex6_1.png){: .center width=50%}
@@ -908,7 +908,7 @@
     binaires de recherche.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Les valeurs acceptables doivent être strictement inférieures à 29, et supérieures ou égales à 26. Ces valeurs sont donc : 26, 27 et 28.
