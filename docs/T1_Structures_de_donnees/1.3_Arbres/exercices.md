@@ -537,7 +537,7 @@
     a.insere(5)
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **3.** ![image](data/ex3-3.png){: .center}        
