@@ -620,7 +620,7 @@
     « bien construit » de hauteur $ℎ$ ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **6.a.** La configuration minimale d'un arbre bien construit de hauteur $h$ peut être :
@@ -638,7 +638,7 @@
     **6.b** Écrire la méthode ```bien_construit``` demandée.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **6.b.** Intuitivement, un arbre est *mal construit* si sa hauteur est trop grande par rapport à sa taille (trop *étiré*).
