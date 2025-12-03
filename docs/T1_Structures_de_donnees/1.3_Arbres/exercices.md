@@ -767,7 +767,7 @@
     correction(True,
     """
     ??? success \"Correction\" 
-        Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN. Ceci est le comportement souhaité puisqu'on ne veut pas avoir deux valeurs identiques dans notre ABR, ainsi qu'il est rappelé au début de l'énoncé.         
+        Si on ajoute un élément déjà présent dans l'arbre, la valeur ```e``` sera égale à ```self.valeur``` (éventuellement après quelques appels récursifs). Or ce cas d'égalité n'est pas prévu par les tests : il ne se passera donc RIEN.
     """
     )
     }}
