@@ -4937,10 +4937,6 @@ C'est un algorithme récursif qui va renvoyer, si on n'est pas positionné sur u
 <p><strong>Question  1</strong></p>
 <p>Déterminer la taille et la hauteur de l’arbre binaire suivant :
 <img alt="image" class="center" src="../data/ex1a.png" /></p>
-<details class="success">
-<summary>Correction</summary>
-<p>La taille est 9, la hauteur est 4.        </p>
-</details>
 <p><strong>Question 2</strong>  </p>
 <p>On décide de numéroter en binaire les nœuds d’un arbre binaire de la façon suivante :  </p>
 <ul>
@@ -4954,28 +4950,11 @@ père ;  </li>
 F .</p>
 <p><img alt="image" class="center" src="../data/ex1b.png" /></p>
 <p><strong>a</strong>. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>G est associé à 1010.  </p>
-</details>
 <p><strong>b</strong>. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>13 s'écrit 1101 en binaire, c'est donc le nœud I.          </p>
-</details>
 <p><strong>c</strong>. En notant <span class="arithmatex">\(h\)</span> la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
 bas ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Les nœuds les plus en bas sont notés sur <span class="arithmatex">\(h\)</span> bits.      </p>
-</details>
 <p><strong>d</strong>. Justifier que pour tout arbre de hauteur <span class="arithmatex">\(h\)</span> et de taille <span class="arithmatex">\(n \geqslant 2\)</span>, on a :
 <span class="arithmatex">\(h\leqslant n \leqslant 2^h-1\)</span></p>
-<details class="success">
-<summary>Correction</summary>
-<p>L'arbre de hauteur <span class="arithmatex">\(h\)</span> de taille minimale est l'arbre filiforme, qui est de taille <span class="arithmatex">\(h\)</span>.<br />
-L'arbre de hauteur <span class="arithmatex">\(h\)</span> de taille maximale est l'arbre complet, qui est de taille <span class="arithmatex">\(2^h-1\)</span>. Si <span class="arithmatex">\(n\)</span> est la taille d'un arbre quelconque de taille <span class="arithmatex">\(h\)</span>, on a donc bien    <span class="arithmatex">\(h \leqslant n \leqslant 2^h-1\)</span>.</p>
-</details>
 <p><strong>Question 3</strong><br />
 Un arbre binaire est dit complet si tous les niveaux de l’arbre sont remplis.
 <img alt="image" class="center" src="../data/ex1c.png" /></p>
@@ -4989,15 +4968,7 @@ l’arbre, de la façon suivante :  </p>
 </ul>
 <p>Répondre aux questions suivantes :  </p>
 <p><strong>a</strong>. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Tableau : <code>[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]</code> .     </p>
-</details>
 <p><strong>b</strong>. On considère le père du nœud d’indice <span class="arithmatex">\(i\)</span> avec <span class="arithmatex">\(i \geqslant 2\)</span>. Quel est son indice dans le tableau ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Le père du nœud d'indice <code>i</code> a pour indice <code>i//2</code>.       </p>
-</details>
 <p><strong>Question 4</strong>  </p>
 <p>On se place dans le cas particulier d’un arbre binaire de recherche complet où les nœuds
 contiennent des entiers et pour lequel la valeur de chaque noeud est supérieure à celles des
@@ -5005,20 +4976,6 @@ noeuds de son fils gauche, et inférieure à celles des noeuds de son fils droit
 <p>Écrire une fonction <code>recherche</code> ayant pour paramètres un arbre <code>arbre</code> et un élément <code>element</code>. Cette
 fonction renvoie <code>True</code> si <code>element</code> est dans l’arbre et <code>False</code> sinon. L’arbre sera représenté par un tableau
 comme dans la question précédente.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">arbre</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">element</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">element</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="c1"># on se place sur le fils gauche</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span>  <span class="mi">1</span> <span class="c1"># on se place sur le fils droit</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -5602,7 +5559,7 @@ croissant.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 décembre 2025 14:01:51 UTC">4 décembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 décembre 2025 14:55:13 UTC">4 décembre 2025</span>
   </span>
 
     
