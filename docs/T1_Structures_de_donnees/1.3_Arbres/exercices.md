@@ -184,7 +184,7 @@
 
     **a**. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Tableau : ```[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]``` .     
@@ -193,7 +193,7 @@
     }}
     **b**. On considère le père du nœud d’indice $i$ avec $i \geqslant 2$. Quel est son indice dans le tableau ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le père du nœud d'indice ```i``` a pour indice ```i//2```.       
