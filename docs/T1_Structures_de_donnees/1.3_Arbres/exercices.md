@@ -176,8 +176,8 @@
     l’arbre, de la façon suivante :  
 
     - La racine a pour indice 1 ;
-    - Le fils gauche du nœud d’indice i a pour indice $2 \times i$ ;
-    - Le fils droit du nœud d’indice i a pour indice $2 \times i + 1$ ;
+    - Le fils gauche du nœud d’indice $i$ a pour indice $2 \times i$ ;
+    - Le fils droit du nœud d’indice $i$ a pour indice $2 \times i + 1$ ;
     - On place la taille $n$ de l’arbre dans la case d’indice 0.
 
     Répondre aux questions suivantes :  
@@ -213,7 +213,7 @@
     comme dans la question précédente.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
