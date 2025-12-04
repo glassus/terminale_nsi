@@ -159,7 +159,7 @@
     **d**. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a :
     $h\leqslant n \leqslant 2^h-1$
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
