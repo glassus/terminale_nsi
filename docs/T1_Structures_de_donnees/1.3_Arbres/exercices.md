@@ -104,7 +104,7 @@
     ![image](data/ex1a.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La taille est 9, la hauteur est 4.        
@@ -130,7 +130,7 @@
 
     **a**. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         G est associé à 1010.  
@@ -139,7 +139,7 @@
     }}
     **b**. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         13 s'écrit 1101 en binaire, c'est donc le nœud I.          
@@ -149,7 +149,7 @@
     **c**. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
     bas ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les nœuds les plus en bas sont notés sur $h$ bits.      
@@ -159,7 +159,7 @@
     **d**. Justifier que pour tout arbre de hauteur $h$ et de taille $n \geqslant 2$, on a :
     $h\leqslant n \leqslant 2^h-1$
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         L'arbre de hauteur $h$ de taille minimale est l'arbre filiforme, qui est de taille $h$.  
@@ -184,7 +184,7 @@
 
     **a**. Déterminer le tableau qui représente l’arbre binaire complet de l’exemple précédent.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Tableau : ```[15, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O]``` .     
@@ -193,7 +193,7 @@
     }}
     **b**. On considère le père du nœud d’indice $i$ avec $i \geqslant 2$. Quel est son indice dans le tableau ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le père du nœud d'indice ```i``` a pour indice ```i//2```.       
@@ -213,7 +213,7 @@
     comme dans la question précédente.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
