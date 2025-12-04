@@ -984,7 +984,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```'Bonjour Alan !'```    
@@ -994,7 +994,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         Ce sont des booléens. ```x``` vaut ```False```, ```y``` vaut ```True```.        
@@ -1003,7 +1003,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c.\" 
         ```python linenums='1'
@@ -1019,7 +1019,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a\" 
         ![image](data/23-NSIJ2G11_1.png){: .center}
@@ -1029,7 +1029,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b\" 
         ![image](data/23-NSIJ2G11_2.png){: .center}
@@ -1039,7 +1039,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a\" 
         L'exécution de ```mystere(abr_mots_francais)``` va renvoyer le nombre 336531. En effet cette fonction renvoie la taille d'un arbre. Il y a 336531 dans la liste ```liste_mots_francais```, et donc dans l'arbre ``` abr_mots_francais```. 
@@ -1051,7 +1051,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\" 
         ```python linenums='1'
@@ -1067,7 +1067,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.a.\" 
         ```python linenums='1'
@@ -1084,7 +1084,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\" 
         Cette commande va **d'abord** chercher dans la liste tous les mots de 3 lettres qui comportent un ```x``` en dernière position (indice 2).
@@ -1098,7 +1098,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.c.\" 
         ```python
