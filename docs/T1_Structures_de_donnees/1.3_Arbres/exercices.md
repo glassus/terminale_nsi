@@ -104,7 +104,7 @@
     ![image](data/ex1a.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La taille est 9, la hauteur est 4.        
@@ -130,7 +130,7 @@
 
     **a**. Dans l’exemple précédent, quel est le numéro en binaire associé au nœud G ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         G est associé à 1010.  
