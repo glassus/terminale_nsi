@@ -139,7 +139,7 @@
     }}
     **b**. Quel est le nœud dont le numéro en binaire vaut 13 en décimal ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         13 s'écrit 1101 en binaire, c'est donc le nœud I.          
@@ -149,7 +149,7 @@
     **c**. En notant $h$ la hauteur de l’arbre, sur combien de bits seront numérotés les nœuds les plus en
     bas ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Les nœuds les plus en bas sont notés sur $h$ bits.      
