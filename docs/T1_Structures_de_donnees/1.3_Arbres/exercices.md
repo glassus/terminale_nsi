@@ -104,7 +104,7 @@
     ![image](data/ex1a.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La taille est 9, la hauteur est 4.        
