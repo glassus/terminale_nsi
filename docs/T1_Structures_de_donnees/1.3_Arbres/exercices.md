@@ -496,8 +496,7 @@
     récursivement une nouvelle clé.
 
     ```python linenums='1'
-    class Noeud :
-        
+    class Noeud :    
         def __init__(self, cle):
             self.cle = cle
             self.gauche = None
@@ -515,8 +514,7 @@
                 else :
                     self.droit.insere(cle)
                     
-    class Arbre :
-        
+    class Arbre :        
         def __init__(self, cle):
             self.racine = Noeud(cle)
 
@@ -595,10 +593,13 @@
         Méthode ```taille```    de la classe ```Noeud``` :  
         ```python linenums='1'
         def taille(self):
-            if self == None:
-                return 0
-            else:
-                return 1 + self.gauche.taille() + self.droit.taille()
+            if self.gauche == None and self.droit == None:
+                return 1
+            if self.gauche == None:
+                return 1 + self.droit.taille()
+            if self.droit == None:
+                return 1 + self.gauche.taille()      
+            return 1 + self.gauche.taille() + self.droit.taille()
         ```
         Méthode ```taille```    de la classe ```Arbre``` : 
         ```python linenums='1'
