@@ -4897,6 +4897,13 @@
 <summary>Correction Q2.</summary>
 <p><img alt="image" class="center" src="../data/ex5LR2022.png" /></p>
 </details>
+<details class="success">
+<summary>Correction Q3.a.</summary>
+<p>Pour être dans le réseau 1, il faut que le &amp; logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (<code>172.150.4.0</code> ).</p>
+<p>Le réseau étant en <code>/24</code> (équivalent au masque <code>255.255.255.0</code>), cela signifie que l'adresse IP de la machine soit de la forme <code>172.150.4.???</code>.</p>
+<p>Attention, il faut en plus s'assurer que l'adresse ne soit pas déjà utilisée, et qu'elle ne soit pas l'adresse du réseau (<code>172.150.4.0</code>) ou de broadcast (<code>172.150.4.255</code>).</p>
+<p>Il reste alors les adresses 4) et 6). (<code>172.150.4.11</code> et <code>172.150.4.200</code>)</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -5112,7 +5119,7 @@ Recopier sur la copie le schéma ci-dessous : </p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="8 décembre 2025 14:31:59 UTC">8 décembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="8 décembre 2025 14:47:51 UTC">8 décembre 2025</span>
   </span>
 
     
