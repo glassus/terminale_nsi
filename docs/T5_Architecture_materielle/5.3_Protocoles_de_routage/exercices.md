@@ -82,7 +82,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
@@ -132,7 +132,7 @@
     1.1 Le routeur A doit transmettre un message au routeur G, en effectuant un nombre minimal de
     sauts. Déterminer le trajet parcouru.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
@@ -141,7 +141,7 @@
     }}
     1.2. Déterminer une table de routage possible pour le routeur G obtenue à l’aide du protocole RIP.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.2.** 
@@ -166,7 +166,7 @@
     protocole RIP.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Nouvelle table de routage de A :  
@@ -210,7 +210,7 @@
 
     1.a. En utilisant l’extrait de la table de routage de R1, vers quel routeur R1 envoie-t-il ce paquet : R2 ou R3 ? Justifier.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2. 
@@ -220,7 +220,7 @@
 
     1.b. A l’aide des extraits de tables de routage ci-dessus, nommer les routeurs traversés par ce paquet, lorsqu’il va du réseau L1 au réseau L2.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2. 
