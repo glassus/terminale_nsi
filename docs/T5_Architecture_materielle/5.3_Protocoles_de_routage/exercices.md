@@ -166,7 +166,7 @@
     protocole RIP.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Nouvelle table de routage de A :  
