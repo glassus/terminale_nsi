@@ -329,7 +329,7 @@
     1/ 
     1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. 
