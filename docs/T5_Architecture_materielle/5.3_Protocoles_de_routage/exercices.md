@@ -349,7 +349,7 @@
     1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
     et L2 ? 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)  
