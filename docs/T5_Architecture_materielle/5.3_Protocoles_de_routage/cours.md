@@ -270,10 +270,11 @@ Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. 
     **Question 1**
 
     a. Vérifier que le coût de la liaison entre les routeurs A et B est 0,01.
+
     b. La liaison entre le routeur B et D a un coût de 5. Quel est le débit de cette liaison ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1**  
