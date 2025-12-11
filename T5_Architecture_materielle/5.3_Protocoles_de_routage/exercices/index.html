@@ -5110,34 +5110,12 @@ L’adresse IP dont tous les bits de la partie « machine » sont à 0 est appel
 L’adresse IP dont tous les bits de la partie « machine » sont à 1 est appelée « adresse de diffusion ».</p>
 <p>1/ 
 1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. </p>
-</details>
 <p>1.b. Donner la plus petite et la plus grande adresse IP valides pouvant être attribuées à un ordinateur portable ou un serveur sur chacun des réseaux L1 et L2 sachant que l’adresse du réseau et l’adresse de diffusion ne peuvent pas être attribuées à une machine.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.<br />
-Pour le réseau L2 (175.16.0.0/16), l'adresse min est 175.16.0.1/16 et l'adresse max est 175.16.255.254/16   </p>
-</details>
 <p>1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
 et L2 ? </p>
-<details class="success">
-<summary>Correction</summary>
-<p>1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)<br />
-Pour le réseau L2, il y en a <span class="arithmatex">\(256^2-2\)</span>, soit 65534.</p>
-</details>
 <p>2/ 
 2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  </p>
-</details>
 <p>2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.</p>
-<details class="success">
-<summary>Correction</summary>
-<p>2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   </p>
-</details>
 <p>2.c. La bande passante d’une liaison Ether (quantité d’information qui peut être transmise en bits/s) est de <span class="arithmatex">\(10^7\)</span> bits/s et celle d’une liaison FastEther est de <span class="arithmatex">\(10^8\)</span> bits/s. Le coût d’une liaison est défini par <span class="arithmatex">\(\frac{10^8}{d}\)</span> , où <span class="arithmatex">\(d\)</span> est sa bande passante en bits/s.</p>
 <table>
 <thead>
@@ -5263,7 +5241,7 @@ Recopier sur la copie le schéma ci-dessous : </p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 décembre 2025 13:46:43 UTC">11 décembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 décembre 2025 14:54:21 UTC">11 décembre 2025</span>
   </span>
 
     
