@@ -349,7 +349,7 @@
     1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
     et L2 ? 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)  
@@ -360,7 +360,7 @@
     2/ 
     2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  
@@ -369,7 +369,7 @@
     }}
     2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   
