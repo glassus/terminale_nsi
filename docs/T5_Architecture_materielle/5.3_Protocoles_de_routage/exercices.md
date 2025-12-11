@@ -329,7 +329,7 @@
     1/ 
     1.a. Quelles sont les adresses des réseaux locaux L1 et L2 ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.16.0.0/16. 
@@ -338,7 +338,7 @@
     }}
     1.b. Donner la plus petite et la plus grande adresse IP valides pouvant être attribuées à un ordinateur portable ou un serveur sur chacun des réseaux L1 et L2 sachant que l’adresse du réseau et l’adresse de diffusion ne peuvent pas être attribuées à une machine.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
@@ -349,7 +349,7 @@
     1.c. Combien de machines peut-on connecter au maximum à chacun des réseaux locaux L1
     et L2 ? 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1.c. Pour le réseau L1, il y a donc 254 adresses (256 moins les deux interdites)  
@@ -360,7 +360,7 @@
     2/ 
     2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  
@@ -369,7 +369,7 @@
     }}
     2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   
