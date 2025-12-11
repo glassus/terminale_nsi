@@ -360,7 +360,7 @@
     2/ 
     2.a. Expliquer l’utilité d’avoir plusieurs chemins possibles reliant les réseaux L1 et L2.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         2.a Il est utile d'avoir plusieurs chemins en cas de panne d'un routeur.  
