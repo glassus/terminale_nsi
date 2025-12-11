@@ -369,7 +369,7 @@
     }}
     2.b. Quel est le chemin le plus court en nombre de sauts pour relier R1 et R6 ? Donner le nombre de sauts de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         2.b En nombres de sauts (protocole RIP), le chemin le plus court est R1-R2-R5-R6, qui contient 3 sauts.   
