@@ -5048,7 +5048,7 @@
 <p>Il faut pour cela faire les observations suivantes :</p>
 <ul>
 <li>pour rappel, le rendu est toujours possible : dans le pire des cas, le nombre de pièces à rendre est égal à la somme de départ (rendu effectué à coups de pièces de 1)</li>
-<li><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires (contenant <code>p</code>) pour rendre la somme <code>somme</code>   est égal à 1 + le nombre minimal de pièces nécessaires pour rendre la somme <code>somme - p</code>. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> </li>
+<li><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> Si <code>p</code> est une pièce de <code>pieces</code>, le nombre minimal de pièces nécessaires (contenant <code>p</code>) pour rendre la somme <code>somme</code>   est égal à 1 + le nombre minimal de pièces nécessaires pour rendre la somme <code>somme - p</code>. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> </li>
 </ul>
 <p>Cette dernière observation est cruciale. Elle repose sur le fait qu'il suffit de ajouter 1 pièce (la pièce de valeur <code>p</code>) à la meilleure combinaison qui rend <code>somme - p</code> pour avoir la meilleure combinaison qui rend <code>somme</code> (meilleure combinaison parmi celles contenant <code>p</code>). </p>
 <p>On va donc passer en revue toutes les pièces <code>p</code> et mettre à jour à chaque fois le nombre minimal de pièces.</p>
@@ -5107,7 +5107,7 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_recursif</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="mi">107</span><span class="p">)</span>
 <span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="ow">in</span> <span class="n">comparison</span>
 </code></pre></div>
-<p><img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f622.svg" title=":cry:" /></p>
+<p><img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f622.svg" title=":cry:" /></p>
 <p>Le nombre d'appels récursifs de notre algorithme augmente exponentiellement avec la valeur de la somme à rendre : on se retrouve très rapidement avec des milliards d'appels récursifs, ce qui n'est pas gérable.</p>
 <p>Ces appels récursifs ont lieu sur un nombre limité de valeurs : par construction de notre algorithme, si la somme à rendre est 100, il y aura beaucoup (beaucoup) d'appels vers 99, vers 98, vers 97... jusqu'à 0. </p>
 <p>On peut donc légitimement penser à <strong>mémoïser</strong> notre algorithme, en stockant les valeurs pour éviter de les recalculer.</p>

@@ -5143,7 +5143,7 @@ la suite de Fibonacci définie par :</p>
 </details>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title"><img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> Exemple de mémoïsation : Fibonacci <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title"><img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> Exemple de mémoïsation : Fibonacci <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -5156,7 +5156,7 @@ la suite de Fibonacci définie par :</p>
     <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">dict_fibo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> le dictionnaire <code>dict_fibo</code> doit être <strong>à l'extérieur</strong> de la fonction, sinon il est réinitialisé à chaque appel récursif !</p>
+<img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> le dictionnaire <code>dict_fibo</code> doit être <strong>à l'extérieur</strong> de la fonction, sinon il est réinitialisé à chaque appel récursif !</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -5167,10 +5167,10 @@ la suite de Fibonacci définie par :</p>
 </details>
 </div>
 <h3 id="13-quelques-remarques">1.3 Quelques remarques<a class="headerlink" href="#13-quelques-remarques" title="Permanent link">⚓︎</a></h3>
-<h4 id="131-juste-une-brute-force-plus-efficace">1.3.1 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Juste une brute-force plus efficace ?</strong><a class="headerlink" href="#131-juste-une-brute-force-plus-efficace" title="Permanent link">⚓︎</a></h4>
+<h4 id="131-juste-une-brute-force-plus-efficace">1.3.1 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Juste une brute-force plus efficace ?</strong><a class="headerlink" href="#131-juste-une-brute-force-plus-efficace" title="Permanent link">⚓︎</a></h4>
 <p>Notre technique de mémoïsation ne change pas vraiment la structure du programme : on continue de calculer toutes les valeurs intermédiaires, <strong>mais on ne les calcule qu'une seule fois.</strong></p>
 <p><img alt="image" class="center" src="../data/bf_vs_dp.jpg" width="40%" /></p>
-<h4 id="132-suppression-de-la-variable-globale">1.3.2 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Suppression de la variable globale</strong><a class="headerlink" href="#132-suppression-de-la-variable-globale" title="Permanent link">⚓︎</a></h4>
+<h4 id="132-suppression-de-la-variable-globale">1.3.2 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Suppression de la variable globale</strong><a class="headerlink" href="#132-suppression-de-la-variable-globale" title="Permanent link">⚓︎</a></h4>
 <p>Dans le code précédent, le dictionnaire <code>dict_fibo</code> est à l'extérieur de la fonction. Un dictionnaire étant un type mutable, sa modification à l'intérieur de la fonction ne pose pas de problème. Toutefois, ce genre de pratique est déconseillé : si par exemple on appelle 2 fois la fonction <code>fibo</code>, le dictionnaire n'est pas réinitialisé entre-temps (ce qui dans notre cas n'est pas problématique, mais cela pourrait l'être). Comment éviter cela ?</p>
 <p>On peut utiliser une fonction <em>englobante</em> (appelée ici <code>fibonacci</code> ) :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -5193,7 +5193,7 @@ la suite de Fibonacci définie par :</p>
 <span class="mi">12586269025</span>
 </code></pre></div>
 <p>Remarquez la définition d'une fonction <em>à l'intérieur</em> d'une autre. Cela ne pose aucun problème, mais attention, cette fonction n'existe pas à l'extérieur de sa fonction englobante.</p>
-<h4 id="133-memoisation-automatique-en-python">1.3.3 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Mémoïsation automatique en Python</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#133-memoisation-automatique-en-python" title="Permanent link">⚓︎</a></h4>
+<h4 id="133-memoisation-automatique-en-python">1.3.3 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Mémoïsation automatique en Python</strong> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#133-memoisation-automatique-en-python" title="Permanent link">⚓︎</a></h4>
 <p>La fonction <code>lru_cache</code> du module <code>functools</code> permet de mémoïser automatiquement une fonction récursive. Il suffit, juste avant d'écrire la fonction, de mettre la ligne <code>@lru_cache</code> (appelée <em>décorateur</em>). </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -5273,7 +5273,7 @@ la suite de Fibonacci définie par :</p>
 De manière plus générale, cette méthode est basée sur le fait de résoudre des problèmes de petite taille, puis de plus en plus gros, jusqu'au problème final.</p>
 <h3 id="15-bilan-des-methodes-employees">1.5 Bilan des méthodes employées<a class="headerlink" href="#15-bilan-des-methodes-employees" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Principes de programmation dynamique <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Principes de programmation dynamique <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li>
 <p>Lors d'un calcul effectué de manière récursive, il peut arriver que de multiples appels récursifs soient identiques. Pour éviter de recalculer plusieurs fois la même chose, on peut stocker les résultats intermédiaires. On appelle cette technique la <strong>mémoïsation</strong>.<br />
