@@ -260,7 +260,7 @@
     où $BP$ est la bande passante de la connexion en bps (bits par seconde).
     Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.a $\\dfrac{10^9}{10 \\times 10^6}=100$ donc le coût R2-R3 est 100.  
@@ -270,7 +270,7 @@
 
     b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivant au réseau L2, en utilisant le protocole OSPF.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
@@ -280,7 +280,7 @@
     }}
     c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).
@@ -384,7 +384,7 @@
 
     Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         2.c Les liaisons Ether ont un coût de 10, les liaisons FastEther ont un coût de 1. Ce qui donne :
@@ -399,7 +399,7 @@
 
     ![](data/ex3_4_corrige.png)
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On veut que le chemin soit le plus court en nombre de sauts, donc il faut que le chemin soit R1-R2-R5-R6.
@@ -444,7 +444,7 @@
 
     1. Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             1. A-B-E-F  
@@ -459,7 +459,7 @@
     En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/graphAN_corr.png){: .center}
@@ -474,7 +474,7 @@
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```195.168.1.0/24```
@@ -483,7 +483,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```195.168.1.17/24```
@@ -491,7 +491,7 @@
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\" 
         Le réseau T2 a pour adresse ```172.162.1.0/24```. Sur ce réseau, 254 adresses sont initialement disponibles (de ```172.162.1.1```  à ```172.162.1.254```, puisque l'adresse ```172.162.1.255``` est réservée pour le *broadcast* sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.
@@ -500,7 +500,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         - côté R4 : ```200.158.4.1```
