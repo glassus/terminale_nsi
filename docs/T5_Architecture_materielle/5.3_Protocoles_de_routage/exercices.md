@@ -384,7 +384,7 @@
 
     Quel est le chemin reliant R1 et R6 qui a le plus petit coût ? Donner le coût de ce chemin et préciser les routeurs utilisés.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         2.c Les liaisons Ether ont un coût de 10, les liaisons FastEther ont un coût de 1. Ce qui donne :
