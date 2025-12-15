@@ -399,7 +399,7 @@
 
     ![](data/ex3_4_corrige.png)
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On veut que le chemin soit le plus court en nombre de sauts, donc il faut que le chemin soit R1-R2-R5-R6.
