@@ -260,7 +260,7 @@
     où $BP$ est la bande passante de la connexion en bps (bits par seconde).
     Sachant que la bande passante de la liaison R2-R3 est de 10 Mbps, calculer le coût correspondant.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         3.a $\\dfrac{10^9}{10 \\times 10^6}=100$ donc le coût R2-R3 est 100.  
@@ -270,7 +270,7 @@
 
     b. Déterminer le chemin parcouru par un paquet partant du réseau L1 et arrivant au réseau L2, en utilisant le protocole OSPF.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
