@@ -20,6 +20,18 @@
     **D.** 50 Mb/s
 
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction \" 
+        - **A.** $c = \\dfrac{10^8}{10 \\times 10^6} = \\dfrac{10^8}{10^7}= 10$
+        - **B.** $c = \\dfrac{10^8}{10^9} = 10^{-1}= 0,1$
+        - **C.** $c = \\dfrac{10^8}{10^6} = 10^2= 100$
+        - **D.** $c = \\dfrac{10^8}{50 \\times 10^6} = \\dfrac{10^2}{50}=2$
+    """
+    )
+    }}
+
 !!! example "{{ exercice() }}"
 
     Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
