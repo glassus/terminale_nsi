@@ -5,9 +5,7 @@
 
 
 !!! abstract "Actualités"
-    - Décembre est le mois d'[Advent of Code](https://adventofcode.com/2025){. target="_blank"} !
-    ![image](data/aoc2024.png){: .center width=20%}
-    - Quelques [conseils pour démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}.
+    - Apprenez le hacking avec [https://www.challenges-kids.fr/](https://www.challenges-kids.fr/){. target="_blank"} 
 
 
 
