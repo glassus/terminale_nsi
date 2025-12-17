@@ -523,7 +523,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\" 
         Parcours possibles :  
@@ -536,7 +536,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\" 
         Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. 
@@ -545,7 +545,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.c\" 
         Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.
@@ -554,12 +554,12 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
 
-        (le câble «Internet» n'existe pas, les câbles VGA et HDMI servent à relier un ordinateur à un écran).
+        Le câble «Internet» n'existe pas, les câbles VGA et HDMI servent à relier un ordinateur à un écran. VGA transporte un signal analogique, HDMI transporte un signal numérique. HDMI transporte aussi le son, ce que ne fait pas VGA. 
     """
     )
     }}
