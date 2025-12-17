@@ -576,7 +576,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.b.\" 
          ![image](data/exoNC.png){: .center}
