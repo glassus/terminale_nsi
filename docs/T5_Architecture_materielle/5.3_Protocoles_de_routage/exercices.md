@@ -554,7 +554,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True
     """
     ??? success \"Correction Q5.a.\" 
         $10=\\dfrac{10^9}{d}$ donc $d=\\dfrac{10^9}{10}=10^8$.
