@@ -5292,119 +5292,13 @@ Recopier sur la copie le schéma ci-dessous : </p>
 <li>côté S3 : <code>199.160.1.1</code></li>
 </ul>
 </details>
-<details class="success">
-<summary>Correction Q3.a.</summary>
-<p>Parcours possibles :  </p>
-<ul>
-<li>R1-R2</li>
-<li>R1-R4-R2</li>
-<li>R1-R4-R3-R2</li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q3.b.</summary>
-<p>Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. </p>
-</details>
-<details class="success">
-<summary>Correction Q3.c</summary>
-<p>Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.</p>
-</details>
-<details class="success">
-<summary>Correction Q4.</summary>
-<p>Le câble utilisé est le cable c) Ethernet.  </p>
-<p>Le câble «Internet» n'existe pas, les câbles VGA et HDMI servent à relier un ordinateur à un écran. VGA transporte un signal analogique, HDMI transporte un signal numérique. HDMI transporte aussi le son, ce que ne fait pas VGA. </p>
-</details>
-<details class="success">
-<summary>Correction Q5.a.</summary>
-<p><span class="arithmatex">\(10=\dfrac{10^9}{d}\)</span> donc <span class="arithmatex">\(d=\dfrac{10^9}{10}=10^8\)</span>.</p>
-<p>Le débit de cette liaison est donc de <span class="arithmatex">\(10^8\)</span> bits par seconde, soit 100 Mbps.</p>
-</details>
-<details class="success">
-<summary>Correction Q5.b.</summary>
-<p><img alt="image" class="center" src="../data/exoNC.png" />
-Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2.</p>
-<p>Coût des autres parcours :</p>
-<ul>
-<li>R1-R2 : 10</li>
-<li>R1-R4-R3-R2 : 151</li>
-</ul>
-<p>Le parcours R1-R4-R2 est donc bien le parcours minimal.</p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <p>Parties 2, 3 et 4 de l'exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf" target="_blank">Nouvelle-Calédonie J1 2022</a>.</p>
 <p><strong>Correction Partie 2</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>Le réseau services a pour adresse IP <code>195.168.254.0</code>.</p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Le réseau Services a pour adresse <code>195.168.254.0</code>. Comme le masque de sous-réseau utilisé est <code>255.255.255.0</code>, 254 adresses sont initialement disponibles (<code>195.168.254.1</code>  à <code>195.168.254.254</code>, puisque l'adresse <code>195.168.254.255</code> est réservée pour le <em>broadcast</em> sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.</p>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<p>Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est <code>192.168.254.2</code>. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.</p>
-</details>
 <p><strong>Correction Partie 3</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>La ligne 2 montre que l'adresse MAC du serveur DNS est <code>8A:FD:54:49:D0:CC</code>.  </p>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>La couche Transport montre que le protocole utilisé est le protocole UDP.</p>
-</details>
-<details class="success">
-<summary>Correction Q3.</summary>
-<p>Le commentaire de la couche Application indique que l'adresse IP du serveur web est <code>192.168.254.201</code>. </p>
-</details>
 <p><strong>Correction Partie 4</strong></p>
-<details class="success">
-<summary>Correction Q1.</summary>
-<p>Table de routage du routeur R4 :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Destination</th>
-<th style="text-align: center;">Routeur suivant</th>
-<th style="text-align: center;">Distance</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">R1</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">R3</td>
-<td style="text-align: center;">R2</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R5</td>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">R6</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details class="success">
-<summary>Correction Q2.</summary>
-<p>Pour minimiser le nombre de sauts (protocole RIP), le trajet sera <code>R1-R2-R4-R6</code>. </p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
@@ -5484,7 +5378,7 @@ Le parcours de coût minimal est le parcours R1-R4-R2, qui a un coût total de 2
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 décembre 2025 08:47:24 UTC">17 décembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 décembre 2025 08:56:54 UTC">17 décembre 2025</span>
   </span>
 
     
