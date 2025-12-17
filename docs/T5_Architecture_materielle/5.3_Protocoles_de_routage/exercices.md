@@ -523,7 +523,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         Parcours possibles :  
@@ -536,7 +536,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. 
@@ -545,7 +545,7 @@
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.c\" 
         Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.
@@ -554,7 +554,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.a.\" 
         $10=\\dfrac{10^9}{d}$ donc $d=\\dfrac{10^9}{10}=10^8$.
@@ -576,7 +576,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.b.\" 
          ![image](data/exoNC.png){: .center}
@@ -601,7 +601,7 @@
     **Correction Partie 2**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         Le réseau services a pour adresse IP ```195.168.254.0```.
@@ -610,7 +610,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Le réseau Services a pour adresse ```195.168.254.0```. Comme le masque de sous-réseau utilisé est ```255.255.255.0```, 254 adresses sont initialement disponibles (```195.168.254.1```  à ```195.168.254.254```, puisque l'adresse ```195.168.254.255``` est réservée pour le *broadcast* sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.
@@ -619,7 +619,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est ```192.168.254.2```. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.
@@ -631,7 +631,7 @@
     **Correction Partie 3**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```.  
@@ -640,7 +640,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         La couche Transport montre que le protocole utilisé est le protocole UDP.
@@ -649,7 +649,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
@@ -661,7 +661,7 @@
     **Correction Partie 4**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         Table de routage du routeur R4 :
@@ -679,7 +679,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Pour minimiser le nombre de sauts (protocole RIP), le trajet sera ```R1-R2-R4-R6```. 
