@@ -631,7 +631,7 @@
     **Correction Partie 3**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```.  
@@ -640,7 +640,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         La couche Transport montre que le protocole utilisé est le protocole UDP.
@@ -649,7 +649,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
