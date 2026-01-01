@@ -3,13 +3,15 @@
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
-
+{#
 !!! abstract "Actualités"
     - Apprenez le hacking avec [https://www.challenges-kids.fr/](https://www.challenges-kids.fr/){. target="_blank"} 
-
+#}
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+    - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
     - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
     - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 

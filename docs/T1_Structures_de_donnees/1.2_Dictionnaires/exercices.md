@@ -10,7 +10,7 @@
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -42,7 +42,7 @@
     Exercice 2 du sujet [Centres Etrangers J1 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a. \" 
         ```flotte[26]``` renvoie  ```{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}```
@@ -51,7 +51,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b. \" 
         ```flotte[80]['etat']``` renvoie la valeur ```0```. 
@@ -60,7 +60,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c. \" 
         ```flotte[99]['etat']``` renverra une erreur car la clé 99 n'existe pas. 
@@ -70,7 +70,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a. \" 
         Les valeurs possibles pour ```choix``` sont ```electrique``` ou ```classique```. 
@@ -79,7 +79,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b. \" 
         En fonction du choix (```electrique``` ou ```classique```), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'```etat``` 1).  
@@ -89,7 +89,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a. \" 
         ```python linenums='1'
@@ -103,7 +103,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b. \" 
         ```python linenums='1'
@@ -116,7 +116,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4. \" 
         ```python linenums='1'
@@ -159,7 +159,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -205,7 +205,7 @@
     caractères de cette chaîne.    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -246,7 +246,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -273,7 +273,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \"
         ```01100001```  
@@ -283,7 +283,7 @@
     }}    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \"
         ```replique([0,0,1,0,1])``` renvoie ```[0,0,0,0,0,0,1,1,1,0,0,0,1,1,1]```   
@@ -315,7 +315,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \"
         ```python linenums='1'
@@ -362,7 +362,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \"
         ```python linenums='1'
@@ -390,7 +390,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \"
         ![image](data/ex1_AN2025.png){: .center .autolight}
@@ -403,7 +403,7 @@
     
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \"
         ```python linenums='1'
@@ -426,7 +426,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \"
         Le mot de 4 bits initial est ```1000```. 
@@ -474,7 +474,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \"
         ```python linenums='1'
@@ -500,7 +500,7 @@
     }} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \"
         Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est $2^7$, soit 128.
@@ -529,7 +529,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \"
         ```python linenums='1'
