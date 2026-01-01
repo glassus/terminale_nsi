@@ -4882,101 +4882,10 @@
 <p>On considère la liste suivante :
 <code>lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']</code> </p>
 <p>Quel est le <strong>chiffre</strong> qui revient le plus fréquemment dans cette liste ?</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;5717&#39;</span><span class="p">,</span> <span class="s1">&#39;1133&#39;</span><span class="p">,</span> <span class="s1">&#39;5545&#39;</span><span class="p">,</span> <span class="s1">&#39;4031&#39;</span><span class="p">,</span> <span class="s1">&#39;6398&#39;</span><span class="p">,</span> <span class="s1">&#39;2734&#39;</span><span class="p">,</span> <span class="s1">&#39;3070&#39;</span><span class="p">,</span> <span class="s1">&#39;1346&#39;</span><span class="p">,</span> <span class="s1">&#39;7849&#39;</span><span class="p">,</span> <span class="s1">&#39;7288&#39;</span><span class="p">,</span> <span class="s1">&#39;7587&#39;</span><span class="p">,</span> <span class="s1">&#39;6217&#39;</span><span class="p">,</span> <span class="s1">&#39;8240&#39;</span><span class="p">,</span> <span class="s1">&#39;5733&#39;</span><span class="p">,</span> <span class="s1">&#39;6466&#39;</span><span class="p">,</span> <span class="s1">&#39;7972&#39;</span><span class="p">,</span> <span class="s1">&#39;7341&#39;</span><span class="p">,</span> <span class="s1">&#39;6616&#39;</span><span class="p">,</span> <span class="s1">&#39;5061&#39;</span><span class="p">,</span> <span class="s1">&#39;2441&#39;</span><span class="p">,</span> <span class="s1">&#39;2571&#39;</span><span class="p">,</span> <span class="s1">&#39;4496&#39;</span><span class="p">,</span> <span class="s1">&#39;4831&#39;</span><span class="p">,</span> <span class="s1">&#39;5395&#39;</span><span class="p">,</span> <span class="s1">&#39;8584&#39;</span><span class="p">,</span> <span class="s1">&#39;3033&#39;</span><span class="p">,</span> <span class="s1">&#39;6266&#39;</span><span class="p">,</span> <span class="s1">&#39;2452&#39;</span><span class="p">,</span> <span class="s1">&#39;6909&#39;</span><span class="p">,</span> <span class="s1">&#39;3021&#39;</span><span class="p">,</span> <span class="s1">&#39;5404&#39;</span><span class="p">,</span> <span class="s1">&#39;3799&#39;</span><span class="p">,</span> <span class="s1">&#39;5053&#39;</span><span class="p">,</span> <span class="s1">&#39;8096&#39;</span><span class="p">,</span> <span class="s1">&#39;2488&#39;</span><span class="p">,</span> <span class="s1">&#39;8519&#39;</span><span class="p">,</span> <span class="s1">&#39;6896&#39;</span><span class="p">,</span> <span class="s1">&#39;7300&#39;</span><span class="p">,</span> <span class="s1">&#39;5914&#39;</span><span class="p">,</span> <span class="s1">&#39;7464&#39;</span><span class="p">,</span> <span class="s1">&#39;5068&#39;</span><span class="p">,</span> <span class="s1">&#39;1386&#39;</span><span class="p">,</span> <span class="s1">&#39;9898&#39;</span><span class="p">,</span> <span class="s1">&#39;8313&#39;</span><span class="p">,</span> <span class="s1">&#39;1072&#39;</span><span class="p">,</span> <span class="s1">&#39;1441&#39;</span><span class="p">,</span> <span class="s1">&#39;7333&#39;</span><span class="p">,</span> <span class="s1">&#39;5691&#39;</span><span class="p">,</span> <span class="s1">&#39;6987&#39;</span><span class="p">,</span> <span class="s1">&#39;5255&#39;</span><span class="p">]</span>
-
-<span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">nombre</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
-            <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
-            <span class="n">maxi</span> <span class="o">=</span> <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span>
-            <span class="n">chiffre_max</span> <span class="o">=</span> <span class="n">chiffre</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">chiffre_max</span><span class="p">,</span> <span class="s1">&#39;est le chiffre le plus fréquent&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;il apparait&#39;</span><span class="p">,</span> <span class="n">maxi</span><span class="p">,</span> <span class="s1">&#39;fois&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf" target="_blank">Centres Etrangers J1 2021</a></p>
-<details class="success">
-<summary>Correction Q1.a. </summary>
-<p><code>flotte[26]</code> renvoie  <code>{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}</code></p>
-</details>
-<details class="success">
-<summary>Correction Q1.b. </summary>
-<p><code>flotte[80]['etat']</code> renvoie la valeur <code>0</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q1.c. </summary>
-<p><code>flotte[99]['etat']</code> renverra une erreur car la clé 99 n'existe pas. </p>
-</details>
-<details class="success">
-<summary>Correction Q2.a. </summary>
-<p>Les valeurs possibles pour <code>choix</code> sont <code>electrique</code> ou <code>classique</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q2.b. </summary>
-<p>En fonction du choix (<code>electrique</code> ou <code>classique</code>), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'<code>etat</code> 1).<br />
-Seule la première station sera renvoyée, à cause du <code>return</code>. Si aucun vélo n'est disponible, la fonction ne renverra rien. </p>
-</details>
-<details class="success">
-<summary>Correction Q3.a. </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Citadelle&#39;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q3.b. </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;electrique&#39;</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">id_velo</span><span class="p">,</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q4. </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">velo_finder</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">):</span>
-    <span class="n">velo_dispo</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">id_velo</span> <span class="ow">in</span> <span class="n">flotte</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">coordonnees</span><span class="p">,</span> <span class="n">stations</span><span class="p">[</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">]])</span>
-        <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">800</span> <span class="ow">and</span> <span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;etat&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">velo_dispo</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">flotte</span><span class="p">[</span><span class="n">id_velo</span><span class="p">][</span><span class="s1">&#39;station&#39;</span><span class="p">],</span> <span class="n">d</span><span class="p">,</span> <span class="n">id_velo</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">velo_dispo</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3 : création d'une rainbow table <img alt="🌈" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f308.svg" title=":rainbow:" /></p>
@@ -4998,31 +4907,6 @@ Seule la première station sera renvoyée, à cause du <code>return</code>. Si a
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
 </code></pre></div></li>
 </ul>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
-
-<span class="n">lst</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;extraitrockyou.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-<span class="n">inv_hash</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">mdp</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
-    <span class="n">hsh</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">mdp</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-    <span class="n">inv_hash</span><span class="p">[</span><span class="n">hsh</span><span class="p">]</span> <span class="o">=</span> <span class="n">mdp</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">inverse_md5</span><span class="p">(</span><span class="n">hsh</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">inv_hash</span><span class="p">[</span><span class="n">hsh</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -5044,25 +4928,6 @@ les valeurs le nombre d’occurrences de ces caractères.</p>
 <p>Écrire une fonction <code>nbr_occurrences</code> prenant comme paramètre une chaîne de
 caractères <code>chaine</code> et renvoyant le dictionnaire des nombres d’occurrences des
 caractères de cette chaîne.    </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nbr_occurrences</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
-    <span class="n">nb_occ</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">nb_occ</span><span class="p">:</span>
-            <span class="n">nb_occ</span><span class="p">[</span><span class="n">caractere</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">nb_occ</span><span class="p">[</span><span class="n">caractere</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb_occ</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
@@ -5085,42 +4950,11 @@ présente.</li>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute_dictionnaires</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span> <span class="p">{})</span>
 <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajoute_dictionnaires</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">):</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d1</span><span class="p">:</span>
-        <span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">=</span> <span class="n">d1</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d2</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-            <span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">+=</span> <span class="n">d2</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">=</span> <span class="n">d2</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">d</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6 <i id="ex1J2AN2025"></i></p>
 <p>Exercice 1 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2AN1.pdf" target="_blank">Amérique du Nord J2 2025</a></p>
 <p><strong>Partie A</strong></p>
-<details class="success">
-<summary>Correction Q1 </summary>
-<p><code>01100001</code>  </p>
-</details>
-<details class="success">
-<summary>Correction Q2 </summary>
-<p><code>replique([0,0,1,0,1])</code> renvoie <code>[0,0,0,0,0,0,1,1,1,0,0,0,1,1,1]</code>   </p>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5155,43 +4989,6 @@ présente.</li>
             <span class="o">...</span>
     <span class="k">return</span> <span class="n">nb_occ</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction Q3 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_occurrences</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Renvoie un dictionnaire qui associe, à chaque élément</span>
-<span class="sd">    apparaissant dans tab entre la position 3i</span>
-<span class="sd">    incluse et la position 3(i + 1) exclue,</span>
-<span class="sd">    son nombre d&#39;occurrences.</span>
-<span class="sd">    &gt;&gt;&gt; nb_occurrences([0, 0, 1, 1, 0, 1, 0, 1, 1], 1)</span>
-<span class="sd">    {1: 2, 0: 1}</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">nb_occ</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nb_occ</span><span class="p">:</span>
-            <span class="n">nb_occ</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">nb_occ</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">nb_occ</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5220,66 +5017,8 @@ présente.</li>
             <span class="o">...</span>
     <span class="k">return</span> <span class="n">cle_max</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction Q4 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">majorite</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Renvoie une clé du dictionnaire dict pour laquelle la</span>
-<span class="sd">    valeur associée est la plus grande.</span>
-<span class="sd">    Précondition : dict est un dictionnaire dont toutes</span>
-<span class="sd">    les valeurs sont positives.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">cle_max</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">valeur_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="k">if</span> <span class="nb">dict</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">valeur_max</span><span class="p">:</span>
-            <span class="n">cle_max</span> <span class="o">=</span> <span class="n">cle</span>
-            <span class="n">valeur_max</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">cle_max</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Partie B</strong></p>
-<details class="success">
-<summary>Correction Q5 </summary>
-<p><img alt="image" class="center autolight" src="../data/ex1_AN2025.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q6 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">erreur_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="n">n</span> <span class="o">+=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">j</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Partie C</strong></p>
-<details class="success">
-<summary>Correction Q7 </summary>
-<p>Le mot de 4 bits initial est <code>1000</code>. </p>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5334,41 +5073,6 @@ présente.</li>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">corriger_erreur</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction Q8 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">corriger_erreur</span><span class="p">(</span><span class="n">code_recu</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">code_recu</span> <span class="ow">in</span> <span class="n">hamming_4_7</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">code_recu</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># Copie du code reçu créée par compréhension</span>
-        <span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">code_recu</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">indice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
-            <span class="c1"># Inversion du bit d&#39;indice courant</span>
-            <span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
-            <span class="k">if</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">hamming_4_7</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">code</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># Réinit. du bit d&#39;indice courant</span>
-                <span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="n">code_recu</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> 
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q9 </summary>
-<p>Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est <span class="arithmatex">\(2^7\)</span>, soit 128.</p>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5397,37 +5101,6 @@ présente.</li>
     <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction Q10 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Descend dans l&#39;arbre binaire arbre en lisant le</span>
-<span class="sd">    tableau code à partir de l&#39;indice i et renvoie</span>
-<span class="sd">    le mot étiquetant la feuille atteinte.</span>
-<span class="sd">    Précondition : arbre est un arbre binaire</span>
-<span class="sd">    de hauteur len(code) - i</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">arbre</span><span class="o">.</span><span class="n">etiquette</span>
-    <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">decode</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">decode</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> 
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5451,7 +5124,7 @@ présente.</li>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 septembre 2025 19:30:26 UTC">2 septembre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="1 janvier 2026 16:46:54 UTC">1 janvier 2026</span>
   </span>
 
     
