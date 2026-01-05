@@ -31,7 +31,7 @@ Le but est de créer une liste et un dictionnaire de même taille (arbitraire), 
 **Q1.** Créer une fonction ```fabrique_liste``` qui prend en paramètre un entier ```nb``` et qui renvoie une liste composée de tous les entiers de ```0``` à ```nb-1```.
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python
@@ -47,7 +47,7 @@ correction(False,
 **Q2.** Créer une fonction ```fabrique_dict``` qui prend en paramètre un entier ```nb``` et qui renvoie dictionnaire composé de paires qui associent à toutes les clés ```k```  de ```0``` à ```nb-1``` leur propre valeur ```k```. 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python
