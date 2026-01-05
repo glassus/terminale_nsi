@@ -4,14 +4,14 @@
 
 !!! example "{{ exercice() }}"
     On considère la liste suivante :
-
+    
     ```lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']``` 
 
     Quel est le **chiffre** qui revient le plus fréquemment dans cette liste ?
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -43,7 +43,7 @@
     Exercice 2 du sujet [Centres Etrangers J1 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a. \" 
         ```flotte[26]``` renvoie  ```{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}```
@@ -52,7 +52,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b. \" 
         ```flotte[80]['etat']``` renvoie la valeur ```0```. 
@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c. \" 
         ```flotte[99]['etat']``` renverra une erreur car la clé 99 n'existe pas. 
@@ -71,7 +71,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a. \" 
         Les valeurs possibles pour ```choix``` sont ```electrique``` ou ```classique```. 
@@ -80,7 +80,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b. \" 
         En fonction du choix (```electrique``` ou ```classique```), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'```etat``` 1).  
@@ -90,7 +90,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a. \" 
         ```python linenums='1'
@@ -104,7 +104,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b. \" 
         ```python linenums='1'
