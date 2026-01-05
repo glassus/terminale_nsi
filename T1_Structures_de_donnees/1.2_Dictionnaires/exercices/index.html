@@ -4879,9 +4879,44 @@
 <h1 id="exercices-sur-les-dictionnaires">Exercices sur les dictionnaires<a class="headerlink" href="#exercices-sur-les-dictionnaires" title="Permanent link">⚓︎</a></h1>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
-<p>On considère la liste suivante :
-<code>lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']</code> </p>
+<p>On considère la liste suivante :</p>
+<p><code>lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']</code> </p>
 <p>Quel est le <strong>chiffre</strong> qui revient le plus fréquemment dans cette liste ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;5717&#39;</span><span class="p">,</span> <span class="s1">&#39;1133&#39;</span><span class="p">,</span> <span class="s1">&#39;5545&#39;</span><span class="p">,</span> <span class="s1">&#39;4031&#39;</span><span class="p">,</span> <span class="s1">&#39;6398&#39;</span><span class="p">,</span> <span class="s1">&#39;2734&#39;</span><span class="p">,</span> <span class="s1">&#39;3070&#39;</span><span class="p">,</span> <span class="s1">&#39;1346&#39;</span><span class="p">,</span> <span class="s1">&#39;7849&#39;</span><span class="p">,</span> <span class="s1">&#39;7288&#39;</span><span class="p">,</span> <span class="s1">&#39;7587&#39;</span><span class="p">,</span> <span class="s1">&#39;6217&#39;</span><span class="p">,</span> <span class="s1">&#39;8240&#39;</span><span class="p">,</span> <span class="s1">&#39;5733&#39;</span><span class="p">,</span> <span class="s1">&#39;6466&#39;</span><span class="p">,</span> <span class="s1">&#39;7972&#39;</span><span class="p">,</span> <span class="s1">&#39;7341&#39;</span><span class="p">,</span> <span class="s1">&#39;6616&#39;</span><span class="p">,</span> <span class="s1">&#39;5061&#39;</span><span class="p">,</span> <span class="s1">&#39;2441&#39;</span><span class="p">,</span> <span class="s1">&#39;2571&#39;</span><span class="p">,</span> <span class="s1">&#39;4496&#39;</span><span class="p">,</span> <span class="s1">&#39;4831&#39;</span><span class="p">,</span> <span class="s1">&#39;5395&#39;</span><span class="p">,</span> <span class="s1">&#39;8584&#39;</span><span class="p">,</span> <span class="s1">&#39;3033&#39;</span><span class="p">,</span> <span class="s1">&#39;6266&#39;</span><span class="p">,</span> <span class="s1">&#39;2452&#39;</span><span class="p">,</span> <span class="s1">&#39;6909&#39;</span><span class="p">,</span> <span class="s1">&#39;3021&#39;</span><span class="p">,</span> <span class="s1">&#39;5404&#39;</span><span class="p">,</span> <span class="s1">&#39;3799&#39;</span><span class="p">,</span> <span class="s1">&#39;5053&#39;</span><span class="p">,</span> <span class="s1">&#39;8096&#39;</span><span class="p">,</span> <span class="s1">&#39;2488&#39;</span><span class="p">,</span> <span class="s1">&#39;8519&#39;</span><span class="p">,</span> <span class="s1">&#39;6896&#39;</span><span class="p">,</span> <span class="s1">&#39;7300&#39;</span><span class="p">,</span> <span class="s1">&#39;5914&#39;</span><span class="p">,</span> <span class="s1">&#39;7464&#39;</span><span class="p">,</span> <span class="s1">&#39;5068&#39;</span><span class="p">,</span> <span class="s1">&#39;1386&#39;</span><span class="p">,</span> <span class="s1">&#39;9898&#39;</span><span class="p">,</span> <span class="s1">&#39;8313&#39;</span><span class="p">,</span> <span class="s1">&#39;1072&#39;</span><span class="p">,</span> <span class="s1">&#39;1441&#39;</span><span class="p">,</span> <span class="s1">&#39;7333&#39;</span><span class="p">,</span> <span class="s1">&#39;5691&#39;</span><span class="p">,</span> <span class="s1">&#39;6987&#39;</span><span class="p">,</span> <span class="s1">&#39;5255&#39;</span><span class="p">]</span>
+
+<span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">nombre</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="n">occ</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span>
+            <span class="n">chiffre_max</span> <span class="o">=</span> <span class="n">chiffre</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">chiffre_max</span><span class="p">,</span> <span class="s1">&#39;est le chiffre le plus fréquent&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;il apparait&#39;</span><span class="p">,</span> <span class="n">maxi</span><span class="p">,</span> <span class="s1">&#39;fois&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
@@ -5124,7 +5159,7 @@ présente.</li>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="1 janvier 2026 16:46:54 UTC">1 janvier 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="5 janvier 2026 13:37:58 UTC">5 janvier 2026</span>
   </span>
 
     
