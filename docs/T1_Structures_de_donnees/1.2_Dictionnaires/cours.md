@@ -81,7 +81,7 @@ Pour davantage de précision, on pourra dans un second temps effectuer plusieurs
 Pour rappel, l'import du module ```time``` permet d'appeler la fonction ```time.time()```. 
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
