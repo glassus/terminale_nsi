@@ -206,7 +206,7 @@
     caractères de cette chaîne.    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -247,7 +247,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -274,7 +274,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \"
         ```01100001```  
@@ -284,7 +284,7 @@
     }}    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \"
         ```replique([0,0,1,0,1])``` renvoie ```[0,0,0,0,0,0,1,1,1,0,0,0,1,1,1]```   
@@ -316,7 +316,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \"
         ```python linenums='1'
@@ -363,7 +363,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \"
         ```python linenums='1'
