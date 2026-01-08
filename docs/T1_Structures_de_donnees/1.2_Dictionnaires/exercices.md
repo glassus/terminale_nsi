@@ -284,7 +284,7 @@
     }}    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \"
         ```replique([0,0,1,0,1])``` renvoie ```[0,0,0,0,0,0,1,1,1,0,0,0,1,1,1]```   
