@@ -269,7 +269,10 @@ Il existe trois stratégies pour éviter les interblocages :
 #### 3.5.2 Le carrefour maudit
 ![image](data/stop.png){: .center width=40%}
 
-#### 3.5.3 Le chômage éternel
+#### 3.5.3 Le rond-point fatal
+![image](data/bus_deadlock.jpg){: .center width=40%}
+
+#### 3.5.4 Le chômage éternel
 ![image](data/job.png){: .center width=30%}
 
 
