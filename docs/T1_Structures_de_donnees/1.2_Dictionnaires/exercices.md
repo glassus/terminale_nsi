@@ -501,7 +501,7 @@
     }} 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \"
         Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est $2^7$, soit 128.
