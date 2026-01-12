@@ -523,14 +523,14 @@
         if i == len(code):
             return arbre.etiquette
         if code[i] == 0:
-            return ...
+            return decode(...)
         if code[i] == 1:
-            return ...
+            return decode(...)
     ```
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \"
         ```python linenums='1'
