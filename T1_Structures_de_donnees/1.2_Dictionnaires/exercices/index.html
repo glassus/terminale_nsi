@@ -5252,34 +5252,7 @@ présente.</li>
 </code></pre></div></td></tr></table></div>
 </details>
 <p><strong>Partie B</strong></p>
-<details class="success">
-<summary>Correction Q5 </summary>
-<p><img alt="image" class="center autolight" src="../data/ex1_AN2025.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q6 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">erreur_colonne</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-            <span class="n">n</span> <span class="o">+=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">j</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Partie C</strong></p>
-<details class="success">
-<summary>Correction Q7 </summary>
-<p>Le mot de 4 bits initial est <code>1000</code>. </p>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5334,41 +5307,6 @@ présente.</li>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">corriger_erreur</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction Q8 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">corriger_erreur</span><span class="p">(</span><span class="n">code_recu</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">code_recu</span> <span class="ow">in</span> <span class="n">hamming_4_7</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">code_recu</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># Copie du code reçu créée par compréhension</span>
-        <span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">code_recu</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">indice</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
-            <span class="c1"># Inversion du bit d&#39;indice courant</span>
-            <span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
-            <span class="k">if</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">hamming_4_7</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">code</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># Réinit. du bit d&#39;indice courant</span>
-                <span class="n">code</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> <span class="o">=</span> <span class="n">code_recu</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span> 
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Q9 </summary>
-<p>Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est <span class="arithmatex">\(2^7\)</span>, soit 128.</p>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -5397,37 +5335,6 @@ présente.</li>
     <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction Q10 </summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Descend dans l&#39;arbre binaire arbre en lisant le</span>
-<span class="sd">    tableau code à partir de l&#39;indice i et renvoie</span>
-<span class="sd">    le mot étiquetant la feuille atteinte.</span>
-<span class="sd">    Précondition : arbre est un arbre binaire</span>
-<span class="sd">    de hauteur len(code) - i</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">arbre</span><span class="o">.</span><span class="n">etiquette</span>
-    <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">decode</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">decode</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> 
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5451,7 +5358,7 @@ présente.</li>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="12 janvier 2026 14:25:53 UTC">12 janvier 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="12 janvier 2026 14:53:22 UTC">12 janvier 2026</span>
   </span>
 
     
