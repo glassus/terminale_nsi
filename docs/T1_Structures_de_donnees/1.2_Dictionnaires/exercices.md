@@ -427,7 +427,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \"
         Le mot de 4 bits initial est ```1000```. 
