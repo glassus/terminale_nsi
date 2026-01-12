@@ -391,7 +391,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \"
         ![image](data/ex1_AN2025.png){: .center .autolight}
@@ -404,7 +404,7 @@
     
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \"
         ```python linenums='1'
@@ -427,7 +427,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \"
         Le mot de 4 bits initial est ```1000```. 
@@ -475,7 +475,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \"
         ```python linenums='1'
@@ -501,7 +501,7 @@
     }} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \"
         Le nombre de feuilles d'un arbre binaire complet de hauteur 7 est $2^7$, soit 128.
@@ -530,7 +530,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \"
         ```python linenums='1'
