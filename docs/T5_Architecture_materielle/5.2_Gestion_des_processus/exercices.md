@@ -366,7 +366,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         927
@@ -375,7 +375,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         1058 (ou 927)
@@ -384,7 +384,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         1153 et 1154
