@@ -182,12 +182,12 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 Voici les transitions possibles entre ces états (diagramme issu de [https://info.blaisepascal.fr/nsi-processus-et-ressources](https://info.blaisepascal.fr/nsi-processus-et-ressources){. target="_blank"}) : 
 
 
-![image](data/etats_process.png){: .center}
+![image](data/etats_process.png){: .center .autolight}
 
 
 Ou de manière simplifiée :
 
-![image](data/cycle.png){: .center}
+![image](data/cycle.png){: .center .autolight}
 
 
 On peut utiliser la métaphore suivante :
