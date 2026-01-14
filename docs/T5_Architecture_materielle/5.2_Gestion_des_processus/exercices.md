@@ -99,7 +99,7 @@
     **Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
@@ -129,7 +129,7 @@
     - iii. Dernier entré, premier sorti
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         **Q2a.** ii. Premier entré, premier sorti
