@@ -203,7 +203,7 @@
     Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/corr_exo1.png){: .center}
