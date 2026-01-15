@@ -450,7 +450,7 @@
     Exercice 2 du sujet [Polynésie J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         11, 20, 32, 11, 20, 32, 11, 32, 11
@@ -459,7 +459,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         11, 11, 20, 20, 32, 32, 11, 11, 32
