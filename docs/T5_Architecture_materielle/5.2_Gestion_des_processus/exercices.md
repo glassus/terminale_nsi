@@ -79,7 +79,7 @@
     ![image](data/ex2_3.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/scenarios.png){: .center}
@@ -203,7 +203,7 @@
     Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/corr_exo1.png){: .center}
@@ -234,7 +234,7 @@
     Justifier qu'une situation d'interblocage peut se produire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
@@ -249,7 +249,7 @@
     **Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On peut par exemple inverser la demande d'imprimante et de table traçante.
@@ -270,7 +270,7 @@
         - d. terminé
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il sera à l'état bloqué.
@@ -311,7 +311,7 @@
     **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1.** b.
@@ -367,7 +367,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         927
@@ -376,7 +376,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         1058 (ou 927)
@@ -385,7 +385,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         1153 et 1154
@@ -394,7 +394,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.d.\" 
         923 et 1036
@@ -403,7 +403,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         ![image](data/ANJ2_1.png){: .center}
@@ -412,7 +412,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         ![image](data/ANJ2_2.png){: .center}
@@ -447,10 +447,10 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du sujet [Polynésie J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
+    Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         11, 20, 32, 11, 20, 32, 11, 32, 11
@@ -459,7 +459,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         11, 11, 20, 20, 32, 32, 11, 11, 32
