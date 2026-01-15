@@ -447,7 +447,7 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
+    Exercice 2 du sujet [Polynésie J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
     correction(False,
