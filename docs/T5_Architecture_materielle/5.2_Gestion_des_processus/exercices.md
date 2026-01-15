@@ -79,7 +79,7 @@
     ![image](data/ex2_3.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/scenarios.png){: .center}
@@ -403,7 +403,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\" 
         ![image](data/ANJ2_1.png){: .center}
@@ -412,7 +412,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\" 
         ![image](data/ANJ2_2.png){: .center}
