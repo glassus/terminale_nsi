@@ -249,7 +249,7 @@
     **Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On peut par exemple inverser la demande d'imprimante et de table traçante.
