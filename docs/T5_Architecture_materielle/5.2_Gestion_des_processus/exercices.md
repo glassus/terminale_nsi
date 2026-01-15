@@ -403,7 +403,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\" 
         ![image](data/ANJ2_1.png){: .center}
