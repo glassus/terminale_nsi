@@ -459,7 +459,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         11, 11, 20, 20, 32, 32, 11, 11, 32
