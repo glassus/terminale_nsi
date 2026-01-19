@@ -459,7 +459,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         11, 11, 20, 20, 32, 32, 11, 11, 32
@@ -469,7 +469,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         ```python
@@ -480,7 +480,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         ```python
@@ -504,7 +504,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         ```python linenums='1' hl_lines='7 8 11 15'
