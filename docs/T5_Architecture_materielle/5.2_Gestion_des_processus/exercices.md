@@ -447,7 +447,7 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
+    Exercice 2 du sujet [Polynésie J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
     correction(True,
@@ -467,6 +467,16 @@
     )
     }}
 
+    **Q2.a.**
+    ```python
+    class Processus:
+        def __init__(self, pid, duree):
+            self.pid = pid
+            self.duree = duree
+            # Le nombre de cycle qui restent à faire :
+            self.reste_a_faire = duree
+            self.etat = "Prêt"
+    ```
 
     {{
     correction(True,
@@ -478,6 +488,20 @@
     """
     )
     }}
+
+
+    **Q2.b.**
+    ```python
+    def execute_un_cycle(self):
+        ...
+    
+    def change_etat(self, nouvel_etat):
+        ...
+    
+    def est_termine(self):
+        ...
+    ```
+
 
     {{
     correction(True,
@@ -498,7 +522,25 @@
     }}
 
 
-
+    **Q2.c.**
+    ```python
+    def tourniquet(liste_attente, quantum):
+        ordre_execution = []
+        while liste_attente != []:
+            processus = liste_attente.pop(0)
+            processus.change_etat('En cours d exécution')
+            compteur_tourniquet = 0
+            while ... and ...:
+                ordre_execution.append(...)
+                processus.execute_un_cycle()
+                compteur_tourniquet = compteur_tourniquet + 1
+            if ...:
+                processus.change_etat('Suspendu')
+                liste_attente.append(processus)
+            else:
+                processus.change_etat(...)
+        return ordre_execution
+    ```
 
 
 
