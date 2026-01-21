@@ -785,7 +785,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```python linenums='1'
@@ -864,7 +864,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```python linenums='1'
@@ -882,7 +882,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ![image](data/AN2024_2.png){: .center}
