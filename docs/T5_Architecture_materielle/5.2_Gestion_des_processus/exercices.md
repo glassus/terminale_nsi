@@ -634,7 +634,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ![image](data/0B_2024_1.png){: .center}
@@ -643,7 +643,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Par exemple, une écriture sur le disque dur alors que celui-ci est déjà en cours d'écriture peut entraîner un passage à l'état bloqué.
