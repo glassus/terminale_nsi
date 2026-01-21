@@ -579,7 +579,7 @@
     Exercice 2 du [sujet 0 version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Dans un logiciel libre, le code-source est disponible, peut être amélioré et redistribué par les utilisateurs (voir [ici](https://www.gnu.org/philosophy/free-sw.fr.html){. target='_blank'}).
@@ -591,7 +591,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Le rôle d'un système d'exploitation est de permettre à l'utiliseur des stocker ses données et d'exploiter les ressources du processeur. *question très difficile car beaucoup trop vaste*
@@ -601,7 +601,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         Le chemin absolu est ```/home/elsa/documents/boulot/rapport.odt``` 
@@ -610,7 +610,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Le chemin relatif est ```../max/images/photo_vac/photo_1.jpg``` 
@@ -620,7 +620,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Le répertoire ```documents``` n'a pas changé, il contient toujours les mêmes fichiers.
@@ -634,7 +634,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ![image](data/0B_2024_1.png){: .center}
@@ -643,7 +643,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Par exemple, une écriture sur le disque dur alors que celui-ci est déjà en cours d'écriture peut entraîner un passage à l'état bloqué.
@@ -652,7 +652,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         La structure de pile est une structure LIFO.
@@ -661,7 +661,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ![image](data/0B_2024_2.png){: .center}
@@ -670,7 +670,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ![image](data/0B_2024_3.png){: .center}
@@ -679,7 +679,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Imaginons par exemple cette situation :
@@ -704,7 +704,7 @@
     Exercice 1 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Les 3 états sont : Prêt, Élu, Bloqué.
@@ -716,7 +716,7 @@
  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Le processus ne peut plus être bloqué, les deux seuls états restants sont donc Prêt et Élu.
@@ -746,7 +746,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1'
@@ -774,10 +774,10 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
-        ![image](data/AN2024_1.png){: .center} 
+        ![image](data/AN2024_1.png){: .center}
         
     """
     )
@@ -785,7 +785,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python linenums='1'
