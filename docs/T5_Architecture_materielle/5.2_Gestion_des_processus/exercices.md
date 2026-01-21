@@ -623,7 +623,7 @@
     correction(True,
     """
     ??? success \"Correction Q5\" 
-        Le répertoire ```documents``` n'as pas changé, il contient toujours les mêmes fichiers.
+        Le répertoire ```documents``` n'a pas changé, il contient toujours les mêmes fichiers.
 
         Le répertoire ```boulot``` contient maintenant, en plus du fichier ```rapport.odt```, le fichier ```fiche.ods```. 
     """
