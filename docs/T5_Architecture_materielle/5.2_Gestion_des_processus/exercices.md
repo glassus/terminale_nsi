@@ -704,7 +704,7 @@
     Exercice 1 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Les 3 états sont : Prêt, Élu, Bloqué.
@@ -716,7 +716,7 @@
  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Le processus ne peut plus être bloqué, les deux seuls états restants sont donc Prêt et Élu.
