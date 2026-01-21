@@ -774,10 +774,10 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
-        ![image](data/AN2024_1.png){: .center}
+        ![image](data/AN2024_1.png){: .center} 
         
     """
     )
