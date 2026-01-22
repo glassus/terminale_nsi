@@ -18,7 +18,6 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
 
 ### 1.1 Version impérative
 
-{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -27,13 +26,13 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
         '''
         ...
     ```
-#}
 
 
 
 
 
 
+{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -60,7 +59,7 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
 
-
+#}
 
 
 Exemple d'utilisation :
@@ -98,16 +97,15 @@ On comprend que  :
 
 #### 1.2.2 Dichotomie récursive avec slicing
 
-{#
 !!! note "Dichotomie version récursive avec slicing :heart:"
     
     ```python linenums='1'
     def dichotomie_rec(tab, val):
         ...
     ```
-#}
 
 
+{#
 !!! note "Dichotomie version récursive avec slicing :heart:"
     
     ```python linenums='1'
@@ -126,7 +124,7 @@ On comprend que  :
     1. On prend la partie droite de liste, juste après l'indice central. 
     2. On prend la partie gauche de liste, juste avant l'indice central.
     
-
+#}
 
 Exemple d'utilisation :
 
@@ -238,16 +236,15 @@ Pour tout nombre $a$,
 
 Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
 
-{#
 !!! note "Exponentiation rapide :heart:"
     
     ```python linenums='1'
     ...
     ```
-#}
 
 
-!!! note "Exponentiation rapide :heart:" 
+{#
+!!! note "Exponentiation rapide :heart:"
     
     ```python linenums='1'
     def puissance_mod(a, n):
@@ -259,7 +256,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
             return a * puissance_mod(a*a, (n-1)//2)
     ```
 
-
+#}
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
