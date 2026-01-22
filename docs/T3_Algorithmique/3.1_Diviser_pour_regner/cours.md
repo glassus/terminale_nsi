@@ -18,6 +18,7 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
 
 ### 1.1 Version impérative
 
+{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -26,13 +27,13 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
         '''
         ...
     ```
+#}
 
 
 
 
 
 
-{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -59,7 +60,7 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
 
-#}
+
 
 
 Exemple d'utilisation :
