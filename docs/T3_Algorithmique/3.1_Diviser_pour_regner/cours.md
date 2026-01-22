@@ -238,14 +238,15 @@ Pour tout nombre $a$,
 
 Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
 
+{#
 !!! note "Exponentiation rapide :heart:"
     
     ```python linenums='1'
     ...
     ```
+#}
 
 
-{#
 !!! note "Exponentiation rapide :heart:"
     
     ```python linenums='1'
@@ -258,7 +259,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
             return a * puissance_mod(a*a, (n-1)//2)
     ```
 
-#}
+
 
 
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
