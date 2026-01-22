@@ -247,7 +247,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 #}
 
 
-!!! note "Exponentiation rapide :heart:"
+!!! note "Exponentiation rapide :heart:" 
     
     ```python linenums='1'
     def puissance_mod(a, n):
