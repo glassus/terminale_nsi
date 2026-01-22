@@ -18,7 +18,21 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
 
 ### 1.1 Version impérative
 
+!!! note "Dichotomie version impérative :heart:"
+    ```python linenums='1'
+    def recherche_dichotomique(tab, val) :
+        '''
+        renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.
+        '''
+        ...
+    ```
 
+
+
+
+
+
+{#
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -45,7 +59,7 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
 
-
+#}
 
 
 Exemple d'utilisation :
@@ -83,7 +97,15 @@ On comprend que  :
 
 #### 1.2.2 Dichotomie récursive avec slicing
 
+!!! note "Dichotomie version récursive avec slicing :heart:"
+    
+    ```python linenums='1'
+    def dichotomie_rec(tab, val):
+        ...
+    ```
 
+
+{#
 !!! note "Dichotomie version récursive avec slicing :heart:"
     
     ```python linenums='1'
@@ -102,7 +124,7 @@ On comprend que  :
     1. On prend la partie droite de liste, juste après l'indice central. 
     2. On prend la partie gauche de liste, juste avant l'indice central.
     
-
+#}
 
 Exemple d'utilisation :
 
