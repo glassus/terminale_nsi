@@ -1,6 +1,6 @@
 {{initexo(0)}}
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
 
     Exercice 4 du sujet [Amérique du Sud J2 2022](../../T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf){. target="_blank"}
 
@@ -323,7 +323,7 @@
         }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Exercice 5 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
 
     {{   
