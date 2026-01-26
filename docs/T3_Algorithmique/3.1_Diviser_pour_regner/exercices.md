@@ -5,7 +5,7 @@
     Exercice 4 du sujet [Amérique du Sud J2 2022](../../T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\" 
         ```python
@@ -24,7 +24,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\" 
         ```python linenums='1'
