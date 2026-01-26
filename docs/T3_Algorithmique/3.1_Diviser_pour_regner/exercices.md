@@ -74,6 +74,22 @@
 
         ``` 
 
+        ```python linenums='1' 
+        def le_plus_loin(ligne):
+            n = len(ligne)
+            deb = ligne[0]
+            fin = ligne[n-1]
+            dmax = 0
+            indice_max = 0
+            for idx in range(1, n-1):
+                p = ...
+                d = distance(p, deb, fin)
+                if ...:
+                    ...
+                    ...
+            return ...
+        ```  
+
         ```python
         >>> le_plus_loin([(1, 3), (2, 7), (3, 4), (5, 3)])
         (1, 4.0)
