@@ -156,6 +156,22 @@
     )
     }}
 
+
+    ```python linenums='1'
+    def simplifie(ligne, seuil):
+        n = len(ligne)
+        if n <= 2:
+            return ...
+        else:
+            indice_max, dmax = le_plus_loin(ligne)
+            if dmax <= seuil:
+                return ...
+            else:
+                ...
+    ```  
+
+
+
     !!! note "Q5 : tester son code"
         ```python
         >>> simplifie([(1, 3), (2, 7), (3, 4), (4, 4), (5, 3), (6, 2)], 3)
