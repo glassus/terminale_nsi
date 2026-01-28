@@ -8,16 +8,17 @@
 !!! note ":star: Thème en cours d'étude :star: "
     - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
-    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
-    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
-    - [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-    - [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
+
 
 
 
 
 
 ### *Thèmes déjà traités*
+- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
+- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+- [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+- [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
 - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
@@ -37,8 +38,9 @@
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
 
-
+{#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
+#}
 
 {#
 !!! tip "Grand Oral"
