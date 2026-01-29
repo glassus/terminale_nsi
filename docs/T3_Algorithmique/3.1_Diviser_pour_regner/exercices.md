@@ -359,7 +359,7 @@
     Exercice 5 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
 
     {{   
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ```python
@@ -370,7 +370,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1' hl_lines='7 9-11'
@@ -396,7 +396,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python
@@ -410,7 +410,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python
