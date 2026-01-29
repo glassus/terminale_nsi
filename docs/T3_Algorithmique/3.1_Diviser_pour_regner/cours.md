@@ -408,7 +408,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
-
+{#
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
 
   
@@ -419,9 +419,9 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
     def tri_fusion(lst):
         ...
     ```
+#}
 
 
-{#
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
     
     ```python
@@ -445,7 +445,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             m = len(lst) // 2
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
-#}
+
 
 ```python
 >>> tri_fusion([3, 1, 6, 2, 5])
