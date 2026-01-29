@@ -2,10 +2,10 @@
 
 
 !!! tip "Principe de l'interclassement"
-    Pour interclasser deux listes ```lst1``` et ```lst2```.
+    Pour interclasser deux listes triées ```lst1``` et ```lst2```.
 
     - on part d'une liste vide ```lst_totale```
-    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```, en veillant à maintenir un ordre croissant. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
+    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```, en veillant à maintenir un ordre croissant. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```lst2```.
     - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
