@@ -367,7 +367,7 @@ On appelera ce mécanisme l'**interclassement**.
     :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -375,7 +375,7 @@ On appelera ce mécanisme l'**interclassement**.
             i1 = 0
             i2 = 0
             lst_totale = []
-            while i1 != len(lst1) and i2 != len(lst2):
+            while i1 < len(lst1) and i2 < len(lst2):
                 if lst1[i1] < lst2[i2]:
                     lst_totale.append(lst1[i1])
                     i1 += 1
