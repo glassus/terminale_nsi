@@ -6,6 +6,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
     - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
     - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
 
