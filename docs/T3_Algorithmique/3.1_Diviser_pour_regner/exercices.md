@@ -459,7 +459,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         ![image](data/exo5.png){: .center .autolight}  
