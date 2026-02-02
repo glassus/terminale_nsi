@@ -423,6 +423,21 @@
     }}
 
 
+    **Q5.**
+    ```python linenums='1' 
+    def creer_labyrinthe(self, ligne, colonne, haut, long):
+        if haut == 1 : # Cas de base
+            for k in range(...):
+                self.creer_passage(ligne, k, ligne, k + 1)
+        elif long == 1: # Cas de base
+            for k in range(...):
+                self.creer_passage(...)
+        else: # Appels récursifs
+                # Code non étudié (Ne pas compléter)
+    ```
+
+
+
     {{
     correction(False,
     """
@@ -447,7 +462,7 @@
     correction(False,
     """
     ??? success \"Correction Q6.\" 
-        ![image](data/exo5.png){: .center}  
+        ![image](data/exo5.png){: .center .autolight}  
 
               
     """
