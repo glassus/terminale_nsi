@@ -39,7 +39,7 @@
     - On applique à chaque rang la transformation affine 
     $f(x) = (ax+b)\, \%26$
 
-    où $a$ et $b$ sont deux nombres entiers. Attention, *a* doit être premier avec 26.
+    où $a$ et $b$ sont deux nombres entiers. Attention, $a$ doit être premier avec 26.
 
     !!! quote "Rappel sur les nombres premiers entre eux"
         Deux nombres sont dits *premiers entre eux* si leur PGCD vaut 1. 
@@ -49,7 +49,7 @@
         - 8 et 15 sont premiers entre eux (ils n'ont aucun diviseur commun autre que 1)
         - 8 et 12 ne sont pas premiers entre eux (leur PGCD vaut 4).
 
-    **Q1.** Codez votre fonction ```affine(msg, a, b)```
+    **Q1.** Codez votre fonction ```affine(msg, a, b)```.
 
     {{
     correction(False,
