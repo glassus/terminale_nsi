@@ -51,8 +51,14 @@
 
     **Q1.** Codez votre fonction ```affine(msg, a, b)```.
 
+    Pour tester votre fonction :
+    ```python
+    >>> affine("BONJOUR", 3, 5)
+    'IVSGVNE'
+    ```
+
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
