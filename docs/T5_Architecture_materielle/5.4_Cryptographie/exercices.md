@@ -88,7 +88,7 @@
         L'instruction ```gcd``` du module ```math``` permet de calculer le PGCD de deux nombres.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
