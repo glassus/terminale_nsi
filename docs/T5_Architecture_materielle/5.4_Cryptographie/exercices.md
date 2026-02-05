@@ -205,7 +205,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         On obtient AssertionError 'impossible' car la longueur de la clé est inférieure
