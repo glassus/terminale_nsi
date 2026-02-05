@@ -224,7 +224,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dans l’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la
@@ -234,7 +234,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```python
