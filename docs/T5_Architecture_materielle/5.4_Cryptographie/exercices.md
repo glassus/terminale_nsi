@@ -120,7 +120,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         On obtient le mot PGRDX. 
@@ -129,7 +129,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python
