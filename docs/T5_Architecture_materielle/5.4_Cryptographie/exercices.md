@@ -260,7 +260,7 @@
     **Partie B**
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Avec un chiffrement symétrique, la connaissance d'une seule et unique clé est requise pour chiffrer et déchiffrer le message. Dans un chiffrement asymétrique, la clé de déchiffrement est connue seulement du destinataire, alors que la clé de chiffrement est publique et distribuée à tous.
@@ -269,7 +269,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         Il suffit à Bob de déchiffer le message avec sa clé privée.
@@ -278,7 +278,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Tout le monde a la clé publique de Bob, donc tout le monde peut écrire en se faisant passer pour Alice.
@@ -287,7 +287,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         Dans le protocole ```https```, une clé AES est générée par chiffrement asymétrique au tout début de la communication (TLS). Ensuite, le reste du flux est chiffré avec le chiffrement symétrique AES.
@@ -296,7 +296,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         Utiliser un chiffrement asymétrique tout au long de la navigation ralentirait considérablement le trafic car un chiffrement asymétrique consomme beaucoup de ressources de calcul, contrairement au chiffrement symétrique.
@@ -349,7 +349,7 @@
     - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -394,7 +394,7 @@
     - $p$ et $q$ sont respectivement les 13èmes et 14èmes nombres de Mersenne.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
