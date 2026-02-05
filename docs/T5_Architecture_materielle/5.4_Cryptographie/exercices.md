@@ -215,7 +215,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         On obtient le mot BRAVO.
