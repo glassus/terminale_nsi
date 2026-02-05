@@ -108,6 +108,205 @@
 
 
 
+!!! example "{{ exercice() }}"
+    Exercice 3 (Parties A et B) du sujet [Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+
+    **Partie A**
+
+    ```python
+    alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+    'W', 'X', 'Y', 'Z']
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        On obtient le mot PGRDX. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```python
+        def indice(L, element):
+            for i in range(len(L)):
+                if L[i] == element:
+                    return i  
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        ```python
+        def lettres_vers_indices(txt):
+            t = []
+            for c in txt:
+                t.append(indice(alphabet,c))
+            return t 
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def indices_vers_lettres(lst):
+        s = ''
+        for c in lst:
+            s += alphabet[c]
+        return s
+    ```
+
+    ```python
+    def chiffrement(msg, cle):
+        assert len(cle) >= len(msg), 'impossible'
+        indices_msg = lettres_vers_indices(msg)
+        indices_cle = lettres_vers_indices(cle)
+        n = len(msg)
+        indices_msg_chiffre = []
+        for k in range(n):
+            ind = ...
+            if ind >= 26:
+                ind = ...
+            indices_msg_chiffre.append(ind)
+        msg_chiffre = indices_vers_lettres(...)
+        return msg_chiffre    
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        ```python
+        def chiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] + indices_cle[k]
+                if ind >= 26:
+                    ind = ind - 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        On obtient AssertionError 'impossible' car la longueur de la clé est inférieure
+        à la longueur du message.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        On obtient le mot BRAVO.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dansl’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la
+        position du caractère en clair dans l’alphabet.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def dechiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_dechiffre = []
+            for k in range(n):
+                ind = indices_msg[k] - indices_cle[k]
+                if ind < 0:
+                    ind = ind + 26
+            indices_msg_dechiffre.append(ind)
+            msg_dechiffre = indices_vers_lettres(indices_msg_dechiffre)
+            return msg_dechiffre
+        ```
+    """
+    )
+    }}
+
+
+    **Partie B**
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        Avec un chiffrement symétrique, la connaissance d'une seule et unique clé est requise pour chiffrer et déchiffrer le message. Dans un chiffrement asymétrique, la clé de déchiffrement est connue seulement du destinataire, alors que la clé de chiffrement est publique et distribuée à tous.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        Il suffit à Bob de déchiffer le message avec sa clé privée.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        Tout le monde a la clé publique de Bob, donc tout le monde peut écrire en se faisant passer pour Alice.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        Dans le protocole ```https```, une clé AES est générée par chiffrement asymétrique au tout début de la communication (TLS). Ensuite, le reste du flux est chiffré avec le chiffrement symétrique AES.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13\" 
+        Utiliser un chiffrement asymétrique tout au long de la navigation ralentirait considérablement le trafic car un chiffrement asymétrique consomme beaucoup de ressources de calcul, contrairement au chiffrement symétrique.
+    """
+    )
+    }}
+
+
+
+
 
 
 !!! example "{{ exercice() }}"
