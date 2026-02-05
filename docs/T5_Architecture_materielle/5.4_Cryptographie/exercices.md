@@ -143,15 +143,15 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python
         def lettres_vers_indices(txt):
-            t = []
+            lst = []
             for c in txt:
-                t.append(indice(alphabet,c))
-            return t 
+                lst.append(indice(alphabet,c))
+            return lst
         ```
     """
     )
