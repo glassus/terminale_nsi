@@ -4884,6 +4884,69 @@
 <li><a class="" href="../data/EP_sujets0_1/EP-BAC-NSI-Sujet1.pdf" target="_blank">Sujet</a></li>
 <li><a class="" href="../data/EP_sujets0_1/cycle_menstruel.py" target="_blank">cycle_menstruel.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction <strong>Q1</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_bissextile</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q2</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">determiner_phase</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">28</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">14</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q3</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_ajouter_jours</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">29</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
+    <span class="c1">#pour tester le changement de mois sur un mois à 31 jours</span>
+
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">29</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
+    <span class="c1">#pour tester le changement de mois sur un mois à 30 jours</span>
+
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">31</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2026</span><span class="p">)</span>
+    <span class="c1">#pour tester un changement d&#39;année</span>
+
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2024</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2024</span><span class="p">)</span>
+    <span class="c1">#pour tester le changement de mois sur une année bissextile</span>
+
+    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
+    <span class="c1">#pour tester le changement de mois sur une année non-bissextile</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q4</strong></summary>
+<p>L'erreur qui apparait 
+<div class="highlight"><pre><span></span><code> <span class="n">datetime</span><span class="p">(</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">month</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="mf">1..12</span>
+</code></pre></div>
+semble nous indiquer que la date n'est pas au bon format.</p>
+<p>En effet la documentation de <code>iCalendar</code> nous dit que la date doit être écrite au format <code>AAAAMMJJ</code>.</p>
+<p>Or, la ligne de code
+<div class="highlight"><pre><span></span><code><span class="n">date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">mois</span><span class="p">)</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">jour</span><span class="p">)</span>
+</code></pre></div>
+va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
+<p>Pour résoudre ce problème, il faut remplacer cette ligne par :
+<div class="highlight"><pre><span></span><code><span class="n">date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mois</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">jour</span><span class="p">)</span>
+</code></pre></div></p>
+<p><em>Remarque : le formatage des chaînes de caractères n'est pas au programme...</em></p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Sujet 2</p>
@@ -4925,7 +4988,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="13 octobre 2025 13:06:54 UTC">13 octobre 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 février 2026 15:21:35 UTC">9 février 2026</span>
   </span>
 
     
