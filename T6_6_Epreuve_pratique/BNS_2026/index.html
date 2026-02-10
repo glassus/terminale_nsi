@@ -4956,6 +4956,72 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
 <li><a class="" href="../data/EP_sujets0_2/donnees.py" target="_blank">donnees.py</a></li>
 <li><a class="" href="../data/EP_sujets0_2/donnees_completes.py" target="_blank">donnees_completes.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction <strong>Q1</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="n">champ</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le salaire moyen des employes ayant val comme valeur associée</span>
+<span class="sd">    au champ donné en argument.</span>
+<span class="sd">    Si le nombre d&#39;employés considéré est nul, cette fonction renvoie None&#39;&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="n">champ</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;salaire&#39;</span><span class="p">]</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">/</span><span class="n">n</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q2</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+    <span class="n">nf</span><span class="p">,</span> <span class="n">nh</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;sexe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span>
+            <span class="n">nf</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nh</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="n">nf</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="n">nh</span><span class="p">}</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q3</strong></summary>
+<ul>
+<li>Le calcul de <code>moy_f</code> va renvoyer une erreur car <code>employes</code> est mis entre guillements.</li>
+<li>De plus, le calcul final est faux puisqu'il fait simplement la différence entre <code>moy_h</code> et <code>moy_f</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;écart de salaire en pourcentage pour les femmes </span>
+<span class="sd">    par rapport aux hommes&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">moy_h</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
+    <span class="n">moy_f</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">moy_h</span> <span class="o">-</span> <span class="n">moy_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">moy_h</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_calcul_ecart_sexe</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">([{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;salaire&#39;</span><span class="p">:</span> <span class="mi">2400</span><span class="p">}])</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q4</strong></summary>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">salaire_par_proximite</span><span class="p">(</span><span class="n">donnees_completes</span><span class="o">.</span><span class="n">employes</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">})</span>
+<span class="mf">2229.6666666666665</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">salaire_par_proximite</span><span class="p">(</span><span class="n">donnees_completes</span><span class="o">.</span><span class="n">employes</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;M&#39;</span><span class="p">})</span>
+<span class="mf">2406.0</span>
+</code></pre></div>
+Il y a un problème dans le code dans le calcul de la distance. En effet, si deux personnes sont de sexe différent, leur distance sera augmentée de 4 par rapport à si elles étaient de même sexe. Ceci n'a pas de raison d'être alors qu'on cherche justement à mesurer les écarts selon le sexe.</p>
+<p>Une bonne fonction <code>distance</code>  serait donc :
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la mesure de distance entre deux personnes.&#39;&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="p">(</span><span class="n">e1</span><span class="p">[</span><span class="s1">&#39;experience&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e2</span><span class="p">[</span><span class="s1">&#39;experience&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="p">(</span><span class="n">e1</span><span class="p">[</span><span class="s1">&#39;etudes&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e2</span><span class="p">[</span><span class="s1">&#39;etudes&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Sujet 3</p>
@@ -4988,7 +5054,7 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 février 2026 15:21:35 UTC">9 février 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="10 février 2026 15:32:54 UTC">10 février 2026</span>
   </span>
 
     
