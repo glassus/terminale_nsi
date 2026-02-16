@@ -5033,49 +5033,23 @@ Il y a un problème dans le code dans le calcul de la distance. En effet, si deu
 </ul>
 <details class="success">
 <summary>Correction <strong>Q1</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_bissextile</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div>
+<p>Si la liste originale est <code>[3, 5, 0, 6]</code>, la liste obtenue par codage RLE est <code>[1, 3, 1, 5, 1, 0, 1, 6]</code>, qui est 2 fois plus longue. Donc non, la liste obtenue par codage RLE n'est pas forcément de longueur inférieure ou égale.  </p>
 </details>
 <details class="success">
 <summary>Correction <strong>Q2</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">determiner_phase</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">28</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">2</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">14</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">3</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">4</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decodage_rle</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la liste d&#39;octets obtenue à partir de la liste liste_rle obtenue</span>
+<span class="sd">    par compression RLE&#39;&#39;&#39;</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">lst</span>
 </code></pre></div>
 </details>
 <details class="success">
 <summary>Correction <strong>Q3</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_ajouter_jours</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
-
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">29</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
-    <span class="c1">#pour tester le changement de mois sur un mois à 31 jours</span>
-
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">29</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
-    <span class="c1">#pour tester le changement de mois sur un mois à 30 jours</span>
-
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">31</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2026</span><span class="p">)</span>
-    <span class="c1">#pour tester un changement d&#39;année</span>
-
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2024</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2024</span><span class="p">)</span>
-    <span class="c1">#pour tester le changement de mois sur une année bissextile</span>
-
-    <span class="k">assert</span> <span class="n">ajouter_jours</span><span class="p">((</span><span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2025</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span>
-    <span class="c1">#pour tester le changement de mois sur une année non-bissextile</span>
-</code></pre></div>
+<p>On constate que, si tout se passe bien pour l'image <code>bac_nsi_32.png</code>, l'image <code>bac_nsi_256.png.dec.png</code> obtenue après encodage/décodage de l'image <code>bac_nsi_256.png</code> présente un décalage de l'écriture.</p>
 </details>
 <details class="success">
 <summary>Correction <strong>Q4</strong></summary>
@@ -5117,7 +5091,7 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="10 février 2026 15:35:36 UTC">10 février 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="16 février 2026 15:56:23 UTC">16 février 2026</span>
   </span>
 
     
