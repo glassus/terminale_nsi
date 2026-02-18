@@ -34,7 +34,7 @@ Ce code, d'une grande simplicité, est malheureusement très inefficace.
     Mesurer le temps de calcul de ```fibo(40)```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -94,7 +94,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -125,7 +125,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le temps de calcul est maintenant de l'ordre de $10^{-5}$ secondes. C'est un million (!!!) de fois plus rapide qu'à l'exercice 1.
@@ -217,7 +217,7 @@ Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
