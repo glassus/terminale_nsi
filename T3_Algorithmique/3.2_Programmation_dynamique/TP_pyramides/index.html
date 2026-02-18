@@ -5057,22 +5057,6 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Créer puis afficher une pyramide de hauteur 10.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pyr</span> <span class="o">=</span> <span class="n">genere_pyr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">affiche</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-         <span class="mi">9</span>
-        <span class="mi">9</span> <span class="mi">2</span>
-       <span class="mi">8</span> <span class="mi">1</span> <span class="mi">7</span>
-      <span class="mi">4</span> <span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span>
-     <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">8</span>
-    <span class="mi">4</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">5</span> <span class="mi">8</span> <span class="mi">4</span>
-   <span class="mi">7</span> <span class="mi">8</span> <span class="mi">1</span> <span class="mi">6</span> <span class="mi">0</span> <span class="mi">6</span> <span class="mi">0</span>
-  <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">8</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">8</span>
- <span class="mi">6</span> <span class="mi">0</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">9</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">8</span>
-<span class="mi">3</span> <span class="mi">1</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">9</span> <span class="mi">6</span> <span class="mi">5</span> <span class="mi">9</span>                    
-</code></pre></div>
-</details>
 </div>
 <h2 id="2-recherche-par-force-brute">2. Recherche par force brute<a class="headerlink" href="#2-recherche-par-force-brute" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-liste-de-tous-les-parcours">2.1 Liste de tous les parcours<a class="headerlink" href="#21-liste-de-tous-les-parcours" title="Permanent link">⚓︎</a></h3>
@@ -5124,11 +5108,6 @@
 <li>Pour une pyramide de hauteur <span class="arithmatex">\(n\)</span>, combien y a-t-il de trajets différents ? </li>
 <li>Pour une pyramide de hauteur 41, que pensez-vous du nombre de trajets différents ?</li>
 </ol>
-<details class="success">
-<summary>Correction</summary>
-<p>Le nombre de trajets pour une hauteur <span class="arithmatex">\(n\)</span> est <span class="arithmatex">\(2^{n-1}\)</span>.</p>
-<p>Pour une pyramide de hauteur 41, cela donne <span class="arithmatex">\(2^{40}\)</span>, soit plus de mille milliards de chemins possibles...</p>
-</details>
 </div>
 <h3 id="22-valeur-dun-trajet">2.2 Valeur d'un trajet<a class="headerlink" href="#22-valeur-dun-trajet" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
@@ -5138,48 +5117,12 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">val_trajet</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">pyr_exemple</span><span class="p">)</span>
 <span class="mi">23</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">val_trajet</span><span class="p">(</span><span class="n">trajet</span><span class="p">,</span> <span class="n">pyr</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trajet</span><span class="p">)):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">trajet</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <h3 id="23-somme-maximale-par-force-brute">2.3 Somme maximale par force brute<a class="headerlink" href="#23-somme-maximale-par-force-brute" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p><strong>Q1.</strong> Écrire une fonction <code>max_force_brute</code> qui prend en paramètre une pyramide <code>pyr</code> et qui renvoie la somme maximale parmi tous les trajets possibles.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_force_brute</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">trajets</span> <span class="o">=</span> <span class="n">liste_parcours</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">trajets</span><span class="p">:</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">val_trajet</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">pyr</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
-            <span class="n">m</span> <span class="o">=</span> <span class="n">v</span>
-    <span class="k">return</span> <span class="n">m</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Notre algorithme donne bien la bonne solution pour <code>pyr_exemple</code>, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.</p>
-</details>
 </div>
 <h2 id="3-recherche-par-methode-gloutonne">3. Recherche par méthode gloutonne<a class="headerlink" href="#3-recherche-par-methode-gloutonne" title="Permanent link">⚓︎</a></h2>
 <p>Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d'être plus efficace. Pourquoi ne pas chercher une méthode <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" target="_blank">gloutonne</a> ?</p>
@@ -5212,33 +5155,6 @@
             <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_glouton</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)):</span>
-        <span class="n">v1</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">v2</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">v1</span> <span class="o">&gt;</span> <span class="n">v2</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="n">v1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="n">v2</span>
-            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q2.</strong> Observer et analyser le résultat donné par notre algorithme sur <code>pyr_exemple</code>.</p>
 </div>
 <h2 id="4-recherche-par-methode-recursive">4. Recherche par méthode récursive<a class="headerlink" href="#4-recherche-par-methode-recursive" title="Permanent link">⚓︎</a></h2>
@@ -5266,19 +5182,6 @@
         <span class="n">right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst_right</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_recursif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">pyr_left</span><span class="p">,</span> <span class="n">pyr_right</span> <span class="o">=</span> <span class="n">extract_sub_left_right</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_left</span><span class="p">),</span> <span class="n">max_recursif</span><span class="p">(</span><span class="n">pyr_right</span><span class="p">))</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
 </div>
 <h2 id="5-optimisation-de-la-methode-recursive-par-programmation-dynamique">5. Optimisation de la méthode récursive par programmation dynamique<a class="headerlink" href="#5-optimisation-de-la-methode-recursive-par-programmation-dynamique" title="Permanent link">⚓︎</a></h2>
@@ -5322,36 +5225,7 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
         <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
         <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dict_max</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
-    <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="n">dict_max</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span>
-    <span class="k">else</span><span class="p">:</span>   
-        <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)),</span> <span class="n">max_rec_dynamique</span><span class="p">(</span><span class="n">pyr</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
-        <span class="k">return</span> <span class="n">dict_max</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span>        
-</code></pre></div></td></tr></table></div>
-</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour trouver le maximum d'une pyramide de taille 500.</p>
-</details>
 </div>
 <h2 id="6-methode-bottom-up">6. Méthode bottom-up<a class="headerlink" href="#6-methode-bottom-up" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
@@ -5377,20 +5251,6 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
 <p class="admonition-title">Exercice  8</p>
 <p>En s'inspirant de la méthode précédente, écrire une fonction <code>max_iteratif</code> qui prend une pyramide <code>pyr</code> en paramètre et qui renvoie la somme maximale des parcours de cette pyramide.</p>
 <p>Effectuer des tests pour apprécier l'efficacité de cette fonction.</p>
-<details class="success">
-<summary>Correction</summary>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_iteratif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
-            <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-On peut calculer que cet algorithme est de complexité quadratique. Il reste néanmoins très rapide, y compris pour des grandes pyramides.</p>
-</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5414,7 +5274,7 @@ On peut calculer que cet algorithme est de complexité quadratique. Il reste né
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="19 mars 2025 10:35:54 UTC">19 mars 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="18 février 2026 09:55:08 UTC">18 février 2026</span>
   </span>
 
     
