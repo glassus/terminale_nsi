@@ -109,6 +109,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     )
     }}
 
+{#
 !!! abstract ":heart: :heart: :heart: Exemple de mémoïsation : Fibonacci :heart: :heart: :heart:"
     ```python linenums='1'
     dict_fibo = {0:0, 1:1}
@@ -120,7 +121,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     ```
     :warning: le dictionnaire ```dict_fibo``` doit être **à l'extérieur** de la fonction, sinon il est réinitialisé à chaque appel récursif !
 
-
+#}
 !!! example "{{ exercice() }}"
     Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
 
@@ -167,7 +168,7 @@ def fibonacci(n):
 Remarquez la définition d'une fonction *à l'intérieur* d'une autre. Cela ne pose aucun problème, mais attention, cette fonction n'existe pas à l'extérieur de sa fonction englobante.
 
 
-#### 1.3.3 :arrow_right: **Mémoïsation automatique en Python** :star: :star: :star:
+#### 1.3.3 :arrow_right: **Mémoïsation automatique en Python** *(HP)* :star: :star: :star:
 
 La fonction ```lru_cache``` du module ```functools``` permet de mémoïser automatiquement une fonction récursive. Il suffit, juste avant d'écrire la fonction, de mettre la ligne ```@lru_cache``` (appelée *décorateur*). 
 
