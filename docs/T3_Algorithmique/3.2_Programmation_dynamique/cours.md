@@ -129,7 +129,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     correction(False,
     """
     ??? success \"Correction\" 
-        Le temps de calcul est maintenant de l'ordre de $10^{-5}$ secondes. C'est un million (!!!) de fois plus rapide qu'à l'exercice 1.
+        Le temps de calcul est maintenant de l'ordre de $10^{-5}$ secondes. C'est un million (!!!) de fois plus rapide que le code de l'exercice 1.
     """
     )
     }}
@@ -202,7 +202,7 @@ La structure récursive naturelle de la suite de Fibonacci nous a conduit vers u
 
 Et si on commençait par le bas ?
 
-Si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on commencerait par calculer le 3ème, puis le 4ème, puis le 5ème et enfin le 6ème.
+C'est en fait ce que nous faisons naturellement : si nous devions calculer mentalement le 6ème terme de la suite de Fibonacci, on commencerait par calculer le 3ème, puis le 4ème, puis le 5ème et enfin le 6ème.
 
 !!! example "{{ exercice() }}"
     Compléter le code ci-dessous :
