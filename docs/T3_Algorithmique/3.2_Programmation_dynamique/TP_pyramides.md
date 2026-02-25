@@ -100,7 +100,7 @@ def liste_parcours(pyr):
     3. Pour une pyramide de hauteur 41, que pensez-vous du nombre de trajets différents ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le nombre de trajets pour une hauteur $n$ est $2^{n-1}$.
