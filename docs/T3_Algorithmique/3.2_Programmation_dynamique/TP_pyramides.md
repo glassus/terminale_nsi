@@ -44,7 +44,7 @@ def affiche(pyr):
     Créer puis afficher une pyramide de hauteur 10.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -100,7 +100,7 @@ def liste_parcours(pyr):
     3. Pour une pyramide de hauteur 41, que pensez-vous du nombre de trajets différents ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le nombre de trajets pour une hauteur $n$ est $2^{n-1}$.
@@ -123,7 +123,7 @@ def liste_parcours(pyr):
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
