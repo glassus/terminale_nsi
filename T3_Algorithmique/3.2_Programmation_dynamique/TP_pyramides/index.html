@@ -5138,11 +5138,43 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">val_trajet</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">pyr_exemple</span><span class="p">)</span>
 <span class="mi">23</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">val_trajet</span><span class="p">(</span><span class="n">trajet</span><span class="p">,</span> <span class="n">pyr</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">trajet</span><span class="p">)):</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">trajet</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="23-somme-maximale-par-force-brute">2.3 Somme maximale par force brute<a class="headerlink" href="#23-somme-maximale-par-force-brute" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p><strong>Q1.</strong> Écrire une fonction <code>max_force_brute</code> qui prend en paramètre une pyramide <code>pyr</code> et qui renvoie la somme maximale parmi tous les trajets possibles.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_force_brute</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="n">trajets</span> <span class="o">=</span> <span class="n">liste_parcours</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">trajets</span><span class="p">:</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">val_trajet</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">pyr</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="k">return</span> <span class="n">m</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
 </div>
 <h2 id="3-recherche-par-methode-gloutonne">3. Recherche par méthode gloutonne<a class="headerlink" href="#3-recherche-par-methode-gloutonne" title="Permanent link">⚓︎</a></h2>
@@ -5295,7 +5327,7 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 février 2026 10:10:42 UTC">25 février 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 février 2026 10:44:37 UTC">25 février 2026</span>
   </span>
 
     
