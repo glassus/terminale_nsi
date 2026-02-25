@@ -44,7 +44,7 @@ def affiche(pyr):
     Créer puis afficher une pyramide de hauteur 10.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
