@@ -163,7 +163,7 @@ def liste_parcours(pyr):
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Notre algorithme donne bien la bonne solution pour ```pyr_exemple```, mais dès que la taille de la pyramide augmente, le temps d'exécution devient beaucoup trop long et notre programme inutilisable.
