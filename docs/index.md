@@ -6,6 +6,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
@@ -40,6 +41,9 @@
 - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
+
+
+- [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}
 
 {#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
