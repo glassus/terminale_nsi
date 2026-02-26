@@ -5022,7 +5022,7 @@
 <div class="admonition question">
 <p class="admonition-title">Problème</p>
 <p>Considérons la pyramide ci-dessous :</p>
-<p><img alt="image" class="center" src="../data/pyrvide.png" width="20%" /></p>
+<p><img alt="image" class="center autolight" src="../data/pyrvide.png" width="20%" /></p>
 <p>En partant du sommet et en descendant jusqu'en bas en prenant soit à gauche soit à droite, quelle est la somme maximale que l'on peut obtenir ?</p>
 <p><img alt="image" class="center" src="../data/pyrexsommes.png" width="75%" /></p>
 </div>
@@ -5184,7 +5184,7 @@
 <h2 id="3-recherche-par-methode-gloutonne">3. Recherche par méthode gloutonne<a class="headerlink" href="#3-recherche-par-methode-gloutonne" title="Permanent link">⚓︎</a></h2>
 <p>Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d'être plus efficace. Pourquoi ne pas chercher une méthode <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" target="_blank">gloutonne</a> ?</p>
 <p><em>Rappel :</em>  lors du parcours d'une pyramide, les deux cases sous la case <code>[i][j]</code> sont la case <code>[i+1][j]</code> et <code>[i+1][j+1]</code>.</p>
-<p><img alt="image" class="center" src="../data/glouton.png" width="60%" /></p>
+<p><img alt="image" class="center autolight" src="../data/glouton.png" width="60%" /></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p><strong>Q1.</strong> Compléter la fonction <code>max_glouton</code> ci-dessous qui calcule de manière gloutonne le «meilleur» trajet d'une pyramide <code>pyr</code>. </p>
@@ -5218,7 +5218,7 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
 <p>Observer le dessin suivant :
-<img alt="image" class="center" src="../data/recurs.png" width="30%" /></p>
+<img alt="image" class="center autolight" src="../data/recurs.png" width="30%" /></p>
 <p><strong>Q1.</strong> En déduire une fonction <code>max_recursif</code> qui prendra en paramètre une pyramide <code>pyr</code> et qui calculera de manière récursive la somme maximale.</p>
 <p>Pour extraire les deux sous-pyramides gauche et droite, on pourra utiliser le code suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -5239,11 +5239,21 @@
         <span class="n">right</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst_right</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_recursif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+    <span class="n">pyr_left</span><span class="p">,</span> <span class="n">pyr_right</span> <span class="o">=</span> <span class="n">extract_sub_left_right</span><span class="p">(</span><span class="n">pyr</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>Q2.</strong> Testez votre algorithme avec <code>pyr_exemple</code>, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?</p>
 </div>
 <h2 id="5-optimisation-de-la-methode-recursive-par-programmation-dynamique">5. Optimisation de la méthode récursive par programmation dynamique<a class="headerlink" href="#5-optimisation-de-la-methode-recursive-par-programmation-dynamique" title="Permanent link">⚓︎</a></h2>
 <p>La lenteur de l'algorithme précédent vient du fait que certains calculs sont redondants. </p>
-<p><img alt="image" class="center" src="../data/dynam.png" width="30%" /></p>
+<p><img alt="image" class="center autolight" src="../data/dynam.png" width="30%" /></p>
 <p>Par exemple, le calcul du maximum de la pyramide rouge sera lancé en tant que sous-pyramide droite de la valeur 5, et en tant que sous-pyramide gauche de la valeur 4.</p>
 <p>Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ralentir considérablement l'exécution du programme.</p>
 <div class="admonition example">
@@ -5287,7 +5297,7 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
 <h2 id="6-methode-bottom-up">6. Méthode bottom-up<a class="headerlink" href="#6-methode-bottom-up" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Plus court chemin</p>
-<p><img alt="image" class="center" src="../data/bell.png" /></p>
+<p><img alt="image" class="center autolight" src="../data/bell.png" /></p>
 <p>Dans la figure ci-dessus, le chemin surligné est le chemin de longueur minimale entre A et C. </p>
 <p>Ce chemin passe par B. </p>
 <p>On peut donc en déduire que la portion de ce chemin entre B et C (portion rouge) est le chemin minimal entre B et C.</p>
@@ -5297,17 +5307,27 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
 <p>De manière analogue, on peut affirmer ceci : si le chemin minimal passe par B, alors la portion de ce chemin minimal entre B et C est forcément le chemin rouge.</p>
 </div>
 <p>Nous allons exploiter une idée similaire pour maximiser le parcours dans notre pyramide.</p>
-<p><img alt="image" class="center" src="../data/bup.png" width="25%" /></p>
+<p><img alt="image" class="center autolight" src="../data/bup.png" width="25%" /></p>
 <p>Admettons que le parcours maximal passe par la valeur 6. Ensuite, ce parcours doit passer par 8 ou par 9. Comme ce parcours est maximal, il passera forcément par 9.</p>
 <p>On peut donc en déduire que si le parcours arrive à cette valeur 6, alors cette valeur pourrait être remplacée par 15.</p>
 <p>Faisons de même pour les autres valeurs de l'avant-dernière ligne :</p>
-<p><img alt="image" class="center" src="../data/bup2.png" width="25%" /></p>
+<p><img alt="image" class="center autolight" src="../data/bup2.png" width="25%" /></p>
 <p>En procédant de même pour les lignes supérieures, on trouve la valeur maximale de 30 :</p>
-<p><img alt="image" class="center" src="../data/bup3.png" width="25%" /></p>
+<p><img alt="image" class="center autolight" src="../data/bup3.png" width="25%" /></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <p>En s'inspirant de la méthode précédente, écrire une fonction <code>max_iteratif</code> qui prend une pyramide <code>pyr</code> en paramètre et qui renvoie la somme maximale des parcours de cette pyramide.</p>
 <p>Effectuer des tests pour apprécier l'efficacité de cette fonction.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">max_iteratif</span><span class="p">(</span><span class="n">pyr</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+            <span class="n">pyr</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pyr</span><span class="p">[</span><span class="o">...</span><span class="p">][</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5331,7 +5351,7 @@ On va utiliser un dictionnaire <code>dict_max</code> qui associera à chaque som
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 février 2026 10:51:48 UTC">25 février 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 février 2026 09:32:31 UTC">26 février 2026</span>
   </span>
 
     
