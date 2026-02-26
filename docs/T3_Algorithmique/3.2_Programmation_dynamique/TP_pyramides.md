@@ -283,7 +283,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Dès que la hauteur de la pyramide dépasse 25 (environ) le programme devient extrêmement lent et inutilisable. On retrouve le problème rencontré avec l'algorithme de force brute.
