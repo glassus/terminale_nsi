@@ -331,7 +331,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
