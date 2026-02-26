@@ -43,7 +43,7 @@
 
 
 
-- [un sénateur expert en cryptographie](https://twitter.com/lea_linux/status/1787131059798257844){. target="_blank"}
+- [un sénateur expert en cryptographie](https://nitter.net/lea_linux/status/1787131059798257844#m){. target="_blank"}
 
 {#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
