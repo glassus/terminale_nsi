@@ -355,7 +355,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour trouver le maximum d'une pyramide de taille 500.
