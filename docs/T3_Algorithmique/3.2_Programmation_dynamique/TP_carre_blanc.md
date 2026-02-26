@@ -120,6 +120,17 @@ Pour le cas général, on s'inspirera de la partie précédente...
 !!! example "{{ exercice() }}"
     Écrire le code de la fonction ```pgcb```. 
 
+    ```python linenums='1'
+    def pgcb(x, y):
+        if ...:
+            return 0
+        
+        if ...:
+            return 1
+        
+        return ... + ...
+    ```
+
     *Exemples d'utilisation :*
     ```python
     >>> pgcb(0,0)
@@ -160,6 +171,23 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
 !!! example "{{ exercice() }}"
     Écrire la fonction ```pgcb_memo```, identique à la fonction ```pgcb``` mais qui mémoïse ses résultats. On pourra se servir d'une [fonction englobante](https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/cours/#132-suppression-de-la-variable-globale){. target="_blank"} comme dans le cours sur Fibonacci.
 
+    ```python linenums='1'
+    def pgcb_memo(x, y):
+        dict_memo = {}
+        def pgcb(x, y):
+            if ...:
+                return 0
+            if ...:
+                return 1
+            if ... in ...:
+                return ...
+            dict_memo[(x, y)] = ...
+            return ...
+        return pgcb(x, y)
+    ```
+
+
+
     *Exemple :*
     ```python
     >>> pgcb_memo(300,300)
@@ -178,8 +206,9 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
                     return 0
                 if x == 0 or y == 0:
                     return 1
-                if (x, y) not in dict_memo:
-                    dict_memo[(x, y)] = 1 + min(pgcb(x-1, y), pgcb(x, y-1), pgcb(x-1, y-1))
+                if (x, y) in dict_memo:
+                    return dict_memo[(x, y)]
+                dict_memo[(x, y)] = 1 + min(pgcb(x-1, y), pgcb(x, y-1), pgcb(x-1, y-1))
                 return dict_memo[(x, y)]
             return pgcb(x, y)
         ```
@@ -217,8 +246,9 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
                 if x == 0 or y == 0:
                     return 1
                 
-                if (x, y) not in dict_memo:
-                    dict_memo[(x, y)] = 1 + min(pgcb(x-1, y), pgcb(x, y-1), pgcb(x-1, y-1))
+                if (x, y) in dict_memo:
+                    return dict_memo[(x, y)]
+                dict_memo[(x, y)] = 1 + min(pgcb(x-1, y), pgcb(x, y-1), pgcb(x-1, y-1))
                 return dict_memo[(x, y)]
             
             maxi = 0
@@ -250,6 +280,24 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
 
 !!! example "{{ exercice() }}"
     En s'inspirant de la manière dont on a rempli manuellement les cases au [1.2](http://127.0.0.1:8000/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/#12-recherche-manuelle), écrire une fonction ```pgcb_bottom_up```.
+
+    ```python linenums='1'
+    def pgcb_bottom_up():
+        memo = {}
+        maxi = 0
+        for x in range(600):
+            for y in range(600):
+                if ...:
+                    memo[(x,y)] = ...
+                elif ... or ...:
+                    memo[(x,y)] = ...
+                else:
+                    memo[(x,y)] = ...
+                if memo[(x,y)] > ...:
+                    maxi = ...
+                    best = ...
+        return maxi, best
+    ```
 
     {{
     correction(False,
