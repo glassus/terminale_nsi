@@ -4,7 +4,7 @@
 
     Considérons la pyramide ci-dessous :
 
-    ![image](data/pyrvide.png){: .center width=20%}
+    ![image](data/pyrvide.png){: .center width=20% .autolight}
 
     En partant du sommet et en descendant jusqu'en bas en prenant soit à gauche soit à droite, quelle est la somme maximale que l'on peut obtenir ?
 
@@ -177,7 +177,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
 
 *Rappel :*  lors du parcours d'une pyramide, les deux cases sous la case ```[i][j]``` sont la case ```[i+1][j]``` et ```[i+1][j+1]```.
 
-![image](data/glouton.png){: .center width=60%}
+![image](data/glouton.png){: .center width=60% .autolight}
 
 
 !!! example "{{ exercice() }}"
@@ -238,7 +238,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
 !!! example "{{ exercice() }}"
     
     Observer le dessin suivant :
-    ![image](data/recurs.png){: .center width=30%}
+    ![image](data/recurs.png){: .center width=30% .autolight}
 
     **Q1.** En déduire une fonction ```max_recursif``` qui prendra en paramètre une pyramide ```pyr``` et qui calculera de manière récursive la somme maximale.
 
@@ -255,7 +255,16 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
             right.append(lst_right)
         return left, right
     ```
-    
+
+    ```python linenums='1'
+    def max_recursif(pyr):
+        if len(pyr) == 1:
+            return ...
+        pyr_left, pyr_right = extract_sub_left_right(pyr)
+        return ... + max(..., ...)
+    ```
+
+
     {{
     correction(False,
     """
@@ -287,7 +296,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
 
 La lenteur de l'algorithme précédent vient du fait que certains calculs sont redondants. 
 
-![image](data/dynam.png){: .center width=30%}
+![image](data/dynam.png){: .center width=30% .autolight}
 
 Par exemple, le calcul du maximum de la pyramide rouge sera lancé en tant que sous-pyramide droite de la valeur 5, et en tant que sous-pyramide gauche de la valeur 4.
 
@@ -361,7 +370,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
 ## 6. Méthode bottom-up
 
 !!! note "Plus court chemin"
-    ![image](data/bell.png){: .center}
+    ![image](data/bell.png){: .center .autolight}
 
     Dans la figure ci-dessus, le chemin surligné est le chemin de longueur minimale entre A et C. 
 
@@ -375,7 +384,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
 
 Nous allons exploiter une idée similaire pour maximiser le parcours dans notre pyramide.
 
-![image](data/bup.png){: .center width=25%}
+![image](data/bup.png){: .center width=25% .autolight}
 
 
 Admettons que le parcours maximal passe par la valeur 6. Ensuite, ce parcours doit passer par 8 ou par 9. Comme ce parcours est maximal, il passera forcément par 9.
@@ -384,16 +393,25 @@ On peut donc en déduire que si le parcours arrive à cette valeur 6, alors cett
 
 Faisons de même pour les autres valeurs de l'avant-dernière ligne :
 
-![image](data/bup2.png){: .center width=25%}
+![image](data/bup2.png){: .center width=25% .autolight}
 
 En procédant de même pour les lignes supérieures, on trouve la valeur maximale de 30 :
 
-![image](data/bup3.png){: .center width=25%}
+![image](data/bup3.png){: .center width=25% .autolight}
 
 !!! example "{{ exercice() }}"
     En s'inspirant de la méthode précédente, écrire une fonction ```max_iteratif``` qui prend une pyramide ```pyr``` en paramètre et qui renvoie la somme maximale des parcours de cette pyramide.
 
     Effectuer des tests pour apprécier l'efficacité de cette fonction.
+
+
+    ```python linenums='1'
+    def max_iteratif(pyr):
+        for i in range(..., ..., ...):
+            for j in range(...):
+                pyr[i][j] = ... + max(..., ...)
+        return pyr[...][...]
+    ```
 
     {{
     correction(False,
