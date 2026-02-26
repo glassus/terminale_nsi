@@ -44,7 +44,7 @@ L'objectif est de trouver la taille du plus grand carré intégralement blanc qu
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
