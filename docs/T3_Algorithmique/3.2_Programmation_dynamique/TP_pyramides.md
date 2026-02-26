@@ -199,7 +199,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     ```
   
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -223,7 +223,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Observer et analyser le résultat donné par notre algorithme sur ```pyr_exemple```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Notre algorithme renvoie 25 au lieu de 30. Il ne nous donne donc pas le meilleur résultat.
@@ -266,7 +266,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -283,7 +283,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que se passe-t-il ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Dès que la hauteur de la pyramide dépasse 25 (environ) le programme devient extrêmement lent et inutilisable. On retrouve le problème rencontré avec l'algorithme de force brute.
@@ -331,7 +331,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -355,7 +355,7 @@ Si la pyramide initiale est grande, ces appels inutiles vont se multiplier et ra
     **Q2.** Testez votre algorithme avec ```pyr_exemple```, ainsi qu'avec des pyramides de taille supérieure. Que constatez-vous ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         On constate que notre algorithme est devenu quasi-instantané. Il ne faut que quelques secondes pour trouver le maximum d'une pyramide de taille 500.
