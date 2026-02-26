@@ -223,7 +223,7 @@ Notre algorithme de force brute n'étant pas utilisable, il va falloir essayer d
     **Q2.** Observer et analyser le résultat donné par notre algorithme sur ```pyr_exemple```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Notre algorithme renvoie 25 au lieu de 30. Il ne nous donne donc pas le meilleur résultat.
