@@ -6,7 +6,7 @@
 - NSI	L’arrivée des algorithmes dans le système judiciaire est-elle une bonne chose ?
 - NSI	Par quel moyen, les entreprises peuvent-elles se protéger des cyber-attaques et quels en sont les conséquences ?
 - Transvers M/NSI	Comment fonctionnent les algorithmes génétiques ?
-- NSI	Les bugs : bête noirs des développeurs ?
+- NSI	Les bugs : bête noire des développeurs ?
 - Transvers M/NSI	Enigma, un codage à toute épreuve ?
 - Transvers M/NSI	Comment fonctionne la compression de données ?
 - NSI	Comment les processeurs ont évolué et pourquoi ?
@@ -63,7 +63,7 @@
 - Maths/NSI	Comment calculer informatiquement les décimales de π ?
 - NSI	L’intelligence artificielle : un piège vicieux ou un tremplin pour l’humanité ?
 - NSI	Comment appliquer la récursivité à un arbre de recherche ?
-- Maths/NSI	Comment une attaque informatique à été créé à partir d’un paradoxe mathématique ?
+- Maths/NSI	Comment une attaque informatique a été créée à partir d’un paradoxe mathématique ?
 - NSI	Comment l’IA à réussi à battre les humains aux échecs ?
 - NSI	Le ramasse miettes, la solution à nos problèmes de mémoire ?
 - Maths/NSI	Bruit de Perlin, comment dompter l’aléatoire ?
@@ -82,6 +82,6 @@
 - NSI	Comment l’Intelligence Artificielle fait-elle évoluer la Formule 1?
 - NSI	Comment et pourquoi générer du hasard est devenu un enjeu technique ?
 - Math/NSI	Comment les mathématiques protègent vos données numériques ?
-- NSI	En quoi l’IA devient un outil indispensable en cybersécurité mais aussi une arme redoutable pour les pirates informatique ?
+- NSI	En quoi l’IA devient un outil indispensable en cybersécurité mais aussi une arme redoutable pour les pirates informatiques ?
 - Maths/NSI	Quels sont les avantages et les inconvénients des différents algorithmes de calcul d’une valeur approchée d’une intégrale ?
-- NSI	Quelle est la nécéssité de faire evoluer l’IA dans les jeux ?
+- NSI	Quelle est la nécéssité de faire évoluer l’IA dans les jeux ?
