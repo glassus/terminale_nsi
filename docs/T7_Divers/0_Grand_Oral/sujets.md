@@ -77,7 +77,7 @@
 - NSI	Comment JavaScript a-t-il évolué pour devenir l’un des langages de programmation les plus influents dans le développement web moderne ?
 - Math/NSI	Comment calculer informatiquement les décimales de π ?
 - NSI	Comment fonctionne le hacking par injection SQL et quel est l’objectif de cette attaque ?
-- NSI	Comment l’IA est elle-t-parvenue à battre l’humain dans les différents jeu de stratégie comme dans le jeu d’échecs ?
+- NSI	Comment l’IA est-elle parvenue à battre l’humain dans les différents jeu de stratégie comme dans le jeu d’échecs ?
 - NSI	Pourquoi l’aléatoire n’existe pas réellement dans l’informatique ?
 - NSI	Comment l’Intelligence Artificielle fait-elle évoluer la Formule 1?
 - NSI	Comment et pourquoi générer du hasard est devenu un enjeu technique ?
