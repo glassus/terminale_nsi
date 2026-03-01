@@ -4,8 +4,15 @@
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 
+!!! tip "Grand Oral"
+    - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/0_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
+    - [FAQ Grand Oral](T7_Divers/0_Grand_Oral/data/GO_FAQ.pdf){. target="_blank"}
+    - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/0_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
+    - [Liste de sujets NSI ou Maths/NSI](T7_Divers/0_Grand_Oral/sujets.md){. target="_blank"}
+
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
     - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 

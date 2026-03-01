@@ -53,7 +53,6 @@
 - NSI	Quel impact sur le climat ont nos usages du numérique ?
 - NSI	Dans quel cas faut-il choisir une base de données non relationnelle ou une base de données SQL ?
 - NSI/Maths	Qu’est-ce que le ray tracing et en quoi relie-t-il les maths et l’informatique ?
-- SI/Physique	Comment tirer le meilleur d’une installation de panneaux photovoltaïques ?
 - NSI	Comment un signal sonore est-il numériquement encodé ?
 - NSI	Comment les réseaux informatiques se sont adaptés au développement d’Internet ?
 - NSI	Comment les technologies numériques révolutionnent-t-elles le dessin animé / l’animation ?
@@ -66,7 +65,6 @@
 - NSI	Comment appliquer la récursivité à un arbre de recherche ?
 - Maths/NSI	Comment une attaque informatique à été créé à partir d’un paradoxe mathématique ?
 - NSI	Comment l’IA à réussi à battre les humains aux échecs ?
-- Maths / Physique	Pourquoi les voix de plusieurs chanteurs enrichissent-elles l’harmonie sans multiplier le niveau sonore ?
 - NSI	Le ramasse miettes, la solution à nos problèmes de mémoire ?
 - Maths/NSI	Bruit de Perlin, comment dompter l’aléatoire ?
 - NSI	Comment l’IA fait évoluer la conduite d’un véhicule ?
@@ -84,6 +82,6 @@
 - NSI	Comment l’Intelligence Artificielle fait-elle évoluer la Formule 1?
 - NSI	Comment et pourquoi générer du hasard est devenu un enjeu technique ?
 - Math/NSI	Comment les mathématiques protègent vos données numériques ?
-- NSI	En quoi l’IA devient un outil indispesable en cybersécurité mais aussi une arme redoutable pour les pirates informatique ?
+- NSI	En quoi l’IA devient un outil indispensable en cybersécurité mais aussi une arme redoutable pour les pirates informatique ?
 - Maths/NSI	Quels sont les avantages et les inconvénients des différents algorithmes de calcul d’une valeur approchée d’une intégrale ?
 - NSI	Quelle est la nécéssité de faire evoluer l’IA dans les jeux ?
