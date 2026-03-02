@@ -108,7 +108,7 @@ Imaginons maintenant la situation suivante, sur un autre damier que vous ne pouv
 *pgcb -> plus grand carré blanc*
 
 ### 2.1 Première écriture
-On va écrire la fonction récursive ```pgcb```, qui prend en paramètre un tuple ```(x,y)``` et qui renvoie la taille du plus grand carré blanc dont le pixel de coordonnées ```(x,y)``` est le coin inférieur droit.
+On va écrire la fonction récursive ```pgcb```, qui prend en paramètre deux nombres ```x```  et ```y```  et qui renvoie la taille du plus grand carré blanc dont le pixel de coordonnées ```(x,y)``` est le coin inférieur droit.
 
 Les cas de base seront :
 
@@ -142,7 +142,7 @@ Pour le cas général, on s'inspirera de la partie précédente...
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
