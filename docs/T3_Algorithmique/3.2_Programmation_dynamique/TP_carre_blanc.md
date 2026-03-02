@@ -142,7 +142,7 @@ Pour le cas général, on s'inspirera de la partie précédente...
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
