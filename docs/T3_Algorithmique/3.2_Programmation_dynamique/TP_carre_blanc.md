@@ -78,7 +78,7 @@ Sur une case noire, on écrira le nombre 0.
     Recopier le damier et compléter toutes les cases, **en commençant en haut à gauche**.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/man3.png){: .center}
@@ -95,7 +95,7 @@ Imaginons maintenant la situation suivante, sur un autre damier que vous ne pouv
     Quelle est la valeur qu'il faut écrire à la place du point d'interrogation ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il faut écrire la valeur 3, qui est égale à 1 + le minimum des trois cases situées au Nord, Ouest et Nord-Ouest.
@@ -142,7 +142,7 @@ Pour le cas général, on s'inspirera de la partie précédente...
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -195,7 +195,7 @@ Pour éviter de refaire ces calculs, on va donc faire appel à la technique de `
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -233,7 +233,7 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
     :warning: Dans la structure de votre code, penser à réutiliser le dictionnaire de mémoïsation...
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -300,7 +300,7 @@ Maintenant que notre fonction est efficace, nous pouvons partir à la recherche 
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
