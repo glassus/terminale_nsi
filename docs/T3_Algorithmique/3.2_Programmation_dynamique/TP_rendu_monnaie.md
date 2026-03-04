@@ -23,7 +23,7 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaq
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}"
-    Compléter la fonction ```rendu_glouton``` qui prend en paramètres une liste de pièces ```pieces``` (classées dans l'ordre croissant) et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
+    Compléter la fonction ```rendu_glouton``` qui prend en paramètres une liste de pièces ```pieces``` (classées dans l'ordre **croissant**) et la somme à rendre ```somme``` et qui renvoie **le nombre minimal** de pièces qu'il faut rendre.
 
 
     ```python linenums='1'
@@ -114,7 +114,7 @@ On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaqu
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
