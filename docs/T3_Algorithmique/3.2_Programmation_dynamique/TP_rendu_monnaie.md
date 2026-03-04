@@ -48,7 +48,7 @@ Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaq
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -114,7 +114,7 @@ On va donc passer en revue toutes les pièces ```p``` et mettre à jour à chaqu
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -189,7 +189,7 @@ On peut donc légitimement penser à **mémoïser** notre algorithme, en stockan
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -248,7 +248,7 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
     2. Nombre de pièces dans le pire des cas.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -307,7 +307,7 @@ Lors du parcours de toutes les pièces, si un nouveau nombre minimal de pièces 
     1. On effectue une copie de liste avec la méthode ```copy```. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
