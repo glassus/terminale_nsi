@@ -217,7 +217,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q3.png){: .center}
