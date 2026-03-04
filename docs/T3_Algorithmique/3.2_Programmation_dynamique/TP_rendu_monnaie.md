@@ -248,7 +248,7 @@ En s'inspirant de cette méthode (*bottom-up*) nous allons ici calculer successi
     2. Nombre de pièces dans le pire des cas.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
