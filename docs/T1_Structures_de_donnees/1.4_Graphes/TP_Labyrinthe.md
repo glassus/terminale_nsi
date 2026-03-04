@@ -162,7 +162,7 @@ Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode d
 
 Les parcours BFS et DFS ont tous deux la propriété de parcourir **la totalité** du graphe (ils sont même conçus pour cela). Cela a permis au parcours BFS de nous fournir une solution au labyrinthe (dont on a démontré qu'elle était la plus courte).
 
-Que penser de solution qui sera donnée par le DFS ?
+Que penser de la solution qui sera donnée par le DFS ?
 
 #### 6.1 Dans un labyrinthe parfait
 
