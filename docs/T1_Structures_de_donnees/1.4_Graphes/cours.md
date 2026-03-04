@@ -149,7 +149,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
     **Q2.** Donner la matrice d'adjacence de ce graphe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         $\\pmatrix{
