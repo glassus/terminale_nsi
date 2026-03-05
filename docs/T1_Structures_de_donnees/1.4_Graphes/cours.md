@@ -306,7 +306,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q1.png){: .center}        
@@ -330,7 +330,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q2.png){: .center}        
