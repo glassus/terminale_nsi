@@ -589,7 +589,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -604,7 +604,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
