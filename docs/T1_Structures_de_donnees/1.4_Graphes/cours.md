@@ -648,7 +648,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
 
 !!! abstract "Recherche du plus court chemin "
 
-    
+{#  
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -682,10 +682,10 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = ... + chemin
         return chemin
     ```
-
+#}
     
 
-{#  
+ 
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
         '''
@@ -720,7 +720,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
         return chemin
     ```
 
-#}
+
 
 
 !!! example "{{ exercice() }}"
