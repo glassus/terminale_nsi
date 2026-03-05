@@ -501,7 +501,7 @@ On utilise :
 
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
-
+{#
 
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -524,8 +524,8 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return ...
 
     ```
+#}
 
-{#
 
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -548,7 +548,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return traites
 
     ```
-#}
+
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
