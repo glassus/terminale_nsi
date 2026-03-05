@@ -306,7 +306,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q1.png){: .center}        
@@ -330,7 +330,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q2.png){: .center}        
@@ -398,7 +398,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-{#
+
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -416,9 +416,9 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return ...
     ```
-#}
 
 
+{#
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -436,7 +436,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return sommetB in self.adjacents[sommetA]
     ```
-
+#}
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
@@ -501,7 +501,7 @@ On utilise :
 
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
-{#
+
 
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -524,8 +524,8 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return ...
 
     ```
-#}
 
+{#
 
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -548,7 +548,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return traites
 
     ```
-
+#}
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
@@ -589,7 +589,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -604,7 +604,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
