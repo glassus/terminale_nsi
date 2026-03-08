@@ -721,7 +721,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
     ```
 
 
-
+  
 
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center}
