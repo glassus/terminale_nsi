@@ -242,7 +242,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         1&1&0&1&0\\
         1&0&1&0&1\\
         1&0&0&1&0\\
-        }$, associée au graphe ![image](data/ex2_Q1.png){: .center}
+        }$, associée au graphe ![image](data/ex2_Q1.png){: .center .autolight}
 
     sera représentée par la variable ```G``` suivante :
 
@@ -271,7 +271,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
 
     - Dans le cas d'un graphe orienté on associe à chaque sommet la liste des *successeurs* (ou bien des *prédécesseurs*, au choix).
 
-    Par exemple, le graphe ![image](data/ex2_Q1.png){: .center} sera représenté par le dictionnaire :
+    Par exemple, le graphe ![image](data/ex2_Q1.png){: .center .autolight} sera représenté par le dictionnaire :
 
     ```python linenums='1'
     G = {'A': ['B', 'C', 'D', 'E'],
@@ -358,7 +358,7 @@ Dans cette partie, nous ne traiterons que des graphes **non-orientés**.
 
 ### 3.1 Interface souhaitée
 
-Nous voulons que le graphe ![image](data/ex2_Q1.png){: .center} puisse être créé grâce aux instructions suivantes :
+Nous voulons que le graphe ![image](data/ex2_Q1.png){: .center .autolight} puisse être créé grâce aux instructions suivantes :
 
 ```python
 g = Graphe(['A', 'B', 'C', 'D', 'E'])
@@ -568,7 +568,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
 
 
 !!! example "{{ exercice() }}"
-    ![image](data/BFS_ex1.png){: .center}
+    ![image](data/BFS_ex1.png){: .center .autolight}
 
     Grâce à la classe ```Graphe``` du 3.3, ce graphe s'implémente par :
 
@@ -724,7 +724,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
   
 
 !!! example "{{ exercice() }}"
-    ![image](data/BFS_ex1.png){: .center}
+    ![image](data/BFS_ex1.png){: .center .autolight}
     Tester le code précédent pour trouver le plus court chemin entre A et G, entre H et C, entre B et G...
 
 
@@ -769,7 +769,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 #}
 
 !!! example "{{ exercice() }}"
-    ![image](data/BFS_ex1.png){: .center}
+    ![image](data/BFS_ex1.png){: .center .autolight}
     
     **Q1.** Donner (de tête) le parcours DFS de ce graphe en partant de A.  
     Rappel : les voisins sont donnés par ordre alphabétique. Le premier voisin de A est donc B.
