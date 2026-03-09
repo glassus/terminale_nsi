@@ -4985,6 +4985,26 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="n">nf</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="n">nh</span><span class="p">}</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction <strong>Q3</strong></summary>
+<ul>
+<li>Le calcul de <code>moy_f</code> va renvoyer une erreur car <code>employes</code> est mis entre guillements.</li>
+<li>De plus, le calcul final est faux puisqu'il fait simplement la différence entre <code>moy_h</code> et <code>moy_f</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;écart de salaire en pourcentage pour les femmes </span>
+<span class="sd">    par rapport aux hommes&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">moy_h</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
+    <span class="n">moy_f</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">moy_h</span> <span class="o">-</span> <span class="n">moy_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">moy_h</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_calcul_ecart_sexe</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">([{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;salaire&#39;</span><span class="p">:</span> <span class="mi">2400</span><span class="p">}])</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Sujet 3</p>
@@ -5017,7 +5037,7 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 mars 2026 16:33:46 UTC">9 mars 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 mars 2026 16:49:30 UTC">9 mars 2026</span>
   </span>
 
     
