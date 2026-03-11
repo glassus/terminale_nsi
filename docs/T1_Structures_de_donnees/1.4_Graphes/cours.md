@@ -741,7 +741,7 @@ Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemin
 
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
-{#
+
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -756,10 +756,10 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 ...
         return traites
     ```
-#}
 
 
 
+{#
 
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -771,7 +771,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
         return traites
     ```
 
-
+#}
 
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center .autolight}
@@ -841,7 +841,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant très mal son nom, puisque c'est devenu une pile).
 
-{#
+
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -857,9 +857,9 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 ....append(...)
         return ...
     ```
-#}
 
 
+{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -875,7 +875,7 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 traites.append(actuel)
         return traites
     ```
-
+#}
 
 **Remarques :**
 
