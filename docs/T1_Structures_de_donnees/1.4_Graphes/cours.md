@@ -747,7 +747,12 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     def DFSrec(g, traites, actuel):
         traites.append(...)
         for voisin in ...:
-            if voisin not in ...:
+            if voisin not in ...:def DFSrec(g, traites, actuel):
+    traites.append(actuel)
+    for voisin in g.voisins(actuel):
+        if voisin not in traites:
+            DFSrec(g, traites, voisin)
+    return traites
                 ...
         return traites
     ```
@@ -777,7 +782,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     **Q2.** Vérifier avec le code précédent. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -836,7 +841,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant très mal son nom, puisque c'est devenu une pile).
 
-
+{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -852,9 +857,9 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 ....append(...)
         return ...
     ```
+#}
 
 
-{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -870,7 +875,7 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 traites.append(actuel)
         return traites
     ```
-#}
+
 
 **Remarques :**
 
