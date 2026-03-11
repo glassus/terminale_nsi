@@ -741,7 +741,7 @@ Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemin
 
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
-
+{#
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -751,10 +751,10 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 DFSrec(g, ..., ...)
         return traites
     ```
+#}
 
 
 
-{#
 
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -766,7 +766,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
         return traites
     ```
 
-#}
+
 
 !!! example "{{ exercice() }}"
     ![image](data/BFS_ex1.png){: .center .autolight}
