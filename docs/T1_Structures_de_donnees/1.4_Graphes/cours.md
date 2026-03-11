@@ -747,13 +747,8 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     def DFSrec(g, traites, actuel):
         traites.append(...)
         for voisin in ...:
-            if voisin not in ...:def DFSrec(g, traites, actuel):
-    traites.append(actuel)
-    for voisin in g.voisins(actuel):
-        if voisin not in traites:
-            DFSrec(g, traites, voisin)
-    return traites
-                ...
+            if voisin not in ...:
+                DFSrec(g, ..., ...)
         return traites
     ```
 
