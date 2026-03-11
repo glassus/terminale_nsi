@@ -12,11 +12,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/)
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
-    - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
-    - [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
-    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
-    - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
 
