@@ -12,6 +12,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/)
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
 
@@ -48,8 +49,9 @@
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
 
 
-
+{#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
+#}
 
 {#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
