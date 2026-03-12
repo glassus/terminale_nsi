@@ -4,7 +4,7 @@
     Exercice 3 du [sujet 0 version A - 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0a.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/0A_Q1.png){: .center}
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         Le chemin le plus court est A-E-D (10 km).
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         La matrice d'adjacence de G1 est :
@@ -41,7 +41,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         Le parcours en largeur de ce graphe donne A-B-C-H-I-D-E-G-F.
@@ -70,7 +70,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\" 
         La fonction ```cherche_itineraires``` s'appelle elle-même, elle est donc récursive.
@@ -78,7 +78,7 @@
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\" 
         La fonction ```cherche_itineraires``` sert à remplir la liste ```tab_itineraires``` (initialement vide) avec tous les chemins (uniques) partant de ```start``` et allant à ```end```. 
@@ -126,7 +126,7 @@
         ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8.\" 
         ```python linenums='1' hl_lines='30 31 27 34'
@@ -173,7 +173,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9.\" 
         Le problème vient de la variable globale ```tab_itineraires```.
@@ -506,7 +506,7 @@
     Exercice 2 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ANJ12024_1.png){: .center}
@@ -516,7 +516,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python
@@ -537,7 +537,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         - ```position(sommets, 'G')``` renvoie 0
@@ -547,7 +547,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1' hl_lines='2 4 7 8'
