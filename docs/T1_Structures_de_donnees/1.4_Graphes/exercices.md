@@ -70,7 +70,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         La fonction ```cherche_itineraires``` s'appelle elle-même, elle est donc récursive.
