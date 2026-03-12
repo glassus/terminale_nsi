@@ -78,7 +78,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7.\" 
         La fonction ```cherche_itineraires``` sert à remplir la liste ```tab_itineraires``` (initialement vide) avec tous les chemins (uniques) partant de ```start``` et allant à ```end```. 
