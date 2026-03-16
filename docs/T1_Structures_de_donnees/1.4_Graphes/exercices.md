@@ -617,7 +617,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9.\" 
         Le cercle d'amis de Lou est ```L J G Y E N```. 
