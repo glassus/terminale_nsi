@@ -575,7 +575,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         - ```c``` représente la clé.
