@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```nb_amis(sommets, matrice_adj, 'G')``` renvoie 4.
