@@ -250,7 +250,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         ```nb_amis(sommets, matrice_adj, 'G')``` renvoie 4.
@@ -575,7 +575,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\" 
         - ```c``` représente la clé.
@@ -585,7 +585,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\" 
         ```python
@@ -605,7 +605,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8.\" 
         ```python
@@ -617,7 +617,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9.\" 
         Le cercle d'amis de Lou est ```L J G Y E N```. 
@@ -639,7 +639,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.\" 
         ```python linenums='1' hl_lines='3 5 7'
