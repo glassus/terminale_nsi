@@ -825,7 +825,7 @@
             while file != []:
                 file = classe_file(file)
                 actuel, dist = file.pop(0)
-                for voisin in g[actuel].keys():
+                for voisin in g[actuel]:
                     new_dist = dist + g[actuel][voisin]
                     if new_dist < distance[voisin]:
                         distance[voisin] = new_dist
