@@ -13,6 +13,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+    - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
 
 
 
