@@ -5056,7 +5056,7 @@
 </code></pre></div></p>
 <p>Le programme s'appelle <code>accueil</code>, et pour fonctionner il a besoin d'un paramètre, qui sera ici un nombre entier <code>n</code>.</p>
 <p>Voici comment nous pouvons représenter notre machine <code>accueil</code>, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)</p>
-<p><img alt="image" class="center" src="../data/m1.png" width="30%" /></p>
+<p><img alt="image" class="center autolight" src="../data/m1.png" width="30%" /></p>
 <p>Maintenant, enregistrons le code suivant dans un fichier <code>test.py</code> :
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -5069,17 +5069,19 @@
 <img alt="image" class="center" src="../data/term.png" /></p>
 <p>Le programme utilisé est alors <code>python3</code>, qui prend comme paramètre le programme <code>test.py</code>. Ce paramètre <code>test.py</code> est un ensemble de caractères qui contient les instructions que le programme <code>python3</code> va interpréter. </p>
 <p>L'illustration correspondante sera donc :</p>
-<p><img alt="image" class="center" src="../data/m2.png" width="30%" /></p>
+<p><img alt="image" class="center autolight" src="../data/m2.png" width="30%" /></p>
 <p>Mais nous pouvons aller encore plus loin : l'instruction <code>python3 test.py</code> est tapée dans mon Terminal Linux, qui lui-même est un programme appelé <code>Terminal</code>.</p>
 <p>Et donc :
-<img alt="image" class="center" src="../data/m3.png" width="30%" /></p>
+<img alt="image" class="center autolight" src="../data/m3.png" width="30%" /></p>
 <p>Conclusion :</p>
 <p><strong>Il n'y a donc aucun obstacle à considérer un programme comme une simple donnée, pouvant être reçue en paramètre par un autre programme.</strong> (voire par lui-même !)</p>
-<blockquote>
-<p>À titre anecdotique, on pourra exécuter avec intérêt cette instruction Python :
-<code>a='a=%r;print(a%%a)';print(a%a)</code> 
-Ce type de code (magique !) existe dans tous les langages et s'appelle un <a class="" href="https://fr.wikipedia.org/wiki/Quine_(informatique)" target="_blank">quine</a>.</p>
-</blockquote>
+<details class="tip">
+<summary>Les quines</summary>
+<p>À titre anecdotique, on pourra exécuter en console cette instruction Python :
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="s1">&#39;a=</span><span class="si">%r</span><span class="s1">;print(a</span><span class="si">%%</span><span class="s1">a)&#39;</span><span class="p">;</span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+ Ce type de code (magique !) existe dans tous les langages et s'appelle un <a class="" href="https://fr.wikipedia.org/wiki/Quine_(informatique)" target="_blank">quine</a>.</p>
+</details>
 <h2 id="2-mon-programme-va-t-il-sarreter">2. Mon programme va-t-il s'arrêter ?<a class="headerlink" href="#2-mon-programme-va-t-il-sarreter" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-un-exemple">2.1 Un exemple<a class="headerlink" href="#21-un-exemple" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le programme suivant :</p>
@@ -5103,7 +5105,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 <li>un paramètre  <code>x</code>, qui serait le paramètre d'entrée de <code>prog</code>.</li>
 </ul>
 <p>L'instruction <code>halt(prog, x)</code> renverrait <code>True</code> si <code>prog(x)</code> s'arrête, et <code>False</code> si <code>prog(x)</code> ne s'arrête pas.</p>
-<p><img alt="image" class="center" src="../data/halt1.png" width="30%" /></p>
+<p><img alt="image" class="center autolight" src="../data/halt1.png" width="30%" /></p>
 <p><strong>Exemple</strong> : </p>
 <ul>
 <li><code>halt(countdown, 10)</code> renverrait <code>True</code>.</li>
@@ -5128,7 +5130,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
         <span class="k">return</span> <span class="mi">1</span>
 </code></pre></div>
 <p>On peut remarquer que le programme <code>halt</code> est appelé avec comme paramètres <code>prog, prog</code>, ce qui signifie que <code>prog</code> se prend lui-même en paramètre. On rappelle que ce n'est pas choquant, un code-source étant une donnée comme une autre.</p>
-<p><img alt="image" class="center" src="../data/halt3.png" width="40%" /></p>
+<p><img alt="image" class="center autolight" src="../data/halt3.png" width="40%" /></p>
 <p>Ce programme <code>sym</code> reçoit donc en paramètre un programme <code>prog</code>, et :</p>
 <ul>
 <li>va rentrer dans une boucle infinie si <code>prog(prog)</code> s'arrête.</li>
@@ -5137,7 +5139,7 @@ Un tel programme (appelons-le <code>halt</code>) prendrait en entrées :</p>
 <h3 id="24-un-leger-probleme">2.4 Un léger problème ...<a class="headerlink" href="#24-un-leger-probleme" title="Permanent link">⚓︎</a></h3>
 <p>Puisqu'un programme peut prendre en paramètre son propre code-source, que donnerait l'appel à <code>sym(sym)</code> ?</p>
 <p>Deux cas peuvent se présenter, suivant si <code>halt(sym, sym)</code> renvoie <code>True</code> ou <code>False</code>.</p>
-<p><img alt="image" class="center" src="../data/halt4.png" width="80%" /></p>
+<p><img alt="image" class="center autolight" src="../data/halt4.png" width="80%" /></p>
 <ul>
 <li>
 <p><strong>cas n°1</strong> : <code>halt(sym, sym)</code> renvoie <code>True</code>, ce qui signifie que <code>sym(sym)</code>  devrait s'arrêter. Mais dans ce cas-là, l'exécution de <code>sym(sym)</code> rentre dans une boucle infinie. C'est une contradiction.</p>
@@ -5228,7 +5230,7 @@ Parmi les fonctions calculables, certaines peuvent l'être rapidement, et d'autr
 <p>Pour le résumer très grossièrement, un problème de classe NP est un problème dont on sait vérifier facilement si une solution proposée marche ou pas :</p>
 <ul>
 <li>la résolution d'un sudoku est dans NP : si quelqu'un vous montre un sudoku rempli, vous pouvez très rapidement lui dire si sa solution est valable ou pas.</li>
-<li>la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui.)</li>
+<li>la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui)</li>
 <li>le problème du <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#3-le-probleme-du-sac-a-dos-knapsack-problem" target="_blank">sac à dos</a> (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.</li>
 <li>le problème du voyageur de commerce (ou TSP : Traveller Sales Problem), en version décisionnelle, est dans NP. Si on vous propose un trajet, vous pouvez facilement vérifier que sa longueur est (par exemple) inférieure à 150 km.</li>
 </ul>
@@ -5281,7 +5283,7 @@ Cela signifie qu'ils pensent que certains problèmes ne pourront jamais avoir un
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="15 avril 2025 12:26:38 UTC">15 avril 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="17 mars 2026 09:22:04 UTC">17 mars 2026</span>
   </span>
 
     
