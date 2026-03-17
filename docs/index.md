@@ -12,16 +12,16 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
-    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/)
-    - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
-
+    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 
 
 
 
 
 ### *Thèmes déjà traités*
+- [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/)
+- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
 - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
 - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
 - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
