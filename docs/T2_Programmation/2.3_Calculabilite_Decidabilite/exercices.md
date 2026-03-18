@@ -22,7 +22,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         Les programmes 3 et 5 terminent.
