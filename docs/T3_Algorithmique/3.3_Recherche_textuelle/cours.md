@@ -34,6 +34,18 @@
         renvoie la liste des indices (éventuellement vide) des occurrences de
         de la chaîne `motif` dans la chaîne `texte`.
         '''
+        
+
+    ```
+{#
+!!! note "Algorithme de recherche naïve :heart:"
+    
+    ```python linenums='1'
+    def recherche_naive(texte, motif):
+        '''
+        renvoie la liste des indices (éventuellement vide) des occurrences de
+        de la chaîne `motif` dans la chaîne `texte`.
+        '''
         indices = []
         i = 0
         while i <= len(texte) - len(motif):
@@ -47,8 +59,7 @@
         return indices
 
     ```
-
-
+#}
 
 Exemple d'utilisation :
 ```python
@@ -70,7 +81,7 @@ Exemple d'utilisation :
     La fonction renverra uniquement un booléen. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -118,7 +129,7 @@ with open('Les_Miserables.txt') as f:
     À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -187,7 +198,7 @@ with open('Les_Miserables.txt') as f:
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -243,7 +254,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -263,6 +274,20 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
 
 
+!!! note "Algorithme de Boyer-Moore-Horspool :heart:"
+    
+    ```python linenums='1'
+    def dico_lettres(mot):
+        
+
+    def BMH(texte, motif):
+        
+
+    ```
+
+
+
+{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
     ```python linenums='1'
@@ -300,7 +325,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres, en faisant attention à ne pas décaler d'un nombre négatif. Au pire, on décale de 1.
     6. La lettre n'est pas dans le motif : on se positionne juste après elle.
 
-
+#}
    
 Exemple d'utilisation :
 ```python
@@ -319,7 +344,7 @@ Exemple d'utilisation :
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
