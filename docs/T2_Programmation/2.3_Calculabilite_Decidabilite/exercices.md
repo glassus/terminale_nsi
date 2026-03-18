@@ -4,7 +4,7 @@
     Exercice 1 du [Asie J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ1JA1.pdf){. target="_blank"}, questions 1 à 4.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         ```x``` vaut 0 et ```y``` vaut 20.  
