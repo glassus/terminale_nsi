@@ -33,7 +33,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Ce programme ne répond pas au problème car si le programme ne s'arrête pas (à la ligne 2), le programme ne renverra jamais ```False```.   
