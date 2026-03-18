@@ -1,7 +1,7 @@
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}"
-    Exercice 1 du [Asie J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ1JA1.pdf){. target="_blank"}, questions 1 à 4.
+    Exercice 1 du [Asie J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ1JA1.pdf){. target="_blank"}, questions 1 à 4. 
 
     {{
     correction(False,
