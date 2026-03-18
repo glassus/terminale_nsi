@@ -13,7 +13,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Un fichier Python est un fichier texte, on peut donc le percevoir comme une chaine de caractères.  
