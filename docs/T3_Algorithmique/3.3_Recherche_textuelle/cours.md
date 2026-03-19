@@ -25,7 +25,7 @@
 
 [codes à trous](../intro_naive/){. target="_blank"}
 
-{#
+
 !!! note "Algorithme de recherche naïve :heart:"
     
     ```python linenums='1'
@@ -37,7 +37,7 @@
         
 
     ```
-#}
+{#
 !!! note "Algorithme de recherche naïve :heart:"
     
     ```python linenums='1'
@@ -59,7 +59,7 @@
         return indices
 
     ```
-
+#}
 
 Exemple d'utilisation :
 ```python
@@ -129,7 +129,7 @@ with open('Les_Miserables.txt') as f:
     À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
