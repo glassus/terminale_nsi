@@ -147,11 +147,11 @@ L'orientation actuelle de l'électronique est donc à la fois :
     Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         - Ces systèmes consomment moins d'énergie.
-        - Ils sont plus petits donc plus facile à embarquer dans le véhicule.
+        - Ils sont plus petits donc plus faciles à embarquer dans le véhicule.
         - Ils sont moins chers à fabriquer grâce à l'intégration directe de tous les composants. 
     """
     )
