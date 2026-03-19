@@ -147,7 +147,7 @@ L'orientation actuelle de l'électronique est donc à la fois :
     Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         - Ces systèmes consomment moins d'énergie.
