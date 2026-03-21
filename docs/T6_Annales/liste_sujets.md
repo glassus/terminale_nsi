@@ -1,6 +1,7 @@
 # Annales des Épreuves Écrites
 
 ## 2025
+- [Métropole Septembre](data/2025/25-NSIJ1ME3.pdf)
 - [Nouvelle-Calédonie J1](data/2025/25-NSIJ1NC1.pdf)
 - [Nouvelle-Calédonie J2](data/2025/25-NSIJ2NC1.pdf)
 - [Polynésie J2](data/2025/25-NSIJ2PO1.pdf)
