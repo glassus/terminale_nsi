@@ -63,7 +63,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Avec le programme suivant :
@@ -90,7 +90,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```python
