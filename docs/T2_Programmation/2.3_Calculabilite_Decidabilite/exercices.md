@@ -42,7 +42,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         L'algorithme de Boyer-Moore est un algorithme de recherche de texte qui utilise un dictionnaire pour faire des décalages intelligents et ainsi accélérer la recherche.  
