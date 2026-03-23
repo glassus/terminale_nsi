@@ -255,7 +255,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
