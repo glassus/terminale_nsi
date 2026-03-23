@@ -42,7 +42,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         L'algorithme de Boyer-Moore est un algorithme de recherche de texte qui utilise un dictionnaire pour faire des décalages intelligents et ainsi accélérer la recherche.  
@@ -51,7 +51,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python
@@ -63,7 +63,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Avec le programme suivant :
@@ -90,7 +90,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -106,7 +106,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Si ```programme_paradoxal``` termine, alors ```terminaison_inverse(programme_paradoxal)``` ne termine pas.
@@ -118,7 +118,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         La question 9. a abouti à une contradiction. Celle-ci est due à la non-existence de la fonction ```arret```.    
@@ -128,7 +128,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Cette impossibilité n'est pas due aux limitations du langage Python. Elle est générale, et a été démontrée en 1936 par Alan Turing sous le nom *Théorème de l'arrêt*.   
