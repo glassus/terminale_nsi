@@ -274,7 +274,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 [codes à trous](../intro_BMH/){. target="_blank"}
 
 
-
+{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
     ```python linenums='1'
@@ -286,9 +286,9 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
     ```
 
+#}
 
 
-{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
     ```python linenums='1'
@@ -326,7 +326,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres, en faisant attention à ne pas décaler d'un nombre négatif. Au pire, on décale de 1.
     6. La lettre n'est pas dans le motif : on se positionne juste après elle.
 
-#}
+
    
 Exemple d'utilisation :
 ```python
