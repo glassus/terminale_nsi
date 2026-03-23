@@ -26,7 +26,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14.\" 
         ```python linenums='1'
@@ -55,7 +55,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q15\" 
         Cet algorithme permet de faire des décalages intelligents si la lettre sur laquelle on est positionné fait partie ```seq```. Cela accélère considérablement la recherche par rapport à l'algorithme ```recherche_seq```. 
