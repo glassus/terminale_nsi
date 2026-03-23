@@ -106,7 +106,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Si ```programme_paradoxal``` termine, alors ```terminaison_inverse(programme_paradoxal)``` ne termine pas.
@@ -118,7 +118,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         La question 9. a abouti à une contradiction. Celle-ci est due à la non-existence de la fonction ```arret```.    
@@ -128,7 +128,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Cette impossibilité n'est pas due aux limitations du langage Python. Elle est générale, et a été démontrée en 1936 par Alan Turing sous le nom *Théorème de l'arrêt*.   
