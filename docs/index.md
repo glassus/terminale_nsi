@@ -12,8 +12,9 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Exerice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
+    - Exercice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
     - Grand Oral
+    - Retour sur [l'algorithme KNN](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
 
 
 
