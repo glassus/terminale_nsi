@@ -12,15 +12,17 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
-    - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
-    - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/) 
+    - Exerice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
+    - Grand Oral
 
 
 
 
 
 ### *Thèmes déjà traités*
+- [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
+- [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
+- [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/) 
 - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
 - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
 - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
