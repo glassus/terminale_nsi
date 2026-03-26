@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T6_Annales/corrections/2023/corr_sujet0_B/">
+        <link rel="canonical" href="https://glassus.github.io/terminale_nsi/T6_Annales/corrections/2024/24-NSIJ1ME_corr/">
       
       
-        <link rel="prev" href="../corr_sujet0_A/">
+        <link rel="prev" href="../24-NSIJ1G1_corr/">
       
       
-        <link rel="next" href="../../2024/24-NSIJ1G1_corr/">
+        <link rel="next" href="../../../../T7_Divers/Entrainement_CTF/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Correction du sujet 0 version B / 2023 - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
+        <title>24 NSIJ1ME corr - Terminale NSI - Lycée François Mauriac - Bordeaux</title>
       
     
     
@@ -105,11 +105,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#correction-du-sujet-0-version-b-2023" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -140,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Correction du sujet 0 version B / 2023
+              24 NSIJ1ME corr
             
           </span>
         </div>
@@ -4914,6 +4909,8 @@
   
 
 
+  <h1>24 NSIJ1ME corr</h1>
+
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
 <script src="https://glassus.github.io/terminale_nsi//js/sqlite_ide.js"></script>
@@ -4922,141 +4919,224 @@
 <link rel="stylesheet" href="https://glassus.github.io/terminale_nsi//css/sqlite_ide.css">
 <script>sqljs_base_path="https://glassus.github.io/terminale_nsi/"</script>
 
-<h1 id="correction-du-sujet-0-version-b-2023">Correction du sujet 0 version B / 2023<a class="headerlink" href="#correction-du-sujet-0-version-b-2023" title="Permanent link">⚓︎</a></h1>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../../../data/2023/2023-sujet_0-b.pdf" target="_blank">Sujet</a></p>
-<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
-<details class="tip">
-<summary>correction Q1.a.</summary>
-<p>Commande 1 : <code>cd /home/documents/collections/timbres</code> (chemin absolu)<br />
-Commande 2 : <code>cd ../collections/timbres</code> (chemin relatif)</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Le fait que la liste des prédécesseurs de s2 soit vide s'explique par le fait qu'aucun site ne pointe vers s2.</p>
 </details>
-<details class="tip">
-<summary>correction Q1.b.</summary>
-<p><code>cd /home/documents/collections/timbres</code></p>
-</details>
-<details class="tip">
-<summary>correction Q2.a.</summary>
-<p><span class="arithmatex">\(C = \dfrac{10^8}{100 \times 10^6} = 1\)</span></p>
-</details>
-<details class="tip">
-<summary>Correction Q2.b.</summary>
-<p><img alt="image" class="center" src="../data/sujet0B_1.png" />
-La route minimale est donc A-B-C-E-F-G (coût total de 1,04)</p>
-</details>
-<details class="tip">
-<summary>Correction Q3.</summary>
-<p>Les descripteurs de ce fichier sont :</p>
-<ul>
-<li><code>nom_timbre</code> (valeurs associées : <code>Gustave Eiffel</code>, <code>Marianne</code>, <code>Alan Turing</code>)</li>
-<li><code>annee_fabrication</code> (valeurs associées : <code>1950</code>, <code>1989</code>, <code>2012</code>)</li>
-<li><code>nom_collectionneur</code> (valeurs associées : <code>Dupont</code>, <code>Durand</code>)</li>
-</ul>
-</details>
-<details class="tip">
-<summary>Correction Q4.a.</summary>
-<p>Une clé primaire est attribut qui désigne de manière unique un enregistrement.</p>
-</details>
-<details class="tip">
-<summary>Correction Q4.b.</summary>
-<p>Non, car deux enregistrements possèdent le nom «Gustave Eiffel».</p>
-</details>
-<details class="tip">
-<summary>Correction Q4.c.</summary>
-<p>Non, car deux enregistrements ont pour année de fabrication 1989. <em>(merci Vincent)</em>  </p>
-</details>
-<details class="tip">
-<summary>Correction Q4.d.</summary>
-<p>On peut créer une clé primaire artificielle (un nombre entier), ou bien considérer le couple (<code>nom</code>, <code>annee_fabrication</code>) comme clé primaire.</p>
-</details>
-<details class="tip">
-<summary>Correction Q5.a.</summary>
-<p>Cette requête va modifier l'attribut <code>ref_licence</code> de Jean-Pierre Dupond ET de Alexandra, qui auront donc la même référence de licence <code>'Ythpswz'</code>.</p>
-</details>
-<details class="tip">
-<summary>Correction Q5.b.</summary>
-<p>L'attribut <code>ref_licence</code> ne peut plus être une clé primaire car deux enregistrements différents auront la même valeur pour cet attribut.</p>
-</details>
-<details class="tip">
-<summary>Correction Q6.</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nbre_timbres</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">collectionneurs</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">annee_naissance</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1963</span><span class="p">;</span>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="n">s4</span><span class="o">.</span><span class="n">predecesseurs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">s2</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">s5</span><span class="o">.</span><span class="n">predecesseurs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">s1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">s3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">s4</span><span class="p">,</span><span class="mi">6</span><span class="p">)]</span>
 </code></pre></div>
 </details>
-<h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
-<details class="tip">
-<summary>Correction Q1.a.</summary>
-<p>Une fonction récursive est une fonction qui fait appel à elle-même dans sa propre définition.</p>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><code>s2.successeurs[1][1]</code> vaut 5 et signifie que s2 a 5 liens qui pointent vers s3.</p>
 </details>
-<details class="tip">
-<summary>Correction Q1.b.</summary>
-<p>Lors du premier appel de la fonction, le paramètre <code>n</code> vaut 3. Lors des appels récursifs, ce paramètre va décroître à 2, 1 puis 0 puisque l'appel se fait sous condition que <code>n &gt;= 0</code>. Le dernier appel se fait avec la valeur <code>n = -1</code>. Lors de l'exécution de <code>compte_rebours(n-1)</code>, rien ne se passe. La dernière valeur affichée est donc 0.   </p>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Le site 1 a une popularité de 6. En effet le site 2 apporte 4 liens et le site 4 apporte 2 liens.</p>
 </details>
-<details class="tip">
-<summary>Correction Q2.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; renvoie le produit des nombres entiers</span>
-<span class="sd">    strictement positifs inférieurs à n &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+<details class="success">
+<summary>Correction Q5</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calculPopularite</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">popularite</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">cpl</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">predecesseurs</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">cpl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">popularite</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<p>Le fait d'enlever un élément en tête de liste et d'en rajouter en fin de liste est caractéristique d'une file. </p>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<p>Ce parcours est un parcours en largeur.</p>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<p><code>parcoursGraphe(s1)</code> renverra la liste <code>[s1, s3, s4, s5]</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lePlusPopulaire</span><span class="p">(</span><span class="n">listeSites</span><span class="p">):</span>
+    <span class="n">maxPopularite</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">siteLePlusPopulaire</span><span class="o">=</span><span class="n">listeSites</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">listeSites</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">site</span><span class="o">.</span><span class="n">popularite</span> <span class="o">&gt;</span> <span class="n">maxPopularite</span><span class="p">:</span>
+            <span class="n">maxPopularite</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">popularite</span>
+            <span class="n">siteLePlusPopulaire</span> <span class="o">=</span> <span class="n">site</span>
+    <span class="k">return</span> <span class="n">siteLePlusPopulaire</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<p>La ligne de code <code>lePlusPopulaire(parcoursGraphe(s1)).nom</code> renvoie <code>'site3'</code> car le site 3 est le plus populaire parmi tous les sites visités lors du parcours en largeur depuis le site1. </p>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<p>Ce code n'est pas adapté à un très grand nombre de sites car le graphe deviendrait vite très lourd à manipuler, notamment pour le parcours en largeur.</p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Un SGBD assure l'intégrité de la base de données et évite (par exemple) la redondance des données. </p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p>Suivant le protocole RIP, la route suivie serait Bureau n°1 - B - E - A - Prestataire. </p>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>Suivant le protocole OSPF, les deux routes possibles seraient Bureau n°2 - C - I - G - F - D - A - Prestataire et Bureau n°2 - C - I - H - F - D - A - Prestataire, pour un coût équivalent de 2,3.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>L'attribut <code>id_client</code> a été choisi comme clé primaire de la relation <code>clients</code> car il authentifie de manière unique chaque client.    </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<p>Une clé étrangère est une clé primaire d'une autre table. </p>
+<p>Dans la table <code>reservations</code>, <code>id_client</code> est une clé étrangère faisant référence à la clé primaire <code>id_client</code> de la table <code>clients</code>. Toujours dans la table <code>reservations</code>, <code>nom_croisiere</code> est une clé étrangère faisant référence à la clé primaire <code>nom</code> de la table <code>croisieres</code>.</p>
+<p>Dans la table <code>croisieres</code>, les atttributs <code>escale_1</code>, <code>escale_2</code>, <code>escale_3</code> et <code>escale_4</code> sont des clés étrangères faisant référence à la clé primaire <code>nom</code> de la table <code>villes</code>.</p>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<p>Le nom des escales 'Puerto sebo', 'Puerto kifecho', 'Puerto kifebo' et 'Puerto repo' n'existent pas dans la table <code>villes</code>. Or cela est nécessaire car ces attributs sont des clés étrangères. Il faut donc d'abord rentrer ces villes dans la table <code>villes</code> avant d'exécuter le code donné.</p>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<p>La première requête sert à récupérer l'identifiant de Jean Barc, qui est sans doute 1243. La deuxième requête sert à récupérer les identifiants de toutes les réservations de Jean Barc.    </p>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id_reservation</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">reservations</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">id_client</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Barc&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jean&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">date_naissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1972/06/29&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Allemagne&#39;</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">reservations</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">nom_croisiere</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Croisiere Puerto&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">id_reservation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20456</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">date_naissance</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">clients</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">reservations</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">id_client</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">nom_croisiere</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Croisiere Piano&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Croisiere Puerto&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="n">chien40</span> <span class="o">=</span> <span class="n">Chien</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;Duke&#39;</span><span class="p">,</span> <span class="s1">&#39;wheel dog&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">changer_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_role</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="n">nouveau_role</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<div class="highlight"><pre><span></span><code><span class="n">chien40</span><span class="o">.</span><span class="n">changer_role</span><span class="p">(</span><span class="s1">&#39;leader&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">retirer_chien</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numero</span><span class="p">):</span>
+    <span class="n">nouvelle_liste</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">chien</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">chien</span><span class="o">.</span><span class="n">id_chien</span> <span class="o">!=</span> <span class="n">numero</span><span class="p">:</span>
+            <span class="n">nouvelle_liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chien</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">liste_chiens</span> <span class="o">=</span> <span class="n">nouvelle_liste</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<div class="highlight"><pre><span></span><code><span class="n">eq11</span><span class="o">.</span><span class="n">retirer_chien</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q6</summary>
+<p><code>convert('4h36')</code> va renvoyer le nombre <code>4.6</code> </p>
+</details>
+<details class="success">
+<summary>Correction Q7</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">temps_course</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">temps</span> <span class="ow">in</span> <span class="n">equipe</span><span class="o">.</span><span class="n">liste_temps</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">convert</span><span class="p">(</span><span class="n">temps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q8</summary>
+<p><img alt="image" class="center autolight" src="../data/exo3.png" /></p>
+</details>
+<details class="success">
+<summary>Correction Q9</summary>
+<p>C'est un parcours infixe.</p>
+</details>
+<details class="success">
+<summary>Correction Q10</summary>
+<p>La fonction <code>inserer</code> est récursive car elle s'appelle elle-même dans sa propre définition.    </p>
+</details>
+<details class="success">
+<summary>Correction Q11</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">inserer</span><span class="p">(</span><span class="n">arb</span><span class="p">,</span> <span class="n">eq</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">convert</span><span class="p">(</span><span class="n">eq</span><span class="o">.</span><span class="n">temps_etape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">convert</span><span class="p">(</span><span class="n">arb</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">temps_etape</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">arb</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">arb</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">inserer</span><span class="p">(</span><span class="n">arb</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">eq</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">arb</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">arb</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">inserer</span><span class="p">(</span><span class="n">arb</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">eq</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q12</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_gagnante</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arbre</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">nom_equipe</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+        <span class="k">return</span> <span class="n">est_gagnante</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">)</span>
+</code></pre></div>
 </details>
-<details class="tip">
-<summary>Correction Q3.a.</summary>
-<p>L'affichage en console sera :
-<div class="highlight"><pre><span></span><code><span class="mi">3</span>
-<span class="mi">2</span>
-<span class="mi">1</span>
-</code></pre></div></p>
+<details class="success">
+<summary>Correction Q13</summary>
+<p><img alt="image" class="center autolight" src="../data/exo3b.png" /></p>
 </details>
-<details class="tip">
-<summary>Correction Q3.b.</summary>
-<p>La variable <code>res</code> contiendra la valeur 6.</p>
+<details class="success">
+<summary>Correction Q14</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rechercher</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">equipe</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">racine</span> <span class="o">==</span> <span class="n">equipe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">convert</span><span class="p">(</span><span class="n">equipe</span><span class="o">.</span><span class="n">temps_etape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">convert</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">temps_etape</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">rechercher</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="p">,</span> <span class="n">equipe</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">rechercher</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">droit</span><span class="p">,</span> <span class="n">equipe</span><span class="p">)</span>
+</code></pre></div>
 </details>
-<details class="tip">
-<summary>Correction Q4.</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">somme_entiers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">somme</span> <span class="o">+=</span> <span class="n">nb</span>
-    <span class="k">return</span> <span class="n">somme</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
-<details class="tip">
-<summary>Correction Q1.a.</summary>
-<p>Exemple d'attribut : <code>valeur</code><br />
-Exemple de méthode : <code>get_valeur</code></p>
-</details>
-<details class="tip">
-<summary>Correction Q1.b</summary>
-<p>Après exécution, <code>a</code> vaut 15 et <code>b</code> vaut 6. </p>
-</details>
-<details class="tip">
-<summary>Correction Q2.</summary>
-<p><img alt="image" class="center" src="../data/sujet0B_2.png" /></p>
-</details>
-<details class="tip">
-<summary>Correction Q3.</summary>
-<p>Ce n'est pas un ABR car la valeur 13 est censée être plus petite que la valeur 12.
-<img alt="image" class="center" src="../data/sujet0B_3.png" /></p>
-</details>
-<details class="tip">
-<summary>Correction Q4.</summary>
-<p>La liste renvoyée est <code>[1, 6, 10, 15, 16, 18, 16, 25]</code>. </p>
-</details>
+</div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
 
@@ -5079,7 +5159,7 @@ Exemple de méthode : <code>get_valeur</code></p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="8 mars 2023 15:49:42 UTC">8 mars 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 mars 2026 15:22:28 UTC">26 mars 2026</span>
   </span>
 
     
