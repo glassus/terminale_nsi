@@ -21,11 +21,11 @@
 ## 2024
 - [Septembre Métropole J1](data/2024/24-NSIJ1ME3.pdf)
 - [Septembre Métropole J2](data/2024/24-NSIJ2ME3.pdf)
-- [Métropole J1](data/2024/24-NSIJ1ME.pdf)
+- [Métropole J1](data/2024/24-NSIJ1ME.pdf) :arrow_right: [correction](../corrections/2024/24-NSIJ1ME_corr/){. target="_blank"}
 - [Métropole J2](data/2024/24-NSIJ2ME1.pdf)
 - [Asie J1](data/2024/24-NSIJ1JA1.pdf)
 - [Asie J2](data/2024/24-NSIJ2JA1.pdf)
-- [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf)
+- [Centres Étrangers J1](data/2024/24-NSIJ1G1.pdf):arrow_right: [correction](../corrections/2024/24-NSIJ1G1_corr/){. target="_blank"}
 - [Centres Étrangers J2](data/2024/24-NSIJ2G1.pdf)
 - [Amérique du Nord J1](data/2024/24-NSIJ1AN1.pdf)
 - [Amérique du Nord J2](data/2024/24-NSIJ2AN1.pdf)
