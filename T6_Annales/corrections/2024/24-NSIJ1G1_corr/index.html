@@ -4919,197 +4919,15 @@
 <link rel="stylesheet" href="https://glassus.github.io/terminale_nsi//css/sqlite_ide.css">
 <script>sqljs_base_path="https://glassus.github.io/terminale_nsi/"</script>
 
+<p><a class="" href="../../../data/2024/24-NSIJ1G1.pdf" target="_blank">sujet</a></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
-<details class="success">
-<summary>Correction Q1</summary>
-<div class="highlight"><pre><span></span><code><span class="n">voisins</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<p><img alt="image" class="center autolight" src="../data/exo1.png" /></p>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<div class="highlight"><pre><span></span><code><span class="n">voisins</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q4</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">voisin_alea</span><span class="p">(</span><span class="n">voisins</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-    <span class="n">alea</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">voisins</span><span class="p">[</span><span class="n">s</span><span class="p">]))</span>
-    <span class="k">return</span> <span class="n">voisins</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">alea</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q5</summary>
-<p>La fonction <code>marche_alea</code> s'appelle elle-même dans sa propre définition, elle est donc récursive.</p>
-</details>
-<details class="success">
-<summary>Correction Q6</summary>
-<p>Cette fonction modélise la propagation aléatoire du virus. Elle renvoie le dernier ordinateur infecté.</p>
-</details>
-<details class="success">
-<summary>Correction Q7</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">simule</span><span class="p">(</span><span class="n">voisins</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n_tests</span><span class="p">,</span> <span class="n">n_pas</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span> <span class="p">(</span><span class="n">voisins</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">n_tests</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="n">j</span> <span class="o">=</span> <span class="n">marche_alea</span><span class="p">(</span><span class="n">voisins</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n_pas</span><span class="p">)</span>
-        <span class="n">results</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">n_tests</span> <span class="o">=</span> <span class="n">n_tests</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="o">/</span><span class="n">n_tests</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q8</summary>
-<p>C'est l'ordinateur 0 qui semble avoir la plus grande probabilité d'être infecté. C'est donc lui qu'il faut protéger. </p>
-</details>
-<details class="success">
-<summary>Correction Q9</summary>
-<p>On peut par exemple effectuer un parcours en largeur et compter le nombre d'étapes nécessaires pour visiter tous les ordinateurs du réseau. </p>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<details class="success">
-<summary>Correction Q1</summary>
-<p>Le masque équivalent au /16 est 255.255.0.0       </p>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<p>L'adresse de réseau de L2 est 172.16.0.0      </p>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<p>L'adresse de diffusion de L2 est 172.16.255.255      </p>
-</details>
-<details class="success">
-<summary>Correction Q4</summary>
-<p>Le nombre de machines pouvant être connectées est <span class="arithmatex">\(256^2-2=65534\)</span>. (il faut enlever l'adresse du réseau et l'adresse de diffusion)       </p>
-</details>
-<details class="success">
-<summary>Correction Q5</summary>
-<p>Le chemin est L1 - A - H - D - L2.    </p>
-</details>
-<details class="success">
-<summary>Correction Q6</summary>
-<p>Suivant le protocole RIP, les deux trajets possibles sont L1 - A - H - C - D - L2 ou L1 - A - B - C - D - L2.    </p>
-</details>
-<details class="success">
-<summary>Correction Q7</summary>
-<p>Si on choisit le trajet L1 - A - H - C - D - L2, il faut modifier la table de routage du routeur H. Il faut lui indiquer l'adresse <code>53.10.10.10</code> en passerelle et l'adresse <code>53.10.10.9</code> en interface.</p>
-<p>Si on choisit le trajet L1 - A - B - C - D - L2, il faut modifier la table de routage du routeur A. Il faut lui indiquer l'adresse <code>193.55.24.2</code> en passerelle et l'adresse <code>193.55.24.2</code> en interface.   </p>
-</details>
-<details class="success">
-<summary>Correction Q8</summary>
-<ul>
-<li>Pour 1 Gbit/s, <span class="arithmatex">\(c=\frac{10^9}{10^9}=1\)</span></li>
-<li>Pour 10 Gbit/s, <span class="arithmatex">\(c=\frac{10^9}{10^{10}}=0,1\)</span></li>
-<li>Pour 100 Mbit/s, <span class="arithmatex">\(c=\frac{10^9}{10^8}=10\)</span></li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q9</summary>
-<p>Avec le protocole OSPF, le meilleur chemin est L1 - A - G - F - E - D - L2, pour un coût total de 1,3. </p>
-</details>
-<details class="success">
-<summary>Correction Q10</summary>
-<p>Le nouveau chemin est L1 - A - H - F - E - D - L2, pour un coût total de 2,2.</p>
-</details>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<details class="success">
-<summary>Correction Q1</summary>
-<p>Utiliser une base de données relationnelle permet de garantir l'intégrité de la base, et d'éviter (par exemple) les doublons.</p>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<p>Pour être utilisé comme clé primaire, un attribut doit identifier de manière unique l'enregistrement auquel il fait référence.    </p>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<p>La clé étrangère <code>id_client</code> permet de relier la table <code>Reservation</code> à la table <code>Client</code>. La clé étrangère <code>id_emplacement</code> permet de relier la table <code>Reservation</code> à la table <code>Emplacement</code>.  </p>
-</details>
-<details class="success">
-<summary>Correction Q4</summary>
-<p>Emplacement(<ins>id_emplacement</ins>:INT, nom:STRING, localisation:STRING, tarif_journalier:INT)   </p>
-</details>
-<details class="success">
-<summary>Correction Q5</summary>
-<div class="highlight"><pre><span></span><code><span class="mi">1</span> <span class="n">myrtille</span> <span class="n">A4</span>
-<span class="mi">4</span> <span class="n">mandarine</span> <span class="n">B1</span>
-<span class="mi">6</span> <span class="n">melon</span> <span class="n">A2</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q6</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Client</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Strasbourg&#39;</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q7</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Client</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;CODD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Edgar&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;28 rue des Capucines&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lyon&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;0555555555&#39;</span><span class="p">)</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q8</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Client</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">Client</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">nombre_personne</span><span class="p">,</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">date_arrivee</span><span class="p">,</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">date_depart</span><span class="p">,</span><span class="w"> </span><span class="n">Emplacement</span><span class="p">.</span><span class="n">tarif_journalier</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Reservation</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Client</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Client</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">id_client</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">Emplacement</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Emplacement</span><span class="p">.</span><span class="n">id_emplacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">id_emplacement</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">id_reservation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q9</summary>
-<p>Le terme <code>self</code> est utilisé pour signifier l'objet en cours de construction dans la méthode constructeur et les différentes méthodes. </p>
-</details>
-<details class="success">
-<summary>Correction Q10</summary>
-<div class="highlight"><pre><span></span><code><span class="n">client01</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s1">&#39;CODD&#39;</span><span class="p">,</span> <span class="s1">&#39;Edgar&#39;</span><span class="p">,</span> <span class="s1">&#39;28 rue des Capucines&#39;</span><span class="p">,</span> <span class="s1">&#39;Lyon&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;0555555555&#39;</span><span class="p">)</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q11</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">montant_a_regler</span><span class="p">(</span><span class="n">triplet</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie le montant en euros a regler pour cette reservation &#39;&#39;&#39;</span>
-    <span class="n">client</span><span class="p">,</span> <span class="n">reservation</span><span class="p">,</span> <span class="n">emplacement</span> <span class="o">=</span> <span class="n">triplet</span>
-    <span class="k">return</span> <span class="n">emplacement</span><span class="o">.</span><span class="n">tarif_journalier</span><span class="o">*</span><span class="n">reservation</span><span class="o">.</span><span class="n">nb_jours</span><span class="p">()</span> <span class="o">+</span> <span class="n">reservation</span><span class="o">.</span><span class="n">nombre_personne</span><span class="o">*</span><span class="mf">2.2</span><span class="o">*</span><span class="n">reservation</span><span class="o">.</span><span class="n">nb_jours</span><span class="p">()</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q12</summary>
-<p>La variable <code>annee</code> est de type <code>String</code>. Or à la ligne 25 on essaie de faire une comparaison de cette variable avec les nombres 2018 et 2024. Cela va provoquer une erreur.    </p>
-</details>
-<details class="success">
-<summary>Correction Q13</summary>
-<p>Il suffit, à la ligne 25, de remplacer <code>annee</code> par <code>int(annee)</code>.   </p>
-</details>
-<details class="success">
-<summary>Correction Q14</summary>
-<p>Vérification des mois :
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">mois</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">calendrier</span><span class="p">:</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></p>
-<p>Vérification du numéro :
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">que_des_chiffres</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
-    <span class="k">return</span> <span class="kc">False</span>
-</code></pre></div></p>
-</details>
-</div>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5133,7 +4951,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 mars 2026 15:22:28 UTC">26 mars 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 mars 2026 10:31:06 UTC">27 mars 2026</span>
   </span>
 
     
