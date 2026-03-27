@@ -4933,9 +4933,120 @@
 <script>sqljs_base_path="https://glassus.github.io/terminale_nsi/"</script>
 
 <h1 id="epreuve-pratique-bns-2026">Épreuve Pratique BNS 2026<a class="headerlink" href="#epreuve-pratique-bns-2026" title="Permanent link">⚓︎</a></h1>
-<p>Vous pouvez retrouver ici les 3 sujets 0 publiés le 08/10/2025.</p>
+<p>Vous pouvez retrouver ici les sujets  publiés le 26/03/2026.</p>
 <div class="admonition example">
 <p class="admonition-title">Sujet 1</p>
+<ul>
+<li><a class="" href="../data/EP_sujets0_3/EP-BAC-NSI-Sujet3.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data/EP_sujets0_3/rle.py" target="_blank">rle.py</a></li>
+<li><a class="" href="../data/EP_sujets0_3/bac_nsi_32.png" target="_blank">bac_nsi_32.png</a></li>
+<li><a class="" href="../data/EP_sujets0_3/bac_nsi_256.png" target="_blank">bac_nsi_256.png</a></li>
+</ul>
+<details class="success">
+<summary>Correction <strong>Q1</strong></summary>
+<p>Si la liste originale est <code>[3, 5, 0, 6]</code>, la liste obtenue par codage RLE est <code>[1, 3, 1, 5, 1, 0, 1, 6]</code>, qui est 2 fois plus longue. Donc non, la liste obtenue par codage RLE n'est pas forcément de longueur inférieure ou égale.  </p>
+</details>
+<details class="success">
+<summary>Correction <strong>Q2</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decodage_rle</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la liste d&#39;octets obtenue à partir de la liste liste_rle obtenue</span>
+<span class="sd">    par compression RLE&#39;&#39;&#39;</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q3</strong></summary>
+<p>On constate que, si tout se passe bien pour l'image <code>bac_nsi_32.png</code>, l'image <code>bac_nsi_256.png.dec.png</code> obtenue après encodage/décodage de l'image <code>bac_nsi_256.png</code> présente un décalage de l'écriture.</p>
+</details>
+<details class="success">
+<summary>Correction <strong>Q4</strong></summary>
+<p>Il faut modifier la fonction <code>codage_rle</code> pour faire en sorte qu'elle prenne en compte les valeurs dont le nombre dépasse 255. Il suffit de faire plusieurs «paquets» de 255 de cette valeur.
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">codage_rle</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie une liste d&#39;octets obtenue par compression RLE&#39;&#39;&#39;</span>
+    <span class="n">liste_rle</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">liste_octets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">)</span> <span class="ow">and</span> <span class="n">liste_octets</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span>
+            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">k</span> <span class="o">//</span> <span class="mi">255</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">255</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="n">k</span>
+    <span class="k">return</span> <span class="n">liste_rle</span>
+</code></pre></div></p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Sujet 2</p>
+<ul>
+<li><a class="" href="../data/EP_sujets0_2/EP-BAC-NSI-Sujet2.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data/EP_sujets0_2/analyse.py" target="_blank">analyse.py</a></li>
+<li><a class="" href="../data/EP_sujets0_2/donnees.py" target="_blank">donnees.py</a></li>
+<li><a class="" href="../data/EP_sujets0_2/donnees_completes.py" target="_blank">donnees_completes.py</a></li>
+</ul>
+<details class="success">
+<summary>Correction <strong>Q1</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="n">champ</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le salaire moyen des employes ayant val comme valeur associée</span>
+<span class="sd">    au champ donné en argument.</span>
+<span class="sd">    Si le nombre d&#39;employés considéré est nul, cette fonction renvoie None&#39;&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="n">champ</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;salaire&#39;</span><span class="p">]</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">/</span><span class="n">n</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q2</strong></summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+    <span class="n">nf</span><span class="p">,</span> <span class="n">nh</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;sexe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span>
+            <span class="n">nf</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nh</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="n">nf</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="n">nh</span><span class="p">}</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction <strong>Q3</strong></summary>
+<ul>
+<li>Le calcul de <code>moy_f</code> va renvoyer une erreur car <code>employes</code> est mis entre guillements.</li>
+<li>De plus, le calcul final est faux puisqu'il fait simplement la différence entre <code>moy_h</code> et <code>moy_f</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;écart de salaire en pourcentage pour les femmes </span>
+<span class="sd">    par rapport aux hommes&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">moy_h</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
+    <span class="n">moy_f</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">moy_h</span> <span class="o">-</span> <span class="n">moy_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">moy_h</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_calcul_ecart_sexe</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">([{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;salaire&#39;</span><span class="p">:</span> <span class="mi">2400</span><span class="p">}])</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Sujet 3</p>
 <ul>
 <li><a class="" href="../data/EP_sujets0_1/EP-BAC-NSI-Sujet1.pdf" target="_blank">Sujet</a></li>
 <li><a class="" href="../data/EP_sujets0_1/cycle_menstruel.py" target="_blank">cycle_menstruel.py</a></li>
@@ -5005,115 +5116,155 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
 </details>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Sujet 2</p>
+<p class="admonition-title">sujet 4</p>
 <ul>
-<li><a class="" href="../data/EP_sujets0_2/EP-BAC-NSI-Sujet2.pdf" target="_blank">Sujet</a></li>
-<li><a class="" href="../data/EP_sujets0_2/analyse.py" target="_blank">analyse.py</a></li>
-<li><a class="" href="../data/EP_sujets0_2/donnees.py" target="_blank">donnees.py</a></li>
-<li><a class="" href="../data/EP_sujets0_2/donnees_completes.py" target="_blank">donnees_completes.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_4/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_4/culture.py" target="_blank">culture.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_4/plantes.py" target="_blank">plantes.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_4/mesures.py" target="_blank">mesures.py</a></li>
 </ul>
-<details class="success">
-<summary>Correction <strong>Q1</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="n">champ</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie le salaire moyen des employes ayant val comme valeur associée</span>
-<span class="sd">    au champ donné en argument.</span>
-<span class="sd">    Si le nombre d&#39;employés considéré est nul, cette fonction renvoie None&#39;&#39;&#39;</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="n">champ</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;salaire&#39;</span><span class="p">]</span>
-            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="k">return</span> <span class="n">s</span><span class="o">/</span><span class="n">n</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction <strong>Q2</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
-    <span class="n">nf</span><span class="p">,</span> <span class="n">nh</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">employe</span> <span class="ow">in</span> <span class="n">employes</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">employe</span><span class="p">[</span><span class="s1">&#39;sexe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span>
-            <span class="n">nf</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">nh</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="n">nf</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span><span class="n">nh</span><span class="p">}</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction <strong>Q3</strong></summary>
-<ul>
-<li>Le calcul de <code>moy_f</code> va renvoyer une erreur car <code>employes</code> est mis entre guillements.</li>
-<li>De plus, le calcul final est faux puisqu'il fait simplement la différence entre <code>moy_h</code> et <code>moy_f</code>.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;écart de salaire en pourcentage pour les femmes </span>
-<span class="sd">    par rapport aux hommes&#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">moy_h</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
-    <span class="n">moy_f</span> <span class="o">=</span> <span class="n">salaire_moyen_condition</span><span class="p">(</span><span class="n">employes</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">moy_h</span> <span class="o">-</span> <span class="n">moy_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">moy_h</span> <span class="o">*</span> <span class="mi">100</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">test_calcul_ecart_sexe</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">([{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;salaire&#39;</span><span class="p">:</span> <span class="mi">2400</span><span class="p">}])</span> <span class="o">==</span> <span class="kc">None</span>
-    <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Sujet 3</p>
+<p class="admonition-title">sujet 5</p>
 <ul>
-<li><a class="" href="../data/EP_sujets0_3/EP-BAC-NSI-Sujet3.pdf" target="_blank">Sujet</a></li>
-<li><a class="" href="../data/EP_sujets0_3/rle.py" target="_blank">rle.py</a></li>
-<li><a class="" href="../data/EP_sujets0_3/bac_nsi_32.png" target="_blank">bac_nsi_32.png</a></li>
-<li><a class="" href="../data/EP_sujets0_3/bac_nsi_256.png" target="_blank">bac_nsi_256.png</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_5/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_5/empreinte.py" target="_blank">empreinte.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_5/empreinte_ada.json" target="_blank">empreinte_ada.json</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_5/empreinte_ada_agr.json" target="_blank">empreinte_ada_agr.json</a></li>
 </ul>
-<details class="success">
-<summary>Correction <strong>Q1</strong></summary>
-<p>Si la liste originale est <code>[3, 5, 0, 6]</code>, la liste obtenue par codage RLE est <code>[1, 3, 1, 5, 1, 0, 1, 6]</code>, qui est 2 fois plus longue. Donc non, la liste obtenue par codage RLE n'est pas forcément de longueur inférieure ou égale.  </p>
-</details>
-<details class="success">
-<summary>Correction <strong>Q2</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decodage_rle</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la liste d&#39;octets obtenue à partir de la liste liste_rle obtenue</span>
-<span class="sd">    par compression RLE&#39;&#39;&#39;</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
-            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">lst</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction <strong>Q3</strong></summary>
-<p>On constate que, si tout se passe bien pour l'image <code>bac_nsi_32.png</code>, l'image <code>bac_nsi_256.png.dec.png</code> obtenue après encodage/décodage de l'image <code>bac_nsi_256.png</code> présente un décalage de l'écriture.</p>
-</details>
-<details class="success">
-<summary>Correction <strong>Q4</strong></summary>
-<p>Il faut modifier la fonction <code>codage_rle</code> pour faire en sorte qu'elle prenne en compte les valeurs dont le nombre dépasse 255. Il suffit de faire plusieurs «paquets» de 255 de cette valeur.
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">codage_rle</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie une liste d&#39;octets obtenue par compression RLE&#39;&#39;&#39;</span>
-    <span class="n">liste_rle</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">):</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">liste_octets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">while</span> <span class="n">i</span><span class="o">+</span><span class="n">k</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_octets</span><span class="p">)</span> <span class="ow">and</span> <span class="n">liste_octets</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span>
-            <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">q</span> <span class="o">=</span> <span class="n">k</span> <span class="o">//</span> <span class="mi">255</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">255</span>
-        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
-            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
-            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-            <span class="n">liste_rle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="n">k</span>
-    <span class="k">return</span> <span class="n">liste_rle</span>
-</code></pre></div></p>
-</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 6</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_6/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_6/smoothie.py" target="_blank">smoothie.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 7</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_7/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_7/coccinnelles.py" target="_blank">coccinnelles.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 8</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_8/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_8/addition_BCD.py" target="_blank">addition_BCD.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 9</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_9/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_9/Face.py" target="_blank">Face.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_9/Objet3D.py" target="_blank">Objet3D.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_9/Sommet.py" target="_blank">Sommet.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_9/main.py" target="_blank">main.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 10</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_10/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_10/analyse_eau.py" target="_blank">analyse_eau.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 11</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_11/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_11/donnees_habitats.py" target="_blank">donnees_habitats.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_11/prediction_habitat.py" target="_blank">prediction_habitat.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 12</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_12/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_12/gestion_refuge.py" target="_blank">gestion_refuge.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_12/donnees_renards.csv" target="_blank">donnees_renards.csv</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 13</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_13/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_13/etude_climatique.py" target="_blank">etude_climatique.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_13/releves_ballon_sonde.csv" target="_blank">releves_ballon_sonde.csv</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 14</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_14/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_14/IHM_evacuation.py" target="_blank">IHM_evacuation.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_14/simulation_evacuation.py" target="_blank">simulation_evacuation.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 16</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_16/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_16/warming_stripes.py" target="_blank">warming_stripes.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_16/datas.csv" target="_blank">datas.csv</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_16/warming_stripes.png" target="_blank">warming_stripes.png</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 17</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_17/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_17/analyse_budget.py" target="_blank">analyse_budget.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_17/budget_complet.csv" target="_blank">budget_complet.csv</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 18</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_18/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_18/analyse_temperatures_polynesie.py" target="_blank">analyse_temperatures_polynesie.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 19</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_19/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_19/donnees.py" target="_blank">donnees.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_19/gestion_eau.py" target="_blank">gestion_eau.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 20</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_20/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_20/code_empreinte.py" target="_blank">code_empreinte.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 21</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_21/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_21/cartes.py" target="_blank">cartes.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 22</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_22/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_22/ascii.py" target="_blank">ascii.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_22/qrcode.py" target="_blank">qrcode.py</a></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">sujet 23</p>
+<ul>
+<li><a class="" href="../data2026/26_BCG_NSI_23/sujet.pdf" target="_blank">Sujet</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_23/analyse.py" target="_blank">analyse.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_23/transmission.py" target="_blank">transmission.py</a></li>
+<li><a class="" href="../data2026/26_BCG_NSI_23/data.txt" target="_blank">data.txt</a></li>
+</ul>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -5137,7 +5288,7 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 mars 2026 10:20:51 UTC">25 mars 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 mars 2026 10:03:36 UTC">27 mars 2026</span>
   </span>
 
     
