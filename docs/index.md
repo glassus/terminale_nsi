@@ -1,7 +1,7 @@
 
 
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"
-    - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
+    - Les sujets ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 
 !!! tip "Grand Oral"
@@ -12,8 +12,6 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Exercice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
-    - Grand Oral
     - Retour sur [l'algorithme KNN](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
 
 
@@ -21,6 +19,7 @@
 
 
 ### *Thèmes déjà traités*
+- Exercice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
 - [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
 - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
 - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/) 

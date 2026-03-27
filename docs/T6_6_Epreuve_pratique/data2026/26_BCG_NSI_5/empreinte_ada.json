@@ -1,0 +1,44 @@
+{
+    "Logement": {
+        "Energie": {
+            "Electricité": 206,
+            "Cuisson": 105,
+            "Chauffage individuel": 1500
+        },
+        "Construction": 650,
+        "Location": 37,
+        "Ameublement": 162
+    },
+    "Alimentation": {
+        "Repas": {
+            "Viande": {
+                "Blanche": 296,
+                "Rouge": 814
+            },
+            "Autre": 97
+        },
+        "Déchets": 152,
+        "Boisson": 141
+    },
+    "Transport": {
+        "Voiture": 563,
+        "Avion": 92,
+        "En commun": 29,
+        "Vélo": 10,
+        "Train": 14
+    },
+    "Consommation": {
+        "Textile": 418,
+        "Loisirs": 168,
+        "Produits manufacturés neufs": 121,
+        "Electronique": {
+            "Electroménager": 70,
+            "Numérique": 90
+        },
+        "Consommables": 26
+    },
+    "Services sociétaux": {
+        "Public": 1300,
+        "Marchand": 191
+    }
+}
