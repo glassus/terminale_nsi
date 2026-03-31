@@ -4956,6 +4956,13 @@
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
             <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_rle</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">lst</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_codage</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">codage_rle</span><span class="p">([</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">decodage_rle</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">255</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">decodage_rle</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">85</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">decodage_rle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">128</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">decodage_rle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5030,7 +5037,7 @@
 <li>Le calcul de <code>moy_f</code> va renvoyer une erreur car <code>employes</code> est mis entre guillements.</li>
 <li>De plus, le calcul final est faux puisqu'il fait simplement la différence entre <code>moy_h</code> et <code>moy_f</code>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">calcul_ecart_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;écart de salaire en pourcentage pour les femmes </span>
 <span class="sd">    par rapport aux hommes&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">effectif_par_sexe</span><span class="p">(</span><span class="n">employes</span><span class="p">)[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -5043,6 +5050,24 @@
     <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">([{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;salaire&#39;</span><span class="p">:</span> <span class="mi">2400</span><span class="p">}])</span> <span class="o">==</span> <span class="kc">None</span>
     <span class="k">assert</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">calcul_ecart_sexe</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">employes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span>
 </code></pre></div>
+Avec les données complètes, cet écart est d'environ 8,6%.</p>
+</details>
+<details class="success">
+<summary>Correction <strong>Q4</strong></summary>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">salaire_par_proximite</span><span class="p">(</span><span class="n">donnees_completes</span><span class="o">.</span><span class="n">employes</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">})</span>
+<span class="mf">2229.6666666666665</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">salaire_par_proximite</span><span class="p">(</span><span class="n">donnees_completes</span><span class="o">.</span><span class="n">employes</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;experience&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;etudes&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;sexe&#39;</span><span class="p">:</span> <span class="s1">&#39;M&#39;</span><span class="p">})</span>
+<span class="mf">2406.0</span>
+</code></pre></div>
+Il y a un problème dans le code dans le calcul de la distance. En effet, si deux personnes sont de sexe différent, leur distance sera augmentée de 4 par rapport à si elles étaient de même sexe. Ceci n'a pas de raison d'être alors qu'on cherche justement à mesurer les écarts selon le sexe.</p>
+<p>Une bonne fonction <code>distance</code>  serait donc :
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie la mesure de distance entre deux personnes.&#39;&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="p">(</span><span class="n">e1</span><span class="p">[</span><span class="s1">&#39;experience&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e2</span><span class="p">[</span><span class="s1">&#39;experience&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="p">(</span><span class="n">e1</span><span class="p">[</span><span class="s1">&#39;etudes&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e2</span><span class="p">[</span><span class="s1">&#39;etudes&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></p>
 </details>
 </div>
 <div class="admonition example">
@@ -5123,6 +5148,68 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
 <li><a class="" href="../data2026/26_BCG_NSI_4/plantes.py" target="_blank">plantes.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_4/mesures.py" target="_blank">mesures.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">croissance_moyenne</span><span class="p">(</span><span class="n">plantes</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">plantes</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">plante</span> <span class="ow">in</span> <span class="n">plantes</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">plante</span><span class="o">.</span><span class="n">croissance</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">plantes</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_croissance_moyenne</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">croissance_moyenne</span><span class="p">([])</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">croissance_moyenne</span><span class="p">(</span><span class="n">plantes</span><span class="p">)</span> <span class="o">==</span> <span class="mf">79.0</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dictionnaire_mesure</span><span class="p">(</span><span class="n">plantes</span><span class="p">,</span> <span class="n">mesures</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mesures</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;plante&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;plante&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;plante&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">plantes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">nom</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">nom</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>            
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_dictionnaire_mesure</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">dictionnaire_mesure</span><span class="p">(</span><span class="n">plantes</span><span class="p">,</span> <span class="n">mesures</span><span class="p">)[</span><span class="s1">&#39;Fougère&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>Le problème vient de l'instruction <code>remove</code> qui est utilisée dans la boucle et qui modifie la liste en cours de parcours.</p>
+<p>Par exemple, le code :
+<div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</code></pre></div>
+renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé un décalage.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Pour éviter le problème précédent, il faut parcourir une copie de <code>liste_mesures</code>. 
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">purger_mesures_extremes</span><span class="p">(</span><span class="n">liste_mesures</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Supprime de la liste toutes les mesures dont la température </span>
+<span class="sd">    n&#39;est pas comprise entre 20 et 25°C inclus.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">copy_liste_mesures</span> <span class="o">=</span> <span class="n">liste_mesures</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">mesure</span> <span class="ow">in</span> <span class="n">copy_liste_mesures</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mesure</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="ow">or</span> <span class="n">mesure</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+            <span class="n">liste_mesures</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">mesure</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste_mesures</span>
+</code></pre></div></p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 5</p>
@@ -5132,6 +5219,41 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
 <li><a class="" href="../data2026/26_BCG_NSI_5/empreinte_ada.json" target="_blank">empreinte_ada.json</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_5/empreinte_ada_agr.json" target="_blank">empreinte_ada_agr.json</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">total_simple</span><span class="p">(</span><span class="n">empreinte</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Fonction qui renvoie l&#39;empreinte carbone totale d&#39;un dictionnaire associant</span>
+<span class="sd">    une empreinte carbone à des noms de catégories&#39;&#39;&#39;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">chargement_json</span><span class="p">(</span><span class="n">empreinte</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">empreinte_totale_ada</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">total_simple</span><span class="p">(</span><span class="s1">&#39;empreinte_ada_agr.json&#39;</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">total_rec</span><span class="p">(</span><span class="n">empreinte</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Fonction récursive qui renvoie l&#39;empreinte carbone totale représentée</span>
+<span class="sd">    par un dictionnaire dont les valeurs peuvent aussi être des dictionnaires&#39;&#39;&#39;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">empreinte</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">est_dictionnaire</span><span class="p">(</span><span class="n">empreinte</span><span class="p">[</span><span class="n">key</span><span class="p">]):</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">empreinte</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">total_rec</span><span class="p">(</span><span class="n">empreinte</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Il y a une erreur dans l'énoncé, la fonction renvoie bien <code>True</code>.</em></p>
+<p>Ceci dit la fonction n'est pas correcte, car sa structure récursive empêche de parcourir la totalité du dictionnaire. Si un valeur supérieure à 1000 est à la fin du dictionnaire, elle n'est pas détectée.</p>
+<p>Version corrigée:</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 6</p>
@@ -5296,7 +5418,7 @@ va produire 202535 pour le 05 mars 2025, au lieu de 20250305.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 mars 2026 10:11:47 UTC">27 mars 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="31 mars 2026 09:31:48 UTC">31 mars 2026</span>
   </span>
 
     
