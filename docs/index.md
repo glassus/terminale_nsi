@@ -12,7 +12,6 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Retour sur [l'algorithme KNN](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
     - Groupe 1 : [sujet Centres Étrangers J1 2024](T6_Annales/corrections/2024/24-NSIJ1G1_corr.md){. target="_blank"}
     - Groupe 2 : [sujet Métropole J1 2024](T6_Annales/corrections/2024/24-NSIJ1ME_corr.md){. target="_blank"}
 
@@ -21,6 +20,7 @@
 
 
 ### *Thèmes déjà traités*
+- Retour sur [l'algorithme KNN](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
 - Exercice 3 des [sujets 0](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"} de l'Épreuve Pratique
 - [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
 - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
