@@ -132,7 +132,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Suivant le protocole RIP, la route suivie serait Bureau n°1 - B - E - A - Prestataire. 
@@ -141,7 +141,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         Suivant le protocole OSPF, les deux routes possibles seraient Bureau n°2 - C - I - G - F - D - A - Prestataire et Bureau n°2 - C - I - H - F - D - A - Prestataire, pour un coût équivalent de 2,3.
