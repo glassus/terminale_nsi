@@ -159,7 +159,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Le chemin est L1 - A - H - D - L2.    
