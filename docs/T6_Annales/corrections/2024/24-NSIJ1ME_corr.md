@@ -58,7 +58,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Le fait d'enlever un élément en tête de liste et d'en rajouter en fin de liste est caractéristique d'une file. 
@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Ce parcours est un parcours en largeur.
