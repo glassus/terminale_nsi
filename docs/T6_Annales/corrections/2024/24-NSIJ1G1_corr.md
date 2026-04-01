@@ -150,7 +150,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Le nombre de machines pouvant être connectées est $256^2-2=65534$. (il faut enlever l'adresse du réseau et l'adresse de diffusion)       
