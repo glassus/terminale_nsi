@@ -122,7 +122,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le masque équivalent au /16 est 255.255.0.0       
@@ -132,7 +132,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         L'adresse de réseau de L2 est 172.16.0.0      
@@ -141,7 +141,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         L'adresse de diffusion de L2 est 172.16.255.255      
