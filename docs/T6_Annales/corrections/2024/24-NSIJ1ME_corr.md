@@ -174,7 +174,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Le nom des escales 'Puerto sebo', 'Puerto kifecho', 'Puerto kifebo' et 'Puerto repo' n'existent pas dans la table `villes`. Or cela est nécessaire car ces attributs sont des clés étrangères. Il faut donc d'abord rentrer ces villes dans la table `villes` avant d'exécuter le code donné.
