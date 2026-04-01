@@ -76,7 +76,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         `parcoursGraphe(s1)` renverra la liste `[s1, s3, s4, s5]`.
