@@ -5304,6 +5304,33 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
     <span class="k">assert</span> <span class="n">b</span><span class="o">.</span><span class="n">score_proximité</span><span class="p">(</span><span class="s1">&#39;Tropical&#39;</span><span class="p">,</span> <span class="s1">&#39;Tropical citron&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Le smoothie renvoyé par la méthode <code>plus_proche_possible</code> n'est pas le bon car il correspond exactement au smoothie passé en paramètre. En effet nulle part dans la fonction on teste si le smoothie n'est pas celui d'origine. Or c'est forcément lui qui aura le plus gros score car il a exactement les mêmes ingrédients.</p>
+<p>Correction de la fonction :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">plus_proche_possible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nom_smoothie_ref</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Retourne le nom du smoothie le plus proche de nom_smoothie_ref en termes de fruits communs parmi les smoothies possibles.</span>
+<span class="sd">    En cas d&#39;égalité, retourne le premier trouvé.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">max_communs</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">smoothie_proche</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">nom_smoothie</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_smoothies</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nom_smoothie</span> <span class="o">==</span> <span class="n">nom_smoothie_ref</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">nb_communs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">score_proximité</span><span class="p">(</span><span class="n">nom_smoothie_ref</span><span class="p">,</span> <span class="n">nom_smoothie</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nb_communs</span> <span class="o">&gt;</span> <span class="n">max_communs</span><span class="p">:</span>
+            <span class="n">max_communs</span> <span class="o">=</span> <span class="n">nb_communs</span>
+            <span class="n">smoothie_proche</span> <span class="o">=</span> <span class="n">nom_smoothie</span>
+    <span class="k">return</span> <span class="n">smoothie_proche</span>
+</code></pre></div>
+<p><em>À noter que la fonction <code>test_plus_proche_possible</code> présente une erreur. Le deuxième assert devrait être <code>Exotique rouge</code> et non pas <code>None</code>.</em>  </p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<div class="highlight"><pre><span></span><code><span class="n">boutique</span> <span class="o">=</span> <span class="n">Boutique_smoothie</span><span class="p">([</span><span class="s1">&#39;Mangue&#39;</span><span class="p">,</span> <span class="s1">&#39;Ananas&#39;</span><span class="p">,</span> <span class="s1">&#39;Banane&#39;</span><span class="p">,</span> <span class="s1">&#39;Fraise&#39;</span><span class="p">,</span> <span class="s1">&#39;Citron&#39;</span><span class="p">,</span> <span class="s1">&#39;Kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;Pomme verte&#39;</span><span class="p">])</span>
+<span class="n">boutique</span><span class="o">.</span><span class="n">affichage_possibles</span><span class="p">()</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 7</p>
@@ -5375,6 +5402,34 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
 <li><a class="" href="../data2026/26_BCG_NSI_15/veto.py" target="_blank">veto.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_15/cabinet.sqlite" target="_blank">cabinet.sqlite</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">normalisation_tel</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">clean_num</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">num</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">clean_num</span> <span class="o">+=</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">clean_num</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_validation_tel</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Tous les tests doivent passer...</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;0612999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;0712999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;02.12.99.90.12&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;1612999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;12999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;0512999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">validation_tel</span><span class="p">(</span><span class="s1">&#39;1612999012&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Les tests de la fonction validation_tel sont passés&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 16</p>
@@ -5461,7 +5516,7 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="31 mars 2026 18:43:30 UTC">31 mars 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="1 avril 2026 18:40:36 UTC">1 avril 2026</span>
   </span>
 
     
