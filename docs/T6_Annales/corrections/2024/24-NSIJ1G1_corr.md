@@ -47,10 +47,11 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         ```python
+        import random
         def voisin_alea(voisins, s):
             alea = random.randrange(len(voisins[s]))
             return voisins[s][alea]
