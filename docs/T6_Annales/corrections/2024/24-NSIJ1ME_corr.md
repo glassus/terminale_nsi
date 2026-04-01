@@ -112,7 +112,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Ce code n'est pas adapté à un très grand nombre de sites car le graphe deviendrait vite très lourd à manipuler, notamment pour le parcours en largeur.
