@@ -43,14 +43,14 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```python
         def calculPopularite(self):
             self.popularite = 0
             for cpl in self.predecesseurs:
-                s += cpl[1]
+                self.popularite += cpl[1]
             return self.popularite
         ```  
     """
