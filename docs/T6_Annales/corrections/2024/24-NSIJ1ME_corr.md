@@ -103,7 +103,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         La ligne de code `lePlusPopulaire(parcoursGraphe(s1)).nom` renvoie `'site3'` car le site 3 est le plus populaire parmi tous les sites visités lors du parcours en largeur depuis le site1. 
