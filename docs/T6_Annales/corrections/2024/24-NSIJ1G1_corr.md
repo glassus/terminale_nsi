@@ -101,7 +101,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\"
         C'est l'ordinateur 0 qui semble avoir la plus grande probabilité d'être infecté. C'est donc lui qu'il faut protéger. 
@@ -111,7 +111,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\"
         On peut par exemple effectuer un parcours en largeur et compter le nombre d'étapes nécessaires pour visiter tous les ordinateurs du réseau. 
