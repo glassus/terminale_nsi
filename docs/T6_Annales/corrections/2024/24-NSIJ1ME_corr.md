@@ -91,7 +91,7 @@
         ```python
         def lePlusPopulaire(listeSites):
             maxPopularite = 0
-            siteLePlusPopulaire=listeSites[0]
+            siteLePlusPopulaire = listeSites[0]
             for site in listeSites:
                 if site.popularite > maxPopularite:
                     maxPopularite = site.popularite
