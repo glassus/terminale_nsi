@@ -150,7 +150,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         L'attribut `id_client` a été choisi comme clé primaire de la relation `clients` car il authentifie de manière unique chaque client.    
@@ -159,7 +159,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Une clé étrangère est une clé primaire d'une autre table. 
