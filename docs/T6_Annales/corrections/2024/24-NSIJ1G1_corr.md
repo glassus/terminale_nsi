@@ -177,7 +177,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Si on choisit le trajet L1 - A - H - C - D - L2, il faut modifier la table de routage du routeur H. Il faut lui indiquer l'adresse `53.10.10.10` en passerelle et l'adresse `53.10.10.9` en interface.
