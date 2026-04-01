@@ -4,7 +4,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le fait que la liste des prédécesseurs de s2 soit vide s'explique par le fait qu'aucun site ne pointe vers s2.
@@ -13,7 +13,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -25,7 +25,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         `s2.successeurs[1][1]` vaut 5 et signifie que s2 a 5 liens qui pointent vers s3.
@@ -34,7 +34,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Le site 1 a une popularité de 6. En effet le site 2 apporte 4 liens et le site 4 apporte 2 liens.
