@@ -168,7 +168,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Suivant le protocole RIP, les deux trajets possibles sont L1 - A - H - C - D - L2 ou L1 - A - B - C - D - L2.    
