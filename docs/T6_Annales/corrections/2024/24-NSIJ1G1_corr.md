@@ -62,7 +62,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         La fonction `marche_alea` s'appelle elle-même dans sa propre définition, elle est donc récursive.
@@ -72,7 +72,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Cette fonction modélise la propagation aléatoire du virus. Elle renvoie le dernier ordinateur infecté.
