@@ -123,7 +123,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Un SGBD assure l'intégrité de la base de données et évite (par exemple) la redondance des données. 
