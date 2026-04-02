@@ -351,7 +351,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         La variable `annee` est de type `String`. Or à la ligne 25 on essaie de faire une comparaison de cette variable avec les nombres 2018 et 2024. Cela va provoquer une erreur.    
@@ -360,7 +360,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         Il suffit, à la ligne 25, de remplacer `annee` par `int(annee)`.   
@@ -369,7 +369,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14\" 
         Vérification des mois :
