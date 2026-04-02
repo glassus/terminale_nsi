@@ -249,7 +249,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Emplacement(<ins>id_emplacement</ins>:INT, nom:STRING, localisation:STRING, tarif\_journalier:INT)   
