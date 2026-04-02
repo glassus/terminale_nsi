@@ -315,7 +315,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Le terme `self` est utilisé pour signifier l'objet en cours de construction dans la méthode constructeur et les différentes méthodes. 
@@ -324,7 +324,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```python
