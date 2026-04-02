@@ -183,7 +183,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         La première requête sert à récupérer l'identifiant de Jean Barc, qui est sans doute 1243. La deuxième requête sert à récupérer les identifiants de toutes les réservations de Jean Barc.    
