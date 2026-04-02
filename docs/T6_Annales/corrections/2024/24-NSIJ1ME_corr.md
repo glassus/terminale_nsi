@@ -323,7 +323,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ![image](data/exo3.png){: .center .autolight}
