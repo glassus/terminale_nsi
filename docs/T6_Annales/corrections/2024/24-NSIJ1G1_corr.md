@@ -188,7 +188,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         - Pour 1 Gbit/s, $c=\\frac{10^9}{10^9}=1$
@@ -199,7 +199,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\"
         Avec le protocole OSPF, le meilleur chemin est L1 - A - G - F - E - D - L2, pour un coût total de 1,3. 
