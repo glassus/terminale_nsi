@@ -342,7 +342,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         La fonction `inserer` est récursive car elle s'appelle elle-même dans sa propre définition.    
