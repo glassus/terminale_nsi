@@ -5430,6 +5430,61 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Les tests de la fonction validation_tel sont passés&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">consultation_vaccination_chat</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie les consultations de vaccination de chats dont la date</span>
+<span class="sd">    est supérieure à la date `date`.</span>
+
+<span class="sd">    :param: date: date minimale</span>
+<span class="sd">    :return: liste [(id_animal, nom_animal, tel_proprietaire, date_consultation)]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB_PATH</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    SELECT a.id, a.nom , telephone, c.date</span>
+<span class="sd">    FROM proprietaire as p</span>
+<span class="sd">    JOIN  animal as a ON p.id = a.id_proprietaire</span>
+<span class="sd">    JOIN  consultation as c ON c.id_animal = a.id</span>
+<span class="sd">    WHERE c.date &gt; ? and  a.espece = &#39;chat&#39; and c.motif =&#39;vaccination&#39;</span>
+<span class="sd">    ORDER BY a.id, c.date;</span>
+<span class="sd">    &#39;&#39;&#39;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">date</span><span class="p">,),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">resultat</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<p>Le problème vient de la ligne 
+<div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="n">date</span> <span class="o">&lt;</span> <span class="n">derniere</span><span class="p">[</span><span class="n">id_animal</span><span class="p">][</span><span class="mi">3</span><span class="p">]:</span>
+</code></pre></div>
+On teste si <code>date</code> est inférieur à <code>derniere[id_animal][3]</code> alors qu'on doit tester si c'est supérieur.</p>
+<p>Le bon code est donc :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">derniere_vaccination</span><span class="p">(</span><span class="n">consultations</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie un dictionnaire ayant pour clef l&#39;identifiant de l&#39;animal,</span>
+<span class="sd">    et dont la valeur associée est la dernière consultation de cet animal.</span>
+
+<span class="sd">    Chaque consultation est un tuple :</span>
+
+<span class="sd">    (id_animal, nom_animal, tel_proprietaire, date_consultation)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">derniere</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">consult</span> <span class="ow">in</span> <span class="n">consultations</span><span class="p">:</span>
+        <span class="n">id_animal</span> <span class="o">=</span> <span class="n">consult</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">consult</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">id_animal</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">derniere</span><span class="p">:</span>
+            <span class="n">derniere</span><span class="p">[</span><span class="n">id_animal</span><span class="p">]</span> <span class="o">=</span> <span class="n">consult</span>
+        <span class="k">elif</span> <span class="n">date</span> <span class="o">&gt;</span> <span class="n">derniere</span><span class="p">[</span><span class="n">id_animal</span><span class="p">][</span><span class="mi">3</span><span class="p">]:</span>
+            <span class="n">derniere</span><span class="p">[</span><span class="n">id_animal</span><span class="p">]</span> <span class="o">=</span> <span class="n">consult</span>
+    <span class="k">return</span> <span class="n">derniere</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 16</p>
@@ -5439,6 +5494,86 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
 <li><a class="" href="../data2026/26_BCG_NSI_16/datas.csv" target="_blank">datas.csv</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_16/warming_stripes.png" target="_blank">warming_stripes.png</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ecart_temperature</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">annee</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">dico</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">annee</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">dico</span><span class="p">[</span><span class="s1">&#39;écart&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ecart_temperature</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">ecart_temperature</span><span class="p">(</span><span class="n">datas_temperature</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.29</span>
+    <span class="k">assert</span> <span class="n">ecart_temperature</span><span class="p">(</span><span class="n">datas_temperature</span><span class="p">,</span> <span class="mi">2030</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests passés avec succès&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<p>L'instruction </p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">derniere_annee_ecart_negatif</span><span class="p">(</span><span class="n">datas_temperature</span><span class="p">))</span>
+</code></pre></div>
+affiche la valeur 1977, qui est la dernière année avec un écart négatif.</p>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<p>L'erreur vient de la ligne
+<div class="highlight"><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">-</span> <span class="n">dico</span><span class="p">[</span><span class="s1">&#39;écart&#39;</span><span class="p">]</span>
+</code></pre></div>
+Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
+<p>La bonne fonction est donc : </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne_ecarts</span><span class="p">(</span><span class="n">annee_debut</span><span class="p">,</span> <span class="n">annee_fin</span><span class="p">,</span> <span class="n">datas</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie la moyenne des écarts de température pour la période comprise </span>
+<span class="sd">    entre annee_debut et annee_fin (incluses).</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">dico</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">annee_debut</span> <span class="o">&lt;=</span> <span class="n">dico</span><span class="p">[</span><span class="s1">&#39;année&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">dico</span><span class="p">[</span><span class="s1">&#39;année&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">annee_fin</span><span class="p">:</span>
+            <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">dico</span><span class="p">[</span><span class="s1">&#39;écart&#39;</span><span class="p">]</span>
+            <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">somme</span> <span class="o">/</span> <span class="n">compteur</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Alexandre Hainaut</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">graphique</span><span class="p">(</span><span class="n">datas</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Représente visuellement les warming stripes.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+    <span class="c1"># Création d&#39;une palette de couleurs basée sur l&#39;amplitude thermique</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;seismic&#39;</span><span class="p">)</span>
+    <span class="n">temperatures</span> <span class="o">=</span> <span class="p">[</span><span class="n">dico</span><span class="p">[</span><span class="s1">&#39;écart&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">dico</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">]</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">temperatures</span><span class="p">),</span> <span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">temperatures</span><span class="p">))</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="o">-</span><span class="n">max_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
+
+    <span class="c1"># Création des listes pour les abscisses et ordonnées</span>
+    <span class="n">annees</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ordonnees</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Remplir les listes annees et ordonnees ici :</span>
+    <span class="k">for</span> <span class="n">dico</span> <span class="ow">in</span> <span class="n">datas</span><span class="p">:</span>
+        <span class="n">annees</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="s1">&#39;année&#39;</span><span class="p">])</span>
+        <span class="n">ordonnees</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+    <span class="c1"># Génération du graphique</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">annees</span><span class="p">,</span> <span class="n">ordonnees</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Warming Stripes mondiales - Base 1901-2000&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([],</span> <span class="p">[])</span>  <span class="c1"># Masque l&#39;axe Y car seule la couleur compte</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Année&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 17</p>
@@ -5516,7 +5651,7 @@ renverra la liste <code>[13, 8, 4, 3]</code> car la suppression du 11 a créé u
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="1 avril 2026 18:40:36 UTC">1 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 avril 2026 08:22:40 UTC">2 avril 2026</span>
   </span>
 
     
