@@ -333,7 +333,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         C'est un parcours infixe.
@@ -351,7 +351,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         ```python
@@ -372,7 +372,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         ```python
@@ -387,7 +387,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         ![image](data/exo3b.png){: .center .autolight}
@@ -397,7 +397,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14\" 
         ```python
