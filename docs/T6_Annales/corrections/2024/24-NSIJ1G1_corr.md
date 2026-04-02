@@ -220,7 +220,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\"
         Utiliser une base de données relationnelle permet de garantir l'intégrité de la base, et d'éviter (par exemple) les doublons.
@@ -230,7 +230,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Pour être utilisé comme clé primaire, un attribut doit identifier de manière unique l'enregistrement auquel il fait référence.    
@@ -239,7 +239,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\"
         La clé étrangère `id_client` permet de relier la table `Reservation` à la table `Client`. La clé étrangère `id_emplacement` permet de relier la table `Reservation` à la table `Emplacement`.  
