@@ -209,7 +209,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\"
         Le nouveau chemin est L1 - A - H - F - E - D - L2, pour un coût total de 2,2.
