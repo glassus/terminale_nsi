@@ -5760,6 +5760,89 @@ On peut maintenant compléter la fonction <code>test_lissage</code> :
 <li><a class="" href="../data2026/26_BCG_NSI_11/donnees_habitats.py" target="_blank">donnees_habitats.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_11/prediction_habitat.py" target="_blank">prediction_habitat.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p>Pour éviter une erreur à la question 3, la clé <code>presence_renard</code> n'est pas prise en compte dans le calcul.
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">habitat_1</span><span class="p">,</span> <span class="n">habitat_2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule la distance euclidienne entre deux habitats.</span>
+<span class="sd">    entrée : </span>
+<span class="sd">        - habitat_1 : dictionnaire représentant un habitat.</span>
+<span class="sd">        - habitat_2 : dictionnaire représentant un autre habitat.</span>
+<span class="sd">    sortie : </span>
+<span class="sd">        - float : distance euclidienne entre habitat_1 et habitat_2.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">habitat_1</span><span class="p">[</span><span class="s1">&#39;vegetation&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">habitat_2</span><span class="p">[</span><span class="s1">&#39;vegetation&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">habitat_1</span><span class="p">[</span><span class="s1">&#39;proximite_eau&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">habitat_2</span><span class="p">[</span><span class="s1">&#39;proximite_eau&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">habitat_1</span><span class="p">[</span><span class="s1">&#39;densite_urbaine&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">habitat_2</span><span class="p">[</span><span class="s1">&#39;densite_urbaine&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">habitat_1</span><span class="p">[</span><span class="s1">&#39;disponibilite_proies&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">habitat_2</span><span class="p">[</span><span class="s1">&#39;disponibilite_proies&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>  
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance_d_un_habitat</span><span class="p">(</span><span class="n">habitat</span><span class="p">,</span> <span class="n">habitats</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule la distance entre un habitat et chaque habitat de la liste.</span>
+<span class="sd">    entrée : </span>
+<span class="sd">        - habitat : dictionnaire représentant un habitat.</span>
+<span class="sd">        - habitats : liste de dictionnaires représentant des habitats.</span>
+<span class="sd">    sortie : </span>
+<span class="sd">        - list[tuple] : liste de tuples (distance, habitat) où distance est la distance entre habitat et chaque habitat de la liste.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">hab</span> <span class="ow">in</span> <span class="n">habitats</span><span class="p">:</span>
+        <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">distance</span><span class="p">(</span><span class="n">habitat</span><span class="p">,</span> <span class="n">hab</span><span class="p">),</span> <span class="n">hab</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_d_un_habitat</span><span class="p">(</span><span class="n">nouveau</span><span class="p">,</span> <span class="n">zones_connues</span><span class="p">)[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[(</span><span class="mf">7.211102550927978</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;vegetation&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;proximite_eau&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;densite_urbaine&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;disponibilite_proies&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;presence_renard&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}),</span> <span class="p">(</span><span class="mf">8.660254037844387</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;vegetation&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;proximite_eau&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;densite_urbaine&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;disponibilite_proies&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;presence_renard&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}),</span> <span class="p">(</span><span class="mf">5.196152422706632</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;vegetation&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;proximite_eau&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;densite_urbaine&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;disponibilite_proies&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;presence_renard&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})]</span>
+</code></pre></div>
+On retrouve bien les valeurs indiquées dans l'énoncé.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>L'erreur se situe à la ligne 16. Il faut remplacer <code>distance</code> par <code>caracteristiques</code>.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">presence_renard</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">habitats</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Vérifie si l&#39;habitat donné a plus de k/2 voisins avec des renards.</span>
+<span class="sd">    entrée : </span>
+<span class="sd">        - k : entier représentant le nombre d&#39;habitats à considérer.</span>
+<span class="sd">        - habitat : dictionnaire représentant un habitat.</span>
+<span class="sd">        - habitats : liste de dictionnaires représentant des habitats.</span>
+<span class="sd">    sortie : </span>
+<span class="sd">        - bool : True si l&#39;habitat a plus de k/2 voisins avec des renards, False sinon.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">habitats</span> <span class="o">=</span> <span class="n">k_plus_proches</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">habitat</span><span class="p">,</span> <span class="n">habitats</span><span class="p">)</span>
+    <span class="n">n_renards</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">habitat</span> <span class="ow">in</span> <span class="n">habitats</span><span class="p">:</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="n">habitat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">caracteristiques</span> <span class="o">=</span> <span class="n">habitat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="hll">        <span class="k">if</span> <span class="n">caracteristiques</span><span class="p">[</span><span class="s1">&#39;presence_renard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span>            <span class="n">n_renards</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n_renards</span> <span class="o">&gt;</span> <span class="n">k</span><span class="o">/</span><span class="mi">2</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<details class="success">
+<summary>Correction Q5</summary>
+<p>Les différents tests de la fonction <code>presence_renard</code> montrent que dès que <code>k</code> dépasse 3, la fonction renvoie <code>True</code>.</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 12</p>
@@ -6041,7 +6124,7 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 avril 2026 08:06:34 UTC">6 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 avril 2026 16:27:31 UTC">6 avril 2026</span>
   </span>
 
     
