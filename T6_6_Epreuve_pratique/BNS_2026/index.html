@@ -5628,6 +5628,24 @@ L'exécution de cette fonction donne <code>4634999.999986519</code>, et non pas 
 <span class="n">objet</span><span class="o">.</span><span class="n">ajouter_face</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 </code></pre></div></p>
 </details>
+<details class="success">
+<summary>Correction Q5</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">transformer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rapport</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Applique une transformation d&#39;échelle à l&#39;objet 3D en modifiant directement ses sommets.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">copie_objet</span> <span class="o">=</span> <span class="n">Objet3D</span><span class="p">()</span>
+    <span class="n">copie_objet</span><span class="o">.</span><span class="n">sommets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sommets</span>
+    <span class="n">copie_objet</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">faces</span>
+    <span class="n">copie_objet</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nom</span>
+    <span class="n">sommets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">copie_objet</span><span class="o">.</span><span class="n">sommets</span><span class="p">:</span>
+        <span class="n">sommets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">Sommet</span><span class="p">(</span><span class="n">sommet</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="n">rapport</span><span class="p">,</span> <span class="n">sommet</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="n">rapport</span><span class="p">,</span> <span class="n">sommet</span><span class="o">.</span><span class="n">z</span><span class="o">*</span><span class="n">rapport</span><span class="p">))</span>
+    <span class="n">copie_objet</span><span class="o">.</span><span class="n">sommets</span> <span class="o">=</span> <span class="n">sommets</span>
+    <span class="k">return</span> <span class="n">copie_objet</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 10</p>
@@ -5635,6 +5653,105 @@ L'exécution de cette fonction donne <code>4634999.999986519</code>, et non pas 
 <li><a class="" href="../data2026/26_BCG_NSI_10/sujet.pdf" target="_blank">Sujet</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_10/analyse_eau.py" target="_blank">analyse_eau.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">total_conso</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">jour</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">presence_mesure</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;jour&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">jour</span><span class="p">:</span>
+            <span class="n">presence_mesure</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;chaude&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;froide&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">presence_mesure</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fuite_possible</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">jour</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;jour&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">jour</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;chaude&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;froide&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>L'erreur se situe à la ligne 14. Il faut remplacer le 2 par un 3 car la moyenne se fait sur 3 nombres. 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lissage_conso</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule une moyenne glissante sur les valeurs.</span>
+<span class="sd">    Pour chaque valeur, on calcule la moyenne avec ses voisins.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">lisse</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+<span class="hll">            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">3</span>
+</span>        <span class="n">lisse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lisse</span>
+</code></pre></div></td></tr></table></div></p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Les autres cas limites sont les cas où la liste <code>valeurs</code> ne contient qu'un seul élément, ou bien aucun élément.<br />
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lissage_conso</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule une moyenne glissante sur les valeurs.</span>
+<span class="sd">    Pour chaque valeur, on calcule la moyenne avec ses voisins.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">valeurs</span> 
+    <span class="n">lisse</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">3</span>
+        <span class="n">lisse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lisse</span>
+</code></pre></div>
+On peut maintenant compléter la fonction <code>test_lissage</code> :
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_lissage</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">lissage_conso</span><span class="p">([])</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">lissage_conso</span><span class="p">([</span><span class="mi">4</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">lissage_conso</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests passés avec succès&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 11</p>
@@ -5924,7 +6041,7 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 avril 2026 19:02:51 UTC">4 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 avril 2026 07:03:47 UTC">6 avril 2026</span>
   </span>
 
     
