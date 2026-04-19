@@ -6202,6 +6202,126 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
 <li><a class="" href="../data2026/26_BCG_NSI_18/sujet.pdf" target="_blank">Sujet</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_18/analyse_temperatures_polynesie.py" target="_blank">analyse_temperatures_polynesie.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">temperature_moyenne</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="n">donnees</span><span class="p">):</span>
+    <span class="n">somme_temperatures</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;zone&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">zone</span><span class="p">:</span>
+            <span class="n">somme_temperatures</span> <span class="o">+=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">somme_temperatures</span> <span class="o">/</span> <span class="n">n</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">detection_anomalies</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="n">seuil</span><span class="p">,</span> <span class="n">donnees</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">temperature_moyenne</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="n">donnees</span><span class="p">)</span>
+    <span class="n">liste_dates</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;zone&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">zone</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">seuil</span><span class="p">:</span>
+            <span class="n">liste_dates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">liste_dates</span>
+</code></pre></div>
+<strong>Remarque:</strong> l'exemple donné dans l'énoncé n'est pas correct, il doit renvoyer une liste vide avec l'exemple <code class="highlight"><span class="n">donnees_test</span></code> précédent.</p>
+<p>Un autre exemple (correct):</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">detection_anomalies</span><span class="p">(</span><span class="s1">&#39;Societe&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">donnees</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;2020-01-15&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-01-16&#39;</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_zone_inexistante</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Test 1 : Tester une zone qui n&#39;existe pas</span>
+
+<span class="sd">    À compléter:</span>
+<span class="sd">    1. Appeler evolution_par_decennie avec une zone inexistante</span>
+<span class="sd">    2. Vérifier que le résultat est un dictionnaire vide</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">evolution_par_decennie</span><span class="p">(</span><span class="s1">&#39;Tahiti&#39;</span><span class="p">,</span> <span class="n">donnees_test</span><span class="p">)</span> <span class="o">==</span> <span class="p">{}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_une_seule_decennie</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Test 2: Tester une zone avec données sur une seule décennie</span>
+
+<span class="sd">    À compléter:</span>
+<span class="sd">    1. Appeler evolution_par_decennie avec la zone appropriée</span>
+<span class="sd">    2. Vérifier que le résultat ne contient qu&#39;une seule décennie (2020)</span>
+<span class="sd">    3. Vérifier la température moyenne</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">evolution_par_decennie</span><span class="p">(</span><span class="s1">&#39;Marquises&#39;</span><span class="p">,</span> <span class="n">donnees_test</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">evolution_par_decennie</span><span class="p">(</span><span class="s1">&#39;Marquises&#39;</span><span class="p">,</span> <span class="n">donnees_test</span><span class="p">)[</span><span class="mi">2020</span><span class="p">]</span> <span class="o">==</span> <span class="mf">26.0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_plusieurs_decennies</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Test 3 : Tester une zone avec données sur plusieurs décennies</span>
+
+<span class="sd">    À compléter:</span>
+<span class="sd">    1. Appeler evolution_par_decennie avec la zone appropriée</span>
+<span class="sd">    2. Vérifier que le résultat contient bien les clés 2010 et 2020</span>
+<span class="sd">    3. Vérifier que les températures moyennes sont cohérentes</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">evolution_par_decennie</span><span class="p">(</span><span class="s1">&#39;Societe&#39;</span><span class="p">,</span> <span class="n">donnees_test</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mi">2010</span> <span class="ow">in</span> <span class="n">resultat</span> <span class="ow">and</span> <span class="mi">2020</span> <span class="ow">in</span> <span class="n">resultat</span>
+    <span class="k">assert</span> <span class="n">resultat</span><span class="p">[</span><span class="mi">2010</span><span class="p">]</span> <span class="o">==</span> <span class="mf">27.0</span> <span class="ow">and</span> <span class="n">resultat</span><span class="p">[</span><span class="mi">2020</span><span class="p">]</span> <span class="o">==</span> <span class="mf">28.5</span>
+</code></pre></div>
+<p>Le problème vient du calcul de la variable <code>decennie</code> à la ligne 80. Il faut multiplier <code>(annee // 10)</code> par 10 pour avoir une décennie correcte.</p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">evolution_par_decennie</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span> <span class="n">donnees</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule l&#39;évolution des températures moyennes par décennie pour une zone.</span>
+
+<span class="sd">    ATTENTION: Cette fonction contient un bug volontaire à détecter et corriger.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        zone (str): Nom de l&#39;archipel (ex: &#39;Societe&#39;, &#39;Tuamotu&#39;)</span>
+<span class="sd">        donnees (list): Liste de dictionnaires de relevés</span>
+
+<span class="sd">    Renvoie:</span>
+<span class="sd">        dict: Dictionnaire {décennie : température_moyenne}</span>
+<span class="sd">            ex: {2010: 27.5, 2020: 28.3}</span>
+<span class="sd">            Renvoie un dictionnaire vide si la zone n&#39;existe pas</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Filtrage des relevés pour la zone</span>
+    <span class="n">releves_zone</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">donnees</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;zone&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">zone</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">releves_zone</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="c1"># Regroupement par décennie</span>
+    <span class="n">temperatures_par_decennie</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">releve</span> <span class="ow">in</span> <span class="n">releves_zone</span><span class="p">:</span>
+        <span class="c1"># Extraction de l&#39;année de la date (format: &#39;YYYY-MM-DD&#39;)</span>
+        <span class="n">annee</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">releve</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># Calcul de la décennie</span>
+        <span class="n">decennie</span> <span class="o">=</span> <span class="p">(</span><span class="n">annee</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+
+        <span class="k">if</span> <span class="n">decennie</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">temperatures_par_decennie</span><span class="p">:</span>
+            <span class="n">temperatures_par_decennie</span><span class="p">[</span><span class="n">decennie</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">temperatures_par_decennie</span><span class="p">[</span><span class="n">decennie</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">releve</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Calcul des moyennes</span>
+    <span class="n">moyennes</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">decennie</span><span class="p">,</span> <span class="n">temperatures</span> <span class="ow">in</span> <span class="n">temperatures_par_decennie</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">moyennes</span><span class="p">[</span><span class="n">decennie</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">temperatures</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">moyennes</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 19</p>
@@ -6210,6 +6330,123 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
 <li><a class="" href="../data2026/26_BCG_NSI_19/donnees.py" target="_blank">donnees.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_19/gestion_eau.py" target="_blank">gestion_eau.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_en_penurie</span><span class="p">(</span><span class="n">liste_reservoirs</span><span class="p">,</span> <span class="n">nom_reservoir</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">reservoir</span> <span class="ow">in</span> <span class="n">liste_reservoirs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">nom_reservoir</span><span class="p">:</span>
+            <span class="n">taux</span> <span class="o">=</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;capacite&#39;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">taux</span> <span class="o">&lt;</span> <span class="mf">0.2</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">volume_par_district</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">):</span>
+    <span class="n">dico_districts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">reservoir</span> <span class="ow">in</span> <span class="n">reservoirs</span><span class="p">:</span>
+        <span class="n">nom_district</span> <span class="o">=</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;district&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">nom_district</span> <span class="ow">in</span> <span class="n">dico_districts</span><span class="p">:</span>
+            <span class="n">dico_districts</span><span class="p">[</span><span class="n">nom_district</span><span class="p">]</span> <span class="o">+=</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dico_districts</span><span class="p">[</span><span class="n">nom_district</span><span class="p">]</span> <span class="o">=</span> <span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dico_districts</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Cédric Gouygou</em>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">volume_moyen</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">([</span><span class="n">reservoir</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">reservoir</span> <span class="ow">in</span> <span class="n">reservoirs</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">volume_moyen</span><span class="p">([{</span><span class="s1">&#39;volume&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;volume&#39;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">}])</span> <span class="o">==</span> <span class="mi">50000</span>
+</code></pre></div></p>
+<p>Pour corriger la fonction <code class="highlight"><span class="n">volume_moyen</span></code>, il faut envisager le cas où la liste de réservoirs est vide, et diviser par le nombre correct de réservoirs.
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">volume_moyen</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie le volume moyen d&#39;eau disponible dans les réservoirs.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">somme_totale</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reservoirs</span><span class="p">:</span>
+        <span class="n">somme_totale</span> <span class="o">+=</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span>
+    <span class="n">moyenne</span> <span class="o">=</span> <span class="n">somme_totale</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">moyenne</span>
+</code></pre></div></p>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Frédéric Peurière</em>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">volume_par_district</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie un dictionnaire avec pour chaque district le volume total d&#39;eau disponible.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">volumes</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reservoirs</span><span class="p">:</span>
+        <span class="n">district</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;district&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">district</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">volumes</span><span class="p">:</span>
+            <span class="n">volumes</span><span class="p">[</span><span class="n">district</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">volumes</span><span class="p">[</span><span class="n">district</span><span class="p">]</span> <span class="o">+=</span> <span class="n">r</span><span class="p">[</span><span class="s1">&#39;volume&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">volumes</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">districts_vulnerables</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">,</span> <span class="n">seuil</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Identifie les districts dont le volume moyen est inférieur à un certain seuil du volume moyen global.</span>
+
+<span class="sd">    Arguments :</span>
+<span class="sd">        reservoirs : liste de réservoirs</span>
+<span class="sd">        seuil : proportion du volume moyen global pour considérer un district vulnérable (ex: 0.8 pour 80%)</span>
+
+<span class="sd">    Retour :</span>
+<span class="sd">        liste de noms de districts vulnérables</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">reservoirs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="c1"># Volume moyen global</span>
+    <span class="n">volume_global_moyen</span> <span class="o">=</span> <span class="n">volume_moyen</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span>
+
+    <span class="c1"># Volume moyen par district</span>
+    <span class="n">vol_par_district</span> <span class="o">=</span> <span class="n">volume_par_district</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">)</span>
+    <span class="n">nb_reservoirs_par_district</span> <span class="o">=</span> <span class="p">{</span><span class="n">d</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">vol_par_district</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">reservoirs</span><span class="p">:</span>
+        <span class="n">nb_reservoirs_par_district</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;district&#39;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">districts_vuln</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">district</span><span class="p">,</span> <span class="n">vol_total</span> <span class="ow">in</span> <span class="n">vol_par_district</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">vol_moyen_district</span> <span class="o">=</span> <span class="n">vol_total</span> <span class="o">/</span> <span class="n">nb_reservoirs_par_district</span><span class="p">[</span><span class="n">district</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">vol_moyen_district</span> <span class="o">&lt;</span> <span class="n">seuil</span> <span class="o">*</span> <span class="n">volume_global_moyen</span><span class="p">:</span>
+            <span class="n">districts_vuln</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">district</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">districts_vuln</span>
+
+<span class="n">vuln</span> <span class="o">=</span> <span class="n">districts_vulnerables</span><span class="p">(</span><span class="n">reservoirs</span><span class="p">,</span> <span class="n">seuil</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Districts vulnérables :&#39;</span><span class="p">,</span> <span class="n">vuln</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Stratégie de gestion (sans implémentation)</p>
+<p>Pour améliorer la situation des districts vulnérables, on peut envisager plusieurs mesures :</p>
+<ul>
+<li>
+<p>Transfert d’eau entre districts
+    Déplacer l’eau des districts bien remplis vers les districts vulnérables.
+    Optimisation des usages</p>
+</li>
+<li>
+<p>Réduire temporairement la consommation dans les districts à faible niveau (rationnement, priorisation de l’eau potable).
+    Gestion proactive des réservoirs</p>
+</li>
+<li>
+<p>Recharger les réservoirs vulnérables avant la saison sèche (prélèvement d’eau de pluie, pompage depuis des sources proches).
+    Investissement sur le long terme</p>
+</li>
+<li>
+<p>Construction de nouveaux réservoirs ou agrandissement des existants dans les districts à faible capacité.
+    Amélioration des systèmes de stockage et de distribution pour limiter les pertes.</p>
+</li>
+</ul>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 20</p>
@@ -6264,7 +6501,7 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="9 avril 2026 09:11:11 UTC">9 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="19 avril 2026 14:16:40 UTC">19 avril 2026</span>
   </span>
 
     
