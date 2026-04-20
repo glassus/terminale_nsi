@@ -1081,7 +1081,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```sql
