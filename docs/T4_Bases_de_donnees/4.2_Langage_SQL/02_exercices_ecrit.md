@@ -1058,7 +1058,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
