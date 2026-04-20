@@ -1094,7 +1094,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         $1 \\times 3,50 + 3 \\times 5,50 = 20$ 
