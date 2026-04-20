@@ -1020,7 +1020,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le résultat de la requête est :
@@ -1033,7 +1033,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -1046,7 +1046,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```sql
@@ -1058,7 +1058,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Les attributs de la table ```ordonnance``` devant être déclarés clés étrangères sont :
@@ -1070,7 +1070,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Le médicament d'```id_medic``` égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.
@@ -1081,7 +1081,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```sql
@@ -1094,10 +1094,10 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
-        $1 \\times 3,50 + 3 \\times 5,50 = 20$ 
+        $1 \times 3,50 + 3 \times 5,50 = 20$ 
 
         Le prix des médicaments est donc de 20 €.
     """
@@ -1106,11 +1106,11 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
-        SELECT medicament.nom_medic
+        SELECT nom_medic
         FROM medicament
         JOIN ordonnance ON ordonnance.id_medic = medicament.id_medic
         WHERE id_ordo = 6
@@ -1127,7 +1127,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
@@ -1136,7 +1136,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Cette requête pose problème car la valeur 1 de l'attribut ```idagres``` n'existe pas dans la table ```agres```.
@@ -1145,7 +1145,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -1153,14 +1153,6 @@
         SET heure = '10:44:06'
         WHERE jour = '2024-02-15' AND heure = '01:44:06'
         ```
-        ou
-        ```sql
-        UPDATE intervention
-        SET heure = '10:44:06'
-        WHERE id = 3
-        ```
-
-
     """
     )
     }}
