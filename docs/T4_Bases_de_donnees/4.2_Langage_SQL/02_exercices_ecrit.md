@@ -1075,13 +1075,13 @@
     ??? success \"Correction Q5\" 
         Le médicament d'```id_medic``` égale à 1 est le paracétamol. D'après l'ordonnance, il faut 6 comprimés donc 1 boite suffit.
 
-        Le médicament d'```id_medic``` égale à 4 est l'acide ascorbique'. D'après l'ordonnance, il faut 28 comprimés donc 3 boites sont nécessaires.       
+        Le médicament d'```id_medic``` égale à 4 est l'acide ascorbique. D'après l'ordonnance, il faut 28 comprimés donc 3 boites sont nécessaires.       
     """
     )
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```sql
@@ -1153,6 +1153,12 @@
         SET heure = '10:44:06'
         WHERE jour = '2024-02-15' AND heure = '01:44:06'
         ```
+        ou
+        ```sql
+        UPDATE intervention
+        SET heure = '10:44:06'
+        WHERE id = 3
+        ```   
     """
     )
     }}
