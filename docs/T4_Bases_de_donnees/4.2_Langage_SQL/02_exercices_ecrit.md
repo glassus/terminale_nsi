@@ -1153,6 +1153,14 @@
         SET heure = '10:44:06'
         WHERE jour = '2024-02-15' AND heure = '01:44:06'
         ```
+        ou
+        ```sql
+        UPDATE intervention
+        SET heure = '10:44:06'
+        WHERE id = 3
+        ```
+
+
     """
     )
     }}
