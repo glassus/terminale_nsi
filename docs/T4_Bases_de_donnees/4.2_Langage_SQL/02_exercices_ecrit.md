@@ -1097,7 +1097,7 @@
     correction(True,
     """
     ??? success \"Correction Q7\" 
-        $1 \times 3,50 + 3 \times 5,50 = 20$ 
+        $1 \\times 3,50 + 3 \\times 5,50 = 20$ 
 
         Le prix des médicaments est donc de 20 €.
     """
@@ -1110,7 +1110,7 @@
     """
     ??? success \"Correction Q8\" 
         ```sql
-        SELECT nom_medic
+        SELECT medicament.nom_medic
         FROM medicament
         JOIN ordonnance ON ordonnance.id_medic = medicament.id_medic
         WHERE id_ordo = 6
