@@ -1127,7 +1127,7 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Un clé primaire identifie de manière uniquement un enregistrement dans une table. Une clé étrangère d'une table est une clé primaire d'une autre table. Elle permet de relier ces deux tables.    
