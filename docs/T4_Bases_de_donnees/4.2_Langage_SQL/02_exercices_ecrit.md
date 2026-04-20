@@ -1097,7 +1097,7 @@
     correction(False,
     """
     ??? success \"Correction Q7\" 
-        $1 \times 3,50 + 3 \times 5,50 = 20$ 
+        $1 \\times 3,50 + 3 \\times 5,50 = 20$ 
 
         Le prix des médicaments est donc de 20 €.
     """
