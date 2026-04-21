@@ -12,9 +12,9 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Exercices SQL :
-        - [Exercice 2 du sujet Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024){. target="_blank"}
+    - Exercices SQL : 
         - [Exercice 3 Partie B du sujet Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024){. target="_blank"}
+        - [Exercice 2 du sujet Polynésie J2 2025](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2PO2025){. target="_blank"}
 
 
 
@@ -22,6 +22,7 @@
 
 
 ### *Thèmes déjà traités*
+- [Exercice 2 du sujet Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024){. target="_blank"}
 - Groupe 1 : [sujet Centres Étrangers J1 2024](T6_Annales/corrections/2024/24-NSIJ1G1_corr.md){. target="_blank"}
 - Groupe 2 : [sujet Métropole J1 2024](T6_Annales/corrections/2024/24-NSIJ1ME_corr.md){. target="_blank"}
 - Retour sur [l'algorithme KNN](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}

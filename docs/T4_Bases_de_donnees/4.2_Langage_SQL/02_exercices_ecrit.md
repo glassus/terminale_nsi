@@ -1237,4 +1237,147 @@
     }}
 
 
+!!! example "{{ exercice() }} <i id="ex2J2PO2025"></i>"
+
+    Exercice 2 du [sujet Polynésie J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="_blank"}    
+
     
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        ```sql
+        SELECT nom
+        FROM champignon
+        WHERE lamelle = 'oui' and couleur = 'orange'
+        ```    
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```sql
+        SELECT nom
+        FROM champignon
+        WHERE pied_max = 0 AND chapeau_max = 15 AND chapeau_min = 15
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        La clé étrangère de la table ```champignon``` est ```id_ordre```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        ```sql
+        SELECT champignon.nom
+        FROM champignon
+        JOIN ordre ON champignon.id_ordre = ordre.id
+        WHERE ordre.classe = 'agaricomycètes'
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        ```sql
+        INSERT INTO champignon ​
+        VALUES​ (56, 'amanite solitaire', 4,'oui','blanc', 6, 20, 4, 10)
+        ```      
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ```champignon(id, nom, #id_ordre, lamelle, couleur, chapeau_min, chapeau_max, pied_min, pied_max, #id_toxicite)``` 
+
+        ```ordre(id, nom, classe)```
+
+        ```toxicite(id_tox, type, effet)```  
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ```sql
+        UPDATE champignon
+        SET id_toxicite = 1
+        WHERE nom = 'amanite citrine'
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```sql
+        SELECT champignon.nom
+        FROM champignon
+        JOIN ordre ON champignon.id_ordre = ordre.id
+        JOIN toxicite ON champignon.id_toxicite = toxicite.id_tox
+        WHERE ordre.nom = 'amanitales' AND toxicite.type= 'très toxique'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        ```python
+        for e in liste_champi:
+            if e.saison == 'été':
+                print(e.nom)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        L'attribut ```cuisson``` du champignon ayant pour attribut ```nom``` ```'Lactaire délicieux'``` est ```'12 minutes à feu moyen'```.
+
+        Il est donc normal que la ligne ```return c.cuisson == 'feu moyen'``` renvoie ```False```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        ```python
+        for c in liste_champi:
+            if c.nom == 'Lactaire délicieux':
+                return recherche_textuelle(c.cuisson, 'feu moyen')
+        ```     
+    """
+    )
+    }}
