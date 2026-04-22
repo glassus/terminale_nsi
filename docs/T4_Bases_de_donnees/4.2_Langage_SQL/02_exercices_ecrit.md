@@ -1164,7 +1164,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Le résultat de cette requête est 
@@ -1178,7 +1178,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -1191,7 +1191,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         - Requête A : compte le nombre d'agrès mobilisés le 27 mars. La réponse est 2.
@@ -1204,7 +1204,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```sql
@@ -1220,7 +1220,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\"
         ```sql
