@@ -1036,9 +1036,212 @@
     }}
 
 
+!!! example "{{ exercice() }} <i id="ex2J1AN2025"></i>"
+    Exercice 2 du [sujet Amérique du Nord J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1AN1.pdf){. target="_blank"}   
+
+    ```python
+    class Colis:
+        def __init__(self, id, poids, adresse):
+            self.id = id
+            self.poids = poids
+            self.adresse = adresse
+            self.etat = 'préparé'
+    
+    colisA = Colis('AC12', 5.0, '20 rue de la paix 57000 Metz')
+    colisB = Colis('AF34', 10.25, '32 rue du centre 57000 Metz')
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \" 
+        ```python 
+        def passer_transit(self):
+            self.etat = 'transit'
+        ```
+    """
+    )
+    }}
 
 
+    ```python
+    def ajouter_colis(liste, colis):
+        # ajoute le colis à la fin de la liste
+        liste.append(colis)
+    ```
 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \" 
+        ```python 
+        def ajouter_colis(liste, colis):
+            if colis.poids <= 25:
+                liste.append(colis)
+            else :
+                print('Dépassement du poids maximum autorisé')
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \" 
+        ```python 
+        def nb_colis(liste):
+            return len(liste)
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def poids_total(liste):
+        total = ...
+        for c in liste :
+            total = ...
+        return total
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \" 
+        ```python 
+        def poids_total(liste):
+            total = 0
+            for c in liste :
+                total = total + c.poids
+            return total
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \" 
+        ```python 
+        def liste_colis(liste, statut):
+            lst = []
+            for c in liste :
+                if c.etat == statut:
+                    lst.append(c)
+            return lst
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def tri_decroissant(liste):
+        n = len(liste)
+        for i in range(n - 1):
+            min_pos = i
+            for j in range(i + 1, n):
+                if liste[j].poids > liste[min_pos].poids:
+                    min_pos = j
+            # Échanger les éléments
+            temp = liste[i]
+            liste[i] = liste[min_pos]
+            liste[min_pos] = temp
+        return liste
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \" 
+        La fonction ```tri_decroissant``` réalise un tri par sélection. Sa complexité dans le pire des cas est quadratique ($O(n^2)$).
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \" 
+        On aurait aussi pu utiliser un tri par insertion, qui est aussi de complexité quadratique. Ou bien encore le tri fusion, qui a une meilleure complexité, en $O(n \log n)$.
+    """
+    )
+    }}
+
+    ```python
+    def chargement_glouton(liste, rang, capacite):
+        if rang == len(liste):
+            return ...
+        elif liste[rang].poids <= ...:
+            return ... + chargement_glouton(liste, ..., ...)
+        else:
+            return chargement_glouton(liste, ..., ...) 
+    ```
+
+    Pour faire des tests :
+    ```python
+    colisA = Colis('AC12', 5.0, '20 rue de la paix 57000 Metz')
+    colisB = Colis('AF34', 10.25, '32 rue du centre 57000 Metz')
+    colisC = Colis('AZ14', 12, '33 rue des 3 bornes 75011 Paris')
+    colisD = Colis('AB56', 15, '18 rue des feuillantines 75005 Paris')
+    colisE = Colis('BF22', 17, '49 avenue Alsace-Lorraine 38000 Grenoble')
+    colisF = Colis('KV12', 11, '132 rue du Molinel 59000 Lille')
+
+    lst = []
+    ajouter_colis(lst, colisA)
+    ajouter_colis(lst, colisB)
+    ajouter_colis(lst, colisC)
+    ajouter_colis(lst, colisD)
+    ajouter_colis(lst, colisE)
+    ajouter_colis(lst, colisF)
+
+    lst = tri_decroissant(lst)
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8 \" 
+        ```python
+        def chargement_glouton(liste, rang, capacite):
+            if rang == len(liste):
+                return []
+            elif liste[rang].poids <= capacite:
+                return [liste[rang]] + chargement_glouton(liste, rang+1, capacite-liste[rang].poids)
+            else:
+                return chargement_glouton(liste, rang+1, capacite)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9 \" 
+        Ce problème apparait lorsqu'il y a eu trop d'appels récursifs, et qui la pile du processeur a débordé (*stack overflow*).
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10 \" 
+        ```python
+        def chargement_glouton2(liste, capacite):
+            colis_a_charger = []
+            for c in liste :
+                if c.poids <= capacite :
+                    colis_a_charger.append(c)
+                    capacite -= c.poids
+            return colis_a_charger
+        ```
+    """
+    )
+    }}
 
 {#
 !!! abstract "DS02"
