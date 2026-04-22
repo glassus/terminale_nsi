@@ -1178,7 +1178,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -1208,10 +1208,10 @@
     """
     ??? success \"Correction Q12\" 
         ```sql
-        SELECT DISTINCT nom
+        SELECT DISTINCT personnel.nom
         FROM personnel
         JOIN agres ON agres.idchefagres = personnel.matricule
-        WHERE jour = '2024-02-15'
+        WHERE agres.jour = '2024-02-15'
         ```
 
         Pour info, ```DISTINCT``` n'a pas besoin de parenthèses (comme ```COUNT```), ce n'est pas une fonction.
@@ -1224,7 +1224,7 @@
     """
     ??? success \"Correction Q13\"
         ```sql
-        SELECT DISTINCT nom
+        SELECT DISTINCT personnel.nom
         FROM personnel
         JOIN agres ON agres.idchefagres = personnel.matricule
         JOIN moyen ON moyen.idagres = agres.id
