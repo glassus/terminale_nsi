@@ -1187,7 +1187,7 @@
     colisC = Colis('AZ14', 12, '33 rue des 3 bornes 75011 Paris')
     colisD = Colis('AB56', 15, '18 rue des feuillantines 75005 Paris')
     colisE = Colis('BF22', 17, '49 avenue Alsace-Lorraine 38000 Grenoble')
-    colisF = Colis('KV12', 11, '132 rue du Molinel 59000 Lille')
+    colisF = Colis('KV12', 11, '155 rue du Molinel 59000 Lille')
 
     lst = []
     ajouter_colis(lst, colisA)
