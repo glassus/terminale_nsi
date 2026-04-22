@@ -1164,7 +1164,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Le résultat de cette requête est 
