@@ -5792,6 +5792,12 @@ Comme le masque de sous-réseau est <code>255.255.255.0</code>, les adresses IP 
 <span class="n">colisA</span> <span class="o">=</span> <span class="n">Colis</span><span class="p">(</span><span class="s1">&#39;AC12&#39;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;20 rue de la paix 57000 Metz&#39;</span><span class="p">)</span>
 <span class="n">colisB</span> <span class="o">=</span> <span class="n">Colis</span><span class="p">(</span><span class="s1">&#39;AF34&#39;</span><span class="p">,</span> <span class="mf">10.25</span><span class="p">,</span> <span class="s1">&#39;32 rue du centre 57000 Metz&#39;</span><span class="p">)</span>
 </code></pre></div>
+<details class="success">
+<summary>Correction Q1 </summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">passer_transit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">etat</span> <span class="o">=</span> <span class="s1">&#39;transit&#39;</span>
+</code></pre></div>
+</details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajouter_colis</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">colis</span><span class="p">):</span>
     <span class="c1"># ajoute le colis à la fin de la liste</span>
     <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colis</span><span class="p">)</span>
@@ -5864,7 +5870,7 @@ Comme le masque de sous-réseau est <code>255.255.255.0</code>, les adresses IP 
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="23 avril 2026 13:52:50 UTC">23 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="23 avril 2026 15:40:35 UTC">23 avril 2026</span>
   </span>
 
     
