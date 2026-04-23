@@ -1358,7 +1358,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         L'attribut ```cuisson``` du champignon ayant pour attribut ```nom``` ```'Lactaire délicieux'``` est ```'12 minutes à feu moyen'```.
@@ -1369,7 +1369,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         ```python
