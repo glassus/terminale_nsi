@@ -1126,7 +1126,7 @@
     """
     ??? success \"Correction Q5 \" 
         ```python 
-        def liste_colis(liste, statut):
+        def liste_colis_etat(liste, statut):
             lst = []
             for c in liste :
                 if c.etat == statut:
