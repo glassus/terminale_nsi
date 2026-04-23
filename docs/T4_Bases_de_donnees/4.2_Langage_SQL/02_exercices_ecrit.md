@@ -1331,15 +1331,14 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```sql
         SELECT champignon.nom
         FROM champignon
         JOIN ordre ON champignon.id_ordre = ordre.id
-        JOIN toxicite ON champignon.id_toxicite = toxicite.id_tox
-        WHERE ordre.nom = 'amanitales' AND toxicite.type= 'très toxique'
+        WHERE ordre.nom = 'amanitales' AND champignon.id_toxicite = 1
         ```
     """
     )
