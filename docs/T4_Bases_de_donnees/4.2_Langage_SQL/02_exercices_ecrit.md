@@ -1247,7 +1247,7 @@
     """
     ??? success \"Correction Q1\" 
         ```sql
-        SELECT nom
+        SELECT nom 
         FROM champignon
         WHERE lamelle = 'oui' and couleur = 'orange'
         ```    
