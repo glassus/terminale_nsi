@@ -1256,7 +1256,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -1269,7 +1269,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         La clé étrangère de la table ```champignon``` est ```id_ordre```. 
