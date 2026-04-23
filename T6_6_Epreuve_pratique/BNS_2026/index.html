@@ -6284,6 +6284,79 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
 <li><a class="" href="../data2026/26_BCG_NSI_17/analyse_budget.py" target="_blank">analyse_budget.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_17/budget_complet.csv" target="_blank">budget_complet.csv</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">total_par_type</span><span class="p">(</span><span class="n">mouvements</span><span class="p">,</span> <span class="n">type_mouvement</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">mv</span> <span class="ow">in</span> <span class="n">mouvements</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mv</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">type_mouvement</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">mv</span><span class="p">[</span><span class="s1">&#39;montant&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_total</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">total_par_type</span><span class="p">(</span><span class="n">mouvements_test</span><span class="p">,</span> <span class="s1">&#39;dépense&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2150.0</span> 
+    <span class="k">assert</span> <span class="n">total_par_type</span><span class="p">(</span><span class="n">mouvements_test</span><span class="p">,</span> <span class="s1">&#39;recette&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mf">2300.0</span>
+    <span class="k">assert</span> <span class="n">total_par_type</span><span class="p">(</span><span class="n">mouvements_test</span><span class="p">,</span> <span class="s1">&#39;cotisations&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests passés avec succès&#39;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p>Le montant annuel des recettes est 2300, le montant annuel des dépenses est 2150. Le solde annuel est donc de 150.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_solde_annuel</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">solde_annuel</span><span class="p">(</span><span class="n">mouvements_test</span><span class="p">)</span> <span class="o">==</span> <span class="mi">150</span>
+</code></pre></div>
+<p>Ce test lève effectivement une erreur.</p>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p>Analysons le code de la fonction <code>solde_annuel</code> :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">solde_annuel</span><span class="p">(</span><span class="n">mouvements</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule le solde annuel en additionnant les soldes de chaque mois.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Parcourt les mois de l&#39;année pour cumuler le bilan</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">solde_mensuel</span><span class="p">(</span><span class="n">mouvements</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div></td></tr></table></div>
+L'erreur vient de la ligne 7. Le <code>range</code> ne va pas assez loin, et <code>m</code> s'arrêtera à la valeur 11.</p>
+<p>Voici le code corrigé :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">solde_annuel</span><span class="p">(</span><span class="n">mouvements</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcule le solde annuel en additionnant les soldes de chaque mois.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Parcourt les mois de l&#39;année pour cumuler le bilan</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">solde_mensuel</span><span class="p">(</span><span class="n">mouvements</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div></td></tr></table></div>
+<p>En appliquant ce code sur le budget complet, on obtient :</p>
+<p><code>Le solde annuel sur le fichier complet est de : -3423.1699999999764</code>.</p>
+<p>Le solde annuel est donc déficitaire de 3423,17 €.</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 18</p>
@@ -6660,7 +6733,7 @@ Il faut ajouter <code>dico['écart']</code> et non pas le soustraire.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="20 avril 2026 09:16:27 UTC">20 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="23 avril 2026 08:05:31 UTC">23 avril 2026</span>
   </span>
 
     
