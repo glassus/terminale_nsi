@@ -6746,6 +6746,128 @@ L'erreur vient de la ligne 7. Le <code>range</code> ne va pas assez loin, et <co
 <li><a class="" href="../data2026/26_BCG_NSI_22/ascii.py" target="_blank">ascii.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_22/qrcode.py" target="_blank">qrcode.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Sébastien Chantery</em>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">bin2dec</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie l’entier naturel en base 10 correspondant au tuple t</span>
+<span class="sd">    parametre en entrée:</span>
+<span class="sd">        t: tuple</span>
+<span class="sd">    parametre en sortie:</span>
+<span class="sd">        int</span>
+<span class="sd">    &gt;&gt;&gt; bin2dec((0,1,1,0,0,0,0,1))</span>
+<span class="sd">    97</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>                            <span class="c1"># On initialise n à 0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>          <span class="c1"># On parcourt le tuple de gauche à droite dans le sens inverse de ses puissances</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># On ajoute la puissance de 2 correspondant au rang de i</span>
+    <span class="k">return</span> <span class="n">n</span>                         <span class="c1"># On renvoie n</span>
+</code></pre></div></p>
+<p>Lorsqu'on utilise cette fonction avec le QR code de la figure 1, on obtient le nom <code>M.Hara</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># implémentation du QR Code de la figure 1:</span>
+<span class="n">qrcode_fig1</span> <span class="o">=</span> <span class="n">ascii</span><span class="o">.</span><span class="n">figure1</span>
+
+<span class="n">sol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="n">qrcode_fig1</span><span class="p">:</span>
+    <span class="n">sol</span> <span class="o">+=</span> <span class="n">ascii</span><span class="o">.</span><span class="n">dict_ascii</span><span class="p">[</span><span class="n">bin2dec</span><span class="p">(</span><span class="n">lst</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Sébastien Chantery</em>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">qrcode2dec</span><span class="p">(</span><span class="n">qrcode</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    renvoie une liste d’entiers décimaux correspondant à chacune des lignes du qrcode</span>
+<span class="sd">    parametre en entrée:</span>
+<span class="sd">        qrcode:list de tuples</span>
+<span class="sd">    paramètre en sortie</span>
+<span class="sd">        liste d&#39;entiers</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">liste_resultat</span> <span class="o">=</span> <span class="p">[]</span>                           <span class="c1"># On initialise une liste vide d&#39;entiers </span>
+    <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">qrcode</span><span class="p">:</span>                        <span class="c1"># Pour chaque ligne dans le qrcode</span>
+        <span class="n">liste_resultat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bin2dec</span><span class="p">(</span><span class="n">ligne</span><span class="p">))</span>   <span class="c1"># on ajoute à liste_resultat la conversion de la ligne en entier</span>
+    <span class="k">return</span> <span class="n">liste_resultat</span>                       <span class="c1"># On renvoie la liste des résultats</span>
+</code></pre></div></p>
+<p>Test avec le QR code de la figure 1:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">qrcode2dec</span><span class="p">(</span><span class="n">ascii</span><span class="o">.</span><span class="n">figure1</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">77</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">114</span><span class="p">,</span> <span class="mi">97</span><span class="p">]</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Sébastien Chantery</em></p>
+<p>À l'exécution de la fonction <code>test_dec2str</code>, on obtient l'erreur <code>KeyError: 233</code>. Cela signifie qu'aucune valeur n'est associée à la clé 233 dans le dictionnaire <code>ascii</code>, qui ne contient que des clés entre 0 et 127. </p>
+<p>Il faut donc rajouter un test pour vérifier la validité de la clé :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dec2str</span><span class="p">(</span><span class="n">liste_dec</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; entrée: liste d&#39;entiers décimaux</span>
+<span class="sd">        sortie: chaine de caractère formée des caractères correspondant</span>
+<span class="sd">        de la table ascii &#39;&#39;&#39;</span>
+    <span class="n">table_ascii</span> <span class="o">=</span> <span class="n">ascii</span><span class="o">.</span><span class="n">dict_ascii</span>
+    <span class="n">chaine</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">entier</span> <span class="ow">in</span> <span class="n">liste_dec</span><span class="p">:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">entier</span> <span class="o">&lt;=</span> <span class="mi">127</span><span class="p">:</span>                <span class="c1"># Modification: on vérifie que entier est présent comme clé </span>
+            <span class="n">chaine</span> <span class="o">+=</span> <span class="n">table_ascii</span><span class="p">[</span><span class="n">entier</span><span class="p">]</span>     <span class="c1"># Si oui, on ajoute le caractère</span>
+        <span class="k">else</span><span class="p">:</span>                                 <span class="c1"># Sinon,</span>
+            <span class="n">chaine</span> <span class="o">+=</span> <span class="s1">&#39;□&#39;</span>                     <span class="c1"># On met un caractère d&#39;erreur</span>
+    <span class="k">return</span> <span class="n">chaine</span>
+</code></pre></div>
+<p>L'exécution de la fonction <code>test_dec2str</code> donne maintenant ceci :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_dec2str</span><span class="p">()</span>
+<span class="n">Test</span> <span class="mi">1</span> <span class="n">reussi</span><span class="err">!</span>
+<span class="n">Test</span> <span class="mi">2</span> <span class="n">reussi</span><span class="err">!</span>
+<span class="n">Test</span> <span class="mi">3</span> <span class="n">r</span><span class="err">□</span><span class="n">ussi</span><span class="err">!</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Sébastien Chantery</em></p>
+<p>L'exécution de la fonction <code>str2qrcode</code> avec le message <code>M.Hara</code> renvoie :</p>
+<div class="highlight"><pre><span></span><code><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> 
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> 
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> 
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+<p>alors qu'elle devrait renvoyer :</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+On voit que là où la fonction devrait renvoyer des listes de longueur 8 (correspondant à des octets), elle renvoie des listes de longueur inférieure.
+Néanmoins les valeurs sont bonnes, il suffit juste de rajouter des 0 à gauche.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">str2qrcode</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Convertit une chaine de caractères en liste de tuples binaires.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">qrcode</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">table_inverse</span> <span class="o">=</span> <span class="p">{</span><span class="n">valeur</span><span class="p">:</span> <span class="n">cle</span> <span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">ascii</span><span class="o">.</span><span class="n">dict_ascii</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
+        <span class="n">entier</span> <span class="o">=</span> <span class="n">table_inverse</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">caractere</span><span class="p">,</span> <span class="mi">63</span><span class="p">)</span>
+        <span class="n">binaire_str</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">entier</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">binaire_str</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>    <span class="c1"># si la longueur de binaire_str est inférieure à 8</span>
+            <span class="n">binaire_str</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">binaire_str</span><span class="p">))</span> <span class="o">+</span> <span class="n">binaire_str</span>  <span class="c1"># On le complète par des 0 à gauche</span>
+        <span class="n">ligne</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">bit</span><span class="p">)</span> <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">binaire_str</span><span class="p">)</span>
+        <span class="n">qrcode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">qrcode</span>
+</code></pre></div>
+<p>On vérifie :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">str2qrcode</span><span class="p">(</span><span class="s1">&#39;M.Hara&#39;</span><span class="p">)</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> 
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> 
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> 
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> 
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> 
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+On a bien ce qui est attendu.</p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 23</p>
@@ -6755,6 +6877,101 @@ L'erreur vient de la ligne 7. Le <code>range</code> ne va pas assez loin, et <co
 <li><a class="" href="../data2026/26_BCG_NSI_23/transmission.py" target="_blank">transmission.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_23/data.txt" target="_blank">data.txt</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<p>En consultant le fichier <code>transmission.py</code>, on remarque qu'il s'agit de méthodes à compléter dans la classe <code>Transmission</code>, en utilisant donc la syntaxe de la POO. Il n'y a donc pas de paramètre <code>trame</code>... ni de valeur à renvoyer : il faut affecter les valeurs aux attributs de la classe. Ce sont donc des <em>setters</em>.</p>
+<p>On remarque que la classe <code class="highlight"><span class="n">Transmission</span></code> comporte des <em>getters</em>, il est donc préférable de les utiliser pour les tests plutôt que d'accèder directement aux attributs (privés, d'où l'utilisation du <code class="highlight"><span class="n">_</span></code>).</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decoder_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">temp_binaire</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_temperature</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_binaire</span> <span class="o">-</span> <span class="mi">900</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">decoder_humidite</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">humidite_dcb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">36</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_humidite</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">humidite_dcb</span><span class="p">[:</span><span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">humidite_dcb</span><span class="p">[</span><span class="mi">4</span><span class="p">:],</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># ==========</span>
+<span class="c1"># Tests</span>
+<span class="c1"># ==========</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Transmission</span><span class="p">(</span><span class="s1">&#39;0010101011001000010010001100011000101101&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">t</span><span class="o">.</span><span class="n">get_temperature</span><span class="p">()</span> <span class="o">==</span> <span class="mf">26.4</span>
+<span class="k">assert</span> <span class="n">t</span><span class="o">.</span><span class="n">get_humidite</span><span class="p">()</span> <span class="o">==</span> <span class="mi">62</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<p>On vérifie pour chaque bloc de la trame la parité (en comptant les <code class="highlight"><span class="s1">&#39;1&#39;</span></code>  dans le bloc) et on la compare on bit de contrôle.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_valide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">blocs_trame</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">36</span><span class="p">]]</span>
+    <span class="n">bits_controle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">36</span><span class="p">:</span><span class="mi">40</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">nombre_de_1</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">blocs_trame</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                <span class="n">nombre_de_1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">nombre_de_1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bits_controle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span> 
+</code></pre></div>
+Autre version avec une fonction intégrée de calcul de parité d'un bloc:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_valide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parite</span><span class="p">(</span><span class="n">bloc</span><span class="p">):</span>
+        <span class="n">nombre_de_1</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">bloc</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                <span class="n">nombre_de_1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">nombre_de_1</span> <span class="o">%</span> <span class="mi">2</span>
+
+    <span class="n">blocs_trame</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">36</span><span class="p">]]</span>
+    <span class="n">bits_controle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">36</span><span class="p">:</span><span class="mi">40</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">parite</span><span class="p">(</span><span class="n">blocs_trame</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bits_controle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span> 
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<p><em>Solution proposée par Cédric Gouygou</em></p>
+<p>On constate une <code class="highlight"><span class="ne">IndexError</span></code> lors de l'appel à la méthode <code class="highlight"><span class="n">est_valide</span></code>. Après analyse du fichier <code class="highlight"><span class="n">data</span><span class="o">.</span><span class="n">txt</span></code>, on constate que certaines trames ne sont pas valides car elles ne contiennent pas 40 bits.</p>
+<p>Il suffit donc d'ajouter un test sur la longueur de la trame au début de la méthode <code class="highlight"><span class="n">est_valide</span></code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_valide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parite</span><span class="p">(</span><span class="n">bloc</span><span class="p">):</span>
+        <span class="n">nombre_de_1</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="n">bloc</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">bit</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                <span class="n">nombre_de_1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">nombre_de_1</span> <span class="o">%</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">blocs_trame</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">28</span><span class="p">:</span><span class="mi">36</span><span class="p">]]</span>
+    <span class="n">bits_controle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="mi">36</span><span class="p">:</span><span class="mi">40</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">parite</span><span class="p">(</span><span class="n">blocs_trame</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bits_controle</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span> 
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p><em>Solution proposée par Frédéric Peurière</em></p>
+<p>La correction consiste à vérifier la longueur de la trame dans <code>__init__</code> avant d'appeler <code>decoder()</code>. Si la trame ne fait pas 40 bits, on n'effectue aucun décodage et les attributs restent à None. La méthode <code>est_valide()</code> retourne également False dans ce cas. </p>
+<p>Ainsi <code>analyse.py</code> filtre automatiquement ces trames corrompues grâce au <code>if t.est_valide()</code> déjà présent.</p>
+<p>Nouvelle version du constructeur:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trame</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_temperature</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_humidite</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trame</span> <span class="o">=</span> <span class="n">trame</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">trame</span><span class="p">)</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="p">()</span>
+</code></pre></div>
+</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -6778,7 +6995,7 @@ L'erreur vient de la ligne 7. Le <code>range</code> ne va pas assez loin, et <co
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="23 avril 2026 08:46:55 UTC">23 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 avril 2026 16:38:29 UTC">25 avril 2026</span>
   </span>
 
     
