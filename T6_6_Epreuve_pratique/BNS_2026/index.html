@@ -6096,6 +6096,106 @@ au début de la fonction <code>genere_kml</code>. </p>
 <li><a class="" href="../data2026/26_BCG_NSI_14/IHM_evacuation.py" target="_blank">IHM_evacuation.py</a></li>
 <li><a class="" href="../data2026/26_BCG_NSI_14/simulation_evacuation.py" target="_blank">simulation_evacuation.py</a></li>
 </ul>
+<details class="success">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_occupants_restants</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie le nombre d&#39;occupants restants dans la pièce.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">nb_occ</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">lst</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">grille</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+            <span class="n">nb_occ</span> <span class="o">+=</span> <span class="n">nb</span>
+    <span class="k">return</span> <span class="n">nb_occ</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">evacuation</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">Piece</span><span class="p">,</span> <span class="n">silencieux</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; simule l&#39;évacuation de la pièce et renvoie le nombre de tours nécessaire.</span>
+<span class="sd">        A chaque tour, chacun des occupants se déplace, si possible, d&#39;une case</span>
+<span class="sd">        vers la sortie la plus proche. Si le paramètre silencieux vaut false,</span>
+<span class="sd">        l&#39;état de la pièce à chaque tour est affiché dans la console.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">nb_tours</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">nb_occupants_restants</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">nb_tours</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span><span class="o">.</span><span class="n">alerter</span><span class="p">(</span><span class="n">silencieux</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">nb_tours</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q3</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajouter_sortie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; permet d&#39;ajouter des sorties à la pièce.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="n">position</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;O&#39;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">position</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">i_max</span><span class="p">,</span> <span class="n">position</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">position</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">j_max</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<details class="success">
+<summary>Correction Q4</summary>
+<p>Analysons le code initial :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">choix_sortie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la sortie à utiliser pour une personne positionnée sur la ligne i et la colonne j.</span>
+<span class="sd">        A CORRIGER EN PARTIE 2 (Pour l&#39;instant, seule la 1ère sortie est utilisée !)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">distance_de_manhattan</span><span class="p">(</span><span class="n">destination</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; fonction privée renvoyant la distance de Manhattan entre la case (i,j) et la destination reçue en paramètre.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">destination</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">destination</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Aucune sortie&#39;</span>
+    <span class="n">choix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">distance_de_manhattan</span><span class="p">(</span><span class="n">choix</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">)):</span>
+        <span class="n">autre_sortie</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">choix</span> <span class="o">=</span> <span class="n">autre_sortie</span>
+            <span class="n">distance</span> <span class="o">=</span> <span class="n">d2</span>
+    <span class="k">return</span> <span class="n">choix</span>
+</code></pre></div></td></tr></table></div>
+<p>Le test à la ligne 14 n'a aucun sens, <code>k</code> ne pouvant jamais être négatif.
+Et heureusement, car sinon la ligne 16 renverrait une erreur car <code>d2</code> n'existe pas.</p>
+<p>Pour corriger cette fonction, il faut parcourir toutes les sorties pour sélectionner la plus proche, au sens de la distance de Manhattan :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">choix_sortie</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la sortie à utiliser pour une personne positionnée sur la ligne i et la colonne j.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">distance_de_manhattan</span><span class="p">(</span><span class="n">destination</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; fonction privée renvoyant la distance de Manhattan entre la case (i,j) et la destination reçue en paramètre.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">destination</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="n">destination</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Aucune sortie&#39;</span>
+    <span class="n">choix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">distance_de_manhattan</span><span class="p">(</span><span class="n">choix</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">distance_de_manhattan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">distance</span><span class="p">:</span>
+            <span class="n">distance</span> <span class="o">=</span> <span class="n">distance_de_manhattan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+            <span class="n">choix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sorties</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">choix</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">sujet 15</p>
@@ -6995,7 +7095,7 @@ Autre version avec une fonction intégrée de calcul de parité d'un bloc:</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 avril 2026 16:38:29 UTC">25 avril 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="26 avril 2026 13:13:11 UTC">26 avril 2026</span>
   </span>
 
     
