@@ -1307,11 +1307,14 @@
     correction(True,
     """
     ??? success \"Correction Q6\" 
-        ```champignon(id, nom, #id_ordre, lamelle, couleur, chapeau_min, chapeau_max, pied_min, pied_max, #id_toxicite)``` 
+        $\\texttt{\\underline{sdf}}$
 
-        ```ordre(id, nom, classe)```
+        
+        ```champignon(```$\\underline{\\texttt{id}}$```, nom, #id_ordre, lamelle, couleur, chapeau_min, chapeau_max, pied_min, pied_max, #id_toxicite)``` 
 
-        ```toxicite(id_tox, type, effet)```  
+        ```ordre(```$\\underline{\\texttt{id}}$```, nom, classe)```
+
+        ```toxicite(```$\\underline{\\texttt{id_tox}}$```, type, effet)```  
     """
     )
     }}
