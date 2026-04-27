@@ -1346,14 +1346,14 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         ```python 
-        def nb_personne_honneur(self):
+        def nb_personne_honneur(self, annee):
             nb = 0
             for pers in self.liste:
-                if pers.annee_anciennete() == 10:
+                if annee - pers.annee_entree == 10:
                     nb += 1
             return nb
         ```
