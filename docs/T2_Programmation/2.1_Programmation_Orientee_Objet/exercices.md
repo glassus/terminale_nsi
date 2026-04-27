@@ -1363,9 +1363,24 @@
 
 
     {{
-    correction(False,
+    correction(True
     """
     ??? success \"Correction Q8 \" 
+        ```python
+        def plus_anciens(self):
+            maxi = self.liste[0].annee_anciennete()
+            for pers in self.liste:
+                if pers.annee_anciennete() > maxi:
+                    maxi = pers.annee_anciennete()
+            lst = []
+            for pers in self.liste:
+                if pers.annee_anciennete() == maxi:
+                    lst.append(pers.num_badge)            
+            return lst
+
+        ```
+        ou bien :
+        
         ```python 
         def plus_anciens(self):
             maxi = self.liste[0].annee_anciennete()
