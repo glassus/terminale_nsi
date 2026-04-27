@@ -1430,7 +1430,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12 \" 
         L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
