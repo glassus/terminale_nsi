@@ -1363,7 +1363,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1398,7 +1398,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
@@ -1407,7 +1407,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         ```sql
@@ -1421,7 +1421,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11 \" 
         L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
@@ -1430,7 +1430,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12 \" 
         L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
