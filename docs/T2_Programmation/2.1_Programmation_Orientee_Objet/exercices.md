@@ -1153,7 +1153,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         La fonction ```tri_decroissant``` réalise un tri par sélection. Sa complexité dans le pire des cas est quadratique ($O(n^2)$).
@@ -1162,7 +1162,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         On aurait aussi pu utiliser un tri par insertion, qui est aussi de complexité quadratique. Ou bien encore le tri fusion, qui a une meilleure complexité, en $O(n \log n)$.
