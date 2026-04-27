@@ -1398,7 +1398,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
