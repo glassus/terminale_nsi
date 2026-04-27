@@ -1421,7 +1421,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11 \" 
         L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
