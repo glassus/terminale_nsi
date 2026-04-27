@@ -1201,7 +1201,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1218,7 +1218,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \" 
         Ce problème apparait lorsqu'il y a eu trop d'appels récursifs, et qui la pile du processeur a débordé (*stack overflow*).
@@ -1227,7 +1227,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         ```python
@@ -1258,7 +1258,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         ```python 
@@ -1269,7 +1269,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```python 
@@ -1280,7 +1280,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python 
@@ -1298,7 +1298,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python 
@@ -1310,7 +1310,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python 
@@ -1331,7 +1331,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         ```python 
@@ -1346,7 +1346,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         ```python 
