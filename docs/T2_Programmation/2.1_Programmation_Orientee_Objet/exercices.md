@@ -1243,6 +1243,226 @@
     )
     }}
 
+
+!!! example "{{ exercice() }} <i id="ex3J1A2024"></i>"
+    Exercice 3 du [sujet Asie J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1JA1.pdf){. target="_blank"}   
+
+    ```python
+    class Personne():
+        def __init__(self, num, n , p , a_naiss, a_entree):
+            self.num_badge = num
+            self.nom = n
+            self.prenom = p
+            self.annee_naissance = a_naiss
+            self.annee_entree = a_entree
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1 \" 
+        ```python 
+        personneA = Personne(112, 'LESIEUR', 'Isabelle', 1982, 2005)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2 \" 
+        ```python 
+        personneA.num_badge
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3 \" 
+        ```python 
+        def annee_anciennete(self):
+            return 2024 - self.annee_entree
+        ```
+    """
+    )
+    }}
+
+    ```python 
+    class Personnel:
+        def __init__(self):
+            self.liste = []
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4 \" 
+        ```python 
+        def ajouter(self, personne):
+            self.liste.append(personne)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5 \" 
+        ```python 
+        def effectif(self):
+            return len(self.liste)
+        ```
+    """
+    )
+    }}
+
+
+    ```python
+    def donne_nom(..., num):
+        for elt in self.liste:
+            if ... == num:
+                return ...
+        return ...
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6 \" 
+        ```python 
+        def donne_nom(self, num):
+            for elt in self.liste:
+                if elt.num_badge == num:
+                    return elt.nom
+            return None
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7 \" 
+        ```python 
+        def nb_personne_honneur(self):
+            nb = 0
+            for pers in self.liste:
+                if pers.annee_anciennete() == 10:
+                    nb += 1
+            return nb
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8 \" 
+        ```python 
+        def plus_anciens(self):
+            maxi = self.liste[0].annee_anciennete()
+            lst = []
+            for pers in self.liste:
+                if pers.annee_anciennete() > maxi:
+                    maxi = pers.annee_anciennete()
+                    lst = [pers.nom]
+                elif pers.annee_anciennete() == maxi:
+                    lst.append(pers.nom)
+            return lst
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10 \" 
+        ```sql
+        UPDATE Personnel
+        SET num_centre = 3
+        WHERE num_badge = 135
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11 \" 
+        L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12 \" 
+        L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13 \" 
+        ```sql
+        SELECT Personnel.nom
+        FROM Personnel
+        JOIN Centre ON Centre.num = Personnel.num_centre
+        WHERE Centre.ville = 'Lille' AND Personnel.annee_debut >= 2015 AND Personnel.annee_debut <= 2020
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q14 \" 
+        La requête 
+        ```sql
+        DELETE *
+        FROM Centre
+        WHERE nom = 'Normandie';
+        ```
+        renvoie une erreur car ```DELETE``` ne marche pas comme cela, il aurait fallu écrire :
+        ```sql
+        DELETE FROM Centre
+        WHERE nom = 'Normandie';
+        ```
+
+        Ceci dit, cette question évoque sans doute le fait qu'on ne peut pas supprimer un enregistrement de la table ```Centre``` si des enregistrements de la table ```Personnel``` y font référence. 
+
+        Il faudrait donc dans un premier temps réaffecter tous les personnels de la table ```Personnel``` qui ont un ```num_centre``` à 1. Ensuite on peut supprimer ce centre dans la table ```Centre```.
+
+
+    """
+    )
+    }}
+
 {#
 !!! abstract "DS02"
     === "Sujet"

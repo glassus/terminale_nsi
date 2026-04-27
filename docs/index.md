@@ -12,15 +12,15 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Exercice SQL : [Exercice 2 du sujet Polynésie J2 2025](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2PO2025){. target="_blank"}
     - Exercice POO + algos gloutons : [Exercice 2 du sujet Amérique du Nord J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex2J1AN2025){. target="_blank"}
-
+    - Exercice POO + SQL : [Exercice 3 du sujet Asie J1 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1A2024){. target="_blank"}
 
 
 
 
 
 ### *Thèmes déjà traités*
+- Exercice SQL : [Exercice 2 du sujet Polynésie J2 2025](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2PO2025){. target="_blank"}
 - [Exercice 3 Partie B du sujet Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024){. target="_blank"}
 - [Exercice 2 du sujet Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024){. target="_blank"}
 - Groupe 1 : [sujet Centres Étrangers J1 2024](T6_Annales/corrections/2024/24-NSIJ1G1_corr.md){. target="_blank"}
