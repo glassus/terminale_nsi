@@ -1363,7 +1363,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1398,7 +1398,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
@@ -1407,7 +1407,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         ```sql
@@ -1421,7 +1421,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11 \" 
         L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
@@ -1430,7 +1430,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12 \" 
         L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
@@ -1478,9 +1478,214 @@
     )
     }}
 
+
+!!! example "{{ exercice() }} <i id="ex3J1ME2023"></i>"
+    Exercice 3 du [sujet Métropole J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Metropole_J1.pdf){. target="_blank"}
+
+    ```python
+    class Region:
+        '''Modélise une région d'un pays sur une carte.'''
+        def __init__(self, nom_region):
+            '''
+            initialise une région
+            : param nom_region (str) le nom de la région
+            '''
+            self.nom = nom_region
+            # tableau des régions voisines, vide au départ
+            self.tab_voisines = []
+            # tableau des couleurs disponibles pour colorier la région
+            self.tab_couleurs_disponibles = ['rouge', 'vert', 'bleu', 'jaune', 'orange', 'marron']
+            # couleur attribuée à la région et non encore choisie au départ
+            self.couleur_attribuee = None
+
+    ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        ```nom```, ```tab_voisines```, ```tab_couleurs_disponibles``` et ```couleur_attribuee``` sont des attributs.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```nom_region``` est une chaîne de caractères, de type ```String```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        ```python
+        ge = Region('Grand Est')
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        ```python
+        
+        def renvoie_premiere_couleur_disponible(self):
+            '''
+            Renvoie la première couleur du tableau des couleurs
+            disponibles supposé non vide.
+            : return (str)
+            '''
+            return self.tab_couleurs_disponibles[0]
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        ```python
+        def renvoie_nb_voisines(self) :
+            '''
+            Renvoie le nombre de régions voisines.
+            : return (int)
+            '''
+            return len(self.tab_voisines)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ```python
+        def est_coloriee(self):
+            '''
+            Renvoie True si une couleur a été attribuée à cette
+            région et False sinon.
+            : return (bool)
+            '''
+            return self.couleur_attribuee != None
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ```python
+        def retire_couleur(self, couleur):
+            '''
+            Retire couleur du tableau de couleurs disponibles de
+            la région si elle est dans ce tableau. Ne fait rien
+            sinon.
+            : param couleur (str)
+            : ne renvoie rien
+            : effet de bord sur le tableau des couleurs disponibles
+            '''
+            if couleur in self.tab_couleurs_disponibles:
+                self.tab_couleurs_disponibles.remove(couleur)
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def est_voisine(self, region):
+            '''
+            Renvoie True si la region passée en paramètre est une
+            voisine et False sinon.
+            : param region (Region)
+            : return (bool)
+            '''
+            for r in self.tab_voisines:
+                if r == region:
+                    return True
+            return False
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        ```python
+        def renvoie_tab_regions_non_coloriees(self):
+            '''
+            Renvoie un tableau dont les éléments sont les régions
+            du pays sans couleur attribuée.
+            : return (list) tableau d’instances de la classe
+            Region
+            '''
+            lst = []
+            for region in self.tab_regions:
+                if not region.est_coloriee():
+                    lst.append(region)
+            return lst
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10.a\" 
+        Cette méthode renvoie ```None``` lorsque toutes les régions sont coloriées.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10.b\" 
+        Quand cette méthode ne renvoie pas ```None```, elle renvoie la région non coloriée qui a le plus de voisins.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        ```python
+        def colorie(self):
+            r_max = self.renvoie_max()
+            while r_max != None:
+                couleur = r_max.renvoie_premiere_couleur_disponible()
+                r_max.couleur_attribuee = couleur
+                for r in r_max.tab_voisines :
+                    r.retire_couleur(couleur)
+                r_max = self.renvoie_max()
+        ```
+    """
+    )
+    }}
+
+
 {#
-!!! abstract "DS02"
-    === "Sujet"
+
+!!! abstract 'DS02'
+    === 'Sujet'
         ## Gestion d'une bibliothèque
 
         Il s'agit de gérer les livres d'une bibliothèque, à l'aide de deux classes, la classe `Livre` et la classe `Bibliotheque`.
@@ -1517,8 +1722,8 @@
 
         ```python
         >>> ma_bibli = Bibliotheque()
-        >>> livre1 = Livre("Les Misérables", "Victor Hugo", 3)
-        >>> livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
+        >>> livre1 = Livre('Les Misérables', 'Victor Hugo', 3)
+        >>> livre2 = Livre('Les fleurs du mal', 'Charles Baudelaire', 1)
         >>> ma_bibli.ajoute(livre1)
         >>> ma_bibli.ajoute(livre2)
         >>> livre1.description()
@@ -1559,7 +1764,7 @@
 
         Proposer un code pour la classe `Livre` et la classe `Bibliotheque` répondant au cahier des charges.
 
-    === "Correction"
+    === 'Correction'
 
         ```python linenums='1'
         class Livre():
@@ -1573,9 +1778,9 @@
                     self.etat -= 1
 
             def description(self):
-                print("Titre :", self.titre)
-                print("Auteur :",self.auteur)
-                print("Etat :", self.etat)
+                print('Titre :', self.titre)
+                print('Auteur :',self.auteur)
+                print('Etat :', self.etat)
 
         class Bibliotheque:
             def __init__(self):
@@ -1590,16 +1795,16 @@
                         self.livres.remove(livre)
 
             def inventaire(self):
-                print("---------------")
-                print("contenu de ma bibliothèque :")
-                print("---------------")
+                print('---------------')
+                print('contenu de ma bibliothèque :')
+                print('---------------')
                 for livre in self.livres:
                     livre.description()
                     print()
 
         ma_bibli = Bibliotheque()
-        livre1 = Livre("Les Misérables", "Victor Hugo", 3)
-        livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
+        livre1 = Livre('Les Misérables', 'Victor Hugo', 3)
+        livre2 = Livre('Les fleurs du mal', 'Charles Baudelaire', 1)
         livre1.description()
         ma_bibli.ajoute(livre1)
         ma_bibli.ajoute(livre2)
