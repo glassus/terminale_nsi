@@ -1500,7 +1500,7 @@
 
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```nom```, ```tab_voisines```, ```tab_couleurs_disponibles``` et ```couleur_attribuee``` sont des attributs.
@@ -1509,7 +1509,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```nom_region``` est une chaîne de caractères, de type ```String```.
@@ -1518,7 +1518,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
@@ -1529,7 +1529,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python
@@ -1547,7 +1547,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -1563,7 +1563,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python
@@ -1580,7 +1580,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -1602,7 +1602,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -1623,7 +1623,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```python
@@ -1645,7 +1645,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.a\" 
         Cette méthode renvoie ```None``` lorsque toutes les régions sont coloriées.
@@ -1655,7 +1655,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.b\" 
         Quand cette méthode ne renvoie pas ```None```, elle renvoie la région non coloriée qui a le plus de voisins.
@@ -1664,7 +1664,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         ```python
