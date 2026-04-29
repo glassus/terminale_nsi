@@ -1440,7 +1440,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13 \" 
         ```sql
@@ -1454,7 +1454,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14 \" 
         La requête 
