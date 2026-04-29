@@ -1500,7 +1500,7 @@
 
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         ```nom```, ```tab_voisines```, ```tab_couleurs_disponibles``` et ```couleur_attribuee``` sont des attributs.
@@ -1509,7 +1509,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```nom_region``` est une chaîne de caractères, de type ```String```.
@@ -1518,7 +1518,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python
