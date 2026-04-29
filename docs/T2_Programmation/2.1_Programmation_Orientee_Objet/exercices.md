@@ -1645,7 +1645,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.a\" 
         Cette méthode renvoie ```None``` lorsque toutes les régions sont coloriées.
@@ -1655,7 +1655,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.b\" 
         Quand cette méthode ne renvoie pas ```None```, elle renvoie la région non coloriée qui a le plus de voisins.
