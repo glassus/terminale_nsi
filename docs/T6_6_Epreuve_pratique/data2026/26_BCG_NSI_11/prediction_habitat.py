@@ -1,7 +1,8 @@
 from math import sqrt
 from donnees_habitats import zones_connues
 
-nouveau = {'vegetation': 5, 'proximite_eau': 2, 'densite_urbaine': 4, 'disponibilite_proies': 6}
+nouveau = {'vegetation': 5, 'proximite_eau': 2,
+           'densite_urbaine': 4, 'disponibilite_proies': 6}
 
 
 def distance(habitat_1, habitat_2):
@@ -13,7 +14,8 @@ def distance(habitat_1, habitat_2):
     sortie : 
         - float : distance euclidienne entre habitat_1 et habitat_2.
     '''
-    pass # à remplacer par votre code
+    pass  # à remplacer par votre code
+
 
 def distance_d_un_habitat(habitat, habitats):
     '''
@@ -24,7 +26,13 @@ def distance_d_un_habitat(habitat, habitats):
     sortie : 
         - list[tuple] : liste de tuples (distance, habitat) où distance est la distance entre habitat et chaque habitat de la liste.
     '''
-    pass # à remplacer par votre code
+    pass  # à remplacer par votre code
+
+
+def premiere_composante(c):
+    '''Fonction utilitaire renvoyant la première composante d'un tuple'''
+    return c[0]
+
 
 def k_plus_proches(k, habitat, habitats):
     '''
@@ -40,8 +48,10 @@ def k_plus_proches(k, habitat, habitats):
     # On calcule les distances
     distances = distance_d_un_habitat(habitat, habitats)
     # On cherche à trier les distances en fonction de la distance euclidienne.
-    distances.sort(key = lambda x: x[0])
-    return distances[:k] # renvoie les distances jusque la borne k non comprise
+    distances.sort(key=premiere_composante)
+    # renvoie les distances jusque la borne k non comprise
+    return distances[:k]
+
 
 def presence_renard(k, habitat, habitats):
     '''
@@ -58,6 +68,6 @@ def presence_renard(k, habitat, habitats):
     for habitat in habitats:
         distance = habitat[0]
         caracteristiques = habitat[1]
-        if distance['presence_renard'] == 1:
+        if distance['presence_renard']:
             n_renards += 1
     return n_renards > k/2

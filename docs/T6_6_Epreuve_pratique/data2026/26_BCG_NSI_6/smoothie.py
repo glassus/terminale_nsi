@@ -24,7 +24,6 @@ class Boutique_smoothie:
         """Retourne la liste des smoothies pouvant être préparés avec les fruits disponibles."""
         pass  # à remplacer par le code la méthode
 
-    ##### QUESTION 3 #####
     def score_proximité(self, nom1, nom2):
         """Retourne le nombre de fruits communs entre deux smoothies."""
         nb = 0
@@ -35,6 +34,7 @@ class Boutique_smoothie:
                 nb += 1
         return nb
 
+    # Question 4
     def plus_proche_possible(self, nom_smoothie_ref):
         """Retourne le nom du smoothie le plus proche de nom_smoothie_ref en termes de fruits communs parmi les smoothies possibles.
         En cas d'égalité, retourne le premier trouvé.
@@ -61,7 +61,8 @@ class Boutique_smoothie:
                 if proche != None:
                     print(f"Pour le smoothie {smoothie}, essayez {proche}.")
                 else:
-                    print(f"Pour le smoothie {smoothie}, aucun smoothie proche disponible.")
+                    print(
+                        f"Pour le smoothie {smoothie}, aucun smoothie proche disponible.")
 
 # ========= Fonctions de test ==================
 
@@ -82,9 +83,11 @@ def test_liste_smoothies_possibles():
     assert boutique1.liste_smoothies_possibles() == [
         "Tropical", "Tropical citron"]
     assert boutique2.liste_smoothies_possibles() == [
-        "Rouge", "Agrume", "Berry Mix"]
+        "Rouge", "Agrume", "Rouge kiwi"]
     assert boutique3.liste_smoothies_possibles() == []
 
+
+##### QUESTION 3 #####
 
 def test_score_proximité():
     # À compléter
@@ -107,6 +110,4 @@ test_smoothie_possible()
 test_liste_smoothies_possibles()
 test_plus_proche_possible()
 
-boutique = Boutique_smoothie(
-    ["Mangue", "Ananas", "Banane", "Fraise", "Citron", "Kiwi", "Pomme verte"])
-boutique.affichage_possibles()
+# Question 5

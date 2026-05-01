@@ -50,7 +50,7 @@ def evolution_par_decennie(zone, donnees):
     # Filtrage des relevés pour la zone
     releves_zone = [r for r in donnees if r['zone'] == zone]
 
-    if not releves_zone:
+    if len(releves_zone) == 0:
         return {}
 
     # Regroupement par décennie

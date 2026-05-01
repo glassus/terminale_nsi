@@ -100,6 +100,10 @@ def test_consultation_vaccination_chat():
     assert vaccinations[6] == (34, "Jazz", "0.6.37.51.65.52", "20250801")
     assert vaccinations[7] == (35, "Tango", "0324182", "20250706")
     assert vaccinations[8] == (38, "Loulou", "05-35-95-87-54", "20250209")
+
+    # Vérification stricte du tri (ORDER BY id_animal, date_consultation)
+    assert vaccinations == sorted(vaccinations, key=lambda x: (x[0], x[3]))
+
     print('Les tests de la fonction consultation_vaccination_chat sont passés')
 
 # test_consultation_vaccination_chat()

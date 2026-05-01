@@ -23,6 +23,7 @@ def jours_dans_mois(annee, mois):
     else:
         return 30
 
+
 def ajouter_jours(date, nb_jours):
     """Ajoute nb_jours à une date donnée et renvoie la nouvelle date.
        La date est représentée par un tuple (jour, mois, année)."""
@@ -39,12 +40,15 @@ def ajouter_jours(date, nb_jours):
 
     return (jour, mois, annee)
 
+
 def test_ajouter_jours():
     assert ajouter_jours((7, 9, 2025), 3) == (10, 9, 2025)
-    
+
 #############################################################################
 # Fonction fournie pour la question 4                                       #
 #############################################################################
+
+
 def calendrier_cycles(date_regles):
     """Renvoie une chaîne de caractère contenant au format iCalendar, l'ensemble
     des dates de début de règles qui se présentent dans les 100 jours suivants 
@@ -59,20 +63,21 @@ def calendrier_cycles(date_regles):
 
     # On ajoute les dates tant que l'on ne dépasse pas 100 jours écoulés
     while jours_ecoules + 28 <= 100:
-        jour, mois, annee = date_courante  
+        jour, mois, annee = date_courante
         cal_lignes.append('BEGIN:VEVENT')
         cal_lignes.append('SUMMARY: Règles')
         date = str(annee)+str(mois)+str(jour)
         cal_lignes.append('DTSTART:'+date)
         cal_lignes.append('END:VEVENT')
         date_courante = ajouter_jours(date_courante, 28)
-        jours_ecoules += 28 
+        jours_ecoules += 28
 
     cal_lignes.append('END:VCALENDAR')
 
     # La méthode join va renvoyer ici une unique chaîne contenant toutes les
     # chaînes de la liste séparées par des sauts de lignes.
     return '\n'.join(cal_lignes)
+
 
 def test_calendrier_cycles():
     '''Crée un calendrier et le charge avec le module ics pour vérifier sa
@@ -81,7 +86,7 @@ def test_calendrier_cycles():
     Nécessite que le module ics soit présent sur la machine (pip install ics).
     '''
     from ics import Calendar
-    c = calendrier_cycles( (12,3,2026) )
+    c = calendrier_cycles((12, 3, 2026))
     print(c)
     cal = Calendar(c)
     print(cal.events)

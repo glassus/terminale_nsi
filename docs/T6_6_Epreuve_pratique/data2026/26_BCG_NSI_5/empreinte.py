@@ -1,19 +1,12 @@
-import os
-import os.path
 import json
 
 ########### Fonctions données ###########
+
 
 def chargement_json(nom_fichier):
     """Charge le contenu d'un fichier JSON dans un dictionnaire Python renvoyé"""
     with open(nom_fichier, "r", encoding="utf8") as curseur:
         return json.load(curseur)
-
-
-def sauvegarde_json(dictionnaire, nom_fichier):
-    """Sauvegarde le contenu d'un dictionnaire dans un fichier JSON"""
-    with open(nom_fichier, "w", encoding="utf8") as curseur:
-        json.dump(dictionnaire, curseur)
 
 
 def est_dictionnaire(objet):
@@ -24,16 +17,16 @@ def est_dictionnaire(objet):
 ##########################################
 
 
-### Première fonction à implémenter après avoir découvert le fichier JSON agrégé
-### Cf fichier `empreinte_ada_agr.json`
+# Première fonction à implémenter après avoir découvert le fichier JSON agrégé
+# Cf fichier `empreinte_ada_agr.json`
 def total_simple(empreinte):
     """Fonction qui renvoie l'empreinte carbone totale d'un dictionnaire associant
     une empreinte carbone à des noms de catégories"""
     pass
 
 
-### Deuxième fonction : il faut la récursivité pour le cas des sous-catégories
-### Cf fichier `empreinte_ada.json`
+# Deuxième fonction : il faut la récursivité pour le cas des sous-catégories
+# Cf fichier `empreinte_ada.json`
 def total_rec(empreinte):
     """Fonction récursive qui renvoie l'empreinte carbone totale représentée
     par un dictionnaire dont les valeurs peuvent aussi être des dictionnaires"""
@@ -50,6 +43,7 @@ def test_total_rec():
 # Fonction à analyser et corriger (Question 3)
 # ==========================================
 
+
 def alerte_valeur_aberrante(empreinte, limite):
     """
     Fonction censée déterminer si au moins une valeur du dictionnaire
@@ -62,4 +56,3 @@ def alerte_valeur_aberrante(empreinte, limite):
             if valeur > limite:
                 return True
     return False
-
