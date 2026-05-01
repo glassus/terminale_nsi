@@ -28,6 +28,8 @@ def convertir_dec_vers_BCD(decimal):
 
     for i in range(len(decimal)):
         if decimal[i] != '.':
+            # convertit en binaire le nombre decimal[i]
+            # en rajoutant des 0 devant pour obtenir un quartet
             quartet = bin(int(decimal[i]))[2:].zfill(4)
             liste_quartets.append(quartet)
 
@@ -43,7 +45,7 @@ def convertir_dec_vers_BCD(decimal):
 
 def additionner_binaire_quartets(quartet1, quartet2, retenue):
     """
-    Additionne bit à bit deux quartets binaire purs.
+    Additionne bit à bit deux quartets binaires purs.
     Renvoie un tuple (somme_binaire_str, nouvelle_retenue_int).
     """
     somme = ""
@@ -83,7 +85,7 @@ def corriger_BCD(somme, retenue):
     if retenue == 1:
         somme, _ = additionner_binaire_quartets(somme, '0110', 0)
         return somme, retenue
-        
+
     return somme, retenue
 
 
@@ -103,22 +105,24 @@ def additionner_nombres_format_BCD(a, b):
     liste_quartets2 = convertir_dec_vers_BCD(b)
 
     # Ajustement de la longueur
-    liste_quartets1, liste_quartets2 = aligner_quartets(liste_quartets1, liste_quartets2)
+    liste_quartets1, liste_quartets2 = aligner_quartets(
+        liste_quartets1, liste_quartets2)
 
     retenue = 0
     resultat = []
-    longueur_max = max(len(liste_quartets1), len(liste_quartets2)) 
+    longueur_max = max(len(liste_quartets1), len(liste_quartets2))
 
     for i in range(longueur_max):
         index = longueur_max - i - 1
-        
+
         # Addition binaire simple des quartets
-        somme, retenue = additionner_binaire_quartets(liste_quartets1[index], liste_quartets2[index], retenue)
-        
-        resultat.insert(0, somme) 
+        somme, retenue = additionner_binaire_quartets(
+            liste_quartets1[index], liste_quartets2[index], retenue)
+
+        resultat.insert(0, somme)
 
     # Gestion de la dernière retenue éventuelle
     if retenue == 1:
         resultat.insert(0, '0001')
-        
+
     return resultat

@@ -8,7 +8,7 @@ def recupere_donnees_fichier_csv(nom_fichier):
     temperatures = []
     longitudes = []
     latitudes = []
-    # Ouverture du fichier csv au format npm.csv en mode "read"
+    # Ouverture du fichier csv au format releves_ballon_sonde.csv en mode "read"
     contenu_fichier = open(nom_fichier, 'r')
     # Supprime la 1ère ligne avec les en-têtes
     contenu_fichier.readline()
@@ -20,12 +20,14 @@ def recupere_donnees_fichier_csv(nom_fichier):
         listeValeurs = ligne.split(";")
         # conversion string en int de l'altitude et insertion dans la liste correspondante
         altitudes.append(int(listeValeurs[0]))
-        # conversion string en float de l'altitude et insertion dans la liste correspondante
+        # conversion string en float de la température et insertion dans la liste correspondante
         temperatures.append(float(listeValeurs[1]))
-        # conversion string en float de l'altitude et insertion dans la liste correspondante
+        # conversion string en float de la longitude et insertion dans la liste correspondante
         longitudes.append(float(listeValeurs[2]))
-        # conversion string en float de l'altitude et insertion dans la liste correspondante
+        # conversion string en float de la latitude et insertion dans la liste correspondante
         latitudes.append(float(listeValeurs[3]))
+
+    contenu_fichier.close()
     return altitudes, temperatures, longitudes, latitudes
 
 
@@ -63,10 +65,12 @@ def genere_kml(liste_longitudes, liste_latitudes):
 
 # QUESTION 2
 def conversion_K_en_C(liste_temperatures):
-    pass # Ajuster la fonction
+    pass  # Ajuster la fonction
 
 # QUESTION 3
+
+
 def altitude_la_plus_froide(liste_altitudes, liste_temperatures):
-    pass # Ajuster la fonction
+    pass  # Ajuster la fonction
 
 # AUTRES ELEMENTS DE CODE

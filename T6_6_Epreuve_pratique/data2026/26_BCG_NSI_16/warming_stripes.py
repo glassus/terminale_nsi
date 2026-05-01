@@ -28,6 +28,10 @@ datas_temperature = charger("datas.csv")
 
 # Écrire la fonction ecart_temperature et ses tests ici
 
+#############################################################################
+# Question 2 : Dernière année négative                                      #
+#############################################################################
+
 
 def derniere_annee_ecart_negatif(datas):
     annee = max([element["année"] for element in datas])
@@ -39,7 +43,7 @@ def derniere_annee_ecart_negatif(datas):
 
 
 #############################################################################
-# Question 2 : Analyse et correction de bug                                 #
+# Question 3 : Analyse et correction de bug                                 #
 #############################################################################
 
 def moyenne_ecarts(annee_debut, annee_fin, datas):
@@ -85,7 +89,7 @@ def prevision(datas, annee, n):
 
 
 #############################################################################
-# Question 3 : Dataviz (Warming Stripes)                                    #
+# Question 4 : Dataviz (Warming Stripes)                                    #
 #############################################################################
 
 def graphique(datas):
@@ -100,11 +104,9 @@ def graphique(datas):
     max_val = max(max(temperatures), -min(temperatures))
     norm = plt.Normalize(-max_val, max_val)
 
-    # Création des listes pour les abscisses et ordonnées
-    annees = []
-    ordonnees = []
-
-    # Remplir les listes annees et ordonnees ici :
+    # A COMPLETER
+    # Création des listes annees et ordonnees 
+    # pour les abscisses et ordonnées
 
     # Génération du graphique
     ax.bar(annees, ordonnees, width=1.0, color=cmap(norm(temperatures)))

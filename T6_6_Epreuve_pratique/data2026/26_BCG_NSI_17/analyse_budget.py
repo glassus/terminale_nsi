@@ -1,5 +1,6 @@
 import csv
 
+
 def lire_mouvements_depuis_csv(nom_fichier_csv):
     """
     Lit les données d'un fichier CSV et les retourne en liste de dictionnaires.
@@ -18,6 +19,7 @@ def lire_mouvements_depuis_csv(nom_fichier_csv):
         print(f"Erreur : Le fichier '{nom_fichier_csv}' est introuvable.")
         return []
 
+
 mouvements_test = [
     {'type': 'recette', 'catégorie': 'cotisations', 'montant': 1200.0, 'mois': 1},
     {'type': 'recette', 'catégorie': 'billetterie', 'montant': 300.0, 'mois': 6},
@@ -30,8 +32,6 @@ mouvements_test = [
 #############################################################################
 # Écrire ci-dessous la fonction total_par_type et ses tests (Question 1)    #
 #############################################################################
-
-
 
 
 #############################################################################
@@ -70,8 +70,6 @@ def solde_annuel(mouvements):
 #############################################################################
 # Écrire ci-dessous la fonction test_solde_annuel (Question 2)              #
 #############################################################################
-
-
 
 
 #############################################################################

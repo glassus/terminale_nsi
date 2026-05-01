@@ -6,6 +6,7 @@ class Plante:
         self.taille = taille          # en cm
         self.exposition = exposition  # type d'exposition
 
+
 plantes = [
     Plante("Basilic", "Ocimum basilicum", 60, 40, "plein soleil"),
     Plante("Tomate", "Solanum lycopersicum", 80, 100, "plein soleil"),

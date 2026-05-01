@@ -28,7 +28,7 @@ class Objet3D:
         """
         Ajoute une face à l'objet 3D.
         """
-        self.faces.append(Face(liste_sommets))
+        self.faces.append(Face([self.sommets[i] for i in liste_sommets]))
 
     def __str__(self):
         """
@@ -45,17 +45,15 @@ class Objet3D:
 
         f = []
         for face in self.faces:
-            print(face.sommets)
-            x = [(self.sommets[s-1].x, self.sommets[s-1].y, self.sommets[s-1].z)
-                 for s in face.sommets]
+            x = [(s.x, s.y, s.z) for s in face.sommets]
             f.append(x)
         mesh = Poly3DCollection(f, alpha=0.4, edgecolor='black')
         ax.add_collection3d(mesh)
         plt.show()
 
-#############################################################################
-# Méthode à modifier de la question 5                                       #
-#############################################################################
+    #############################################################################
+    # Méthode à modifier de la question 5                                       #
+    #############################################################################
     def transformer(self, rapport):
         """
         Applique une transformation d'échelle à l'objet 3D en modifiant directement ses sommets.
@@ -63,20 +61,49 @@ class Objet3D:
         sommets = []
         for sommet in self.sommets:
             sommets.append(
-                Sommet(sommet.x*rapport, sommet.y*rapport, sommet.z*rapport))
-        self.sommet = sommets
+                Sommet(sommet.x * rapport,
+                       sommet.y * rapport, sommet.z * rapport))
+        self.sommets = sommets
+
+    #############################################################################
+    # Écrire le code de la méthode sommets_adjacents de la question 2           #
+    #############################################################################
+
+    def sommets_adjacents(self, s1, s2):
+        pass
+
+    def longueur_plus_longue_arete(self):
+        max_longueur = 0
+        for s1 in self.sommets:
+            for s2 in self.sommets:
+                if self.sommets_adjacents(s1, s2):
+                    d = s1.distance(s2)
+                    if d > max_longueur:
+                        max_longueur = d
+        return max_longueur
+
+    def volume_cube_englobant(self):
+        longueur_max = self.longueur_plus_longue_arete()
+        return longueur_max ** 3
 
 
 #############################################################################
-# Écrire le code de la méthode trouver_sommets_adjacents de la question 2   #
+# Cube pour tester votre méthode de la question 2                           #
 #############################################################################
 
-
-#############################################################################
-# Programme pour tester votre méthode de la question 2                                  #
-#############################################################################
-objet = Objet3D()
-objet.ajouter_sommet(0, 0, 0)  # s1
-objet.ajouter_sommet(1, 0, 0)  # s2
-objet.ajouter_sommet(0, 1, 0)  # s3
-objet.ajouter_sommet(0, 0, 1)  # s4
+cube = Objet3D()
+cube.ajouter_sommet(0, 0, 0)  # s0
+cube.ajouter_sommet(1, 2, 2)  # s1
+cube.ajouter_sommet(3, 3, 0)  # s2
+cube.ajouter_sommet(2, 1, -2)  # s3
+cube.ajouter_sommet(-2, 2, -1)  # s4
+cube.ajouter_sommet(-1, 4, 1)  # s5
+cube.ajouter_sommet(1, 5, -1)  # s6
+cube.ajouter_sommet(0, 3, -3)  # s7
+cube.ajouter_face([0, 1, 2, 3])
+cube.ajouter_face([4, 5, 6, 7])
+cube.ajouter_face([0, 1, 5, 4])
+cube.ajouter_face([1, 2, 6, 5])
+cube.ajouter_face([2, 3, 7, 6])
+cube.ajouter_face([3, 0, 4, 7])
+# cube.afficher() # à décommenter pour afficher le cube en 3d

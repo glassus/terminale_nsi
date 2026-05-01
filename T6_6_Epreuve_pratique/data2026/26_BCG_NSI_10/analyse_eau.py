@@ -39,7 +39,7 @@ def lissage_conso(valeurs):
     Calcule une moyenne glissante sur les valeurs.
     Pour chaque valeur, on calcule la moyenne avec ses voisins.
     """
-    
+
     lisse = []
     for i in range(len(valeurs)):
         if i == 0:
@@ -49,7 +49,7 @@ def lissage_conso(valeurs):
         else:
             m = (valeurs[i-1] + valeurs[i] + valeurs[i+1]) / 2
         lisse.append(m)
-    
+
     return lisse
 
 
@@ -58,5 +58,6 @@ def lissage_conso(valeurs):
 # -----------------------------
 
 def test_lissage():
-    # À compléter : produire au moins 3 tests révélant les erreurs
+    # À compléter : écrire au moins 3 assertions (assert) avec des listes
+    # de différentes tailles pour révéler les erreurs de la fonction
     pass

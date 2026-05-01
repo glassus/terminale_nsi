@@ -1,25 +1,29 @@
 import csv
 
+
 class Renard:
     """
     Classe représentant un renard dans le refuge.
     Attributs : identifiant, nom, poids, date_arrivee.
     """
+
     def __init__(self, identifiant, nom, poids, date_arrivee):
-        pass # Question 1 à compléter
+        pass  # Question 1 à compléter
 
     def __str__(self):
-        pass # Question 2 à compléter
+        pass  # Question 2 à compléter
+
 
 class Refuge:
     """
     Classe représentant le refuge contenant la liste des renards.
     """
+
     def __init__(self, nom, adresse):
         self.nom = nom
         self.adresse = adresse
         self.liste_renards = []
-        
+
     def recueillir(self, un_renard):
         """
         Méthode d'ajout d'un renard au refuge.
@@ -48,6 +52,6 @@ class Refuge:
         with open(nom_fichier, 'r', encoding='utf-8') as f:
             lignes = csv.DictReader(f, delimiter=';')
             for ligne in lignes:
-                renard = Renard(ligne['id'], ligne['nom'], ligne['poids'], ligne['date_arrivee'])
+                renard = Renard(ligne['id'], ligne['nom'],
+                                ligne['poids'], ligne['date_arrivee'])
                 self.recueillir(renard)
-

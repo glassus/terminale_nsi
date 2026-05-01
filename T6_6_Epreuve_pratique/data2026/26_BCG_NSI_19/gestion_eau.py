@@ -6,7 +6,15 @@ from donnees import reservoirs
 
 # Question 1 : écrire la fonction est_en_penurie
 
+
+def est_en_penurie(reservoirs, nom_reservoir):
+    pass
+
 # Question 2 : écrire la fonction volume_par_district
+
+
+def volume_par_district(reservoirs):
+    pass
 
 # Question 3
 
@@ -22,27 +30,6 @@ def volume_moyen(reservoirs):
     return moyenne
 
 # Question 4
-
-
-def taux_remplissage(reservoir, changement=0):
-    """
-    Renvoie le taux de remplissage du réservoir (en pourcentage),
-    en tenant compte d'un changement éventuel du volume.
-    Attention : le changement n'est pas effectif, il est hypothétique.
-    - changement > 0 : ajout d'eau
-    - changement < 0 : retrait d'eau
-    - changement = 0 (par défaut) : taux de remplissage réel
-    """
-    volume_modifie = reservoir["volume"] + changement
-    capacite = reservoir["capacite"]
-
-    # On évite de dépasser les limites physiques
-    if volume_modifie < 0:
-        volume_modifie = 0
-    if volume_modifie > capacite:
-        volume_modifie = capacite
-
-    return volume_modifie * 100 / capacite
 
 
 def liste_districts(reservoirs):
@@ -68,3 +55,7 @@ def reservoirs_par_district(reservoirs):
             liste_rpd[district] = []
         liste_rpd[district].append(r)
     return liste_rpd
+
+
+def districts_vulnerables(reservoirs):
+    pass

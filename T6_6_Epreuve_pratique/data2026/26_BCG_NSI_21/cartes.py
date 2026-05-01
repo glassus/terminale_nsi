@@ -1,11 +1,14 @@
 import datetime
 
+
 def date_future(nb_jours):
     """Renvoie la date située nb_jours après aujourd'hui"""
     return datetime.date.today() + datetime.timedelta(days=nb_jours)
 
+
 # Variable contenant les délais en jours pour chaque niveau (index 0 à 4)
 DELAIS = [1, 3, 7, 15, 30]
+
 
 class Carte:
 
@@ -23,6 +26,7 @@ class Carte:
     # Écrire la méthode traiter_reponse(self, succes) de la question 1          #
     #############################################################################
 
+
 # Des cartes et un paquet de cartes pour réaliser des tests
 c1 = Carte("Capitale de l'Italie ?", "Rome")
 c1.niveau = 2
@@ -33,7 +37,7 @@ c3 = Carte("Symbole du Fer ?", "Fe")
 c3.date_prochaine = date_future(7)
 
 paquet = [c1, c2, c3]
-   
+
 
 #############################################################################
 # Écrire la fonction extraire_cartes_du_jour de la question 2               #
@@ -51,17 +55,17 @@ def extraire_cartes_a_renforcer(paquet):
     """
     if len(paquet) == 0:
         return []
-        
+
     niveau_min = paquet[0].niveau
     a_renforcer = []
-    
+
     for carte in paquet:
         if carte.niveau < niveau_min:
             niveau_min = carte.niveau
             a_renforcer.append(carte)
         elif carte.niveau == niveau_min:
             a_renforcer.append(carte)
-            
+
     return a_renforcer
 
 
@@ -69,17 +73,17 @@ def test_renforcement():
     # Création d'un paquet de test
     c1 = Carte("Capitale de l'Italie ?", "Rome")
     c1.niveau = 2
-    
+
     c2 = Carte("7 x 8 ?", "56")
     c2.niveau = 1
-    
+
     c3 = Carte("Symbole du Fer ?", "Fe")
     c3.niveau = 2
-    
+
     mon_paquet = [c1, c2, c3]
-    
+
     # Appel de la fonction défaillante
     resultat = extraire_cartes_a_renforcer(mon_paquet)
-    
-    print("Cartes à renforcer (niveau le plus bas attendu : 1) :")
+
+    print("Cartes à renforcer (celles ayant le niveau le plus bas) :")
     print(resultat)

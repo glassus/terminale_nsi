@@ -78,6 +78,7 @@ def comparer(u1, u2):
         differences[activite] = emission2 - emission1
     return differences
 
+
 def test_comparer():
     diff = comparer(utilisateur4, utilisateur5)
     assert diff['emails_simples'] == -200  # (50-100) * 4
@@ -104,4 +105,3 @@ def comparer_v2(u1, u2):
         emission2 = quantite2 * EMISSIONS[activite]
         ecarts[activite] = (emission2 - emission1)/emission1 * 100
     return ecarts
-
