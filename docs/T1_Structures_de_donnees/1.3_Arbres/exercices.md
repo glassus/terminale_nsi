@@ -1115,5 +1115,199 @@
     liste_mots_francais = open('gutenberg.txt').read().splitlines()
     ```
 
+
+!!! example "{{ exercice() }} <i id="ex1J2ME2025"></i>"
+    Exercice 1 du [sujet Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        Le symbole ```_``` sera codé par ```010```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        Le mot binaire ```0001110101111110011001``` correspond au mot ```espion```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        Pour avoir les symboles classés par taille d’encodage croissante il faut utiliser un parcours en largeur.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        En séparant à la lettre ```j```, le total du premier sous-groupe est 11, celui du deuxième sous-groupe est 10. Les deux totaux sont donc proches.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        Cet arbre est de hauteur 5. Cela va correspondre à la taille maximale en bits qui pourra coder un caractère.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        En codage ASCII, la phrase ```je pense, donc je suis``` qui contient 22 caractères ser donc codée sur 176 bits.
+
+        En utilisant le codage de Shannon-Fano, 
+
+        - le ```j``` est codé sur 4 bits et apparaît 2 fois, donc 8 bits.
+        - le ```e``` est codé sur 2 bits et apparaît 4 fois, donc 8 bits.
+        - le ```_``` est codé sur 3 bits et apparaît 4 fois, donc 12 bits.
+        - le ```p``` est codé sur 4 bits et apparaît 1 fois, donc 4 bits.
+        - le ```n``` est codé sur 4 bits et apparaît 2 fois, donc 8 bits.
+        - le ```s``` est codé sur 3 bits et apparaît 3 fois, donc 9 bits.
+        - le ```,``` est codé sur 4 bits et apparaît 1 fois, donc 4 bits.
+        - le ```d``` est codé sur 5 bits et apparaît 1 fois, donc 5 bits.
+        - le ```o``` est codé sur 5 bits et apparaît 1 fois, donc 5 bits.
+        - le ```c``` est codé sur 4 bits et apparaît 1 fois, donc 4 bits.
+        - le ```u``` est codé sur 4 bits et apparaît 1 fois, donc 4 bits.
+        - le ```i``` est codé sur 4 bits et apparaît 1 fois, donc 4 bits.
+
+        En additionnant tous les bits nécessaires, on trouve 75 bits. Le codage de Shannon-Fano est donc plus de 2 fois plus léger que le codage ASCII.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ![image](data/exoMetroJ22025.png){: .center .autolight}
         
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def creer_dico_occ(texte):
+            '''renvoie un dictionnaire dont les clés sont les
+            symboles de texte et les valeurs associées leur
+            nombre d'occurences dans texte'''
+            dico = {}
+            for symbole in texte:
+                if symbole in dico:
+                    dico[symbole] = dico[symbole] + 1
+                else:
+                    dico[symbole] = 1
+            return dico
+        ```
         
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        ```python
+        def somme_occ(tab):
+            total = 0
+            for cpl in tab:
+                total += cpl[1]
+            return total
+        ```
+        
+    """
+    )
+    }}
+
+    ```python
+    def shannon(symbole, tab):
+        '''renvoie l'écriture binaire associée à symbole
+        dans le tableau trié tab'''
+        if len(tab) == 1:
+            return ''
+        else:
+            t1, t2 = separe(tab)
+            if symbole in [elt[0] for elt in t1]:
+                return '1' + ...
+            else:
+                return '0' + ...
+    ```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        ```python
+        def shannon(symbole, tab):
+            '''renvoie l'écriture binaire associée à symbole
+            dans le tableau trié tab'''
+            if len(tab) == 1:
+                return ''
+            else:
+                t1, t2 = separe(tab)
+                if symbole in [elt[0] for elt in t1]:
+                    return '1' + shannon(symbole, t1)
+                else:
+                    return '0' + shannon(symbole, t2)
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        Il y a un cas de base lorsque la longueur de ```tab``` vaut 1. Or chaque appel récursif se fait sur un tableau de longueur 2 fois plus petite que le tableau initial. Donc on finira par tomber sur un tableau de longueur 1.
+    """
+    )
+    }}
+
+
+    Pour la question 12, vous pouvez utiliser la fonction ```creer_tab_trie``` ci-dessous :
+
+    ```python
+    def creer_tab_trie(dico):
+        lst = []
+        for cle in dico:
+            lst.append((cle, dico[cle]))
+        lst_triee = sorted(lst, key=lambda x:x[1])
+        return lst_triee
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        ```python
+        def encode_shannon(texte):
+            dico = creer_dico_occ(texte)
+            tab = creer_tab_trie(dico)
+            s = ''
+            for c in texte:
+                s += shannon(c, tab)
+            return s
+        ```
+        
+    """
+    )
+    }}

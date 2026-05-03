@@ -12,13 +12,15 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Exercice POO + SQL : [Exercice 3 du sujet Asie J1 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1A2024){. target="_blank"}
-    - Exercice POO : [Exercice 3 du sujet Métropole J1 2023](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1ME2023){. target="_blank"}
+    - Exercice sur les arbres : [Exercice 1 du sujet Métropole J2 2025](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex1J2ME2025){. target="_blank"}
+
 
 
 
 
 ### *Thèmes déjà traités*
+- Exercice POO + SQL : [Exercice 3 du sujet Asie J1 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1A2024){. target="_blank"}
+- Exercice POO : [Exercice 3 du sujet Métropole J1 2023](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1ME2023){. target="_blank"}
 - Exercice POO + algos gloutons : [Exercice 2 du sujet Amérique du Nord J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex2J1AN2025){. target="_blank"}
 - Exercice SQL : [Exercice 2 du sujet Polynésie J2 2025](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2PO2025){. target="_blank"}
 - [Exercice 3 Partie B du sujet Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024){. target="_blank"}
