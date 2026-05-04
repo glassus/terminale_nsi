@@ -1120,7 +1120,7 @@
     Exercice 1 du [sujet Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le symbole ```_``` sera codé par ```010```. 
@@ -1129,7 +1129,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Le mot binaire ```0001110101111110011001``` correspond au mot ```espion```.
@@ -1138,7 +1138,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         Pour avoir les symboles classés par taille d’encodage croissante il faut utiliser un parcours en largeur.
@@ -1147,7 +1147,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         En séparant à la lettre ```j```, le total du premier sous-groupe est 11, celui du deuxième sous-groupe est 11. Les deux totaux sont donc égaux.
@@ -1156,7 +1156,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Cet arbre est de hauteur 5. Cela va correspondre à la taille maximale en bits qui pourra coder un caractère.
@@ -1165,7 +1165,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         En codage ASCII, la phrase ```je pense, donc je suis``` qui contient 22 caractères ser donc codée sur 176 bits.
@@ -1191,7 +1191,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ![image](data/exoMetroJ22025.png){: .center .autolight}
@@ -1215,7 +1215,7 @@
         return dico
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -1237,7 +1237,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```python
@@ -1277,7 +1277,7 @@
                 return '0' + ...
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```python
@@ -1299,7 +1299,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Il y a un cas de base lorsque la longueur de ```tab``` vaut 1. Or chaque appel récursif se fait sur un tableau de longueur 2 fois plus petite que le tableau initial. Donc on finira par tomber sur un tableau de longueur 1.
@@ -1320,7 +1320,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```python
