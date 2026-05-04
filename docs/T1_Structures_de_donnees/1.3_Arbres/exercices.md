@@ -1156,7 +1156,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Cet arbre est de hauteur 5. Cela va correspondre à la taille maximale en bits qui pourra coder un caractère.
@@ -1165,7 +1165,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         En codage ASCII, la phrase ```je pense, donc je suis``` qui contient 22 caractères ser donc codée sur 176 bits.
