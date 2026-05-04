@@ -1156,7 +1156,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         Cet arbre est de hauteur 5. Cela va correspondre à la taille maximale en bits qui pourra coder un caractère.
