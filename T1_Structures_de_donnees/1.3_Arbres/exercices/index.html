@@ -5715,50 +5715,6 @@ croissant.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8 <i id="ex1J2ME2025"></i></p>
 <p>Exercice 1 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf" target="_blank">sujet Métropole J2 2025</a></p>
-<details class="success">
-<summary>Correction Q1</summary>
-<p>Le symbole <code>_</code> sera codé par <code>010</code>. </p>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<p>Le mot binaire <code>0001110101111110011001</code> correspond au mot <code>espion</code>.</p>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<p>Pour avoir les symboles classés par taille d’encodage croissante il faut utiliser un parcours en largeur.</p>
-</details>
-<details class="success">
-<summary>Correction Q4</summary>
-<p>En séparant à la lettre <code>j</code>, le total du premier sous-groupe est 11, celui du deuxième sous-groupe est 11. Les deux totaux sont donc égaux.</p>
-</details>
-<details class="success">
-<summary>Correction Q5</summary>
-<p>Cet arbre est de hauteur 5. Cela va correspondre à la taille maximale en bits qui pourra coder un caractère.</p>
-</details>
-<details class="success">
-<summary>Correction Q6</summary>
-<p>En codage ASCII, la phrase <code>je pense, donc je suis</code> qui contient 22 caractères ser donc codée sur 176 bits.</p>
-<p>En utilisant le codage de Shannon-Fano, </p>
-<ul>
-<li>le <code>j</code> est codé sur 4 bits et apparaît 2 fois, donc 8 bits.</li>
-<li>le <code>e</code> est codé sur 2 bits et apparaît 4 fois, donc 8 bits.</li>
-<li>le <code>_</code> est codé sur 3 bits et apparaît 4 fois, donc 12 bits.</li>
-<li>le <code>p</code> est codé sur 4 bits et apparaît 1 fois, donc 4 bits.</li>
-<li>le <code>n</code> est codé sur 4 bits et apparaît 2 fois, donc 8 bits.</li>
-<li>le <code>s</code> est codé sur 3 bits et apparaît 3 fois, donc 9 bits.</li>
-<li>le <code>,</code> est codé sur 4 bits et apparaît 1 fois, donc 4 bits.</li>
-<li>le <code>d</code> est codé sur 5 bits et apparaît 1 fois, donc 5 bits.</li>
-<li>le <code>o</code> est codé sur 5 bits et apparaît 1 fois, donc 5 bits.</li>
-<li>le <code>c</code> est codé sur 4 bits et apparaît 1 fois, donc 4 bits.</li>
-<li>le <code>u</code> est codé sur 4 bits et apparaît 1 fois, donc 4 bits.</li>
-<li>le <code>i</code> est codé sur 4 bits et apparaît 1 fois, donc 4 bits.</li>
-</ul>
-<p>En additionnant tous les bits nécessaires, on trouve 75 bits. Le codage de Shannon-Fano est donc plus de 2 fois plus léger que le codage ASCII.</p>
-</details>
-<details class="success">
-<summary>Correction Q7</summary>
-<p><img alt="image" class="center autolight" src="../data/exoMetroJ22025.png" /></p>
-</details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un dictionnaire dont les clés sont les</span>
 <span class="sd">    symboles de texte et les valeurs associées leur</span>
@@ -5771,30 +5727,6 @@ croissant.</p>
             <span class="n">dico</span><span class="p">[</span><span class="n">symbole</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">dico</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction Q8</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un dictionnaire dont les clés sont les</span>
-<span class="sd">    symboles de texte et les valeurs associées leur</span>
-<span class="sd">    nombre d&#39;occurences dans texte&#39;&#39;&#39;</span>
-    <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">texte</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
-            <span class="n">dico</span><span class="p">[</span><span class="n">symbole</span><span class="p">]</span> <span class="o">=</span> <span class="n">dico</span><span class="p">[</span><span class="n">symbole</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">dico</span><span class="p">[</span><span class="n">symbole</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">dico</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q9</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">somme_occ</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">cpl</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
-        <span class="n">total</span> <span class="o">+=</span> <span class="n">cpl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">total</span>
-</code></pre></div>
-</details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">moitie</span> <span class="o">=</span> <span class="n">somme_occ</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
@@ -5818,25 +5750,6 @@ croissant.</p>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="o">...</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction Q10</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie l&#39;écriture binaire associée à symbole</span>
-<span class="sd">    dans le tableau trié tab&#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span> <span class="o">=</span> <span class="n">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="p">[</span><span class="n">elt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">t1</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;1&#39;</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q11</summary>
-<p>Il y a un cas de base lorsque la longueur de <code>tab</code> vaut 1. Or chaque appel récursif se fait sur un tableau de longueur 2 fois plus petite que le tableau initial. Donc on finira par tomber sur un tableau de longueur 1.</p>
-</details>
 <p>Pour la question 12, vous pouvez utiliser la fonction <code>creer_tab_trie</code> ci-dessous :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_tab_trie</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
@@ -5845,17 +5758,6 @@ croissant.</p>
     <span class="n">lst_triee</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">lst_triee</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction Q12</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">encode_shannon</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
-    <span class="n">dico</span> <span class="o">=</span> <span class="n">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
-    <span class="n">tab</span> <span class="o">=</span> <span class="n">creer_tab_trie</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">texte</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">shannon</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">tab</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
-</code></pre></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9 <i id="ex3J1AN2022"></i></p>
@@ -5883,7 +5785,7 @@ croissant.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 mai 2026 13:48:15 UTC">4 mai 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 mai 2026 13:54:13 UTC">4 mai 2026</span>
   </span>
 
     
