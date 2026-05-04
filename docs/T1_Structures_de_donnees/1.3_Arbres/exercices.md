@@ -1191,7 +1191,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ![image](data/exoMetroJ22025.png){: .center .autolight}
