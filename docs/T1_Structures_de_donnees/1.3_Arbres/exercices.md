@@ -1150,7 +1150,7 @@
     correction(True,
     """
     ??? success \"Correction Q4\" 
-        En séparant à la lettre ```j```, le total du premier sous-groupe est 11, celui du deuxième sous-groupe est 11. Les deux totaux sont donc proches.
+        En séparant à la lettre ```j```, le total du premier sous-groupe est 11, celui du deuxième sous-groupe est 11. Les deux totaux sont donc égaux.
     """
     )
     }}
@@ -1191,7 +1191,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ![image](data/exoMetroJ22025.png){: .center .autolight}
