@@ -1111,3 +1111,102 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }} <i id="ex1J2AN2022"></i>"
+    Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a\"
+        ```python
+        class Concurrent:
+            def __init__(self, pseudo, temps, penalite):
+                self.nom = pseudo
+                self.temps = temps
+                self.penalite = penalite
+                self.temps_tot = self.temps + self.penalite
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b\"
+        L'attribut ```temps_tot``` de ```c1``` vaut 87.67 + 12, soit 99.67.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.c\"
+        L'instruction permettant d'accéder à l'attribut ```temps_tot``` de ```c1``` est ```c1.temps_tot```.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a\"
+        ```python
+        >>> lst = resultats.queue()
+        >>> lst = lst.queue()
+        >>> lst.tete()
+        ```
+        ou bien directement :
+        ```python
+        >>> resultats.queue().queue().tete()
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b\"
+        ```python
+        >>> resultats.tete().temps_tot
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\"
+        ```python
+        def meilleur_concurrent(L) :
+            conc_mini = L.tete()
+            mini = conc_mini.temps_tot
+            Q = L.queue()
+            while not (Q.est_vide()):
+                elt = Q.tete()
+                if elt.temps_tot < mini:
+                    conc_mini = elt
+                    mini = elt.temps_tot
+                Q = Q.queue()
+            return conc_mini
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        ![image](data/ex1ANJ12022.png){: .center .autolight}
+        
+    """
+    )
+    }}
