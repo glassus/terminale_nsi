@@ -1138,7 +1138,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         Pour avoir les symboles classés par taille d’encodage croissante il faut utiliser un parcours en largeur.
