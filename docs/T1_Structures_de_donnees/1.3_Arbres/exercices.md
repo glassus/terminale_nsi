@@ -1120,7 +1120,7 @@
     Exercice 1 du [sujet Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Le symbole ```_``` sera codé par ```010```. 
@@ -1129,7 +1129,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         Le mot binaire ```0001110101111110011001``` correspond au mot ```espion```.
