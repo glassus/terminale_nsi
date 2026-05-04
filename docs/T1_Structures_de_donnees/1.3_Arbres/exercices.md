@@ -1200,8 +1200,22 @@
     )
     }}
 
+
+    ```python
+    def creer_dico_occ(texte):
+        '''renvoie un dictionnaire dont les clés sont les
+        symboles de texte et les valeurs associées leur
+        nombre d'occurences dans texte'''
+        dico = {}
+        for symbole in texte:
+            if symbole in dico:
+                dico[symbole] = ...
+            else:
+                dico[symbole] = ...
+        return dico
+    ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```python
