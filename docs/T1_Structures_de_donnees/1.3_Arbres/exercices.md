@@ -1299,7 +1299,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Il y a un cas de base lorsque la longueur de ```tab``` vaut 1. Or chaque appel récursif se fait sur un tableau de longueur 2 fois plus petite que le tableau initial. Donc on finira par tomber sur un tableau de longueur 1.
