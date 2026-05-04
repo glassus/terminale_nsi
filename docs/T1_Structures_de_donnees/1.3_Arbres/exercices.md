@@ -1311,3 +1311,86 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }} <i id="ex3J1AN2022"></i>"
+    Exercice 3 du [sujet Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a\"
+        Cet arbre a pour hauteur 3. 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b\"
+        Cette expression a pour valeur ```True```. 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.c\"
+        ![image](data/exo3_AN_2022.png){: .center .autolight}
+         
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\"
+        L'ordre de visite des nœuds lors d'un parcours en largeur est ```Italie - France - Suede - Autriche - Hongrie - Norvege```. 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\"
+        ```python
+        def recherche (arb, val):
+            ''' Renvoie True si val est présent dans arb, False sinon'''
+            if est_vide(arb):
+                return False
+            if val == racine(arb):
+                return True
+            if val <= racine(arb) :
+                return recherche(gauche(arb), val)
+            else:
+                return recherche(droite(arb), val)
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        ```python
+        def taille(arb):
+            if est_vide(arb):
+                return 0
+            return 1 + taille(gauche(arb)) + taille(droite(arb))
+        ```
+        
+    """
+    )
+    }}
+
+    

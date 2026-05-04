@@ -13,6 +13,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - Exercice sur les arbres : [Exercice 1 du sujet Métropole J2 2025](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex1J2ME2025){. target="_blank"}
+    - Exercice sur les arbres : [Exercice 3 du sujet Amérique du Nord J1 2022](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex3J1AN2022){. target="_blank"}
 
 
 
