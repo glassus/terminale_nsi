@@ -1253,6 +1253,17 @@
     }}
 
     ```python
+    def separe(tab):
+        moitie = somme_occ(tab) // 2
+        somme = 0
+        i = 0
+        while moitie > somme:
+            somme = somme + tab[i][1]
+            i = i + 1
+        tab1 = [tab[k] for k in range(0, i)]
+        tab2 = [tab[k] for k in range(i, len(tab))]
+        return tab1, tab2
+
     def shannon(symbole, tab):
         '''renvoie l'écriture binaire associée à symbole
         dans le tableau trié tab'''
