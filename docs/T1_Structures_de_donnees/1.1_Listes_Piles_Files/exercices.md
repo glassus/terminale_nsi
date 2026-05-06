@@ -1202,7 +1202,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\"
         ![image](data/ex1ANJ12022.png){: .center .autolight}
