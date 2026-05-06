@@ -1383,11 +1383,11 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\"
         ```python
-        def recherche (arb, val):
+        def recherche(arb, val):
             ''' Renvoie True si val est présent dans arb, False sinon'''
             if est_vide(arb):
                 return False
