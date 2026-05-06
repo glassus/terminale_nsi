@@ -6054,6 +6054,21 @@ ou bien directement :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">resultats</span><span class="o">.</span><span class="n">tete</span><span class="p">()</span><span class="o">.</span><span class="n">temps_tot</span>
 </code></pre></div>
 </details>
+<details class="success">
+<summary>Correction Q3</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">meilleur_concurrent</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">conc_mini</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">tete</span><span class="p">()</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="n">conc_mini</span><span class="o">.</span><span class="n">temps_tot</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">est_vide</span><span class="p">()):</span>
+        <span class="n">elt</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">tete</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">elt</span><span class="o">.</span><span class="n">temps_tot</span> <span class="o">&lt;</span> <span class="n">mini</span><span class="p">:</span>
+            <span class="n">conc_mini</span> <span class="o">=</span> <span class="n">elt</span>
+            <span class="n">mini</span> <span class="o">=</span> <span class="n">elt</span><span class="o">.</span><span class="n">temps_tot</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">conc_mini</span>
+</code></pre></div>
+</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -6077,7 +6092,7 @@ ou bien directement :
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 mai 2026 07:17:34 UTC">6 mai 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="6 mai 2026 07:27:12 UTC">6 mai 2026</span>
   </span>
 
     
