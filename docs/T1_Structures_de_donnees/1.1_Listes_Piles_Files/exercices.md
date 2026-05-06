@@ -1134,7 +1134,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\"
         L'attribut ```temps_tot``` de ```c1``` vaut 87.67 + 12, soit 99.67.
@@ -1143,7 +1143,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c\"
         L'instruction permettant d'accéder à l'attribut ```temps_tot``` de ```c1``` est ```c1.temps_tot```.
