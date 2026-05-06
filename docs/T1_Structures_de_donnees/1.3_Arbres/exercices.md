@@ -1362,7 +1362,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c\"
         ![image](data/exo3_AN_2022.png){: .center .autolight}
