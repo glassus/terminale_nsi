@@ -1117,7 +1117,7 @@
     Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\"
         ```python
@@ -1134,7 +1134,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\"
         L'attribut ```temps_tot``` de ```c1``` vaut 87.67 + 12, soit 99.67.
@@ -1143,7 +1143,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\"
         L'instruction permettant d'accéder à l'attribut ```temps_tot``` de ```c1``` est ```c1.temps_tot```.
@@ -1153,7 +1153,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a\"
         ```python
@@ -1170,7 +1170,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\"
         ```python
@@ -1181,7 +1181,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         ```python
@@ -1202,7 +1202,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ![image](data/ex1ANJ12022.png){: .center .autolight}
