@@ -1117,7 +1117,7 @@
     Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\"
         ```python
