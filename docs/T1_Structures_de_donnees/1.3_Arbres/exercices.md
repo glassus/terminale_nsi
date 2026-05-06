@@ -1373,7 +1373,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\"
         L'ordre de visite des nœuds lors d'un parcours en largeur est ```Italie - France - Suede - Autriche - Hongrie - Norvege```. 
