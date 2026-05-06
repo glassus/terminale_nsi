@@ -1342,7 +1342,7 @@
     Exercice 3 du [sujet Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\"
         Cet arbre a pour hauteur 3. 
@@ -1352,7 +1352,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\"
         Cette expression a pour valeur ```True```. 
