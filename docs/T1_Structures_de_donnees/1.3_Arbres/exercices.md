@@ -1342,7 +1342,7 @@
     Exercice 3 du [sujet Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\"
         Cet arbre a pour hauteur 3. 
@@ -1352,7 +1352,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\"
         Cette expression a pour valeur ```True```. 
@@ -1362,7 +1362,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\"
         ![image](data/exo3_AN_2022.png){: .center .autolight}
@@ -1373,7 +1373,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\"
         L'ordre de visite des nœuds lors d'un parcours en largeur est ```Italie - France - Suede - Autriche - Hongrie - Norvege```. 
@@ -1383,7 +1383,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         ```python
@@ -1404,7 +1404,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ```python
