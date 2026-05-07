@@ -1215,7 +1215,7 @@
     Exercice 3 du sujet [Polynésie J2 - 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\"
         Une Pile est une structure de donnée dans laquelle le **dernier** élément à avoir été mis dans la Pile sera le premier à en sortir.
@@ -1224,7 +1224,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\"
         Une File est une structure de donnée dans laquelle le **premier** élément à avoir été mis dans la File sera le premier à en sortir.
@@ -1233,7 +1233,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\"
         Plusieurs mots peuvent être reliés entre eux. Un graphe parait donc adapté. Il n'y a pas de notion de sens dans la relation entre deux mots, donc le graphe est non orienté.
