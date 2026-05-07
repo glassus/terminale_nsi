@@ -1210,3 +1210,199 @@
     """
     )
     }}
+
+!!! example "{{ exercice() }} <i id="ex3J2PO2025"></i>"
+    Exercice 3 du sujet [Polynésie J2 - 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\"
+        Une Pile est une structure de donnée dans laquelle le **dernier** élément à avoir été mis dans la Pile sera le premier à en sortir.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\"
+        Une File est une structure de donnée dans laquelle le **premier** élément à avoir été mis dans la File sera le premier à en sortir.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\"
+        Plusieurs mots peuvent être reliés entre eux. Un graphe parait donc adapté. Il n'y a pas de notion de sens dans la relation entre deux mots, donc le graphe est non orienté.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        ![image](data/exo3_PO_1.png){: .center .autolight}
+        
+    """
+    )
+    }}
+
+    ```python
+    def chaine_vers_tab(mot):
+        tab_lettres = ...
+        for ... in ... :
+            tab_lettres....
+        return tab_lettres
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\"
+        ```python
+        def chaine_vers_tab(mot):
+            tab_lettres = []
+            for c in mot :
+                tab_lettres.append(c)
+            return tab_lettres
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\"
+        La liste ```tab``` contient toutes les lettres de ```mot1```. Dans la boucle de la ligne 3, on va parcourir toutes les lettre de ```mot2``` et tester si elles sont dans ```tab```, donc dans ```mot1```. Si c'est le cas, on l'enlève de ```tab```.
+
+        À la fin de la boucle, il ne reste dans ```tab``` que les lettres qui n'étaient pas dans les deux mots. Si on prend la longueur de ```tab```, on a donc la distance qui sépare les deux mots. 
+    """
+    )
+    }}
+
+    ```python
+    def renvoie_voisins(mot):
+        tab_voisins = ...
+        for voisin_possible in ... :
+            if ... :
+                tab_voisins....
+        return ...
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\"
+        ```python
+        def renvoie_voisins(mot):
+            tab_voisins = []
+            for voisin_possible in TAB_MOTS :
+                if distance(mot, voisin_possible) == 1:
+                    tab_voisins.append(voisin_possible)
+            return tab_voisins
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\"
+        - 3ème tour :
+        On défile ```mors```. Les voisins de ```mors``` sont ```mars``` et ```ours```. ```mars``` est déjà dans ```parent```. Ainsi on obtient :​
+        ```python
+        parent = {'mars' : None,'gars':'mars,'mors':'mars', 'ours':'mors'}
+        file_voisins = ['ours']
+        ```
+        ​
+        - 4ème tour :
+        On défile ```ours```. Les voisins de ```ours``` sont ```mors``` et ```purs```, ```mors``` est déjà dans ```parent```.
+        On enfile ```murs```. Ainsi on obtient :
+        ```python
+        parent = {'mars' : None, 'gars ': 'mars', 'mors ' : 'mars',
+        'ours':'mors', 'purs': 'ours'}}
+        ```
+
+        - 5ème tour :
+        La variable ```mot``` est ```ours``` qui est le mot final. La boucle s'arrête et renvoie le dictionnaire ```parent```.   
+        
+    """
+    )
+    }}
+
+    ```python
+    def renvoie_pile(parent, mot_final):
+        ma_pile = Pile()
+        mot = mot_final
+        while mot != ... :
+            ma_pile....
+            mot = ...
+        return ma_pile
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\"
+        ```python
+        def renvoie_pile(parent, mot_final):
+            ma_pile = Pile()
+            mot = mot_final
+            while mot != None :
+                ma_pile.empiler(mot)
+                mot = parent[mot]
+            return ma_pile
+        ```
+        
+    """
+    )
+    }}
+
+    ```python
+    def construit_chemin(ma_pile):
+        tab = ...
+        while ...:
+            mot = ...
+            tab....
+        return tab
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\"
+        ```python
+        def construit_chemin(ma_pile):
+            tab = []
+            while not ma_pile.est_vide():
+                mot = ma_pile.depiler()
+                tab.append(mot)
+            return tab
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\"
+        ```python
+        def chercher_chemin(mot1, mot2):
+            parent = dic_parent(mot1, mot2)
+            ma_pile = renvoie_pile(parent, mot2)
+            return construit_chemin(ma_pile)
+        ```
+        
+    """
+    )
+    }}
