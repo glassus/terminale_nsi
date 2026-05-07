@@ -1304,6 +1304,10 @@
         return ...
     ```
 
+    ```python
+    TAB_MOTS = ['gars', 'mars', 'mors', 'ours', 'purs']
+    ```
+
     {{
     correction(True,
     """
