@@ -1406,13 +1406,13 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\"
         ```python
-        def chercher_chemin(mot1, mot2):
-            parent = dic_parent(mot1, mot2)
-            ma_pile = renvoie_pile(parent, mot2)
+        def chercher_chemin(mot_depart, mot_final):
+            parent = dic_parent(mot_depart, mot_final)
+            ma_pile = renvoie_pile(parent, mot_final)
             return construit_chemin(ma_pile)
         ```
         
