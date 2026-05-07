@@ -1215,7 +1215,7 @@
     Exercice 3 du sujet [Polynésie J2 - 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\"
         Une Pile est une structure de donnée dans laquelle le **dernier** élément à avoir été mis dans la Pile sera le premier à en sortir.
@@ -1224,7 +1224,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\"
         Une File est une structure de donnée dans laquelle le **premier** élément à avoir été mis dans la File sera le premier à en sortir.
@@ -1233,7 +1233,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         Plusieurs mots peuvent être reliés entre eux. Un graphe parait donc adapté. Il n'y a pas de notion de sens dans la relation entre deux mots, donc le graphe est non orienté.
@@ -1242,7 +1242,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ![image](data/exo3_PO_1.png){: .center .autolight}
@@ -1260,7 +1260,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\"
         ```python
@@ -1285,7 +1285,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\"
         La liste ```tab``` contient toutes les lettres de ```mot1```. Dans la boucle de la ligne 3, on va parcourir toutes les lettre de ```mot2``` et tester si elles sont dans ```tab```, donc dans ```mot1```. Si c'est le cas, on l'enlève de ```tab```.
@@ -1309,7 +1309,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\"
         ```python
@@ -1326,7 +1326,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\"
         - 3ème tour :
@@ -1362,7 +1362,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\"
         ```python
@@ -1389,7 +1389,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\"
         ```python
@@ -1406,7 +1406,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\"
         ```python
