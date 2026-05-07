@@ -1275,8 +1275,17 @@
     )
     }}
 
+    ```python
+    def distance(mot1, mot2):
+        tab = chaine_vers_tab(mot1)
+        for lettre in mot2:
+            if lettre in tab:
+                tab.remove(lettre)
+        return len(tab)
+    ```
+
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\"
         La liste ```tab``` contient toutes les lettres de ```mot1```. Dans la boucle de la ligne 3, on va parcourir toutes les lettre de ```mot2``` et tester si elles sont dans ```tab```, donc dans ```mot1```. Si c'est le cas, on l'enlève de ```tab```.
