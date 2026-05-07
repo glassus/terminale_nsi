@@ -1233,7 +1233,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True, 
     """
     ??? success \"Correction Q3\"
         Plusieurs mots peuvent être reliés entre eux. Un graphe parait donc adapté. Il n'y a pas de notion de sens dans la relation entre deux mots, donc le graphe est non orienté.
