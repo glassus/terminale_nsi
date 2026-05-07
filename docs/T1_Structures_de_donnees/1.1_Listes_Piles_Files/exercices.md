@@ -1326,7 +1326,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\"
         - 3ème tour :
@@ -1338,7 +1338,7 @@
         ​
         - 4ème tour :
         On défile ```ours```. Les voisins de ```ours``` sont ```mors``` et ```purs```, ```mors``` est déjà dans ```parent```.
-        On enfile ```murs```. Ainsi on obtient :
+        On enfile ```purs```. Ainsi on obtient :
         ```python
         parent = {'mars' : None, 'gars ': 'mars', 'mors ' : 'mars',
         'ours':'mors', 'purs': 'ours'}}
