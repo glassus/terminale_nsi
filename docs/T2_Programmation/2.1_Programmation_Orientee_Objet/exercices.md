@@ -1500,8 +1500,11 @@
 
 
 !!! example "{{ exercice() }} <i id="ex3J2AN2024"></i>"
-    Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}   
-
+    Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"} 
+      
+    ??? abstract "Blockchain"
+        ![image](data/blockchain.jpg){: .center}
+        
     ```python
     class Bloc:
         def __init__(self, liste_transactions, bloc_precedent):
@@ -1629,9 +1632,7 @@
             return solde    
     ```
 
-    ??? abstract "Blockchain"
-        ![image](data/blockchain.jpg){: .center}
-        
+
 
     {{
     correction(False,
