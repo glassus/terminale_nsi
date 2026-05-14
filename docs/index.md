@@ -12,6 +12,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
     - Exercice sur les Listes/Piles/Files : [Exercice 3 du sujet Polynésie J2 2025](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex3J2PO2025){. target="_blank"}
 
 
