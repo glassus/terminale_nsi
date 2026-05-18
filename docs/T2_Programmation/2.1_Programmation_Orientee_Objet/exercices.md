@@ -1536,7 +1536,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         Une adresse possible est ```192.168.1.17```. 
@@ -1546,7 +1546,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction('Alice', 'Charlie', 10), Transaction('Bob', 'Alice', 5)]``` 
@@ -1556,7 +1556,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
@@ -1565,7 +1565,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
@@ -1574,7 +1574,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -1591,7 +1591,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
