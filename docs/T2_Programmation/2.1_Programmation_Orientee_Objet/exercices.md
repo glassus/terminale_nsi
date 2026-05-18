@@ -1565,7 +1565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
