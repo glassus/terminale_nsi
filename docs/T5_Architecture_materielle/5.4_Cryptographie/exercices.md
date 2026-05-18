@@ -454,3 +454,279 @@
     decrypted = decryptor.decrypt(encrypted)
     print('Decrypted:', decrypted)
     ```
+
+!!! example "{{ exercice() }} <i id="ex3J1PO2025"></i>"
+    Exercice 3 du sujet [Polynésie J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25-NSIJ1PO1.pdf){. target="_blank"}
+
+    ```python linenums='1'
+    from random import randint
+
+    def gen_mdp(longueur, cont_min, cont_maj, cont_spe):
+        # Pour qu'un mot de passe soit non vide, il doit
+        # pouvoir contenir des minuscules ou des majuscules
+        # ou des caractères spéciaux.
+        assert (cont_min or cont_maj or cont_spe)
+        minuscules = [chr(i) for i in ...]
+        majuscules = [...]
+        caracteres_speciaux = ... + ...
+        jeu_caracteres = []
+        if cont_min:
+            ...
+        ...
+            ...
+        ...
+            ...
+        mot_de_passe = ''
+        n = len(jeu_caracteres)
+        for i in range(longueur):
+            mot_de_passe = ...
+        return mot_de_passe
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\"
+        ```python
+        gen_mdp(8, True, True, False)
+        ``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\"
+        ```python linenums='8'
+        minuscules = [chr(i) for i in range(97, 123)]
+        majuscules = [chr(i) for i in range(65, 91)]
+        caracteres_speciaux = [chr(i) for i in range(33, 48)] + [chr(i) for i in range(58, 65)]
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\"
+        ```python linenums='12'
+        if cont_min:
+            jeu_caracteres += minuscules
+        if cont_maj:
+            jeu_caracteres += majuscules
+        if cont_spe:
+            jeu_caracteres += caracteres_speciaux
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        ```python linenums='1'
+        from random import randint
+
+        def gen_mdp(longueur, cont_min, cont_maj, cont_spe):
+            # Pour qu'un mot de passe soit non vide, il doit
+            # pouvoir contenir des minuscules ou des majuscules
+            # ou des caractères spéciaux.
+            assert (cont_min or cont_maj or cont_spe)
+            minuscules = [chr(i) for i in range(97, 123)]
+            majuscules = [chr(i) for i in range(65, 91)]
+            caracteres_speciaux = [chr(i) for i in range(33, 48)] + [chr(i) for i in range(58, 65)]
+            jeu_caracteres = []
+            if cont_min:
+                jeu_caracteres += minuscules
+            if cont_maj:
+                jeu_caracteres += majuscules
+            if cont_spe:
+                jeu_caracteres += caracteres_speciaux
+            mot_de_passe = ''
+            n = len(jeu_caracteres)
+            for i in range(longueur):
+                mot_de_passe = mot_de_passe + jeu_caracteres[randint(0, n-1)]
+            return mot_de_passe
+
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\"
+        Comme on utilise une fonction aléatoire, rien ne garantit qu'on aura un caractère spécial ou une lettre minuscule.
+        
+    """
+    )
+    }}
+    
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\"
+        Le principe d'une clé primaire est de référence de manière unique chaque enregistrement. Si l'attribut ```mot_de_passe``` est déclaré clé primaire de la table ```compte```, il est alors impossible d'avoir le même mot de passe pour deux sites différents.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\"
+        ```sql
+        SELECT url
+        FROM site
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\"
+        ```sql
+        UPDATE compte
+        SET mot_de_passe = 'yhTS?d@UTJe'
+        WHERE mot_de_passe = '@rDfohpj!&'
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\"
+        ```sql
+        SELECT id_site
+        FROM compte
+        WHERE renouvellement < '2024-03-20'
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\"
+        Ce format de date permet de faire des comparaisons entre les dates, puisqu'on commence par l'année, puis le mois, puis le jour. 
+        
+        Avec le format JJ-MM-AAAA, le fait de commencer par le jour rend la date '01-02-2023' inférieure à la date '13-06-2022', ce qui est illogique.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\"
+        ```sql
+        SELECT compte.mot_de_passe, compte.utilisateur
+        FROM compte
+        JOIN site ON site.id = compte.id_site
+        WHERE site.nom_site = 'Votremailp'
+        ORDER BY renouvellement
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\"
+        Utiliser deux tables permet à Alice de ne pas mélanger les informations : une table pour la gestion de ses mots de passe, une page pour les sites.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13\"
+        ```chiffrement('gestionnaire.db', '../Perso/secret.db', '../Perso/cle')``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q14\"
+        
+        - ```A3``` correspond au nombre décimal 163, donc au nombre binaire ```10100011```.  
+        - ```59``` correspond au nombre décimal 89, donc au nombre binaire ```1011001```.
+        - L'opération XOR entre les nombres binaires ```10100011``` et ```1011001``` donne 250, qui s'écrit ```FA``` en hexadécimal.
+    """
+    )
+    }}
+
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q15\"
+        |`a`| `b` | `a XOR b`|`(a XOR b) XOR b`|
+        |:--:|:-:|:--:|:--:|
+        |0|0|0|0|
+        |1|0|1|1|
+        |0|1|1|0|
+        |1|1|0|1|
+
+        La colonne ```(a XOR b) XOR b``` est identique la colonne ```a```.  
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q16\"
+        L'opération XOR permet de chiffrer et de déchiffrer avec la même clé, ce qui est caractéristique d'un chiffrement symétrique.        
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q17\"
+        Le fichier ```secret.db``` étant directement accessible en lecture pour tout le monde, il est donc à la merci d'un attaquant. Alice devrait restreindre les droits en lecture de son fichier pour ne le rendre lisible que par elle-même.       
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q18\"
+
+        - Alice a des mots de passe différents pour chaque site, elle respecte donc la recommandation P1.
+        - Ses mots de passe sont bien de longueur minimale 8 et contiennent des minuscules, des majuscules, des chiffres et des caractères spéciaux. Elle respecte donc la recommandation P2.
+        - On ne sait pas si Alice communique ou non ses mots de passe à des tiers. On ne peut donc rien dire sur la recommandation P3.
+        - Alice n'utilise pas de gestionnaire de mots de passe : elle ne respecte donc pas la recommandation P4.
+    """
+    )
+    }}

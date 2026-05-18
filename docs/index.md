@@ -13,6 +13,7 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
+    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025)    
     
 
 
