@@ -1546,7 +1546,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction('Alice', 'Charlie', 10), Transaction('Bob', 'Alice', 5)]``` 
