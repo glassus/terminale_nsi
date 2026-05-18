@@ -1506,6 +1506,12 @@
         ![image](data/blockchain.jpg){: .center}
         
     ```python
+    class Transaction:
+        def __init__(self, expediteur, destinataire, montant):
+            self.expediteur = expediteur
+            self.destinataire = destinataire
+            self.montant = montant
+
     class Bloc:
         def __init__(self, liste_transactions, bloc_precedent):
             self.liste_transactions = liste_transactions
@@ -1568,7 +1574,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
