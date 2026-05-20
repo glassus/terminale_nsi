@@ -1591,7 +1591,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
@@ -1600,7 +1600,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -1614,7 +1614,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
@@ -1641,7 +1641,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1' hl_lines='6 7-10'
@@ -1663,7 +1663,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
@@ -1672,7 +1672,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11 \" 
         Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
@@ -1681,7 +1681,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12 \" 
         D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
@@ -1690,7 +1690,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13 \" 
         Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
@@ -1699,7 +1699,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14 \"
         ```python linenums='1'
