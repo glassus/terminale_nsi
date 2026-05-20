@@ -1591,7 +1591,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
