@@ -1521,7 +1521,7 @@
         def __init__(self):
             self.tete = self.creer_bloc_0()
 
-        def self.creer_bloc_0(self):
+        def creer_bloc_0(self):
             '''
             Crée le premier bloc qui distribue 100 nsicoin à tous les
             utilisateurs (un pseudo-utilisateur Genesis est utilisé comme
