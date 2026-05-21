@@ -484,7 +484,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\"
         ```python
@@ -496,7 +496,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\"
         ```python linenums='8'
@@ -510,7 +510,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         ```python linenums='12'
@@ -527,7 +527,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ```python linenums='1'
@@ -561,7 +561,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\"
         Comme on utilise une fonction aléatoire, rien ne garantit qu'on aura un caractère spécial ou une lettre minuscule.
@@ -572,7 +572,7 @@
     
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\"
         Le principe d'une clé primaire est de référence de manière unique chaque enregistrement. Si l'attribut ```mot_de_passe``` est déclaré clé primaire de la table ```compte```, il est alors impossible d'avoir le même mot de passe pour deux sites différents.
@@ -582,7 +582,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\"
         ```sql
@@ -595,7 +595,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\"
         ```sql
