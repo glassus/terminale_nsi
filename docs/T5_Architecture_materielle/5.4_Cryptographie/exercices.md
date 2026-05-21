@@ -595,13 +595,13 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\"
         ```sql
         UPDATE compte
-        SET mot_de_passe = 'yhTS?d@UTJe'
-        WHERE mot_de_passe = '@rDfohpj!&'
+        SET mot_de_passe = '@rDfohpj!&'
+        WHERE mot_de_passe = 'yhTS?d@UTJe'
         ```
         
     """
