@@ -561,7 +561,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\"
         Comme on utilise une fonction aléatoire, rien ne garantit qu'on aura un caractère spécial ou une lettre minuscule.
