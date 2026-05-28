@@ -735,7 +735,7 @@
     Exercice 3 du sujet [Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Prenons comme exemple la deuxième lettre, I. Son rang est 8. La lettre du masque qui lui correspond est Y, qui est de rang 24.
@@ -780,7 +780,7 @@
 
     ```python
     alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    
+
     def indices_vers_lettres(lst):
         s = ''
         for k in lst:
