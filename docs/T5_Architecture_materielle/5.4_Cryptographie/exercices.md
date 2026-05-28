@@ -685,7 +685,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q15\"
         |`a`| `b` | `a XOR b`|`(a XOR b) XOR b`|
