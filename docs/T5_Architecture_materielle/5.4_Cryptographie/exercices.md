@@ -572,7 +572,7 @@
     
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\"
         Le principe d'une clé primaire est de référence de manière unique chaque enregistrement. Si l'attribut ```mot_de_passe``` est déclaré clé primaire de la table ```compte```, il est alors impossible d'avoir le même mot de passe pour deux sites différents.
@@ -582,7 +582,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\"
         ```sql
@@ -595,7 +595,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\"
         ```sql
