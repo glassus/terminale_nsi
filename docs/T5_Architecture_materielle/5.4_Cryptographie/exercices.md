@@ -750,7 +750,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -759,6 +759,12 @@
                 if L[i] == element:
                     return i
         ```
+        ou bien
+        ```python
+        def indice(L, element):
+            return L.index(element)
+        ```
+
     """
     )
     }}
