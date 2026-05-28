@@ -730,3 +730,252 @@
     """
     )
     }}
+
+!!! example "{{ exercice() }} <i id="ex3J2ME2025"></i>"
+    Exercice 3 du sujet [Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        Prenons comme exemple la deuxième lettre, I. Son rang est 8. La lettre du masque qui lui correspond est Y, qui est de rang 24.
+
+        $8+24=32=6\%26$
+
+        On prend donc la lettre de rang 6, qui est G.
+
+        Si on fait de même pour les autres lettres, on trouve PGRDX.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```python
+        def indice(L, element):
+            for i in range(len(L)):
+                if L[i] == element:
+                    return i
+        ```
+    """
+    )
+    }}
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        ```python
+        def lettres_vers_indices(chaine):
+            lst = []
+            for car in chaine:
+                lst.append(indice(alphabet, car))
+            return lst
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def indices_vers_lettres(lst):
+        s = ''
+        for k in lst:
+            s += chr(65+k)
+        return s
+
+    def chiffrement(msg, cle):
+        assert len(cle) >= len(msg), 'impossible'
+        indices_msg = lettres_vers_indices(msg)
+        indices_cle = lettres_vers_indices(cle)
+        n = len(msg)
+        indices_msg_chiffre = []
+        for k in range(n):
+            ind = ...
+            if ind >= 26:
+                ind = ...
+            indices_msg_chiffre.append(ind)
+        msg_chiffre = indic
+        return msg_chiffre
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        ```python
+        def chiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] + indices_cle[k]
+                if ind >= 26:
+                    ind = ind % 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        La longueur de la clé est plus petite que le message à chiffrer, donc la fonction va s'arrêter au premier ```assert``` et renvoyer ```impossible```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        On obtient le message ```BRAVO```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        Prenons par exemple l'avant-dernière lettre du message chiffré, D. Elle a été chiffrée avec la lettre I.
+
+        D a pour rang 3, I a pour rang 8. On fait 3 - 8, qui donne -5. On ajoute 26 pour finalement trouver 21. La lettre de rang 21 est la lettre V.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def dechiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] - indices_cle[k]
+                if ind < 0:
+                    ind = ind + 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        Dans un chiffrement symétrique, c'est la même clé qui sert à chiffrer et à déchiffrer.
+
+        Dans un chiffrement asymétrique, il y a 2 clés, une clé publique et une clé privée.
+        Si Bob veut communiquer avec Alice, il va chiffrer son message avec la clé publique d'Alice. Seule Alice pourra le déchiffrer à l'aide de sa clé privée. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        Il suffit à Bob d'appliquer sa clé privée sur le message envoyé par Alice. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        Comme tout le monde connaît la clé publique de Bob, rien ne garantit qu'Alice est l'expéditrice du message.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        Le protocole HTTPS fonctionne en 2 temps.
+
+        Dans un premier temps, le client et le serveur vont échanger une clé en utilisant un chiffrement asymétrique (souvent RSA).
+
+        Dans un second temps, ils vont communiquer en chiffrement symétrique (souvent AES) avec la clé échangée au préalable.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13\" 
+        Le chiffrement asymétrique demande beaucoup de ressources, il n'est donc pas adapté aux échanges rapides. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q14\" 
+        Marc s'est trompé dans le troisième octet de l'adresse IP. Il aurait dû écrire ```ping 192.168.110.115```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q15\" 
+        Le masque en binaire ```11111111.11111111.11111111.11100000``` a pour représentation décimale ```255.255.255.224```. (on convertit chaque octet en décimal) 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q16\" 
+        Il y a 5 bits à zéro dans le masque, ce qui donne 32 adresses disponibles. Si on enlève la première (adresse du réseau) et la dernière (adresse de broadcast), il reste 30 adresses disponibles.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q17\" 
+        134 s'écrit ```10000110``` en binaire.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q18\" 
+        L'adresse IP ```192.168.110.134``` donne une adresse de réseau de ```192.168.110.128```.
+
+        L'adresse IP ```192.168.110.115``` (commande n°1) donne une adresse de réseau de ```192.168.110.32```.
+
+        L'adresse IP ```192.168.110.153``` (commande n°2) donne une adresse de réseau de ```192.168.110.128```.
+
+        Seule le ping de la commande n°2 peut donc aboutir.
+    """
+    )
+    }}

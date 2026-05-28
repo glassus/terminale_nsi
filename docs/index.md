@@ -12,7 +12,8 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025)    
+    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025)  
+    - Révisions Cryptographie / Réseaux  : [Exercice 3 Métropole J2 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J2ME2025)   
     
 
 
