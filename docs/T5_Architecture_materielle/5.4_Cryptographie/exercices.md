@@ -609,7 +609,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\"
         ```sql
@@ -623,7 +623,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\"
         Ce format de date permet de faire des comparaisons entre les dates, puisqu'on commence par l'année, puis le mois, puis le jour. 
@@ -635,7 +635,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\"
         ```sql
@@ -651,7 +651,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\"
         Utiliser deux tables permet à Alice de ne pas mélanger les informations : une table pour la gestion de ses mots de passe, une page pour les sites.
@@ -661,7 +661,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\"
         ```chiffrement('gestionnaire.db', '../Perso/secret.db', '../Perso/cle')``` 
@@ -671,7 +671,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14\"
         
@@ -685,7 +685,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q15\"
         |`a`| `b` | `a XOR b`|`(a XOR b) XOR b`|
@@ -701,7 +701,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q16\"
         L'opération XOR permet de chiffrer et de déchiffrer avec la même clé, ce qui est caractéristique d'un chiffrement symétrique.        
@@ -710,7 +710,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q17\"
         Le fichier ```secret.db``` étant directement accessible en lecture pour tout le monde, il est donc à la merci d'un attaquant. Alice devrait restreindre les droits en lecture de son fichier pour ne le rendre lisible que par elle-même.       
@@ -719,7 +719,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q18\"
 
@@ -735,7 +735,7 @@
     Exercice 3 du sujet [Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Prenons comme exemple la deuxième lettre, I. Son rang est 8. La lettre du masque qui lui correspond est Y, qui est de rang 24.
@@ -750,7 +750,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -770,7 +770,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
