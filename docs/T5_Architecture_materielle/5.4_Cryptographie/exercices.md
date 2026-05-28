@@ -790,7 +790,7 @@
     def indices_vers_lettres(lst):
         s = ''
         for k in lst:
-            s += chr(65+k)
+            s += alphabet[k]
         return s
 
     def chiffrement(msg, cle):
