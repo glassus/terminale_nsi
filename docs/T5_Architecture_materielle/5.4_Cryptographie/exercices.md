@@ -635,7 +635,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\"
         ```sql
@@ -643,7 +643,7 @@
         FROM compte
         JOIN site ON site.id = compte.id_site
         WHERE site.nom_site = 'Votremailp'
-        ORDER BY renouvellement
+        ORDER BY compte.renouvellement
         ```
         
     """
