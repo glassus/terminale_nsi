@@ -701,7 +701,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q16\"
         L'opération XOR permet de chiffrer et de déchiffrer avec la même clé, ce qui est caractéristique d'un chiffrement symétrique.        
@@ -710,7 +710,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q17\"
         Le fichier ```secret.db``` étant directement accessible en lecture pour tout le monde, il est donc à la merci d'un attaquant. Alice devrait restreindre les droits en lecture de son fichier pour ne le rendre lisible que par elle-même.       
