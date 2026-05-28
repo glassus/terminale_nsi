@@ -651,7 +651,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\"
         Utiliser deux tables permet à Alice de ne pas mélanger les informations : une table pour la gestion de ses mots de passe, une page pour les sites.
