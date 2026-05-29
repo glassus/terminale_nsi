@@ -1,5 +1,9 @@
 # Annales des Épreuves Écrites
 
+## 2026
+- [Amérique du Nord J1](data/2026/26_NSIJ1AN1.pdf)
+- [Amérique du Nord J2](data/2026/26_NSIJ2AN1.pdf)
+
 ## 2025
 - [Métropole Septembre](data/2025/25-NSIJ1ME3.pdf)
 - [Nouvelle-Calédonie J1](data/2025/25-NSIJ1NC1.pdf)
