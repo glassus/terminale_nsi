@@ -1383,3 +1383,222 @@
     """
     )
     }}
+
+
+!!! example "{{ exercice() }} <i id="ex3J1AN2026"></i>"
+
+    Exercice 3 du [sujet Amérique du Nord J1 2026](https://glassus.github.io/terminale_nsi/T6_Annales/data/2026/26_NSIJ1AN1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\"
+         Il peut y avoir plusieurs immeubles ayant le même numéro dans des rues différentes, donc le numéro dans la rue ne peut pas être clé primaire.
+        
+    """
+    )
+    }}  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```sql
+        SELECT id_immeuble
+        FROM immeuble
+        WHERE rue_immeuble = 'la mer'
+        ORDER BY id_immeuble
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        ```sql
+        SELECT id_appart
+        FROM appartement
+        WHERE id_immeuble = 16 AND etage_appart >= 5
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        La table ```appartement``` est reliée à la table ```immeuble``` par la clé étrangère ```id_immeuble```. Si on supprime un immeuble dans la table ```immeuble```, cela va poser un problème pour tous les appartements qui y font référence. 
+        
+    """
+    )
+    }}  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        ```sql
+        INSERT INTO immeuble
+        VALUES (140, 6, 13, 'Turing')
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ```sql
+        UPDATE appartement
+        SET prix_appart = prix_appart * 2
+        WHERE id_appart = 603
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ```sql
+        SELECT MAX(appartement.prix_appart)
+        FROM appartement
+        JOIN immeuble ON appartement.id_immeuble = immeuble.id_immeuble
+        WHERE immeuble.rue_immeuble = 'la mer'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        Les sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` sont :
+
+        - ```[3, 8]``` 
+        - ```[3, 5]``` 
+        - ```[1, 8] ```
+        - ```[1, 2]``` 
+        - ```[1, 5]``` 
+        - ```[2, 5] ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        La plus longue sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        ```python
+        def est_strict_croissante(seq):
+            for i in range(len(seq)-1):
+                if seq[i] >= seq[i+1]:
+                    return False
+            return True
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def llsc_fin(tab, i):
+        if ...:
+            return ...
+        max_len = 1
+        for j in range(i):
+            if tab[j] < ...:
+                max_len = max(max_len, llsc_fin(tab, j)+1)
+        return max_len
+
+    def llsc_rec(tab):
+        n = len(tab)
+        return max([llsc_fin(tab, i) for i in range(n)]) 
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        ```python
+        def llsc_fin(tab, i):
+            if i == 0:
+                return 1
+            max_len = 1
+            for j in range(i):
+                if tab[j] < tab[i]:
+                    max_len = max(max_len, llsc_fin(tab, j)+1)
+            return max_len
+
+        def llsc_rec(tab):
+            n = len(tab)
+            return max([llsc_fin(tab, i) for i in range(n)]) 
+        ```
+    """
+    )
+    }}
+    
+    ```python
+    def llsc_dyn(tab):
+        n = len(tab)
+        dyn = [1] * n
+        for i in range(1, n):
+            for j in range(i):
+                if tab[j] < tab[i]:
+                    dyn[i] = max(..., ...)
+        return ...
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        ```python
+        def llsc_dyn(tab):
+            n = len(tab)
+            dyn = [1] * n
+            for i in range(1, n):
+                for j in range(i):
+                    if tab[j] < tab[i]:
+                        dyn[i] = max(dyn[i], dyn[j]+1)
+            return max([k for k in dyn])
+        ```
+        ou
+        ```python
+        def llsc_dyn(tab):
+            n = len(tab)
+            dyn = [1] * n
+            for i in range(1, n):
+                for j in range(i):
+                    if tab[j] < tab[i]:
+                        dyn[i] = max(dyn[i], dyn[j]+1)
+            return max(dyn)
+        ```
+
+
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13\" 
+        La programmation dynamique évite de recalculer plusieurs fois les mêmes valeurs, chose que ne permet pas la récursivité.
+    """
+    )
+    }}
