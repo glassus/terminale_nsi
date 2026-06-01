@@ -862,7 +862,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -887,7 +887,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Dans un chiffrement symétrique, c'est la même clé qui sert à chiffrer et à déchiffrer.
@@ -899,7 +899,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         Il suffit à Bob d'appliquer sa clé privée sur le message envoyé par Alice. 
@@ -908,7 +908,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Comme tout le monde connaît la clé publique de Bob, rien ne garantit qu'Alice est l'expéditrice du message.
