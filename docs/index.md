@@ -15,7 +15,6 @@
     - Révisions Cryptographie / Réseaux  : [Exercice 3 Métropole J2 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J2ME2025)   
     - Révisions SQL / Programmation dynamique: [Exercice 3 Amérique du Nord J1 2026](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2026)     
 
-ex3J1AN2026
 
 
 
