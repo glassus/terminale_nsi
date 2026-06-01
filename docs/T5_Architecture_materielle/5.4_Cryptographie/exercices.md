@@ -805,7 +805,7 @@
             if ind >= 26:
                 ind = ...
             indices_msg_chiffre.append(ind)
-        msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+        msg_chiffre = indices_vers_lettres(...)
         return msg_chiffre
     ```
 
