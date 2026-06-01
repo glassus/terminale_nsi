@@ -917,7 +917,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         Le protocole HTTPS fonctionne en 2 temps.
