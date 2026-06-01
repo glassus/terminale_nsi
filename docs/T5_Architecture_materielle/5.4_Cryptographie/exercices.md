@@ -851,7 +851,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         Prenons par exemple l'avant-dernière lettre du message chiffré, D. Elle a été chiffrée avec la lettre I.
