@@ -833,7 +833,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         La longueur de la clé est plus petite que le message à chiffrer, donc la fonction va s'arrêter au premier ```assert``` et renvoyer ```impossible```.
