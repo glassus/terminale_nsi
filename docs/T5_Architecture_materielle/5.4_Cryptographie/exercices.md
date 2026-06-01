@@ -980,7 +980,7 @@
     ??? success \"Correction Q18\" 
         L'adresse IP ```192.168.110.134``` donne une adresse de réseau de ```192.168.110.128```.
 
-        L'adresse IP ```192.168.110.115``` (commande n°1) donne une adresse de réseau de ```192.168.110.32```.
+        L'adresse IP ```192.168.110.115``` (commande n°1) donne une adresse de réseau de ```192.168.110.96```.
 
         L'adresse IP ```192.168.110.153``` (commande n°2) donne une adresse de réseau de ```192.168.110.128```.
 
