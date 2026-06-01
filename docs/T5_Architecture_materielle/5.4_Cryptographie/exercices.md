@@ -929,7 +929,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         Le chiffrement asymétrique demande beaucoup de ressources, il n'est donc pas adapté aux échanges rapides. 
