@@ -800,11 +800,12 @@
         n = len(msg)
         indices_msg_chiffre = []
         for k in range(n):
+
             ind = ...
             if ind >= 26:
                 ind = ...
             indices_msg_chiffre.append(ind)
-        msg_chiffre = indic
+        msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
         return msg_chiffre
     ```
 
