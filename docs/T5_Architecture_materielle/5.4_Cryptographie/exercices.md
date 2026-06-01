@@ -956,7 +956,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q16\" 
         Il y a 5 bits à zéro dans le masque, ce qui donne 32 adresses disponibles. Si on enlève la première (adresse du réseau) et la dernière (adresse de broadcast), il reste 30 adresses disponibles.
@@ -965,7 +965,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q17\" 
         134 s'écrit ```10000110``` en binaire.
