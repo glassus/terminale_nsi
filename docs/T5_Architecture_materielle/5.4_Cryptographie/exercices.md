@@ -975,7 +975,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q18\" 
         L'adresse IP ```192.168.110.134``` donne une adresse de réseau de ```192.168.110.128```.
