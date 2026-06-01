@@ -800,7 +800,6 @@
         n = len(msg)
         indices_msg_chiffre = []
         for k in range(n):
-
             ind = ...
             if ind >= 26:
                 ind = ...
@@ -862,7 +861,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         ```python
