@@ -966,7 +966,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q17\" 
         134 s'écrit ```10000110``` en binaire.
