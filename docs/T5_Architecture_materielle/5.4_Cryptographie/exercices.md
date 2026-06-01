@@ -938,7 +938,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14\" 
         Marc s'est trompé dans le troisième octet de l'adresse IP. Il aurait dû écrire ```ping 192.168.110.115```. 
@@ -947,7 +947,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q15\" 
         Le masque en binaire ```11111111.11111111.11111111.11100000``` a pour représentation décimale ```255.255.255.224```. (on convertit chaque octet en décimal) 
