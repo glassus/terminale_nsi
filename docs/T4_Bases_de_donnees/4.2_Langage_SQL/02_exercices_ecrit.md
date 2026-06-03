@@ -1427,7 +1427,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\"
         La table ```appartement``` est reliée à la table ```immeuble``` par la clé étrangère ```id_immeuble```. Si on supprime un immeuble dans la table ```immeuble```, cela va poser un problème pour tous les appartements qui y font référence. 
