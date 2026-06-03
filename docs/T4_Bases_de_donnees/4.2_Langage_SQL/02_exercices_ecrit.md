@@ -1390,7 +1390,7 @@
     Exercice 3 du [sujet Amérique du Nord J1 2026](https://glassus.github.io/terminale_nsi/T6_Annales/data/2026/26_NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\"
          Il peut y avoir plusieurs immeubles ayant le même numéro dans des rues différentes, donc le numéro dans la rue ne peut pas être clé primaire.
@@ -1443,6 +1443,7 @@
         ```sql
         INSERT INTO immeuble
         VALUES (140, 6, 13, 'Turing')
+NUMERIQUE
         ```
     """
     )
@@ -1495,7 +1496,7 @@
     correction(False,
     """
     ??? success \"Correction Q9\" 
-        La plus longue sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
+        La plus longue sous-séquences strictement croissante de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
     """
     )
     }}
