@@ -1716,6 +1716,235 @@
     }}
 
 
+
+!!! example "{{ exercice() }} <i id="ex1J1G112025"></i>"
+    Exercice 1 du [sujet Centre Étrangers J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1G11.pdf){. target="_blank"}
+
+    ```python linenums='1'
+    class Balise:
+        def __init__(self, numero, couleurs):
+            self.num_balise = numero
+            self.couleurs_balise = couleurs
+            self.voisines = []
+            self.visitee = False
+
+        def methode1(self):
+            return [b.num_balise for b in self.voisines]
+
+        def methode2(self, couleur):
+            self.couleurs_balise = [c for c in self.couleurs_balise if c != couleur]
+
+        def methode3(self, couleur):
+            self.couleurs_balise.append(couleur)
+
+    balise1 = Balise(1, ['vert', 'rouge', 'noir'])
+    balise2 = Balise(2, ['rouge'])
+    balise3 = Balise(3, ['vert', 'noir'])
+    balise4 = Balise(4, ['rouge', 'noir'])
+    balise5 = Balise(5, ['noir'])
+    balise6 = Balise(6, ['vert', 'rouge', 'noir'])
+    balise7 = Balise(7, ['vert'])
+    balise8 = Balise(8, ['rouge'])
+    balise9 = Balise(9, ['rouge'])
+    balise10 = Balise(10, ['vert', 'noir'])
+    balise11 = Balise(11, ['rouge'])
+    balise12 = ...
+
+    balise1.voisines = [balise2, balise3]
+    balise2.voisines = [balise1, balise4]
+    balise3.voisines = [balise1, balise6]
+    balise4.voisines = [balise2, balise5, balise6]
+    balise5.voisines = [balise4, balise10]
+    balise6.voisines = [balise3, balise4, balise7, balise11]
+    balise7.voisines = [balise6, balise10]
+    balise8.voisines = [balise9]
+    ...
+    balise10.voisines = [balise5, balise7, balise12]
+    balise11.voisines = [balise6, balise9]
+    balise12.voisines = [balise9, balise10]
+
+    ```
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\" 
+        ```python
+        balise12 = Balise(12, ['vert', 'noir'])
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```python
+        balise9.voisines = [balise8, balise11, balise12]
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        L'instruction ```balise4.methode1()``` renvoie ```[2, 5, 6]```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\" 
+        La dernière instruction renvoie ```['noir', 'vert']```. 
+    """
+    )
+    }}
+
+
+    ```python
+    def itineraire(balise_debut, balise_fin, couleur):
+        assert couleur in balise_debut.couleurs_balise
+        assert couleur in balise_fin.couleurs_balise
+        balise = balise_debut
+        chemin = [balise]
+        while balise.num_balise != ...:
+            for b in balise.voisines:
+                if (couleur in ...) and (b not in ...):
+                    balise = ...
+                    chemin.append(balise)
+        return [b.num_balise for b in chemin]
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        ```python
+        def itineraire(balise_debut, balise_fin, couleur):
+            assert couleur in balise_debut.couleurs_balise
+            assert couleur in balise_fin.couleurs_balise
+            balise = balise_debut
+            chemin = [balise]
+            while balise.num_balise != balise_fin.num_balise:
+                for b in balise.voisines:
+                    if (couleur in b.couleurs_balise) and (b not in chemin):
+                        balise = b
+                        chemin.append(balise)
+            return [b.num_balise for b in chemin]
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        Le parcours en profondeur donne ```1, 2, 4, 5, 10, 7, 6, 3, 11, 9, 8, 12```.
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ```python
+        balise4.voisines = [(balise2, 13), (balise5, 21), (balise6, 15)]
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def mystere(balise):
+        meilleure_balise = None
+        mini = -1
+        for b, t in balise.voisines:
+            if (b.visitee == False) and (mini == -1 or t < mini):
+                meilleure_balise, mini = b, t
+        return meilleure_balise
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        L'instruction ```mystere(balise10).num_balise``` renvoie ```5```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        Les balises rencontrées par ce sportif seront ```1, 2, 4, 6, 11, 9, 12``` .
+    """
+    )
+    }}
+
+    ```python linenums='1'
+    def itineraire_trail(balise_debut, balise_fin):
+        balise_debut.visitee = True
+        balise = balise_debut
+        chemin = [balise]
+        while balise_fin not in chemin:
+            prochaine = ...
+            if prochaine != None:
+                ...
+            else:
+                return None
+        return [b.num_balise for b in chemin]
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        ```python
+        def itineraire_trail(balise_debut, balise_fin):
+            balise_debut.visitee = True
+            balise = balise_debut
+            chemin = [balise]
+            while balise_fin not in chemin:
+                prochaine = mystere(balise)
+                if prochaine != None:
+                    prochaine.visitee = True
+                    chemin.append(prochaine)
+                    balise = prochaine
+                else:
+                    return None
+            return [b.num_balise for b in chemin]
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        Cet algorithme est un algorithme glouton car il fait le meilleur choix à chaque étape (la balise la plus proche).
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        Les algorithmes gloutons sont efficaces et simples à programmer, mais ils ne donnent pas systématiquement la meilleure solution.
+    """
+    )
+    }}
 {#
 
 !!! abstract 'DS02'
