@@ -5886,75 +5886,6 @@ Kevin
 <div class="admonition example">
 <p class="admonition-title">Exercice  11 <i id="ex3J1AN2026"></i></p>
 <p>Exercice 3 du <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2026/26_NSIJ1AN1.pdf" target="_blank">sujet Amérique du Nord J1 2026</a></p>
-<details class="success">
-<summary>Correction Q1</summary>
-<p>Il peut y avoir plusieurs immeubles ayant le même numéro dans des rues différentes, donc le numéro dans la rue ne peut pas être clé primaire.</p>
-</details>
-<details class="success">
-<summary>Correction Q2</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id_immeuble</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">immeuble</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">rue_immeuble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;la mer&#39;</span>
-<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">id_immeuble</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q3</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id_appart</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">appartement</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">id_immeuble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">etage_appart</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q4</summary>
-<p>La table <code>appartement</code> est reliée à la table <code>immeuble</code> par la clé étrangère <code>id_immeuble</code>. Si on supprime un immeuble dans la table <code>immeuble</code>, cela va poser un problème pour tous les appartements qui y font référence. </p>
-</details>
-<details class="success">
-<summary>Correction Q5</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">immeuble</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Turing&#39;</span><span class="p">)</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q6</summary>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">appartement</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">prix_appart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prix_appart</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">id_appart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">603</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q7</summary>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">appartement</span><span class="p">.</span><span class="n">prix_appart</span><span class="p">)</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">appartement</span>
-<span class="k">JOIN</span><span class="w"> </span><span class="n">immeuble</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">appartement</span><span class="p">.</span><span class="n">id_immeuble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">immeuble</span><span class="p">.</span><span class="n">id_immeuble</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">immeuble</span><span class="p">.</span><span class="n">rue_immeuble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;la mer&#39;</span>
-</code></pre></div>
-</details>
-<details class="success">
-<summary>Correction Q8</summary>
-<p>Les sous-séquences strictement croissantes de longueur 2 de la liste <code>L2</code> sont :</p>
-<ul>
-<li><code>[3, 8]</code> </li>
-<li><code>[3, 5]</code> </li>
-<li><code>[1, 8]</code></li>
-<li><code>[1, 2]</code> </li>
-<li><code>[1, 5]</code> </li>
-<li><code>[2, 5]</code></li>
-</ul>
-</details>
-<details class="success">
-<summary>Correction Q9</summary>
-<p>La plus longue sous-séquences strictement croissante de longueur 2 de la liste <code>L2</code> est <code>[1, 2, 5]</code>.</p>
-</details>
-<details class="success">
-<summary>Correction Q10</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">est_strict_croissante</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
-</code></pre></div>
-</details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">llsc_fin</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
@@ -5968,22 +5899,6 @@ Kevin
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">max</span><span class="p">([</span><span class="n">llsc_fin</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span> 
 </code></pre></div>
-<details class="success">
-<summary>Correction Q11</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">llsc_fin</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="n">max_len</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span> <span class="n">llsc_fin</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">max_len</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">llsc_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">([</span><span class="n">llsc_fin</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span> 
-</code></pre></div>
-</details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">llsc_dyn</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
     <span class="n">dyn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
@@ -5993,32 +5908,6 @@ Kevin
                 <span class="n">dyn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction Q12</summary>
-<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">llsc_dyn</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-    <span class="n">dyn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-                <span class="n">dyn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dyn</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dyn</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dyn</span><span class="p">])</span>
-</code></pre></div>
-ou
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">llsc_dyn</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
-    <span class="n">dyn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-                <span class="n">dyn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dyn</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dyn</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">dyn</span><span class="p">)</span>
-</code></pre></div></p>
-</details>
-<details class="success">
-<summary>Correction Q13</summary>
-<p>La programmation dynamique évite de recalculer plusieurs fois les mêmes valeurs, chose que ne permet pas la récursivité.</p>
-</details>
 </div>
 <script src="https://glassus.github.io/terminale_nsi//js/material-tabbed-fix.js"></script>
 
@@ -6042,7 +5931,7 @@ ou
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 juin 2026 07:35:23 UTC">3 juin 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 juin 2026 07:37:21 UTC">3 juin 2026</span>
   </span>
 
     
