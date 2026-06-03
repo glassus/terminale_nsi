@@ -1437,13 +1437,12 @@
     }}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```sql
         INSERT INTO immeuble
         VALUES (140, 6, 13, 'Turing')
-NUMERIQUE
         ```
     """
     )
