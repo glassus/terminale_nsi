@@ -1595,7 +1595,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         La programmation dynamique évite de recalculer plusieurs fois les mêmes valeurs, chose que ne permet pas la récursivité.
