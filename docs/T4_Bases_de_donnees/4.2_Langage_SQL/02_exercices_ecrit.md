@@ -1476,7 +1476,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         Les sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` sont :
@@ -1492,7 +1492,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         La plus longue sous-séquences strictement croissante de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
