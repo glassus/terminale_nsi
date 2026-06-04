@@ -1789,7 +1789,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         L'instruction ```balise4.methode1()``` renvoie ```[2, 5, 6]```.
