@@ -1843,7 +1843,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Le parcours en profondeur donne ```1, 2, 4, 5, 10, 7, 6, 3, 11, 9, 8, 12```.
