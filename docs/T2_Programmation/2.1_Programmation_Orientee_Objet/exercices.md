@@ -1798,7 +1798,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         La dernière instruction renvoie ```['noir', 'vert']```. 
