@@ -1874,7 +1874,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         L'instruction ```mystere(balise10).num_balise``` renvoie ```5```.
