@@ -1767,7 +1767,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```python
@@ -1778,7 +1778,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -1789,7 +1789,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         L'instruction ```balise4.methode1()``` renvoie ```[2, 5, 6]```.
@@ -1798,7 +1798,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         La dernière instruction renvoie ```['noir', 'vert']```. 
@@ -1822,7 +1822,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -1843,7 +1843,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Le parcours en profondeur donne ```1, 2, 4, 5, 10, 7, 6, 3, 11, 9, 8, 12```.
@@ -1853,7 +1853,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -1874,7 +1874,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         L'instruction ```mystere(balise10).num_balise``` renvoie ```5```.
@@ -1883,7 +1883,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Les balises rencontrées par ce sportif seront ```1, 2, 4, 6, 11, 9, 12``` .
@@ -1906,7 +1906,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```python
@@ -1929,7 +1929,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Cet algorithme est un algorithme glouton car il fait le meilleur choix à chaque étape (la balise la plus proche).
@@ -1938,7 +1938,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         Les algorithmes gloutons sont efficaces et simples à programmer, mais ils ne donnent pas systématiquement la meilleure solution.
