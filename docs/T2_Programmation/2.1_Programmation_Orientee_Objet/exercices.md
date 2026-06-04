@@ -1929,7 +1929,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Cet algorithme est un algorithme glouton car il fait le meilleur choix à chaque étape (la balise la plus proche).
@@ -1938,7 +1938,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         Les algorithmes gloutons sont efficaces et simples à programmer, mais ils ne donnent pas systématiquement la meilleure solution.
