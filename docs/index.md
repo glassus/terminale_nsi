@@ -12,7 +12,7 @@
 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - Révisions POO : [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J1G112025)      
+    - Révisions POO / Graphes: [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J1G112025)      
 
 
 
