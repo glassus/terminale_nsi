@@ -1883,7 +1883,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Les balises rencontrées par ce sportif seront ```1, 2, 4, 6, 11, 9, 12``` .
