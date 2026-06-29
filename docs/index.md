@@ -1,5 +1,16 @@
 
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
 
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+
+  
+
+{#
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"
     - Les sujets ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
@@ -69,7 +80,7 @@
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
 - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
-
+#}
 
 {#
 [https://youtu.be/PvpeSYVNVrE](https://youtu.be/PvpeSYVNVrE){. target="_blank"}
