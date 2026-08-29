@@ -1,4 +1,14 @@
 
+!!! tip "Utilisation des VM"
+    Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
+
+!!! note ":star: Thème en cours d'étude :star: "
+    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)  
+
+
+
+
+{#
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
     Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
 
@@ -8,7 +18,7 @@
         - Tris par sélection et insertion
         - Dichotomie
 
-  
+#} 
 
 {#
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"

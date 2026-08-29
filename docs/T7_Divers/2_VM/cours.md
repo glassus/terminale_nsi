@@ -35,6 +35,6 @@ Afin de pouvoir travailler sous le système d'exploitation libre Linux sur les m
 
 13. Basculer l'affichage en plein écran
 ![image](data/7.png){: .center}
-14. Au premier lancement d'un navigateur, remplir ses identifiants Scribe, permettant d'accéder à internet.
+14. Au premier lancement d'un navigateur, remplir ses identifiants Active Directory, permettant d'accéder à internet.
 ![image](data/8.png){: .center}
 
