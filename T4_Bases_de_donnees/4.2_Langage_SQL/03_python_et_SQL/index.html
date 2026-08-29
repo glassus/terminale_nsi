@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4998,20 +4998,20 @@
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mynewbase.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mynewbase.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
 <span class="c1"># ---- début des instructions SQL</span>
 
 <span class="c1">#Création de la table</span>
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">    CREATE TABLE IF NOT EXISTS bulletin(</span>
 <span class="s2">    Nom TEXT,</span>
 <span class="s2">    Prénom TEXT,</span>
 <span class="s2">    Note INT);</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">    """</span><span class="p">)</span>
 
 <span class="c1"># ---- fin des instructions SQL</span>
 
@@ -5030,17 +5030,17 @@
 <h4 id="12-insertion-denregistrements-dans-la-table">1.2 Insertion d'enregistrements dans la table<a class="headerlink" href="#12-insertion-denregistrements-dans-la-table" title="Permanent link">⚓︎</a></h4>
 <p>Les morceaux de code ci-dessous sont à positionner entre les balises <code># ---- début des instructions SQL</code>  et <code># ---- fin des instructions SQL</code>, <strong>après</strong> la commande de création de la table.</p>
 <h5 id="121-insertion-dun-enregistrement-unique">1.2.1 Insertion d'un enregistrement unique<a class="headerlink" href="#121-insertion-dun-enregistrement-unique" title="Permanent link">⚓︎</a></h5>
-<div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO bulletin VALUES (&#39;</span><span class="n">Simpson</span><span class="s1">&#39;, &#39;</span><span class="n">Bart</span><span class="s1">&#39;, 17)&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO bulletin VALUES ('</span><span class="n">Simpson</span><span class="s1">', '</span><span class="n">Bart</span><span class="s1">', 17)'</span><span class="p">)</span>
 </code></pre></div>
 <p>Pensez à vérifier avec  <code>DB Browser</code> si les modifications sont effectives.</p>
 <h5 id="122-insertion-dun-enregistrement-unique-avec-variable">1.2.2 Insertion d'un enregistrement unique avec variable<a class="headerlink" href="#122-insertion-dun-enregistrement-unique-avec-variable" title="Permanent link">⚓︎</a></h5>
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Simpson&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO bulletin VALUES (?,?,?)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'Simpson'</span><span class="p">,</span> <span class="s1">'Maggie'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO bulletin VALUES (?,?,?)'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </code></pre></div>
 <h5 id="123-insertion-de-multiples-enregistrements">1.2.3 Insertion de multiples enregistrements<a class="headerlink" href="#123-insertion-de-multiples-enregistrements" title="Permanent link">⚓︎</a></h5>
-<p><div class="highlight"><pre><span></span><code><span class="n">lst_notes</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="s1">&#39;Simpson&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Muntz&#39;</span><span class="p">,</span> <span class="s1">&#39;Nelson&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Van Houten&#39;</span><span class="p">,</span> <span class="s1">&#39;Milhouse&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="p">]</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">lst_notes</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="s1">'Simpson'</span><span class="p">,</span> <span class="s1">'Lisa'</span><span class="p">,</span> <span class="mi">19</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Muntz'</span><span class="p">,</span> <span class="s1">'Nelson'</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Van Houten'</span><span class="p">,</span> <span class="s1">'Milhouse'</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="p">]</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s1">&#39;INSERT INTO bulletin VALUES (?, ?, ?)&#39;</span><span class="p">,</span> <span class="n">lst_notes</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s1">'INSERT INTO bulletin VALUES (?, ?, ?)'</span><span class="p">,</span> <span class="n">lst_notes</span><span class="p">)</span>
 </code></pre></div>
 Les différentes valeurs sont stockées au préalable dans une liste de tuples.</p>
 <div class="admonition example">
@@ -5080,25 +5080,25 @@ Les différentes valeurs sont stockées au préalable dans une liste de tuples.<
 <span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mabasecobaye.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mabasecobaye.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">    CREATE TABLE IF NOT EXISTS notes(</span>
 <span class="s2">    Nom TEXT,</span>
 <span class="s2">    Note INT);</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">    """</span><span class="p">)</span>
 
 
 <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Nom ? &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="p">:</span>
+    <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Nom ? '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Q'</span><span class="p">,</span><span class="s1">'q'</span><span class="p">]</span> <span class="p">:</span>
         <span class="k">break</span>
-    <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Note ? &#39;</span><span class="p">)</span>
+    <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Note ? '</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO notes VALUES (?,?)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO notes VALUES (?,?)'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
     <span class="c1">#Validation</span>
     <span class="n">connexion</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -5118,25 +5118,25 @@ Les différentes valeurs sont stockées au préalable dans une liste de tuples.<
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mabasecobaye.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mabasecobaye.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">    CREATE TABLE IF NOT EXISTS notes(</span>
 <span class="s2">    Nom TEXT,</span>
 <span class="s2">    Note INT);</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">    """</span><span class="p">)</span>
 
 
 <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Nom ? &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="p">:</span>
+    <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Nom ? '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Q'</span><span class="p">,</span><span class="s1">'q'</span><span class="p">]</span> <span class="p">:</span>
         <span class="k">break</span>
-    <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Note ? &#39;</span><span class="p">)</span>
+    <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Note ? '</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO notes VALUES (&#39;&quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">&quot;&#39;,&#39;&quot;</span> <span class="o">+</span> <span class="n">note</span> <span class="o">+</span> <span class="s2">&quot;&#39;)&quot;</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="s2">"INSERT INTO notes VALUES ('"</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">"','"</span> <span class="o">+</span> <span class="n">note</span> <span class="o">+</span> <span class="s2">"')"</span>
 
     <span class="n">c</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -5154,7 +5154,7 @@ Les différentes valeurs sont stockées au préalable dans une liste de tuples.<
 </li>
 <li>Lancez à nouveau le fichier, en donnant ensuite comme nom la chaîne de caractères suivante : </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">g</span><span class="s1">&#39;,&#39;</span><span class="mi">3</span><span class="err">&#39;</span><span class="p">);</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="c1">--</span>
+<div class="highlight"><pre><span></span><code><span class="k">g</span><span class="s1">','</span><span class="mi">3</span><span class="err">'</span><span class="p">);</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="c1">--</span>
 </code></pre></div>
 <ul>
 <li>Donnez une note quelconque (par exemple 12), quittez le programme... et allez observer l'état de la base de données.</li>
@@ -5184,14 +5184,14 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mynewbase.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mynewbase.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Simpson&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'Simpson'</span><span class="p">,</span> <span class="p">)</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT Prénom FROM Bulletin WHERE Nom = ?&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT Prénom FROM Bulletin WHERE Nom = ?'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">())</span>  
 
 
@@ -5254,29 +5254,29 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
 <span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mabase.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mabase.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS notes(</span>
 <span class="s1">    Nom TEXT,</span>
 <span class="s1">    Note INT);</span>
-<span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="s1">    '''</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">menu</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Menu&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. Rentrer des notes&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2. Consulter des notes&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3. Quitter&#39;</span><span class="p">)</span>
-    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;choix ? &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Menu'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'1. Rentrer des notes'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'2. Consulter des notes'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'3. Quitter'</span><span class="p">)</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'choix ? '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'1'</span><span class="p">:</span>
         <span class="n">saisie</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'2'</span><span class="p">:</span>
         <span class="n">consultation</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'3'</span><span class="p">:</span>
         <span class="k">pass</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">saisie</span><span class="p">():</span>
@@ -5289,7 +5289,7 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
     <span class="n">menu</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">consultation</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Consultation des notes (taper Q pour sortir)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Consultation des notes (taper Q pour sortir)'</span><span class="p">)</span>
     <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
         <span class="o">...</span>
 
@@ -5305,52 +5305,52 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 
 <span class="c1">#Connexion</span>
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;mabase.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'mabase.db'</span><span class="p">)</span>
 
-<span class="c1">#Récupération d&#39;un curseur</span>
+<span class="c1">#Récupération d'un curseur</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''</span>
 <span class="s1">    CREATE TABLE IF NOT EXISTS notes(</span>
 <span class="s1">    Nom TEXT,</span>
 <span class="s1">    Note INT);</span>
-<span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
+<span class="s1">    '''</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">menu</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Menu&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. Rentrer des notes&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2. Consulter des notes&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3. Quitter&#39;</span><span class="p">)</span>
-    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;choix ? &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Menu'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'1. Rentrer des notes'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'2. Consulter des notes'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'3. Quitter'</span><span class="p">)</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'choix ? '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'1'</span><span class="p">:</span>
         <span class="n">saisie</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'2'</span><span class="p">:</span>
         <span class="n">consultation</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="s1">'3'</span><span class="p">:</span>
         <span class="k">pass</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">saisie</span><span class="p">():</span>
     <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-        <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Nom ? &#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="p">:</span>
+        <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Nom ? '</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Q'</span><span class="p">,</span><span class="s1">'q'</span><span class="p">]</span> <span class="p">:</span>
             <span class="k">break</span>
-        <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Note ? &#39;</span><span class="p">)</span>
+        <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Note ? '</span><span class="p">)</span>
         <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO notes VALUES (?,?)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO notes VALUES (?,?)'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
         <span class="c1">#Validation</span>
         <span class="n">connexion</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="n">menu</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">consultation</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Consultation des notes (taper Q pour sortir)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Consultation des notes (taper Q pour sortir)'</span><span class="p">)</span>
     <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-        <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Nom ? &#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="p">:</span>
+        <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Nom ? '</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nom</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Q'</span><span class="p">,</span><span class="s1">'q'</span><span class="p">]</span> <span class="p">:</span>
             <span class="k">break</span>
         <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="p">)</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT note FROM notes WHERE Nom = ?&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT note FROM notes WHERE Nom = ?'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">menu</span><span class="p">()</span>
@@ -5454,74 +5454,74 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
 <span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 
-<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;secretdata.db&#39;</span><span class="p">)</span>
+<span class="n">connexion</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'secretdata.db'</span><span class="p">)</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">connexion</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
-<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">    CREATE TABLE IF NOT EXISTS secret(</span>
 <span class="s2">    login TEXT,</span>
 <span class="s2">    password TEXT,</span>
 <span class="s2">    secret_texte TEXT);</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">    """</span><span class="p">)</span>
 
 <span class="n">connexion</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">menu</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1. login </span><span class="se">\n</span><span class="s1">2. register</span><span class="se">\n</span><span class="s1">3. quit&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------&#39;</span><span class="p">)</span>
-    <span class="n">rep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;choix ?&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'-------------'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'1. login </span><span class="se">\n</span><span class="s1">2. register</span><span class="se">\n</span><span class="s1">3. quit'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'-------------'</span><span class="p">)</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"choix ?"</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">rep</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">():</span>
     <span class="n">login_identique</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">while</span> <span class="n">login_identique</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
-        <span class="n">login</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;choississez votre login : &quot;</span><span class="p">)</span>
+        <span class="n">login</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"choississez votre login : "</span><span class="p">)</span>
         <span class="n">tlogin</span> <span class="o">=</span> <span class="p">(</span><span class="n">login</span><span class="p">,)</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">        SELECT COUNT(*) FROM secret WHERE login = ?</span>
-<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
+<span class="s2">        """</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;login déjà utilisé&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"login déjà utilisé"</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="n">login_identique</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="n">pwd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;choississez votre mot de passe : &quot;</span><span class="p">)</span>
+    <span class="n">pwd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"choississez votre mot de passe : "</span><span class="p">)</span>
     <span class="n">pwd_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">pwd</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-    <span class="n">phrase_secrete</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;tapez la phrase secrète que vous voulez conserver : &quot;</span><span class="p">)</span>
+    <span class="n">phrase_secrete</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"tapez la phrase secrète que vous voulez conserver : "</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">login</span><span class="p">,</span> <span class="n">pwd_hash</span><span class="p">,</span> <span class="n">phrase_secrete</span><span class="p">)</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''</span>
 <span class="s1">    INSERT INTO secret VALUES (?,?,?)</span>
-<span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="s1">    '''</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
     <span class="n">connexion</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">():</span>
     <span class="n">login_existant</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">while</span> <span class="n">login_existant</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
-        <span class="n">login</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;login : &quot;</span><span class="p">)</span>
+        <span class="n">login</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"login : "</span><span class="p">)</span>
         <span class="n">tlogin</span> <span class="o">=</span> <span class="p">(</span><span class="n">login</span><span class="p">,)</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">        SELECT COUNT(*) FROM secret WHERE login = ?</span>
-<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
+<span class="s2">        """</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;login inconnu&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"login inconnu"</span><span class="p">)</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="n">login_existant</span> <span class="o">=</span> <span class="kc">True</span>
 
 
-    <span class="n">pwd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;mot de passe : &quot;</span><span class="p">)</span>
+    <span class="n">pwd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"mot de passe : "</span><span class="p">)</span>
     <span class="n">pwd_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">pwd</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">    SELECT password, secret_texte FROM secret WHERE login = ?</span>
-<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
+<span class="s2">    """</span><span class="p">,</span><span class="n">tlogin</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 
     <span class="n">pwd_recorded</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">pwd_hash</span> <span class="o">==</span> <span class="n">pwd_recorded</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;phrase secrète : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"phrase secrète : "</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">else</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;wrong password&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"wrong password"</span><span class="p">)</span>
 
 
 <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
@@ -5650,7 +5650,7 @@ Ceci dit, de nombreux serveurs sont encore attaqués par cette technique, au pri
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

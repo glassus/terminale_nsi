@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5079,21 +5079,21 @@ Comment a-t-elle programmé cette inversion des valeurs de la liste ? Nous n'en 
 L'objet de type <code>list</code> nous a été livré avec sa méthode <code>reverse()</code> (et bien d'autres choses) et nous n'avons pas à démonter la boîte pour en observer les engrenages : on parle de principe d'<strong>encapsulation</strong>.</p>
 <p>On peut obtenir la liste de toutes les fonctions disponibles pour un objet de type <code>list</code>, par la fonction <code>dir</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="p">[</span><span class="s1">&#39;__add__&#39;</span><span class="p">,</span>
-<span class="s1">&#39;__class__&#39;</span><span class="p">,</span>
-<span class="s1">&#39;__contains__&#39;</span><span class="p">,</span>
-<span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span>
+<span class="p">[</span><span class="s1">'__add__'</span><span class="p">,</span>
+<span class="s1">'__class__'</span><span class="p">,</span>
+<span class="s1">'__contains__'</span><span class="p">,</span>
+<span class="s1">'__delattr__'</span><span class="p">,</span>
 <span class="o">...</span>
-<span class="s1">&#39;clear&#39;</span><span class="p">,</span>
-<span class="s1">&#39;copy&#39;</span><span class="p">,</span>
-<span class="s1">&#39;count&#39;</span><span class="p">,</span>
-<span class="s1">&#39;extend&#39;</span><span class="p">,</span>
-<span class="s1">&#39;index&#39;</span><span class="p">,</span>
-<span class="s1">&#39;insert&#39;</span><span class="p">,</span>
-<span class="s1">&#39;pop&#39;</span><span class="p">,</span>
-<span class="s1">&#39;remove&#39;</span><span class="p">,</span>
-<span class="s1">&#39;reverse&#39;</span><span class="p">,</span>
-<span class="s1">&#39;sort&#39;</span><span class="p">]</span>
+<span class="s1">'clear'</span><span class="p">,</span>
+<span class="s1">'copy'</span><span class="p">,</span>
+<span class="s1">'count'</span><span class="p">,</span>
+<span class="s1">'extend'</span><span class="p">,</span>
+<span class="s1">'index'</span><span class="p">,</span>
+<span class="s1">'insert'</span><span class="p">,</span>
+<span class="s1">'pop'</span><span class="p">,</span>
+<span class="s1">'remove'</span><span class="p">,</span>
+<span class="s1">'reverse'</span><span class="p">,</span>
+<span class="s1">'sort'</span><span class="p">]</span>
 </code></pre></div>
 <p>Les méthodes encadrées par un double underscore __ sont des méthodes <strong>privées</strong>, a priori non destinées à l'utilisateur. Les méthodes <strong>publiques</strong>, utilisables pour chaque objet de type <code>list</code>, sont donc <code>append</code>, <code>clear</code>, ...  </p>
 <p>Comment savoir ce que font les méthodes ? Si elles ont été correctement codées (et elles l'ont été), elles possèdent une <em>docstring</em>, accessible par :</p>
@@ -5121,8 +5121,8 @@ L'objet de type <code>list</code> nous a été livré avec sa méthode <code>rev
 l'<strong>objet</strong> <a href="https://fr.wikipedia.org/wiki/Larry_(chat)">Larry</a> est une <strong>instance</strong> de la <strong>classe</strong> <em>chat</em> . </p>
 <p><img alt="image" class="center" src="../data/classchat.png" width="30%" /></p>
 <p>D'après Wikipedia, </p>
-<div class="highlight"><pre><span></span><code><span class="n">larry</span><span class="o">.</span><span class="n">pelage</span> <span class="o">=</span> <span class="s2">&quot;blanc et tabby&quot;</span>
-<span class="n">larry</span><span class="o">.</span><span class="n">surnom</span> <span class="o">=</span> <span class="s2">&quot;Chief Mouser to the Cabinet Office&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">larry</span><span class="o">.</span><span class="n">pelage</span> <span class="o">=</span> <span class="s2">"blanc et tabby"</span>
+<span class="n">larry</span><span class="o">.</span><span class="n">surnom</span> <span class="o">=</span> <span class="s2">"Chief Mouser to the Cabinet Office"</span>
 </code></pre></div>
 <p>Toujours d'après Wikipedia, la méthode <code>larry.attrape_souris</code> est plutôt efficace.</p>
 <h3 id="22-creation-dune-classe">2.2 Création d'une classe<a class="headerlink" href="#22-creation-dune-classe" title="Permanent link">⚓︎</a></h3>
@@ -5130,7 +5130,7 @@ l'<strong>objet</strong> <a href="https://fr.wikipedia.org/wiki/Larry_(chat)">La
 <h4 id="221-mauvaise-maniere-minimale">2.2.1 (mauvaise) manière minimale<a class="headerlink" href="#221-mauvaise-maniere-minimale" title="Permanent link">⚓︎</a></h4>
 <p>Créons une classe «voiture». Il suffit d'écrire :</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Voiture</span> <span class="p">:</span>
-    <span class="k">pass</span>   <span class="c1">#pass, car pour l&#39;instant il n&#39;y a rien dans la déclaration de la classe (et c&#39;est mal)</span>
+    <span class="k">pass</span>   <span class="c1">#pass, car pour l'instant il n'y a rien dans la déclaration de la classe (et c'est mal)</span>
 </code></pre></div>
 <p>La classe <code>Voiture</code> est créée.<br />
 Notez que par convention, le nom d'une classe commence toujours par une majuscule.<br />
@@ -5143,7 +5143,7 @@ Pour créer une instance de cette classe, on écrit :</p>
 </code></pre></div>
 <p>On peut alors donner des attributs à cette instance :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">titine</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="mi">2018</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">titine</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s2">&quot;verte&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">titine</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="s2">"verte"</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">titine</span><span class="o">.</span><span class="n">vitesse_max</span> <span class="o">=</span> <span class="mi">162</span>
 </code></pre></div>
 <p>Mais arrêtons-là cette mauvaise méthode. Si on désire créer une classe «voiture», c'est pour créer un concept générique de voiture et d'en spécifier des caractéristiques communes  : l'année, la couleur, la vitesse maximale... </p>
@@ -5168,7 +5168,7 @@ Pour créer une instance de cette classe, on écrit :</p>
 <li>dans cet exemple, les noms <code>coul</code> et <code>vmax</code> ont été utilisés pour abréger <code>couleur</code> et <code>vitesse_max</code>, mais il est recommandé de garder les mêmes noms, même si ce n'est pas du tout obligatoire.</li>
 </ul>
 <p>Construisons donc notre première voiture !</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;rouge&quot;</span><span class="p">,</span> <span class="mi">190</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">"rouge"</span><span class="p">,</span> <span class="mi">190</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">mon_bolide</span><span class="p">)</span>
 <span class="n">__main__</span><span class="o">.</span><span class="n">Voiture</span>
@@ -5181,7 +5181,7 @@ Pour créer une instance de cette classe, on écrit :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">annee</span>
 <span class="mi">2012</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">couleur</span>
-<span class="s1">&#39;rouge&#39;</span>
+<span class="s1">'rouge'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">vitesse_max</span>
 <span class="mi">190</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mon_bolide</span><span class="o">.</span><span class="n">age</span>
@@ -5191,9 +5191,9 @@ Pour créer une instance de cette classe, on écrit :</p>
 <iframe width="1000" height="450" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%0Aclass%20Voiture%20%3A%0A%20%20%20%20def%20__init__%28self,%20annee,%20coul,%20vmax%29%20%3A%0A%20%20%20%20%20%20%20%20self.annee%20%3D%20annee%0A%20%20%20%20%20%20%20%20self.couleur%20%3D%20coul%0A%20%20%20%20%20%20%20%20self.vitesse_max%20%3D%20vmax%0A%20%20%20%20%20%20%20%20self.age%20%3D%202025%20-%20self.annee%0A%20%20%20%20%20%20%20%20%0A%0Amon_bolide%20%3D%20Voiture%282012,%20%22rouge%22,%20190%29%0Aprint%28mon_bolide.couleur%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 <p>Bien sûr, on peut créer une autre voiture en suivant le même principe :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">&quot;noire&quot;</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">"noire"</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span><span class="o">.</span><span class="n">couleur</span>
-<span class="s1">&#39;noire&#39;</span>
+<span class="s1">'noire'</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
@@ -5237,11 +5237,11 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2025</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
-             <span class="s2">&quot;, vitesse maximale&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">&quot;km/h.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"À vendre voiture"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">"de"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
+             <span class="s2">", vitesse maximale"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">"km/h."</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Remarque : le symbole <code>\</code> est utilisé ici pour couper une ligne trop longue.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">&quot;noire&quot;</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">"noire"</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span><span class="o">.</span><span class="n">petite_annonce</span><span class="p">()</span>
 <span class="n">À</span> <span class="n">vendre</span> <span class="n">voiture</span> <span class="n">noire</span> <span class="n">de</span> <span class="mi">2036</span> <span class="p">,</span> <span class="n">vitesse</span> <span class="n">maximale</span> <span class="mi">325</span> <span class="n">km</span><span class="o">/</span><span class="n">h</span><span class="o">.</span>
 </code></pre></div>
@@ -5254,11 +5254,11 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">2025</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">petite_annonce</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Rédige automatiquement une petite annonce concernant le véhicule&quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;À vendre voiture&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
-             <span class="s2">&quot;, vitesse maximale&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">&quot;km/h.&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">""" Rédige automatiquement une petite annonce concernant le véhicule"""</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"À vendre voiture"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span><span class="p">,</span> <span class="s2">"de"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">annee</span><span class="p">,</span>\
+             <span class="s2">", vitesse maximale"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vitesse_max</span><span class="p">,</span> <span class="s2">"km/h."</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">&quot;noire&quot;</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">batmobile</span> <span class="o">=</span> <span class="n">Voiture</span><span class="p">(</span><span class="mi">2036</span><span class="p">,</span> <span class="s2">"noire"</span><span class="p">,</span> <span class="mi">325</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">batmobile</span><span class="o">.</span><span class="n">petite_annonce</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">method</span> <span class="n">petite_annonce</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
 
@@ -5268,37 +5268,37 @@ Pour créer une instance de cette classe, on écrit :</p>
 <p>Que donne la commande <code>dir</code> pour notre objet ?</p>
 <div class="highlight"><pre><span></span><code><span class="nb">dir</span><span class="p">(</span><span class="n">batmobile</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[&#39;__class__&#39;,
- &#39;__delattr__&#39;,
- &#39;__dict__&#39;,
- &#39;__dir__&#39;,
- &#39;__doc__&#39;,
- &#39;__eq__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__le__&#39;,
- &#39;__lt__&#39;,
- &#39;__module__&#39;,
- &#39;__ne__&#39;,
- &#39;__new__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__setattr__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__str__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;__weakref__&#39;,
- &#39;age&#39;,
- &#39;annee&#39;,
- &#39;couleur&#39;,
- &#39;petite_annonce&#39;,
- &#39;vitesse_max&#39;]
+<div class="highlight"><pre><span></span><code>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'age',
+ 'annee',
+ 'couleur',
+ 'petite_annonce',
+ 'vitesse_max']
 </code></pre></div>
 <p>On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avons créés pour notre objet.</p>
 <div class="admonition example">
@@ -5358,7 +5358,7 @@ Pour créer une instance de cette classe, on écrit :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">=</span> <span class="n">den</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -5388,7 +5388,7 @@ Ce qui est nettement plus agréable !</p>
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numerateur</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denominateur</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -5405,7 +5405,7 @@ Ce qui est nettement plus agréable !</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 </code></pre></div></td></tr></table></div>
 <p>Instancions le joueur Nans Ducuing
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span> <span class="o">=</span> <span class="n">Joueur</span><span class="p">(</span><span class="s2">&quot;Nans DUCUING&quot;</span><span class="p">,</span> <span class="s2">&quot;UBB&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span> <span class="o">=</span> <span class="n">Joueur</span><span class="p">(</span><span class="s2">"Nans DUCUING"</span><span class="p">,</span> <span class="s2">"UBB"</span><span class="p">,</span> <span class="mi">34</span><span class="p">)</span>
 </code></pre></div></p>
 <p><img alt="image" class="center" src="../data/ducuing.png" width="15%" /></p>
 <p style="text-align: center;">
@@ -5415,7 +5415,7 @@ Ce qui est nettement plus agréable !</p>
 <h5 id="321-les-setters">3.2.1 Les <code>setters</code><a class="headerlink" href="#321-les-setters" title="Permanent link">⚓︎</a></h5>
 <p>Supposons maintenant que ce joueur change de club, pour aller de l'UBB à Perpignan.</p>
 <p>Il serait naturel de faire ceci :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="s2">&quot;Perpignan&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="s2">"Perpignan"</span>
 </code></pre></div></p>
 <p>Cela marche bien, mais... C'est contraire à l'esprit de la Programmation Orientée Objet. Ce paradigme milite pour une encapsulation des objets, qui interdisent le plus possible l'accès direct à leurs attributs. </p>
 <p>Comment faire alors ? En proposant une méthode dont l'unique travail est d'aller effectuer une modification sur l'attribut :</p>
@@ -5436,7 +5436,7 @@ Ce qui est nettement plus agréable !</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">club</span> <span class="o">=</span> <span class="n">nouveau_club</span>
 </code></pre></div></td></tr></table></div>
 <p>Le changement de club se fera maintenant par l'appel :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span><span class="o">.</span><span class="n">mutation</span><span class="p">(</span><span class="s2">&quot;Perpignan&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nducuing</span><span class="o">.</span><span class="n">mutation</span><span class="p">(</span><span class="s2">"Perpignan"</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Ce type de méthode s'appelle un <code>setter</code>. </p>
 <h5 id="322-les-getters">3.2.2 Les <code>getters</code><a class="headerlink" href="#322-les-getters" title="Permanent link">⚓︎</a></h5>
@@ -5580,7 +5580,7 @@ Ce qui est nettement plus agréable !</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

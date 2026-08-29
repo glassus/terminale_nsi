@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5125,11 +5125,11 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <details class="success">
 <summary>Correction Q1.a.</summary>
 <p>Le contenu de la pile P sera </p>
-<div class="highlight"><pre><span></span><code><span class="o">|</span> <span class="s1">&#39;rouge&#39;</span> <span class="o">|</span>
-<span class="o">|</span> <span class="s1">&#39;vert&#39;</span>  <span class="o">|</span>
-<span class="o">|</span> <span class="s1">&#39;jaune&#39;</span> <span class="o">|</span>
-<span class="o">|</span> <span class="s1">&#39;rouge&#39;</span> <span class="o">|</span>
-<span class="o">|</span> <span class="s1">&#39;jaune&#39;</span> <span class="o">|</span>
+<div class="highlight"><pre><span></span><code><span class="o">|</span> <span class="s1">'rouge'</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s1">'vert'</span>  <span class="o">|</span>
+<span class="o">|</span> <span class="s1">'jaune'</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s1">'rouge'</span> <span class="o">|</span>
+<span class="o">|</span> <span class="s1">'jaune'</span> <span class="o">|</span>
  <span class="n">_________</span>
 </code></pre></div>
 <p>La file F sera vide.  </p>
@@ -5146,7 +5146,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille_file</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""File -&gt; Int"""</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -5168,7 +5168,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">7</span>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">former_pile</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""File -&gt; Int"""</span>
     <span class="n">P_temp</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
     <span class="n">P</span> <span class="o">=</span> <span class="n">creer_pile_vide</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -5192,7 +5192,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;File -&gt; Int&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""File -&gt; Int"""</span>
     <span class="n">F_temp</span> <span class="o">=</span> <span class="n">creer_file_vide</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">F</span><span class="p">):</span>
@@ -5212,10 +5212,10 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_contenu</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">nb_rouge</span><span class="p">,</span> <span class="n">nb_vert</span><span class="p">,</span> <span class="n">nb_jaune</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;File, Int, Int, Int -&gt; Bool&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> 
-           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> 
-           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_jaune</span>
+<span class="w">    </span><span class="sd">"""File, Int, Int, Int -&gt; Bool"""</span>
+    <span class="k">return</span> <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">'rouge'</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_rouge</span> <span class="ow">and</span> 
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">'vert'</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_vert</span> <span class="ow">and</span> 
+           <span class="n">nb_elements</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">'jaune'</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">nb_jaune</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -5225,7 +5225,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <details class="success">
 <summary>Correction Q1.</summary>
 <p>Il faut écrire l'instruction : </p>
-<div class="highlight"><pre><span></span><code><span class="n">panier_1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s1">&#39;café noir&#39;</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">panier_1</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="mi">31002</span><span class="p">,</span> <span class="s1">'café noir'</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mi">50525</span><span class="p">))</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5289,7 +5289,7 @@ On redonne ensuite à <code>P</code> son état initial en vidant <code>Q</code> 
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajout</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;bleu&#39;</span><span class="p">,</span> <span class="s1">&#39;rouge&#39;</span><span class="p">,</span> <span class="s1">&#39;jaune&#39;</span><span class="p">,</span> <span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+    <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'bleu'</span><span class="p">,</span> <span class="s1">'rouge'</span><span class="p">,</span> <span class="s1">'jaune'</span><span class="p">,</span> <span class="s1">'vert'</span><span class="p">)</span>
 <span class="hll">    <span class="n">indice</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">couleurs</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
 </span>    <span class="k">return</span> <span class="n">f</span>
@@ -5409,7 +5409,7 @@ Le jeu ne s'arrête jamais ¯\_(ツ)_/¯</p>
             <span class="n">enfiler</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">c_seq</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">vider</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Perdu ! On rejoue !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Perdu ! On rejoue !'</span><span class="p">)</span>
             <span class="n">tour_de_jeu_modifie</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
         <span class="n">enfiler</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">defiler</span><span class="p">(</span><span class="n">stock</span><span class="p">))</span>
@@ -5426,20 +5426,20 @@ Le jeu ne s'arrête jamais ¯\_(ツ)_/¯</p>
 <p>Dès que deux lettres identiques mais de casse différente (majuscule-minuscule ou minuscule-majuscule) sont côte à côte dans la chaîne, on les supprime de la chaîne.</p>
 </div>
 <p>Exemple : 
-<div class="highlight"><pre><span></span><code>dabAcCaCBAcCcaDA  On enlève le premier &#39;cC&#39;.
-dabAaCBAcCcaDA    Cela donne naissance à un &#39;Aa&#39;, qu&#39;on enlève.
-dabCBAcCcaDA      On enlève alors &#39;cC&#39; (ou &#39;Cc&#39;, cela revient au même).
-dabCBAcaDA        Plus aucune simplification n&#39;est possible.
+<div class="highlight"><pre><span></span><code>dabAcCaCBAcCcaDA  On enlève le premier 'cC'.
+dabAaCBAcCcaDA    Cela donne naissance à un 'Aa', qu'on enlève.
+dabCBAcCcaDA      On enlève alors 'cC' (ou 'Cc', cela revient au même).
+dabCBAcaDA        Plus aucune simplification n'est possible.
 </code></pre></div></p>
 <p>La chaîne de caractères qu'il va falloir simplifier contient ... 50000 caractères.</p>
 <h4 id="1-elaboration-dune-fonction-utile">1. Élaboration d'une fonction utile<a class="headerlink" href="#1-elaboration-dune-fonction-utile" title="Permanent link">⚓︎</a></h4>
 <p>On rappelle que la fonction <code>ord</code> renvoie le code ASCII d'une lettre. En comparant les codes ASCII de deux lettres identiques mais de casse différentes, en déduire une fonction <code>simplifiable</code> qui prend en paramètres deux lettres <code>l1</code> et <code>l2</code> et qui renvoie un booléen indiquant si ces deux lettres sont simplifiables. </p>
 <p><em>Exemples d'utilisation :</em>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">'c'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">)</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifiable</span><span class="p">(</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div></p>
 <details class="aide">
@@ -5453,21 +5453,21 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <p>Écrire une fonction <code>simplifie</code> qui prend en paramètre une chaîne de caractère <code>s</code> et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.</p>
 <p>Principe : on parcourt la chaîne et dès qu'on trouve une simplification à faire, on simplifie la chaîne et on la renvoie immédiatement.</p>
 <p><em>Exemples d'utilisation :</em>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
-<span class="s1">&#39;dabAaCBAcCcaDA&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">&#39;dabAaCBAcCcaDA&#39;</span><span class="p">)</span>
-<span class="s1">&#39;dabCBAcCcaDA&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">&#39;dabCBAcCcaDA&#39;</span><span class="p">)</span>
-<span class="s1">&#39;dabCBAcaDA&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">&#39;dabCBAcaDA&#39;</span><span class="p">)</span>
-<span class="s1">&#39;dabCBAcaDA&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">'dabAcCaCBAcCcaDA'</span><span class="p">)</span>
+<span class="s1">'dabAaCBAcCcaDA'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">'dabAaCBAcCcaDA'</span><span class="p">)</span>
+<span class="s1">'dabCBAcCcaDA'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">'dabCBAcCcaDA'</span><span class="p">)</span>
+<span class="s1">'dabCBAcaDA'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">simplifie</span><span class="p">(</span><span class="s1">'dabCBAcaDA'</span><span class="p">)</span>
+<span class="s1">'dabCBAcaDA'</span>
 </code></pre></div></p>
 <p>Pour information, on rappelle la technique de <em>slicing</em> de chaîne de caractères :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span> <span class="o">=</span> <span class="s1">&#39;abcde&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span> <span class="o">=</span> <span class="s1">'abcde'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-<span class="s1">&#39;ab&#39;</span>
+<span class="s1">'ab'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ch</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
-<span class="s1">&#39;cde&#39;</span>
+<span class="s1">'cde'</span>
 </code></pre></div></p>
 <details class="aide">
 <summary>Correction</summary>
@@ -5485,8 +5485,8 @@ dabCBAcaDA        Plus aucune simplification n&#39;est possible.
 <h4 id="3-resolution-du-probleme">3. Résolution du problème<a class="headerlink" href="#3-resolution-du-probleme" title="Permanent link">⚓︎</a></h4>
 <p>Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction <code>reduction</code> qui prend en paramètre une chaîne <code>s</code> et qui renvoie cette chaîne <code>s</code> une fois effectuées <strong>toutes</strong> les simplifications possibles.</p>
 <p><em>Exemple d'utilisation :</em>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">reduction</span><span class="p">(</span><span class="s1">&#39;dabAcCaCBAcCcaDA&#39;</span><span class="p">)</span>
-<span class="s1">&#39;dabCBAcaDA&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">reduction</span><span class="p">(</span><span class="s1">'dabAcCaCBAcCcaDA'</span><span class="p">)</span>
+<span class="s1">'dabCBAcaDA'</span>
 </code></pre></div></p>
 <details class="aide">
 <summary>Correction</summary>
@@ -5535,7 +5535,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
-<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'input.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">simplifiable</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">l2</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
@@ -5619,7 +5619,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 <span class="normal">41</span>
 <span class="normal">42</span>
 <span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'input.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Pile</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
@@ -5632,7 +5632,7 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 
     <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Vous avez essayé de dépiler une pile vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -5714,12 +5714,12 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 
     <span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">p_temp</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'---'</span><span class="p">)</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
             <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'|'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span><span class="p">)</span>
             <span class="n">p_temp</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'---'</span><span class="p">)</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="n">p_temp</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">p_temp</span><span class="o">.</span><span class="n">depile</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
@@ -5933,8 +5933,8 @@ La <strong>vraie</strong> chaîne contient 50000 caractères : vous pouvez tél�
 <p>Exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1ME1.pdf" target="blank">Métropole J1 - 2025</a> </p>
 <details class="success">
 <summary>Correction Q1.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">tache1</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Répondre aux emails&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-<span class="n">tache2</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Ranger ma chambre&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">tache1</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Répondre aux emails'</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">tache2</span> <span class="o">=</span> <span class="n">Tache</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'Ranger ma chambre'</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -6127,7 +6127,7 @@ ou bien directement :
             <span class="n">tab_voisins</span><span class="o">....</span>
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">TAB_MOTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gars&#39;</span><span class="p">,</span> <span class="s1">&#39;mars&#39;</span><span class="p">,</span> <span class="s1">&#39;mors&#39;</span><span class="p">,</span> <span class="s1">&#39;ours&#39;</span><span class="p">,</span> <span class="s1">&#39;purs&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">TAB_MOTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'gars'</span><span class="p">,</span> <span class="s1">'mars'</span><span class="p">,</span> <span class="s1">'mors'</span><span class="p">,</span> <span class="s1">'ours'</span><span class="p">,</span> <span class="s1">'purs'</span><span class="p">]</span>
 </code></pre></div>
 <details class="success">
 <summary>Correction Q7</summary>
@@ -6144,16 +6144,16 @@ ou bien directement :
 <ul>
 <li>3ème tour :
 On défile <code>mors</code>. Les voisins de <code>mors</code> sont <code>mars</code> et <code>ours</code>. <code>mars</code> est déjà dans <code>parent</code>. Ainsi on obtient :​
-<div class="highlight"><pre><span></span><code><span class="n">parent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mars&#39;</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span><span class="s1">&#39;gars&#39;</span><span class="p">:</span><span class="s1">&#39;mars,&#39;</span><span class="n">mors</span><span class="s1">&#39;:&#39;</span><span class="n">mars</span><span class="s1">&#39;, &#39;</span><span class="n">ours</span><span class="s1">&#39;:&#39;</span><span class="n">mors</span><span class="s1">&#39;}</span>
-<span class="n">file_voisins</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ours&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">parent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'mars'</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span><span class="s1">'gars'</span><span class="p">:</span><span class="s1">'mars,'</span><span class="n">mors</span><span class="s1">':'</span><span class="n">mars</span><span class="s1">', '</span><span class="n">ours</span><span class="s1">':'</span><span class="n">mors</span><span class="s1">'}</span>
+<span class="n">file_voisins</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ours'</span><span class="p">]</span>
 </code></pre></div>
 ​</li>
 <li>
 <p>4ème tour :
 On défile <code>ours</code>. Les voisins de <code>ours</code> sont <code>mors</code> et <code>purs</code>, <code>mors</code> est déjà dans <code>parent</code>.
 On enfile <code>purs</code>. Ainsi on obtient :
-<div class="highlight"><pre><span></span><code><span class="n">parent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mars&#39;</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;gars &#39;</span><span class="p">:</span> <span class="s1">&#39;mars&#39;</span><span class="p">,</span> <span class="s1">&#39;mors &#39;</span> <span class="p">:</span> <span class="s1">&#39;mars&#39;</span><span class="p">,</span>
-<span class="s1">&#39;ours&#39;</span><span class="p">:</span><span class="s1">&#39;mors&#39;</span><span class="p">,</span> <span class="s1">&#39;purs&#39;</span><span class="p">:</span> <span class="s1">&#39;ours&#39;</span><span class="p">}}</span>
+<div class="highlight"><pre><span></span><code><span class="n">parent</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'mars'</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'gars '</span><span class="p">:</span> <span class="s1">'mars'</span><span class="p">,</span> <span class="s1">'mors '</span> <span class="p">:</span> <span class="s1">'mars'</span><span class="p">,</span>
+<span class="s1">'ours'</span><span class="p">:</span><span class="s1">'mors'</span><span class="p">,</span> <span class="s1">'purs'</span><span class="p">:</span> <span class="s1">'ours'</span><span class="p">}}</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -6319,7 +6319,7 @@ La variable <code>mot</code> est <code>ours</code> qui est le mot final. La bouc
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

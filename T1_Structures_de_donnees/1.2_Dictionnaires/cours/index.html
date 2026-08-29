@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5215,7 +5215,7 @@
     <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
         <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">'a'</span> <span class="ow">in</span> <span class="n">lst</span> <span class="c1"># on cherche une donnée inexistante</span>
         <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
         <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
     <span class="n">tps_moyen_lst</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
@@ -5223,13 +5223,13 @@
     <span class="n">tps_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
         <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="s1">'a'</span> <span class="ow">in</span> <span class="n">d</span> <span class="c1"># on cherche une donnée inexistante</span>
         <span class="n">delta_t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
         <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
     <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour une liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1">       : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'temps pour une liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1">       : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s1"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <p><strong>Q4.</strong> Effectuer des mesures avec différentes valeurs de <code>nb</code>.</p>
@@ -5299,8 +5299,8 @@ Mesurons cette fois non pas la recherche dans le dictionnaire, mais la création
         <span class="n">tps_total</span> <span class="o">+=</span> <span class="n">delta_t</span>
     <span class="n">tps_moyen_d</span> <span class="o">=</span> <span class="n">tps_total</span> <span class="o">/</span> <span class="mi">10</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2">           : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"temps pour liste de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2">           : </span><span class="si">{</span><span class="n">tps_moyen_lst</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"temps pour un dictionnaire de taille </span><span class="si">{</span><span class="n">nb</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">tps_moyen_d</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">temps</span> <span class="n">pour</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">100000</span>           <span class="p">:</span> <span class="mf">0.004771041870117188</span>
@@ -5366,7 +5366,7 @@ De cette façon, si le serveur est compromis, la non-réversibilité de la fonct
 <p>Quel est le lien entre les fonctions de hachage et les  dictionnaires ??? </p>
 <p>L'idée essentielle est que chaque clé est hachée pour donner une empreinte unique, qui est ensuite transformée en un indice de positionnement dans un tableau.</p>
 <p>Le dictionnaire :</p>
-<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;bananes&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"pommes"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"poires"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"bananes"</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
 </code></pre></div>
 <p>serait donc par exemple implémenté dans un tableau comme celui-ci :</p>
 <p><img alt="" class="center" src="../data/hashdico.png" /></p>
@@ -5387,13 +5387,13 @@ De cette façon, si le serveur est compromis, la non-réversibilité de la fonct
 <div class="highlight"><pre><span></span><code><span class="n">mondico</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># un nombre peut-il être une clé?</span>
-<span class="n">mondico</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span>
+<span class="n">mondico</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"foo"</span>
 
 <span class="c1"># une chaîne de caractères peut-elle être une clé ?</span>
-<span class="n">mondico</span><span class="p">[</span><span class="s2">&quot;riri&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;fifi&quot;</span>
+<span class="n">mondico</span><span class="p">[</span><span class="s2">"riri"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"fifi"</span>
 
 <span class="c1"># une liste peut-elle être une clé ?</span>
-<span class="n">mondico</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;loulou&quot;</span>
+<span class="n">mondico</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">"loulou"</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
 
@@ -5402,10 +5402,10 @@ TypeError                                 Traceback (most recent call last)
 &lt;ipython-input-1-585560b5c422&gt; in &lt;module&gt;
       8 
       9 # une liste peut-elle être une clé ?
-- 10 mondico[[2,5]] = &quot;loulou&quot;
+- 10 mondico[[2,5]] = "loulou"
 
 
-TypeError: unhashable type: &#39;list&#39;
+TypeError: unhashable type: 'list'
 </code></pre></div>
 <p>Le message d'erreur est explicite : le type <code>list</code> que nous avons voulu utiliser comme clé n'est pas hachable, car c'est un type d'objet pouvant être modifié a posteriori tout en gardant la même référence (on dit que c'est un objet <strong>mutable</strong>):</p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -5539,7 +5539,7 @@ TypeError: unhashable type: &#39;list&#39;
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

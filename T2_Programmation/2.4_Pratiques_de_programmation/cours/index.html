@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5150,11 +5150,11 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ok"</span><span class="p">)</span>
 
 <span class="c1"># BIEN</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ok"</span><span class="p">)</span>
 </code></pre></div>
 <p>▶ Pour les opérateurs mathématiques, on essaie de reconstituer les groupes de priorité (lorsqu'il y en a) :</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
@@ -5173,21 +5173,21 @@
 <p>▶ On ne met pas d'espace à intérieur des parenthèses, des crochets ou des accolades :</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">5</span> <span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;bonjour&#39;</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">'bonjour'</span> <span class="p">)</span>
 
 <span class="c1"># BIEN</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'bonjour'</span><span class="p">)</span>
 </code></pre></div>
 <p>▶ Pour les virgules, et les deux points : 
 pas d'espace avant mais une espace après.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'vert'</span><span class="p">)</span>
 
 <span class="c1"># BIEN</span>
 <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vert&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'vert'</span><span class="p">)</span>
 </code></pre></div>
 <p>On peut contrôler si son code vérifie les standards de la PEP8 sur ce site <a href="http://pep8online.com/">http://pep8online.com/</a></p>
 <h3 id="les-conventions-de-nommage">Les conventions de nommage<a class="headerlink" href="#les-conventions-de-nommage" title="Permanent link">⚓︎</a></h3>
@@ -5231,7 +5231,7 @@ Il est d'usage de dire qu'un code doit être assez <strong>explicite</strong> po
 <p><strong>Exemple :</strong></p>
 <p>Considérons la fonction suivante.
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="c1"># c est le capital de départ, t le taux annuel et n le nombre d&#39;années</span>
+    <span class="c1"># c est le capital de départ, t le taux annuel et n le nombre d'années</span>
     <span class="k">return</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="n">n</span>  <span class="c1">#renvoie le capital après n années</span>
 </code></pre></div>
 Elle est bien commentée. Mais si on croise la fonction <code>f()</code> ailleurs dans le code, se souviendra-t-on de son rôle ?</p>
@@ -5247,7 +5247,7 @@ Ce code est plus long, mais assez explicite pour se passer de commentaires.</p>
 <p>Nous connaissons la fonction <code>len()</code> qui permet par exemple de connaître la longueur d'une liste passée en paramètre.</p>
 <p>Si nous tapons en console la commande <code>print(len.__doc__)</code>, nous aurons la description de cette fonction. </p>
 <p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="o">.</span><span class="vm">__doc__</span>
-<span class="s1">&#39;Return the number of items in a container.&#39;</span>
+<span class="s1">'Return the number of items in a container.'</span>
 </code></pre></div>
 Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  par la commande <code>help(f)</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
@@ -5272,12 +5272,12 @@ Il est aussi possible d'accéder à la docstring d'une fonction <code>f</code>  
 <h4 id="222-creer-ses-propres-docstrings">2.2.2 Créer ses propres docstrings<a class="headerlink" href="#222-creer-ses-propres-docstrings" title="Permanent link">⚓︎</a></h4>
 <p>Il suffit pour cela de commencer la fonction à documenter par une ou plusieurs phrases entre triples quotes :</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Renvoie le capital après n années.</span>
 <span class="sd">    capital : valeur initiale</span>
-<span class="sd">    taux : taux d&#39;intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
-<span class="sd">    nombre_annees : nombre d&#39;années de placement du capital</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    taux : taux d'intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
+<span class="sd">    nombre_annees : nombre d'années de placement du capital</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="n">capital</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">taux</span><span class="p">)</span><span class="o">**</span><span class="n">nombre_annees</span>
 </code></pre></div>
 Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre fonction :</p>
@@ -5287,8 +5287,8 @@ Ainsi, un utilisateur pourra trouver en console le mode d'emploi de notre foncti
 <span class="n">capital_apres_n_annees</span><span class="p">(</span><span class="n">capital</span><span class="p">,</span> <span class="n">taux</span><span class="p">,</span> <span class="n">nombre_annees</span><span class="p">)</span>
     <span class="n">Renvoie</span> <span class="n">le</span> <span class="n">capital</span> <span class="n">après</span> <span class="n">n</span> <span class="n">années</span><span class="o">.</span>
     <span class="n">capital</span> <span class="p">:</span> <span class="n">valeur</span> <span class="n">initiale</span>
-    <span class="n">taux</span> <span class="p">:</span> <span class="n">taux</span> <span class="n">d</span><span class="s1">&#39;intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
-    <span class="n">nombre_annees</span> <span class="p">:</span> <span class="n">nombre</span> <span class="n">d</span><span class="s1">&#39;années de placement du capital</span>
+    <span class="n">taux</span> <span class="p">:</span> <span class="n">taux</span> <span class="n">d</span><span class="s1">'intérêt exprimé en nombre décimal (ex: 0.02 pour un taux de 2 %)</span>
+    <span class="n">nombre_annees</span> <span class="p">:</span> <span class="n">nombre</span> <span class="n">d</span><span class="s1">'années de placement du capital</span>
 </code></pre></div>
 <p>Comme on le voit, tout cela est très «verbeux». Cela peut nous paraître largement superflu puisque nos codes dépassent rarement quelques dizaines de lignes et sont lus par rarement plus de 2 personnes. Mais dans la vraie vie des développeurs, il est primordial qu'un code soit clair et documenté.</p>
 <h2 id="3-la-programmation-defensive-des-assert-pour-securiser-le-code">3. La programmation défensive : des <code>assert</code> pour sécuriser le code<a class="headerlink" href="#3-la-programmation-defensive-des-assert-pour-securiser-le-code" title="Permanent link">⚓︎</a></h2>
@@ -5297,25 +5297,25 @@ De manière bien plus concrète, il est d'usage d'essayer de répérer si des do
 <p><strong>Un exemple :</strong></p>
 <p>La fonction :</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">racine_carree</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;un nombre positif ou nul est requis&#39;</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'un nombre positif ou nul est requis'</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mf">0.5</span>
 </code></pre></div>
 donnera, lors de l'appel à <code>racine_carree(-2)</code>, le message suivant :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">racine_carree</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-  <span class="n">File</span> <span class="s2">&quot;/home/gilles/Bureau/exemples_assert.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">racine_carree</span>
-    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;un nombre positif ou nul est requis&#39;</span>
+  <span class="n">File</span> <span class="s2">"&lt;pyshell&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"/home/gilles/Bureau/exemples_assert.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">racine_carree</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'un nombre positif ou nul est requis'</span>
 <span class="ne">AssertionError</span><span class="p">:</span> <span class="n">un</span> <span class="n">nombre</span> <span class="n">positif</span> <span class="n">ou</span> <span class="n">nul</span> <span class="n">est</span> <span class="n">requis</span>
 </code></pre></div>
 <p><strong>Un autre exemple :</strong></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne_trimestrielle</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    calcule la moyenne des nombres de la liste liste_notes</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">assert</span> <span class="n">liste_notes</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">,</span> <span class="s1">&#39;liste vide&#39;</span>
-    <span class="k">assert</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;au moins une note dépasse 20&#39;</span>
-    <span class="k">assert</span> <span class="nb">min</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;au moins une note est en dessous de 0&#39;</span>
+<span class="sd">    """</span>
+    <span class="k">assert</span> <span class="n">liste_notes</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">,</span> <span class="s1">'liste vide'</span>
+    <span class="k">assert</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">'au moins une note dépasse 20'</span>
+    <span class="k">assert</span> <span class="nb">min</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'au moins une note est en dessous de 0'</span>
 
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">)</span>
 </code></pre></div>
@@ -5352,19 +5352,19 @@ la méthode de développement logiciel TDD (Test Driven Developement) est basée
 <p>Revenons à nos tests sur la fonction <code>valeur_absolue(n)</code></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_valeur_absolue</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"ok"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"erreur"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"ok"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"erreur"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">valeur_absolue</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"ok"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;erreur&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"erreur"</span><span class="p">)</span>
 </code></pre></div>
 <p>En console, il suffit maintenant d'appeler la fonction <code>test_valeur_absolue()</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test_valeur_absolue</span><span class="p">()</span>
@@ -5387,16 +5387,16 @@ Vous écrirez <strong>d'abord</strong> une fonction <code>test_maxi()</code> ava
 <p>Le module <code>doctest</code>  permet d'écrire les tests <strong>à l'intérieur</strong> de la docstring d'une fonction. </p>
 <p>Considérons une fonction dont le but est de compter les voyelles du mot passé en paramètre.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">compte_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    renvoie le nombre de voyelles du mot donné en paramètre.</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;python&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles("python")</span>
 <span class="sd">    2</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;HTTP&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles("HTTP")</span>
 <span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; compte_voyelles(&quot;eau&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; compte_voyelles("eau")</span>
 <span class="sd">    3</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">voyelles</span> <span class="o">=</span> <span class="s2">&quot;aeiou&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">voyelles</span> <span class="o">=</span> <span class="s2">"aeiou"</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
@@ -5414,9 +5414,9 @@ Dans notre cas, le retour sera celui-ci :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 <span class="o">**********************************************************************</span>
-<span class="n">File</span> <span class="s2">&quot;voyelles.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
+<span class="n">File</span> <span class="s2">"voyelles.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__main__</span><span class="o">.</span><span class="n">compte_voyelles</span>
 <span class="n">Failed</span> <span class="n">example</span><span class="p">:</span>
-    <span class="n">compte_voyelles</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+    <span class="n">compte_voyelles</span><span class="p">(</span><span class="s2">"python"</span><span class="p">)</span>
 <span class="n">Expected</span><span class="p">:</span>
     <span class="mi">2</span>
 <span class="n">Got</span><span class="p">:</span>
@@ -5563,7 +5563,7 @@ Ce qui est beaucoup plus satisfaisant.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5026,7 +5026,7 @@
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;temps de vol :&#39;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'temps de vol :'</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">syracuse</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
@@ -5193,19 +5193,19 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; n : nombre d&#39;assiettes dans la pile</span>
-<span class="sd">    # depart : la pile de départ(&#39;A&#39;, &#39;B&#39; ou &#39;C&#39;)</span>
-<span class="sd">    # inter : la pile intermédaire(&#39;A&#39;, &#39;B&#39; ou &#39;C&#39;)</span>
-<span class="sd">    # arrivee : la pile d&#39;arrivée (&#39;A&#39;, &#39;B&#39; ou &#39;C&#39;) &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">''' n : nombre d'assiettes dans la pile</span>
+<span class="sd">    # depart : la pile de départ('A', 'B' ou 'C')</span>
+<span class="sd">    # inter : la pile intermédaire('A', 'B' ou 'C')</span>
+<span class="sd">    # arrivee : la pile d'arrivée ('A', 'B' ou 'C') '''</span>
 
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s1">&#39; vers &#39;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s1">' vers '</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">inter</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s1">&#39; vers &#39;</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">depart</span> <span class="o">+</span> <span class="s1">' vers '</span> <span class="o">+</span> <span class="n">arrivee</span><span class="p">)</span>
         <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">)</span>
 
-<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">hanoi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -5386,9 +5386,9 @@ Le but est de faire passer toutes les assiettes de A vers C, sachant qu'une assi
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_palindrome</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">palindrome</span><span class="p">(</span><span class="s1">&#39;kayak&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
-    <span class="k">assert</span> <span class="n">palindrome</span><span class="p">(</span><span class="s1">&#39;canoe&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>   
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">palindrome</span><span class="p">(</span><span class="s1">'kayak'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">palindrome</span><span class="p">(</span><span class="s1">'canoe'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>   
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 On teste les deux cas possibles.        </p>
 </details>
@@ -5421,8 +5421,8 @@ On teste les deux cas possibles.        </p>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">complementaire</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
-    <span class="n">comp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;G&#39;</span><span class="p">}</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">comp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'T'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'G'</span><span class="p">}</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">txt</span><span class="p">:</span>
         <span class="n">sol</span> <span class="o">+=</span> <span class="n">comp</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">sol</span>
@@ -5475,13 +5475,13 @@ Partez!</code>        </p>
 <details class="success">
 <summary>Correction Q2.b.</summary>
 <p>La commande renvoie :
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;ba&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;bc&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">'ba'</span><span class="p">,</span> <span class="s1">'bb'</span><span class="p">,</span> <span class="s1">'bc'</span><span class="p">]</span>
 </code></pre></div></p>
 </details>
 <details class="success">
 <summary>Correction Q2.c.</summary>
 <p>La commande renvoie :
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span>
 </code></pre></div></p>
 </details>
 <details class="success">
@@ -5709,7 +5709,7 @@ Partez!</code>        </p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

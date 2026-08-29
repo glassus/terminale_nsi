@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5058,13 +5058,13 @@
 <summary>Correction Q6</summary>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Client</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Strasbourg&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Strasbourg'</span>
 </code></pre></div>
 </details>
 <details class="success">
 <summary>Correction Q7</summary>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Client</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;CODD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Edgar&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;28 rue des Capucines&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lyon&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;France&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;0555555555&#39;</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s1">'CODD'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Edgar'</span><span class="p">,</span><span class="w"> </span><span class="s1">'28 rue des Capucines'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Lyon'</span><span class="p">,</span><span class="w"> </span><span class="s1">'France'</span><span class="p">,</span><span class="w"> </span><span class="s1">'0555555555'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5082,13 +5082,13 @@
 </details>
 <details class="success">
 <summary>Correction Q10</summary>
-<div class="highlight"><pre><span></span><code><span class="n">client01</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s1">&#39;CODD&#39;</span><span class="p">,</span> <span class="s1">&#39;Edgar&#39;</span><span class="p">,</span> <span class="s1">&#39;28 rue des Capucines&#39;</span><span class="p">,</span> <span class="s1">&#39;Lyon&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;0555555555&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">client01</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s1">'CODD'</span><span class="p">,</span> <span class="s1">'Edgar'</span><span class="p">,</span> <span class="s1">'28 rue des Capucines'</span><span class="p">,</span> <span class="s1">'Lyon'</span><span class="p">,</span> <span class="s1">'France'</span><span class="p">,</span> <span class="s1">'0555555555'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
 <summary>Correction Q11</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">montant_a_regler</span><span class="p">(</span><span class="n">triplet</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie le montant en euros a regler pour cette reservation &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">''' renvoie le montant en euros a regler pour cette reservation '''</span>
     <span class="n">client</span><span class="p">,</span> <span class="n">reservation</span><span class="p">,</span> <span class="n">emplacement</span> <span class="o">=</span> <span class="n">triplet</span>
     <span class="k">return</span> <span class="n">emplacement</span><span class="o">.</span><span class="n">tarif_journalier</span><span class="o">*</span><span class="n">reservation</span><span class="o">.</span><span class="n">nb_jours</span><span class="p">()</span> <span class="o">+</span> <span class="n">reservation</span><span class="o">.</span><span class="n">nombre_personne</span><span class="o">*</span><span class="mf">2.2</span><span class="o">*</span><span class="n">reservation</span><span class="o">.</span><span class="n">nb_jours</span><span class="p">()</span>
 </code></pre></div>
@@ -5225,7 +5225,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../scripts/mathjax.js"></script>
       

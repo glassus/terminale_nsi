@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5464,7 +5464,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :</p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Vous avez essayé de dépiler une pile vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> 
@@ -5506,15 +5506,15 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :</p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Vous avez essayé de dépiler une pile vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>              <span class="c1"># convenablement la pile avec p</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">'|'</span>              <span class="c1"># convenablement la pile avec p</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span>
         <span class="k">return</span> <span class="n">s</span>  
 </code></pre></div></td></tr></table></div>
 Test de l'implémentation :
@@ -5589,7 +5589,7 @@ Test de l'implémentation :
 
     <span class="k">def</span><span class="w"> </span><span class="nf">depile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de dépiler une pile vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Vous avez essayé de dépiler une pile vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contenu</span> <span class="c1">#on récupère la valeur à renvoyer</span>
@@ -5597,10 +5597,10 @@ Test de l'implémentation :
             <span class="k">return</span> <span class="n">v</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">'|'</span>
         <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
         <span class="k">while</span> <span class="n">c</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
@@ -5624,11 +5624,11 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
 Attention, il ne faut pas réinventer la classe <code>Pile</code>, mais uniquement s'en servir !</p>
 <p>Exemple d'utilisation :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">Nav</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">&#39;lemonde.fr&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">'lemonde.fr'</span><span class="p">)</span>
 <span class="n">page</span> <span class="n">actuelle</span> <span class="p">:</span> <span class="n">lemonde</span><span class="o">.</span><span class="n">fr</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">&#39;google.fr&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">'google.fr'</span><span class="p">)</span>
 <span class="n">page</span> <span class="n">actuelle</span> <span class="p">:</span> <span class="n">google</span><span class="o">.</span><span class="n">fr</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">&#39;lyceemauriac.fr&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">visite</span><span class="p">(</span><span class="s1">'lyceemauriac.fr'</span><span class="p">)</span>
 <span class="n">page</span> <span class="n">actuelle</span> <span class="p">:</span> <span class="n">lyceemauriac</span><span class="o">.</span><span class="n">fr</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">n</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
 <span class="n">page</span> <span class="n">quittée</span> <span class="p">:</span> <span class="n">lyceemauriac</span><span class="o">.</span><span class="n">fr</span>
@@ -5656,14 +5656,14 @@ Attention, il ne faut pas réinventer la classe <code>Pile</code>, mais uniqueme
 
     <span class="k">def</span><span class="w"> </span><span class="nf">visite</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">empile</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page actuelle :&#39;</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'page actuelle :'</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pas de back possible&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'pas de back possible'</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">page_quittee</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">depile</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;page quittée :&#39;</span><span class="p">,</span> <span class="n">page_quittee</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'page quittée :'</span><span class="p">,</span> <span class="n">page_quittee</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -5761,15 +5761,15 @@ Par convention, on enfilera <strong>à gauche</strong> et on défilera <strong>�
 
     <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vous avez essayé de défiler une file vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'Vous avez essayé de défiler une file vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>       <span class="c1"># Hors-Programme : pour afficher </span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>              <span class="c1"># convenablement la file</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">'|'</span>              <span class="c1"># convenablement la file</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span>
         <span class="k">return</span> <span class="n">s</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
@@ -5862,10 +5862,10 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># il est impératif de comprendre qu&#39;on peut choisir l&#39;implémentation</span>
-<span class="c1"># de la classe Pile qu&#39;on préfère parmi les deux traitées plus haut.</span>
-<span class="c1"># Comme elles ont la MÊME INTERFACE et qu&#39;on ne va se servir que</span>
-<span class="c1"># de cette interface, leur mécanisme interne n&#39;a aucune influence</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># il est impératif de comprendre qu'on peut choisir l'implémentation</span>
+<span class="c1"># de la classe Pile qu'on préfère parmi les deux traitées plus haut.</span>
+<span class="c1"># Comme elles ont la MÊME INTERFACE et qu'on ne va se servir que</span>
+<span class="c1"># de cette interface, leur mécanisme interne n'a aucune influence</span>
 <span class="c1"># sur le code de la classe File que nous ferons ensuite.</span>
 
 <span class="c1"># Par exemple, on choisit celle avec la liste chaînée :</span>
@@ -5892,15 +5892,15 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
         <span class="k">return</span> <span class="n">v</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">'|'</span>
         <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
         <span class="k">while</span> <span class="n">c</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
-            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'|'</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">suivante</span>
         <span class="k">return</span> <span class="n">s</span>
 
 <span class="c1"># -------------------------------------------------------    </span>
-<span class="c1"># Implémentation d&#39;une file à l&#39;aide de deux piles </span>
+<span class="c1"># Implémentation d'une file à l'aide de deux piles </span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">File</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -5915,7 +5915,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
 
     <span class="k">def</span><span class="w"> </span><span class="nf">defile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File vide !&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'File vide !'</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortie</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
@@ -6054,7 +6054,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie. </p
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4949,17 +4949,17 @@
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_seq</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">chaine</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie l&#39;indice du premier caractère de</span>
+<span class="w">    </span><span class="sd">"""Renvoie l'indice du premier caractère de</span>
 <span class="sd">    chaine où commence `seq` si la séquence `seq`</span>
 <span class="sd">    se trouve dans la chaine de caractères chaine,</span>
 <span class="sd">    -1 sinon</span>
 <span class="sd">    Paramètres:</span>
 <span class="sd">    seq : séquence à rechercher</span>
-<span class="sd">    chaine : chaine d&#39;ADN</span>
+<span class="sd">    chaine : chaine d'ADN</span>
 <span class="sd">    Renvoie:</span>
 <span class="sd">    indice du premier caractère de seq dans</span>
 <span class="sd">    la chaine, -1 sinon.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="ow">and</span> <span class="o">...</span><span class="p">:</span>
@@ -4989,17 +4989,17 @@
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_seq</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">chaine</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;Renvoie l&#39;indice du premier caractère de</span>
+<span class="w">    </span><span class="sd">'''Renvoie l'indice du premier caractère de</span>
 <span class="sd">    chaine où commence `seq` si la séquence `seq`</span>
 <span class="sd">    se trouve dans la chaine de caractères chaine,</span>
 <span class="sd">    -1 sinon</span>
 <span class="sd">    Paramètres:</span>
 <span class="sd">    seq : séquence à rechercher</span>
-<span class="sd">    chaine : chaine d&#39;ADN</span>
+<span class="sd">    chaine : chaine d'ADN</span>
 <span class="sd">    Renvoie:</span>
 <span class="sd">    indice du premier caractère de seq dans</span>
 <span class="sd">    la chaine, -1 sinon.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    '''</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">seq</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
@@ -5126,7 +5126,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

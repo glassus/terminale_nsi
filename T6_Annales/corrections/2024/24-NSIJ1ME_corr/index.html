@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5019,13 +5019,13 @@
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id_reservation</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">reservations</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">clients</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">id_client</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Barc&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jean&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">date_naissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1972/06/29&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Allemagne&#39;</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Barc'</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Jean'</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">date_naissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'1972/06/29'</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">pays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Allemagne'</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <details class="success">
 <summary>Correction Q9</summary>
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">reservations</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">nom_croisiere</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Croisiere Puerto&#39;</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">nom_croisiere</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Croisiere Puerto'</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">id_reservation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20456</span>
 </code></pre></div>
 </details>
@@ -5034,7 +5034,7 @@
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">date_naissance</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">clients</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">reservations</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">clients</span><span class="p">.</span><span class="n">id_client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">id_client</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">nom_croisiere</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Croisiere Piano&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Croisiere Puerto&#39;</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">reservations</span><span class="p">.</span><span class="n">nom_croisiere</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'Croisiere Piano'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Croisiere Puerto'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 </div>
@@ -5042,7 +5042,7 @@
 <p class="admonition-title">Exercice  3</p>
 <details class="success">
 <summary>Correction Q1</summary>
-<div class="highlight"><pre><span></span><code><span class="n">chien40</span> <span class="o">=</span> <span class="n">Chien</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;Duke&#39;</span><span class="p">,</span> <span class="s1">&#39;wheel dog&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">chien40</span> <span class="o">=</span> <span class="n">Chien</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="s1">'Duke'</span><span class="p">,</span> <span class="s1">'wheel dog'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5053,7 +5053,7 @@
 </details>
 <details class="success">
 <summary>Correction Q3</summary>
-<div class="highlight"><pre><span></span><code><span class="n">chien40</span><span class="o">.</span><span class="n">changer_role</span><span class="p">(</span><span class="s1">&#39;leader&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">chien40</span><span class="o">.</span><span class="n">changer_role</span><span class="p">(</span><span class="s1">'leader'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5250,7 +5250,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../scripts/mathjax.js"></script>
       

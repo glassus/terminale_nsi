@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4940,7 +4940,7 @@
 <details class="tip">
 <summary>Correction Q4.</summary>
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">concerts</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">heure_fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;22h30&#39;</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">heure_fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'22h30'</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idconc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span><span class="p">;</span>
 </code></pre></div>
 </details>
@@ -4955,7 +4955,7 @@
 <details class="tip">
 <summary>Correction Q6.</summary>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">groupes</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Smooth Jazz Fourplay&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Free Jazz&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s1">'Smooth Jazz Fourplay'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Free Jazz'</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
 </code></pre></div>
 </details>
 <details class="tip">
@@ -4968,8 +4968,8 @@
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_nom</span><span class="p">(</span><span class="n">tab_mus</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">mus</span> <span class="ow">in</span> <span class="n">tab_mus</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">mus</span><span class="p">[</span><span class="s1">&#39;nb_concerts&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
-            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mus</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">mus</span><span class="p">[</span><span class="s1">'nb_concerts'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mus</span><span class="p">[</span><span class="s1">'nom'</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">lst</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -5167,7 +5167,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../scripts/mathjax.js"></script>
       

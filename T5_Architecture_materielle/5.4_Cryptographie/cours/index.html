@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5119,7 +5119,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère la variable suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s2">&quot;CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s2">"CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"</span>
 </code></pre></div>
 <ul>
 <li>Créer une fonction <code>chiffre(message, masque)</code> qui chiffre <code>message</code> en le XORant avec <code>masque</code>.</li>
@@ -5135,10 +5135,10 @@
 <span class="mi">34</span>
 </code></pre></div></li>
 <li>La fonction <code>ord</code> permet de renvoyer le code ASCII d'un caractère. La fonction <code>chr</code> fait l'opération inverse.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span>
 <span class="mi">65</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
-<span class="s1">&#39;A&#39;</span>
+<span class="s1">'A'</span>
 </code></pre></div></li>
 </ul>
 </div>
@@ -5153,10 +5153,10 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s1">&#39;CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES&#39;</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">masque</span> <span class="o">=</span> <span class="s1">'CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES'</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">chiffre</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">masque</span><span class="p">):</span>
-    <span class="n">message_chiffre</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">message_chiffre</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)):</span>
         <span class="n">lettre_chiffree</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">masque</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
         <span class="n">message_chiffre</span> <span class="o">+=</span> <span class="n">lettre_chiffree</span>
@@ -5484,7 +5484,7 @@ Le chiffrement symétrique, bien plus rapide, prend ensuite le relais pour l'ens
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4942,7 +4942,7 @@
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sympy.crypto.crypto</span><span class="w"> </span><span class="kn">import</span> <span class="n">decipher_shift</span>
 
-<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">'RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV'</span>
 
 <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
     <span class="n">phrase</span> <span class="o">=</span> <span class="n">decipher_shift</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
@@ -4971,8 +4971,8 @@
 </div>
 <p><strong>Q1.</strong> Codez votre fonction <code>affine(msg, a, b)</code>.</p>
 <p>Pour tester votre fonction :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affine</span><span class="p">(</span><span class="s2">&quot;BONJOUR&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="s1">&#39;IVSGVNE&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">affine</span><span class="p">(</span><span class="s2">"BONJOUR"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="s1">'IVSGVNE'</span>
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
@@ -4990,7 +4990,7 @@
     <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">affine</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
         <span class="n">rg</span> <span class="o">=</span> <span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
         <span class="n">nv_rg</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">rg</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="c1">#chiffrement affine</span>
@@ -5021,8 +5021,8 @@
 <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">decipher_affine</span><span class="p">(</span><span class="s1">&#39;UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
-            <span class="k">if</span> <span class="s1">&#39;TRAVAIL&#39;</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">decipher_affine</span><span class="p">(</span><span class="s1">'UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC'</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+            <span class="k">if</span> <span class="s1">'TRAVAIL'</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -5031,9 +5031,9 @@
 <p class="admonition-title">Exercice  3</p>
 <p>Exercice 3 (Parties A et B) du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf" target="_blank">Métropole J2 2025</a></p>
 <p><strong>Partie A</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span>
-<span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
-<span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">,</span> <span class="s1">'I'</span><span class="p">,</span> <span class="s1">'J'</span><span class="p">,</span>
+<span class="s1">'K'</span><span class="p">,</span> <span class="s1">'L'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'N'</span><span class="p">,</span> <span class="s1">'O'</span><span class="p">,</span> <span class="s1">'P'</span><span class="p">,</span> <span class="s1">'Q'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'S'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">,</span> <span class="s1">'U'</span><span class="p">,</span> <span class="s1">'V'</span><span class="p">,</span>
+<span class="s1">'W'</span><span class="p">,</span> <span class="s1">'X'</span><span class="p">,</span> <span class="s1">'Y'</span><span class="p">,</span> <span class="s1">'Z'</span><span class="p">]</span>
 </code></pre></div>
 <details class="success">
 <summary>Correction Q1</summary>
@@ -5057,13 +5057,13 @@
 </code></pre></div>
 </details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">indices_vers_lettres</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">s</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5079,7 +5079,7 @@
 <details class="success">
 <summary>Correction Q4</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5110,7 +5110,7 @@ position du caractère en clair dans l’alphabet.</p>
 <details class="success">
 <summary>Correction Q8</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dechiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5187,11 +5187,11 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="n">phi</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># très souvent choisi comme exposant de chiffrement</span>
-<span class="n">d</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># on calcule l'inverse de e modulo phi</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">encipher</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
-    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span> <span class="c1"># on convertit le message msg en un nombre M</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span> <span class="c1"># on convertit le message msg en un nombre M</span>
     <span class="n">c</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># M puissance e modulo n</span>
     <span class="k">return</span> <span class="n">c</span>
 
@@ -5242,11 +5242,11 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre qui sera (normalement) premier avec phi</span>
-<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l'inverse de e modulo phi</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">encipher</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
-    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
     <span class="n">c</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># M puissance e modulo n</span>
     <span class="k">return</span> <span class="n">c</span>
 
@@ -5297,7 +5297,7 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="mi">65537</span>  <span class="c1"># 65537 est un nombre premier, donc forcément premier avec phi</span>
-<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l&#39;inverse de e modulo phi</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>  <span class="c1"># on calcule l'inverse de e modulo phi</span>
 
 <span class="n">c</span> <span class="o">=</span> <span class="mi">58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182</span>
 
@@ -5323,15 +5323,15 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="n">privKeyPEM</span> <span class="o">=</span> <span class="n">keyPair</span><span class="o">.</span><span class="n">exportKey</span><span class="p">()</span>
 
 
-<span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;vive la crypto en NSI !&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'vive la crypto en NSI !'</span>
 <span class="n">encryptor</span> <span class="o">=</span> <span class="n">PKCS1_OAEP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pubKey</span><span class="p">)</span>
 <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encryptor</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encrypted:&quot;</span><span class="p">,</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">encrypted</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Encrypted:"</span><span class="p">,</span> <span class="n">binascii</span><span class="o">.</span><span class="n">hexlify</span><span class="p">(</span><span class="n">encrypted</span><span class="p">))</span>
 
 
 <span class="n">decryptor</span> <span class="o">=</span> <span class="n">PKCS1_OAEP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">keyPair</span><span class="p">)</span>
 <span class="n">decrypted</span> <span class="o">=</span> <span class="n">decryptor</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decrypted:&#39;</span><span class="p">,</span> <span class="n">decrypted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Decrypted:'</span><span class="p">,</span> <span class="n">decrypted</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition example">
@@ -5361,7 +5361,7 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">gen_mdp</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">cont_min</span><span class="p">,</span> <span class="n">cont_maj</span><span class="p">,</span> <span class="n">cont_spe</span><span class="p">):</span>
-    <span class="c1"># Pour qu&#39;un mot de passe soit non vide, il doit</span>
+    <span class="c1"># Pour qu'un mot de passe soit non vide, il doit</span>
     <span class="c1"># pouvoir contenir des minuscules ou des majuscules</span>
     <span class="c1"># ou des caractères spéciaux.</span>
     <span class="k">assert</span> <span class="p">(</span><span class="n">cont_min</span> <span class="ow">or</span> <span class="n">cont_maj</span> <span class="ow">or</span> <span class="n">cont_spe</span><span class="p">)</span>
@@ -5375,7 +5375,7 @@ position du caractère en clair dans l’alphabet.</p>
         <span class="o">...</span>
     <span class="o">...</span>
         <span class="o">...</span>
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">jeu_caracteres</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
         <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="o">...</span>
@@ -5436,7 +5436,7 @@ position du caractère en clair dans l’alphabet.</p>
 <span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">gen_mdp</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span> <span class="n">cont_min</span><span class="p">,</span> <span class="n">cont_maj</span><span class="p">,</span> <span class="n">cont_spe</span><span class="p">):</span>
-    <span class="c1"># Pour qu&#39;un mot de passe soit non vide, il doit</span>
+    <span class="c1"># Pour qu'un mot de passe soit non vide, il doit</span>
     <span class="c1"># pouvoir contenir des minuscules ou des majuscules</span>
     <span class="c1"># ou des caractères spéciaux.</span>
     <span class="k">assert</span> <span class="p">(</span><span class="n">cont_min</span> <span class="ow">or</span> <span class="n">cont_maj</span> <span class="ow">or</span> <span class="n">cont_spe</span><span class="p">)</span>
@@ -5450,7 +5450,7 @@ position du caractère en clair dans l’alphabet.</p>
         <span class="n">jeu_caracteres</span> <span class="o">+=</span> <span class="n">majuscules</span>
     <span class="k">if</span> <span class="n">cont_spe</span><span class="p">:</span>
         <span class="n">jeu_caracteres</span> <span class="o">+=</span> <span class="n">caracteres_speciaux</span>
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">jeu_caracteres</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">longueur</span><span class="p">):</span>
         <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">mot_de_passe</span> <span class="o">+</span> <span class="n">jeu_caracteres</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
@@ -5474,15 +5474,15 @@ position du caractère en clair dans l’alphabet.</p>
 <details class="success">
 <summary>Correction Q8</summary>
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">compte</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">mot_de_passe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;@rDfohpj!&amp;&#39;</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">mot_de_passe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;yhTS?d@UTJe&#39;</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">mot_de_passe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'@rDfohpj!&amp;'</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">mot_de_passe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'yhTS?d@UTJe'</span>
 </code></pre></div>
 </details>
 <details class="success">
 <summary>Correction Q9</summary>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">id_site</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">compte</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">renouvellement</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;2024-03-20&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">renouvellement</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'2024-03-20'</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5495,7 +5495,7 @@ position du caractère en clair dans l’alphabet.</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">compte</span><span class="p">.</span><span class="n">mot_de_passe</span><span class="p">,</span><span class="w"> </span><span class="n">compte</span><span class="p">.</span><span class="n">utilisateur</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">compte</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">site</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compte</span><span class="p">.</span><span class="n">id_site</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">site</span><span class="p">.</span><span class="n">nom_site</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Votremailp&#39;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">site</span><span class="p">.</span><span class="n">nom_site</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Votremailp'</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">compte</span><span class="p">.</span><span class="n">renouvellement</span>
 </code></pre></div>
 </details>
@@ -5604,16 +5604,16 @@ ou bien
     <span class="k">return</span> <span class="n">lst</span>
 </code></pre></div>
 </details>
-<div class="highlight"><pre><span></span><code><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">,</span> <span class="s1">'H'</span><span class="p">,</span> <span class="s1">'I'</span><span class="p">,</span> <span class="s1">'J'</span><span class="p">,</span> <span class="s1">'K'</span><span class="p">,</span> <span class="s1">'L'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'N'</span><span class="p">,</span> <span class="s1">'O'</span><span class="p">,</span> <span class="s1">'P'</span><span class="p">,</span> <span class="s1">'Q'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'S'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">,</span> <span class="s1">'U'</span><span class="p">,</span> <span class="s1">'V'</span><span class="p">,</span> <span class="s1">'W'</span><span class="p">,</span> <span class="s1">'X'</span><span class="p">,</span> <span class="s1">'Y'</span><span class="p">,</span> <span class="s1">'Z'</span><span class="p">]</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">indices_vers_lettres</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">s</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">chiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5629,7 +5629,7 @@ ou bien
 <details class="success">
 <summary>Correction Q4</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5659,7 +5659,7 @@ ou bien
 <details class="success">
 <summary>Correction Q8</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dechiffrement</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">&#39;impossible&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="s1">'impossible'</span>
     <span class="n">indices_msg</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
     <span class="n">indices_cle</span> <span class="o">=</span> <span class="n">lettres_vers_indices</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -5833,7 +5833,7 @@ Si Bob veut communiquer avec Alice, il va chiffrer son message avec la clé publ
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

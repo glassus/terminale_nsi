@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/favTNSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4940,7 +4940,7 @@
 </details>
 <details class="success">
 <summary>Correction 2.b</summary>
-<div class="highlight"><pre><span></span><code><span class="n">V</span><span class="p">[</span><span class="s1">&#39;J&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">V</span><span class="p">[</span><span class="s1">'J'</span><span class="p">]</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5476,7 +5476,7 @@ de recherche.</p>
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ABR</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Implémentation d’un arbre binaire de recherche (ABR)&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Implémentation d’un arbre binaire de recherche (ABR)"""</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="kc">None</span>
@@ -5702,13 +5702,13 @@ croissant.</p>
 </details>
 <details class="success">
 <summary>Correction Q4.c.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">chercher_mots</span><span class="p">(</span><span class="n">liste_mots_francais</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">'r'</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">'e'</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">5</span><span class="p">,</span><span class="s1">'t'</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <ul>
 <li>Fichier des mots français : <a href="../data/gutenberg.txt">gutenberg.txt</a></li>
 <li>Instruction pour créer une liste à partir du fichier :
-<div class="highlight"><pre><span></span><code><span class="n">liste_mots_francais</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;gutenberg.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">liste_mots_francais</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'gutenberg.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div></li>
 </ul>
 </div>
@@ -5760,9 +5760,9 @@ croissant.</p>
 <p><img alt="image" class="center autolight" src="../data/exoMetroJ22025.png" /></p>
 </details>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un dictionnaire dont les clés sont les</span>
+<span class="w">    </span><span class="sd">'''renvoie un dictionnaire dont les clés sont les</span>
 <span class="sd">    symboles de texte et les valeurs associées leur</span>
-<span class="sd">    nombre d&#39;occurences dans texte&#39;&#39;&#39;</span>
+<span class="sd">    nombre d'occurences dans texte'''</span>
     <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">texte</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
@@ -5774,9 +5774,9 @@ croissant.</p>
 <details class="success">
 <summary>Correction Q8</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un dictionnaire dont les clés sont les</span>
+<span class="w">    </span><span class="sd">'''renvoie un dictionnaire dont les clés sont les</span>
 <span class="sd">    symboles de texte et les valeurs associées leur</span>
-<span class="sd">    nombre d&#39;occurences dans texte&#39;&#39;&#39;</span>
+<span class="sd">    nombre d'occurences dans texte'''</span>
     <span class="n">dico</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">texte</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
@@ -5807,30 +5807,30 @@ croissant.</p>
     <span class="k">return</span> <span class="n">tab1</span><span class="p">,</span> <span class="n">tab2</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie l&#39;écriture binaire associée à symbole</span>
-<span class="sd">    dans le tableau trié tab&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''renvoie l'écriture binaire associée à symbole</span>
+<span class="sd">    dans le tableau trié tab'''</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="s1">''</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span> <span class="o">=</span> <span class="n">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="p">[</span><span class="n">elt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">t1</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;1&#39;</span> <span class="o">+</span> <span class="o">...</span>
+            <span class="k">return</span> <span class="s1">'1'</span> <span class="o">+</span> <span class="o">...</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="o">...</span>
+            <span class="k">return</span> <span class="s1">'0'</span> <span class="o">+</span> <span class="o">...</span>
 </code></pre></div>
 <details class="success">
 <summary>Correction Q10</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie l&#39;écriture binaire associée à symbole</span>
-<span class="sd">    dans le tableau trié tab&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''renvoie l'écriture binaire associée à symbole</span>
+<span class="sd">    dans le tableau trié tab'''</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="s1">''</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span> <span class="o">=</span> <span class="n">separe</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">symbole</span> <span class="ow">in</span> <span class="p">[</span><span class="n">elt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">t1</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;1&#39;</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s1">'1'</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s1">'0'</span> <span class="o">+</span> <span class="n">shannon</span><span class="p">(</span><span class="n">symbole</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="success">
@@ -5850,7 +5850,7 @@ croissant.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">encode_shannon</span><span class="p">(</span><span class="n">texte</span><span class="p">):</span>
     <span class="n">dico</span> <span class="o">=</span> <span class="n">creer_dico_occ</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
     <span class="n">tab</span> <span class="o">=</span> <span class="n">creer_tab_trie</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">texte</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">+=</span> <span class="n">shannon</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">tab</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">s</span>
@@ -5879,7 +5879,7 @@ croissant.</p>
 <details class="success">
 <summary>Correction Q3</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arb</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; Renvoie True si val est présent dans arb, False sinon&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">''' Renvoie True si val est présent dans arb, False sinon'''</span>
     <span class="k">if</span> <span class="n">est_vide</span><span class="p">(</span><span class="n">arb</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="n">racine</span><span class="p">(</span><span class="n">arb</span><span class="p">):</span>
@@ -6011,7 +6011,7 @@ croissant.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
