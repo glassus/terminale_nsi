@@ -106,7 +106,7 @@ correction(True,
 Attention au nommage des variables...
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
