@@ -15,7 +15,7 @@ Afin de pouvoir travailler sous le système d'exploitation libre Linux sur les m
 
 ## Méthode
 
-1. Sur le bureau Windows, ouvrir le dossier ```Programmation```.
+1. Sur le bureau Windows, ouvrir le dossier ```#Maths-Info```.
 2. Cliquer sur ```Proxmox NSI```. 
 3. Un navigateur s'ouvre, mais une alerte de sécurité apparaît. Cliquer sur ```Paramètres avancés```  puis sur ```Continuer vers le site 172.17.191.244``` 
 4. Sur la fenêtre de connexion ```Proxmox VE Login```, renseigner ses identifiants et sélectionner ```Realm Proxmox VE authentication server```.
