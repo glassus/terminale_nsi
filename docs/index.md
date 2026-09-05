@@ -1,11 +1,12 @@
 {#
 !!! tip "Utilisation des VM"
     Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
+#}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)  
 
-#}
+
    
 
 {#
