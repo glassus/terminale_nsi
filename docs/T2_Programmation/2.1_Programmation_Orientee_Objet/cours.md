@@ -244,7 +244,7 @@ Bien sûr, on peut créer une autre voiture en suivant le même principe :
         ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -371,7 +371,7 @@ On y retrouve donc à la fois les 4 attributs et l'unique méthode que nous avon
         ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -442,7 +442,7 @@ Ce qui est nettement plus agréable !
     Modifier la méthode ```__repr__``` afin de n'afficher que le numérateur dans le cas où le dénominateur vaut 1.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
