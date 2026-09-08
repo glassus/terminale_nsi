@@ -391,7 +391,7 @@ Créez cette classe et instanciez une balle.
 
 {{
 correction(False,
-"""
+"""False
 ??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
