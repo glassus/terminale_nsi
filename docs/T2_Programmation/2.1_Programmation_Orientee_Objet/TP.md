@@ -281,7 +281,7 @@ correction(True,
 **Q3.** Pour donner l'illusion physique du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
