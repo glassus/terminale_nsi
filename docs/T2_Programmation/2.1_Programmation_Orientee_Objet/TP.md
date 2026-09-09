@@ -536,7 +536,7 @@ correction(True,
 Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -618,7 +618,7 @@ correction(False,
 
 
 
-{#
+
 
 ## 3. Extensions
 
@@ -629,7 +629,7 @@ correction(False,
 - Ce que je ne veux pas voir : 
 ![](data/paste.png){: .center width=40%} 
 
-
+{#
 ## 4. Organisation du projet
 
 !!! tip "Calendrier du projet"
