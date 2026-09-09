@@ -6,9 +6,10 @@
 !!! note ":star: Thème en cours d'étude :star: "
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/) 
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)
 
 
-   
+
 
 {#
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
