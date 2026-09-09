@@ -390,7 +390,7 @@ Il faut pour cela importer la fonction, par ```from random import randint```
 Créez cette classe et instanciez une balle.
 
 {{
-correction(False,
+correction(True,
 """False
 ??? success \"Correction\" 
     ```python linenums='1'
