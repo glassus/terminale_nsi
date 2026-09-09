@@ -8,7 +8,7 @@
 !!! example "{{ exercice() }}"
     **Q1.** Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -25,7 +25,7 @@
 
     **Q2.** Instancier trois élèves de cette classe.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -40,7 +40,7 @@
     **Q3.**  Écrire une fonction ```compare``` qui prend en paramètres deux élèves ```eleve1``` et ```eleve2``` qui renvoie le nom de l'élève ayant la meilleure note (on ne traitera pas à part le cas d'égalité).
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -94,7 +94,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -116,7 +116,7 @@
 
     **Q1.** Écrire une classe ```Chrono``` qui contiendra les attributs ```heures```, ```minutes``` et ```secondes```.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -132,7 +132,7 @@
 
     **Q2.** Doter la classe d'une méthode ```affiche``` qui affichera le temps ```t```.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -152,7 +152,7 @@
     **Q3.** Doter la classe d'une méthode ```avance``` qui prend en paramètre un temps ```s``` en secondes et qui fait avancer le temps ```t``` de ```s``` secondes.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -251,7 +251,7 @@
         ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -300,7 +300,7 @@
             ```
                 
         {{
-        correction(True,
+        correction(False,
         """
         ??? success \"Correction\" 
             ```python linenums='1'
@@ -340,7 +340,7 @@
     Exercice 2 Partie A du sujet [Métropole Septembre 2022](../../T6_Annales/data/2022/2022_Metropole_Septembre.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\" 
         La liste ```v``` contient 5 éléments.
@@ -349,7 +349,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\" 
         ```v[1].nom()``` renvoie ```Les goélands```.
@@ -360,7 +360,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\" 
         ```python
@@ -372,7 +372,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -399,7 +399,7 @@
     Exercice 5 du sujet [Métropole J1 2022](../../T6_Annales/data/2022/2022_Metropole_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Instruction 3 : ```joueur1 = Joueur('Sniper', 319, 'A')``` 
@@ -409,7 +409,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a\" 
         ```python linenums='1'
@@ -428,7 +428,7 @@
     }}
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\" 
         ```python linenums='1'
@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a\" 
         Le test est le **test 1**.
@@ -449,7 +449,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b\" 
         Si un joueur a été touché par un tir allié, son score diminue de 20 points.    
@@ -459,7 +459,7 @@
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python linenums='1'
@@ -483,7 +483,7 @@
     Exercice 2 du sujet [La Réunion J1 2022](../../T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\" 
         ```python linenums='1'
@@ -497,7 +497,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\" 
         ```python linenums='1'
@@ -511,7 +511,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python linenums='1'
@@ -523,7 +523,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='10 14 15 18'
@@ -560,7 +560,7 @@
     **Partie A**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         ```python
@@ -571,7 +571,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```python linenums='1'
@@ -583,7 +583,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python 
@@ -597,7 +597,7 @@
     **Partie B**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python linenums='1'
@@ -613,7 +613,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python 
@@ -624,7 +624,7 @@
     }}  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         ```convert('4h36')``` va renvoyer le nombre ```4.6```  
@@ -633,7 +633,7 @@
     }} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -714,7 +714,7 @@
 
 
 {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         Un attribut est ```itineraire``` et une méthode est ```remplir_grille```.
@@ -723,7 +723,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```a``` vaut 4 et ```b``` vaut 7.
@@ -733,7 +733,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python linenums='1'
@@ -753,7 +753,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python linenums='1'
@@ -765,7 +765,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -783,7 +783,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         ```python linenums='1'
@@ -810,7 +810,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         Si la largeur de la grille est 1, il n'y a qu'un seul mouvement possible (```D```) donc il n'y a qu'un seul chemin. 
@@ -822,7 +822,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         $N(m,n)$ est le nombre de trajets d'une grille de taille $m \\times n$.
@@ -838,7 +838,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1'
@@ -868,7 +868,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         ```python 
@@ -887,7 +887,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```python 
@@ -903,7 +903,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python 
@@ -923,7 +923,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python 
@@ -938,7 +938,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python 
@@ -969,7 +969,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         La fonction ```tri_decroissant``` réalise un tri par sélection. Sa complexité dans le pire des cas est quadratique ($O(n^2)$).
@@ -978,7 +978,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         On aurait aussi pu utiliser un tri par insertion, qui est aussi de complexité quadratique. Ou bien encore le tri fusion, qui a une meilleure complexité, en $O(n \log n)$.
@@ -1017,7 +1017,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1034,7 +1034,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \" 
         Ce problème apparait lorsqu'il y a eu trop d'appels récursifs, et qui la pile du processeur a débordé (*stack overflow*).
@@ -1043,7 +1043,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         ```python
@@ -1074,7 +1074,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         ```python 
@@ -1085,7 +1085,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         ```python 
@@ -1096,7 +1096,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         ```python 
@@ -1114,7 +1114,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         ```python 
@@ -1126,7 +1126,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python 
@@ -1147,7 +1147,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         ```python 
@@ -1162,7 +1162,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         ```python 
@@ -1179,7 +1179,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1214,7 +1214,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
@@ -1223,7 +1223,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         ```sql
@@ -1237,7 +1237,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11 \" 
         L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
@@ -1246,7 +1246,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12 \" 
         L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
@@ -1256,7 +1256,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13 \" 
         ```sql
@@ -1270,7 +1270,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14 \" 
         La requête 
@@ -1316,7 +1316,7 @@
 
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```nom```, ```tab_voisines```, ```tab_couleurs_disponibles``` et ```couleur_attribuee``` sont des attributs.
@@ -1325,7 +1325,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```nom_region``` est une chaîne de caractères, de type ```String```.
@@ -1334,7 +1334,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
@@ -1345,7 +1345,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python
@@ -1363,7 +1363,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -1379,7 +1379,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         ```python
@@ -1396,7 +1396,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -1418,7 +1418,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -1439,7 +1439,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```python
@@ -1461,7 +1461,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.a\" 
         Cette méthode renvoie ```None``` lorsque toutes les régions sont coloriées.
@@ -1471,7 +1471,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.b\" 
         Quand cette méthode ne renvoie pas ```None```, elle renvoie la région non coloriée qui a le plus de voisins.
@@ -1480,7 +1480,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         ```python
@@ -1536,7 +1536,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1 \" 
         Une adresse possible est ```192.168.1.17```. 
@@ -1546,7 +1546,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction('Alice', 'Charlie', 10), Transaction('Bob', 'Alice', 5)]``` 
@@ -1556,7 +1556,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3 \" 
         Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
@@ -1565,7 +1565,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
@@ -1574,7 +1574,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -1591,7 +1591,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
@@ -1600,7 +1600,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -1614,7 +1614,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8 \" 
         L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
@@ -1641,7 +1641,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1' hl_lines='6 7-10'
@@ -1663,7 +1663,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10 \" 
         L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
@@ -1672,7 +1672,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11 \" 
         Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
@@ -1681,7 +1681,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12 \" 
         D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
@@ -1690,7 +1690,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13 \" 
         Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
@@ -1699,7 +1699,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14 \"
         ```python linenums='1'
@@ -1767,7 +1767,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```python
@@ -1778,7 +1778,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -1789,7 +1789,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         L'instruction ```balise4.methode1()``` renvoie ```[2, 5, 6]```.
@@ -1798,7 +1798,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         La dernière instruction renvoie ```['noir', 'vert']```. 
@@ -1822,7 +1822,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -1843,7 +1843,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Le parcours en profondeur donne ```1, 2, 4, 5, 10, 7, 6, 3, 11, 9, 8, 12```.
@@ -1853,7 +1853,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -1874,7 +1874,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         L'instruction ```mystere(balise10).num_balise``` renvoie ```5```.
@@ -1883,7 +1883,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Les balises rencontrées par ce sportif seront ```1, 2, 4, 6, 11, 9, 12``` .
@@ -1906,7 +1906,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```python
@@ -1929,7 +1929,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Cet algorithme est un algorithme glouton car il fait le meilleur choix à chaque étape (la balise la plus proche).
@@ -1938,7 +1938,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         Les algorithmes gloutons sont efficaces et simples à programmer, mais ils ne donnent pas systématiquement la meilleure solution.
