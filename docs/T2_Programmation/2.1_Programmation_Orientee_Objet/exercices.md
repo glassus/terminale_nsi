@@ -25,7 +25,7 @@
 
     **Q2.** Instancier trois élèves de cette classe.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
