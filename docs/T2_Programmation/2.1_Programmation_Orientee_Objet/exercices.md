@@ -132,7 +132,7 @@
 
     **Q2.** Doter la classe d'une méthode ```affiche``` qui affichera le temps ```t```.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
