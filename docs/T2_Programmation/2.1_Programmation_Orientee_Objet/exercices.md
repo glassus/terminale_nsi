@@ -624,7 +624,7 @@
     }}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         ```convert('4h36')``` va renvoyer le nombre ```4.6```  
