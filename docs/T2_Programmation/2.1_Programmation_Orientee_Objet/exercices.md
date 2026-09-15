@@ -440,7 +440,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a\" 
         Le test est le **test 1**.
