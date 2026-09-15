@@ -399,7 +399,7 @@
     Exercice 5 du sujet [Métropole J1 2022](../../T6_Annales/data/2022/2022_Metropole_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         Instruction 3 : ```joueur1 = Joueur('Sniper', 319, 'A')``` 
