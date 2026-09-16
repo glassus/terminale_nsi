@@ -742,9 +742,9 @@
             self.grille[0][0] = 'S' 
             for direction in self.itineraire:
                 if direction == 'D':
-                    j = j + 1 
-                elif direction == 'B':
                     i = i + 1 
+                elif direction == 'B':
+                    j = j + 1 
                 self.grille[i][j] = '*' 
             self.grille[self.largeur][self.longueur] = 'E'
         ```
