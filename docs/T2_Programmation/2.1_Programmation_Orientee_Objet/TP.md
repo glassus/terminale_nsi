@@ -629,13 +629,12 @@ correction(True,
 - Ce que je ne veux pas voir : 
 ![](data/paste.png){: .center width=40%} 
 
-{#
+
 ## 4. Organisation du projet
 
 !!! tip "Calendrier du projet"
-    - 15/09/2025 : démarrage du projet et constitution des groupes
-    - à 15h (Groupe 1) ou à 17h (Groupe 2) les lundi 22/09, 29/09, 06/10 et 13/10 : travail sur le projet
-    - remise du projet sur Capytale : **jeudi 16/10/2025 à 18h dernier délai**
+    - 16/09/2026 : démarrage du projet et constitution des groupes
+
 
 !!! capytale "Dépôt de projet sur Capytale "
 
@@ -648,7 +647,7 @@ correction(True,
     - sur 10 points : entretien individuel autour du code du projet. 
 
 
-
+{#
 
 !!! abstract "Groupes de projet"
     - Groupe 1:
