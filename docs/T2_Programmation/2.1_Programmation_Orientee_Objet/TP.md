@@ -634,6 +634,7 @@ correction(True,
 
 !!! tip "Calendrier du projet"
     - 16/09/2026 : démarrage du projet et constitution des groupes
+    - 15/10/2026 : remise du projet sur Capytale
 
 
 !!! capytale "Dépôt de projet sur Capytale "
