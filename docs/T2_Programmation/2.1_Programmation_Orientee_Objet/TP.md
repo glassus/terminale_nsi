@@ -647,22 +647,16 @@ correction(True,
     - sur 10 points : entretien individuel autour du code du projet. 
 
 
-{#
+
 
 !!! abstract "Groupes de projet"
-    - Groupe 1:
-        - groupe A : Mykhaïlo - Andgel - Normann
-        - groupe B : Ethan -  Sohel
-        - groupe C : Tidiane - Mathis
-        - groupe D : Vitor - Nina - Alexandre
-        - groupe E : Fortuné - Rizgar - Mathys
 
-    - Groupe 2:
-        - groupe A : Maël - Noham
-        - groupe B : Lana -  Kayna
-        - groupe C : Gift - Alice - Eliott
-        - groupe D : Yacine - Victor
-        - groupe E : Hugo - Alexis - Gabriel
-        - groupe F : Timéo - Raphaël
+    - groupe A : Nathan - Elowan
+    - groupe B : Amir -  Ethan
+    - groupe C : Melissa - Sebastien - Emile
+    - groupe D : Marko - Théo
+    - groupe E : Youssef - Wanis - Lucas
+    - groupe F : Joseph - Yohan - Solal
+    - groupe G : Adam - Ayman
+    - groupe H : Fidan - Hamza
 
-#}
