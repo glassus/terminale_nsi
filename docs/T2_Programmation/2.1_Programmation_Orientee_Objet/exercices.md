@@ -984,7 +984,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         On aurait aussi pu utiliser un tri par insertion, qui est aussi de complexité quadratique. Ou bien encore le tri fusion, qui a une meilleure complexité, en $O(n \log n)$.
