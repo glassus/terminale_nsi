@@ -975,7 +975,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         La fonction ```tri_decroissant``` réalise un tri par sélection. Sa complexité dans le pire des cas est quadratique ($O(n^2)$).
