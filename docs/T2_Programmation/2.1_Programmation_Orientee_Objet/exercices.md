@@ -923,7 +923,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         ```python 
@@ -933,6 +933,12 @@
                 total = total + c.poids
             return total
         ```
+        ou bien
+        ```python 
+        def poids_total(liste):
+            return sum([c.poids for c in liste])
+        ```
+
     """
     )
     }}
