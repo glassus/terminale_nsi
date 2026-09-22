@@ -300,7 +300,7 @@
             ```
                 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```python linenums='1'
@@ -483,7 +483,7 @@
     Exercice 2 du sujet [La Réunion J1 2022](../../T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\" 
         ```python linenums='1'
@@ -497,7 +497,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\" 
         ```python linenums='1'
@@ -511,7 +511,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python linenums='1'
@@ -523,7 +523,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```python linenums='1' hl_lines='10 14 15 18'
@@ -783,7 +783,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         ```python linenums='1'
@@ -810,7 +810,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         Si la largeur de la grille est 1, il n'y a qu'un seul mouvement possible (```D```) donc il n'y a qu'un seul chemin. 
@@ -822,7 +822,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         $N(m,n)$ est le nombre de trajets d'une grille de taille $m \\times n$.
@@ -838,7 +838,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1'
@@ -1023,7 +1023,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         ```python
@@ -1040,7 +1040,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         Ce problème apparait lorsqu'il y a eu trop d'appels récursifs, et qui la pile du processeur a débordé (*stack overflow*).
@@ -1049,7 +1049,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \" 
         ```python
@@ -1220,7 +1220,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         La requête renvoie le nom et le prénom de toutes les personnes qui travaillent dans le centre n°2.
@@ -1229,7 +1229,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \" 
         ```sql
@@ -1243,7 +1243,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11 \" 
         L'intérêt d'avoir deux tables est de ne pas mélanger les informations sur le personnel et les informations sur les centres.
@@ -1252,7 +1252,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12 \" 
         L'attribut ```num```, qui est clé primaire de la table ```Centre```, se retrouve en tant que clé étrangère ```num_centre``` dans la table ```Personnel```.
@@ -1262,7 +1262,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13 \" 
         ```sql
@@ -1276,7 +1276,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14 \" 
         La requête 
@@ -1477,7 +1477,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.b\" 
         Quand cette méthode ne renvoie pas ```None```, elle renvoie la région non coloriée qui a le plus de voisins.
@@ -1486,7 +1486,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         ```python
@@ -1542,7 +1542,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1 \" 
         Une adresse possible est ```192.168.1.17```. 
@@ -1552,7 +1552,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2 \" 
         La liste correspondant à ces transactions est ```[Transaction('Alice', 'Charlie', 10), Transaction('Bob', 'Alice', 5)]``` 
@@ -1562,7 +1562,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3 \" 
         Le ```bloc0``` est le tout premier bloc, il n'a pas de bloc précédent. Dans la méthode ```creer_bloc_0``` de la classe ```Blockchain```, l'attribut ```bloc_precedent``` est donc mis à ```None```. 
@@ -1571,7 +1571,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4 \" 
         L'attribut ```bloc_precedent``` de ```bloc1``` est égal à ```bloc0```.
@@ -1580,7 +1580,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5 \" 
         ```python linenums='1'
@@ -1597,7 +1597,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6 \" 
         Solde de Bob = 100 + 30 - 20 - 20 = 90 nsicoins.
@@ -1606,7 +1606,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7 \" 
         ```python linenums='1'
@@ -1620,7 +1620,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8 \" 
         L'adresse IP à utiliser pour envoyer simultanément la blockchain à tous les membres du réseau est l'adresse de broadcast, soit ```192.168.1.255```.
@@ -1647,7 +1647,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9 \" 
         ```python linenums='1' hl_lines='6 7-10'
@@ -1669,7 +1669,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10 \" 
         L'appel est ```ma_blockchain.tete.calculer_solde('Alice')``` 
@@ -1678,7 +1678,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11 \" 
         Un recherche exhaustive est une recherche par force brute, on teste toutes les valeurs jusqu'à trouver la bonne
@@ -1687,7 +1687,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12 \" 
         D'après le code de la classe ```Bloc```, si le bloc est ```bloc0```, il n'a pas de bloc précédent et son hash sera donc ```'0'```. 
@@ -1696,7 +1696,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13 \" 
         Chaque bit peut prendre la valeur 0 ou 1, soit 2 possibilités. Le nombre de hashs possibles est donc $2^{256}$.
@@ -1705,7 +1705,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q14 \"
         ```python linenums='1'
@@ -1773,7 +1773,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         ```python
@@ -1784,7 +1784,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -1795,7 +1795,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         L'instruction ```balise4.methode1()``` renvoie ```[2, 5, 6]```.
@@ -1804,7 +1804,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\" 
         La dernière instruction renvoie ```['noir', 'vert']```. 
@@ -1828,7 +1828,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -1849,7 +1849,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         Le parcours en profondeur donne ```1, 2, 4, 5, 10, 7, 6, 3, 11, 9, 8, 12```.
@@ -1859,7 +1859,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -1880,7 +1880,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         L'instruction ```mystere(balise10).num_balise``` renvoie ```5```.
@@ -1889,7 +1889,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         Les balises rencontrées par ce sportif seront ```1, 2, 4, 6, 11, 9, 12``` .
@@ -1912,7 +1912,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```python
@@ -1935,7 +1935,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         Cet algorithme est un algorithme glouton car il fait le meilleur choix à chaque étape (la balise la plus proche).
@@ -1944,7 +1944,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         Les algorithmes gloutons sont efficaces et simples à programmer, mais ils ne donnent pas systématiquement la meilleure solution.
