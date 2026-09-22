@@ -1331,7 +1331,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```nom_region``` est une chaîne de caractères, de type ```String```.
