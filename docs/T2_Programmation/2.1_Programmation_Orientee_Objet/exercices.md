@@ -1210,9 +1210,9 @@
             for pers in self.liste:
                 if pers.annee_anciennete() > maxi:
                     maxi = pers.annee_anciennete()
-                    lst = [pers.nom]
+                    lst = [pers.num_badge]
                 elif pers.annee_anciennete() == maxi:
-                    lst.append(pers.nom)
+                    lst.append(pers.num_badge)
             return lst
         ```
     """
@@ -1322,7 +1322,7 @@
 
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\" 
         ```nom```, ```tab_voisines```, ```tab_couleurs_disponibles``` et ```couleur_attribuee``` sont des attributs.
