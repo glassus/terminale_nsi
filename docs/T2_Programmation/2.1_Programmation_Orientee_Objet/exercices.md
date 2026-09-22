@@ -1467,7 +1467,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.a\" 
         Cette méthode renvoie ```None``` lorsque toutes les régions sont coloriées.
