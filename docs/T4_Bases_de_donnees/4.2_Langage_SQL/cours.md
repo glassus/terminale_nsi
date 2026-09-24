@@ -52,6 +52,13 @@ Dans toute la suite, nous allons travailler avec la base de données ```livres.d
     ![](data/dbbrowser.png)
 
 
+??? abstract "3. En ligne avec ```DBConvert SQLite Viewer```"
+    - Rendez-vous sur [https://streams.dbconvert.com/sqlite-viewer](https://streams.dbconvert.com/sqlite-viewer)
+    - Ouvrez le fichier ```livres.db``` précédemment téléchargé : il est lu directement dans le navigateur et n'est jamais envoyé sur un serveur.
+    - Écrivez votre requête puis exécutez-la.
+    - Attention : cet outil est en **lecture seule**. Il convient donc à toute la partie 1 (sélection, agrégation, jointures) mais pas à la partie 2 (création et modification d'une base), pour laquelle il faut utiliser DB Browser for SQLite.
+
+
 
 --------
 
