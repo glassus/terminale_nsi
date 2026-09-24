@@ -218,7 +218,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
     )
     }}
 
-    Quelle paradigme de programmation vous a semblé le plus naturel ?
+    Quel paradigme de programmation vous a semblé le plus naturel ?
 
         
 
@@ -357,7 +357,7 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
     Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonacci. On pourra par exemple utiliser un dictionnaire.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
