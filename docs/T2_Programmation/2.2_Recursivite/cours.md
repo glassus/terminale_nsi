@@ -187,7 +187,7 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 
     **Q1.** Programmer de manière impérative (dite aussi manière *itérative* ou manière *classique*) la fonction factorielle. On l'appelera ```fact_imp```. 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
