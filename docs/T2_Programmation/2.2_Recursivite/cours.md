@@ -469,7 +469,7 @@ La fonction récursive apparait donc **beaucoup**, beaucoup plus lente que l'imp
 
 Peut-on résumer la récursivité à une méthode élégante mais inefficace ? Ce serait réducteur : l'efficacité c'est _aussi_ avoir un code lisible et intuitif. Nous en reparlerons lors du parcours des arbres et des graphes. (cf aussi l'exercice sur les Tours de Hanoï)
 ## 5. Annexe : dessins récursifs grâce au module ```turtle``` 
-Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants, et aboutir à des structures [fractales](https://fr.wikipedia.org/wiki/Fractale).
+Le module ```turtle``` permet de faire des tracés basiques. Mais dès l'instant où on met de la récursivité dans le code, les résultats peuvent devenir très surprenants, et aboutir à des structures [fractales](https://fr.wikipedia.org/wiki/Fractale){. target="_blank"}.
 
 ```python linenums='1'
 from turtle import *
