@@ -427,7 +427,8 @@ def fibo_recursif(n):
     else :
         return fibo_recursif(n-1) + fibo_recursif(n-2)
 
-
+```
+{#
 def comparaison(n):
     t0 = time.time()
     fibo_imperatif(n)
@@ -435,10 +436,10 @@ def comparaison(n):
     t0 = time.time()
     fibo_recursif(n)
     print("algo récursif : ", time.time() - t0)
+#}
 
 
 
-```
 
 
 :arrow_right: **Résultats**
