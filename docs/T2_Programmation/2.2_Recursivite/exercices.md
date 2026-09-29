@@ -60,7 +60,7 @@
     **Q1.** Écrire une fonction récursive ```syracuse``` qui prend en paramètres une entier ```n``` et qui écrivant tous les termes de la suite de Syracuse commençant à ```n``` , et s'arrêtant (on l'espère...) à la valeur 1.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
