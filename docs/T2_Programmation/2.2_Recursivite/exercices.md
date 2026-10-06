@@ -307,7 +307,7 @@
     - l'étape ```n``` fait 4 appels successifs à l'étape ```n-1```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -335,7 +335,7 @@
     **Q2.** Créer une fonction ```triangle(n, l)``` qui trace le flocon complet.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -379,7 +379,7 @@
     ![image](data/diffusion.png){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
