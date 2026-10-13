@@ -26,7 +26,7 @@ Un paradigme de programmation pourrait se définir comme une _philosophie_ dans 
 La Programmation Orientée Objet sera (surtout à notre niveau) mélangée avec de la programmation impérative, de la programmation fonctionnelle... d'ailleurs vous avez déjà manipulé des objets sans le savoir :
 
 ## 1. Des objets déjà autour de nous
-
+  
 
 ```python
 >>> m = [4,5,2]
