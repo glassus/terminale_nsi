@@ -424,7 +424,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         ```txt[0]``` vaut 'b'  
