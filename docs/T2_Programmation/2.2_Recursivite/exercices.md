@@ -415,7 +415,7 @@
     Exercice 4 du sujet [Amérique du Nord J1 2022](../../T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         Proposition 3        
