@@ -554,7 +554,7 @@
     }}
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\" 
         La commande renvoie :
@@ -566,7 +566,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.c.\" 
         La commande renvoie :
