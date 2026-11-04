@@ -515,7 +515,7 @@
     Exercice 1 du sujet [Centres Étrangers J2 2022](../../T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```f(5)``` affichera :
@@ -530,7 +530,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.        
