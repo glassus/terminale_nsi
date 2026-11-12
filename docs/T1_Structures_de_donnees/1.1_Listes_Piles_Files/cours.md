@@ -243,9 +243,9 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
     10. lst.renvoie_tete()
     11. lst.est_vide()    
     ```
-
+ 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
