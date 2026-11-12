@@ -55,7 +55,7 @@ Même si ce n'est pas l'objet de ce cours, donnons des exemples de structures ad
 
 Si une liste de courses est subdivisée en "rayon frais / bricolage / papeterie" et que le rayon frais est lui-même séparé en "laitages / viandes / fruits & légumes", alors une structure d'**arbre** sera plus adaptée pour la représenter. Les structures arborescentes seront vues plus tard en Terminale.
 
-Enfin, si nos données à étudier sont les relations sur les réseaux sociaux des élèves d'une classe, alors la structure de **graphe** s'imposera d'elle-même. Cette structure sera elle-aussi étudiée plus tard cette année. 
+Enfin, si nos données à étudier sont les relations sur les réseaux sociaux des élèves d'une classe, alors la structure de **graphe** s'imposera d'elle-même. Cette structure sera elle aussi étudiée plus tard cette année. 
 
 ### 1.2 Comment seront traitées ces données linéaires ? Introduction des listes, des piles et des files
 
