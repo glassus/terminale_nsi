@@ -304,7 +304,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
