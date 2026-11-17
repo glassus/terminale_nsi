@@ -377,7 +377,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
                 return self.data.pop() 
     ```
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction (avec ```__repr__```)\" 
         ```python linenums='1'
