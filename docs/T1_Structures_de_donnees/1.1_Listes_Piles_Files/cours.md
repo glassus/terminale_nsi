@@ -348,7 +348,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
 
 
 
-{#
+
 !!! example "{{ exercice() }}"
 
     Créer la classe ```Pile```   ci-dessus. 
@@ -377,7 +377,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
                 return self.data.pop() 
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction (avec ```__repr__```)\" 
         ```python linenums='1'
@@ -419,7 +419,7 @@ Ces 3 méthodes sont essentielles et se retrouveront systématiquement dans chaq
     }}
 
 
-#}
+
 
 #### 3.2.2 À l'aide d'une liste chaînée et de la classe  ```Cellule``` créée au 2.3
 
