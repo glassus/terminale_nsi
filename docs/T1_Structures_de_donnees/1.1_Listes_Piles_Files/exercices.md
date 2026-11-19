@@ -14,7 +14,7 @@
     }}
      
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ![image](data/ex1Q2.png){: .center width=50%}    
