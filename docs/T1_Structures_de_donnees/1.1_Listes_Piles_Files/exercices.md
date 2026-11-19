@@ -95,7 +95,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ex2Q1.png){: .center width=70%}
