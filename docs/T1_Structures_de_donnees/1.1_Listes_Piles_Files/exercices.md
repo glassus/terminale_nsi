@@ -105,7 +105,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a.\" 
         La variable ```temp``` contient la valeur 25.    
@@ -115,7 +115,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b.\" 
         ```p1``` est identique, elle contient toujours les valeurs 25, 3 et 7. 
