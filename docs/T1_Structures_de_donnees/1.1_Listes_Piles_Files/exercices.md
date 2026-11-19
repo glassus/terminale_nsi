@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         **Q4a.** On va vider la pile ```P``` dans une pile ```Q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
