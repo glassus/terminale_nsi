@@ -6,11 +6,12 @@
 !!! note ":star: Thème en cours d'étude :star: "
     - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
     - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
-    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
+
 
 
 ### *Thèmes déjà traités*
+- [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
+- [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
 - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/) 
 - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
 - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)
