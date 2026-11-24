@@ -204,7 +204,7 @@
     }}
    
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b\" 
         La fonction ```mystere``` permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).        
