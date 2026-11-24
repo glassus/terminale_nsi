@@ -182,7 +182,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         L'affichage produit est ```7, 5, 5, 2```.        
