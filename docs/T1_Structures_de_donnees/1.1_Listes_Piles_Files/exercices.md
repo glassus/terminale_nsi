@@ -429,7 +429,7 @@
 !!! example "{{ exercice() }}"
     Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
 
-    [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
+    [Jeu du Simon](https://www.cokojeux.com/memoire-de-simon/{. target="_blank"}
 
     {{
     correction(False,
