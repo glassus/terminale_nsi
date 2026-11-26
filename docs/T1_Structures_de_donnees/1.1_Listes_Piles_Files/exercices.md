@@ -503,10 +503,9 @@
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.b.\" 
-        Question bizarre...
 
         ```python linenums='1'
         def tour_de_jeu_modifie(sequence):
