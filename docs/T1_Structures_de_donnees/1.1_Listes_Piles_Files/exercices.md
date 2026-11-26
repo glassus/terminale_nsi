@@ -407,13 +407,13 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
-        def duree_passage_en_caisse(self):
+        def duree_courses(self):
             if self.est_vide():
-                return None
+                return 0
             horaire_premier = self.defiler()[3]
             while not self.est_vide():
                 horaire_dernier = self.defiler()[3]
