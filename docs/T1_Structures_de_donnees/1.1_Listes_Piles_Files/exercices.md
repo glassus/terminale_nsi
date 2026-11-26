@@ -432,7 +432,7 @@
     [Jeu du Simon](https://www.cokojeux.com/memoire-de-simon/){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ```python linenums='1' hl_lines='3 4'
